@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: profile.jpg
+image: Lukman.jpg
 about:
   template: jolla
   links:
