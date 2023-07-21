@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lukman Aliyu Jibril">
+<meta name="dcterms.date" content="2023-03-11">
+
+<title>ailearningloop - NumPy ndarrays: Introduction to a Powerful Tool for Scientific Computing in Python</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">ailearningloop</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lukmanaj" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/lukmanajjk" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">NumPy ndarrays: Introduction to a Powerful Tool for Scientific Computing in Python</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lukman Aliyu Jibril </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 11, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>NumPy which is short for Numerical Python is the one of the most foundational tools for scientific computing with Python today. It is so important that many other tools like pandas utilise NumPy array objects as their basis. The most important tool in NumPy is the ndarray which is usually a fixed-size multidimensional container of items of the same type and size. Other useful tools in NumPy are the mathematical functions that support fast operations on the ndarrays without using loops as required in pure Python, and even a C API that connects NumPy with libraries written in C, C ++ or FORTRAN.</p>
+<p>In this short piece, I attempt to highlight some important NumPy features that may be useful to individuals interested in scientific computing.</p>
+<p>First before using NumPy, it is important to install it first, after installing Python of course. This can be done using conda or pip. The specific codes can be found in the documentation and is dependent on the individual’s setup eg windows, linux, Mac etc. After installation, NumPy can be imported in the following way before it can be used:</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>There are other ways of importing NumPy but the syntax above is the most widely accepted and it is advisable as it can foster collaboration. To check the package version, the following can be used:</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'numpy:'</span>, np.__version__)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>numpy: 1.22.3</code></pre>
+</div>
+</div>
+<section id="the-numpy-array-object-the-basis-of-numpy" class="level2">
+<h2 class="anchored" data-anchor-id="the-numpy-array-object-the-basis-of-numpy">The NumPy array object, the basis of NumPy</h2>
+<p>N-dimensional array object, or ndarray, is a fast, flexible container for large datasets in Python. Arrays enable performance of mathematical operations on whole blocks of data using similar syntax to the equivalent operations between scalar elements. It enables one to perform computations on indivudual elements of an ndarray without the need for a loop or list comprehension as may be required while trying to perform a similar computation using lets say a list in pure python. In addition, computations in NumPy are significantly faster than those in pure Python eg:</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparing speed with pure Python</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>my_arr <span class="op">=</span> np.arange(<span class="dv">1_000_000</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1_000_000</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>An ndarray and a list of the same size are declared and the below, I time a similar computation on the array and the list.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>timeit my_arr2 <span class="op">=</span> my_arr <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>timeit my_list2 <span class="op">=</span> [x <span class="op">*</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> my_list]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2.45 ms ± 171 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+108 ms ± 4.56 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
+</div>
+</div>
+<p>The result above shows that the computation on the array is many times faster than same on the list and this is due to the power of NumPy.</p>
+<p>Continuing the discussion on the ndarray, it contains elements of the same data type. In addition, every array has a shape which is a tuple that gives the dimensions of the array (ie size of each dimension) , and also a dtype (data type, since the array has the same data type).</p>
+<section id="creating-ndarrays" class="level3">
+<h3 class="anchored" data-anchor-id="creating-ndarrays">Creating ndarrays</h3>
+<p>ndarrays can be created by using the array function and they can be initiated from lists or other data structures as shown below</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># from lists</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>arr1 <span class="op">=</span> np.array(data)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>arr1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>array([1, 2, 3, 4, 5, 6])</code></pre>
+</div>
+</div>
+<p>This creates an array object that contains the elements in the data list.</p>
+<p>We can also input the elements directly as a list as follows:</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>arr2 <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>])</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>arr2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>array([1, 2, 3, 4, 5, 6])</code></pre>
+</div>
+</div>
+<p>Same array object will be created as arr1 above.</p>
+<p>The functions and methods available in NumPy can be accessed by the following code:</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(np)  <span class="co"># assuming numpy is imported as np</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>['ALLOW_THREADS',
+ 'AxisError',
+ 'BUFSIZE',
+ 'CLIP',
+ 'ComplexWarning',
+ 'DataSource',
+ 'ERR_CALL',
+ 'ERR_DEFAULT',
+ 'ERR_IGNORE',
+ 'ERR_LOG',
+ 'ERR_PRINT',
+ 'ERR_RAISE',
+ 'ERR_WARN',
+ 'FLOATING_POINT_SUPPORT',
+ 'FPE_DIVIDEBYZERO',
+ 'FPE_INVALID',
+ 'FPE_OVERFLOW',
+ 'FPE_UNDERFLOW',
+ 'False_',
+ 'Inf',
+ 'Infinity',
+ 'MAXDIMS',
+ 'MAY_SHARE_BOUNDS',
+ 'MAY_SHARE_EXACT',
+ 'ModuleDeprecationWarning',
+ 'NAN',
+ 'NINF',
+ 'NZERO',
+ 'NaN',
+ 'PINF',
+ 'PZERO',
+ 'RAISE',
+ 'RankWarning',
+ 'SHIFT_DIVIDEBYZERO',
+ 'SHIFT_INVALID',
+ 'SHIFT_OVERFLOW',
+ 'SHIFT_UNDERFLOW',
+ 'ScalarType',
+ 'Tester',
+ 'TooHardError',
+ 'True_',
+ 'UFUNC_BUFSIZE_DEFAULT',
+ 'UFUNC_PYVALS_NAME',
+ 'VisibleDeprecationWarning',
+ 'WRAP',
+ '_CopyMode',
+ '_NoValue',
+ '_UFUNC_API',
+ '__NUMPY_SETUP__',
+ '__all__',
+ '__builtins__',
+ '__cached__',
+ '__config__',
+ '__deprecated_attrs__',
+ '__dir__',
+ '__doc__',
+ '__expired_functions__',
+ '__file__',
+ '__getattr__',
+ '__git_version__',
+ '__loader__',
+ '__name__',
+ '__package__',
+ '__path__',
+ '__spec__',
+ '__version__',
+ '_add_newdoc_ufunc',
+ '_distributor_init',
+ '_financial_names',
+ '_from_dlpack',
+ '_globals',
+ '_mat',
+ '_pytesttester',
+ '_version',
+ 'abs',
+ 'absolute',
+ 'add',
+ 'add_docstring',
+ 'add_newdoc',
+ 'add_newdoc_ufunc',
+ 'alen',
+ 'all',
+ 'allclose',
+ 'alltrue',
+ 'amax',
+ 'amin',
+ 'angle',
+ 'any',
+ 'append',
+ 'apply_along_axis',
+ 'apply_over_axes',
+ 'arange',
+ 'arccos',
+ 'arccosh',
+ 'arcsin',
+ 'arcsinh',
+ 'arctan',
+ 'arctan2',
+ 'arctanh',
+ 'argmax',
+ 'argmin',
+ 'argpartition',
+ 'argsort',
+ 'argwhere',
+ 'around',
+ 'array',
+ 'array2string',
+ 'array_equal',
+ 'array_equiv',
+ 'array_repr',
+ 'array_split',
+ 'array_str',
+ 'asanyarray',
+ 'asarray',
+ 'asarray_chkfinite',
+ 'ascontiguousarray',
+ 'asfarray',
+ 'asfortranarray',
+ 'asmatrix',
+ 'asscalar',
+ 'atleast_1d',
+ 'atleast_2d',
+ 'atleast_3d',
+ 'average',
+ 'bartlett',
+ 'base_repr',
+ 'binary_repr',
+ 'bincount',
+ 'bitwise_and',
+ 'bitwise_not',
+ 'bitwise_or',
+ 'bitwise_xor',
+ 'blackman',
+ 'block',
+ 'bmat',
+ 'bool8',
+ 'bool_',
+ 'broadcast',
+ 'broadcast_arrays',
+ 'broadcast_shapes',
+ 'broadcast_to',
+ 'busday_count',
+ 'busday_offset',
+ 'busdaycalendar',
+ 'byte',
+ 'byte_bounds',
+ 'bytes0',
+ 'bytes_',
+ 'c_',
+ 'can_cast',
+ 'cast',
+ 'cbrt',
+ 'cdouble',
+ 'ceil',
+ 'cfloat',
+ 'char',
+ 'character',
+ 'chararray',
+ 'choose',
+ 'clip',
+ 'clongdouble',
+ 'clongfloat',
+ 'column_stack',
+ 'common_type',
+ 'compare_chararrays',
+ 'compat',
+ 'complex128',
+ 'complex256',
+ 'complex64',
+ 'complex_',
+ 'complexfloating',
+ 'compress',
+ 'concatenate',
+ 'conj',
+ 'conjugate',
+ 'convolve',
+ 'copy',
+ 'copysign',
+ 'copyto',
+ 'core',
+ 'corrcoef',
+ 'correlate',
+ 'cos',
+ 'cosh',
+ 'count_nonzero',
+ 'cov',
+ 'cross',
+ 'csingle',
+ 'ctypeslib',
+ 'cumprod',
+ 'cumproduct',
+ 'cumsum',
+ 'datetime64',
+ 'datetime_as_string',
+ 'datetime_data',
+ 'deg2rad',
+ 'degrees',
+ 'delete',
+ 'deprecate',
+ 'deprecate_with_doc',
+ 'diag',
+ 'diag_indices',
+ 'diag_indices_from',
+ 'diagflat',
+ 'diagonal',
+ 'diff',
+ 'digitize',
+ 'disp',
+ 'divide',
+ 'divmod',
+ 'dot',
+ 'double',
+ 'dsplit',
+ 'dstack',
+ 'dtype',
+ 'e',
+ 'ediff1d',
+ 'einsum',
+ 'einsum_path',
+ 'emath',
+ 'empty',
+ 'empty_like',
+ 'equal',
+ 'errstate',
+ 'euler_gamma',
+ 'exp',
+ 'exp2',
+ 'expand_dims',
+ 'expm1',
+ 'expm1x',
+ 'extract',
+ 'eye',
+ 'fabs',
+ 'fastCopyAndTranspose',
+ 'fft',
+ 'fill_diagonal',
+ 'find_common_type',
+ 'finfo',
+ 'fix',
+ 'flatiter',
+ 'flatnonzero',
+ 'flexible',
+ 'flip',
+ 'fliplr',
+ 'flipud',
+ 'float128',
+ 'float16',
+ 'float32',
+ 'float64',
+ 'float_',
+ 'float_power',
+ 'floating',
+ 'floor',
+ 'floor_divide',
+ 'fmax',
+ 'fmin',
+ 'fmod',
+ 'format_float_positional',
+ 'format_float_scientific',
+ 'format_parser',
+ 'frexp',
+ 'frombuffer',
+ 'fromfile',
+ 'fromfunction',
+ 'fromiter',
+ 'frompyfunc',
+ 'fromregex',
+ 'fromstring',
+ 'full',
+ 'full_like',
+ 'gcd',
+ 'generic',
+ 'genfromtxt',
+ 'geomspace',
+ 'get_array_wrap',
+ 'get_include',
+ 'get_printoptions',
+ 'getbufsize',
+ 'geterr',
+ 'geterrcall',
+ 'geterrobj',
+ 'gradient',
+ 'greater',
+ 'greater_equal',
+ 'half',
+ 'hamming',
+ 'hanning',
+ 'heaviside',
+ 'histogram',
+ 'histogram2d',
+ 'histogram_bin_edges',
+ 'histogramdd',
+ 'hsplit',
+ 'hstack',
+ 'hypot',
+ 'i0',
+ 'identity',
+ 'iinfo',
+ 'imag',
+ 'in1d',
+ 'index_exp',
+ 'indices',
+ 'inexact',
+ 'inf',
+ 'info',
+ 'infty',
+ 'inner',
+ 'insert',
+ 'int0',
+ 'int16',
+ 'int32',
+ 'int64',
+ 'int8',
+ 'int_',
+ 'intc',
+ 'integer',
+ 'interp',
+ 'intersect1d',
+ 'intp',
+ 'invert',
+ 'is_busday',
+ 'isclose',
+ 'iscomplex',
+ 'iscomplexobj',
+ 'isfinite',
+ 'isfortran',
+ 'isin',
+ 'isinf',
+ 'isnan',
+ 'isnat',
+ 'isneginf',
+ 'isposinf',
+ 'isreal',
+ 'isrealobj',
+ 'isscalar',
+ 'issctype',
+ 'issubclass_',
+ 'issubdtype',
+ 'issubsctype',
+ 'iterable',
+ 'ix_',
+ 'kaiser',
+ 'kernel_version',
+ 'kron',
+ 'lcm',
+ 'ldexp',
+ 'left_shift',
+ 'less',
+ 'less_equal',
+ 'lexsort',
+ 'lib',
+ 'linalg',
+ 'linspace',
+ 'little_endian',
+ 'load',
+ 'loadtxt',
+ 'log',
+ 'log10',
+ 'log1p',
+ 'log2',
+ 'logaddexp',
+ 'logaddexp2',
+ 'logical_and',
+ 'logical_not',
+ 'logical_or',
+ 'logical_xor',
+ 'logspace',
+ 'longcomplex',
+ 'longdouble',
+ 'longfloat',
+ 'longlong',
+ 'lookfor',
+ 'ma',
+ 'mask_indices',
+ 'mat',
+ 'math',
+ 'matmul',
+ 'matrix',
+ 'matrixlib',
+ 'max',
+ 'maximum',
+ 'maximum_sctype',
+ 'may_share_memory',
+ 'mean',
+ 'median',
+ 'memmap',
+ 'meshgrid',
+ 'mgrid',
+ 'min',
+ 'min_scalar_type',
+ 'minimum',
+ 'mintypecode',
+ 'mod',
+ 'modf',
+ 'moveaxis',
+ 'msort',
+ 'multiply',
+ 'nan',
+ 'nan_to_num',
+ 'nanargmax',
+ 'nanargmin',
+ 'nancumprod',
+ 'nancumsum',
+ 'nanmax',
+ 'nanmean',
+ 'nanmedian',
+ 'nanmin',
+ 'nanpercentile',
+ 'nanprod',
+ 'nanquantile',
+ 'nanstd',
+ 'nansum',
+ 'nanvar',
+ 'nbytes',
+ 'ndarray',
+ 'ndenumerate',
+ 'ndim',
+ 'ndindex',
+ 'nditer',
+ 'negative',
+ 'nested_iters',
+ 'newaxis',
+ 'nextafter',
+ 'nonzero',
+ 'not_equal',
+ 'numarray',
+ 'number',
+ 'obj2sctype',
+ 'object0',
+ 'object_',
+ 'ogrid',
+ 'oldnumeric',
+ 'ones',
+ 'ones_like',
+ 'os',
+ 'outer',
+ 'packbits',
+ 'pad',
+ 'partition',
+ 'percentile',
+ 'pi',
+ 'piecewise',
+ 'place',
+ 'poly',
+ 'poly1d',
+ 'polyadd',
+ 'polyder',
+ 'polydiv',
+ 'polyfit',
+ 'polyint',
+ 'polymul',
+ 'polynomial',
+ 'polysub',
+ 'polyval',
+ 'positive',
+ 'power',
+ 'printoptions',
+ 'prod',
+ 'product',
+ 'promote_types',
+ 'ptp',
+ 'put',
+ 'put_along_axis',
+ 'putmask',
+ 'quantile',
+ 'r_',
+ 'rad2deg',
+ 'radians',
+ 'random',
+ 'ravel',
+ 'ravel_multi_index',
+ 'real',
+ 'real_if_close',
+ 'rec',
+ 'recarray',
+ 'recfromcsv',
+ 'recfromtxt',
+ 'reciprocal',
+ 'record',
+ 'remainder',
+ 'repeat',
+ 'require',
+ 'reshape',
+ 'resize',
+ 'result_type',
+ 'right_shift',
+ 'rint',
+ 'roll',
+ 'rollaxis',
+ 'roots',
+ 'rot90',
+ 'round',
+ 'round_',
+ 'row_stack',
+ 's_',
+ 'safe_eval',
+ 'save',
+ 'savetxt',
+ 'savez',
+ 'savez_compressed',
+ 'sctype2char',
+ 'sctypeDict',
+ 'sctypes',
+ 'searchsorted',
+ 'select',
+ 'set_numeric_ops',
+ 'set_printoptions',
+ 'set_string_function',
+ 'setbufsize',
+ 'setdiff1d',
+ 'seterr',
+ 'seterrcall',
+ 'seterrobj',
+ 'setxor1d',
+ 'shape',
+ 'shares_memory',
+ 'short',
+ 'show_config',
+ 'sign',
+ 'signbit',
+ 'signedinteger',
+ 'sin',
+ 'sinc',
+ 'single',
+ 'singlecomplex',
+ 'sinh',
+ 'size',
+ 'sometrue',
+ 'sort',
+ 'sort_complex',
+ 'source',
+ 'spacing',
+ 'split',
+ 'sqrt',
+ 'square',
+ 'squeeze',
+ 'stack',
+ 'std',
+ 'str0',
+ 'str_',
+ 'string_',
+ 'subtract',
+ 'sum',
+ 'swapaxes',
+ 'sys',
+ 'take',
+ 'take_along_axis',
+ 'tan',
+ 'tanh',
+ 'tensordot',
+ 'test',
+ 'testing',
+ 'tile',
+ 'timedelta64',
+ 'trace',
+ 'tracemalloc_domain',
+ 'transpose',
+ 'trapz',
+ 'tri',
+ 'tril',
+ 'tril_indices',
+ 'tril_indices_from',
+ 'trim_zeros',
+ 'triu',
+ 'triu_indices',
+ 'triu_indices_from',
+ 'true_divide',
+ 'trunc',
+ 'typecodes',
+ 'typename',
+ 'ubyte',
+ 'ufunc',
+ 'uint',
+ 'uint0',
+ 'uint16',
+ 'uint32',
+ 'uint64',
+ 'uint8',
+ 'uintc',
+ 'uintp',
+ 'ulonglong',
+ 'unicode_',
+ 'union1d',
+ 'unique',
+ 'unpackbits',
+ 'unravel_index',
+ 'unsignedinteger',
+ 'unwrap',
+ 'use_hugepage',
+ 'ushort',
+ 'vander',
+ 'var',
+ 'vdot',
+ 'vectorize',
+ 'version',
+ 'void',
+ 'void0',
+ 'vsplit',
+ 'vstack',
+ 'warnings',
+ 'where',
+ 'who',
+ 'zeros',
+ 'zeros_like']</code></pre>
+</div>
+</div>
+<p>Using the dir function is a handy way of finding the methods and functions associated with a package or even an object.</p>
+</section>
+<section id="data-types-for-ndarrays" class="level3">
+<h3 class="anchored" data-anchor-id="data-types-for-ndarrays">Data types for ndarrays</h3>
+<p>It has been established that elements in an ndarray are usually of the same data type. As such, the data type of an array can be declared while creating the array as follows:</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>], dtype <span class="op">=</span> np.float64)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>array([4., 3., 5., 6., 7.])</code></pre>
+</div>
+</div>
+<p>Also, conversion of data types can also be done:</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>int_arr <span class="op">=</span> arr.astype(np.int64)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>int_arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>array([4, 3, 5, 6, 7])</code></pre>
+</div>
+</div>
+<p>The following is a list of NumPy data types: 1. int 2. float 3. bool 4. complex 5. object 6. string 7. unicode We can also specify the number of bits for some of them e.g.&nbsp;int8, int32, float64, complex64 etc.</p>
+</section>
+<section id="mathematical-calculations-in-numpy" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-calculations-in-numpy">Mathematical Calculations in NumPy</h3>
+<p>NumPy has two features on ndarrays that reflect the powerful nature of the library, vectorization and broadcasting. These are not available on traditional data structures like Python lists. Vectorization to refers to element-wise calculations done on entire arrays by using simple syntax same as will be used for scalar calculations:</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([[<span class="fl">1.</span>, <span class="fl">2.</span>, <span class="fl">3.</span>], [<span class="fl">4.</span>, <span class="fl">5.</span>, <span class="fl">6.</span>]])</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>array([[1., 2., 3.],
+       [4., 5., 6.]])</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">*</span> arr </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>array([[ 1.,  4.,  9.],
+       [16., 25., 36.]])</code></pre>
+</div>
+</div>
+<p>Arithmetic with scalars propagates the scalar to each element in the array:</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">/</span> arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>array([[1.        , 0.5       , 0.33333333],
+       [0.25      , 0.2       , 0.16666667]])</code></pre>
+</div>
+</div>
+<p>In the above, 1 is divided by each of the elements in arr to return a new array of the same size as arr. This is the beauty of NumPy.</p>
+<p>Apart from regular calculations, NumPy also supports ufuncs (universal functions) that allow element-wise computations on ndarrays. Examples include numpy.sqrt and numpy.exp. Ufuncs can be unary (acts on elements of a single array) eg numpy.sqrt or binary (takes two arrays as arguments) eg numpy.multiply, numpy.mod etc. Ufuncs are powerful and I have seen them used in a simple implementation of logistic regression.</p>
+</section>
+<section id="indexing-ndarrays" class="level3">
+<h3 class="anchored" data-anchor-id="indexing-ndarrays">Indexing ndarrays</h3>
+<p>There are a variety of ways to index NumPy arrays but in the basic form, indexing one dimensional arrays is very similar to indexing lists in pure Python. However, since the dimensions of an ndarray can be multidimensional, it becomes more complex with increase in dimension. In addition, numpy allows for boolean indexing (using a conditional) and fancy indexing (using integer arrays). Both are not available in pure Python. An important first distinction from Python’s built-in lists is that array slices are views on the original array. This means that the data is not copied, and any modifications to the view will be reflected in the source array.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In conclusion, NumPy provides powerful tools that can be harnessed for scientific computing and this is an attempt to provide a brief intro. As I begin my data science journey, I try to document my learnings and this is one of such attempts at documentation. This is a very skeletal view of the potential possibilities with NumPy. I have barely begun to scratch the surface. I recommend checking the NumPy documentation and also practicing the concepts as we learn.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

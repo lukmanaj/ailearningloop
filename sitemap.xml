@@ -2,38 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/lukmanaj/ailearningloop/about.html</loc>
-    <lastmod>2023-07-21T11:46:33.326Z</lastmod>
+    <lastmod>2023-07-21T17:02:32.720Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/lukmanaj/ailearningloop/posts/web-scraping/index.html</loc>
-    <lastmod>2023-07-21T11:46:32.686Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/posts/arewads/index.html</loc>
-    <lastmod>2023-07-21T11:46:31.754Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/posts/welcome/index.html</loc>
-    <lastmod>2023-07-21T11:46:31.062Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/index.html</loc>
-    <lastmod>2023-07-21T11:46:30.018Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/posts/how-to-learn/index.html</loc>
-    <lastmod>2023-07-21T11:46:30.750Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/posts/30-days-python/index.html</loc>
-    <lastmod>2023-07-21T11:46:31.398Z</lastmod>
+    <lastmod>2023-07-21T17:02:31.980Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/lukmanaj/ailearningloop/posts/practice-concepts/index.html</loc>
-    <lastmod>2023-07-21T11:46:32.174Z</lastmod>
+    <lastmod>2023-07-21T17:02:30.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/30-days-python/index.html</loc>
+    <lastmod>2023-07-21T17:02:29.604Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/welcome/index.html</loc>
+    <lastmod>2023-07-21T17:02:28.440Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/index.html</loc>
+    <lastmod>2023-07-21T17:02:27.132Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/how-to-learn/index.html</loc>
+    <lastmod>2023-07-21T17:02:28.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/viz/index.html</loc>
+    <lastmod>2023-07-21T17:02:29.164Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/arewads/index.html</loc>
+    <lastmod>2023-07-21T17:02:30.028Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/numpy/index.html</loc>
+    <lastmod>2023-07-21T17:02:31.400Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/lukmanaj/ailearningloop/posts/starting-python/index.html</loc>
-    <lastmod>2023-07-21T11:46:33.030Z</lastmod>
+    <lastmod>2023-07-21T17:02:32.376Z</lastmod>
   </url>
 </urlset>
