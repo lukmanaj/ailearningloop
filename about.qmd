@@ -9,7 +9,7 @@ about:
       href: https://twitter.com/lukmanajjk
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/lukman-a-j
+      href: https://linkedin.com/in/lukman-a-j
     - icon: github
       text: Github
       href: https://github.com/lukmanaj
