@@ -13,5 +13,17 @@
   },
   "about.qmd": {
     "about.html": "b2efc2d7"
+  },
+  "posts/30-days-python/index.qmd": {
+    "index.html": "68c3d736"
+  },
+  "posts/how-to-learn/index.qmd": {
+    "index.html": "972bdd7d"
+  },
+  "posts/practice-concepts/index.qmd": {
+    "index.html": "dfc08738"
+  },
+  "posts/web-scraping/index.qmd": {
+    "index.html": "1f247d80"
   }
 }

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-02-12">
+<meta name="dcterms.date" content="2023-02-21">
 
-<title>ailearningloop - How I Started Learning Python</title>
+<title>ailearningloop - Practising Concepts Learnt So far in ArewaDS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,9 +108,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">How I Started Learning Python</h1>
+      <h1 class="title">Practising Concepts Learnt So far in ArewaDS</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">origins</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">how to learn</div>
               </div>
                   </div>
   </div>
@@ -128,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 12, 2023</p>
+        <p class="date">February 21, 2023</p>
       </div>
     </div>
     
@@ -146,16 +147,31 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I became interested in Python about a year after I started my first full time job. I just felt that I should have some programming skills since I work with the internet and a laptop almost all the time. I started taking some informal courses on different platforms.</p>
-<p>I remember briefly attempting the ‘Data Analysis with Python certification’ on Freecodecamp but I never got to complete it. My interest was still there but I never took the next step. I then took the Google Data Analytics certification on coursera where I got introduced to R. After that, I took the IBM Data Science 10-course specialization and I got my first contact with Python. I learnt but I did not practice enough and after a few months, I only knew the basics but I could not apply the concepts to build projects on my own. The IBM Data Science Certificate was quite Pythonic as out of the ten courses in the specialization, five were Python courses:</p>
-<ol type="1">
-<li>Python for data science</li>
-<li>Data Analysis with Python</li>
-<li>Python project for data science</li>
-<li>Data Visualization with Python</li>
-<li>Machine Learning with Python</li>
+<p><strong>What is the output of this code and why?</strong></p>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="question.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">practice</figcaption>
+</figure>
+</div>
+<hr>
+<p>I selected this question as it covers so many of concepts we have covered in our Arewa Data Science 30 days of Python so far.</p>
+<p>It can be summarised as follows: 1. range(1,6,2) is the sequence 1,3,5</p>
+<ol start="2" type="1">
+<li><p>arr is [1,3,5]</p></li>
+<li><p>The change made to arr1 reflects in arr. So arr also becomes [1,3,5,10]</p></li>
+<li><p>*arr, converts arr to tuple and returns (1,3,5,10)</p></li>
 </ol>
-<p>In the end, I didn’t have a clear pathway to a future but I am happy that I am now in a fellowship with a community that can support me as I strive to achieve the programming goal. Alhamdulillah.</p>
+<p>The question covers the following topics: - range (day 10, introduced during loops) - list comprehension (day 13) - mutation (day 5, lists) - unpacking (day 17)</p>
+<p>range is a built-in function that helps in creating sequence of integers. It accepts three arguments; start, stop and step. Start is inclusive but stop is exclusive. In this question, range(1,6,2) gives the sequence of 1,3,5.</p>
+<p>List comprehension: The list comprehension statement, arr = [x for x in range(1,6,2)], goes through each element in the sequence, range(1,6,2), and includes it in a list. Since it has been established that range(1,6,2) is 1,3,5 then arr is [1,3,5].</p>
+<p>Mutation: This is a concept that is hard for most Python beginners like me to grasp. arr1 = arr does not make a copy of arr and put it in arr1, rather it gives an additional name, arr1 to the object named arr. This implies that the list [1,3,5] now has two names, arr and arr1. This is how assignment works in Python. So any change done to arr1 will reflect in arr and vice versa. Hence arr1.append(10) will add ten to the same list object referenced by both arr and arr1.</p>
+<p>Unpacking: The final ingredient is the unpacking operator- asterisk. The functions returns <em>arr, and this is what we need to define. Unpacking means separating the items of an iterable, in this case the elements of the list arr. The question is then, what happens to the separated elements? If only </em>arr is run, an error is raised as the separated elements need to go into something e.g.&nbsp;list, tuple etc. So <em>arr will not work but [*arr] will work as the elements will be unpacked into a list. The code surrounding the operator determines where the output will be unpacked into. In our case, </em>arr, is given and the syntax for a tuple is an item followed by a comma. Therefore a tuple will be returned.</p>
+<p>In conclusion, the answer is C for all the reasons above.</p>
+<blockquote class="blockquote">
+<p>Everyday I learn something new in my Data Science journey with Arewa Data Science Fellowship. Less than a month ago, I knew almost nothing in Python but right now, everyday my confidence is increasing when it comes to my Python skills. It is a pleasure to be a part of this and I am incredibly grateful to the mentors for the opportunity to be a part of this amazing journey.</p>
+</blockquote>
 
 
 

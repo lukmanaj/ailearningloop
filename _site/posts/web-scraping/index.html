@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-02-12">
+<meta name="dcterms.date" content="2023-03-04">
 
-<title>ailearningloop - How I Started Learning Python</title>
+<title>ailearningloop - Web Scraping a Daily Trust Article using Requests and Beautiful Soup Libraries</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -108,9 +142,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">How I Started Learning Python</h1>
+      <h1 class="title">Web Scraping a Daily Trust Article using Requests and Beautiful Soup Libraries</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">origins</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">requests</div>
+                <div class="quarto-category">web scraping</div>
               </div>
                   </div>
   </div>
@@ -128,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 12, 2023</p>
+        <p class="date">March 4, 2023</p>
       </div>
     </div>
     
@@ -146,16 +182,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I became interested in Python about a year after I started my first full time job. I just felt that I should have some programming skills since I work with the internet and a laptop almost all the time. I started taking some informal courses on different platforms.</p>
-<p>I remember briefly attempting the ‘Data Analysis with Python certification’ on Freecodecamp but I never got to complete it. My interest was still there but I never took the next step. I then took the Google Data Analytics certification on coursera where I got introduced to R. After that, I took the IBM Data Science 10-course specialization and I got my first contact with Python. I learnt but I did not practice enough and after a few months, I only knew the basics but I could not apply the concepts to build projects on my own. The IBM Data Science Certificate was quite Pythonic as out of the ten courses in the specialization, five were Python courses:</p>
-<ol type="1">
-<li>Python for data science</li>
-<li>Data Analysis with Python</li>
-<li>Python project for data science</li>
-<li>Data Visualization with Python</li>
-<li>Machine Learning with Python</li>
-</ol>
-<p>In the end, I didn’t have a clear pathway to a future but I am happy that I am now in a fellowship with a community that can support me as I strive to achieve the programming goal. Alhamdulillah.</p>
+<p>Web scraping is a key skill all data scientists should have. This is why day 22 of our ongoing Arewa Data Science Academy fellowship covered web scraping using BeautifulSoup. In this article, I try to explain and practice this important skill by scraping a daily trust <a href="https://dailytrust.com/last-saturday-polls-raised-issues-that-require-immediate-solutions-inec/">page</a> that contains an article related to the just concluded Nigerian presidential election.&nbsp; Firstly, for this task, one needs the following: - A Python installation -I have Python 3.10 installed,&nbsp; - requests <a href="https://docs.python-requests.org/en/v2.9.1/">library</a> - BeautifulSoup4 <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">library</a></p>
+<p>Both libraries can be installed using pip, or if one uses a conda environment - like I do - the libraries can be installed using conda install <library_name>. In addition, the documentation for both libraries, which are hyperlinked above, provide description for how to install the libraries.&nbsp; For the purpose of this article, I used a colab Jupyter notebook, which is free from google and only requires a google account and an internet connection. There’s no need to install anything else.&nbsp; We first begin by importing the two required libraries</library_name></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Requests library enables us to get the content of the page as a html and BeautifulSoup allows us to parse the html.&nbsp;</p>
+<p>We then create a beautifulSoup object that we can use to navigate the content of the page as follows:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'https://dailytrust.com/last-saturday-polls-raised-issues-that-require-immediate-solutions-inec/'</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(url)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(response.content,<span class="st">'html.parser'</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>soup.prettify()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The url of the page is first declared, then the response object is created using the get method of requests. Afterwards, the content attribute of the response object is passed to BeautifulSoup to create a soup object that we can use to navigate through the content of the web page. The prettify method is used to show the basic structure of the web page as this can help in pinpointing the exact content needed, in our case, the paragraphs.&nbsp;</p>
+<p>To keep things simple for now, this is the approach I followed:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>paragraphs <span class="op">=</span>  soup.find_all(<span class="st">'p'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(soup.title)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> paragraph <span class="kw">in</span> paragraphs:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">not</span> paragraph.find(<span class="st">'a'</span>):</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(paragraph.get_text())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>First, the find_all() method is used to get all the p tags as a list and this is assigned to the paragraphs variable. Then for the main target of this article, I print the title attribute of the soup object and then loop through each item in the paragraphs variable and print, this gives the entire content of the article. I discovered that the hyperlinked titles of related articles where included and I removed them by excluding all p tags that contained a tags.&nbsp;</p>
+<p>In conclusion, web scraping is highly useful to a data scientist as it automates getting content from the internet. One does not have to cut and paste long pieces of text or other contents.</p>
 
 
 
