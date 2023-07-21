@@ -25,5 +25,11 @@
   },
   "posts/web-scraping/index.qmd": {
     "index.html": "1f247d80"
+  },
+  "posts/numpy/index.qmd": {
+    "index.html": "64b0e86f"
+  },
+  "posts/viz/index.qmd": {
+    "index.html": "a73a3a5e"
   }
 }
