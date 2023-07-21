@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/lukmanaj/ailearningloop/about.html</loc>
-    <lastmod>2023-07-21T11:11:16.370Z</lastmod>
+    <lastmod>2023-07-21T11:24:05.876Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/posts/practice-concepts/index.html</loc>
-    <lastmod>2023-07-21T11:11:15.602Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/posts/30-days-python/index.html</loc>
-    <lastmod>2023-07-21T11:11:14.698Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/posts/how-to-learn/index.html</loc>
-    <lastmod>2023-07-21T11:11:13.942Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/index.html</loc>
-    <lastmod>2023-07-21T11:11:13.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/lukmanaj/ailearningloop/posts/welcome/index.html</loc>
-    <lastmod>2023-07-21T11:11:14.298Z</lastmod>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/web-scraping/index.html</loc>
+    <lastmod>2023-07-21T11:24:05.276Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/lukmanaj/ailearningloop/posts/arewads/index.html</loc>
-    <lastmod>2023-07-21T11:11:15.154Z</lastmod>
+    <lastmod>2023-07-21T11:24:04.348Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/welcome/index.html</loc>
+    <lastmod>2023-07-21T11:24:03.688Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/index.html</loc>
+    <lastmod>2023-07-21T11:24:02.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/how-to-learn/index.html</loc>
+    <lastmod>2023-07-21T11:24:03.400Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/30-days-python/index.html</loc>
+    <lastmod>2023-07-21T11:24:04.012Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/lukmanaj/ailearningloop/posts/practice-concepts/index.html</loc>
+    <lastmod>2023-07-21T11:24:04.700Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/lukmanaj/ailearningloop/posts/starting-python/index.html</loc>
-    <lastmod>2023-07-21T11:11:16.010Z</lastmod>
+    <lastmod>2023-07-21T11:24:05.580Z</lastmod>
   </url>
 </urlset>

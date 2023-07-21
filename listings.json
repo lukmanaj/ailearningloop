@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/welcome/index.html",
+      "/posts/web-scraping/index.html",
       "/posts/practice-concepts/index.html",
       "/posts/how-to-learn/index.html",
       "/posts/30-days-python/index.html",
