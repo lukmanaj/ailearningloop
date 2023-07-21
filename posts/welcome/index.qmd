@@ -1,0 +1,11 @@
+---
+title: "Welcome To My Blog"
+author: "Lukman Aliyu Jibril"
+date: "2023-07-18"
+categories: [welcome]
+---
+
+Welcome to my blog. I have loved maths and computations since my earliest childhood memories. I recently got the opportunity to put this passion to use in my amazing data science journey. 
+
+![](thumbnail.jpg)
+

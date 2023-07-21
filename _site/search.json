@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ailearningloop",
+    "section": "",
+    "text": "Welcome To My Blog\n\n\n\n\n\n\n\nwelcome\n\n\n\n\n\n\n\n\n\n\n\nJul 18, 2023\n\n\nLukman Aliyu Jibril\n\n\n\n\n\n\n  \n\n\n\n\nJoining The First Cohort of the Arewa Data Science Academy Fellowship\n\n\n\n\n\n\n\narewads\n\n\n\n\n\n\n\n\n\n\n\nFeb 14, 2023\n\n\nLukman Aliyu Jibril\n\n\n\n\n\n\n  \n\n\n\n\nHow I Started Learning Python\n\n\n\n\n\n\n\norigins\n\n\n\n\n\n\n\n\n\n\n\nFeb 12, 2023\n\n\nLukman Aliyu Jibril\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Welcome to my blog. I have loved maths and computations since my earliest childhood memories. I recently got the opportunity to put this passion to use in my amazing data science journey."
+  },
+  {
+    "objectID": "posts/starting-python/index.html",
+    "href": "posts/starting-python/index.html",
+    "title": "How I Started Learning Python",
+    "section": "",
+    "text": "I became interested in Python about a year after I started my first full time job. I just felt that I should have some programming skills since I work with the internet and a laptop almost all the time. I started taking some informal courses on different platforms.\nI remember briefly attempting the ‘Data Analysis with Python certification’ on Freecodecamp but I never got to complete it. My interest was still there but I never took the next step. I then took the Google Data Analytics certification on coursera where I got introduced to R. After that, I took the IBM Data Science 10-course specialization and I got my first contact with Python. I learnt but I did not practice enough and after a few months, I only knew the basics but I could not apply the concepts to build projects on my own. The IBM Data Science Certificate was quite Pythonic as out of the ten courses in the specialization, five were Python courses:\n\nPython for data science\nData Analysis with Python\nPython project for data science\nData Visualization with Python\nMachine Learning with Python\n\nIn the end, I didn’t have a clear pathway to a future but I am happy that I am now in a fellowship with a community that can support me as I strive to achieve the programming goal. Alhamdulillah."
+  },
+  {
+    "objectID": "posts/arewads/index.html",
+    "href": "posts/arewads/index.html",
+    "title": "Joining The First Cohort of the Arewa Data Science Academy Fellowship",
+    "section": "",
+    "text": "The link for the application to the fellowship was sent to me by my friend Abbas. I reluctantly opened the link and I was surprised to see that I had to complete an introduction to Python course in Udacity to complete the application. They made uploading the certificate a required field. Trust me, I always do my due diligence. Upon completing the course, I found that I could not get a certificate without payment. I took a screenshot if my course dashboard showing that I have completed the course and uploaded that instead. A few days later, I received an email telling me that I had gotten in. This to me, is the beginning of my Python journey. Prior to Arewa, I had only learnt theoretically and had no IDE installed on my laptop. I also only used colab to practice on rare ocassions. After joining Arewa, I was forced to install VSCode and practice daily. Our mentor, Shamsuddeen always says that he wants us to imbibe atomic habits, based on the famous book by James Clear. Having an IDE on my laptop and a structured course with exercises to practice daily has improved my understanding and overall appreciation of the Python programming language.\nOur arewa data science fellowship officially started on the 23rd of January, 2023 with Phase one of four which is broken down into: - 30 Days of Python challenge, designed to improve our Python skills in preparation for Machine Learning and Deep Learning with Pytorch. - The coursera course ‘Learning How to Learn’ which is to improve our learning efficiency as there are numerous concepts to learn in data science. - Git and Github, and - Blogging, to document our learning curve, the reason I’m here.\nThe data science fellowship course is structured for self-paced learning with twice weekly office-hours with the mentors on the weekends to understand concepts and discuss challenges encountered in the exercises given.\nI will discuss more on the fellowship as I touch on the different subjects I encounter in my programming journey with arewa.\n\nPractice makes improvement and possible mastery. This is my take home from my first few weeks in this fellowship. Practice is what I have been missing in my learning journey. As such, it is a great pleasure to be part of the first cohort of this fellowship. In sha Allah, greatness awaits."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Lukman blogs about his journey from a practicing health practitioner to learning Machine Learning after joining the first cohort of the Arewa Data Science Academy fellowship that began in January, 2023."
+  }
+]

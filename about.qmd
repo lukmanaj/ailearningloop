@@ -1,0 +1,20 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/lukmanajjk
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/lukman-a-j
+    - icon: github
+      text: Github
+      href: https://github.com/lukmanaj
+
+---
+
+Lukman blogs about his journey from a practicing health practitioner to learning Machine Learning after joining the first cohort of the Arewa Data Science Academy fellowship that began in January, 2023. 
+
