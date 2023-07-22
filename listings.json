@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/welcome/index.html",
+      "/posts/ml-ai/index.html",
       "/posts/viz/index.html",
       "/posts/pandas/index.html",
       "/posts/numpy/index.html",
