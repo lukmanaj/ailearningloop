@@ -6,6 +6,7 @@ categories: [Machine Learning, Deep Learning, AI, Data Science]
 image: "mlai.png"
 ---
 
+![ml-ai-data-science](mlai.png)
 
 The picture above,taken from Microsoft's free introduction to machine learning course, available on github, succinctly expresses how the concepts relate to one another. 
 
