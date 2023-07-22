@@ -31,5 +31,8 @@
   },
   "posts/viz/index.qmd": {
     "index.html": "a73a3a5e"
+  },
+  "posts/pandas/index.qmd": {
+    "index.html": "4f824d27"
   }
 }
