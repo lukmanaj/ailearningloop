@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/welcome/index.html",
+      "/posts/fizzbuzz-javascript/index.html",
       "/posts/visualization/index.html",
       "/posts/sciences-writing/index.html",
       "/posts/cleancodes/index.html",

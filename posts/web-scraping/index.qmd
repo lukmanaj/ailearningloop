@@ -2,7 +2,7 @@
 title: "Web Scraping a Daily Trust Article using Requests and Beautiful Soup Libraries"
 author: "Lukman Aliyu Jibril"
 date: "2023-03-04"
-categories: [Python,requests,web scraping]
+categories: [python,requests,web scraping]
 image: "requests.jpg"
 editor: 
   markdown: 

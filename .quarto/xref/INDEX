@@ -49,5 +49,8 @@
   },
   "posts/visualization/index.qmd": {
     "index.html": "d0db2268"
+  },
+  "posts/fizzbuzz-javascript/index.qmd": {
+    "index.html": "bdaae73d"
   }
 }

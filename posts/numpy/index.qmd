@@ -2,7 +2,7 @@
 title: "NumPy ndarrays: Introduction to a Powerful Tool for Scientific Computing in Python"
 author: "Lukman Aliyu Jibril"
 date: "2023-03-11"
-categories: [Python]
+categories: [python]
 image: "numpy.jpg"
 ---
 

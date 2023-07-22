@@ -2,7 +2,7 @@
 title: "Creating Beautiful Visualizations with Python: A Guide to Pandas Matplotlib and Seaborn"
 author: "Lukman Aliyu Jibril"
 date: "2023-03-14"
-categories: [python,pandas,matplotlib,seaborn]
+categories: [python,pandas,matplotlib,seaborn,data visualization]
 image: "pythondataviz.jpg"
 ---
 

@@ -2,7 +2,7 @@
 title: "Practising Concepts Learnt So far in ArewaDS"
 author: "Lukman Aliyu Jibril"
 date: "2023-02-21"
-categories: [Python,how to learn]
+categories: [python,how to learn]
 image: "question.jpg"
 
 ---
