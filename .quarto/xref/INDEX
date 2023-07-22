@@ -40,5 +40,14 @@
   },
   "posts/pandas2/index.qmd": {
     "index.html": "4f84f0cd"
+  },
+  "posts/cleancodes/index.qmd": {
+    "index.html": "33a0e307"
+  },
+  "posts/sciences-writing/index.qmd": {
+    "index.html": "5a008ff3"
+  },
+  "posts/visualization/index.qmd": {
+    "index.html": "d0db2268"
   }
 }

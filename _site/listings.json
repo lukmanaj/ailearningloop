@@ -3,6 +3,9 @@
     "listing": "/index.html",
     "items": [
       "/posts/welcome/index.html",
+      "/posts/visualization/index.html",
+      "/posts/sciences-writing/index.html",
+      "/posts/cleancodes/index.html",
       "/posts/pandas2/index.html",
       "/posts/ml-ai/index.html",
       "/posts/viz/index.html",

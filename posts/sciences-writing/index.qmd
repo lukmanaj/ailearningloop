@@ -3,7 +3,7 @@ title: "Mastering Scientific Writing: Key Takeaways from Coursera’s Writing in
 author: "Lukman Aliyu Jibril"
 date: "2023-04-26"
 categories: [writing,sciences,coursera,mooc]
-image: "sciences_wrting.jpg"
+image: "sciences_writing.jpg"
 ---
 
 ## Introduction
