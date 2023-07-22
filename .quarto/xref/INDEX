@@ -37,5 +37,8 @@
   },
   "posts/ml-ai/index.qmd": {
     "index.html": "003cded0"
+  },
+  "posts/pandas2/index.qmd": {
+    "index.html": "4f84f0cd"
   }
 }
