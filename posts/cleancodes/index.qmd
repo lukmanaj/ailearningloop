@@ -2,7 +2,7 @@
 title: "Writing Clean Codes in JavaScript: A Necessity"
 author: "Lukman Aliyu Jibril"
 date: "2023-04-19"
-categories: [Javascript,code,writing]
+categories: [javascript,code,writing]
 image: "../welcome/thumbnail.jpg"
 ---
 
