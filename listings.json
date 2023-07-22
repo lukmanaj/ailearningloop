@@ -4,6 +4,7 @@
     "items": [
       "/posts/welcome/index.html",
       "/posts/viz/index.html",
+      "/posts/pandas/index.html",
       "/posts/numpy/index.html",
       "/posts/web-scraping/index.html",
       "/posts/practice-concepts/index.html",
