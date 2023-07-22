@@ -1,5 +1,5 @@
 ---
-title: "Machine-Learning:-Relationship With Deep Learning, AI ,and Data Science"
+title: "Machine-Learning: Relationship With Deep Learning, AI ,and Data Science"
 author: "Lukman Aliyu Jibril"
 date: "2023-03-29"
 categories: [Machine Learning, Deep Learning, AI, Data Science]
