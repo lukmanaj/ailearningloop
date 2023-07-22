@@ -146,6 +146,7 @@ Operations between DataFrames and series are also supported, just like broadcast
 pandas objects have built-in methods for computing descriptive statistics on DataFrames and series. For instance: - Calling DataFrame's sum method returns a Series containing column sums, passing axis="columns" or axis=1 sums across the columns instead:
 
 ```{python}
+
 df[['Salary',"ID"]].sum(axis=1)
 
 ```
