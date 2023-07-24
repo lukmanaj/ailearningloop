@@ -1,0 +1,25 @@
+---
+title: "Completion of Arewa Data Science Academy Fellowship"
+author: "Lukman Aliyu Jibril"
+date: "2023-07-24"
+categories: [arewads]
+image: "cert.jpg"
+---
+
+It is with immense pleasure and gratitude that I announce my successful completion of the Arewa Data Science Academy fellowship. After months of unwavering dedication, deliberate practice, and continuous learning, I have achieved this milestone in my data science journey.
+
+This journey would not have been possible without the help and blessings of Allah, for with His guidance, nothing is insurmountable. I would like to emphasize the significance of consistency and surrounding oneself with good companions throughout this pursuit. Additionally, I extend my heartfelt appreciation to the supportive mentors who made this entire experience more accessible and enjoyable for all of us.
+
+The fellowship commenced with a comprehensive introduction to the Python programming language, laying a strong foundation for the subsequent stages of learning. We delved into the realm of machine learning, where we mastered the implementation of algorithms for both supervised and unsupervised learning, as well as reinforcement learning.
+
+In addition to the core data science curriculum, we had the opportunity to enhance our overall skills by taking courses on Coursera, such as "Learning How to Learn" and "Writing in the Sciences," which undoubtedly contributed to our growth as aspiring data scientists.
+
+Furthermore, we were equipped with essential tools and technologies used in the industry, including sessions on git and GitHub for version control, LaTeX for document preparation, and blogging using Quarto and similar platforms.
+
+I must confess that this fellowship has been a truly transformative experience, one that has enriched my understanding and ignited my passion for data science even more. I am thrilled to invite you all to explore my blog and GitHub repository, where I have documented my learning journey and projects.
+
+I extend my deepest gratitude to the mentors and organizers of this fellowship for their unwavering support and dedication. Their guidance has been instrumental in shaping our learning and instilling the confidence in us to pursue great things in the near future.
+
+With Allah's blessings and our collective potential, I am super confident that we will achieve remarkable feats in the field of data science. Alhamdulillah!
+
+Thank you all for being a part of this incredible journey.
