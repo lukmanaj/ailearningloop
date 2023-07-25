@@ -26,6 +26,6 @@ In conclusion, the article encourages scholarly writing as a rewarding endeavor 
 
 It's worth noting that while most of the article aligns with what I learned in a "Writing in the Sciences" MOOC on Coursera, there may be some differences in opinions regarding the use of first-person language, as it can vary depending on the journal's preferences and the author's writing style.
 
-### Reference:
+### Reference
 
 Hoogenboom BJ, Manske RC. How to write a scientific article. Int J Sports Phys Ther. 2012 Oct;7(5):512-7. PMID: 23091783; PMCID: PMC3474301.
