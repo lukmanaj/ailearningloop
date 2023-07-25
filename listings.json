@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/writearticles/index.html",
       "/posts/fellowship-conclusion/index.html",
       "/posts/fizzbuzz-javascript/index.html",
       "/posts/visualization/index.html",
