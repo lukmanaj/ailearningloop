@@ -1,5 +1,5 @@
 ---
-title: "How to Write a Scientific Paper"
+title: "Writing a Scientific Paper"
 author: "Lukman Aliyu Jibril"
 date: "2023-07-25"
 categories: [scientific writing,journal article,research]
