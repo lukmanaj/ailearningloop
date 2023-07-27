@@ -45,7 +45,7 @@ Unpacking: The final ingredient is the unpacking operator- asterisk. The functio
 
 In conclusion, the answer is C for all the reasons above. 
 
-> Everyday I learn something new in my Data Science journey with Arewa Data Science Fellowship. Less than a month ago, I knew almost nothing in Python but right now, everyday my confidence is increasing when it comes to my Python skills. It is a pleasure to be a part of this and I am incredibly grateful to the mentors for the opportunity to be a part of this amazing journey. 
+> Everyday I learn something new in my Data Science journey with Arewa Data Science Fellowship. Less than a month ago, I knew almost nothing in Python but right now, my confidence is increasing with each new day when it comes to my Python skills. It is a pleasure to be a part of this and I am incredibly grateful to the mentors for the opportunity to be a part of this amazing journey. 
 
 
 
