@@ -1,0 +1,159 @@
+---
+title: "Solving the FizzBuzz Problem: Eight Creative Solutions in R Programming"
+author: "Lukman Aliyu Jibril"
+date: "2023-06-19"
+categories: [r programming, fizzbuzz, loops]
+
+---
+
+# Introduction
+
+The FizzBuzz problem is a classic programming exercise that tests a developer’s ability to think logically and solve a simple but often misunderstood challenge. I have written previously about the FizzBuzz challenge here and here. In this article, we will explore ten creative solutions to the FizzBuzz problem using the R programming language. These solutions will demonstrate different approaches, from basic conditional statements to more advanced techniques, showcasing the versatility and power of R.
+
+## Solution 1: Traditional Approach with Conditional Statements:
+
+This solution follows the traditional FizzBuzz approach, utilizing conditional statements to check divisibility and printing the appropriate output.
+
+```{r}
+# Solution 1: Traditional Approach with Conditional Statements
+for (i in 1:100) {
+  if (i %% 3 == 0 & i %% 5 == 0)
+    print("FizzBuzz")
+  else if (i %% 3 == 0)
+    print("Fizz")
+  else if (i %% 5 == 0)
+    print("Buzz")
+  else
+    print(i)
+}
+
+```
+
+## Solution 2: Vectorized Solution using Modulo Operator:
+
+Leveraging the vectorized capabilities of R, this solution employs the modulo operator to check divisibility for multiple inputs simultaneously, resulting in efficient code.
+
+```{r}
+# Solution 2: Vectorized Solution using Modulo Operator
+numbers <- 1:100
+result <- ifelse(numbers %% 15 == 0, "FizzBuzz",
+         ifelse(numbers %% 3 == 0, "Fizz",
+           ifelse(numbers %% 5 == 0, "Buzz", numbers)))
+print(result)
+
+```
+
+
+## Solution 3: Recursive Function Approach
+
+This solution showcases the elegance of recursion by defining a recursive function that outputs the FizzBuzz sequence.
+
+```{r}
+# Solution 3: Recursive Function Approach
+fizzbuzz <- function(n) {
+  if (n == 0)
+    return()
+  fizzbuzz(n - 1)
+  if (n %% 3 == 0 & n %% 5 == 0)
+    print("FizzBuzz")
+  else if (n %% 3 == 0)
+    print("Fizz")
+  else if (n %% 5 == 0)
+    print("Buzz")
+  else
+    print(n)
+}
+fizzbuzz(100)
+```
+
+## Solution 4: Ternary Operators for Concise Code:
+
+By employing the ternary operator, this solution achieves concise code by condensing conditional statements into a single line.
+
+```{r}
+# Solution 4: Ternary Operators for Concise Code
+for (i in 1:100)
+  print(ifelse(i %% 3 == 0 & i %% 5 == 0, "FizzBuzz",
+         ifelse(i %% 3 == 0, "Fizz",
+           ifelse(i %% 5 == 0, "Buzz", i))))
+```
+
+
+## Solution 5: Utilizing the ifelse() Function:
+
+The ifelse() function in R allows for concise and efficient conditional statements. This solution demonstrates its use to solve the FizzBuzz problem.
+
+```{r}
+# Solution 5: Utilizing the `ifelse()` Function
+for (i in 1:100) {
+  result <- ifelse(i %% 15 == 0, "FizzBuzz",
+              ifelse(i %% 3 == 0, "Fizz",
+                ifelse(i %% 5 == 0, "Buzz", i)))
+  print(result)
+}
+```
+
+## Solution 6: Functional Programming Approach with purrr Package
+
+Leveraging the power of functional programming, this solution utilizes the map() function from the purrr package to solve the FizzBuzz problem.
+
+```{r}
+# Solution 6: Functional Programming Approach with `purrr` Package
+library(purrr)
+map(1:100, function(i) {
+  if (i %% 3 == 0 & i %% 5 == 0)
+    return("FizzBuzz")
+  else if (i %% 3 == 0)
+    return("Fizz")
+  else if (i %% 5 == 0)
+    return("Buzz")
+  else
+    return(i)
+})
+```
+
+# Solution 7: Creating a Lookup Table
+
+By creating a lookup table using a data frame or a named vector, this solution simplifies the FizzBuzz logic and enhances code readability.
+
+```{r}
+# Solution 7: Creating a Lookup Table
+lookup_table <- data.frame(number = 1:100, result = as.character(1:100))
+lookup_table$result[lookup_table$number %% 3 == 0] <- "Fizz"
+lookup_table$result[lookup_table$number %% 5 == 0] <- "Buzz"
+lookup_table$result[lookup_table$number %% 15 == 0] <- "FizzBuzz"
+print(lookup_table$result)
+```
+
+## Solution 8: Functional Reactive Programming with Shiny
+
+This solution showcases the power of Shiny, an R package for web application development, by building an interactive FizzBuzz generator.
+
+```r
+# Solution 8: Functional Reactive Programmming with Shiny
+library(shiny)
+
+ui <- fluidPage(
+  numericInput("n", "Enter a number:", min = 1, max = 100, value = 1),
+  verbatimTextOutput("result")
+)
+
+server <- function(input, output) {
+  output$result <- renderPrint({
+    if (input$n %% 3 == 0 & input$n %% 5 == 0)
+      return("FizzBuzz")
+    else if (input$n %% 3 == 0)
+      return("Fizz")
+    else if (input$n %% 5 == 0)
+      return("Buzz")
+    else
+      return(input$n)
+  })
+}
+
+shinyApp(ui, server)
+```
+
+# Conclusion:
+
+The FizzBuzz problem provides an excellent opportunity to explore various programming techniques in R, ranging from basic conditional statements to advanced functional programming concepts. By presenting eight diverse solutions, this article aimed to demonstrate the flexibility and creativity that R offers when solving coding challenges. Each approach offers a unique perspective and highlights different aspects of the R language, allowing developers to expand their knowledge and problem-solving skills. Whether you are a beginner or an experienced R programmer, these solutions provide valuable insights into the multiple ways to tackle the FizzBuzz problem in R.

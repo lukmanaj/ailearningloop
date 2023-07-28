@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-02-21">
+<meta name="dcterms.date" content="2023-07-25">
 
-<title>ailearningloop - Practising Concepts Learnt So far in ArewaDS</title>
+<title>ailearningloop - Writing a Scientific Paper</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,10 +108,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Practising Concepts Learnt So far in ArewaDS</h1>
+      <h1 class="title">Writing a Scientific Paper</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">python</div>
-                <div class="quarto-category">how to learn</div>
+                <div class="quarto-category">scientific writing</div>
+                <div class="quarto-category">journal article</div>
+                <div class="quarto-category">research</div>
               </div>
                   </div>
   </div>
@@ -129,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 21, 2023</p>
+        <p class="date">July 25, 2023</p>
       </div>
     </div>
     
@@ -147,33 +148,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><strong>What is the output of this code and why?</strong></p>
-<hr>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="question.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">practice</figcaption>
-</figure>
-</div>
-<hr>
-<p>I selected this question as it covers so many of concepts we have covered in our Arewa Data Science 30 days of Python so far.</p>
-<p>It can be summarised as follows: 1. range(1,6,2) is the sequence 1,3,5</p>
-<ol start="2" type="1">
-<li><p>arr is [1,3,5]</p></li>
-<li><p>The change made to arr1 reflects in arr. So arr also becomes [1,3,5,10]</p></li>
-<li><p>*arr, converts arr to tuple and returns (1,3,5,10)</p></li>
-</ol>
-<p>The question covers the following topics: - range (day 10, introduced during loops) - list comprehension (day 13) - mutation (day 5, lists) - unpacking (day 17)</p>
-<p>range is a built-in function that helps in creating sequence of integers. It accepts three arguments; start, stop and step. Start is inclusive but stop is exclusive. In this question, range(1,6,2) gives the sequence of 1,3,5.</p>
-<p>List comprehension: The list comprehension statement, arr = [x for x in range(1,6,2)], goes through each element in the sequence, range(1,6,2), and includes it in a list. Since it has been established that range(1,6,2) is 1,3,5 then arr is [1,3,5].</p>
-<p>Mutation: This is a concept that is hard for most Python beginners like me to grasp. arr1 = arr does not make a copy of arr and put it in arr1, rather it gives an additional name, arr1 to the object named arr. This implies that the list [1,3,5] now has two names, arr and arr1. This is how assignment works in Python. So any change done to arr1 will reflect in arr and vice versa. Hence arr1.append(10) will add ten to the same list object referenced by both arr and arr1.</p>
-<p>Unpacking: The final ingredient is the unpacking operator- asterisk. The functions returns <em>arr, and this is what we need to define. Unpacking means separating the items of an iterable, in this case the elements of the list arr. The question is then, what happens to the separated elements? If only </em>arr is run, an error is raised as the separated elements need to go into something e.g.&nbsp;list, tuple etc. So <em>arr will not work but [*arr] will work as the elements will be unpacked into a list. The code surrounding the operator determines where the output will be unpacked into. In our case, </em>arr, is given and the syntax for a tuple is an item followed by a comma. Therefore a tuple will be returned.</p>
-<p>In conclusion, the answer is C for all the reasons above.</p>
-<blockquote class="blockquote">
-<p>Everyday I learn something new in my Data Science journey with Arewa Data Science Fellowship. Less than a month ago, I knew almost nothing in Python but right now, my confidence is increasing with each new day when it comes to my Python skills. It is a pleasure to be a part of this and I am incredibly grateful to the mentors for the opportunity to be a part of this amazing journey.</p>
-</blockquote>
+<p>In this post, I aim to summarize the key points from the journal article “How to Write a Scientific Article” by Barbara J. Hoogenboom and Robert C. Manske, which offers practical advice for successfully writing and submitting scientific manuscripts to peer-reviewed journals. The authors stress the significance of clear communication and effective writing skills in advancing evidence-based practice and scientific thinking. They cover various aspects of manuscript preparation, general writing tips, and important content sections.</p>
+<p>The introduction emphasizes the importance of publishing research findings in peer-reviewed journals to positively impact the scientific community and clinical decision-making. The authors recognize that writing a scientific paper can be challenging, particularly for inexperienced authors due to various barriers. Nevertheless, they assert that effective writing skills can be honed with practice.</p>
+<p>The article provides valuable tips on manuscript preparation and advises authors to identify a specific target journal and adhere to its submission criteria. The recommended IMRaD format (Introduction, Methods, Results, and Discussion) helps structure scientific manuscripts.</p>
+<p>The authors emphasize the need for clear and accurate expression of ideas and research information. They caution against excessive use of jargon and recommend avoiding first-person language, which might contradict certain viewpoints from other sources.</p>
+<p>Seeking a reading mentor and obtaining feedback on the manuscript before submission are encouraged, particularly for novice writers.</p>
+<p>The article highlights the significance of using figures, graphics, and videos to enhance research presentations. Proper citation and avoiding plagiarism are deemed essential in scientific writing.</p>
+<p>The content section discusses key elements like the abstract, introduction, review of literature, methods, results, discussion, and conclusions. The abstract is deemed critical as it often determines whether readers will continue reading the paper. The introduction should clearly state the research question and justify the study’s significance.</p>
+<p>The methods section should provide sufficient detail for replication of the study, including mentioning ethical approval. The results section should present findings without interpretation, while the discussion section should contextualize results by comparing them with existing evidence.</p>
+<p>In conclusion, the article encourages scholarly writing as a rewarding endeavor that contributes to scientific knowledge and evidence-based practice. It provides valuable insights and practical tips for authors, especially those new to scientific writing, to successfully navigate the publication process and produce high-quality manuscripts.</p>
+<p>It’s worth noting that while most of the article aligns with what I learned in a “Writing in the Sciences” MOOC on Coursera, there may be some differences in opinions regarding the use of first-person language, as it can vary depending on the journal’s preferences and the author’s writing style.</p>
+<section id="reference" class="level3">
+<h3 class="anchored" data-anchor-id="reference">Reference</h3>
+<p>Hoogenboom BJ, Manske RC. How to write a scientific article. Int J Sports Phys Ther. 2012 Oct;7(5):512-7. PMID: 23091783; PMCID: PMC3474301.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

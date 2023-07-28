@@ -55,5 +55,11 @@
   },
   "posts/fellowship-conclusion/index.qmd": {
     "index.html": "6feb8d2f"
+  },
+  "posts/writearticles/index.qmd": {
+    "index.html": "573354c8"
+  },
+  "posts/fizzbuzz_r/index.qmd": {
+    "index.html": "57eb01ef"
   }
 }
