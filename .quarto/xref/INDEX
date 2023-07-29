@@ -61,5 +61,11 @@
   },
   "posts/fizzbuzz_r/index.qmd": {
     "index.html": "57eb01ef"
+  },
+  "posts/nlp/index.qmd": {
+    "index.html": "68730ec5"
+  },
+  "posts/r-vectorized-code/index.qmd": {
+    "index.html": "8129fdbc"
   }
 }
