@@ -183,7 +183,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="writing-vectorized-code" class="level2">
 <h2 class="anchored" data-anchor-id="writing-vectorized-code">Writing Vectorized Code</h2>
-<p>The first thing is to define vectorized code. According to Garrett Grolemund in his book “Hands-On Programming with R”, vectorised code has the following qualities: - Logical tests - Subsetting - Element-wise execution</p>
+<p>The first thing is to define vectorized code. According to Garrett Grolemund in his book “Hands-On Programming with R”, vectorised code has the following qualities:</p>
+<ul>
+<li>Logical tests</li>
+<li>Subsetting</li>
+<li>Element-wise execution</li>
+</ul>
 <p>As an illustration, let’s look at two functions that do the same thing. One is vectorized and other is not. We will then compare the time it takes for both functions to be executed to determine which technique is more efficient.</p>
 <section id="not-vectorized" class="level3">
 <h3 class="anchored" data-anchor-id="not-vectorized">Not vectorized</h3>
@@ -220,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>(<span class="fu">abs_loop</span>(long))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.757   0.057   0.815 </code></pre>
+  0.913   0.124   1.047 </code></pre>
 </div>
 </div>
 </section>
@@ -230,10 +235,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>(<span class="fu">abs_sets</span>(long))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.182   0.129   0.311 </code></pre>
+  0.206   0.140   0.347 </code></pre>
 </div>
 </div>
-<p>It can be seen that the vectorized function (ab_sets()) is so much faster.</p>
+<p>It can be seen that the vectorized function (ab_sets()) is about three times faster. The speed advantage increases as the size of the variable (long) increases.</p>
 <p>To be continued.</p>
 
 
