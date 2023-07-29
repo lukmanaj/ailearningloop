@@ -7,6 +7,7 @@ categories: [r programming, vectorization]
 
 ## Writing Vectorized Code
 The first thing is to define vectorized code. According to Garrett Grolemund in his book "Hands-On Programming with R", vectorised code has the following qualities:
+
 - Logical tests
 - Subsetting
 - Element-wise execution
