@@ -16,7 +16,7 @@ The key thing about vectorization is that operations are performed on all elemen
 
 As an illustration, let's look at two functions that do the same thing. One is vectorized and other is not. We will then compare the time it takes for both functions to be executed to determine which technique is more efficient. 
 
-###  Regular implementation using a for loop (not vectorized)
+###  Regular Implementation Using a For Loop (not vectorized)
 
 ```{r}
 abs_loop <- function(vec){
@@ -30,7 +30,7 @@ abs_loop <- function(vec){
 ```
 
 
-###  Vectorized implementation
+###  Vectorized Implementation
 
 ```{r}
 abs_sets <- function(vec){
