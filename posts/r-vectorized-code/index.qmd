@@ -12,9 +12,11 @@ The first thing is to define vectorized code. According to Garrett Grolemund in 
 - Subsetting
 - Element-wise execution
 
+The key thing about vectorization is that operations are performed on all elements of a vector simultaneously without the need of explicitly looping over the elements of the vector. This can make R code significantly faster. 
+
 As an illustration, let's look at two functions that do the same thing. One is vectorized and other is not. We will then compare the time it takes for both functions to be executed to determine which technique is more efficient. 
 
-###  Not vectorized
+###  Regular implementation using a for loop (not vectorized)
 
 ```{r}
 abs_loop <- function(vec){
@@ -46,7 +48,7 @@ long <- rep(c(-1, 1), 5000000)
 ```
 
 
-Finally, the time it takes for each function to run is calculated and compared
+Finally, the time it takes for each function to run is calculated and compared: 
 
 
 # Unvectorized 
@@ -63,5 +65,6 @@ system.time(abs_sets(long))
 ```
 
 It can be seen that the vectorized function (ab_sets()) is about three times faster. The speed advantage increases as the size of the variable (long) increases. 
+Imagine working on large vectors and the time that will be saved by vectorizing all our computations. Even the computational costs will be significantly reduced. 
 
-To be continued. 
+In conclusion, since R is built around vectors and most R functions are vectorized, using vectorization will be a significant addition to the toolkit of every R user and this can significantly improve productivity. 

@@ -189,9 +189,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Subsetting</li>
 <li>Element-wise execution</li>
 </ul>
+<p>The key thing about vectorization is that operations are performed on all elements of a vector simultaneously without the need of explicitly looping over the elements of the vector. This can make R code significantly faster.</p>
 <p>As an illustration, let’s look at two functions that do the same thing. One is vectorized and other is not. We will then compare the time it takes for both functions to be executed to determine which technique is more efficient.</p>
-<section id="not-vectorized" class="level3">
-<h3 class="anchored" data-anchor-id="not-vectorized">Not vectorized</h3>
+<section id="regular-implementation-using-a-for-loop-not-vectorized" class="level3">
+<h3 class="anchored" data-anchor-id="regular-implementation-using-a-for-loop-not-vectorized">Regular implementation using a for loop (not vectorized)</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>abs_loop <span class="ot">&lt;-</span> <span class="cf">function</span>(vec){</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(vec)) {</span>
@@ -225,7 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>(<span class="fu">abs_loop</span>(long))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.913   0.124   1.047 </code></pre>
+  0.787   0.039   0.826 </code></pre>
 </div>
 </div>
 </section>
@@ -235,11 +236,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>(<span class="fu">abs_sets</span>(long))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.206   0.140   0.347 </code></pre>
+  0.216   0.142   0.357 </code></pre>
 </div>
 </div>
-<p>It can be seen that the vectorized function (ab_sets()) is about three times faster. The speed advantage increases as the size of the variable (long) increases.</p>
-<p>To be continued.</p>
+<p>It can be seen that the vectorized function (ab_sets()) is about three times faster. The speed advantage increases as the size of the variable (long) increases. Imagine working on large vectors and the time that will be saved by vectorizing all our computations. Even the computational costs will be significantly reduced.</p>
+<p>In conclusion, since R is built around vectors and most of the functions are vectorized, using vectorization will be a significant addition to the toolkit of every R user and this can significantly improve productivity.</p>
 
 
 </section>
