@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/skills/index.html",
       "/posts/claudiu-talk/index.html",
       "/posts/r-vectorized-code/index.html",
       "/posts/writearticles/index.html",
