@@ -1,0 +1,11 @@
+---
+title: "Arewa Data Science Academy's focus on relevant skills"
+author: "Lukman Aliyu Jibril"
+date: "2023-07-31"
+categories: [skills, arewads,git,quarto,writing]
+---
+
+Joining Arewa Data Science academy fellowship I will say has been the most transformative thing that has happened to me this year. I have learnt so much within just half a year. 
+
+Apart from learning programming and data science skills, I got the opportunity to learn version control using git, in multiple hands-on workshops. In addition, we were encouraged to blog about our learning experiences and I learnt blogging with quarto, we had hands-on sessions on scientific writing. All the sessions were taken by our super talented and dedicated mentors. In the beginning, we even had updates on notion. We had Cv writing exercises using latex and it was hands-on and engaging. The mentors offered to review our CVs and give us feedback on areas for improvement. 
+I have barely begun to scratch the surface. Arewa Data Science Academy has been a blessing to me this year and I have grown beyond my imagination just by being a fellow. 
