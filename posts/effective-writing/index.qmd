@@ -1,0 +1,25 @@
+---
+title: "Enhancing Effective Writing: Insights from Larry McEnerney's Leadership Lab"
+author: "Lukman Aliyu Jibril"
+date: "2023-08-04"
+categories: [writing,research,effective writing]
+image: "effective_writing.png"
+---
+
+Larry McEnerney's Leadership Lab on effective writing delivered on May 9, 2014 began with a compelling assertion: "Shift your focus from rules to readers." This succinctly encapsulates his core message, a crucial takeaway for the audience composed mainly of academic researchers. McEnerney aimed to dismantle prevalent misconceptions about writing, challenging notions that view it merely as a tool for conveying complex ideas or a means of thinking. While acknowledging these as valid purposes, he asserted that the primary goal of writing is to transform readers' perspectives or worldviews, positioning the reader at the heart of the writing process.
+
+Central to McEnerney's discourse was the concept of creating writing that holds inherent value for the reader, ultimately driving change and influencing their ideas. He delved into the notion of knowledge, asserting its boundless nature and the role of field-specific experts in shaping valuable contributions. Convincing this community of experts, he emphasized, is a critical objective in writing.
+
+McEnerney underscored the importance of understanding the community's dynamics and norms, urging writers to "know the code." This involves skillfully presenting information in a manner acceptable to the community, even incorporating praise before presenting arguments. Identifying key influencers within the community and catering to their preferences emerged as a pivotal strategy.
+
+The workshop also deconstructed common motivations for writing, highlighting the nuanced nature of these reasons. McEnerney contended that while additional motives exist, academic writing's core purpose remains convincing the community of experts.
+
+An important principle that McEnerney tackled was the necessity of introducing valuable new knowledge. He transitioned to discussing the writing process itself, challenging the conventional approach of starting with a background and definitions. Instead, he advocated for commencing the introduction by outlining the problem, injecting a sense of instability and tension. Such an approach, he argued, captures readers' attention and sets the stage for proposing elegant solutions.
+
+Furthermore, McEnerney advocated employing language that accentuates instability and tension to engage readers. He suggested dramatizing issues before presenting refined solutions, catering to readers' preference for tension-filled narratives. Additionally, he advised incorporating the language of cost and benefit, underlining the problem's consequences in terms of monetary or other values, as well as emphasizing the benefits of adopting the proposed solution.
+
+In the context of literature reviews, McEnerney positioned them as a tool to enrich and contextualize the problem. He encouraged using terms like "knowledge gap" to convey the notion that knowledge is expandable, rather than bounded. The key, he stressed, lies in demonstrating a solution's value to the expert community, ensuring its integration into the broader body of knowledge.
+
+In summary, McEnerney's workshop wasn't a guide to writing formats or grammar rules; its aim was to reshape the audience's approach to writing, placing readers at the forefront. Paramount considerations included the target journal, the expert community, and the academic field's constituents. This approach, he asserted, significantly elevates writing quality and enhances the chances of successful journal submissions.
+
+For those interested, the full video of the workshop can be accessed [here](https://www.youtube.com/watch?v=vtIzMaLkCaM&t=1671s).
