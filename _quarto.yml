@@ -5,6 +5,7 @@ website:
   title: "ailearningloop"
   site-url: "https://lukmanaj.github.io/ailearningloop/"
   description: "Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!"
+  margin-header: subscribe.html
   navbar:
     right:
       - about.qmd
