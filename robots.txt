@@ -1,1 +1,1 @@
-Sitemap: https://github.com/lukmanaj/ailearningloop/sitemap.xml
+Sitemap: https://lukmanaj.github.io/ailearningloop/sitemap.xml
