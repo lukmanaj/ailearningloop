@@ -6,6 +6,9 @@ website:
   site-url: "https://lukmanaj.github.io/ailearningloop/"
   description: "Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!"
   margin-header: subscribe.html
+  comments: 
+    utterances:
+      repo: quarto-dev/quarto-web
   navbar:
     right:
       - about.qmd
