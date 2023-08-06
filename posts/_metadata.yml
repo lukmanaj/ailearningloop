@@ -8,4 +8,4 @@ freeze: auto
 title-block-banner: true
 comments: 
     utterances:
-      repo: "https://github.com/lukmanaj/ailearningloop"
+      repo: lukmanaj/ailearningloop
