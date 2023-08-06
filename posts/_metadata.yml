@@ -8,4 +8,4 @@ freeze: auto
 title-block-banner: true
 comments: 
     utterances:
-      repo: quarto-dev/quarto-web
+      repo: "https://github.com/lukmanaj/ailearningloop"

@@ -8,7 +8,7 @@ website:
   margin-header: subscribe.html
   comments: 
     utterances:
-      repo: quarto-dev/quarto-web
+      repo: "https://github.com/lukmanaj/ailearningloop"
   navbar:
     right:
       - about.qmd
