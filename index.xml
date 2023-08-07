@@ -46,7 +46,7 @@
 <p>then we can rearrange by adding and subtracting 1 which in essence does nothing but add a zero:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Be%5E%7B-x%7D%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D+%201%20-1%20.%5Ctag%7B6%7D"></p>
 <p>this easily becomes:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%20+%20e%5E%7B-x%7D-1%7D%7B1+e%5E%7B-x%7D)%5E%7B-2%7D%7D%20.%5Ctag%7B7%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%20+%20e%5E%7B-x%7D-1%7D%7B%5Cleft(1+e%5E%7B-x%7D%5Cright)%5E%7B-2%7D%7D%20.%5Ctag%7B7%7D"></p>
 <p>which is simply:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%20+%20e%5E%7B-x%7D%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D%20-%20%5Cfrac%7B1%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D%20.%5Ctag%7B8%7D"></p>
 <p>which simplifies to:</p>
@@ -56,7 +56,7 @@
 <p>recalling equation 1:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Csigma%5Cleft(x%5Cright)%20=%20%5Cfrac%7B1%7D%7B1+e%5E%7B-x%7D%7D"></p>
 <p>our derivative is now proven to be</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5E%7B,%7D%5Cleft(x%5Cright)%20=%20%5Csigma%5Cleft(x%5Cright)%20%5Ctimes(1-%5Csigma%5Cleft(x%5Cright))%20%5Ctag%5C%7B11%7D"> Q.E.D</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5E%7B,%7D%5Cleft(x%5Cright)%20=%20%5Csigma%5Cleft(x%5Cright)%20%5Ctimes(1-%5Csigma%5Cleft(x%5Cright)).%5Ctag%7B11%7D"> Q.E.D</p>
 </section>
 <section id="importance-of-the-sigmoid-derivative-in-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="importance-of-the-sigmoid-derivative-in-optimization">Importance of the Sigmoid Derivative in Optimization</h2>
