@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lukman Aliyu Jibril">
+<meta name="dcterms.date" content="2023-08-07">
 
-<title>ailearningloop</title>
+<title>ailearningloop - The Crucial Role of the Sigmoid Function its Derivative in Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,35 +61,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-J7BWRJYLX5"></script>
 
 <script type="text/javascript">
@@ -103,8 +74,8 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="ailearningloop" href="index.xml"></head>
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
 <body class="nav-fixed">
 
@@ -113,7 +84,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">ailearningloop</span>
     </a>
   </div>
@@ -124,7 +95,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -138,7 +109,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -152,21 +123,39 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">ailearningloop</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">The Crucial Role of the Sigmoid Function its Derivative in Machine Learning</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">machine learning</div>
+                <div class="quarto-category">sigmoid</div>
+                <div class="quarto-category">activation</div>
+                <div class="quarto-category">mathematics</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lukman Aliyu Jibril </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 7, 2023</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
@@ -1053,1053 +1042,63 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
         </script>
 </div></div>
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(25)</span></div><div class="category" data-category="activation">activation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="advice">advice <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ai">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="arewads">arewads <span class="quarto-category-count">(3)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="coursera">coursera <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data analysis">data analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data science">data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data visualization">data visualization <span class="quarto-category-count">(2)</span></div><div class="category" data-category="deep learning">deep learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="effective writing">effective writing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="fizzbuzz">fizzbuzz <span class="quarto-category-count">(2)</span></div><div class="category" data-category="git">git <span class="quarto-category-count">(1)</span></div><div class="category" data-category="how to learn">how to learn <span class="quarto-category-count">(2)</span></div><div class="category" data-category="javascript">javascript <span class="quarto-category-count">(2)</span></div><div class="category" data-category="journal article">journal article <span class="quarto-category-count">(1)</span></div><div class="category" data-category="loops">loops <span class="quarto-category-count">(2)</span></div><div class="category" data-category="machine learning">machine learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="mathematics">mathematics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="matplotlib">matplotlib <span class="quarto-category-count">(2)</span></div><div class="category" data-category="mooc">mooc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="natural language processing">natural language processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="origins">origins <span class="quarto-category-count">(1)</span></div><div class="category" data-category="packages">packages <span class="quarto-category-count">(1)</span></div><div class="category" data-category="pandas">pandas <span class="quarto-category-count">(3)</span></div><div class="category" data-category="programming">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(9)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="r">r <span class="quarto-category-count">(1)</span></div><div class="category" data-category="r programming">r programming <span class="quarto-category-count">(2)</span></div><div class="category" data-category="requests">requests <span class="quarto-category-count">(1)</span></div><div class="category" data-category="research">research <span class="quarto-category-count">(3)</span></div><div class="category" data-category="sciences">sciences <span class="quarto-category-count">(1)</span></div><div class="category" data-category="scientific writing">scientific writing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="seaborn">seaborn <span class="quarto-category-count">(2)</span></div><div class="category" data-category="sigmoid">sigmoid <span class="quarto-category-count">(1)</span></div><div class="category" data-category="skills">skills <span class="quarto-category-count">(1)</span></div><div class="category" data-category="vectorization">vectorization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="web scraping">web scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="welcome">welcome <span class="quarto-category-count">(1)</span></div><div class="category" data-category="writing">writing <span class="quarto-category-count">(4)</span></div></div></div>
-<!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
     </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="machine learning,sigmoid,activation,mathematics" data-listing-date-sort="1691366400000" data-listing-file-modified-sort="1691448057690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./posts/sigmoid/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/sigmoid/index.html">
-<h3 class="no-anchor listing-title">
-The Crucial Role of the Sigmoid Function its Derivative in Machine Learning
-</h3>
-<div class="listing-subtitle">
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('machine learning'); return false;">
-machine learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('sigmoid'); return false;">
-sigmoid
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('activation'); return false;">
-activation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('mathematics'); return false;">
-mathematics
-</div>
-</div>
-<a href="./posts/sigmoid/index.html">
-<div class="listing-description">
-In the realm of machine learning, the sigmoid function stands as a foundational and indispensable element, playing a pivotal role in various applications such as neural…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/sigmoid/index.html">
-<div class="listing-date">
-Aug 7, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="writing,research,effective writing" data-listing-date-sort="1691107200000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/effective-writing/index.html"> <img src="./posts/effective-writing/effective_writing.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/effective-writing/index.html">
-<h3 class="no-anchor listing-title">
-Enhancing Effective Writing: Insights from Larry McEnerney’s Leadership Lab
-</h3>
-<div class="listing-subtitle">
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('writing'); return false;">
-writing
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
-research
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('effective writing'); return false;">
-effective writing
-</div>
-</div>
-<a href="./posts/effective-writing/index.html">
-<div class="listing-description">
-Larry McEnerney’s Leadership Lab on effective writing delivered on May 9, 2014 began with a compelling assertion: “Shift your focus from rules to readers.” This succinctly…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/effective-writing/index.html">
-<div class="listing-date">
-Aug 4, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="skills,arewads,git,quarto,writing" data-listing-date-sort="1690761600000" data-listing-file-modified-sort="1691448057682" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/arewads-impact/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/arewads-impact/index.html">
-<h3 class="no-anchor listing-title">
-Arewa Data Science Academy Fellowship: A Transformative Journey to Success in Data Science
-</h3>
-<div class="listing-subtitle">
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('skills'); return false;">
-skills
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('arewads'); return false;">
-arewads
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('git'); return false;">
-git
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('quarto'); return false;">
-quarto
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('writing'); return false;">
-writing
-</div>
-</div>
-<a href="./posts/arewads-impact/index.html">
-<div class="listing-description">
-The Arewa Data Science Academy fellowship has been an exceptional…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/arewads-impact/index.html">
-<div class="listing-date">
-Jul 31, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="research,advice" data-listing-date-sort="1690675200000" data-listing-file-modified-sort="1691448057682" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/claudiu-talk/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/claudiu-talk/index.html">
-<h3 class="no-anchor listing-title">
-Endless Paths in Data Science: Insights from Claudiu Musat’s Talk on Handwriting Synthesis and Career Prospects
-</h3>
-<div class="listing-subtitle">
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
-research
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('advice'); return false;">
-advice
-</div>
-</div>
-<a href="./posts/claudiu-talk/index.html">
-<div class="listing-description">
-After recently concluding our fellowship at Arewa Data Science Academy, we had the privilege of attending a captivating talk by Claudiu Musat, a distinguished researcher…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/claudiu-talk/index.html">
-<div class="listing-date">
-Jul 30, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="r programming,vectorization" data-listing-date-sort="1690588800000" data-listing-file-modified-sort="1691448057690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/r-vectorized-code/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/r-vectorized-code/index.html">
-<h3 class="no-anchor listing-title">
-The Case for Writing Vectorised Code in R
-</h3>
-<div class="listing-subtitle">
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In the realm of machine learning, the sigmoid function stands as a foundational and indispensable element, playing a pivotal role in various applications such as neural networks, logistic regression, and decision-making models. Its characteristic S-shaped curve enables it to map input data to a bounded output range, making it particularly valuable for tasks involving classification, probability estimation, and activation functions. This essay explores the significance of the sigmoid function in machine learning and delves into the techniques for solving its derivative, elucidating its importance in optimizing learning processes.</p>
+</section>
+<section id="the-sigmoid-function-a-cornerstone-of-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="the-sigmoid-function-a-cornerstone-of-machine-learning">The Sigmoid Function: A Cornerstone of Machine Learning</h2>
+<p>The sigmoid function, mathematically represented as <span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}}\)</span>, transforms any input value to a range between 0 and 1. This property is particularly useful in binary classification problems, where the output is interpreted as a probability score for a particular class. In the context of neural networks, sigmoid activation functions allow neurons to fire selectively, enabling complex patterns to be captured through the network’s layers. Its continuous and differentiable nature makes it suitable for various optimization algorithms, including gradient descent.</p>
+</section>
+<section id="derivative-of-the-sigmoid-function-unraveling-the-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="derivative-of-the-sigmoid-function-unraveling-the-complexity">Derivative of the Sigmoid Function: Unraveling the Complexity</h2>
+<p>One of the key aspects of utilizing the sigmoid function in machine learning is the ability to compute its derivative. The derivative provides insights into how the output of the function changes concerning variations in the input. The straightforward yet intricate nature of the sigmoid derivative, often expressed as <span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times (1-\sigma\left(x\right))\)</span>, has far-reaching implications for the training of neural networks and other machine learning models.</p>
+</section>
+<section id="solving-the-sigmoid-derivative-chain-rule-in-action" class="level2">
+<h2 class="anchored" data-anchor-id="solving-the-sigmoid-derivative-chain-rule-in-action">Solving the Sigmoid Derivative: Chain Rule in Action</h2>
+<p>To solve the derivative of the sigmoid function, the chain rule comes into play. The chain rule is a fundamental concept in calculus that allows us to calculate the derivative of composite functions. Applying the chain rule to the sigmoid derivative involves breaking down the complex expression into manageable components and systematically calculating their derivatives. The result,<span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right))\)</span> , embodies the sigmoid function’s self-adjusting behavior, where the derivative is maximized at the inflection point (0.5) and approaches zero as the input approaches positive or negative infinity. On this note, I will like to indulge in deriving the derivative of a sigmoid, just for fun. <span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}} . \tag{1}\)</span></p>
+<p>This can also be expressed as:</p>
+<p><span class="math inline">\(\sigma\left(x\right) = (1+e^{-x})^{-1} . \tag{2}\)</span></p>
+<p>which we know differentiates, according to the chain rule, to:</p>
+<p><span class="math inline">\(-(1+e^{-x})^{-2} \times e^{-x} \times-1. \tag{3}\)</span></p>
+<p>which easily becomes:</p>
+<p><span class="math inline">\(e^{-x}(1+e^{-x})^{-2}.\tag{4}\)</span></p>
+<p>same as:</p>
+<p><span class="math inline">\(\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}.\tag{5}\)</span></p>
+<p>then we can rearrange by adding and subtracting 1 which in essence does nothing but add a zero:</p>
+<p><span class="math inline">\(\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}+ 1 -1 .\tag{6}\)</span></p>
+<p>this easily becomes:</p>
+<p><span class="math inline">\(\frac{1 + e^{-x}-1}{1+e^{-x})^{-2}} .\tag{7}\)</span></p>
+<p>which is simply:</p>
+<p><span class="math inline">\(\frac{1 + e^{-x}}{\left(1 + e ^{-x}\right)^{2}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}} .\tag{8}\)</span></p>
+<p>which simplifies to:</p>
+<p><span class="math inline">\(\frac{1}{1 + e ^{-x}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}} .\tag{9}\)</span></p>
+<p>factorizing we get:</p>
+<p><span class="math inline">\(\frac{1}{1 + e ^{-x}}\left(1 - \frac{1}{1 + e ^{-x}}\right). \tag{10}\)</span></p>
+<p>recalling equation 1:</p>
+<p><span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}}\)</span></p>
+<p>our derivative is now proven to be</p>
+<p><span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right)) \tag\{11}\)</span> Q.E.D</p>
+</section>
+<section id="importance-of-the-sigmoid-derivative-in-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="importance-of-the-sigmoid-derivative-in-optimization">Importance of the Sigmoid Derivative in Optimization</h2>
+<p>Understanding and utilizing the sigmoid derivative is of paramount importance in optimizing machine learning models. In neural network training, the backpropagation algorithm relies heavily on derivatives to adjust the model’s weights and biases. The sigmoid derivative guides the network’s learning process, indicating the direction and magnitude of weight adjustments needed for minimizing error. Furthermore, the sigmoid derivative helps prevent the vanishing gradient problem, ensuring that gradients remain substantial throughout the network’s layers and facilitating stable and efficient training.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In conclusion, the sigmoid function is a cornerstone of machine learning, serving as a fundamental tool for a wide range of applications. Its ability to map inputs to a bounded output range makes it indispensable in tasks such as binary classification, probability estimation, and activation functions within neural networks. Solving the derivative of the sigmoid function through the chain rule unravels its intricate nature, enabling its effective utilization in optimization processes. The sigmoid derivative’s significance in guiding neural network training, preventing the vanishing gradient problem, and enhancing model performance cannot be overstated. As machine learning continues to evolve, the sigmoid function and its derivative will undoubtedly continue to play a pivotal role in shaping the landscape of artificial intelligence and data analysis.</p>
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('r programming'); return false;">
-r programming
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('vectorization'); return false;">
-vectorization
-</div>
-</div>
-<a href="./posts/r-vectorized-code/index.html">
-<div class="listing-description">
-The first thing is to define vectorized code. According to Garrett Grolemund in his book “Hands-On Programming with R”, vectorised code has the following qualities:
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/r-vectorized-code/index.html">
-<div class="listing-date">
-Jul 29, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="scientific writing,journal article,research" data-listing-date-sort="1690243200000" data-listing-file-modified-sort="1691448057690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/writearticles/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/writearticles/index.html">
-<h3 class="no-anchor listing-title">
-Writing a Scientific Paper
-</h3>
-<div class="listing-subtitle">
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('scientific writing'); return false;">
-scientific writing
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('journal article'); return false;">
-journal article
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
-research
-</div>
-</div>
-<a href="./posts/writearticles/index.html">
-<div class="listing-description">
-In this post, I aim to summarize the key points from the journal article “How to Write a Scientific Article” by Barbara J. Hoogenboom and Robert C. Manske, which offers…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/writearticles/index.html">
-<div class="listing-date">
-Jul 25, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="arewads" data-listing-date-sort="1690156800000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/fellowship-conclusion/index.html"> <img src="./posts/fellowship-conclusion/cert.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/fellowship-conclusion/index.html">
-<h3 class="no-anchor listing-title">
-Completion of Arewa Data Science Academy Fellowship
-</h3>
-<div class="listing-subtitle">
+</section>
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('arewads'); return false;">
-arewads
-</div>
-</div>
-<a href="./posts/fellowship-conclusion/index.html">
-<div class="listing-description">
-It is with immense pleasure and gratitude that I announce my successful completion of the Arewa…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/fellowship-conclusion/index.html">
-<div class="listing-date">
-Jul 24, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="r programming,fizzbuzz,loops" data-listing-date-sort="1687132800000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/fizzbuzz_r/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/fizzbuzz_r/index.html">
-<h3 class="no-anchor listing-title">
-Solving the FizzBuzz Problem: Eight Creative Solutions in R Programming
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('r programming'); return false;">
-r programming
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('fizzbuzz'); return false;">
-fizzbuzz
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('loops'); return false;">
-loops
-</div>
-</div>
-<a href="./posts/fizzbuzz_r/index.html">
-<div class="listing-description">
-The FizzBuzz problem is a classic programming exercise that tests a developer’s ability to think logically and solve a simple but often misunderstood challenge. I have…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/fizzbuzz_r/index.html">
-<div class="listing-date">
-Jun 19, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="natural language processing,python,r,packages" data-listing-date-sort="1686614400000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/nlp/index.html"> <img src="./posts/nlp/nlp.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/nlp/index.html">
-<h3 class="no-anchor listing-title">
-Harnessing the Power of Natural Language Processing: A Guide to Python and R Packages and Practical Use-Cases
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('natural language processing'); return false;">
-natural language processing
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('r'); return false;">
-r
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('packages'); return false;">
-packages
-</div>
-</div>
-<a href="./posts/nlp/index.html">
-<div class="listing-description">
-In today’s digital age, the sheer volume of text-based data being generated has grown exponentially. Extracting meaningful insights and knowledge from this vast amount of…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/nlp/index.html">
-<div class="listing-date">
-Jun 13, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="javascript,programming,loops,fizzbuzz" data-listing-date-sort="1684022400000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
-<div class="thumbnail">
-<p><a href="./posts/fizzbuzz-javascript/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/fizzbuzz-javascript/index.html">
-<h3 class="no-anchor listing-title">
-JavaScript FizzBuzz Solutions
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('javascript'); return false;">
-javascript
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('programming'); return false;">
-programming
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('loops'); return false;">
-loops
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('fizzbuzz'); return false;">
-fizzbuzz
-</div>
-</div>
-<a href="./posts/fizzbuzz-javascript/index.html">
-<div class="listing-description">
-FizzBuzz is a common programming problem that is often used as an exercise in basic programming logic and algorithm development. The problem is typically presented as follows:
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/fizzbuzz-javascript/index.html">
-<div class="listing-date">
-May 14, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="python,data visualization,matplotlib,seaborn" data-listing-date-sort="1683936000000" data-listing-file-modified-sort="1691448057690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/visualization/index.html"> <img src="./posts/viz/pythondataviz.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/visualization/index.html">
-<h3 class="no-anchor listing-title">
-From Data to Insight: Visualizing Quantities, Proportions, Relationships, and Distributions with Python’s Matplotlib and Seaborn
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data visualization'); return false;">
-data visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('matplotlib'); return false;">
-matplotlib
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('seaborn'); return false;">
-seaborn
-</div>
-</div>
-<a href="./posts/visualization/index.html">
-<div class="listing-description">
-Data visualization is a crucial part of data analysis as it aids in our ability to comprehend and convey to a larger audience complicated data correlations, patterns, and…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/visualization/index.html">
-<div class="listing-date">
-May 13, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-categories="writing,sciences,coursera,mooc" data-listing-date-sort="1682467200000" data-listing-file-modified-sort="1691448057690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/sciences-writing/index.html"> <img src="./posts/sciences-writing/sciences_writing.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/sciences-writing/index.html">
-<h3 class="no-anchor listing-title">
-Mastering Scientific Writing: Key Takeaways from Coursera’s Writing in the Sciences MOOC by Kristin-Sainani
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('writing'); return false;">
-writing
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('sciences'); return false;">
-sciences
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('coursera'); return false;">
-coursera
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('mooc'); return false;">
-mooc
-</div>
-</div>
-<a href="./posts/sciences-writing/index.html">
-<div class="listing-description">
-Since written communication is the primary way that scientific discoveries are disseminated to the public, scientific writing is a crucial skill for scientists and…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/sciences-writing/index.html">
-<div class="listing-date">
-Apr 26, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="12" data-categories="javascript,code,writing" data-listing-date-sort="1681862400000" data-listing-file-modified-sort="1691448057682" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/cleancodes/index.html"> <img src="./posts/welcome/thumbnail.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/cleancodes/index.html">
-<h3 class="no-anchor listing-title">
-Writing Clean Codes in JavaScript: A Necessity
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('javascript'); return false;">
-javascript
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('writing'); return false;">
-writing
-</div>
-</div>
-<a href="./posts/cleancodes/index.html">
-<div class="listing-description">
-I recently started seriously practicing JavaScript, hence this post. Another impact of being a fellow of the Arewa Data Science Academy. Writing clean and readable code is…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/cleancodes/index.html">
-<div class="listing-date">
-Apr 19, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="13" data-categories="python,pandas,data analysis" data-listing-date-sort="1680825600000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/pandas2/index.html"> <img src="./posts/pandas/pandas.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/pandas2/index.html">
-<h3 class="no-anchor listing-title">
-Overview of Data Processing Using Pandas
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('pandas'); return false;">
-pandas
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data analysis'); return false;">
-data analysis
-</div>
-</div>
-<a href="./posts/pandas2/index.html">
-<div class="listing-description">
-Data processing is an important aspect of data analysis and provides a way to generate insights and information from large datasets, and also to prepare data for use in…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/pandas2/index.html">
-<div class="listing-date">
-Apr 7, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="14" data-categories="machine learning,deep learning,ai,data science" data-listing-date-sort="1680048000000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/ml-ai/index.html"> <img src="./posts/ml-ai/mlai.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/ml-ai/index.html">
-<h3 class="no-anchor listing-title">
-Machine-Learning: Relationship With Deep Learning, AI ,and Data Science
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('machine learning'); return false;">
-machine learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('deep learning'); return false;">
-deep learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ai'); return false;">
-ai
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data science'); return false;">
-data science
-</div>
-</div>
-<a href="./posts/ml-ai/index.html">
-<div class="listing-description">
-The picture above,taken from Microsoft’s free introduction to machine learning course, available on github, succinctly expresses how the concepts relate to one another.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/ml-ai/index.html">
-<div class="listing-date">
-Mar 29, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="15" data-categories="pandas,python,data analysis" data-listing-date-sort="1678752000000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/pandas/index.html"> <img src="./posts/pandas/pandas.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/pandas/index.html">
-<h3 class="no-anchor listing-title">
-Exploring Pandas: A Powerful Pythonic Analytic Tool
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('pandas'); return false;">
-pandas
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data analysis'); return false;">
-data analysis
-</div>
-</div>
-<a href="./posts/pandas/index.html">
-<div class="listing-description">
-Data analysis is a much sought after skill for data…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/pandas/index.html">
-<div class="listing-date">
-Mar 14, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="16" data-categories="python,pandas,matplotlib,seaborn,data visualization" data-listing-date-sort="1678752000000" data-listing-file-modified-sort="1691448057690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
-<div class="thumbnail">
-<p><a href="./posts/viz/index.html"> <img src="./posts/viz/pythondataviz.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/viz/index.html">
-<h3 class="no-anchor listing-title">
-Creating Beautiful Visualizations with Python: A Guide to Pandas Matplotlib and Seaborn
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('pandas'); return false;">
-pandas
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('matplotlib'); return false;">
-matplotlib
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('seaborn'); return false;">
-seaborn
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data visualization'); return false;">
-data visualization
-</div>
-</div>
-<a href="./posts/viz/index.html">
-<div class="listing-description">
-Data visualization is a crucial aspect of data analysis as it helps in understanding data better. Python provides several…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/viz/index.html">
-<div class="listing-date">
-Mar 14, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="17" data-categories="python" data-listing-date-sort="1678492800000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/numpy/index.html"> <img src="./posts/numpy/numpy.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/numpy/index.html">
-<h3 class="no-anchor listing-title">
-NumPy ndarrays: Introduction to a Powerful Tool for Scientific Computing in Python
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-</div>
-<a href="./posts/numpy/index.html">
-<div class="listing-description">
-NumPy which is short for Numerical Python is the one of the most foundational tools for scientific computing with Python today. It is so important that many other tools like…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/numpy/index.html">
-<div class="listing-date">
-Mar 11, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="18" data-categories="python,requests,web scraping" data-listing-date-sort="1677888000000" data-listing-file-modified-sort="1691448057690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/web-scraping/index.html"> <img src="./posts/web-scraping/requests.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/web-scraping/index.html">
-<h3 class="no-anchor listing-title">
-Web Scraping a Daily Trust Article using Requests and Beautiful Soup Libraries
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('requests'); return false;">
-requests
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('web scraping'); return false;">
-web scraping
-</div>
-</div>
-<a href="./posts/web-scraping/index.html">
-<div class="listing-description">
-Web scraping is a key skill all data scientists should have. This is why day 22 of our…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/web-scraping/index.html">
-<div class="listing-date">
-Mar 4, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="19" data-categories="python,how to learn" data-listing-date-sort="1676937600000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/practice-concepts/index.html"> <img src="./posts/practice-concepts/question.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/practice-concepts/index.html">
-<h3 class="no-anchor listing-title">
-Practising Concepts Learnt So far in ArewaDS
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('how to learn'); return false;">
-how to learn
-</div>
-</div>
-<a href="./posts/practice-concepts/index.html">
-<div class="listing-description">
-<strong>What is the output of this code and why?</strong>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/practice-concepts/index.html">
-<div class="listing-date">
-Feb 21, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="20" data-categories="how to learn" data-listing-date-sort="1676764800000" data-listing-file-modified-sort="1691448057686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/how-to-learn/index.html"> <img src="./posts/how-to-learn/learn.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/how-to-learn/index.html">
-<h3 class="no-anchor listing-title">
-Necessity of Developing a Learning Method
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('how to learn'); return false;">
-how to learn
-</div>
-</div>
-<a href="./posts/how-to-learn/index.html">
-<div class="listing-description">
-The Arewa Data Science fellowship that I am currently enrolled in required that we complete Barbara Oakley’s and Terrence Sejnowski’s MOOC (massive open online course) on…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/how-to-learn/index.html">
-<div class="listing-date">
-Feb 19, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="21" data-categories="python" data-listing-date-sort="1676332800000" data-listing-file-modified-sort="1691448057682" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/30-days-python/index.html"> <img src="./posts/30-days-python/python.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/30-days-python/index.html">
-<h3 class="no-anchor listing-title">
-How I Started Learning Python
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-</div>
-<a href="./posts/30-days-python/index.html">
-<div class="listing-description">
-As part of the first phase of the Arewa Data science fellowship, the mentors organised a 30 days of Python challenge that consists of exercises tailored to a particular…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/30-days-python/index.html">
-<div class="listing-date">
-Feb 14, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="22" data-categories="arewads" data-listing-date-sort="1676332800000" data-listing-file-modified-sort="1691448057682" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/arewads/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/arewads/index.html">
-<h3 class="no-anchor listing-title">
-Joining The First Cohort of the Arewa Data Science Academy Fellowship
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('arewads'); return false;">
-arewads
-</div>
-</div>
-<a href="./posts/arewads/index.html">
-<div class="listing-description">
-The link for the application to the fellowship was sent to me by my friend Abbas. I reluctantly opened the link and I was surprised to see that I had to complete an…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/arewads/index.html">
-<div class="listing-date">
-Feb 14, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="23" data-categories="origins" data-listing-date-sort="1676160000000" data-listing-file-modified-sort="1691448057690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/starting-python/index.html"> <img src="./posts/starting-python/python.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/starting-python/index.html">
-<h3 class="no-anchor listing-title">
-How I Started Learning Python
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('origins'); return false;">
-origins
-</div>
-</div>
-<a href="./posts/starting-python/index.html">
-<div class="listing-description">
-I became interested in Python about a year after I started my first full time job. I…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/starting-python/index.html">
-<div class="listing-date">
-Feb 12, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="24" data-categories="welcome" data-listing-date-sort="1676073600000" data-listing-file-modified-sort="1691448057690" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html"> <p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/welcome/index.html">
-<h3 class="no-anchor listing-title">
-Welcome To My Blog
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('welcome'); return false;">
-welcome
-</div>
-</div>
-<a href="./posts/welcome/index.html">
-<div class="listing-description">
-Welcome to…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html">
-<div class="listing-date">
-Feb 11, 2023
-</div>
-<div class="listing-author">
-Lukman Aliyu Jibril
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

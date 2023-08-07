@@ -10,7 +10,73 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Fri, 04 Aug 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 07 Aug 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Crucial Role of the Sigmoid Function its Derivative in Machine Learning</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/sigmoid/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In the realm of machine learning, the sigmoid function stands as a foundational and indispensable element, playing a pivotal role in various applications such as neural networks, logistic regression, and decision-making models. Its characteristic S-shaped curve enables it to map input data to a bounded output range, making it particularly valuable for tasks involving classification, probability estimation, and activation functions. This essay explores the significance of the sigmoid function in machine learning and delves into the techniques for solving its derivative, elucidating its importance in optimizing learning processes.</p>
+</section>
+<section id="the-sigmoid-function-a-cornerstone-of-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="the-sigmoid-function-a-cornerstone-of-machine-learning">The Sigmoid Function: A Cornerstone of Machine Learning</h2>
+<p>The sigmoid function, mathematically represented as <img src="https://latex.codecogs.com/png.latex?%5Csigma%5Cleft(x%5Cright)%20=%20%5Cfrac%7B1%7D%7B1+e%5E%7B-x%7D%7D">, transforms any input value to a range between 0 and 1. This property is particularly useful in binary classification problems, where the output is interpreted as a probability score for a particular class. In the context of neural networks, sigmoid activation functions allow neurons to fire selectively, enabling complex patterns to be captured through the network’s layers. Its continuous and differentiable nature makes it suitable for various optimization algorithms, including gradient descent.</p>
+</section>
+<section id="derivative-of-the-sigmoid-function-unraveling-the-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="derivative-of-the-sigmoid-function-unraveling-the-complexity">Derivative of the Sigmoid Function: Unraveling the Complexity</h2>
+<p>One of the key aspects of utilizing the sigmoid function in machine learning is the ability to compute its derivative. The derivative provides insights into how the output of the function changes concerning variations in the input. The straightforward yet intricate nature of the sigmoid derivative, often expressed as <img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5E%7B,%7D%5Cleft(x%5Cright)%20=%20%5Csigma%5Cleft(x%5Cright)%20%5Ctimes%20(1-%5Csigma%5Cleft(x%5Cright))">, has far-reaching implications for the training of neural networks and other machine learning models.</p>
+</section>
+<section id="solving-the-sigmoid-derivative-chain-rule-in-action" class="level2">
+<h2 class="anchored" data-anchor-id="solving-the-sigmoid-derivative-chain-rule-in-action">Solving the Sigmoid Derivative: Chain Rule in Action</h2>
+<p>To solve the derivative of the sigmoid function, the chain rule comes into play. The chain rule is a fundamental concept in calculus that allows us to calculate the derivative of composite functions. Applying the chain rule to the sigmoid derivative involves breaking down the complex expression into manageable components and systematically calculating their derivatives. The result,<img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5E%7B,%7D%5Cleft(x%5Cright)%20=%20%5Csigma%5Cleft(x%5Cright)%20%5Ctimes(1-%5Csigma%5Cleft(x%5Cright))"> , embodies the sigmoid function’s self-adjusting behavior, where the derivative is maximized at the inflection point (0.5) and approaches zero as the input approaches positive or negative infinity. On this note, I will like to indulge in deriving the derivative of a sigmoid, just for fun. <img src="https://latex.codecogs.com/png.latex?%5Csigma%5Cleft(x%5Cright)%20=%20%5Cfrac%7B1%7D%7B1+e%5E%7B-x%7D%7D%20.%20%5Ctag%7B1%7D"></p>
+<p>This can also be expressed as:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%5Cleft(x%5Cright)%20=%20(1+e%5E%7B-x%7D)%5E%7B-1%7D%20.%20%5Ctag%7B2%7D"></p>
+<p>which we know differentiates, according to the chain rule, to:</p>
+<p><img src="https://latex.codecogs.com/png.latex?-(1+e%5E%7B-x%7D)%5E%7B-2%7D%20%5Ctimes%20e%5E%7B-x%7D%20%5Ctimes-1.%20%5Ctag%7B3%7D"></p>
+<p>which easily becomes:</p>
+<p><img src="https://latex.codecogs.com/png.latex?e%5E%7B-x%7D(1+e%5E%7B-x%7D)%5E%7B-2%7D.%5Ctag%7B4%7D"></p>
+<p>same as:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Be%5E%7B-x%7D%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D.%5Ctag%7B5%7D"></p>
+<p>then we can rearrange by adding and subtracting 1 which in essence does nothing but add a zero:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Be%5E%7B-x%7D%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D+%201%20-1%20.%5Ctag%7B6%7D"></p>
+<p>this easily becomes:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%20+%20e%5E%7B-x%7D-1%7D%7B1+e%5E%7B-x%7D)%5E%7B-2%7D%7D%20.%5Ctag%7B7%7D"></p>
+<p>which is simply:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%20+%20e%5E%7B-x%7D%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D%20-%20%5Cfrac%7B1%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D%20.%5Ctag%7B8%7D"></p>
+<p>which simplifies to:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B1%20+%20e%20%5E%7B-x%7D%7D%20-%20%5Cfrac%7B1%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D%20.%5Ctag%7B9%7D"></p>
+<p>factorizing we get:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B1%20+%20e%20%5E%7B-x%7D%7D%5Cleft(1%20-%20%5Cfrac%7B1%7D%7B1%20+%20e%20%5E%7B-x%7D%7D%5Cright).%20%5Ctag%7B10%7D"></p>
+<p>recalling equation 1:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%5Cleft(x%5Cright)%20=%20%5Cfrac%7B1%7D%7B1+e%5E%7B-x%7D%7D"></p>
+<p>our derivative is now proven to be</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5E%7B,%7D%5Cleft(x%5Cright)%20=%20%5Csigma%5Cleft(x%5Cright)%20%5Ctimes(1-%5Csigma%5Cleft(x%5Cright))%20%5Ctag%5C%7B11%7D"> Q.E.D</p>
+</section>
+<section id="importance-of-the-sigmoid-derivative-in-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="importance-of-the-sigmoid-derivative-in-optimization">Importance of the Sigmoid Derivative in Optimization</h2>
+<p>Understanding and utilizing the sigmoid derivative is of paramount importance in optimizing machine learning models. In neural network training, the backpropagation algorithm relies heavily on derivatives to adjust the model’s weights and biases. The sigmoid derivative guides the network’s learning process, indicating the direction and magnitude of weight adjustments needed for minimizing error. Furthermore, the sigmoid derivative helps prevent the vanishing gradient problem, ensuring that gradients remain substantial throughout the network’s layers and facilitating stable and efficient training.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In conclusion, the sigmoid function is a cornerstone of machine learning, serving as a fundamental tool for a wide range of applications. Its ability to map inputs to a bounded output range makes it indispensable in tasks such as binary classification, probability estimation, and activation functions within neural networks. Solving the derivative of the sigmoid function through the chain rule unravels its intricate nature, enabling its effective utilization in optimization processes. The sigmoid derivative’s significance in guiding neural network training, preventing the vanishing gradient problem, and enhancing model performance cannot be overstated. As machine learning continues to evolve, the sigmoid function and its derivative will undoubtedly continue to play a pivotal role in shaping the landscape of artificial intelligence and data analysis.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine learning</category>
+  <category>sigmoid</category>
+  <category>activation</category>
+  <category>mathematics</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/sigmoid/index.html</guid>
+  <pubDate>Mon, 07 Aug 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Enhancing Effective Writing: Insights from Larry McEnerney’s Leadership Lab</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -5767,28 +5833,6 @@ I Made N1 Million Naira Monthly Using this WhatsApp Marketing Strategy. Follow M
   <guid>https://lukmanaj.github.io/ailearningloop/posts/practice-concepts/index.html</guid>
   <pubDate>Tue, 21 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/practice-concepts/question.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Necessity of Developing a Learning Method</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/how-to-learn/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The Arewa Data Science fellowship that I am currently enrolled in required that we complete Barbara Oakley’s and Terrence Sejnowski’s MOOC (massive open online course) on coursera, ‘Learning How to Learn’, as part of the curriculum in the first stage of the fellowship. The fellowship intends to make us efficient learners as we prepare to learn increasingly complex concepts in machine learning and deep learning.I recently completed the course and I found it necessary to share some of the techniques that I have implemented to boost my learning efficiency.</p>
-<p>The most important and impactful thing is making a good plan. Journaling my learning journey and taking note of techniques that worked and those that did not work out so well for me has helped me hone in on the most efficient techniques I can use. A part of my planning includes making sure that I have a good environment for learning, free of distractions. And after that, adopt the pomodoro technique to ensure that I am completely focussed and make the best use of my learning time. All these are documented as I have found that documentation is an effective way of tracking progress.</p>
-<p>Here are some advices I have for improving learning efficiency: 1. Chunking: Always breakdown the material and ensure that you have dialled down to the main gist. This will improve recall even after a long time 2. Interleaving: I find interleaving better than blocked practice. In interleaving, one tries to mix up different subject materials to prevent boredom whereas blocked practice focuses on completely understanding a subject material in one sitting preferably. Here, I mean allocating sufficient time for different subject materials in a sitting. Interleaving works best for me and I recommend it. 3. Use those flashcards: Memory aids are important in retaining information and I advise that you try some techniques out and settle on the ones that work best for your learning style. 4. Make handwritten notes: Writing helps in consolidating the information in the brain and it is a good way of improving recall and understanding of study material. 5. Spaced repetition: This is far better than trying to ‘conclude’ the learning in one sitting. One can be tempted to read a chapter or topic multiple times in one sitting with no plans of ever revisiting the chapter. This does not work. It is far more effective to plan repeat readings ahead of time. Reading the chapter in different sittings is a more effective way to learn according to the course.</p>
-<p>In conclusion, the most important step is to have a plan and the next thing is to implement while documenting and iterating. Clever hardwork leads to success.</p>
-
-
-
- ]]></description>
-  <category>how to learn</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/how-to-learn/index.html</guid>
-  <pubDate>Sun, 19 Feb 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/how-to-learn/learn.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

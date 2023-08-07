@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/sigmoid/index.html",
       "/posts/effective-writing/index.html",
       "/posts/arewads-impact/index.html",
       "/posts/claudiu-talk/index.html",
