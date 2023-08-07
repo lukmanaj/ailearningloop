@@ -45,7 +45,7 @@ $\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}+ 1 -1 .\tag{6}$
 
 this easily becomes:
 
-$\frac{1 + e^{-x}-1}{1+e^{-x})^{-2}}  .\tag{7}$
+$\frac{1 + e^{-x}-1}{\left(1+e^{-x}\right)^{-2}}  .\tag{7}$
 
 which is simply:
 
@@ -65,7 +65,7 @@ $\sigma\left(x\right) = \frac{1}{1+e^{-x}}$
 
 our derivative is now proven to be 
 
-$\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right)) \tag\{11}$
+$\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right)).\tag{11}$
 Q.E.D 
 
 ## Importance of the Sigmoid Derivative in Optimization
