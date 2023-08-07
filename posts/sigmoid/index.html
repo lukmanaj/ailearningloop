@@ -1063,7 +1063,8 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 </section>
 <section id="solving-the-sigmoid-derivative-chain-rule-in-action" class="level2">
 <h2 class="anchored" data-anchor-id="solving-the-sigmoid-derivative-chain-rule-in-action">Solving the Sigmoid Derivative: Chain Rule in Action</h2>
-<p>To solve the derivative of the sigmoid function, the chain rule comes into play. The chain rule is a fundamental concept in calculus that allows us to calculate the derivative of composite functions. Applying the chain rule to the sigmoid derivative involves breaking down the complex expression into manageable components and systematically calculating their derivatives. The result,<span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right))\)</span> , embodies the sigmoid function’s self-adjusting behavior, where the derivative is maximized at the inflection point (0.5) and approaches zero as the input approaches positive or negative infinity. On this note, I will like to indulge in deriving the derivative of a sigmoid, just for fun. <span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}} . \tag{1}\)</span></p>
+<p>To solve the derivative of the sigmoid function, the chain rule comes into play. The chain rule is a fundamental concept in calculus that allows us to calculate the derivative of composite functions. Applying the chain rule to the sigmoid derivative involves breaking down the complex expression into manageable components and systematically calculating their derivatives. The result,<span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right))\)</span> , embodies the sigmoid function’s self-adjusting behavior, where the derivative is maximized at the inflection point (0.5) and approaches zero as the input approaches positive or negative infinity. On this note, I will like to indulge in deriving the derivative of a sigmoid, just for fun.</p>
+<p><span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}} . \tag{1}\)</span></p>
 <p>This can also be expressed as:</p>
 <p><span class="math inline">\(\sigma\left(x\right) = (1+e^{-x})^{-1} . \tag{2}\)</span></p>
 <p>which we know differentiates, according to the chain rule, to:</p>
@@ -1084,8 +1085,8 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <p><span class="math inline">\(\frac{1}{1 + e ^{-x}}\left(1 - \frac{1}{1 + e ^{-x}}\right). \tag{10}\)</span></p>
 <p>recalling equation 1:</p>
 <p><span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}}\)</span></p>
-<p>our derivative is now proven to be</p>
-<p><span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right)).\tag{11}\)</span> Q.E.D</p>
+<p>Our derivative is now proven to be</p>
+<p><span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right)).\tag{11}\)</span></p>
 </section>
 <section id="importance-of-the-sigmoid-derivative-in-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="importance-of-the-sigmoid-derivative-in-optimization">Importance of the Sigmoid Derivative in Optimization</h2>
