@@ -21,7 +21,10 @@ One of the key aspects of utilizing the sigmoid function in machine learning is 
 
 To solve the derivative of the sigmoid function, the chain rule comes into play. The chain rule is a fundamental concept in calculus that allows us to calculate the derivative of composite functions. Applying the chain rule to the sigmoid derivative involves breaking down the complex expression into manageable components and systematically calculating their derivatives. The result,$\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right))$ , embodies the sigmoid function's self-adjusting behavior, where the derivative is maximized at the inflection point (0.5) and approaches zero as the input approaches positive or negative infinity.
 On this note, I will like to indulge in deriving the derivative of a sigmoid, just for fun.
+
+
 $\sigma\left(x\right) = \frac{1}{1+e^{-x}} . \tag{1}$
+
 
 This can also be expressed as:
 
@@ -63,10 +66,10 @@ recalling equation 1:
 
 $\sigma\left(x\right) = \frac{1}{1+e^{-x}}$
 
-our derivative is now proven to be 
+Our derivative is now proven to be 
 
 $\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right)).\tag{11}$
-Q.E.D 
+
 
 ## Importance of the Sigmoid Derivative in Optimization
 
