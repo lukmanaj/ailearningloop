@@ -1,5 +1,5 @@
 ---
-title: "The Crucial Role of the Sigmoid Function its Derivative in Machine Learning"
+title: "The Crucial Role of the Sigmoid Function and its Derivative in Machine Learning"
 author: "Lukman Aliyu Jibril"
 date: "2023-08-07"
 categories: [machine learning,sigmoid,activation,mathematics]
@@ -23,52 +23,52 @@ To solve the derivative of the sigmoid function, the chain rule comes into play.
 On this note, I will like to indulge in deriving the derivative of a sigmoid, just for fun.
 
 
-$\sigma\left(x\right) = \frac{1}{1+e^{-x}} . \tag{1}$
+$\sigma\left(x\right) = \frac{1}{1+e^{-x}}$
 
 
 This can also be expressed as:
 
-$\sigma\left(x\right) = (1+e^{-x})^{-1} . \tag{2}$
+$\sigma\left(x\right) = (1+e^{-x})^{-1}$
 
  which we know differentiates, according to the chain rule, to:
 
- $-(1+e^{-x})^{-2} \times e^{-x} \times-1. \tag{3}$ 
+ $-(1+e^{-x})^{-2} \times e^{-x} \times-1$ 
 
  which easily becomes:
 
-$e^{-x}(1+e^{-x})^{-2}.\tag{4}$
+$e^{-x}(1+e^{-x})^{-2}$
 
 same as:
 
-$\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}.\tag{5}$
+$\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}$
 
 then we can rearrange by adding and subtracting 1 which in essence does nothing but add a zero:
 
-$\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}+ 1 -1 .\tag{6}$
+$\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}+ 1 -1$
 
 this easily becomes:
 
-$\frac{1 + e^{-x}-1}{\left(1+e^{-x}\right)^{-2}}  .\tag{7}$
+$\frac{1 + e^{-x}-1}{\left(1+e^{-x}\right)^{-2}}$
 
 which is simply:
 
-$\frac{1 + e^{-x}}{\left(1 + e ^{-x}\right)^{2}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}}  .\tag{8}$
+$\frac{1 + e^{-x}}{\left(1 + e ^{-x}\right)^{2}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}}$
 
 which simplifies to:
 
-$\frac{1}{1 + e ^{-x}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}}  .\tag{9}$
+$\frac{1}{1 + e ^{-x}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}}$
 
 factorizing we get:
 
-$\frac{1}{1 + e ^{-x}}\left(1 - \frac{1}{1 + e ^{-x}}\right). \tag{10}$
+$\frac{1}{1 + e ^{-x}}\left(1 - \frac{1}{1 + e ^{-x}}\right)$
 
-recalling equation 1:
+recalling that:
 
 $\sigma\left(x\right) = \frac{1}{1+e^{-x}}$
 
-Our derivative is now proven to be 
+our derivative is now proven to be 
 
-$\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right)).\tag{11}$
+$\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right))$
 
 
 ## Importance of the Sigmoid Derivative in Optimization
