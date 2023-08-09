@@ -1083,140 +1083,159 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>In this article, we’ll dive into the world of deep learning with PyTorch by constructing a simple linear regression model to predict a vehicle’s miles per gallon (MPG) based on various features. We’ll explore the preprocessing steps, model architecture, training process, and evaluation of the model’s performance.</p>
+<p>In this article, we’ll dive into the world of deep learning with PyTorch by constructing a multiple linear regression model to predict a vehicle’s miles per gallon (MPG) based on various features. We’ll explore the preprocessing steps, model architecture, training process, and evaluation of the model’s performance.</p>
 </section>
-<section id="preparing-the-data" class="level1">
-<h1>Preparing the Data</h1>
+<section id="preparing-the-data-and-data-preprocessing" class="level1">
+<h1>Preparing the Data and Data Preprocessing</h1>
 <p>Our journey begins by loading the auto MPG dataset, which contains information about vehicle characteristics and their corresponding MPG values. We’ll focus on features like the number of cylinders, displacement, horsepower, weight, acceleration, manufacturing origin, and model year.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Importing necessary libraries</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sklearn</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sklearn.model_selection</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.nn.functional <span class="im">import</span> one_hot</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.utils.data <span class="im">import</span> DataLoader,Dataset,TensorDataset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data'</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>column_names <span class="op">=</span> [<span class="st">'MPG'</span>, <span class="st">'Cylinders'</span>, <span class="st">'Displacement'</span>, <span class="st">'Horsepower'</span>, <span class="st">'Weight'</span>, <span class="st">'Acceleration'</span>, <span class="st">'Model Year'</span>, <span class="st">'Origin'</span>]</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url, names<span class="op">=</span>column_names,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                 na_values <span class="op">=</span> <span class="st">"?"</span>, comment<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                 sep<span class="op">=</span><span class="st">" "</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df.tail()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="data-preprocessing" class="level1">
-<h1>Data Preprocessing</h1>
 <p>To ensure our data is suitable for training, we perform necessary preprocessing steps. We drop rows with missing values, standardize continuous features, and transform categorical features into one-hot encoded vectors.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Dropping rows with missing values</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.dropna().reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Splitting the data into train and test sets</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>df_train, df_test <span class="op">=</span> sklearn.model_selection.train_test_split(df, train_size<span class="op">=</span><span class="fl">0.8</span>, random_state<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardizing continuous features</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>numeric_column_names <span class="op">=</span> [<span class="st">'Cylinders'</span>, <span class="st">'Displacement'</span>, <span class="st">'Horsepower'</span>, <span class="st">'Weight'</span>, <span class="st">'Acceleration'</span>]</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>train_stats <span class="op">=</span> df_train.describe().transpose()</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>df_train_norm, df_test_norm <span class="op">=</span> df_train.copy(), df_test.copy()</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col_name <span class="kw">in</span> numeric_column_names:</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    mean <span class="op">=</span> train_stats.loc[col_name, <span class="st">'mean'</span>]</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    std  <span class="op">=</span> train_stats.loc[col_name, <span class="st">'std'</span>]</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    df_train_norm[col_name] <span class="op">=</span> (df_train_norm[col_name] <span class="op">-</span> mean) <span class="op">/</span> std</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    df_test_norm[col_name] <span class="op">=</span> (df_test_norm[col_name] <span class="op">-</span> mean) <span class="op">/</span> std</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Bucketing the model year categories</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>boundaries <span class="op">=</span> torch.tensor([<span class="dv">73</span>, <span class="dv">76</span>, <span class="dv">79</span>])</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> torch.tensor(df_train_norm[<span class="st">'Model Year'</span>].values)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>df_train_norm[<span class="st">'Model Year Bucketed'</span>] <span class="op">=</span> torch.bucketize(v, boundaries, right<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> torch.tensor(df_test_norm[<span class="st">'Model Year'</span>].values)</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>df_test_norm[<span class="st">'Model Year Bucketed'</span>] <span class="op">=</span> torch.bucketize(v, boundaries, right<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>numeric_column_names.append(<span class="st">'Model Year Bucketed'</span>)</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># One-hot encoding the origin feature</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>total_origin <span class="op">=</span> <span class="bu">len</span>(<span class="bu">set</span>(df_train_norm[<span class="st">'Origin'</span>]))</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>origin_encoded <span class="op">=</span> one_hot(torch.from_numpy(df_train_norm[<span class="st">'Origin'</span>].values) <span class="op">%</span> total_origin)</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating the train and test feature and label tensors</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>x_train_numeric <span class="op">=</span> torch.tensor(df_train_norm[numeric_column_names].values)</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>x_train <span class="op">=</span> torch.cat([x_train_numeric, origin_encoded], <span class="dv">1</span>).<span class="bu">float</span>()</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>origin_encoded <span class="op">=</span> one_hot(torch.from_numpy(df_test_norm[<span class="st">'Origin'</span>].values) <span class="op">%</span> total_origin)</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>x_test_numeric <span class="op">=</span> torch.tensor(df_test_norm[numeric_column_names].values)</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>x_test <span class="op">=</span> torch.cat([x_test_numeric, origin_encoded], <span class="dv">1</span>).<span class="bu">float</span>()</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>y_train <span class="op">=</span> torch.tensor(df_train_norm[<span class="st">'MPG'</span>].values).<span class="bu">float</span>()</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>y_test <span class="op">=</span> torch.tensor(df_test_norm[<span class="st">'MPG'</span>].values).<span class="bu">float</span>()</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a data loader to load the train dataset in batches</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>train_ds <span class="op">=</span> TensorDataset(x_train, y_train)</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>batch_size <span class="op">=</span> <span class="dv">8</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>torch.manual_seed(<span class="dv">1</span>)</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>train_dl <span class="op">=</span> DataLoader(train_ds, batch_size, shuffle<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sklearn</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sklearn.model_selection</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.nn.functional <span class="im">import</span> one_hot</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.utils.data <span class="im">import</span> DataLoader,Dataset,TensorDataset</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data'</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>column_names <span class="op">=</span> [<span class="st">'MPG'</span>, <span class="st">'Cylinders'</span>, <span class="st">'Displacement'</span>, <span class="st">'Horsepower'</span>, <span class="st">'Weight'</span>, <span class="st">'Acceleration'</span>, <span class="st">'Model Year'</span>, <span class="st">'Origin'</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url, names<span class="op">=</span>column_names,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                 na_values <span class="op">=</span> <span class="st">"?"</span>, comment<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                 sep<span class="op">=</span><span class="st">" "</span>, skipinitialspace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Dropping rows with missing values</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.dropna().reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Splitting the data into train and test sets</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>df_train, df_test <span class="op">=</span> sklearn.model_selection.train_test_split(df, train_size<span class="op">=</span><span class="fl">0.8</span>, random_state<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardizing continuous features</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>numeric_column_names <span class="op">=</span> [<span class="st">'Cylinders'</span>, <span class="st">'Displacement'</span>, <span class="st">'Horsepower'</span>, <span class="st">'Weight'</span>, <span class="st">'Acceleration'</span>]</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>train_stats <span class="op">=</span> df_train.describe().transpose()</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>df_train_norm, df_test_norm <span class="op">=</span> df_train.copy(), df_test.copy()</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col_name <span class="kw">in</span> numeric_column_names:</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    mean <span class="op">=</span> train_stats.loc[col_name, <span class="st">'mean'</span>]</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    std  <span class="op">=</span> train_stats.loc[col_name, <span class="st">'std'</span>]</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    df_train_norm[col_name] <span class="op">=</span> (df_train_norm[col_name] <span class="op">-</span> mean) <span class="op">/</span> std</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    df_test_norm[col_name] <span class="op">=</span> (df_test_norm[col_name] <span class="op">-</span> mean) <span class="op">/</span> std</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Bucketing the model year categories</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>boundaries <span class="op">=</span> torch.tensor([<span class="dv">73</span>, <span class="dv">76</span>, <span class="dv">79</span>])</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> torch.tensor(df_train_norm[<span class="st">'Model Year'</span>].values)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>df_train_norm[<span class="st">'Model Year Bucketed'</span>] <span class="op">=</span> torch.bucketize(v, boundaries, right<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> torch.tensor(df_test_norm[<span class="st">'Model Year'</span>].values)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>df_test_norm[<span class="st">'Model Year Bucketed'</span>] <span class="op">=</span> torch.bucketize(v, boundaries, right<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>numeric_column_names.append(<span class="st">'Model Year Bucketed'</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co"># One-hot encoding the origin feature</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>total_origin <span class="op">=</span> <span class="bu">len</span>(<span class="bu">set</span>(df_train_norm[<span class="st">'Origin'</span>]))</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>origin_encoded <span class="op">=</span> one_hot(torch.from_numpy(df_train_norm[<span class="st">'Origin'</span>].values) <span class="op">%</span> total_origin)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating the train and test feature and label tensors</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>x_train_numeric <span class="op">=</span> torch.tensor(df_train_norm[numeric_column_names].values)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>x_train <span class="op">=</span> torch.cat([x_train_numeric, origin_encoded], <span class="dv">1</span>).<span class="bu">float</span>()</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>origin_encoded <span class="op">=</span> one_hot(torch.from_numpy(df_test_norm[<span class="st">'Origin'</span>].values) <span class="op">%</span> total_origin)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>x_test_numeric <span class="op">=</span> torch.tensor(df_test_norm[numeric_column_names].values)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>x_test <span class="op">=</span> torch.cat([x_test_numeric, origin_encoded], <span class="dv">1</span>).<span class="bu">float</span>()</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>y_train <span class="op">=</span> torch.tensor(df_train_norm[<span class="st">'MPG'</span>].values).<span class="bu">float</span>()</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>y_test <span class="op">=</span> torch.tensor(df_test_norm[<span class="st">'MPG'</span>].values).<span class="bu">float</span>()</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a data loader to load the train dataset in batches</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>train_ds <span class="op">=</span> TensorDataset(x_train, y_train)</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>batch_size <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>torch.manual_seed(<span class="dv">1</span>)</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>train_dl <span class="op">=</span> DataLoader(train_ds, batch_size, shuffle<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="building-the-dnn-regression-model" class="level1">
 <h1>Building the DNN Regression Model</h1>
 <p>With our data prepared, we move on to constructing our Deep Neural Network (DNN) regression model using PyTorch. This model will predict MPG values based on the vehicle’s features.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the model architecture</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>hidden_units <span class="op">=</span> [<span class="dv">8</span>, <span class="dv">4</span>]</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>input_size <span class="op">=</span> x_train.shape[<span class="dv">1</span>]</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>all_layers <span class="op">=</span> []</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> hidden_unit <span class="kw">in</span> hidden_units:</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    layer <span class="op">=</span> nn.Linear(input_size, hidden_unit)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    all_layers.append(layer)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    all_layers.append(nn.ReLU())</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    input_size <span class="op">=</span> hidden_unit</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>all_layers.append(nn.Linear(hidden_units[<span class="op">-</span><span class="dv">1</span>], <span class="dv">1</span>))</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> nn.Sequential(<span class="op">*</span>all_layers)</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the loss function and optimizer</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>loss_fn <span class="op">=</span> nn.MSELoss()</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.SGD(model.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the model architecture</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>hidden_units <span class="op">=</span> [<span class="dv">8</span>, <span class="dv">4</span>]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>input_size <span class="op">=</span> x_train.shape[<span class="dv">1</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>all_layers <span class="op">=</span> []</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> hidden_unit <span class="kw">in</span> hidden_units:</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    layer <span class="op">=</span> nn.Linear(input_size, hidden_unit)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    all_layers.append(layer)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    all_layers.append(nn.ReLU())</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    input_size <span class="op">=</span> hidden_unit</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>all_layers.append(nn.Linear(hidden_units[<span class="op">-</span><span class="dv">1</span>], <span class="dv">1</span>))</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> nn.Sequential(<span class="op">*</span>all_layers)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the loss function and optimizer</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>loss_fn <span class="op">=</span> nn.MSELoss()</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.SGD(model.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="training-the-model" class="level1">
 <h1>Training the Model</h1>
 <p>It’s time to train our DNN regression model on the training data. We iterate through the data for a specified number of epochs, adjusting the model’s weights to minimize the mean squared error loss.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>num_epochs <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>log_epochs <span class="op">=</span> <span class="dv">20</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(num_epochs):</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    loss_hist_train <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> x_batch, y_batch <span class="kw">in</span> train_dl:</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        pred <span class="op">=</span> model(x_batch)[:, <span class="dv">0</span>]</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        loss <span class="op">=</span> loss_fn(pred, y_batch)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        loss.backward()</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        optimizer.step()</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        optimizer.zero_grad()</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        loss_hist_train <span class="op">+=</span> loss.item()</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> epoch <span class="op">%</span> log_epochs <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Epoch </span><span class="sc">{</span>epoch<span class="sc">}</span><span class="ss">  Loss </span><span class="sc">{</span>loss_hist_train<span class="op">/</span><span class="bu">len</span>(train_dl)<span class="sc">:.4f}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>num_epochs <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>log_epochs <span class="op">=</span> <span class="dv">20</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(num_epochs):</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    loss_hist_train <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> x_batch, y_batch <span class="kw">in</span> train_dl:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        pred <span class="op">=</span> model(x_batch)[:, <span class="dv">0</span>]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        loss <span class="op">=</span> loss_fn(pred, y_batch)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        loss.backward()</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        optimizer.step()</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        optimizer.zero_grad()</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        loss_hist_train <span class="op">+=</span> loss.item()</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> epoch <span class="op">%</span> log_epochs <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Epoch </span><span class="sc">{</span>epoch<span class="sc">}</span><span class="ss">  Loss </span><span class="sc">{</span>loss_hist_train<span class="op">/</span><span class="bu">len</span>(train_dl)<span class="sc">:.4f}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Epoch 0  Loss 530.7308
+Epoch 20  Loss 7.8103
+Epoch 40  Loss 7.7546
+Epoch 60  Loss 6.9081
+Epoch 80  Loss 6.8482
+Epoch 100  Loss 6.7144
+Epoch 120  Loss 6.4509
+Epoch 140  Loss 7.1134
+Epoch 160  Loss 6.4428
+Epoch 180  Loss 6.2078</code></pre>
+</div>
+</div>
 </section>
 <section id="evaluating-the-model" class="level1">
 <h1>Evaluating the Model</h1>
 <p>Once the model is trained, we assess its performance on the test dataset. This helps us understand how well the model generalizes to new, unseen data.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    pred <span class="op">=</span> model(x_test.<span class="bu">float</span>())[:, <span class="dv">0</span>]</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> loss_fn(pred, y_test)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    mae <span class="op">=</span> nn.L1Loss()(pred, y_test)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Test MSE: </span><span class="sc">{</span>loss<span class="sc">.</span>item()<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Test MAE: </span><span class="sc">{</span>mae<span class="sc">.</span>item()<span class="sc">:.4f}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    pred <span class="op">=</span> model(x_test.<span class="bu">float</span>())[:, <span class="dv">0</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> loss_fn(pred, y_test)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    mae <span class="op">=</span> nn.L1Loss()(pred, y_test)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Test MSE: </span><span class="sc">{</span>loss<span class="sc">.</span>item()<span class="sc">:.4f}</span><span class="ss">'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Test MAE: </span><span class="sc">{</span>mae<span class="sc">.</span>item()<span class="sc">:.4f}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Test MSE: 13.1923
+Test MAE: 2.6507</code></pre>
+</div>
+</div>
 <p>Seeing the good metrics, let’s confirm by plotting the actual and predicted values</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting actual vs. predicted MPG values</span></span>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting actual vs. predicted MPG values</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(y_test, pred, color<span class="op">=</span><span class="st">'blue'</span>, label<span class="op">=</span><span class="st">'Predicted'</span>)</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.plot([y_test.<span class="bu">min</span>(), y_test.<span class="bu">max</span>()], [y_test.<span class="bu">min</span>(), y_test.<span class="bu">max</span>()], color<span class="op">=</span><span class="st">'red'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Perfect Prediction'</span>)</span>
@@ -1225,6 +1244,10 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Actual vs. Predicted MPG Values'</span>)</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-6-output-1.png" width="816" height="523"></p>
+</div>
+</div>
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
