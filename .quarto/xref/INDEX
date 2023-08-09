@@ -76,5 +76,8 @@
   },
   "posts/effective-writing/index.qmd": {
     "index.html": "762cfba9"
+  },
+  "posts/sigmoid/index.qmd": {
+    "index.html": "a7dd49e5"
   }
 }

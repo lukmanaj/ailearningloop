@@ -72,7 +72,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
@@ -1053,7 +1054,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
         </script>
 </div></div>
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(24)</span></div><div class="category" data-category="advice">advice <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ai">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="arewads">arewads <span class="quarto-category-count">(3)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="coursera">coursera <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data analysis">data analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data science">data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data visualization">data visualization <span class="quarto-category-count">(2)</span></div><div class="category" data-category="deep learning">deep learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="effective writing">effective writing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="fizzbuzz">fizzbuzz <span class="quarto-category-count">(2)</span></div><div class="category" data-category="git">git <span class="quarto-category-count">(1)</span></div><div class="category" data-category="how to learn">how to learn <span class="quarto-category-count">(2)</span></div><div class="category" data-category="javascript">javascript <span class="quarto-category-count">(2)</span></div><div class="category" data-category="journal article">journal article <span class="quarto-category-count">(1)</span></div><div class="category" data-category="loops">loops <span class="quarto-category-count">(2)</span></div><div class="category" data-category="machine learning">machine learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="matplotlib">matplotlib <span class="quarto-category-count">(2)</span></div><div class="category" data-category="mooc">mooc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="natural language processing">natural language processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="origins">origins <span class="quarto-category-count">(1)</span></div><div class="category" data-category="packages">packages <span class="quarto-category-count">(1)</span></div><div class="category" data-category="pandas">pandas <span class="quarto-category-count">(3)</span></div><div class="category" data-category="programming">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(9)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="r">r <span class="quarto-category-count">(1)</span></div><div class="category" data-category="r programming">r programming <span class="quarto-category-count">(2)</span></div><div class="category" data-category="requests">requests <span class="quarto-category-count">(1)</span></div><div class="category" data-category="research">research <span class="quarto-category-count">(3)</span></div><div class="category" data-category="sciences">sciences <span class="quarto-category-count">(1)</span></div><div class="category" data-category="scientific writing">scientific writing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="seaborn">seaborn <span class="quarto-category-count">(2)</span></div><div class="category" data-category="skills">skills <span class="quarto-category-count">(1)</span></div><div class="category" data-category="vectorization">vectorization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="web scraping">web scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="welcome">welcome <span class="quarto-category-count">(1)</span></div><div class="category" data-category="writing">writing <span class="quarto-category-count">(4)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(26)</span></div><div class="category" data-category="activation">activation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="advice">advice <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ai">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="arewads">arewads <span class="quarto-category-count">(3)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="coursera">coursera <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data analysis">data analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data science">data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data visualization">data visualization <span class="quarto-category-count">(2)</span></div><div class="category" data-category="deep learning">deep learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="effective writing">effective writing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="fizzbuzz">fizzbuzz <span class="quarto-category-count">(2)</span></div><div class="category" data-category="git">git <span class="quarto-category-count">(1)</span></div><div class="category" data-category="how to learn">how to learn <span class="quarto-category-count">(2)</span></div><div class="category" data-category="javascript">javascript <span class="quarto-category-count">(2)</span></div><div class="category" data-category="journal article">journal article <span class="quarto-category-count">(1)</span></div><div class="category" data-category="loops">loops <span class="quarto-category-count">(2)</span></div><div class="category" data-category="machine learning">machine learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="mathematics">mathematics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="matplotlib">matplotlib <span class="quarto-category-count">(2)</span></div><div class="category" data-category="mooc">mooc <span class="quarto-category-count">(1)</span></div><div class="category" data-category="natural language processing">natural language processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="origins">origins <span class="quarto-category-count">(1)</span></div><div class="category" data-category="packages">packages <span class="quarto-category-count">(1)</span></div><div class="category" data-category="pandas">pandas <span class="quarto-category-count">(3)</span></div><div class="category" data-category="programming">programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(10)</span></div><div class="category" data-category="pytorch">pytorch <span class="quarto-category-count">(1)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="r">r <span class="quarto-category-count">(1)</span></div><div class="category" data-category="r programming">r programming <span class="quarto-category-count">(2)</span></div><div class="category" data-category="regression">regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="requests">requests <span class="quarto-category-count">(1)</span></div><div class="category" data-category="research">research <span class="quarto-category-count">(3)</span></div><div class="category" data-category="sciences">sciences <span class="quarto-category-count">(1)</span></div><div class="category" data-category="scientific writing">scientific writing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="seaborn">seaborn <span class="quarto-category-count">(2)</span></div><div class="category" data-category="sigmoid">sigmoid <span class="quarto-category-count">(1)</span></div><div class="category" data-category="skills">skills <span class="quarto-category-count">(1)</span></div><div class="category" data-category="vectorization">vectorization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="web scraping">web scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="welcome">welcome <span class="quarto-category-count">(1)</span></div><div class="category" data-category="writing">writing <span class="quarto-category-count">(4)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -1091,7 +1092,95 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="writing,research,effective writing" data-listing-date-sort="1691103600000" data-listing-file-modified-sort="1691150686339" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="0" data-categories="deep learning,pytorch,regression,python" data-listing-date-sort="1691535600000" data-listing-file-modified-sort="1691589938341" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="thumbnail">
+<p><a href="./posts/pytorch-regression/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/pytorch-regression/index.html --> </a></p>
+</div>
+<div class="body">
+<a href="./posts/pytorch-regression/index.html">
+<h3 class="no-anchor listing-title">
+Revving Up: MPG Regression Unleashed through Deep Learning in PyTorch
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('deep learning'); return false;">
+deep learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('pytorch'); return false;">
+pytorch
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
+regression
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+</div>
+<a href="./posts/pytorch-regression/index.html">
+<div class="listing-description">
+<!-- desc(5A0113B34292)[max=175]:posts/pytorch-regression/index.html -->
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/pytorch-regression/index.html">
+<div class="listing-date">
+Aug 9, 2023
+</div>
+<div class="listing-author">
+Lukman Aliyu Jibril
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="machine learning,sigmoid,activation,mathematics" data-listing-date-sort="1691362800000" data-listing-file-modified-sort="1691449639034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="thumbnail">
+<p><a href="./posts/sigmoid/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/sigmoid/index.html --> </a></p>
+</div>
+<div class="body">
+<a href="./posts/sigmoid/index.html">
+<h3 class="no-anchor listing-title">
+The Crucial Role of the Sigmoid Function and its Derivative in Machine Learning
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('machine learning'); return false;">
+machine learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('sigmoid'); return false;">
+sigmoid
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('activation'); return false;">
+activation
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('mathematics'); return false;">
+mathematics
+</div>
+</div>
+<a href="./posts/sigmoid/index.html">
+<div class="listing-description">
+<!-- desc(5A0113B34292)[max=175]:posts/sigmoid/index.html -->
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/sigmoid/index.html">
+<div class="listing-date">
+Aug 7, 2023
+</div>
+<div class="listing-author">
+Lukman Aliyu Jibril
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="writing,research,effective writing" data-listing-date-sort="1691103600000" data-listing-file-modified-sort="1691150686339" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="./posts/effective-writing/index.html"> <img src="./posts/effective-writing/effective_writing.png" class="thumbnail-image"> </a></p>
 </div>
@@ -1117,7 +1206,7 @@ effective writing
 </div>
 <a href="./posts/effective-writing/index.html">
 <div class="listing-description">
-Larry McEnerney’s Leadership Lab on effective writing delivered on May 9, 2014 began with a compelling assertion: “Shift your focus from rules to readers.” This succinctly…
+<!-- desc(5A0113B34292)[max=175]:posts/effective-writing/index.html -->
 </div>
 </a>
 </div>
@@ -1132,9 +1221,9 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="skills,arewads,git,quarto,writing" data-listing-date-sort="1690758000000" data-listing-file-modified-sort="1690803976894" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="3" data-categories="skills,arewads,git,quarto,writing" data-listing-date-sort="1690758000000" data-listing-file-modified-sort="1690803976894" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
-<p><a href="./posts/arewads-impact/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/arewads-impact/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/arewads-impact/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="./posts/arewads-impact/index.html">
@@ -1164,7 +1253,7 @@ writing
 </div>
 <a href="./posts/arewads-impact/index.html">
 <div class="listing-description">
-The Arewa Data Science Academy fellowship has been an exceptional…
+<!-- desc(5A0113B34292)[max=175]:posts/arewads-impact/index.html -->
 </div>
 </a>
 </div>
@@ -1179,9 +1268,9 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="research,advice" data-listing-date-sort="1690671600000" data-listing-file-modified-sort="1690725694515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="4" data-categories="research,advice" data-listing-date-sort="1690671600000" data-listing-file-modified-sort="1690725694515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
-<p><a href="./posts/claudiu-talk/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/claudiu-talk/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/claudiu-talk/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="./posts/claudiu-talk/index.html">
@@ -1202,7 +1291,7 @@ advice
 </div>
 <a href="./posts/claudiu-talk/index.html">
 <div class="listing-description">
-After recently concluding our fellowship at Arewa Data Science Academy, we had the privilege of attending a captivating talk by Claudiu Musat, a distinguished researcher…
+<!-- desc(5A0113B34292)[max=175]:posts/claudiu-talk/index.html -->
 </div>
 </a>
 </div>
@@ -1217,9 +1306,9 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="r programming,vectorization" data-listing-date-sort="1690585200000" data-listing-file-modified-sort="1690683469515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="5" data-categories="r programming,vectorization" data-listing-date-sort="1690585200000" data-listing-file-modified-sort="1690683469515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
-<p><a href="./posts/r-vectorized-code/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/r-vectorized-code/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/r-vectorized-code/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="./posts/r-vectorized-code/index.html">
@@ -1240,7 +1329,7 @@ vectorization
 </div>
 <a href="./posts/r-vectorized-code/index.html">
 <div class="listing-description">
-The first thing is to define vectorized code. According to Garrett Grolemund in his book “Hands-On Programming with R”, vectorised code has the following qualities:
+<!-- desc(5A0113B34292)[max=175]:posts/r-vectorized-code/index.html -->
 </div>
 </a>
 </div>
@@ -1255,9 +1344,9 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="scientific writing,journal article,research" data-listing-date-sort="1690239600000" data-listing-file-modified-sort="1690406290433" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="6" data-categories="scientific writing,journal article,research" data-listing-date-sort="1690239600000" data-listing-file-modified-sort="1690406290433" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
-<p><a href="./posts/writearticles/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/writearticles/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/writearticles/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="./posts/writearticles/index.html">
@@ -1281,7 +1370,7 @@ research
 </div>
 <a href="./posts/writearticles/index.html">
 <div class="listing-description">
-In this post, I aim to summarize the key points from the journal article “How to Write a Scientific Article” by Barbara J. Hoogenboom and Robert C. Manske, which offers…
+<!-- desc(5A0113B34292)[max=175]:posts/writearticles/index.html -->
 </div>
 </a>
 </div>
@@ -1296,7 +1385,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="arewads" data-listing-date-sort="1690153200000" data-listing-file-modified-sort="1690179210978" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="7" data-categories="arewads" data-listing-date-sort="1690153200000" data-listing-file-modified-sort="1690179210978" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/fellowship-conclusion/index.html"> <img src="./posts/fellowship-conclusion/cert.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1316,7 +1405,7 @@ arewads
 </div>
 <a href="./posts/fellowship-conclusion/index.html">
 <div class="listing-description">
-It is with immense pleasure and gratitude that I announce my successful completion of the Arewa…
+<!-- desc(5A0113B34292)[max=175]:posts/fellowship-conclusion/index.html -->
 </div>
 </a>
 </div>
@@ -1331,9 +1420,9 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="r programming,fizzbuzz,loops" data-listing-date-sort="1687129200000" data-listing-file-modified-sort="1690615074920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="8" data-categories="r programming,fizzbuzz,loops" data-listing-date-sort="1687129200000" data-listing-file-modified-sort="1690615074920" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <div class="thumbnail">
-<p><a href="./posts/fizzbuzz_r/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/fizzbuzz_r/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/fizzbuzz_r/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="./posts/fizzbuzz_r/index.html">
@@ -1357,7 +1446,7 @@ loops
 </div>
 <a href="./posts/fizzbuzz_r/index.html">
 <div class="listing-description">
-The FizzBuzz problem is a classic programming exercise that tests a developer’s ability to think logically and solve a simple but often misunderstood challenge. I have…
+<!-- desc(5A0113B34292)[max=175]:posts/fizzbuzz_r/index.html -->
 </div>
 </a>
 </div>
@@ -1372,7 +1461,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="natural language processing,python,r,packages" data-listing-date-sort="1686610800000" data-listing-file-modified-sort="1690592392359" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="9" data-categories="natural language processing,python,r,packages" data-listing-date-sort="1686610800000" data-listing-file-modified-sort="1690592392359" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <div class="thumbnail">
 <p><a href="./posts/nlp/index.html"> <img src="./posts/nlp/nlp.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1401,7 +1490,7 @@ packages
 </div>
 <a href="./posts/nlp/index.html">
 <div class="listing-description">
-In today’s digital age, the sheer volume of text-based data being generated has grown exponentially. Extracting meaningful insights and knowledge from this vast amount of…
+<!-- desc(5A0113B34292)[max=175]:posts/nlp/index.html -->
 </div>
 </a>
 </div>
@@ -1416,9 +1505,9 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="javascript,programming,loops,fizzbuzz" data-listing-date-sort="1684018800000" data-listing-file-modified-sort="1690025076306" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="10" data-categories="javascript,programming,loops,fizzbuzz" data-listing-date-sort="1684018800000" data-listing-file-modified-sort="1690025076306" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
 <div class="thumbnail">
-<p><a href="./posts/fizzbuzz-javascript/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/fizzbuzz-javascript/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/fizzbuzz-javascript/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="./posts/fizzbuzz-javascript/index.html">
@@ -1445,7 +1534,7 @@ fizzbuzz
 </div>
 <a href="./posts/fizzbuzz-javascript/index.html">
 <div class="listing-description">
-FizzBuzz is a common programming problem that is often used as an exercise in basic programming logic and algorithm development. The problem is typically presented as follows:
+<!-- desc(5A0113B34292)[max=175]:posts/fizzbuzz-javascript/index.html -->
 </div>
 </a>
 </div>
@@ -1460,7 +1549,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="python,data visualization,matplotlib,seaborn" data-listing-date-sort="1683932400000" data-listing-file-modified-sort="1690026620627" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="11" data-categories="python,data visualization,matplotlib,seaborn" data-listing-date-sort="1683932400000" data-listing-file-modified-sort="1690026620627" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <div class="thumbnail">
 <p><a href="./posts/visualization/index.html"> <img src="./posts/viz/pythondataviz.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1489,7 +1578,7 @@ seaborn
 </div>
 <a href="./posts/visualization/index.html">
 <div class="listing-description">
-Data visualization is a crucial part of data analysis as it aids in our ability to comprehend and convey to a larger audience complicated data correlations, patterns, and…
+<!-- desc(5A0113B34292)[max=175]:posts/visualization/index.html -->
 </div>
 </a>
 </div>
@@ -1504,7 +1593,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="writing,sciences,coursera,mooc" data-listing-date-sort="1682463600000" data-listing-file-modified-sort="1690024463994" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="12" data-categories="writing,sciences,coursera,mooc" data-listing-date-sort="1682463600000" data-listing-file-modified-sort="1690024463994" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <div class="thumbnail">
 <p><a href="./posts/sciences-writing/index.html"> <img src="./posts/sciences-writing/sciences_writing.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1533,7 +1622,7 @@ mooc
 </div>
 <a href="./posts/sciences-writing/index.html">
 <div class="listing-description">
-Since written communication is the primary way that scientific discoveries are disseminated to the public, scientific writing is a crucial skill for scientists and…
+<!-- desc(5A0113B34292)[max=175]:posts/sciences-writing/index.html -->
 </div>
 </a>
 </div>
@@ -1548,7 +1637,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="javascript,code,writing" data-listing-date-sort="1681858800000" data-listing-file-modified-sort="1690026753435" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="13" data-categories="javascript,code,writing" data-listing-date-sort="1681858800000" data-listing-file-modified-sort="1690026753435" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="./posts/cleancodes/index.html"> <img src="./posts/welcome/thumbnail.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1574,7 +1663,7 @@ writing
 </div>
 <a href="./posts/cleancodes/index.html">
 <div class="listing-description">
-I recently started seriously practicing JavaScript, hence this post. Another impact of being a fellow of the Arewa Data Science Academy. Writing clean and readable code is…
+<!-- desc(5A0113B34292)[max=175]:posts/cleancodes/index.html -->
 </div>
 </a>
 </div>
@@ -1589,7 +1678,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="python,pandas,data analysis" data-listing-date-sort="1680822000000" data-listing-file-modified-sort="1690022930893" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="14" data-categories="python,pandas,data analysis" data-listing-date-sort="1680822000000" data-listing-file-modified-sort="1690022930893" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="./posts/pandas2/index.html"> <img src="./posts/pandas/pandas.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1615,7 +1704,7 @@ data analysis
 </div>
 <a href="./posts/pandas2/index.html">
 <div class="listing-description">
-Data processing is an important aspect of data analysis and provides a way to generate insights and information from large datasets, and also to prepare data for use in…
+<!-- desc(5A0113B34292)[max=175]:posts/pandas2/index.html -->
 </div>
 </a>
 </div>
@@ -1630,7 +1719,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="machine learning,deep learning,ai,data science" data-listing-date-sort="1680044400000" data-listing-file-modified-sort="1690026555080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="15" data-categories="machine learning,deep learning,ai,data science" data-listing-date-sort="1680044400000" data-listing-file-modified-sort="1690026555080" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/ml-ai/index.html"> <img src="./posts/ml-ai/mlai.png" class="thumbnail-image"> </a></p>
 </div>
@@ -1659,7 +1748,7 @@ data science
 </div>
 <a href="./posts/ml-ai/index.html">
 <div class="listing-description">
-The picture above,taken from Microsoft’s free introduction to machine learning course, available on github, succinctly expresses how the concepts relate to one another.
+<!-- desc(5A0113B34292)[max=175]:posts/ml-ai/index.html -->
 </div>
 </a>
 </div>
@@ -1674,7 +1763,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="python,pandas,matplotlib,seaborn,data visualization" data-listing-date-sort="1678748400000" data-listing-file-modified-sort="1690026601360" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="16" data-categories="python,pandas,matplotlib,seaborn,data visualization" data-listing-date-sort="1678748400000" data-listing-file-modified-sort="1690026601360" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
 <div class="thumbnail">
 <p><a href="./posts/viz/index.html"> <img src="./posts/viz/pythondataviz.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1706,7 +1795,7 @@ data visualization
 </div>
 <a href="./posts/viz/index.html">
 <div class="listing-description">
-Data visualization is a crucial aspect of data analysis as it helps in understanding data better. Python provides several…
+<!-- desc(5A0113B34292)[max=175]:posts/viz/index.html -->
 </div>
 </a>
 </div>
@@ -1721,7 +1810,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="pandas,python,data analysis" data-listing-date-sort="1678748400000" data-listing-file-modified-sort="1690022258000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="17" data-categories="pandas,python,data analysis" data-listing-date-sort="1678748400000" data-listing-file-modified-sort="1690022258000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <div class="thumbnail">
 <p><a href="./posts/pandas/index.html"> <img src="./posts/pandas/pandas.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1747,7 +1836,7 @@ data analysis
 </div>
 <a href="./posts/pandas/index.html">
 <div class="listing-description">
-Data analysis is a much sought after skill for data…
+<!-- desc(5A0113B34292)[max=175]:posts/pandas/index.html -->
 </div>
 </a>
 </div>
@@ -1762,7 +1851,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="python" data-listing-date-sort="1678489200000" data-listing-file-modified-sort="1690026531061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="18" data-categories="python" data-listing-date-sort="1678489200000" data-listing-file-modified-sort="1690026531061" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
 <div class="thumbnail">
 <p><a href="./posts/numpy/index.html"> <img src="./posts/numpy/numpy.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1782,7 +1871,7 @@ python
 </div>
 <a href="./posts/numpy/index.html">
 <div class="listing-description">
-NumPy which is short for Numerical Python is the one of the most foundational tools for scientific computing with Python today. It is so important that many other tools like…
+<!-- desc(5A0113B34292)[max=175]:posts/numpy/index.html -->
 </div>
 </a>
 </div>
@@ -1797,7 +1886,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="python,requests,web scraping" data-listing-date-sort="1677884400000" data-listing-file-modified-sort="1690026585680" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="19" data-categories="python,requests,web scraping" data-listing-date-sort="1677884400000" data-listing-file-modified-sort="1690026585680" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="./posts/web-scraping/index.html"> <img src="./posts/web-scraping/requests.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1823,7 +1912,7 @@ web scraping
 </div>
 <a href="./posts/web-scraping/index.html">
 <div class="listing-description">
-Web scraping is a key skill all data scientists should have. This is why day 22 of our…
+<!-- desc(5A0113B34292)[max=175]:posts/web-scraping/index.html -->
 </div>
 </a>
 </div>
@@ -1838,7 +1927,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="python,how to learn" data-listing-date-sort="1676934000000" data-listing-file-modified-sort="1690468871370" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="20" data-categories="python,how to learn" data-listing-date-sort="1676934000000" data-listing-file-modified-sort="1690468871370" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="./posts/practice-concepts/index.html"> <img src="./posts/practice-concepts/question.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1861,7 +1950,7 @@ how to learn
 </div>
 <a href="./posts/practice-concepts/index.html">
 <div class="listing-description">
-<strong>What is the output of this code and why?</strong>
+<!-- desc(5A0113B34292)[max=175]:posts/practice-concepts/index.html -->
 </div>
 </a>
 </div>
@@ -1876,7 +1965,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="how to learn" data-listing-date-sort="1676761200000" data-listing-file-modified-sort="1689956290144" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="21" data-categories="how to learn" data-listing-date-sort="1676761200000" data-listing-file-modified-sort="1689956290144" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="./posts/how-to-learn/index.html"> <img src="./posts/how-to-learn/learn.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1896,7 +1985,7 @@ how to learn
 </div>
 <a href="./posts/how-to-learn/index.html">
 <div class="listing-description">
-The Arewa Data Science fellowship that I am currently enrolled in required that we complete Barbara Oakley’s and Terrence Sejnowski’s MOOC (massive open online course) on…
+<!-- desc(5A0113B34292)[max=175]:posts/how-to-learn/index.html -->
 </div>
 </a>
 </div>
@@ -1911,9 +2000,9 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="arewads" data-listing-date-sort="1676329200000" data-listing-file-modified-sort="1689935683852" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="22" data-categories="arewads" data-listing-date-sort="1676329200000" data-listing-file-modified-sort="1689935683852" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
-<p><a href="./posts/arewads/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/arewads/index.html"> <!-- img(9CEB782EFEE6)[progressive=false, height=]:posts/arewads/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="./posts/arewads/index.html">
@@ -1931,7 +2020,7 @@ arewads
 </div>
 <a href="./posts/arewads/index.html">
 <div class="listing-description">
-The link for the application to the fellowship was sent to me by my friend Abbas. I reluctantly opened the link and I was surprised to see that I had to complete an…
+<!-- desc(5A0113B34292)[max=175]:posts/arewads/index.html -->
 </div>
 </a>
 </div>
@@ -1946,7 +2035,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="python" data-listing-date-sort="1676329200000" data-listing-file-modified-sort="1690801921175" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="23" data-categories="python" data-listing-date-sort="1676329200000" data-listing-file-modified-sort="1690801921175" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/30-days-python/index.html"> <img src="./posts/30-days-python/python.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -1966,7 +2055,7 @@ python
 </div>
 <a href="./posts/30-days-python/index.html">
 <div class="listing-description">
-As part of the first phase of the Arewa Data science fellowship, the mentors organised a 30 days of Python challenge that consists of exercises tailored to a particular…
+<!-- desc(5A0113B34292)[max=175]:posts/30-days-python/index.html -->
 </div>
 </a>
 </div>
@@ -1981,7 +2070,7 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="origins" data-listing-date-sort="1676156400000" data-listing-file-modified-sort="1689935683853" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="24" data-categories="origins" data-listing-date-sort="1676156400000" data-listing-file-modified-sort="1689935683853" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
 <div class="thumbnail">
 <p><a href="./posts/starting-python/index.html"> <img src="./posts/starting-python/python.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -2001,7 +2090,7 @@ origins
 </div>
 <a href="./posts/starting-python/index.html">
 <div class="listing-description">
-I became interested in Python about a year after I started my first full time job. I…
+<!-- desc(5A0113B34292)[max=175]:posts/starting-python/index.html -->
 </div>
 </a>
 </div>
@@ -2016,9 +2105,9 @@ Lukman Aliyu Jibril
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="welcome" data-listing-date-sort="1676070000000" data-listing-file-modified-sort="1690106119637" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="25" data-categories="welcome" data-listing-date-sort="1676070000000" data-listing-file-modified-sort="1690106119637" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
-<p><a href="./posts/welcome/index.html"> <p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/welcome/index.html"> <!-- img(9CEB782EFEE6)[progressive=true, height=]:posts/welcome/index.html --> </a></p>
 </div>
 <div class="body">
 <a href="./posts/welcome/index.html">
@@ -2036,7 +2125,7 @@ welcome
 </div>
 <a href="./posts/welcome/index.html">
 <div class="listing-description">
-Welcome to…
+<!-- desc(5A0113B34292)[max=175]:posts/welcome/index.html -->
 </div>
 </a>
 </div>
@@ -2055,6 +2144,9 @@ Lukman Aliyu Jibril
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lukman Aliyu Jibril">
+<meta name="dcterms.date" content="2023-08-07">
 
-<title>ailearningloop - About</title>
+<title>ailearningloop - The Crucial Role of the Sigmoid Function and its Derivative in Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,8 +71,10 @@ gtag('js', new Date());
 gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -79,7 +84,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">ailearningloop</span>
     </a>
   </div>
@@ -90,7 +95,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -104,7 +109,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -116,7 +121,41 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">The Crucial Role of the Sigmoid Function and its Derivative in Machine Learning</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">machine learning</div>
+                <div class="quarto-category">sigmoid</div>
+                <div class="quarto-category">activation</div>
+                <div class="quarto-category">mathematics</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lukman Aliyu Jibril </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 7, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
@@ -1005,37 +1044,62 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
         
     </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="Lukman.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
-<p>Lukman blogs about his journey from a practicing health practitioner to learning <code>Machine Learning</code> after joining the first cohort of the Arewa Data Science Academy fellowship that began in January, 2023.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://twitter.com/lukmanajjk" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://linkedin.com/in/lukman-a-j" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com/lukmanaj" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In the realm of machine learning, the sigmoid function stands as a foundational and indispensable element, playing a pivotal role in various applications such as neural networks, logistic regression, and decision-making models. Its characteristic S-shaped curve enables it to map input data to a bounded output range, making it particularly valuable for tasks involving classification, probability estimation, and activation functions. This essay explores the significance of the sigmoid function in machine learning and delves into the techniques for solving its derivative, elucidating its importance in optimizing learning processes.</p>
+</section>
+<section id="the-sigmoid-function-a-cornerstone-of-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="the-sigmoid-function-a-cornerstone-of-machine-learning">The Sigmoid Function: A Cornerstone of Machine Learning</h2>
+<p>The sigmoid function, mathematically represented as <span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}}\)</span>, transforms any input value to a range between 0 and 1. This property is particularly useful in binary classification problems, where the output is interpreted as a probability score for a particular class. In the context of neural networks, sigmoid activation functions allow neurons to fire selectively, enabling complex patterns to be captured through the network’s layers. Its continuous and differentiable nature makes it suitable for various optimization algorithms, including gradient descent.</p>
+</section>
+<section id="derivative-of-the-sigmoid-function-unraveling-the-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="derivative-of-the-sigmoid-function-unraveling-the-complexity">Derivative of the Sigmoid Function: Unraveling the Complexity</h2>
+<p>One of the key aspects of utilizing the sigmoid function in machine learning is the ability to compute its derivative. The derivative provides insights into how the output of the function changes concerning variations in the input. The straightforward yet intricate nature of the sigmoid derivative, often expressed as <span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times (1-\sigma\left(x\right))\)</span>, has far-reaching implications for the training of neural networks and other machine learning models.</p>
+</section>
+<section id="solving-the-sigmoid-derivative-chain-rule-in-action" class="level2">
+<h2 class="anchored" data-anchor-id="solving-the-sigmoid-derivative-chain-rule-in-action">Solving the Sigmoid Derivative: Chain Rule in Action</h2>
+<p>To solve the derivative of the sigmoid function, the chain rule comes into play. The chain rule is a fundamental concept in calculus that allows us to calculate the derivative of composite functions. Applying the chain rule to the sigmoid derivative involves breaking down the complex expression into manageable components and systematically calculating their derivatives. The result,<span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right))\)</span> , embodies the sigmoid function’s self-adjusting behavior, where the derivative is maximized at the inflection point (0.5) and approaches zero as the input approaches positive or negative infinity. On this note, I will like to indulge in deriving the derivative of a sigmoid, just for fun.</p>
+<p><span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}}\)</span></p>
+<p>This can also be expressed as:</p>
+<p><span class="math inline">\(\sigma\left(x\right) = (1+e^{-x})^{-1}\)</span></p>
+<p>which we know differentiates, according to the chain rule, to:</p>
+<p><span class="math inline">\(-(1+e^{-x})^{-2} \times e^{-x} \times-1\)</span></p>
+<p>which easily becomes:</p>
+<p><span class="math inline">\(e^{-x}(1+e^{-x})^{-2}\)</span></p>
+<p>same as:</p>
+<p><span class="math inline">\(\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}\)</span></p>
+<p>then we can rearrange by adding and subtracting 1 which in essence does nothing but add a zero:</p>
+<p><span class="math inline">\(\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}+ 1 -1\)</span></p>
+<p>this easily becomes:</p>
+<p><span class="math inline">\(\frac{1 + e^{-x}-1}{\left(1+e^{-x}\right)^{-2}}\)</span></p>
+<p>which is simply:</p>
+<p><span class="math inline">\(\frac{1 + e^{-x}}{\left(1 + e ^{-x}\right)^{2}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}}\)</span></p>
+<p>which simplifies to:</p>
+<p><span class="math inline">\(\frac{1}{1 + e ^{-x}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}}\)</span></p>
+<p>factorizing we get:</p>
+<p><span class="math inline">\(\frac{1}{1 + e ^{-x}}\left(1 - \frac{1}{1 + e ^{-x}}\right)\)</span></p>
+<p>recalling that:</p>
+<p><span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}}\)</span></p>
+<p>our derivative is now proven to be</p>
+<p><span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right))\)</span></p>
+</section>
+<section id="importance-of-the-sigmoid-derivative-in-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="importance-of-the-sigmoid-derivative-in-optimization">Importance of the Sigmoid Derivative in Optimization</h2>
+<p>Understanding and utilizing the sigmoid derivative is of paramount importance in optimizing machine learning models. In neural network training, the backpropagation algorithm relies heavily on derivatives to adjust the model’s weights and biases. The sigmoid derivative guides the network’s learning process, indicating the direction and magnitude of weight adjustments needed for minimizing error. Furthermore, the sigmoid derivative helps prevent the vanishing gradient problem, ensuring that gradients remain substantial throughout the network’s layers and facilitating stable and efficient training.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In conclusion, the sigmoid function is a cornerstone of machine learning, serving as a fundamental tool for a wide range of applications. Its ability to map inputs to a bounded output range makes it indispensable in tasks such as binary classification, probability estimation, and activation functions within neural networks. Solving the derivative of the sigmoid function through the chain rule unravels its intricate nature, enabling its effective utilization in optimization processes. The sigmoid derivative’s significance in guiding neural network training, preventing the vanishing gradient problem, and enhancing model performance cannot be overstated. As machine learning continues to evolve, the sigmoid function and its derivative will undoubtedly continue to play a pivotal role in shaping the landscape of artificial intelligence and data analysis.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1056,6 +1120,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
