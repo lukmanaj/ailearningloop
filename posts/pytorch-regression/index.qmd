@@ -3,6 +3,7 @@ title: "Revving Up: MPG Regression Unleashed through Deep Learning in PyTorch"
 author: "Lukman Aliyu Jibril"
 date: "2023-08-09"
 categories: [deep learning,pytorch,regression,python]
+
 ---
 
 # Introduction
@@ -13,7 +14,7 @@ In this article, we'll dive into the world of deep learning with PyTorch by cons
 
 Our journey begins by loading the auto MPG dataset, which contains information about vehicle characteristics and their corresponding MPG values. We'll focus on features like the number of cylinders, displacement, horsepower, weight, acceleration, manufacturing origin, and model year.
 
-```{python}
+```python
 # Importing necessary libraries
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -27,7 +28,7 @@ from torch.utils.data import DataLoader,Dataset,TensorDataset
 
 ```
 
-```{python}
+```python
 # Load the dataset
 url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data'
 column_names = ['MPG', 'Cylinders', 'Displacement', 'Horsepower', 'Weight', 'Acceleration', 'Model Year', 'Origin']
@@ -43,7 +44,7 @@ df.tail()
 
 To ensure our data is suitable for training, we perform necessary preprocessing steps. We drop rows with missing values, standardize continuous features, and transform categorical features into one-hot encoded vectors.
 
-```{python}
+```python
 
 # Dropping rows with missing values
 
@@ -105,7 +106,7 @@ train_dl = DataLoader(train_ds, batch_size, shuffle=True)
 
 With our data prepared, we move on to constructing our Deep Neural Network (DNN) regression model using PyTorch. This model will predict MPG values based on the vehicle's features.
 
-```{python}
+```python
 
 # Define the model architecture
 hidden_units = [8, 4]
@@ -130,7 +131,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.001)
 
 It's time to train our DNN regression model on the training data. We iterate through the data for a specified number of epochs, adjusting the model's weights to minimize the mean squared error loss.
 
-```{python}
+```python
 num_epochs = 200
 log_epochs = 20 
 
@@ -153,7 +154,7 @@ for epoch in range(num_epochs):
 
 Once the model is trained, we assess its performance on the test dataset. This helps us understand how well the model generalizes to new, unseen data.
 
-```{python}
+```python
 
 with torch.no_grad():
     pred = model(x_test.float())[:, 0]
@@ -165,7 +166,7 @@ with torch.no_grad():
 
 Seeing the good metrics, let's confirm by plotting the actual and predicted values
 
-```{python}
+```python
 # Plotting actual vs. predicted MPG values
 plt.figure(figsize=(10, 6))
 plt.scatter(y_test, pred, color='blue', label='Predicted')

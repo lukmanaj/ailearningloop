@@ -79,5 +79,8 @@
   },
   "posts/sigmoid/index.qmd": {
     "index.html": "a7dd49e5"
+  },
+  "posts/pytorch-regression/index.qmd": {
+    "index.html": "d99fd19e"
   }
 }
