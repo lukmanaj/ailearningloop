@@ -1,0 +1,169 @@
+---
+title: "Introduction to Symbolic Computation with SymPy"
+author: "Lukman Aliyu Jibril"
+date: "2023-08-15"
+categories: [python,sympy,mathematics,symbolic computing]
+---
+
+Symbolic computation is a powerful approach in mathematics and computer science that deals with manipulating expressions and equations in their symbolic form. Unlike numerical computation, where values are approximated and manipulated, symbolic computation focuses on maintaining expressions with variables, allowing for precise mathematical manipulation. In this article, we will delve into symbolic differentiation using the popular SymPy library in Python. 
+
+## Basic Numeric Approximation
+
+When approximating the square root of 18, you might typically use the math module in Python:
+
+```{python}
+import math
+
+math.sqrt(18)
+```
+
+However, this result is an approximation. To work symbolically, we turn to SymPy:
+
+```{python}
+import sympy
+
+sqrt_expr = sympy.sqrt(18)
+sqrt_expr
+```
+
+SymPy provides an exact symbolic representation of the square root of 18. You can also evaluate this expression numerically to a specified number of decimal places:
+
+```{python}
+approx_val = sympy.N(sqrt_expr, 8)
+approx_val
+```
+
+
+## Symbolic Manipulation
+
+In SymPy, expressions are built using symbols. Here's an example of creating a symbolic expression corresponding to the mathematical expression $2x^{2}-xy$ :
+```{python}
+x, y = sympy.symbols('x y')
+expr = 2 * x**2 - x * y
+expr
+```
+
+With symbolic expressions, you can perform various manipulations, such as addition, subtraction, and multiplication:
+
+```{python}
+
+expr_manip = x * (expr + x * y + x**3)
+expr_manip
+```
+
+Expressions can also be expanded and factored using the expand and factor functions, respectively.
+
+### Substitution and Evaluation
+
+You can substitute specific values into expressions using the evalf method:
+
+```{python}
+
+val = expr.evalf(subs={x: -1, y: 2})
+val
+```
+
+This allows you to evaluate expressions as functions:
+
+```{python}
+f_symb = x ** 2
+f_val = f_symb.evalf(subs={x: 3})
+f_val 
+```
+
+
+
+## Numeric Operations on Symbolic Functions
+
+To evaluate a symbolic function for each element of an array, you need to make it NumPy-compatible:
+
+```{python}
+
+import numpy as np
+from sympy.utilities.lambdify import lambdify
+
+x_array = np.array([1, 2, 3])
+f_symb_numpy = lambdify(x, f_symb, 'numpy')
+
+result_array = f_symb_numpy(x_array)
+result_array
+```
+
+## Symbolic Differentiation with SymPy
+
+SymPy excels in symbolic differentiation. Finding derivatives is straightforward:
+
+```{python}
+diff_result = sympy.diff(x**3, x)
+diff_result
+```
+
+SymPy handles standard functions and applies necessary rules for differentiation:
+
+```{python}
+dfdx_composed = sympy.diff(sympy.exp(-2*x) + 3*sympy.sin(3*x), x)
+print(dfdx_composed)
+```
+
+You can even differentiate the symbolic expression from before and make it NumPy-friendly:
+
+```{python}
+dfdx_symb = sympy.diff(expr, x)
+dfdx_symb_numpy = lambdify(x, dfdx_symb, 'numpy')
+
+diff_result_array = dfdx_symb_numpy(x_array)
+diff_result_array
+```
+
+## Limitations of Symbolic Differentiation
+
+Despite its advantages, symbolic differentiation has limitations. Complex expressions might lead to inefficient or unevaluable results. For example, consider differentiating $|x|$ :
+```{python}
+dfdx_abs = sympy.diff(abs(x), x)
+print(dfdx_abs)
+```
+
+Evaluating we get:
+```{python}
+eval_result = dfdx_abs.evalf(subs={x: -2})
+eval_result
+```
+
+```{python}
+try:
+    dfdx_abs_numpy = lambdify(x, dfdx_abs, 'numpy')
+    dfdx_abs_numpy(np.array([1, -2, 0]))
+except NameError as err:
+    print(err)
+```
+
+## Numerical Differentiation
+
+Numerical differentiation approximates derivatives using nearby points and is available through libraries like NumPy. This approach focuses on function evaluation rather than symbolic expressions:
+
+```python
+delta_x = 0.01
+numerical_derivative = (f(x + delta_x) - f(x)) / delta_x
+```
+
+### Numerical Differentiation with NumPy
+
+NumPy provides the `np.gradient` function for numerical differentiation:
+
+```{python}
+import numpy as np
+
+x_vals = np.linspace(0, 10, 100)
+y_vals = np.sin(x_vals)
+
+derivatives = np.gradient(y_vals, x_vals)
+print(derivatives)
+```
+
+## Conclusion
+
+Symbolic computation with SymPy offers a versatile way to manipulate mathematical expressions and perform differentiation symbolically. While powerful, it has limitations in handling complex expressions and might lead to inefficient computations. Numerical differentiation, on the other hand, provides an alternative for cases where symbolic computation might fall short. By combining these techniques, you can effectively explore and analyze mathematical functions in Python.
+
+
+
+

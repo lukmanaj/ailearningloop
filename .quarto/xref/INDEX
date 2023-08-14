@@ -85,5 +85,8 @@
   },
   "posts/math-for-ml/index.qmd": {
     "index.html": "c34b83fc"
+  },
+  "posts/sympy/index.qmd": {
+    "index.html": "a1286ad8"
   }
 }

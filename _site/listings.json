@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/sympy/index.html",
       "/posts/math-for-ml/index.html",
       "/posts/pytorch-regression/index.html",
       "/posts/sigmoid/index.html",

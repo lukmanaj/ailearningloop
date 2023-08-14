@@ -10,7 +10,407 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Sun, 13 Aug 2023 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 14 Aug 2023 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Introduction to Symbolic Computation with SymPy</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/sympy/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Symbolic computation is a powerful approach in mathematics and computer science that deals with manipulating expressions and equations in their symbolic form. Unlike numerical computation, where values are approximated and manipulated, symbolic computation focuses on maintaining expressions with variables, allowing for precise mathematical manipulation. In this article, we will delve into symbolic differentiation using the popular SymPy library in Python.</p>
+<section id="basic-numeric-approximation" class="level2">
+<h2 class="anchored" data-anchor-id="basic-numeric-approximation">Basic Numeric Approximation</h2>
+<p>When approximating the square root of 18, you might typically use the math module in Python:</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> math</span>
+<span id="cb1-2"></span>
+<span id="cb1-3">math.sqrt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span>)</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>4.242640687119285</code></pre>
+</div>
+</div>
+<p>However, this result is an approximation. To work symbolically, we turn to SymPy:</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> sympy</span>
+<span id="cb3-2"></span>
+<span id="cb3-3">sqrt_expr <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sympy.sqrt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span>)</span>
+<span id="cb3-4">sqrt_expr</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%203%20%5Csqrt%7B2%7D"></p>
+</div>
+</div>
+<p>SymPy provides an exact symbolic representation of the square root of 18. You can also evaluate this expression numerically to a specified number of decimal places:</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">approx_val <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sympy.N(sqrt_expr, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>)</span>
+<span id="cb4-2">approx_val</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%204.2426407"></p>
+</div>
+</div>
+</section>
+<section id="symbolic-manipulation" class="level2">
+<h2 class="anchored" data-anchor-id="symbolic-manipulation">Symbolic Manipulation</h2>
+<p>In SymPy, expressions are built using symbols. Here’s an example of creating a symbolic expression corresponding to the mathematical expression <img src="https://latex.codecogs.com/png.latex?2x%5E%7B2%7D-xy"> :</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">x, y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sympy.symbols(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'x y'</span>)</span>
+<span id="cb5-2">expr <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> y</span>
+<span id="cb5-3">expr</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%202%20x%5E%7B2%7D%20-%20x%20y"></p>
+</div>
+</div>
+<p>With symbolic expressions, you can perform various manipulations, such as addition, subtraction, and multiplication:</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1">expr_manip <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> (expr <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span>
+<span id="cb6-2">expr_manip</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%20x%20%5Cleft(x%5E%7B3%7D%20+%202%20x%5E%7B2%7D%5Cright)"></p>
+</div>
+</div>
+<p>Expressions can also be expanded and factored using the expand and factor functions, respectively.</p>
+<section id="substitution-and-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="substitution-and-evaluation">Substitution and Evaluation</h3>
+<p>You can substitute specific values into expressions using the evalf method:</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">val <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> expr.evalf(subs<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{x: <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, y: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>})</span>
+<span id="cb7-2">val</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%204.0"></p>
+</div>
+</div>
+<p>This allows you to evaluate expressions as functions:</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">f_symb <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb8-2">f_val <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> f_symb.evalf(subs<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{x: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>})</span>
+<span id="cb8-3">f_val </span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%209.0"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="numeric-operations-on-symbolic-functions" class="level2">
+<h2 class="anchored" data-anchor-id="numeric-operations-on-symbolic-functions">Numeric Operations on Symbolic Functions</h2>
+<p>To evaluate a symbolic function for each element of an array, you need to make it NumPy-compatible:</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb9-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> sympy.utilities.lambdify <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> lambdify</span>
+<span id="cb9-3"></span>
+<span id="cb9-4">x_array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>])</span>
+<span id="cb9-5">f_symb_numpy <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> lambdify(x, f_symb, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'numpy'</span>)</span>
+<span id="cb9-6"></span>
+<span id="cb9-7">result_array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> f_symb_numpy(x_array)</span>
+<span id="cb9-8">result_array</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>array([1, 4, 9])</code></pre>
+</div>
+</div>
+</section>
+<section id="symbolic-differentiation-with-sympy" class="level2">
+<h2 class="anchored" data-anchor-id="symbolic-differentiation-with-sympy">Symbolic Differentiation with SymPy</h2>
+<p>SymPy excels in symbolic differentiation. Finding derivatives is straightforward:</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1">diff_result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sympy.diff(x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, x)</span>
+<span id="cb11-2">diff_result</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%203%20x%5E%7B2%7D"></p>
+</div>
+</div>
+<p>SymPy handles standard functions and applies necessary rules for differentiation:</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1">dfdx_composed <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sympy.diff(sympy.exp(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>x) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>sympy.sin(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>x), x)</span>
+<span id="cb12-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(dfdx_composed)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>9*cos(3*x) - 2*exp(-2*x)</code></pre>
+</div>
+</div>
+<p>You can even differentiate the symbolic expression from before and make it NumPy-friendly:</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1">dfdx_symb <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sympy.diff(expr, x)</span>
+<span id="cb14-2">dfdx_symb_numpy <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> lambdify(x, dfdx_symb, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'numpy'</span>)</span>
+<span id="cb14-3"></span>
+<span id="cb14-4">diff_result_array <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> dfdx_symb_numpy(x_array)</span>
+<span id="cb14-5">diff_result_array</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>array([4 - y, 8 - y, 12 - y], dtype=object)</code></pre>
+</div>
+</div>
+</section>
+<section id="limitations-of-symbolic-differentiation" class="level2">
+<h2 class="anchored" data-anchor-id="limitations-of-symbolic-differentiation">Limitations of Symbolic Differentiation</h2>
+<p>Despite its advantages, symbolic differentiation has limitations. Complex expressions might lead to inefficient or unevaluable results. For example, consider differentiating <img src="https://latex.codecogs.com/png.latex?%7Cx%7C"> :</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1">dfdx_abs <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sympy.diff(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">abs</span>(x), x)</span>
+<span id="cb16-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(dfdx_abs)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(re(x)*Derivative(re(x), x) + im(x)*Derivative(im(x), x))*sign(x)/x</code></pre>
+</div>
+</div>
+<p>Evaluating we get:</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1">eval_result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> dfdx_abs.evalf(subs<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{x: <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>})</span>
+<span id="cb18-2">eval_result</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%20-%20%5Cleft.%20%5Cfrac%7Bd%7D%7Bd%20x%7D%20%5Coperatorname%7Bre%7D%7B%5Cleft(x%5Cright)%7D%20%5Cright%7C_%7B%5Csubstack%7B%20x=-2%20%7D%7D"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">try</span>:</span>
+<span id="cb19-2">    dfdx_abs_numpy <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> lambdify(x, dfdx_abs, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'numpy'</span>)</span>
+<span id="cb19-3">    dfdx_abs_numpy(np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]))</span>
+<span id="cb19-4"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">except</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">NameError</span> <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> err:</span>
+<span id="cb19-5">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(err)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>name 'Derivative' is not defined</code></pre>
+</div>
+</div>
+</section>
+<section id="numerical-differentiation" class="level2">
+<h2 class="anchored" data-anchor-id="numerical-differentiation">Numerical Differentiation</h2>
+<p>Numerical differentiation approximates derivatives using nearby points and is available through libraries like NumPy. This approach focuses on function evaluation rather than symbolic expressions:</p>
+<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">delta_x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.01</span></span>
+<span id="cb21-2">numerical_derivative <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (f(x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> delta_x) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> f(x)) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> delta_x</span></code></pre></div>
+<section id="numerical-differentiation-with-numpy" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-differentiation-with-numpy">Numerical Differentiation with NumPy</h3>
+<p>NumPy provides the <code>np.gradient</code> function for numerical differentiation:</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb22-2"></span>
+<span id="cb22-3">x_vals <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.linspace(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb22-4">y_vals <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.sin(x_vals)</span>
+<span id="cb22-5"></span>
+<span id="cb22-6">derivatives <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.gradient(y_vals, x_vals)</span>
+<span id="cb22-7"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(derivatives)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[ 0.99830036  0.99321184  0.97799815  0.95281439  0.91791729  0.8736626
+  0.82050147  0.75897585  0.68971295  0.61341886  0.53087135  0.44291195
+  0.35043734  0.25439024  0.15574979  0.05552157 -0.04527265 -0.14560535
+ -0.2444537  -0.34080999 -0.43369194 -0.52215268 -0.6052904  -0.68225756
+ -0.75226954 -0.81461261 -0.86865122 -0.91383447 -0.94970177 -0.97588745
+ -0.99212457 -0.99824762 -0.99419416 -0.98000551 -0.95582633 -0.92190311
+ -0.87858166 -0.82630363 -0.76560196 -0.69709546 -0.62148251 -0.53953394
+ -0.45208516 -0.36002765 -0.2642999  -0.16587777 -0.06576463  0.03501895
+  0.13544553  0.23449132  0.33114663  0.4244261   0.51337882  0.59709797
+  0.67473008  0.74548374  0.80863767  0.86354805  0.9096551   0.94648879
+  0.97367362  0.99093247  0.99808939  0.99507142  0.98190932  0.95873728
+  0.92579151  0.88340789  0.83201848  0.77214717  0.7044043   0.62948048
+  0.54813951  0.46121059  0.36957993  0.27418163  0.17598823  0.07600073
+ -0.02476154 -0.12527139 -0.22450417 -0.32144828 -0.41511542 -0.50455072
+ -0.58884245 -0.6671313  -0.73861917 -0.80257728 -0.85835363 -0.9053796
+ -0.9431758  -0.97135691 -0.98963566 -0.9978257  -0.99584353 -0.98370937
+ -0.96154691 -0.92958209 -0.88814077 -0.86509787]</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Symbolic computation with SymPy offers a versatile way to manipulate mathematical expressions and perform differentiation symbolically. While powerful, it has limitations in handling complex expressions and might lead to inefficient computations. Numerical differentiation, on the other hand, provides an alternative for cases where symbolic computation might fall short. By combining these techniques, you can effectively explore and analyze mathematical functions in Python.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>python</category>
+  <category>sympy</category>
+  <category>mathematics</category>
+  <category>symbolic computing</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/sympy/index.html</guid>
+  <pubDate>Mon, 14 Aug 2023 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Navigating the Mathematical Marvels: Discovering the Power of Mathematics in Machine Learning</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -5477,866 +5877,6 @@ dtype: float64</code></pre>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/pandas/index.html</guid>
   <pubDate>Mon, 13 Mar 2023 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/pandas/pandas.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>NumPy ndarrays: Introduction to a Powerful Tool for Scientific Computing in Python</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/numpy/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>NumPy which is short for Numerical Python is the one of the most foundational tools for scientific computing with Python today. It is so important that many other tools like pandas utilise NumPy array objects as their basis. The most important tool in NumPy is the ndarray which is usually a fixed-size multidimensional container of items of the same type and size. Other useful tools in NumPy are the mathematical functions that support fast operations on the ndarrays without using loops as required in pure Python, and even a C API that connects NumPy with libraries written in C, C ++ or FORTRAN.</p>
-<p>In this short piece, I attempt to highlight some important NumPy features that may be useful to individuals interested in scientific computing.</p>
-<p>First before using NumPy, it is important to install it first, after installing Python of course. This can be done using conda or pip. The specific codes can be found in the documentation and is dependent on the individual’s setup eg windows, linux, Mac etc. After installation, NumPy can be imported in the following way before it can be used:</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span></code></pre></div>
-</div>
-<p>There are other ways of importing NumPy but the syntax above is the most widely accepted and it is advisable as it can foster collaboration. To check the package version, the following can be used:</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'numpy:'</span>, np.__version__)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>numpy: 1.22.3</code></pre>
-</div>
-</div>
-<section id="the-numpy-array-object-the-basis-of-numpy" class="level2">
-<h2 class="anchored" data-anchor-id="the-numpy-array-object-the-basis-of-numpy">The NumPy array object, the basis of NumPy</h2>
-<p>N-dimensional array object, or ndarray, is a fast, flexible container for large datasets in Python. Arrays enable performance of mathematical operations on whole blocks of data using similar syntax to the equivalent operations between scalar elements. It enables one to perform computations on indivudual elements of an ndarray without the need for a loop or list comprehension as may be required while trying to perform a similar computation using lets say a list in pure python. In addition, computations in NumPy are significantly faster than those in pure Python eg:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Comparing speed with pure Python</span></span>
-<span id="cb4-2"></span>
-<span id="cb4-3">my_arr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.arange(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1_000_000</span>)</span>
-<span id="cb4-4"></span>
-<span id="cb4-5">my_list <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">list</span>(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1_000_000</span>))</span></code></pre></div>
-</div>
-<p>An ndarray and a list of the same size are declared and the below, I time a similar computation on the array and the list.</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span>timeit my_arr2 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> my_arr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span></span>
-<span id="cb5-2"></span>
-<span id="cb5-3"></span>
-<span id="cb5-4"><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span>timeit my_list2 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> my_list]</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>1.08 ms ± 22.4 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
-52.4 ms ± 786 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)</code></pre>
-</div>
-</div>
-<p>The result above shows that the computation on the array is many times faster than same on the list and this is due to the power of NumPy.</p>
-<p>Continuing the discussion on the ndarray, it contains elements of the same data type. In addition, every array has a shape which is a tuple that gives the dimensions of the array (ie size of each dimension) , and also a dtype (data type, since the array has the same data type).</p>
-<section id="creating-ndarrays" class="level3">
-<h3 class="anchored" data-anchor-id="creating-ndarrays">Creating ndarrays</h3>
-<p>ndarrays can be created by using the array function and they can be initiated from lists or other data structures as shown below</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># from lists</span></span>
-<span id="cb7-2">data <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">6</span>]</span>
-<span id="cb7-3">arr1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array(data)</span>
-<span id="cb7-4">arr1</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>array([1, 2, 3, 4, 5, 6])</code></pre>
-</div>
-</div>
-<p>This creates an array object that contains the elements in the data list.</p>
-<p>We can also input the elements directly as a list as follows:</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1">arr2 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">6</span>])</span>
-<span id="cb9-2">arr2</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>array([1, 2, 3, 4, 5, 6])</code></pre>
-</div>
-</div>
-<p>Same array object will be created as arr1 above.</p>
-<p>The functions and methods available in NumPy can be accessed by the following code:</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">dir</span>(np)  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># assuming numpy is imported as np</span></span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>['ALLOW_THREADS',
- 'AxisError',
- 'BUFSIZE',
- 'CLIP',
- 'ComplexWarning',
- 'DataSource',
- 'ERR_CALL',
- 'ERR_DEFAULT',
- 'ERR_IGNORE',
- 'ERR_LOG',
- 'ERR_PRINT',
- 'ERR_RAISE',
- 'ERR_WARN',
- 'FLOATING_POINT_SUPPORT',
- 'FPE_DIVIDEBYZERO',
- 'FPE_INVALID',
- 'FPE_OVERFLOW',
- 'FPE_UNDERFLOW',
- 'False_',
- 'Inf',
- 'Infinity',
- 'MAXDIMS',
- 'MAY_SHARE_BOUNDS',
- 'MAY_SHARE_EXACT',
- 'ModuleDeprecationWarning',
- 'NAN',
- 'NINF',
- 'NZERO',
- 'NaN',
- 'PINF',
- 'PZERO',
- 'RAISE',
- 'RankWarning',
- 'SHIFT_DIVIDEBYZERO',
- 'SHIFT_INVALID',
- 'SHIFT_OVERFLOW',
- 'SHIFT_UNDERFLOW',
- 'ScalarType',
- 'Tester',
- 'TooHardError',
- 'True_',
- 'UFUNC_BUFSIZE_DEFAULT',
- 'UFUNC_PYVALS_NAME',
- 'VisibleDeprecationWarning',
- 'WRAP',
- '_CopyMode',
- '_NoValue',
- '_UFUNC_API',
- '__NUMPY_SETUP__',
- '__all__',
- '__builtins__',
- '__cached__',
- '__config__',
- '__deprecated_attrs__',
- '__dir__',
- '__doc__',
- '__expired_functions__',
- '__file__',
- '__getattr__',
- '__git_version__',
- '__loader__',
- '__name__',
- '__package__',
- '__path__',
- '__spec__',
- '__version__',
- '_add_newdoc_ufunc',
- '_distributor_init',
- '_financial_names',
- '_from_dlpack',
- '_globals',
- '_mat',
- '_pytesttester',
- '_version',
- 'abs',
- 'absolute',
- 'add',
- 'add_docstring',
- 'add_newdoc',
- 'add_newdoc_ufunc',
- 'alen',
- 'all',
- 'allclose',
- 'alltrue',
- 'amax',
- 'amin',
- 'angle',
- 'any',
- 'append',
- 'apply_along_axis',
- 'apply_over_axes',
- 'arange',
- 'arccos',
- 'arccosh',
- 'arcsin',
- 'arcsinh',
- 'arctan',
- 'arctan2',
- 'arctanh',
- 'argmax',
- 'argmin',
- 'argpartition',
- 'argsort',
- 'argwhere',
- 'around',
- 'array',
- 'array2string',
- 'array_equal',
- 'array_equiv',
- 'array_repr',
- 'array_split',
- 'array_str',
- 'asanyarray',
- 'asarray',
- 'asarray_chkfinite',
- 'ascontiguousarray',
- 'asfarray',
- 'asfortranarray',
- 'asmatrix',
- 'asscalar',
- 'atleast_1d',
- 'atleast_2d',
- 'atleast_3d',
- 'average',
- 'bartlett',
- 'base_repr',
- 'binary_repr',
- 'bincount',
- 'bitwise_and',
- 'bitwise_not',
- 'bitwise_or',
- 'bitwise_xor',
- 'blackman',
- 'block',
- 'bmat',
- 'bool8',
- 'bool_',
- 'broadcast',
- 'broadcast_arrays',
- 'broadcast_shapes',
- 'broadcast_to',
- 'busday_count',
- 'busday_offset',
- 'busdaycalendar',
- 'byte',
- 'byte_bounds',
- 'bytes0',
- 'bytes_',
- 'c_',
- 'can_cast',
- 'cast',
- 'cbrt',
- 'cdouble',
- 'ceil',
- 'cfloat',
- 'char',
- 'character',
- 'chararray',
- 'choose',
- 'clip',
- 'clongdouble',
- 'clongfloat',
- 'column_stack',
- 'common_type',
- 'compare_chararrays',
- 'compat',
- 'complex128',
- 'complex256',
- 'complex64',
- 'complex_',
- 'complexfloating',
- 'compress',
- 'concatenate',
- 'conj',
- 'conjugate',
- 'convolve',
- 'copy',
- 'copysign',
- 'copyto',
- 'core',
- 'corrcoef',
- 'correlate',
- 'cos',
- 'cosh',
- 'count_nonzero',
- 'cov',
- 'cross',
- 'csingle',
- 'ctypeslib',
- 'cumprod',
- 'cumproduct',
- 'cumsum',
- 'datetime64',
- 'datetime_as_string',
- 'datetime_data',
- 'deg2rad',
- 'degrees',
- 'delete',
- 'deprecate',
- 'deprecate_with_doc',
- 'diag',
- 'diag_indices',
- 'diag_indices_from',
- 'diagflat',
- 'diagonal',
- 'diff',
- 'digitize',
- 'disp',
- 'divide',
- 'divmod',
- 'dot',
- 'double',
- 'dsplit',
- 'dstack',
- 'dtype',
- 'e',
- 'ediff1d',
- 'einsum',
- 'einsum_path',
- 'emath',
- 'empty',
- 'empty_like',
- 'equal',
- 'errstate',
- 'euler_gamma',
- 'exp',
- 'exp2',
- 'expand_dims',
- 'expm1',
- 'expm1x',
- 'extract',
- 'eye',
- 'fabs',
- 'fastCopyAndTranspose',
- 'fft',
- 'fill_diagonal',
- 'find_common_type',
- 'finfo',
- 'fix',
- 'flatiter',
- 'flatnonzero',
- 'flexible',
- 'flip',
- 'fliplr',
- 'flipud',
- 'float128',
- 'float16',
- 'float32',
- 'float64',
- 'float_',
- 'float_power',
- 'floating',
- 'floor',
- 'floor_divide',
- 'fmax',
- 'fmin',
- 'fmod',
- 'format_float_positional',
- 'format_float_scientific',
- 'format_parser',
- 'frexp',
- 'frombuffer',
- 'fromfile',
- 'fromfunction',
- 'fromiter',
- 'frompyfunc',
- 'fromregex',
- 'fromstring',
- 'full',
- 'full_like',
- 'gcd',
- 'generic',
- 'genfromtxt',
- 'geomspace',
- 'get_array_wrap',
- 'get_include',
- 'get_printoptions',
- 'getbufsize',
- 'geterr',
- 'geterrcall',
- 'geterrobj',
- 'gradient',
- 'greater',
- 'greater_equal',
- 'half',
- 'hamming',
- 'hanning',
- 'heaviside',
- 'histogram',
- 'histogram2d',
- 'histogram_bin_edges',
- 'histogramdd',
- 'hsplit',
- 'hstack',
- 'hypot',
- 'i0',
- 'identity',
- 'iinfo',
- 'imag',
- 'in1d',
- 'index_exp',
- 'indices',
- 'inexact',
- 'inf',
- 'info',
- 'infty',
- 'inner',
- 'insert',
- 'int0',
- 'int16',
- 'int32',
- 'int64',
- 'int8',
- 'int_',
- 'intc',
- 'integer',
- 'interp',
- 'intersect1d',
- 'intp',
- 'invert',
- 'is_busday',
- 'isclose',
- 'iscomplex',
- 'iscomplexobj',
- 'isfinite',
- 'isfortran',
- 'isin',
- 'isinf',
- 'isnan',
- 'isnat',
- 'isneginf',
- 'isposinf',
- 'isreal',
- 'isrealobj',
- 'isscalar',
- 'issctype',
- 'issubclass_',
- 'issubdtype',
- 'issubsctype',
- 'iterable',
- 'ix_',
- 'kaiser',
- 'kernel_version',
- 'kron',
- 'lcm',
- 'ldexp',
- 'left_shift',
- 'less',
- 'less_equal',
- 'lexsort',
- 'lib',
- 'linalg',
- 'linspace',
- 'little_endian',
- 'load',
- 'loadtxt',
- 'log',
- 'log10',
- 'log1p',
- 'log2',
- 'logaddexp',
- 'logaddexp2',
- 'logical_and',
- 'logical_not',
- 'logical_or',
- 'logical_xor',
- 'logspace',
- 'longcomplex',
- 'longdouble',
- 'longfloat',
- 'longlong',
- 'lookfor',
- 'ma',
- 'mask_indices',
- 'mat',
- 'math',
- 'matmul',
- 'matrix',
- 'matrixlib',
- 'max',
- 'maximum',
- 'maximum_sctype',
- 'may_share_memory',
- 'mean',
- 'median',
- 'memmap',
- 'meshgrid',
- 'mgrid',
- 'min',
- 'min_scalar_type',
- 'minimum',
- 'mintypecode',
- 'mod',
- 'modf',
- 'moveaxis',
- 'msort',
- 'multiply',
- 'nan',
- 'nan_to_num',
- 'nanargmax',
- 'nanargmin',
- 'nancumprod',
- 'nancumsum',
- 'nanmax',
- 'nanmean',
- 'nanmedian',
- 'nanmin',
- 'nanpercentile',
- 'nanprod',
- 'nanquantile',
- 'nanstd',
- 'nansum',
- 'nanvar',
- 'nbytes',
- 'ndarray',
- 'ndenumerate',
- 'ndim',
- 'ndindex',
- 'nditer',
- 'negative',
- 'nested_iters',
- 'newaxis',
- 'nextafter',
- 'nonzero',
- 'not_equal',
- 'numarray',
- 'number',
- 'obj2sctype',
- 'object0',
- 'object_',
- 'ogrid',
- 'oldnumeric',
- 'ones',
- 'ones_like',
- 'os',
- 'outer',
- 'packbits',
- 'pad',
- 'partition',
- 'percentile',
- 'pi',
- 'piecewise',
- 'place',
- 'poly',
- 'poly1d',
- 'polyadd',
- 'polyder',
- 'polydiv',
- 'polyfit',
- 'polyint',
- 'polymul',
- 'polynomial',
- 'polysub',
- 'polyval',
- 'positive',
- 'power',
- 'printoptions',
- 'prod',
- 'product',
- 'promote_types',
- 'ptp',
- 'put',
- 'put_along_axis',
- 'putmask',
- 'quantile',
- 'r_',
- 'rad2deg',
- 'radians',
- 'random',
- 'ravel',
- 'ravel_multi_index',
- 'real',
- 'real_if_close',
- 'rec',
- 'recarray',
- 'recfromcsv',
- 'recfromtxt',
- 'reciprocal',
- 'record',
- 'remainder',
- 'repeat',
- 'require',
- 'reshape',
- 'resize',
- 'result_type',
- 'right_shift',
- 'rint',
- 'roll',
- 'rollaxis',
- 'roots',
- 'rot90',
- 'round',
- 'round_',
- 'row_stack',
- 's_',
- 'safe_eval',
- 'save',
- 'savetxt',
- 'savez',
- 'savez_compressed',
- 'sctype2char',
- 'sctypeDict',
- 'sctypes',
- 'searchsorted',
- 'select',
- 'set_numeric_ops',
- 'set_printoptions',
- 'set_string_function',
- 'setbufsize',
- 'setdiff1d',
- 'seterr',
- 'seterrcall',
- 'seterrobj',
- 'setxor1d',
- 'shape',
- 'shares_memory',
- 'short',
- 'show_config',
- 'sign',
- 'signbit',
- 'signedinteger',
- 'sin',
- 'sinc',
- 'single',
- 'singlecomplex',
- 'sinh',
- 'size',
- 'sometrue',
- 'sort',
- 'sort_complex',
- 'source',
- 'spacing',
- 'split',
- 'sqrt',
- 'square',
- 'squeeze',
- 'stack',
- 'std',
- 'str0',
- 'str_',
- 'string_',
- 'subtract',
- 'sum',
- 'swapaxes',
- 'sys',
- 'take',
- 'take_along_axis',
- 'tan',
- 'tanh',
- 'tensordot',
- 'test',
- 'testing',
- 'tile',
- 'timedelta64',
- 'trace',
- 'tracemalloc_domain',
- 'transpose',
- 'trapz',
- 'tri',
- 'tril',
- 'tril_indices',
- 'tril_indices_from',
- 'trim_zeros',
- 'triu',
- 'triu_indices',
- 'triu_indices_from',
- 'true_divide',
- 'trunc',
- 'typecodes',
- 'typename',
- 'ubyte',
- 'ufunc',
- 'uint',
- 'uint0',
- 'uint16',
- 'uint32',
- 'uint64',
- 'uint8',
- 'uintc',
- 'uintp',
- 'ulonglong',
- 'unicode_',
- 'union1d',
- 'unique',
- 'unpackbits',
- 'unravel_index',
- 'unsignedinteger',
- 'unwrap',
- 'use_hugepage',
- 'ushort',
- 'vander',
- 'var',
- 'vdot',
- 'vectorize',
- 'version',
- 'void',
- 'void0',
- 'vsplit',
- 'vstack',
- 'warnings',
- 'where',
- 'who',
- 'zeros',
- 'zeros_like']</code></pre>
-</div>
-</div>
-<p>Using the dir function is a handy way of finding the methods and functions associated with a package or even an object.</p>
-</section>
-<section id="data-types-for-ndarrays" class="level3">
-<h3 class="anchored" data-anchor-id="data-types-for-ndarrays">Data types for ndarrays</h3>
-<p>It has been established that elements in an ndarray are usually of the same data type. As such, the data type of an array can be declared while creating the array as follows:</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1">arr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">6</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">7</span>], dtype <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.float64)</span>
-<span id="cb13-2">arr</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>array([4., 3., 5., 6., 7.])</code></pre>
-</div>
-</div>
-<p>Also, conversion of data types can also be done:</p>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1">int_arr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> arr.astype(np.int64)</span>
-<span id="cb15-2">int_arr</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>array([4, 3, 5, 6, 7])</code></pre>
-</div>
-</div>
-<p>The following is a list of NumPy data types: 1. int 2. float 3. bool 4. complex 5. object 6. string 7. unicode We can also specify the number of bits for some of them e.g.&nbsp;int8, int32, float64, complex64 etc.</p>
-</section>
-<section id="mathematical-calculations-in-numpy" class="level3">
-<h3 class="anchored" data-anchor-id="mathematical-calculations-in-numpy">Mathematical Calculations in NumPy</h3>
-<p>NumPy has two features on ndarrays that reflect the powerful nature of the library, vectorization and broadcasting. These are not available on traditional data structures like Python lists. Vectorization to refers to element-wise calculations done on entire arrays by using simple syntax same as will be used for scalar calculations:</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1">arr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([[<span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1.</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2.</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3.</span>], [<span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4.</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5.</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">6.</span>]])</span>
-<span id="cb17-2">arr</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>array([[1., 2., 3.],
-       [4., 5., 6.]])</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1">arr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> arr </span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
-<pre><code>array([[ 1.,  4.,  9.],
-       [16., 25., 36.]])</code></pre>
-</div>
-</div>
-<p>Arithmetic with scalars propagates the scalar to each element in the array:</p>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> arr</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>array([[1.        , 0.5       , 0.33333333],
-       [0.25      , 0.2       , 0.16666667]])</code></pre>
-</div>
-</div>
-<p>In the above, 1 is divided by each of the elements in arr to return a new array of the same size as arr. This is the beauty of NumPy.</p>
-<p>Apart from regular calculations, NumPy also supports ufuncs (universal functions) that allow element-wise computations on ndarrays. Examples include numpy.sqrt and numpy.exp. Ufuncs can be unary (acts on elements of a single array) eg numpy.sqrt or binary (takes two arrays as arguments) eg numpy.multiply, numpy.mod etc. Ufuncs are powerful and I have seen them used in a simple implementation of logistic regression.</p>
-</section>
-<section id="indexing-ndarrays" class="level3">
-<h3 class="anchored" data-anchor-id="indexing-ndarrays">Indexing ndarrays</h3>
-<p>There are a variety of ways to index NumPy arrays but in the basic form, indexing one dimensional arrays is very similar to indexing lists in pure Python. However, since the dimensions of an ndarray can be multidimensional, it becomes more complex with increase in dimension. In addition, numpy allows for boolean indexing (using a conditional) and fancy indexing (using integer arrays). Both are not available in pure Python. An important first distinction from Python’s built-in lists is that array slices are views on the original array. This means that the data is not copied, and any modifications to the view will be reflected in the source array.</p>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In conclusion, NumPy provides powerful tools that can be harnessed for scientific computing and this is an attempt to provide a brief intro. As I begin my data science journey, I try to document my learnings and this is one of such attempts at documentation. This is a very skeletal view of the potential possibilities with NumPy. I have barely begun to scratch the surface. I recommend checking the NumPy documentation and also practicing the concepts as we learn.</p>
-
-
-</section>
-
- ]]></description>
-  <category>python</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/numpy/index.html</guid>
-  <pubDate>Fri, 10 Mar 2023 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/numpy/numpy.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
