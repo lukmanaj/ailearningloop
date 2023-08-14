@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-07-29">
+<meta name="dcterms.date" content="2023-08-14">
 
-<title>ailearningloop - Mastering Vectorized Code: Boosting Efficiency in R</title>
+<title>ailearningloop - Navigating the Mathematical Marvels: Discovering the Power of Mathematics in Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -156,10 +122,10 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Mastering Vectorized Code: Boosting Efficiency in R</h1>
+      <h1 class="title">Navigating the Mathematical Marvels: Discovering the Power of Mathematics in Machine Learning</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">r programming</div>
-                <div class="quarto-category">vectorization</div>
+                <div class="quarto-category">mathematics</div>
+                <div class="quarto-category">machine learning</div>
               </div>
                   </div>
   </div>
@@ -177,7 +143,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 29, 2023</p>
+        <p class="date">August 14, 2023</p>
       </div>
     </div>
     
@@ -1079,65 +1045,16 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 
 
 
-<p>In the world of programming, efficiency is a golden goal. One clever technique to achieve this is using vectorized code. Vectorized code might sound complex, but it’s like a superhero power for your programs. Imagine if you could do tasks on a bunch of numbers all at once, without going through them one by one. That’s the magic of vectorized code! In this article, we’ll explore what vectorized code is, why it’s awesome, and how it makes your R programming faster and smoother.</p>
-<p>So, what’s the secret sauce of vectorized code? It’s like having a bunch of superpowers rolled into one. Vectorized code is all about doing things at once – it’s like multitasking for your computer. Instead of looping over each number separately, you perform operations on whole groups of numbers in one go. This can make your R code run way faster and feel snappier.</p>
-<p>Let’s imagine we’re dealing with a bunch of numbers and we want to transform them. We’ll use two functions to do this, each with its own style. One function will be the superhero – it’ll use vectorized code. The other function will be the regular person – it won’t use vectorized code, and it’ll take longer to do the same job.</p>
-<section id="the-regular-approach-no-superpowers" class="level3">
-<h3 class="anchored" data-anchor-id="the-regular-approach-no-superpowers">The Regular Approach: No Superpowers</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>abs_loop <span class="ot">&lt;-</span> <span class="cf">function</span>(vec){</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(vec)) {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (vec[i] <span class="sc">&lt;</span> <span class="dv">0</span>) {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      vec[i] <span class="ot">&lt;-</span> <span class="sc">-</span>vec[i]</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  vec</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="embracing-vectorization-the-superhero" class="level3">
-<h3 class="anchored" data-anchor-id="embracing-vectorization-the-superhero">Embracing Vectorization: The Superhero</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>abs_sets <span class="ot">&lt;-</span> <span class="cf">function</span>(vec){</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  negs <span class="ot">&lt;-</span> vec <span class="sc">&lt;</span> <span class="dv">0</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  vec[negs] <span class="ot">&lt;-</span> vec[negs] <span class="sc">*</span> <span class="sc">-</span><span class="dv">1</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  vec</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Now, let’s put these functions to the test. We’ve got a bunch of numbers in a variable called long.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>), <span class="dv">5000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>It’s time for the showdown! We’ll measure how fast each function works.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Non vectorized</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Nonvectorized"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Nonvectorized"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>(<span class="fu">abs_loop</span>(long))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   user  system elapsed 
-  0.744   0.059   0.803 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vectorized</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Vectorized"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Vectorized"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.time</span>(<span class="fu">abs_sets</span>(long))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   user  system elapsed 
-  0.198   0.091   0.289 </code></pre>
-</div>
-</div>
-<p>The result is in – the vectorized abs_sets() function wins the race by being around three times faster! This difference gets even bigger as we deal with larger batches of numbers. Think about the time you can save when working with big sets of data. Your code becomes a speedster, and your computer can focus on more exciting things.</p>
-<p>In the world of R programming, vectorization is like a secret ingredient that gives you superpowers. Since R loves working with vectors, most R functions are already set up for vectorized operations. This means using vectorization can level up your programming skills and save you time and effort.</p>
-<p>To wrap it up, diving into vectorized code is like discovering a hidden treasure. Its power to tackle tasks in one swift move, without tediously looping through each item, is a game-changer. As R programming evolves, vectorization remains a steadfast companion – a guiding star in the quest for efficient and elegant coding. So, why wait? Unleash the power of vectorized code and watch your R programming prowess soar!</p>
+<p>Have you ever faced the intricate challenge of transforming TensorFlow code into PyTorch, wrestling with tensor dimensions, and untangling transpose matrices in the captivating realm of machine learning? If these challenges resonate with you, my journey is bound to strike a chord, for I’ve recently embarked on an illuminating odyssey that reshaped my perception of mathematics within the context of machine learning.</p>
+<p>My journey commenced with a formidable challenge: taming the convolutional neural network, specifically the U-Net architecture, in PyTorch. The mystifying dichotomy between tensor dimensions – PyTorch’s channels-first approach versus TensorFlow’s channels-last convention – spurred me to decipher the intricacies woven into these frameworks. My mission? To decode the intricate geometries of tensors and, more profoundly, master the mysterious dance of transpose matrices that orchestrates the symphony of machine learning implementations.</p>
+<p>With determination in my heart, I plunged headfirst into the world of mathematics for machine learning, enrolling in not one but two comprehensive specializations on Coursera. My inaugural milestone was completing DeepLearning.ai’s Mathematics for Machine Learning. A transformative experience, this journey shifted my perspective dramatically. Guided by the remarkable teaching style of Luis Serrano, complex concepts were distilled into digestible gems, fostering a profound understanding of linear algebra, calculus, and statistics. Empowered with newfound clarity, I embarked on an expedition into the core of machine learning mathematics, armed with a versatile toolkit to confront challenges head-on.</p>
+<p>But the journey was far from over; the horizon expanded further as I embarked on the Mathematics for Machine Learning specialization presented by Imperial College London. Here, the esteemed trio of Professor David Dye, Samuel J Cooper, and Marc Deisenroth ushered me through the labyrinthine corridors of mathematical intricacies, unveiling the nuances of statistics and probability. While certain segments left me grappling, perseverance emerged as my guiding light. Despite the hurdles, this specialization bolstered my mathematical arsenal, enriching my cognitive toolkit with the might of principal component analysis and the profound significance of mean and variance.</p>
+<p>As I reflect upon these intertwined odysseys, I stand humbled by the transformative prowess of mathematics in the world of machine learning. Armed with two comprehensive specializations, my understanding and intuition have deepened immeasurably. I’ve gained the insight and confidence to navigate the convoluted paths of mathematical frameworks that underpin machine learning algorithms. My horizons have expanded, empowering me to embrace intricate challenges with unwavering fervor and newfound comprehension.</p>
+<p>In retrospect, I find myself wondering why I didn’t embark on this enlightening journey sooner. Having already traversed the realms of Machine Learning and Deep Learning Specializations offered by DeepLearning.ai, my aspirations now gravitate toward the beckoning realms of AI for Medicine and Generative Adversarial Networks. These courses entice me with the promise of exhilarating knowledge quests.</p>
+<p>As I contemplate the path that lies ahead, I’m resolute in translating my newfound mathematical insights into practical prowess. Equipped with Python and R, I am poised to elevate my understanding by applying these concepts across diverse programming languages and frameworks. My journey unfolds as a symphony in its infancy, with each note resonating with the thrill of discovery and the pledge of growth.</p>
+<p>In conclusion, this expedition into the realm of mathematical marvels within machine learning has been an exhilarating escapade. It has unveiled the elegance and complexity underpinning the algorithms shaping our digital landscape. With determination propelling my sails, I eagerly anticipate the forthcoming chapter of my journey – one brimming with unparalleled growth, fresh challenges, and an enduring passion for continuous learning.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

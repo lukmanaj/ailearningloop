@@ -82,5 +82,8 @@
   },
   "posts/pytorch-regression/index.qmd": {
     "index.html": "d99fd19e"
+  },
+  "posts/math-for-ml/index.qmd": {
+    "index.html": "c34b83fc"
   }
 }

@@ -1,22 +1,17 @@
 ---
-title: "The Case for Writing Vectorised Code in R"
+title: "Mastering Vectorized Code: Boosting Efficiency in R"
 author: "Lukman Aliyu Jibril"
 date: "2023-07-29"
 categories: [r programming, vectorization]
 ---
 
-## Writing Vectorized Code
-The first thing is to define vectorized code. According to Garrett Grolemund in his book "Hands-On Programming with R", vectorised code has the following qualities:
+In the world of programming, efficiency is a golden goal. One clever technique to achieve this is using vectorized code. Vectorized code might sound complex, but it's like a superhero power for your programs. Imagine if you could do tasks on a bunch of numbers all at once, without going through them one by one. That's the magic of vectorized code! In this article, we'll explore what vectorized code is, why it's awesome, and how it makes your R programming faster and smoother.
 
-- Logical tests
-- Subsetting
-- Element-wise execution
+So, what's the secret sauce of vectorized code? It's like having a bunch of superpowers rolled into one. Vectorized code is all about doing things at once – it's like multitasking for your computer. Instead of looping over each number separately, you perform operations on whole groups of numbers in one go. This can make your R code run way faster and feel snappier.
 
-The key thing about vectorization is that operations are performed on all elements of a vector simultaneously without the need of explicitly looping over the elements of the vector. This can make R code significantly faster. 
+Let's imagine we're dealing with a bunch of numbers and we want to transform them. We'll use two functions to do this, each with its own style. One function will be the superhero – it'll use vectorized code. The other function will be the regular person – it won't use vectorized code, and it'll take longer to do the same job.
 
-As an illustration, let's look at two functions that do the same thing. One is vectorized and other is not. We will then compare the time it takes for both functions to be executed to determine which technique is more efficient. 
-
-###  Regular Implementation Using a For Loop (not vectorized)
+### The Regular Approach: No Superpowers
 
 ```{r}
 abs_loop <- function(vec){
@@ -30,7 +25,7 @@ abs_loop <- function(vec){
 ```
 
 
-###  Vectorized Implementation
+### Embracing Vectorization: The Superhero
 
 ```{r}
 abs_sets <- function(vec){
@@ -40,31 +35,33 @@ abs_sets <- function(vec){
 }
 ```
 
-Having defined the two functions, the next thing is to define the variable that will be passed to the both functions, as shown below:
+Now, let's put these functions to the test. We've got a bunch of numbers in a variable called long.
 
 ```{r}
 long <- rep(c(-1, 1), 5000000)
 
 ```
 
+It's time for the showdown! We'll measure how fast each function works.
 
-Finally, the time it takes for each function to run is calculated and compared: 
 
-
-# Unvectorized 
 ```{r}
+# Non vectorized
+print("Nonvectorized")
 system.time(abs_loop(long))
-
-```
-
-
 # Vectorized
-```{r}
+
+print("Vectorized")
 system.time(abs_sets(long))
 
 ```
 
-It can be seen that the vectorized function (ab_sets()) is about three times faster. The speed advantage increases as the size of the variable (long) increases. 
-Imagine working on large vectors and the time that will be saved by vectorizing all our computations. Even the computational costs will be significantly reduced. 
+The result is in – the vectorized abs_sets() function wins the race by being around three times faster! This difference gets even bigger as we deal with larger batches of numbers. Think about the time you can save when working with big sets of data. Your code becomes a speedster, and your computer can focus on more exciting things.
 
-In conclusion, since R is built around vectors and most R functions are vectorized, using vectorization will be a significant addition to the toolkit of every R user and this can significantly improve productivity. 
+In the world of R programming, vectorization is like a secret ingredient that gives you superpowers. Since R loves working with vectors, most R functions are already set up for vectorized operations. This means using vectorization can level up your programming skills and save you time and effort.
+
+To wrap it up, diving into vectorized code is like discovering a hidden treasure. Its power to tackle tasks in one swift move, without tediously looping through each item, is a game-changer. As R programming evolves, vectorization remains a steadfast companion – a guiding star in the quest for efficient and elegant coding. So, why wait? Unleash the power of vectorized code and watch your R programming prowess soar!
+
+
+
+
