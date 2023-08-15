@@ -1,0 +1,83 @@
+---
+title: "Matrix Multiplication in Python and R"
+author: "Lukman Aliyu Jibril"
+date: "2023-08-15"
+categories: [python,r,matrices,mathematics]
+draft: True
+---
+
+
+```{r}
+rmatmul <- function(a,b){
+    rows_mat1 <- nrow(a)
+    cols_mat1 <- ncol(a)
+    cols_mat2 <- ncol(b)
+    # initialize result matrix
+    c <- matrix(0,nrow=rows_mat1,ncol = cols_mat2)
+    # perform the matrix multiplication using nested loops
+    for (i in 1:rows_mat1){
+        for (j in 1:cols_mat2){
+            for (k in 1:cols_mat1){
+                c[i,j] <- c[i,j] + a[i,k] * b[k,j]
+            }
+        }
+    }
+ c
+}
+```
+
+We can now test out our new matmul function by multiplying a simple matrix with itself.
+
+```{r}
+a <- matrix(seq(1:4),nrow=2)
+b <- rmatmul(a,a)
+b
+```
+
+Now we perform R regular matrix multiplication to test out the function
+
+```{r}
+a %*% a
+```
+
+And the results are the same
+
+
+Now we move to Python
+
+```{python}
+import numpy as np
+def npmatmul(a,b):
+    # Get the dimensions of the matrices
+    rows1, cols1 = a.shape
+    rows2,cols2 = b.shape
+    # Check if matrix multiplication is possible
+    if cols1 != rows2:
+        print("Matrix multiplication is not possible")
+    else: 
+
+    # define a matrix for the multiplication product
+        c = np.zeros((rows1,cols2))
+
+        for i in range(rows1):
+            for j in range(cols2):
+                for k in range(cols1):
+                    c[i,j] += a[i,k] * b[k,j]
+        
+    
+    return c
+
+```
+
+Now it's time to test out the numpy matmul function alongside the regular numpy matrix multiplication function, `np.matmul()`:
+```{python}
+#  New matrix
+a = np.array([[1,2],[3,4]])
+c = npmatmul(a,a)
+print("\n", c)
+np.matmul(a,a)
+
+```
+            
+
+Work in progress. 

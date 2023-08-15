@@ -88,5 +88,8 @@
   },
   "posts/sympy/index.qmd": {
     "index.html": "a1286ad8"
+  },
+  "posts/matrix/index.qmd": {
+    "index.html": "7a57d0b8"
   }
 }
