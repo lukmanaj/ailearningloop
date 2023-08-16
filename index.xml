@@ -10,7 +10,414 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Tue, 15 Aug 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 16 Aug 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Matrix Multiplication: Deep Learning Insights, Implementation, and Performance in Python and R</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/matrix/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
+<p>Matrix multiplication is a fundamental mathematical operation with wide-ranging applications in various fields, including linear algebra, computer graphics, and machine learning. In the realm of deep learning, matrix multiplication takes on a central role, serving as the backbone for critical computations within neural networks. This article explores the significance of matrix multiplication in deep learning, its intrinsic connection to neural networks, and provides comprehensive implementations using both the R and Python programming languages.</p>
+</section>
+<section id="matrix-multiplication-and-its-deep-learning-role" class="level2">
+<h2 class="anchored" data-anchor-id="matrix-multiplication-and-its-deep-learning-role">Matrix Multiplication and Its Deep Learning Role:</h2>
+<p>Matrix multiplication forms the core of many deep learning operations by efficiently transforming data. In neural networks, each layer involves a matrix of weights that is multiplied with input data, followed by activation functions. The resulting weight updates facilitate the network’s ability to discern patterns and features, underscoring the essential role of matrix multiplication in the efficiency and effectiveness of deep learning algorithms.</p>
+</section>
+<section id="r-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="r-implementation">R Implementation:</h2>
+<p>The presented R implementation of matrix multiplication offers an intuitive insight into the concept. However, its nested loop structure can be computationally inefficient for larger matrices. This implementation serves as an educational example illustrating the mechanics of matrix multiplication:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">rmatmul <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(a,b){</span>
+<span id="cb1-2">    rows_mat1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nrow</span>(a)</span>
+<span id="cb1-3">    cols_mat1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ncol</span>(a)</span>
+<span id="cb1-4">    cols_mat2 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ncol</span>(b)</span>
+<span id="cb1-5">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># initialize result matrix</span></span>
+<span id="cb1-6">    c <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">matrix</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nrow=</span>rows_mat1,<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ncol =</span> cols_mat2)</span>
+<span id="cb1-7">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># perform the matrix multiplication using nested loops</span></span>
+<span id="cb1-8">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span>rows_mat1){</span>
+<span id="cb1-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (j <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span>cols_mat2){</span>
+<span id="cb1-10">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> (k <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span>cols_mat1){</span>
+<span id="cb1-11">                c[i,j] <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> c[i,j] <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> a[i,k] <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> b[k,j]</span>
+<span id="cb1-12">            }</span>
+<span id="cb1-13">        }</span>
+<span id="cb1-14">    }</span>
+<span id="cb1-15"> c</span>
+<span id="cb1-16">}</span></code></pre></div>
+</div>
+<p>We can now test out our new matmul function by multiplying a simple matrix with itself.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">a <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">matrix</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seq</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>),<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nrow=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb2-2">b <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rmatmul</span>(a,a)</span>
+<span id="cb2-3">b</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    7   15
+[2,]   10   22</code></pre>
+</div>
+</div>
+<p>Now we perform R regular matrix multiplication to test out the accuracy of the function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%*%</span> a</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    7   15
+[2,]   10   22</code></pre>
+</div>
+</div>
+<p>And the results are the same</p>
+</section>
+<section id="python-implementation-using-numpy" class="level2">
+<h2 class="anchored" data-anchor-id="python-implementation-using-numpy">Python Implementation using NumPy:</h2>
+<p>In the Python ecosystem, the NumPy library provides a powerful toolset for optimized matrix operations. The Python implementation showcases the usage of NumPy for efficient matrix multiplication:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb6-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> npmatmul(a,b):</span>
+<span id="cb6-3">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get the dimensions of the matrices</span></span>
+<span id="cb6-4">    rows1, cols1 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> a.shape</span>
+<span id="cb6-5">    rows2,cols2 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> b.shape</span>
+<span id="cb6-6">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Check if matrix multiplication is possible</span></span>
+<span id="cb6-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> cols1 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> rows2:</span>
+<span id="cb6-8">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Matrix multiplication is not possible"</span>)</span>
+<span id="cb6-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>: </span>
+<span id="cb6-10"></span>
+<span id="cb6-11">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># define a matrix for the multiplication product</span></span>
+<span id="cb6-12">        c <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.zeros((rows1,cols2))</span>
+<span id="cb6-13"></span>
+<span id="cb6-14">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(rows1):</span>
+<span id="cb6-15">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> j <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(cols2):</span>
+<span id="cb6-16">                <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(cols1):</span>
+<span id="cb6-17">                    c[i,j] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> a[i,k] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> b[k,j]</span>
+<span id="cb6-18">        </span>
+<span id="cb6-19">    </span>
+<span id="cb6-20">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> c</span></code></pre></div>
+</div>
+<p>Now it’s time to test out the numpy matmul function alongside the regular numpy matrix multiplication function, <code>np.matmul()</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#  New matrix</span></span>
+<span id="cb7-2">a <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>],[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>]])</span>
+<span id="cb7-3">c <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> npmatmul(a,a)</span>
+<span id="cb7-4"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>, c)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ [[ 7. 10.]
+ [15. 22.]]</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1">np.matmul(a,a)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([[ 7, 10],
+       [15, 22]])</code></pre>
+</div>
+</div>
+</section>
+<section id="comparing-implementations" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-implementations">Comparing Implementations:</h2>
+<section id="ease-of-use" class="level3">
+<h3 class="anchored" data-anchor-id="ease-of-use">Ease of Use:</h3>
+<p>Both R and Python implementations are clear and readable. However, Python’s concise syntax and libraries like NumPy make it more user-friendly.</p>
+</section>
+<section id="optimization-and-performance" class="level3">
+<h3 class="anchored" data-anchor-id="optimization-and-performance">Optimization and Performance:</h3>
+<p>NumPy’s implementation in Python is highly optimized, leveraging efficient low-level operations for faster computation compared to the nested loops in R.</p>
+</section>
+<section id="conciseness" class="level3">
+<h3 class="anchored" data-anchor-id="conciseness">Conciseness:</h3>
+<p>Python’s NumPy implementation is more concise due to its vectorized operations, enabling shorter and more expressive code.</p>
+</section>
+<section id="error-handling" class="level3">
+<h3 class="anchored" data-anchor-id="error-handling">Error Handling:</h3>
+<p>Python’s implementation includes error handling to check if matrix multiplication is feasible, offering better user feedback.</p>
+</section>
+</section>
+<section id="performance-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="performance-comparison">Performance Comparison:</h2>
+<p>For a performance comparison, let’s consider matrix multiplication of larger matrices (e.g., 1000x1000) using both native operations and the respective libraries.</p>
+<section id="r-performance" class="level3">
+<h3 class="anchored" data-anchor-id="r-performance">R Performance:</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Creating large matrices</span></span>
+<span id="cb11-2">large_a <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">matrix</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000000</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nrow =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>)</span>
+<span id="cb11-3">large_b <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">matrix</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000000</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nrow =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>)</span>
+<span id="cb11-4"></span>
+<span id="cb11-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Timing the R native matrix multiplication</span></span>
+<span id="cb11-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">system.time</span>(large_result_r <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> large_a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%*%</span> large_b)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   user  system elapsed 
+  0.766   0.010   0.775 </code></pre>
+</div>
+</div>
+</section>
+<section id="python-performance" class="level3">
+<h3 class="anchored" data-anchor-id="python-performance">Python Performance:</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Creating large matrices</span></span>
+<span id="cb13-2">large_a <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.arange(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000001</span>).reshape(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>)</span>
+<span id="cb13-3">large_b <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.arange(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>).reshape(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>)</span>
+<span id="cb13-4"></span>
+<span id="cb13-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Timing the NumPy matrix multiplication</span></span>
+<span id="cb13-6"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> time</span>
+<span id="cb13-7">start_time <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> time.time()</span>
+<span id="cb13-8">large_result_np <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.matmul(large_a, large_b)</span>
+<span id="cb13-9"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Time taken for NumPy matrix multiplication:"</span>, time.time() <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> start_time)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time taken for NumPy matrix multiplication: 3.2793290615081787</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
+<p>Matrix multiplication is pivotal across diverse fields, with deep learning embracing it as a fundamental building block. While both R and Python offer matrix multiplication implementations, Python’s NumPy library stands out due to its performance optimization and user-friendly interface. The nested loop approach in R is instructive but less efficient for real-world applications. Embracing optimized libraries such as NumPy in Python is crucial for achieving efficient and scalable matrix multiplication, particularly in contexts like deep learning. This article underscores the intersection of matrix multiplication, deep learning, and programming, shedding light on their interconnectedness and significance.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>python</category>
+  <category>r</category>
+  <category>matrices</category>
+  <category>mathematics</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/matrix/index.html</guid>
+  <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Introduction to Symbolic Computation with SymPy</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -5009,529 +5416,6 @@ font-style: inherit;">'Probability Density'</span>)</span>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/ml-ai/index.html</guid>
   <pubDate>Wed, 29 Mar 2023 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/ml-ai/mlai.png" medium="image" type="image/png" height="135" width="144"/>
-</item>
-<item>
-  <title>Exploring Pandas: A Powerful Pythonic Analytic Tool</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/pandas/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Data analysis is a much sought after skill for data science. In my search for efficient tools for analyzing data, after outgrowing spreadsheets, I came across other tools like R’s tidyverse but discovering pandas was a game changer.</p>
-<p>pandas is hardly used alone and mostly use alongside numerical computing tools like NumPy and Scipy and visualization tools like matplotlib or seaborn. pandas is closely associated with NumPy as it adopts certain aspects of NumPy’s array-based computing like array-based functions and vectorization (basically eliminating for loops in Python).</p>
-<p>Comparing NumPy and pandas, I’ll say the biggest difference is that while pandas work with tabular data in rows and columns (which can be heterogeneous), NumPy is most suited for homogeneous numerical array data that is usually typed.</p>
-<p>Pandas is a super popular library for fast and convenient data analysis built on top of the Python programming language, that provides two data structures for data manipulation: 1. Series 2. DataFrames</p>
-<p>A series is a one dimensional array of indexed data that consists of an array of actual data and an associated array of indices or labels.</p>
-<p>A DataFrame on the other hand is a two dimensional data structure. The data is usually tabular and arranged in rows and columns. A DataFrame can be created from lists, dictionaries or lists of dictionaries. It can also be created by loading data from storage like csv files, SQL database, excel files etc.</p>
-<p>The index (of pandas Series or DataFrame) is used to access individual data values. A column of a dataframe can also be accessed as a Series. A pandas series is for all intents and purposes a 1-D dataframe.</p>
-<p>To illustrate some of the concepts already mentioned, it is necessary to import pandas. In this article, it is assumed that the individual already has Python and pandas installed. Importing pandas is usually done usng the syntax below:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> pd</span></code></pre></div>
-<p>Since pandas is hardly used alone, the following is a more realistic import:</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span>
-<span id="cb2-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> pd</span>
-<span id="cb2-3"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> plt</span>
-<span id="cb2-4"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> seaborn <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> sns</span></code></pre></div>
-</div>
-<p>In addition, since the Series and DataFrame functions will most likely be frequently used, they can be imported as below:</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">from</span> pandas <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> Series, DataFrame</span></code></pre></div>
-</div>
-<section id="creating-pandas-series-and-dataframes" class="level3">
-<h3 class="anchored" data-anchor-id="creating-pandas-series-and-dataframes">Creating pandas series and DataFrames</h3>
-<p>Here I will briefly provide the syntax for creating pandas series and DataFrame objects. To create a pandas series object, the following can suffice:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">obj <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> Series([<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">7</span>,<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>])</span>
-<span id="cb4-2">obj</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>0    4
-1    7
-2   -5
-3    3
-dtype: int64</code></pre>
-</div>
-</div>
-<p>To create a DataFrame from a dictionary:</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">#Define the dictionary 'x'</span></span>
-<span id="cb6-2"></span>
-<span id="cb6-3">x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> {<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Name'</span>: [<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Lukman'</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Aminu'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Amina'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Fatima'</span>], <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'ID'</span>: [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>], <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Department'</span>: [<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Architect Group'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Software Group'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Design Team'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Infrastructure'</span>], </span>
-<span id="cb6-4">      <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Salary'</span>:[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100000</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">80000</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">50000</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">60000</span>]}</span>
-<span id="cb6-5"></span>
-<span id="cb6-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">#casting the dictionary to a DataFrame</span></span>
-<span id="cb6-7">df <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pd.DataFrame(x)</span>
-<span id="cb6-8"></span>
-<span id="cb6-9"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">#display the result df</span></span>
-<span id="cb6-10">df</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Name</th>
-<th data-quarto-table-cell-role="th">ID</th>
-<th data-quarto-table-cell-role="th">Department</th>
-<th data-quarto-table-cell-role="th">Salary</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Lukman</td>
-<td>1</td>
-<td>Architect Group</td>
-<td>100000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Aminu</td>
-<td>2</td>
-<td>Software Group</td>
-<td>80000</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Amina</td>
-<td>3</td>
-<td>Design Team</td>
-<td>50000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>Fatima</td>
-<td>4</td>
-<td>Infrastructure</td>
-<td>60000</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>There’s a direct correspondence between the table and the dictionary. The keys correspond to the column labels and the values or lists corresponding to the rows. DataFrames can also be created from lists, lists of lists or loaded from storage:</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb7-1">df <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'example.csv'</span>)</span></code></pre></div>
-<p>The advantage of loading from storage is that there wont be a need to type in the data and it supports working on large datasets.</p>
-<p>I will concentrate more on manipulating DataFrames.</p>
-</section>
-<section id="column-selection-in-pandas-dataframes" class="level3">
-<h3 class="anchored" data-anchor-id="column-selection-in-pandas-dataframes">Column selection in pandas dataframes</h3>
-<p>Columns can be selected using two different notations: 1. df[‘columnname.]: returns a series: or df[[’columnname’]]: returns a DataFrame 2. df.columnname The second notation only works if the columnname is a valid Python variable.</p>
-<p>Multiple columns can be accessed by passing the list of columns as follows:</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">df[[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Name'</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'ID'</span>]]</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Name</th>
-<th data-quarto-table-cell-role="th">ID</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Lukman</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Aminu</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Amina</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>Fatima</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-</section>
-<section id="using-loc-and-iloc-functions-for-selecting-ranges-in-a-dataframe" class="level3">
-<h3 class="anchored" data-anchor-id="using-loc-and-iloc-functions-for-selecting-ranges-in-a-dataframe">Using loc and iloc functions for selecting ranges in a DataFrame</h3>
-<p>loc() is a label-based data selecting method which means that we have to pass the name of the row or column that we want to select. This method includes the last element of the range passed in it.</p>
-<p>The syntax can be simplified below:</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb9-1">loc[row_label, column_label]</span></code></pre></div>
-<p>iloc() is an indexed-based selecting method which means that we have to pass integer index in the method to select a specific row/column. This method does not include the last element of the range passed in it.</p>
-<p>The syntax can be simplified below:</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb10-1">iloc[row_index, column_index]</span></code></pre></div>
-</section>
-<section id="performing-arithmetic-on-pandas-dataframes" class="level3">
-<h3 class="anchored" data-anchor-id="performing-arithmetic-on-pandas-dataframes">Performing arithmetic on pandas DataFrames</h3>
-<p>pandas allows for easy arithmetic on DataFrames with different labels by providing the union of the dataframes. For example:</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1">df1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pd.DataFrame(np.arange(<span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">9.</span>).reshape((<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>)), columns<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"bcd"</span>),</span>
-<span id="cb11-2">                      index<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Kaduna"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Kano"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Katsina"</span>])</span>
-<span id="cb11-3"></span>
-<span id="cb11-4">df2 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pd.DataFrame(np.arange(<span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12.</span>).reshape((<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>)), columns<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"bde"</span>),</span>
-<span id="cb11-5">                      index<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Sokoto"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Kano"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Kaduna"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Kebbi"</span>])</span>
-<span id="cb11-6"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(df1,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'</span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'</span>)</span>
-<span id="cb11-7"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(df2)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>           b    c    d
-Kaduna   0.0  1.0  2.0
-Kano     3.0  4.0  5.0
-Katsina  6.0  7.0  8.0 
-
-          b     d     e
-Sokoto  0.0   1.0   2.0
-Kano    3.0   4.0   5.0
-Kaduna  6.0   7.0   8.0
-Kebbi   9.0  10.0  11.0</code></pre>
-</div>
-</div>
-<p>The beauty of pandas is that it aligns on both the rows and columns and provide the sum for where the rows or columns appear in both DataFrames and returns NA for those that are not in both as shown below:</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1">df1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> df2</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">b</th>
-<th data-quarto-table-cell-role="th">c</th>
-<th data-quarto-table-cell-role="th">d</th>
-<th data-quarto-table-cell-role="th">e</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Kaduna</td>
-<td>6.0</td>
-<td>NaN</td>
-<td>9.0</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">Kano</td>
-<td>6.0</td>
-<td>NaN</td>
-<td>9.0</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Katsina</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">Kebbi</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Sokoto</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>In addition, pandas has some flexible arithmetic methods for calculations in DataFrames and series. These include:</p>
-<ol type="1">
-<li>add, radd</li>
-<li>sub, rsub</li>
-<li>div, rdiv etc</li>
-</ol>
-<p>Operations between DataFrames and series are also supported, just like broadcasting in NumPy.</p>
-</section>
-<section id="computing-descriptive-statistics" class="level3">
-<h3 class="anchored" data-anchor-id="computing-descriptive-statistics">Computing descriptive statistics</h3>
-<p>pandas objects have built-in methods for computing descriptive statistics on DataFrames and series. For instance: - Calling DataFrame’s sum method returns a Series containing column sums, passing axis=“columns” or axis=1 sums across the columns instead:</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1">df[[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Salary'</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"ID"</span>]].<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">sum</span>(axis<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>0    100001
-1     80002
-2     50003
-3     60004
-dtype: int64</code></pre>
-</div>
-</div>
-<ul>
-<li>Same can be done to get the column means or row means (axis = 1):</li>
-</ul>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1">df[[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Salary'</span>,<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"ID"</span>]].mean()</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>Salary    72500.0
-ID            2.5
-dtype: float64</code></pre>
-</div>
-</div>
-<ul>
-<li>Describe method produces multiple summary statistics all at once for all the columns</li>
-</ul>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1">df.describe()</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">ID</th>
-<th data-quarto-table-cell-role="th">Salary</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">count</td>
-<td>4.000000</td>
-<td>4.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">mean</td>
-<td>2.500000</td>
-<td>72500.000000</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">std</td>
-<td>1.290994</td>
-<td>22173.557826</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">min</td>
-<td>1.000000</td>
-<td>50000.000000</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">25%</td>
-<td>1.750000</td>
-<td>57500.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">50%</td>
-<td>2.500000</td>
-<td>70000.000000</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">75%</td>
-<td>3.250000</td>
-<td>85000.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">max</td>
-<td>4.000000</td>
-<td>100000.000000</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>There are various other methods for obtaining specific summary statistics in a DataFrame. The aim here is just to provide a taste of the possibilities, as with my NumPy article.</p>
-<p>In conclusion, pandas is a powerful library with useful tools for data analysis and in this article, I attempted to provide a glimpse of what can be achieved with pandas. The pandas documentation is a useful resource alongside an individual’s inquisitiveness and willingness to explore different datasets using pandas. In addition, I found Python for Data Analysis by Wes McKinney quite useful as it gave an intuition into data analysis with Python.</p>
-
-
-</section>
-
- ]]></description>
-  <category>pandas</category>
-  <category>python</category>
-  <category>data analysis</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/pandas/index.html</guid>
-  <pubDate>Tue, 14 Mar 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/pandas/pandas.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Creating Beautiful Visualizations with Python: A Guide to Pandas Matplotlib and Seaborn</title>
