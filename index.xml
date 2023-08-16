@@ -5418,349 +5418,527 @@ font-style: inherit;">'Probability Density'</span>)</span>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/ml-ai/mlai.png" medium="image" type="image/png" height="135" width="144"/>
 </item>
 <item>
-  <title>Creating Beautiful Visualizations with Python: A Guide to Pandas Matplotlib and Seaborn</title>
+  <title>Exploring Pandas: A Powerful Pythonic Analytic Tool</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/viz/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/pandas/index.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p>Data visualization is a crucial aspect of data analysis as it helps in understanding data better. Python provides several libraries for data visualization, and in this article, we will explore three of the most commonly used libraries for data visualization in Python: pandas, matplotlib, and seaborn.</p>
-<p>Pandas is a powerful library for data manipulation and analysis. It provides data structures for efficiently storing and manipulating large datasets. One of the primary data structures provided by pandas is the DataFrame, which is a two-dimensional table-like structure with labeled axes. The pandas library also provides a number of methods for data manipulation and cleaning, such as data cleaning, data merging, and data transformation.</p>
-<p>Matplotlib is a plotting library for Python that provides a range of 2D plotting capabilities. It provides a high level of customization, making it possible to create complex visualizations with ease. Matplotlib also provides support for a wide range of output formats, including PDF, PNG, and SVG.</p>
-<p>Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for creating attractive and informative statistical graphics. Seaborn makes it easy to create complex visualizations by providing a range of built-in styles and color palettes.</p>
-<p>Let’s start by exploring the pandas library.</p>
-<section id="data-visualization-with-pandas" class="level3">
-<h3 class="anchored" data-anchor-id="data-visualization-with-pandas">Data visualization with pandas</h3>
-<p>Pandas provides a number of methods for data visualization. One of the most commonly used methods is the plot method, which can be used to create a wide range of visualizations, including line plots, scatter plots, bar plots, and histograms.</p>
-<p>To demonstrate the use of pandas for data visualization, let’s start by loading a sample dataset. We will use the famous Iris dataset, which contains information about the lengths and widths of petals and sepals for three different species of Iris flowers. I first came across this dataset when I first started learning R’s tidyverse.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+<p>Data analysis is a much sought after skill for data science. In my search for efficient tools for analyzing data, after outgrowing spreadsheets, I came across other tools like R’s tidyverse but discovering pandas was a game changer.</p>
+<p>pandas is hardly used alone and mostly use alongside numerical computing tools like NumPy and Scipy and visualization tools like matplotlib or seaborn. pandas is closely associated with NumPy as it adopts certain aspects of NumPy’s array-based computing like array-based functions and vectorization (basically eliminating for loops in Python).</p>
+<p>Comparing NumPy and pandas, I’ll say the biggest difference is that while pandas work with tabular data in rows and columns (which can be heterogeneous), NumPy is most suited for homogeneous numerical array data that is usually typed.</p>
+<p>Pandas is a super popular library for fast and convenient data analysis built on top of the Python programming language, that provides two data structures for data manipulation: 1. Series 2. DataFrames</p>
+<p>A series is a one dimensional array of indexed data that consists of an array of actual data and an associated array of indices or labels.</p>
+<p>A DataFrame on the other hand is a two dimensional data structure. The data is usually tabular and arranged in rows and columns. A DataFrame can be created from lists, dictionaries or lists of dictionaries. It can also be created by loading data from storage like csv files, SQL database, excel files etc.</p>
+<p>The index (of pandas Series or DataFrame) is used to access individual data values. A column of a dataframe can also be accessed as a Series. A pandas series is for all intents and purposes a 1-D dataframe.</p>
+<p>To illustrate some of the concepts already mentioned, it is necessary to import pandas. In this article, it is assumed that the individual already has Python and pandas installed. Importing pandas is usually done usng the syntax below:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">as</span> pd</span>
-<span id="cb1-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> plt</span>
-<span id="cb1-3"></span>
-<span id="cb1-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Load the iris dataset</span></span>
-<span id="cb1-5">iris <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv'</span>)</span></code></pre></div>
-</div>
-<p>We can use the plot method to create a scatter plot of the petal length and width for the Iris dataset:</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">iris.plot(kind<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'scatter'</span>, x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>, y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_width'</span>)</span>
-<span id="cb2-2">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-3-output-1.png" width="589" height="429"></p>
-</div>
-</div>
-<p>As can be seen from the above, pandas makes it easy to create a scatter plot with just a single line of code. We can also customize the plot by adding labels and a title:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">iris.plot(kind<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'scatter'</span>, x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>, y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_width'</span>)</span>
-<span id="cb3-2">plt.xlabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Length'</span>)</span>
-<span id="cb3-3">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Width'</span>)</span>
-<span id="cb3-4">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Iris Petal Length vs. Width'</span>)</span>
-<span id="cb3-5">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-4-output-1.png" width="589" height="449"></p>
-</div>
-</div>
-<p>In addition to scatter plots, pandas can also be used to create line plots, bar plots, and histograms. Let’s create a bar plot of the mean petal length for each of the three species of Iris:</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">iris.groupby(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'species'</span>)[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean().plot(kind<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'bar'</span>)</span>
-<span id="cb4-2">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Length'</span>)</span>
-<span id="cb4-3">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Mean Petal Length for Each Species of Iris'</span>)</span>
-<span id="cb4-4">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-5-output-1.png" width="576" height="502"></p>
-</div>
-</div>
-</section>
-<section id="data-visualization-with-matplotlib" class="level3">
-<h3 class="anchored" data-anchor-id="data-visualization-with-matplotlib">Data visualization with matplotlib</h3>
-<p>While pandas provides a number of convenient methods for data visualization, matplotlib provides a more low-level interface for creating visualizations. This makes it possible to create highly customized visualizations, but it requires a bit more effort. Let’s see how we can use matplotlib to create a scatter plot of the petal length and width for the Iris dataset.</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> plt</span>
-<span id="cb5-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Create a scatter plot of petal length vs. petal width</span></span>
-<span id="cb5-3">plt.scatter(iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>], iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_width'</span>])</span>
-<span id="cb5-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Add labels and a title</span></span>
-<span id="cb5-5">plt.xlabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Length'</span>)</span>
-<span id="cb5-6">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Width'</span>)</span>
-<span id="cb5-7">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Iris Petal Length vs. Width'</span>)</span>
-<span id="cb5-8"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Show the plot</span></span>
-<span id="cb5-9">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-6-output-1.png" width="589" height="449"></p>
-</div>
-</div>
-<p>From the above, it can be seen that creating a scatter plot with matplotlib requires a bit more code than with pandas, but it provides a high level of customization. We can also create a line plot of the mean petal length for each of the three species of Iris:</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
+font-style: inherit;">as</span> pd</span></code></pre></div>
+<p>Since pandas is hardly used alone, the following is a more realistic import:</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">as</span> np</span>
-<span id="cb6-2"><span class="co" style="color: #5E5E5E;
+<span id="cb2-2"><span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;"># Get the mean petal length for each species</span></span>
-<span id="cb6-3">setosa_mean <span class="op" style="color: #5E5E5E;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">=</span> iris[iris[<span class="st" style="color: #20794D;
+font-style: inherit;">as</span> pd</span>
+<span id="cb2-3"><span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">'species'</span>] <span class="op" style="color: #5E5E5E;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'setosa'</span>][<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean()</span>
-<span id="cb6-4">versicolor_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> iris[iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'species'</span>] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'versicolor'</span>][<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean()</span>
-<span id="cb6-5">virginica_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> iris[iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'species'</span>] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'virginica'</span>][<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean()</span>
-<span id="cb6-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Create a bar chart of the mean petal length</span></span>
-<span id="cb6-7">plt.bar([<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'setosa'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'versicolor'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'virginica'</span>], [setosa_mean, versicolor_mean, virginica_mean])</span>
-<span id="cb6-8"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Add a horizontal line at the overall mean petal length</span></span>
-<span id="cb6-9">plt.axhline(y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean(), color<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'gray'</span>, linestyle<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'--'</span>)</span>
-<span id="cb6-10"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Add labels and a title</span></span>
-<span id="cb6-11">plt.xlabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Species'</span>)</span>
-<span id="cb6-12">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Mean Petal Length'</span>)</span>
-<span id="cb6-13">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Mean Petal Length for Each Species of Iris'</span>)</span>
-<span id="cb6-14"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Show the plot</span></span>
-<span id="cb6-15"></span>
-<span id="cb6-16">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-7-output-1.png" width="576" height="449"></p>
-</div>
-</div>
-<p>From the above plot, matplotlib provides a lot of flexibility for creating customized visualizations.</p>
-</section>
-<section id="data-visualization-with-seaborn" class="level3">
-<h3 class="anchored" data-anchor-id="data-visualization-with-seaborn">Data visualization with seaborn</h3>
-<p>Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for creating attractive and informative statistical graphics. Seaborn makes it easy to create complex visualizations by providing a range of built-in styles and color palettes.</p>
-<p>To create a scatter plot of the petal length and width for the Iris dataset with seaborn, we can use the scatterplot function:</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
+font-style: inherit;">as</span> plt</span>
+<span id="cb2-4"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> seaborn <span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">as</span> sns</span>
-<span id="cb7-2"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">as</span> sns</span></code></pre></div>
+</div>
+<p>In addition, since the Series and DataFrame functions will most likely be frequently used, they can be imported as below:</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;"># Create a scatter plot of petal length vs. petal width</span></span>
-<span id="cb7-3">sns.scatterplot(data<span class="op" style="color: #5E5E5E;
+font-style: inherit;">from</span> pandas <span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">=</span>iris, x<span class="op" style="color: #5E5E5E;
+font-style: inherit;">import</span> Series, DataFrame</span></code></pre></div>
+</div>
+<section id="creating-pandas-series-and-dataframes" class="level3">
+<h3 class="anchored" data-anchor-id="creating-pandas-series-and-dataframes">Creating pandas series and DataFrames</h3>
+<p>Here I will briefly provide the syntax for creating pandas series and DataFrame objects. To create a pandas series object, the following can suffice:</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">obj <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
+font-style: inherit;">=</span> Series([<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">'petal_length'</span>, y<span class="op" style="color: #5E5E5E;
+font-style: inherit;">4</span>,<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
+font-style: inherit;">7</span>,<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">'petal_width'</span>)</span>
-<span id="cb7-4"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;"># Add labels and a title</span></span>
-<span id="cb7-5">plt.xlabel(<span class="st" style="color: #20794D;
+font-style: inherit;">5</span>,<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">'Petal Length'</span>)</span>
-<span id="cb7-6">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Width'</span>)</span>
-<span id="cb7-7">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Iris Petal Length vs. Width'</span>)</span>
-<span id="cb7-8"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Show the plot</span></span>
-<span id="cb7-9">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-8-output-1.png" width="589" height="449"></p>
+font-style: inherit;">3</span>])</span>
+<span id="cb4-2">obj</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>0    4
+1    7
+2   -5
+3    3
+dtype: int64</code></pre>
 </div>
 </div>
-<p>From the above plot, seaborn provides a clean and attractive visualization with just a single line of code.</p>
-<p>We can also create a line plot of the mean petal length for each of the three species of Iris with the lineplot function:</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+<p>To create a DataFrame from a dictionary:</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Create a line plot of the mean petal length for each species</span></span>
-<span id="cb8-2">sns.lineplot(data<span class="op" style="color: #5E5E5E;
+font-style: inherit;">#Define the dictionary 'x'</span></span>
+<span id="cb6-2"></span>
+<span id="cb6-3">x <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>iris, x<span class="op" style="color: #5E5E5E;
+font-style: inherit;">=</span> {<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
+font-style: inherit;">'Name'</span>: [<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'species'</span>, y<span class="op" style="color: #5E5E5E;
+font-style: inherit;">'Lukman'</span>,<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
+font-style: inherit;">'Aminu'</span>, <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'petal_length'</span>, estimator<span class="op" style="color: #5E5E5E;
+font-style: inherit;">'Amina'</span>, <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">=</span>np.mean)</span>
-<span id="cb8-3"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">'Fatima'</span>], <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;"># Add labels and a title</span></span>
-<span id="cb8-4">plt.xlabel(<span class="st" style="color: #20794D;
+font-style: inherit;">'ID'</span>: [<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">'Species'</span>)</span>
-<span id="cb8-5">plt.ylabel(<span class="st" style="color: #20794D;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">'Mean Petal Length'</span>)</span>
-<span id="cb8-6">plt.title(<span class="st" style="color: #20794D;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">'Mean Petal Length for Each Species of Iris'</span>)</span>
-<span id="cb8-7"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;"># Show the plot</span></span>
-<span id="cb8-8">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-9-output-1.png" width="581" height="449"></p>
-</div>
-</div>
-<p>From the above plot, provides a more polished and informative visualization than matplotlib with very little code.</p>
-<p>Seaborn also provides many other types of visualizations, including heatmaps, histograms, and violin plots, that can be used to explore relationships in your data.</p>
-<section id="conclusion" class="level4">
-<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
-<p>In this article, we have seen how to use Python libraries such as pandas, matplotlib, and seaborn for data visualization. Data visualization is an essential part of the data analysis process because it allows us to explore and understand our data more effectively.</p>
-<p>Pandas provides a convenient interface for creating basic visualizations such as scatter plots and bar charts. Matplotlib provides a high level of customization and control over the appearance of your visualizations, but requires more code to create them. Seaborn provides a high-level interface for creating attractive and informative statistical graphics with minimal code.</p>
-<p>As with any tool, it is important to choose the right visualization library for your specific needs. If you need to create simple visualizations quickly and easily, pandas may be the best choice. If you need a high level of control over the appearance of your visualizations, matplotlib may be the better option. If you want to create complex statistical graphics quickly and easily, seaborn may be the way to go. Seaborn is my current favourite. In any case, with the power of Python and these visualization libraries, you can create informative and attractive visualizations that help you better understand your data.</p>
+font-style: inherit;">4</span>], <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Department'</span>: [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Architect Group'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Software Group'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Design Team'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Infrastructure'</span>], </span>
+<span id="cb6-4">      <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Salary'</span>:[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">80000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">60000</span>]}</span>
+<span id="cb6-5"></span>
+<span id="cb6-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#casting the dictionary to a DataFrame</span></span>
+<span id="cb6-7">df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.DataFrame(x)</span>
+<span id="cb6-8"></span>
+<span id="cb6-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#display the result df</span></span>
+<span id="cb6-10">df</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
 
 
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Name</th>
+<th data-quarto-table-cell-role="th">ID</th>
+<th data-quarto-table-cell-role="th">Department</th>
+<th data-quarto-table-cell-role="th">Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Lukman</td>
+<td>1</td>
+<td>Architect Group</td>
+<td>100000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Aminu</td>
+<td>2</td>
+<td>Software Group</td>
+<td>80000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Amina</td>
+<td>3</td>
+<td>Design Team</td>
+<td>50000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Fatima</td>
+<td>4</td>
+<td>Infrastructure</td>
+<td>60000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>There’s a direct correspondence between the table and the dictionary. The keys correspond to the column labels and the values or lists corresponding to the rows. DataFrames can also be created from lists, lists of lists or loaded from storage:</p>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb7-1">df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'example.csv'</span>)</span></code></pre></div>
+<p>The advantage of loading from storage is that there wont be a need to type in the data and it supports working on large datasets.</p>
+<p>I will concentrate more on manipulating DataFrames.</p>
 </section>
+<section id="column-selection-in-pandas-dataframes" class="level3">
+<h3 class="anchored" data-anchor-id="column-selection-in-pandas-dataframes">Column selection in pandas dataframes</h3>
+<p>Columns can be selected using two different notations: 1. df[‘columnname.]: returns a series: or df[[’columnname’]]: returns a DataFrame 2. df.columnname The second notation only works if the columnname is a valid Python variable.</p>
+<p>Multiple columns can be accessed by passing the list of columns as follows:</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">df[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Name'</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ID'</span>]]</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Name</th>
+<th data-quarto-table-cell-role="th">ID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Lukman</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Aminu</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Amina</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Fatima</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="using-loc-and-iloc-functions-for-selecting-ranges-in-a-dataframe" class="level3">
+<h3 class="anchored" data-anchor-id="using-loc-and-iloc-functions-for-selecting-ranges-in-a-dataframe">Using loc and iloc functions for selecting ranges in a DataFrame</h3>
+<p>loc() is a label-based data selecting method which means that we have to pass the name of the row or column that we want to select. This method includes the last element of the range passed in it.</p>
+<p>The syntax can be simplified below:</p>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb9-1">loc[row_label, column_label]</span></code></pre></div>
+<p>iloc() is an indexed-based selecting method which means that we have to pass integer index in the method to select a specific row/column. This method does not include the last element of the range passed in it.</p>
+<p>The syntax can be simplified below:</p>
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb10-1">iloc[row_index, column_index]</span></code></pre></div>
+</section>
+<section id="performing-arithmetic-on-pandas-dataframes" class="level3">
+<h3 class="anchored" data-anchor-id="performing-arithmetic-on-pandas-dataframes">Performing arithmetic on pandas DataFrames</h3>
+<p>pandas allows for easy arithmetic on DataFrames with different labels by providing the union of the dataframes. For example:</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1">df1 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.DataFrame(np.arange(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9.</span>).reshape((<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)), columns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bcd"</span>),</span>
+<span id="cb11-2">                      index<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Kaduna"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Kano"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Katsina"</span>])</span>
+<span id="cb11-3"></span>
+<span id="cb11-4">df2 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.DataFrame(np.arange(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12.</span>).reshape((<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)), columns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">list</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bde"</span>),</span>
+<span id="cb11-5">                      index<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Sokoto"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Kano"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Kaduna"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Kebbi"</span>])</span>
+<span id="cb11-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(df1,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)</span>
+<span id="cb11-7"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(df2)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           b    c    d
+Kaduna   0.0  1.0  2.0
+Kano     3.0  4.0  5.0
+Katsina  6.0  7.0  8.0 
+
+          b     d     e
+Sokoto  0.0   1.0   2.0
+Kano    3.0   4.0   5.0
+Kaduna  6.0   7.0   8.0
+Kebbi   9.0  10.0  11.0</code></pre>
+</div>
+</div>
+<p>The beauty of pandas is that it aligns on both the rows and columns and provide the sum for where the rows or columns appear in both DataFrames and returns NA for those that are not in both as shown below:</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1">df1 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> df2</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">b</th>
+<th data-quarto-table-cell-role="th">c</th>
+<th data-quarto-table-cell-role="th">d</th>
+<th data-quarto-table-cell-role="th">e</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Kaduna</td>
+<td>6.0</td>
+<td>NaN</td>
+<td>9.0</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Kano</td>
+<td>6.0</td>
+<td>NaN</td>
+<td>9.0</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Katsina</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Kebbi</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Sokoto</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>In addition, pandas has some flexible arithmetic methods for calculations in DataFrames and series. These include:</p>
+<ol type="1">
+<li>add, radd</li>
+<li>sub, rsub</li>
+<li>div, rdiv etc</li>
+</ol>
+<p>Operations between DataFrames and series are also supported, just like broadcasting in NumPy.</p>
+</section>
+<section id="computing-descriptive-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="computing-descriptive-statistics">Computing descriptive statistics</h3>
+<p>pandas objects have built-in methods for computing descriptive statistics on DataFrames and series. For instance: - Calling DataFrame’s sum method returns a Series containing column sums, passing axis=“columns” or axis=1 sums across the columns instead:</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1">df[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Salary'</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ID"</span>]].<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>(axis<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>0    100001
+1     80002
+2     50003
+3     60004
+dtype: int64</code></pre>
+</div>
+</div>
+<ul>
+<li>Same can be done to get the column means or row means (axis = 1):</li>
+</ul>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1">df[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Salary'</span>,<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ID"</span>]].mean()</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>Salary    72500.0
+ID            2.5
+dtype: float64</code></pre>
+</div>
+</div>
+<ul>
+<li>Describe method produces multiple summary statistics all at once for all the columns</li>
+</ul>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1">df.describe()</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">ID</th>
+<th data-quarto-table-cell-role="th">Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>4.000000</td>
+<td>4.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>2.500000</td>
+<td>72500.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>1.290994</td>
+<td>22173.557826</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>1.000000</td>
+<td>50000.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>1.750000</td>
+<td>57500.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>2.500000</td>
+<td>70000.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>3.250000</td>
+<td>85000.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>4.000000</td>
+<td>100000.000000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>There are various other methods for obtaining specific summary statistics in a DataFrame. The aim here is just to provide a taste of the possibilities, as with my NumPy article.</p>
+<p>In conclusion, pandas is a powerful library with useful tools for data analysis and in this article, I attempted to provide a glimpse of what can be achieved with pandas. The pandas documentation is a useful resource alongside an individual’s inquisitiveness and willingness to explore different datasets using pandas. In addition, I found Python for Data Analysis by Wes McKinney quite useful as it gave an intuition into data analysis with Python.</p>
+
+
 </section>
 
  ]]></description>
-  <category>python</category>
   <category>pandas</category>
-  <category>matplotlib</category>
-  <category>seaborn</category>
-  <category>data visualization</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/viz/index.html</guid>
+  <category>python</category>
+  <category>data analysis</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/pandas/index.html</guid>
   <pubDate>Tue, 14 Mar 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/viz/pythondataviz.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/pandas/pandas.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
