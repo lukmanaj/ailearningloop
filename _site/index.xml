@@ -10,7 +10,47 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Tue, 15 Aug 2023 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 18 Aug 2023 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>A Study on the Impact of Data Augmentation for Training Convolutional Neural Networks in the Presence of Noisy Labels - Paper Summary</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="a-study-on-the-impact-of-data-augmentation-for-training-convolutional-neural-networks-in-the-presence-of-noisy-labels---paper-summary" class="level2">
+<h2 class="anchored" data-anchor-id="a-study-on-the-impact-of-data-augmentation-for-training-convolutional-neural-networks-in-the-presence-of-noisy-labels---paper-summary">“A Study on the Impact of Data Augmentation for Training Convolutional Neural Networks in the Presence of Noisy Labels” - Paper Summary</h2>
+<p>Emeson Santana, Gustavo Carneiro, and Filipe R. Cordeiro. A Study on the Impact of Data Augmentation for Training Convolutional Neural Networks in the Presence of Noisy Labels.SIBGRAPI - Conference on Graphics, Patterns and Images (2022)</p>
+<p>The paper can be accessed <a href="https://arxiv.org/pdf/2208.11176">here</a>.</p>
+<p>This paper focuses on the impact of data augmentation on the training of deep convolutional neural networks in the presence of label noise, which is common in real-world datasets. The authors analyze the robustness of different data augmentation methods and evaluate their effectiveness in improving model performance with noisy labels. They conduct experiments on various datasets - MNIST, CIFAR-10, CIFAR-100, and Clothing1M, using both classical and state-of-the-art data augmentation strategies.</p>
+<p>The main contributions and findings of the paper are as follows:</p>
+<ol type="1">
+<li><p>Problem Definition: The paper defines the label noise problem in the context of image classification, where noisy labels are common due to factors like human error or data quality issues. They consider symmetric, asymmetric, and semantic noise scenarios.</p></li>
+<li><p>Data Augmentations: The authors evaluate 13 classical and 6 state-of-the-art data augmentation methods. The basic augmentations include random crop, horizontal flip, rotation, translation, and others, while the SOTA methods include Mixup, CutMix, AutoAug, RandAug, and more.</p></li>
+<li><p>Experimental Results: The experiments show that the appropriate selection of data augmentation significantly improves model robustness to label noise. The combination of classical and SOTA augmentations outperforms individual augmentations. For example, the use of random crop along with certain SOTA methods showed the best results in some scenarios.</p></li>
+<li><p>Dataset Impact: The authors highlight that the choice of data augmentation is dataset-dependent, meaning that the best augmentation strategy may vary depending on the specific dataset.</p></li>
+</ol>
+<section id="observation" class="level3">
+<h3 class="anchored" data-anchor-id="observation">Observation</h3>
+<p>Upon careful reflection upon the content of the paper and its associated implications, one is prompted to engage in contemplation concerning the metric utilized for the quantification of impact. While accuracy remains a commonly adopted metric, its capacity to comprehensively encapsulate the genuine effects, particularly in the presence of extraneous variables, may be somewhat limited. As a suggestive alternative, it is worth considering metrics such as precision and recall, which offer a more encompassing representation. By doing so, one can gain valuable insights into both positive and negative instances, thereby affording a more nuanced and comprehensive assessment of impact.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In conclusion, the paper emphasizes the importance of data augmentation as a design choice for training deep convolutional neural networks with noisy labels. The experiments demonstrate that selecting appropriate data augmentation methods can lead to significant improvements in model performance when dealing with label noise. The authors suggest that further research could explore the benefits of using weak and strong augmentations at different stages of training and investigate new data augmentation strategies.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>cnn</category>
+  <category>research</category>
+  <category>paper summary</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/index.html</guid>
+  <pubDate>Fri, 18 Aug 2023 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Matrix Multiplication: Deep Learning Insights, Implementation, and Performance in Python and R</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -5416,351 +5456,6 @@ font-style: inherit;">'Probability Density'</span>)</span>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/ml-ai/index.html</guid>
   <pubDate>Tue, 28 Mar 2023 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/ml-ai/mlai.png" medium="image" type="image/png" height="135" width="144"/>
-</item>
-<item>
-  <title>Creating Beautiful Visualizations with Python: A Guide to Pandas Matplotlib and Seaborn</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/viz/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Data visualization is a crucial aspect of data analysis as it helps in understanding data better. Python provides several libraries for data visualization, and in this article, we will explore three of the most commonly used libraries for data visualization in Python: pandas, matplotlib, and seaborn.</p>
-<p>Pandas is a powerful library for data manipulation and analysis. It provides data structures for efficiently storing and manipulating large datasets. One of the primary data structures provided by pandas is the DataFrame, which is a two-dimensional table-like structure with labeled axes. The pandas library also provides a number of methods for data manipulation and cleaning, such as data cleaning, data merging, and data transformation.</p>
-<p>Matplotlib is a plotting library for Python that provides a range of 2D plotting capabilities. It provides a high level of customization, making it possible to create complex visualizations with ease. Matplotlib also provides support for a wide range of output formats, including PDF, PNG, and SVG.</p>
-<p>Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for creating attractive and informative statistical graphics. Seaborn makes it easy to create complex visualizations by providing a range of built-in styles and color palettes.</p>
-<p>Let’s start by exploring the pandas library.</p>
-<section id="data-visualization-with-pandas" class="level3">
-<h3 class="anchored" data-anchor-id="data-visualization-with-pandas">Data visualization with pandas</h3>
-<p>Pandas provides a number of methods for data visualization. One of the most commonly used methods is the plot method, which can be used to create a wide range of visualizations, including line plots, scatter plots, bar plots, and histograms.</p>
-<p>To demonstrate the use of pandas for data visualization, let’s start by loading a sample dataset. We will use the famous Iris dataset, which contains information about the lengths and widths of petals and sepals for three different species of Iris flowers. I first came across this dataset when I first started learning R’s tidyverse.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> pd</span>
-<span id="cb1-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> plt</span>
-<span id="cb1-3"></span>
-<span id="cb1-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Load the iris dataset</span></span>
-<span id="cb1-5">iris <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv'</span>)</span></code></pre></div>
-</div>
-<p>We can use the plot method to create a scatter plot of the petal length and width for the Iris dataset:</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">iris.plot(kind<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'scatter'</span>, x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>, y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_width'</span>)</span>
-<span id="cb2-2">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-3-output-1.png" width="589" height="429"></p>
-</div>
-</div>
-<p>As can be seen from the above, pandas makes it easy to create a scatter plot with just a single line of code. We can also customize the plot by adding labels and a title:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">iris.plot(kind<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'scatter'</span>, x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>, y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_width'</span>)</span>
-<span id="cb3-2">plt.xlabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Length'</span>)</span>
-<span id="cb3-3">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Width'</span>)</span>
-<span id="cb3-4">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Iris Petal Length vs. Width'</span>)</span>
-<span id="cb3-5">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-4-output-1.png" width="589" height="449"></p>
-</div>
-</div>
-<p>In addition to scatter plots, pandas can also be used to create line plots, bar plots, and histograms. Let’s create a bar plot of the mean petal length for each of the three species of Iris:</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">iris.groupby(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'species'</span>)[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean().plot(kind<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'bar'</span>)</span>
-<span id="cb4-2">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Length'</span>)</span>
-<span id="cb4-3">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Mean Petal Length for Each Species of Iris'</span>)</span>
-<span id="cb4-4">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-5-output-1.png" width="576" height="502"></p>
-</div>
-</div>
-</section>
-<section id="data-visualization-with-matplotlib" class="level3">
-<h3 class="anchored" data-anchor-id="data-visualization-with-matplotlib">Data visualization with matplotlib</h3>
-<p>While pandas provides a number of convenient methods for data visualization, matplotlib provides a more low-level interface for creating visualizations. This makes it possible to create highly customized visualizations, but it requires a bit more effort. Let’s see how we can use matplotlib to create a scatter plot of the petal length and width for the Iris dataset.</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> plt</span>
-<span id="cb5-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Create a scatter plot of petal length vs. petal width</span></span>
-<span id="cb5-3">plt.scatter(iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>], iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_width'</span>])</span>
-<span id="cb5-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Add labels and a title</span></span>
-<span id="cb5-5">plt.xlabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Length'</span>)</span>
-<span id="cb5-6">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Width'</span>)</span>
-<span id="cb5-7">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Iris Petal Length vs. Width'</span>)</span>
-<span id="cb5-8"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Show the plot</span></span>
-<span id="cb5-9">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-6-output-1.png" width="589" height="449"></p>
-</div>
-</div>
-<p>From the above, it can be seen that creating a scatter plot with matplotlib requires a bit more code than with pandas, but it provides a high level of customization. We can also create a line plot of the mean petal length for each of the three species of Iris:</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span>
-<span id="cb6-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Get the mean petal length for each species</span></span>
-<span id="cb6-3">setosa_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> iris[iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'species'</span>] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'setosa'</span>][<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean()</span>
-<span id="cb6-4">versicolor_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> iris[iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'species'</span>] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'versicolor'</span>][<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean()</span>
-<span id="cb6-5">virginica_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> iris[iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'species'</span>] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'virginica'</span>][<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean()</span>
-<span id="cb6-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Create a bar chart of the mean petal length</span></span>
-<span id="cb6-7">plt.bar([<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'setosa'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'versicolor'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'virginica'</span>], [setosa_mean, versicolor_mean, virginica_mean])</span>
-<span id="cb6-8"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Add a horizontal line at the overall mean petal length</span></span>
-<span id="cb6-9">plt.axhline(y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>iris[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>].mean(), color<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'gray'</span>, linestyle<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'--'</span>)</span>
-<span id="cb6-10"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Add labels and a title</span></span>
-<span id="cb6-11">plt.xlabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Species'</span>)</span>
-<span id="cb6-12">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Mean Petal Length'</span>)</span>
-<span id="cb6-13">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Mean Petal Length for Each Species of Iris'</span>)</span>
-<span id="cb6-14"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Show the plot</span></span>
-<span id="cb6-15"></span>
-<span id="cb6-16">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-7-output-1.png" width="576" height="449"></p>
-</div>
-</div>
-<p>From the above plot, matplotlib provides a lot of flexibility for creating customized visualizations.</p>
-</section>
-<section id="data-visualization-with-seaborn" class="level3">
-<h3 class="anchored" data-anchor-id="data-visualization-with-seaborn">Data visualization with seaborn</h3>
-<p>Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for creating attractive and informative statistical graphics. Seaborn makes it easy to create complex visualizations by providing a range of built-in styles and color palettes.</p>
-<p>To create a scatter plot of the petal length and width for the Iris dataset with seaborn, we can use the scatterplot function:</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> seaborn <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> sns</span>
-<span id="cb7-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Create a scatter plot of petal length vs. petal width</span></span>
-<span id="cb7-3">sns.scatterplot(data<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>iris, x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>, y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_width'</span>)</span>
-<span id="cb7-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Add labels and a title</span></span>
-<span id="cb7-5">plt.xlabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Length'</span>)</span>
-<span id="cb7-6">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Petal Width'</span>)</span>
-<span id="cb7-7">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Iris Petal Length vs. Width'</span>)</span>
-<span id="cb7-8"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Show the plot</span></span>
-<span id="cb7-9">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-8-output-1.png" width="589" height="449"></p>
-</div>
-</div>
-<p>From the above plot, seaborn provides a clean and attractive visualization with just a single line of code.</p>
-<p>We can also create a line plot of the mean petal length for each of the three species of Iris with the lineplot function:</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Create a line plot of the mean petal length for each species</span></span>
-<span id="cb8-2">sns.lineplot(data<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>iris, x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'species'</span>, y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'petal_length'</span>, estimator<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>np.mean)</span>
-<span id="cb8-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Add labels and a title</span></span>
-<span id="cb8-4">plt.xlabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Species'</span>)</span>
-<span id="cb8-5">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Mean Petal Length'</span>)</span>
-<span id="cb8-6">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Mean Petal Length for Each Species of Iris'</span>)</span>
-<span id="cb8-7"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Show the plot</span></span>
-<span id="cb8-8">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/viz/index_files/figure-html/cell-9-output-1.png" width="581" height="449"></p>
-</div>
-</div>
-<p>From the above plot, provides a more polished and informative visualization than matplotlib with very little code.</p>
-<p>Seaborn also provides many other types of visualizations, including heatmaps, histograms, and violin plots, that can be used to explore relationships in your data.</p>
-<section id="conclusion" class="level4">
-<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
-<p>In this article, we have seen how to use Python libraries such as pandas, matplotlib, and seaborn for data visualization. Data visualization is an essential part of the data analysis process because it allows us to explore and understand our data more effectively.</p>
-<p>Pandas provides a convenient interface for creating basic visualizations such as scatter plots and bar charts. Matplotlib provides a high level of customization and control over the appearance of your visualizations, but requires more code to create them. Seaborn provides a high-level interface for creating attractive and informative statistical graphics with minimal code.</p>
-<p>As with any tool, it is important to choose the right visualization library for your specific needs. If you need to create simple visualizations quickly and easily, pandas may be the best choice. If you need a high level of control over the appearance of your visualizations, matplotlib may be the better option. If you want to create complex statistical graphics quickly and easily, seaborn may be the way to go. Seaborn is my current favourite. In any case, with the power of Python and these visualization libraries, you can create informative and attractive visualizations that help you better understand your data.</p>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>python</category>
-  <category>pandas</category>
-  <category>matplotlib</category>
-  <category>seaborn</category>
-  <category>data visualization</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/viz/index.html</guid>
-  <pubDate>Mon, 13 Mar 2023 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/viz/pythondataviz.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
