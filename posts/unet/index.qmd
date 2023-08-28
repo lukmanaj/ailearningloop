@@ -2,7 +2,7 @@
 title: "U-Net Architecture: Revolutionizing Computer Vision Through Innovative Image Segmentation"
 author: "Lukman Aliyu Jibril"
 date: "2023-08-28"
-categories: []
+categories: [cnn,deep learning,computer vision,image segmentation]
 image: "unet.png"
 ---
 
