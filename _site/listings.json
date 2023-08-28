@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/unet/index.html",
       "/posts/paper-summary/index.html",
       "/posts/matrix/index.html",
       "/posts/sympy/index.html",

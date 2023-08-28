@@ -3,7 +3,7 @@ title: "U-Net Architecture: Revolutionizing Computer Vision Through Innovative I
 author: "Lukman Aliyu Jibril"
 date: "2023-08-28"
 categories: [cnn,deep learning,computer vision,image segmentation]
-image: "unet.png"
+image: 'unet.png'
 ---
 
 ## Introduction
@@ -16,7 +16,7 @@ The crux of U-Net's inception lay in biomedical image segmentation. The challeng
 
 ## Architecture Overview
 
-[unet architecture]("unet.png")
+![unet architecture]('./unet.png')
 
 U-Net's architecture resembles the letter "U," a design that would become iconic in the field. It comprises two primary components: the contracting path (left side) and the expansive path (right side).
 
