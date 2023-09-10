@@ -613,7 +613,7 @@
     "href": "posts/medical-eval/index.html#sensitivity-and-specificity",
     "title": "Metrics and Methods of Medical Diagnosis Evaluation",
     "section": "Sensitivity and Specificity",
-    "text": "Sensitivity and Specificity\nSensitivity measures the ability of a diagnostic method or model to correctly identify patients who have the disease, while specificity measures its ability to accurately identify those without the disease. These metrics can also be understood in terms of conditional probabilities, simplifying them to the probability of a positive or negative test result given a patient’s disease status.\n$Sensitivity = $\n\\(Specificity = \\dfrac{\\,number\\,of\\,negative\\,and\\,normal}{\\,number\\,of\\,normal}\\)\nIn terms of conditional probabilities:\n\\(Sensitivity = P(positive|disease)\\) \\(Specificity = P(negative|normal)\\)"
+    "text": "Sensitivity and Specificity\nSensitivity measures the ability of a diagnostic method or model to correctly identify patients who have the disease, while specificity measures its ability to accurately identify those without the disease. These metrics can also be understood in terms of conditional probabilities, simplifying them to the probability of a positive or negative test result given a patient’s disease status.\n\\(Sensitivity = \\dfrac{\\,number\\,of\\,positive\\,and\\,disease}{\\,number\\,of\\,disease}\\)\n\\(Specificity = \\dfrac{\\,number\\,of\\,negative\\,and\\,normal}{\\,number\\,of\\,normal}\\)\nIn terms of conditional probabilities:\n\\(Sensitivity = P(positive|disease)\\) \\(Specificity = P(negative|normal)\\)"
   },
   {
     "objectID": "posts/medical-eval/index.html#positive-predictive-value-and-negative-predictive-value",
