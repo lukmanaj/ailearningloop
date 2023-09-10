@@ -20,7 +20,7 @@ $Accuracy = Sensitivity \times Prevalence + Specificity \times (1 - Prevalence)$
 Sensitivity measures the ability of a diagnostic method or model to correctly identify patients who have the disease, while specificity measures its ability to accurately identify those without the disease. These metrics can also be understood in terms of conditional probabilities, simplifying them to the probability of a positive or negative test result given a patient's disease status.
 
 
-$Sensitivity = \dfrac{\,number\,of\,positive\,and\,disease}{\,number\,of\,disease} $
+$Sensitivity = \dfrac{\,number\,of\,positive\,and\,disease}{\,number\,of\,disease}$
 
 $Specificity = \dfrac{\,number\,of\,negative\,and\,normal}{\,number\,of\,normal}$
 
