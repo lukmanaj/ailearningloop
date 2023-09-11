@@ -1,5 +1,5 @@
 ---
-title: "Metrics and Methods of Medical Diagnosis Evaluation"
+title: "Metrics for Medical Diagnosis Evaluation"
 author: "Lukman Aliyu Jibril"
 date: "2023-09-10"
 categories: [evaluation metrics, medical diagnosis]
