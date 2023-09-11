@@ -34,6 +34,7 @@ $Specificity = P(negative|normal)$
 To assess the likelihood of a patient having or not having the disease based on their test results, we employ positive predictive value (PPV) and negative predictive value (NPV). These metrics provide insight into the probabilities of disease presence or absence given a positive or negative test result, respectively.
 
 $PPV = \dfrac{\,number\,of\,positive\,and\,disease}{\,number\,of\,positive}$
+
 $NPV = \dfrac{\,number\,of\,negative\,and\,normal}{\,number\,of\,negative}$
 
 ### Leveraging Bayes' Rule:
@@ -44,6 +45,7 @@ To calculate PPV and NPV, Bayes' rule, a formula relating conditional probabilit
 Using conditional probabilities, we write:
 
 $PPV = P(disease|positive)$
+
 $NPV = P(normal|negative)$
 
 
@@ -60,8 +62,11 @@ A confusion matrix can be represented as:
 
 where:
 TP = True Positives (number of)
+
 FP = False Positives
+
 FN = False Negatives
+
 TN = True Negatives
 
 ## Precision and Recall 
@@ -69,11 +74,13 @@ TN = True Negatives
 Precision measures the proportion of correctly identified positive test results, while recall assesses the proportion of patients with the disease that are accurately identified. These metrics are also synonymous with positive predictive value (PPV) and sensitivity, respectively.
 
 $Precision = \dfrac{TP}{TP+FP}$
+
 $Recall = \dfrac{TP}{TP+FN}$
 
 Precision and recall are also known as positive predictive value (PPV) and sensitivity, respectively. Therefore, they are equivalent to:
 
 $Precision = PPR$
+
 $Recall = Sensitivity$
 
 ## F1-Score

@@ -12,7 +12,7 @@
 <generator>quarto-1.3.361</generator>
 <lastBuildDate>Sat, 09 Sep 2023 23:00:00 GMT</lastBuildDate>
 <item>
-  <title>Metrics and Methods of Medical Diagnosis Evaluation</title>
+  <title>Metrics for Medical Diagnosis Evaluation</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
   <link>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/index.html</link>
   <description><![CDATA[ 
@@ -32,7 +32,7 @@
 <section id="sensitivity-and-specificity" class="level2">
 <h2 class="anchored" data-anchor-id="sensitivity-and-specificity">Sensitivity and Specificity</h2>
 <p>Sensitivity measures the ability of a diagnostic method or model to correctly identify patients who have the disease, while specificity measures its ability to accurately identify those without the disease. These metrics can also be understood in terms of conditional probabilities, simplifying them to the probability of a positive or negative test result given a patient’s disease status.</p>
-<p>$Sensitivity = $</p>
+<p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,disease%7D"></p>
 <p><img src="https://latex.codecogs.com/png.latex?Specificity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,normal%7D"></p>
 <p>In terms of conditional probabilities:</p>
 <p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20P(positive%7Cdisease)"> <img src="https://latex.codecogs.com/png.latex?Specificity%20=%20P(negative%7Cnormal)"></p>
@@ -40,12 +40,14 @@
 <section id="positive-predictive-value-and-negative-predictive-value" class="level2">
 <h2 class="anchored" data-anchor-id="positive-predictive-value-and-negative-predictive-value">Positive Predictive Value and Negative Predictive Value</h2>
 <p>To assess the likelihood of a patient having or not having the disease based on their test results, we employ positive predictive value (PPV) and negative predictive value (NPV). These metrics provide insight into the probabilities of disease presence or absence given a positive or negative test result, respectively.</p>
-<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,positive%7D"> <img src="https://latex.codecogs.com/png.latex?NPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,negative%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,positive%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,negative%7D"></p>
 <section id="leveraging-bayes-rule" class="level3">
 <h3 class="anchored" data-anchor-id="leveraging-bayes-rule">Leveraging Bayes’ Rule:</h3>
 <p>To calculate PPV and NPV, Bayes’ rule, a formula relating conditional probabilities, is employed. This rule offers a nuanced perspective by taking into account sensitivity, specificity, and prevalence—the proportion of patients with the disease in the population.</p>
 <p>Using conditional probabilities, we write:</p>
-<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20P(disease%7Cpositive)"> <img src="https://latex.codecogs.com/png.latex?NPV%20=%20P(normal%7Cnegative)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20P(disease%7Cpositive)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20P(normal%7Cnegative)"></p>
 </section>
 </section>
 <section id="confusion-matrix" class="level2">
@@ -73,14 +75,19 @@
 </tr>
 </tbody>
 </table>
-<p>where: TP = True Positives (number of) FP = False Positives FN = False Negatives TN = True Negatives</p>
+<p>where: TP = True Positives (number of)</p>
+<p>FP = False Positives</p>
+<p>FN = False Negatives</p>
+<p>TN = True Negatives</p>
 </section>
 <section id="precision-and-recall" class="level2">
 <h2 class="anchored" data-anchor-id="precision-and-recall">Precision and Recall</h2>
 <p>Precision measures the proportion of correctly identified positive test results, while recall assesses the proportion of patients with the disease that are accurately identified. These metrics are also synonymous with positive predictive value (PPV) and sensitivity, respectively.</p>
-<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20%5Cdfrac%7BTP%7D%7BTP+FP%7D"> <img src="https://latex.codecogs.com/png.latex?Recall%20=%20%5Cdfrac%7BTP%7D%7BTP+FN%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20%5Cdfrac%7BTP%7D%7BTP+FP%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20%5Cdfrac%7BTP%7D%7BTP+FN%7D"></p>
 <p>Precision and recall are also known as positive predictive value (PPV) and sensitivity, respectively. Therefore, they are equivalent to:</p>
-<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20PPR"> <img src="https://latex.codecogs.com/png.latex?Recall%20=%20Sensitivity"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20PPR"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20Sensitivity"></p>
 </section>
 <section id="f1-score" class="level2">
 <h2 class="anchored" data-anchor-id="f1-score">F1-Score</h2>
