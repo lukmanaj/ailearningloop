@@ -20,7 +20,7 @@
 
 
 
-<p><code>This article is the final project of the Reproducible Research course on Coursera offered by John Hopkins University. I make an attempt to look at the U.S. National Oceanic and Atmospheric Administration's (NOAA) storm database and make deductions about the impact of these events on health and economy.</code></p>
+<p>This article is the final project of the Reproducible Research course on Coursera offered by John Hopkins University. I make an attempt to look at the U.S. National Oceanic and Atmospheric Administration’s (NOAA) storm database and make deductions about the impact of these events on health and economy.</p>
 <section id="data-loading" class="level2">
 <h2 class="anchored" data-anchor-id="data-loading">Data Loading</h2>
 <p>First step is load the data. I used the read_csv from readr (tidyverse) and it was able to read the file even in the compressed state.</p>

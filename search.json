@@ -263,7 +263,7 @@
     "href": "posts/project/index.html",
     "title": "Reproducible Research Final Project",
     "section": "",
-    "text": "This article is the final project of the Reproducible Research course on Coursera offered by John Hopkins University. I make an attempt to look at the U.S. National Oceanic and Atmospheric Administration's (NOAA) storm database and make deductions about the impact of these events on health and economy."
+    "text": "This article is the final project of the Reproducible Research course on Coursera offered by John Hopkins University. I make an attempt to look at the U.S. National Oceanic and Atmospheric Administration’s (NOAA) storm database and make deductions about the impact of these events on health and economy."
   },
   {
     "objectID": "posts/project/index.html#data-loading",
