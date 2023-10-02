@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/project/index.html",
       "/posts/gans/index.html",
       "/posts/medical-eval/index.html",
       "/posts/unet/index.html",

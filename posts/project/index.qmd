@@ -1,0 +1,106 @@
+---
+title: "Reproducible Research Final Project"
+author: "Lukman Aliyu Jibril"
+date: "2023-10-02"
+categories: [r programming,project,rpubs]
+---
+
+
+
+`This article is the final project of the Reproducible Research course on Coursera offered by John Hopkins University. I make an attempt to look at the U.S. National Oceanic and Atmospheric Administration's (NOAA) storm database and make deductions about the impact of these events on health and economy.`
+
+## Data Loading
+
+First step is load the data. I used the read_csv from readr (tidyverse) and it was able to read the file even in the compressed state.
+
+```{r}
+library(tidyverse)
+
+storm_data <- read_csv("repdata_data_StormData.csv.bz2")
+```
+
+## Data Cleaning and Transformation
+
+To understand how the data look and the variables contained, use was made of the glimpse function.
+
+```{r}
+# Explore the data
+glimpse(storm_data)
+```
+
+Next, since the most important variable in this analysis is the `EVTYPE` variable, there's a need to ensure that there are no missing values. I may plot or do summary statistics and missing values could cause problems in either of these activities.
+
+I also got the sum of fatalities, injuries and property damage as these are important in determining health and economic impact of the events.
+
+```{r}
+# Data Cleaning
+cleaned_storm_data <- storm_data |> 
+  filter(!is.na(EVTYPE)) |> 
+  mutate(PROPDMG = PROPDMG * ifelse(PROPDMGEXP %in% c("K", "M"), 1000, 1))
+
+
+# Summary Statistics
+summary_stats <- cleaned_storm_data |> 
+  summarise(
+    total_fatalities = sum(FATALITIES),
+    total_injuries = sum(INJURIES),
+    total_damage = sum(PROPDMG)
+  )
+summary_stats
+```
+
+## Results
+
+### Population Health Impact
+
+Next, to properly look at the population health impact, the dataset is grouped by event type and sum of the fatalities and injuries are compared in a variable called event_harm. This variable is then plotted, taking a look at the top 10.
+
+```{r}
+event_harm <- cleaned_storm_data |> 
+  group_by(EVTYPE) |> 
+  summarise(total_harm = sum(FATALITIES + INJURIES)) |> arrange(desc(total_harm))
+
+# Visualization
+event_harm |> 
+  top_n(10, total_harm) |> 
+  ggplot(aes(x = reorder(EVTYPE, -total_harm), y = total_harm)) +
+  geom_bar(stat = "identity", fill = "blue") +
+  labs(
+    title = "Top 10 Events with Highest Population Health Impact",
+    x = "Event Type",
+    y = "Total Harm"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+
+### Economic Consequences
+
+The final aspect is to analyse and check the economic consequences. Naturally, property damage is one of the metrics for measuring economic consequences of events like these. The data is grouped by event type and the property damage associated with each event is calculated. This is stored in a variable called event_damage that is then visualized.
+
+```{r}
+event_damage <- cleaned_storm_data |> 
+  group_by(EVTYPE) |> 
+  summarise(total_damage = sum(PROPDMG)) |> 
+  arrange(desc(total_damage))
+
+# Visualization
+event_damage |> 
+  top_n(10, total_damage) |> 
+  ggplot(aes(x = reorder(EVTYPE, -total_damage), y = total_damage)) +
+  geom_bar(stat = "identity", fill = "red") +
+  labs(
+    title = "Top 10 Events with Greatest Economic Consequences",
+    x = "Event Type",
+    y = "Total Damage"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+## Conclusion
+
+Looking at population health impact, tornadoes are the most harmful. 
+Also, on economic impact, tornadoes are still the most damaging event followed in order by flash floods, TSTM wind, flood, thunderstorm wind, hail,lightning, thunderstorm winds, high wind and winterstorm as the top ten events that cause the most economic damage. 
+
