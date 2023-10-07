@@ -2,7 +2,7 @@
 title: "Data Science: Foundations using R Specialization"
 author: "Lukman Aliyu Jibril"
 date: "2023-10-03"
-categories: [data science, r programming,coursera,]
+categories: [data science, r programming,coursera]
 image: image.jpg
 ---
 

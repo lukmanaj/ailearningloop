@@ -1,0 +1,52 @@
+---
+title: "Data Visualization with R using ggplot2"
+author: "Lukman Aliyu Jibril"
+date: "2023-10-07"
+categories: [data science, r programming,data visualization]
+---
+In this article, I attempt to briefly display the ease of data visualization using the ggplot2 library in R. 
+As always, the first thing is to import the library using the `library` syntax. Here, I import tidyverse which includes ggplot2 as a core member of the tidyverse. I also import `palmerpenguins` as it contains the penguins dataset I will like to use. 
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+Looking closely at the `mpg` dataset to see what variables it contains. 
+
+```{r}
+glimpse(mpg)
+```
+
+Checking out the `palmer penguins` dataset too. 
+
+```{r}
+glimpse(penguins)
+```
+
+Now, I use the easy to follow ggplot syntax to plot mpg dataset, `displ` against `hwy`. I also introduce a smooth line to accurately see the way the variables relate. 
+```{r}
+ggplot(data=mpg,mapping=aes(x= hwy, y= displ)) + geom_point() + geom_smooth(method= "lm")
+```
+
+Second plot is on the penguins data. I compare the bill length and bill depth and see how species affect the relationship. 
+```{r}
+ggplot(
+  data = penguins,
+  mapping = aes(
+    x = bill_length_mm, y = bill_depth_mm, 
+    color = species, shape = species
+  )
+) +
+  geom_point() +
+  labs(color = "Species") +
+  guides(
+    shape = guide_legend(title = "Species", override.aes = list(color = NULL))
+  )
+
+```
+
+
+## Conclusion
+
+The ggplot2 library offers an easy way to do data visualization in R. However, it is important to note that mastering visualization requires a lot of practice and a single article is not enough. Let's all keep learning friends.

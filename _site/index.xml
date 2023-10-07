@@ -10,7 +10,193 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Mon, 02 Oct 2023 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 06 Oct 2023 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Data Visualization with R using ggplot2</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/ggplot/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>In this article, I attempt to briefly display the ease of data visualization using the ggplot2 library in R. As always, the first thing is to import the library using the <code>library</code> syntax. Here, I import tidyverse which includes ggplot2 as a core member of the tidyverse. I also import <code>palmerpenguins</code> as it contains the penguins dataset I will like to use.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.2     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(palmerpenguins)</span></code></pre></div>
+</div>
+<p>Looking closely at the <code>mpg</code> dataset to see what variables it contains.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(mpg)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 234
+Columns: 11
+$ manufacturer &lt;chr&gt; "audi", "audi", "audi", "audi", "audi", "audi", "audi", "…
+$ model        &lt;chr&gt; "a4", "a4", "a4", "a4", "a4", "a4", "a4", "a4 quattro", "…
+$ displ        &lt;dbl&gt; 1.8, 1.8, 2.0, 2.0, 2.8, 2.8, 3.1, 1.8, 1.8, 2.0, 2.0, 2.…
+$ year         &lt;int&gt; 1999, 1999, 2008, 2008, 1999, 1999, 2008, 1999, 1999, 200…
+$ cyl          &lt;int&gt; 4, 4, 4, 4, 6, 6, 6, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8, …
+$ trans        &lt;chr&gt; "auto(l5)", "manual(m5)", "manual(m6)", "auto(av)", "auto…
+$ drv          &lt;chr&gt; "f", "f", "f", "f", "f", "f", "f", "4", "4", "4", "4", "4…
+$ cty          &lt;int&gt; 18, 21, 20, 21, 16, 18, 18, 18, 16, 20, 19, 15, 17, 17, 1…
+$ hwy          &lt;int&gt; 29, 29, 31, 30, 26, 26, 27, 26, 25, 28, 27, 25, 25, 25, 2…
+$ fl           &lt;chr&gt; "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p…
+$ class        &lt;chr&gt; "compact", "compact", "compact", "compact", "compact", "c…</code></pre>
+</div>
+</div>
+<p>Checking out the <code>palmer penguins</code> dataset too.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glimpse</span>(penguins)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…
+$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
+$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …
+$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …
+$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…
+$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
+$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…
+$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…</code></pre>
+</div>
+</div>
+<p>Now, I use the easy to follow ggplot syntax to plot mpg dataset, <code>displ</code> against <code>hwy</code>. I also introduce a smooth line to accurately see the way the variables relate.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data=</span>mpg,<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mapping=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x=</span> hwy, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y=</span> displ)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_smooth</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lm"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/ggplot/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Second plot is on the penguins data. I compare the bill length and bill depth and see how species affect the relationship.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb10-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> penguins,</span>
+<span id="cb10-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mapping =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb10-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> bill_length_mm, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> bill_depth_mm, </span>
+<span id="cb10-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> species, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape =</span> species</span>
+<span id="cb10-6">  )</span>
+<span id="cb10-7">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb10-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb10-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Species"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb10-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guides</span>(</span>
+<span id="cb10-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guide_legend</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Species"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">override.aes =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>))</span>
+<span id="cb10-12">  )</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/ggplot/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The ggplot2 library offers an easy way to do data visualization in R. However, it is important to note that mastering visualization requires a lot of practice and a single article is not enough. Let’s all keep learning friends.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>data science</category>
+  <category>r programming</category>
+  <category>data visualization</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/ggplot/index.html</guid>
+  <pubDate>Fri, 06 Oct 2023 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Data Science: Foundations using R Specialization</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -4555,1560 +4741,6 @@ font-style: inherit;">shinyApp</span>(ui, server)</span></code></pre></div>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/nlp/index.html</guid>
   <pubDate>Mon, 12 Jun 2023 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/nlp/nlp.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>JavaScript FizzBuzz Solutions</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/fizzbuzz-javascript/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>FizzBuzz is a common programming problem that is often used as an exercise in basic programming logic and algorithm development. The problem is typically presented as follows:</p>
-<blockquote class="blockquote">
-<p>Write a program that prints the numbers from 1 to 100. For multiples of three, print “Fizz” instead of the number, and for multiples of five, print “Buzz” instead of the number. For numbers that are multiples of both three and five, print “FizzBuzz”.</p>
-</blockquote>
-<p>In essence, the FizzBuzz problem requires the programmer to loop through a sequence of numbers, identify which ones are multiples of 3, 5, or both, and print the appropriate text instead of the number. The problem is often used as a simple test of a programmer’s ability to use loops, conditionals, and basic programming concepts like variables and functions. It can be solved using a variety of programming languages, and is often used as an interview question for entry-level software development positions.</p>
-<p>In this article, I present, as a follow-up to my Python article, 15 different solutions to the FizzBuzz problem in the JavaScript programming language. This is to highlight the flair of JavaScript.</p>
-<p>Here are 15 cool FizzBuzz solutions in JavaScript:</p>
-<ul>
-<li>Using a for loop and if/else statements:</li>
-</ul>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++</span>) {</span>
-<span id="cb1-2">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;&amp;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb1-3">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-4">  } <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb1-5">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-6">  } <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb1-7">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-8">  } <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> {</span>
-<span id="cb1-9">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(i)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-10">  }</span>
-<span id="cb1-11">}</span></code></pre></div>
-<ul>
-<li>Using a for loop and a switch statement:</li>
-</ul>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++</span>) {</span>
-<span id="cb2-2">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">switch</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">true</span>) {</span>
-<span id="cb2-3">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">case</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;&amp;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-4">      <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-5">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-6">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">case</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-7">      <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-8">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-9">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">case</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-10">      <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-11">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-12">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-13">      <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(i)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-14">  }</span>
-<span id="cb2-15">}</span></code></pre></div>
-<ul>
-<li>Using a while loop and a ternary operator:</li>
-</ul>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb3-2"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">while</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>) {</span>
-<span id="cb3-3">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(</span>
-<span id="cb3-4">    i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;&amp;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb3-5">    i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb3-6">    i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb3-7">    i</span>
-<span id="cb3-8">  )<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb3-9">  i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++;</span></span>
-<span id="cb3-10">}</span></code></pre></div>
-<ul>
-<li>Using recursion:</li>
-</ul>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">function</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fizzBuzzRecursive</span>(num) {</span>
-<span id="cb4-2">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb4-3">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb4-4">  }</span>
-<span id="cb4-5">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fizzBuzzRecursive</span>(num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb4-6">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(</span>
-<span id="cb4-7">    num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;&amp;</span> num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb4-8">    num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb4-9">    num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb4-10">    num</span>
-<span id="cb4-11">  )<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb4-12">}</span>
-<span id="cb4-13"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fizzBuzzRecursive</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
-<ul>
-<li>Using Array.from() and map():</li>
-</ul>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">Array</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">from</span>({ <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">length</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span> }<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> (_<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> i) <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=&gt;</span> {</span>
-<span id="cb5-2">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">const</span> num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb5-3">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> (</span>
-<span id="cb5-4">    num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;&amp;</span> num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb5-5">    num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb5-6">    num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb5-7">    num</span>
-<span id="cb5-8">  )<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb5-9">})<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">forEach</span>(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
-<ul>
-<li>Using a do-while loop and a conditional operator:</li>
-</ul>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb6-2"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">do</span> {</span>
-<span id="cb6-3">  i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++;</span></span>
-<span id="cb6-4">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;&amp;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> i)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb6-5">} <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">while</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
-<ul>
-<li>Using a for loop and an object to store the strings:</li>
-</ul>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">const</span> strings <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> { <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span> }<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb7-2"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++</span>) {</span>
-<span id="cb7-3">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb7-4">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">const</span> key <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> strings) {</span>
-<span id="cb7-5">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> key <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb7-6">      output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> strings[key]<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb7-7">    }</span>
-<span id="cb7-8">  }</span>
-<span id="cb7-9">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">||</span> i)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb7-10">}</span></code></pre></div>
-<ul>
-<li>Using recursion and an array to store the strings:</li>
-</ul>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">const</span> fizzBuzzStrings <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>]<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb8-2"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">function</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fizzBuzzRecursive</span>(num) {</span>
-<span id="cb8-3">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb8-4">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb8-5">  }</span>
-<span id="cb8-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fizzBuzzRecursive</span>(num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb8-7">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(fizzBuzzStrings[num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">15</span>] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">||</span> num)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb8-8">}</span>
-<span id="cb8-9"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fizzBuzzRecursive</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
-<ul>
-<li>Using a for loop and a template literal:</li>
-</ul>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++</span>) {</span>
-<span id="cb9-2">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="vs" style="color: #20794D;
-background-color: null;
-font-style: inherit;">`</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">${</span>i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}${</span>i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="vs" style="color: #20794D;
-background-color: null;
-font-style: inherit;">`</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">||</span> i)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb9-3">}</span></code></pre></div>
-<ul>
-<li>Using a for loop and a function to generate the output:</li>
-</ul>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">function</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">generateOutput</span>(num) {</span>
-<span id="cb10-2">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb10-3">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb10-4">    output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb10-5">  }</span>
-<span id="cb10-6">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb10-7">    output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb10-8">  }</span>
-<span id="cb10-9">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">||</span> num<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb10-10">}</span>
-<span id="cb10-11"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++</span>) {</span>
-<span id="cb10-12">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">generateOutput</span>(i))<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb10-13">}</span></code></pre></div>
-<ul>
-<li>Using a for loop and a nested ternary operator:</li>
-</ul>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++</span>) {</span>
-<span id="cb11-2">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">?</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> i))<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb11-3">}</span></code></pre></div>
-<ul>
-<li>Using a for loop and an array to store the numbers and strings:</li>
-</ul>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">const</span> arr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">Array</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">from</span>({ <span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">length</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span> }<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> (_<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> i) <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=&gt;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb12-2">arr<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">forEach</span>((num) <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=&gt;</span> {</span>
-<span id="cb12-3">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">const</span> output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>][num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">||</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb12-4">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">const</span> output2 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>][num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">||</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb12-5">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="vs" style="color: #20794D;
-background-color: null;
-font-style: inherit;">`</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">${</span>output<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}${</span>output2<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="vs" style="color: #20794D;
-background-color: null;
-font-style: inherit;">`</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">||</span> num)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb12-6">})<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
-<ul>
-<li>Using a for loop and a self-invoking function to generate the output:</li>
-</ul>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++</span>) {</span>
-<span id="cb13-2">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>((<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">function</span> () {</span>
-<span id="cb13-3">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb13-4">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb13-5">      output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb13-6">    }</span>
-<span id="cb13-7">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>) {</span>
-<span id="cb13-8">      output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb13-9">    }</span>
-<span id="cb13-10">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">||</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb13-11">  })())<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb13-12">}</span></code></pre></div>
-<ul>
-<li>Using a for loop and two switch statements:</li>
-</ul>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb14-1"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++</span>) {</span>
-<span id="cb14-2">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">switch</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">true</span>) {</span>
-<span id="cb14-3">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">case</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb14-4">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">switch</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">true</span>) {</span>
-<span id="cb14-5">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">case</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb14-6">          <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb14-7">          <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb14-8">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb14-9">          <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb14-10">          <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb14-11">      }</span>
-<span id="cb14-12">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb14-13">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">case</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">===</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb14-14">      <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb14-15">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb14-16">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb14-17">      <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(i)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb14-18">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb14-19">  }</span>
-<span id="cb14-20">}</span></code></pre></div>
-<ul>
-<li>Using a for loop and a map() method to generate the output:</li>
-</ul>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb15-1"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (<span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">let</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">++</span>) {</span>
-<span id="cb15-2">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">const</span> output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [i<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">""</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>][i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">15</span>]<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb15-3">  <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(output)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb15-4">}</span></code></pre></div>
-<p>In conclusion, there are several ways to approach the FizzBuzz problem in JavaScript and I present just 15 above. As you learn new programming languages, try solving problems in different creative ways as this can boost your understanding of the new programming language and your grounding in programming in general.</p>
-
-
-
- ]]></description>
-  <category>javascript</category>
-  <category>programming</category>
-  <category>loops</category>
-  <category>fizzbuzz</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/fizzbuzz-javascript/index.html</guid>
-  <pubDate>Sat, 13 May 2023 23:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
