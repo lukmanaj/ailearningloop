@@ -1,0 +1,23 @@
+---
+title: "Preparing for the Future of AI: My Journey with IBM's AI Engineering Professional Certificate"
+author: "Lukman Aliyu Jibril"
+date: "2023-11-04"
+categories: [ai,pytorch,keras,tensorflow,computer vision]
+image: 'ibm.png'
+---
+
+As I continue to navigate through the rich and complex landscape of artificial intelligence, I had the pleasure of completing IBM's esteemed AI Engineering Professional Certificate program, hosted on Coursera. This immersive experience, spanning six comprehensive courses, was a deep dive into the intricacies of machine learning algorithms, TensorFlow, PyTorch, Keras, and the fascinating world of computer vision.
+
+My journey was particularly steeped in the latter, culminating in a capstone project that put my newfound expertise to the test. I take immense pride in weaving another layer of accomplishment into my burgeoning portfolio of certifications, each course further endorsed by distinct skill badges, with a special one recognizing the entire professional certificate achievement.
+
+This program marks my second venture with IBM, building upon the foundational knowledge I acquired in their Data Science certificate. The initial course, "Machine Learning for Python," served as a welcome refresher, reinforcing concepts I had previously encountered.
+
+As the curriculum progressed, it transitioned into the realm of deep learning, commencing with neural networks and employing the Keras framework. The choice of Keras was deliberate; its simplicity and beginner-friendly nature are perfect for those keen on rapid development and prototyping.
+
+Subsequent courses whisked me through the mechanics of Computer Vision and image processing. The revelation of how to deftly manipulate images using PIL and OpenCV libraries was nothing short of revelatory.
+
+My skill set expanded further as I delved into constructing sophisticated deep neural networks, courtesy of PyTorch and TensorFlow. The program's thoughtful design ensured that by the finale—a challenging capstone project—I had amassed a trove of knowledge, a nuanced understanding of frameworks like Keras, TensorFlow, and PyTorch, as well as a portfolio of mini-projects and skill badges to showcase my competencies.
+
+The experience was immensely rewarding, with each course's Jupyter notebooks serving as a solid foundation that will underpin my future endeavors in AI. For enthusiasts and aspiring professionals, I wholeheartedly endorse this professional certification. While the material might hail from an earlier era in this fast-evolving field, a commitment to refreshing the codes and staying abreast of the latest trends will ground you firmly in the essential principles of AI.
+
+Embark on this journey, and you too can unlock the transformative power of AI, paving the way for a future rich with possibility.
