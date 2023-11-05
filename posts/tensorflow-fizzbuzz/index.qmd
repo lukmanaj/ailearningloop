@@ -1,5 +1,5 @@
 ---
-title: "Practising Tensorflow using Programming Concepts"
+title: "Computation Graphs, Eager Execution and Flow Control in TensorFlow"
 author: "Lukman Aliyu Jibril"
 date: "2023-11-04"
 categories: [ai,tensorflow,programming,python]
@@ -8,27 +8,76 @@ draft: true
 ---
 
 
+## Introduction:
 
+TensorFlow is a popular deep learning framework that  provides a robust platform for the creation and execution of computational graphs. Understanding how TensorFlow handles computation through graphs, eager execution, and flow control is pivotal for effectively deploying machine learning/deep learning models.
 
+1. Computation Graphs in TensorFlow:
 
+A computation graph is a series of TensorFlow operations arranged into a graph of nodes. Each node represents an operation, while the edges represent the data consumed or produced by an operation. This structure allows TensorFlow to optimize the computation, especially in deep learning models.
 
+**Benefits of Computation Graphs:**
 
+ - Efficiency: Operations can be parallelized across different processors (CPUs, GPUs).
+ - Portability: The graph can be executed on different devices and platforms.
 
+2. Eager Execution in TensorFlow:
 
+Eager execution is an imperative programming environment that evaluates operations immediately. It contrasts with graph execution in that it doesn't require a computational graph to be defined before running operations.
 
-# FizzBuzz
+**Advantages of Eager Execution:**
+
+- Interactive Debugging: Operations are executed as they are defined, facilitating easy debugging.
+- Intuitive Interface: It aligns with the way programmers are used to thinking about their programs.
+
+3. Flow Control in TensorFlow:
+
+TensorFlow provides various tools for flow control, enabling the creation of dynamic models. This includes conditionals and loops, which are essential in many machine learning algorithms.
+
+### TensorFlow Functions for Flow Control:
+tf.cond: Provides a way to perform conditional execution.
+tf.while_loop: Allows for the creation of dynamic loops in the graph.
+tf.switch_case: Used for creating conditional branching. 
+
+#### Demonstrating Flow Control using FizzBuzz in Tensorflow
+In a few lines of code, I try to demonstate some tensorflow functionalities using the popular FizzBuzz. 
+
+```{python}
+import tensorflow as tf
 
 def fizzbuzz(max_num):
-  counter = tf.constant(0)
-  max_num = tf.convert_to_tensor(max_num)
-  for num in range(1, max_num.numpy()+1):
-    num = tf.constant(num)
-    if int(num % 3) == 0 and int(num % 5) == 0:
-      print('FizzBuzz')
-    elif int(num % 3) == 0:
-      print('Fizz')
-    elif int(num % 5) == 0:
-      print('Buzz')
-    else:
-      print(num.numpy())
-    counter += 1
+    for num in range(1, max_num + 1):
+        num_tf = tf.constant(num)
+        fizz = tf.equal(tf.math.mod(num_tf, 3), 0)
+        buzz = tf.equal(tf.math.mod(num_tf, 5), 0)
+        fizzbuzz = tf.logical_and(fizz, buzz)
+
+        print(tf.switch_case(tf.cast(fizzbuzz, tf.int32) + tf.cast(fizz, tf.int32) + 2 * tf.cast(buzz, tf.int32),
+                             branch_fns={
+                                 0: lambda: num_tf,
+                                 1: lambda: tf.constant("Fizz"),
+                                 2: lambda: tf.constant("Buzz"),
+                                 3: lambda: tf.constant("FizzBuzz")
+                             }).numpy())
+
+fizzbuzz(15)
+
+```
+
+
+## Conclusion:
+
+The versatility of TensorFlow lies in its ability to seamlessly switch between a static computation graph and eager execution, providing both efficiency and flexibility. Understanding these concepts is essential for any machine learning practitioner working with TensorFlow. Whether you're implementing simple programs like FizzBuzz or developing complex neural networks, mastering these aspects of TensorFlow will greatly enhance your ability to develop and optimize machine learning models.
+
+On a final note, readers should remember that TensorFlow is an evolving platform and therefore try to refer to the latest documentation for up-to-date practices and API usage.
+
+
+
+
+
+
+
+
+
+
+
