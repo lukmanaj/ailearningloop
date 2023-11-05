@@ -9,7 +9,7 @@
 <meta name="author" content="Lukman Aliyu Jibril">
 <meta name="dcterms.date" content="2023-11-04">
 
-<title>ailearningloop - Practising Tensorflow using Programming Concepts</title>
+<title>ailearningloop - Computation Graphs, Eager Execution and Flow Control in TensorFlow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -122,7 +156,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Practising Tensorflow using Programming Concepts</h1>
+      <h1 class="title">Computation Graphs, Eager Execution and Flow Control in TensorFlow</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">ai</div>
                 <div class="quarto-category">tensorflow</div>
@@ -1047,9 +1081,86 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 
 
 
-<section id="fizzbuzz" class="level1">
-<h1>FizzBuzz</h1>
-<p>def fizzbuzz(max_num): counter = tf.constant(0) max_num = tf.convert_to_tensor(max_num) for num in range(1, max_num.numpy()+1): num = tf.constant(num) if int(num % 3) == 0 and int(num % 5) == 0: print(‘FizzBuzz’) elif int(num % 3) == 0: print(‘Fizz’) elif int(num % 5) == 0: print(‘Buzz’) else: print(num.numpy()) counter += 1</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
+<p>TensorFlow is a popular deep learning framework that provides a robust platform for the creation and execution of computational graphs. Understanding how TensorFlow handles computation through graphs, eager execution, and flow control is pivotal for effectively deploying machine learning/deep learning models.</p>
+<ol type="1">
+<li>Computation Graphs in TensorFlow:</li>
+</ol>
+<p>A computation graph is a series of TensorFlow operations arranged into a graph of nodes. Each node represents an operation, while the edges represent the data consumed or produced by an operation. This structure allows TensorFlow to optimize the computation, especially in deep learning models.</p>
+<p><strong>Benefits of Computation Graphs:</strong></p>
+<ul>
+<li>Efficiency: Operations can be parallelized across different processors (CPUs, GPUs).</li>
+<li>Portability: The graph can be executed on different devices and platforms.</li>
+</ul>
+<ol start="2" type="1">
+<li>Eager Execution in TensorFlow:</li>
+</ol>
+<p>Eager execution is an imperative programming environment that evaluates operations immediately. It contrasts with graph execution in that it doesn’t require a computational graph to be defined before running operations.</p>
+<p><strong>Advantages of Eager Execution:</strong></p>
+<ul>
+<li>Interactive Debugging: Operations are executed as they are defined, facilitating easy debugging.</li>
+<li>Intuitive Interface: It aligns with the way programmers are used to thinking about their programs.</li>
+</ul>
+<ol start="3" type="1">
+<li>Flow Control in TensorFlow:</li>
+</ol>
+<p>TensorFlow provides various tools for flow control, enabling the creation of dynamic models. This includes conditionals and loops, which are essential in many machine learning algorithms.</p>
+<section id="tensorflow-functions-for-flow-control" class="level3">
+<h3 class="anchored" data-anchor-id="tensorflow-functions-for-flow-control">TensorFlow Functions for Flow Control:</h3>
+<p>tf.cond: Provides a way to perform conditional execution. tf.while_loop: Allows for the creation of dynamic loops in the graph. tf.switch_case: Used for creating conditional branching.</p>
+<section id="demonstrating-flow-control-using-fizzbuzz-in-tensorflow" class="level4">
+<h4 class="anchored" data-anchor-id="demonstrating-flow-control-using-fizzbuzz-in-tensorflow">Demonstrating Flow Control using FizzBuzz in Tensorflow</h4>
+<p>In a few lines of code, I try to demonstate some tensorflow functionalities using the popular FizzBuzz.</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fizzbuzz(max_num):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, max_num <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        num_tf <span class="op">=</span> tf.constant(num)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        fizz <span class="op">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv">3</span>), <span class="dv">0</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        buzz <span class="op">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv">5</span>), <span class="dv">0</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        fizzbuzz <span class="op">=</span> tf.logical_and(fizz, buzz)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(tf.switch_case(tf.cast(fizzbuzz, tf.int32) <span class="op">+</span> tf.cast(fizz, tf.int32) <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> tf.cast(buzz, tf.int32),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                             branch_fns<span class="op">=</span>{</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">0</span>: <span class="kw">lambda</span>: num_tf,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">1</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"Fizz"</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">2</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"Buzz"</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">3</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"FizzBuzz"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                             }).numpy())</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>fizzbuzz(<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>2023-11-05 20:46:11.191724: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-05 20:46:15.292317: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+2
+b'Fizz'
+4
+b'Buzz'
+b'Fizz'
+7
+8
+b'Fizz'
+b'Buzz'
+11
+b'Fizz'
+13
+14
+b'FizzBuzz'</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
+<p>The versatility of TensorFlow lies in its ability to seamlessly switch between a static computation graph and eager execution, providing both efficiency and flexibility. Understanding these concepts is essential for any machine learning practitioner working with TensorFlow. Whether you’re implementing simple programs like FizzBuzz or developing complex neural networks, mastering these aspects of TensorFlow will greatly enhance your ability to develop and optimize machine learning models.</p>
+<p>On a final note, readers should remember that TensorFlow is an evolving platform and therefore try to refer to the latest documentation for up-to-date practices and API usage.</p>
 
 
 </section>
