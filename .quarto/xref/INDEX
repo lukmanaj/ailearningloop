@@ -115,5 +115,11 @@
   },
   "posts/ggplot/index.qmd": {
     "index.html": "254a52dc"
+  },
+  "posts/ibm-ai-eng/index.qmd": {
+    "index.html": "7f171092"
+  },
+  "posts/tensorflow-fizzbuzz/index.qmd": {
+    "index.html": "8f6b4bd2"
   }
 }
