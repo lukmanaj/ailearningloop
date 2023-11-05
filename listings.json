@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/ibm-ai-eng/index.html",
+      "/posts/tensorflow-fizzbuzz/index.html",
       "/posts/ggplot/index.html",
       "/posts/rprogramming/index.html",
       "/posts/project/index.html",

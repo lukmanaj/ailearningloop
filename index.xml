@@ -42,6 +42,184 @@
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/ibm.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
+  <title>Computation Graphs, Eager Execution and Flow Control in TensorFlow</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
+<p>TensorFlow is a popular deep learning framework that provides a robust platform for the creation and execution of computational graphs. Understanding how TensorFlow handles computation through graphs, eager execution, and flow control is pivotal for effectively deploying machine learning/deep learning models.</p>
+<ol type="1">
+<li>Computation Graphs in TensorFlow:</li>
+</ol>
+<p>A computation graph is a series of TensorFlow operations arranged into a graph of nodes. Each node represents an operation, while the edges represent the data consumed or produced by an operation. This structure allows TensorFlow to optimize the computation, especially in deep learning models.</p>
+<p><strong>Benefits of Computation Graphs:</strong></p>
+<ul>
+<li>Efficiency: Operations can be parallelized across different processors (CPUs, GPUs).</li>
+<li>Portability: The graph can be executed on different devices and platforms.</li>
+</ul>
+<ol start="2" type="1">
+<li>Eager Execution in TensorFlow:</li>
+</ol>
+<p>Eager execution is an imperative programming environment that evaluates operations immediately. It contrasts with graph execution in that it doesn’t require a computational graph to be defined before running operations.</p>
+<p><strong>Advantages of Eager Execution:</strong></p>
+<ul>
+<li>Interactive Debugging: Operations are executed as they are defined, facilitating easy debugging.</li>
+<li>Intuitive Interface: It aligns with the way programmers are used to thinking about their programs.</li>
+</ul>
+<ol start="3" type="1">
+<li>Flow Control in TensorFlow:</li>
+</ol>
+<p>TensorFlow provides various tools for flow control, enabling the creation of dynamic models. This includes conditionals and loops, which are essential in many machine learning algorithms.</p>
+<section id="tensorflow-functions-for-flow-control" class="level3">
+<h3 class="anchored" data-anchor-id="tensorflow-functions-for-flow-control">TensorFlow Functions for Flow Control:</h3>
+<p>tf.cond: Provides a way to perform conditional execution. tf.while_loop: Allows for the creation of dynamic loops in the graph. tf.switch_case: Used for creating conditional branching.</p>
+<section id="demonstrating-flow-control-using-fizzbuzz-in-tensorflow" class="level4">
+<h4 class="anchored" data-anchor-id="demonstrating-flow-control-using-fizzbuzz-in-tensorflow">Demonstrating Flow Control using FizzBuzz in Tensorflow</h4>
+<p>In a few lines of code, I try to demonstate some tensorflow functionalities using the popular FizzBuzz.</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> tensorflow <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> tf</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> fizzbuzz(max_num):</span>
+<span id="cb1-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, max_num <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb1-5">        num_tf <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> tf.constant(num)</span>
+<span id="cb1-6">        fizz <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>), <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-7">        buzz <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>), <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-8">        fizzbuzz <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> tf.logical_and(fizz, buzz)</span>
+<span id="cb1-9"></span>
+<span id="cb1-10">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(tf.switch_case(tf.cast(fizzbuzz, tf.int32) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> tf.cast(fizz, tf.int32) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> tf.cast(buzz, tf.int32),</span>
+<span id="cb1-11">                             branch_fns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{</span>
+<span id="cb1-12">                                 <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>: <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span>: num_tf.numpy(),</span>
+<span id="cb1-13">                                 <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>: <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Fizz"</span>).numpy().decode(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"utf-8"</span>),</span>
+<span id="cb1-14">                                 <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>: <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Buzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"utf-8"</span>),</span>
+<span id="cb1-15">                                 <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>: <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FizzBuzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"utf-8"</span>)</span>
+<span id="cb1-16">                             }))</span>
+<span id="cb1-17"></span>
+<span id="cb1-18">fizzbuzz(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>2023-11-05 21:00:11.748024: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-05 21:00:18.500453: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
+<p>The versatility of TensorFlow lies in its ability to seamlessly switch between a static computation graph and eager execution, providing both efficiency and flexibility. Understanding these concepts is essential for any machine learning practitioner working with TensorFlow. Whether you’re implementing simple programs like FizzBuzz or developing complex neural networks, mastering these aspects of TensorFlow will greatly enhance your ability to develop and optimize machine learning models.</p>
+<p>On a final note, readers should remember that TensorFlow is an evolving platform and therefore try to refer to the latest documentation for up-to-date practices and API usage.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ai</category>
+  <category>tensorflow</category>
+  <category>programming</category>
+  <category>python</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/index.html</guid>
+  <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/ibm.png" medium="image" type="image/png"/>
+</item>
+<item>
   <title>Data Visualization with R using ggplot2</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
   <link>https://lukmanaj.github.io/ailearningloop/posts/ggplot/index.html</link>
@@ -3213,1490 +3391,6 @@ font-style: inherit;">abs_sets</span>(long))</span></code></pre></div>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/fellowship-conclusion/index.html</guid>
   <pubDate>Mon, 24 Jul 2023 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/fellowship-conclusion/cert.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Solving the FizzBuzz Problem: Eight Creative Solutions in R Programming</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/fizzbuzz_r/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>The FizzBuzz problem is a classic programming exercise that tests a developer’s ability to think logically and solve a simple but often misunderstood challenge. I have written previously about the FizzBuzz challenge here and here. In this article, we will explore ten creative solutions to the FizzBuzz problem using the R programming language. These solutions will demonstrate different approaches, from basic conditional statements to more advanced techniques, showcasing the versatility and power of R.</p>
-<section id="solution-1-traditional-approach-with-conditional-statements" class="level2">
-<h2 class="anchored" data-anchor-id="solution-1-traditional-approach-with-conditional-statements">Solution 1: Traditional Approach with Conditional Statements:</h2>
-<p>This solution follows the traditional FizzBuzz approach, utilizing conditional statements to check divisibility and printing the appropriate output.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solution 1: Traditional Approach with Conditional Statements</span></span>
-<span id="cb1-2"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>) {</span>
-<span id="cb1-3">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;</span> i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb1-4">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>)</span>
-<span id="cb1-5">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb1-6">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>)</span>
-<span id="cb1-7">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb1-8">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>)</span>
-<span id="cb1-9">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span></span>
-<span id="cb1-10">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(i)</span>
-<span id="cb1-11">}</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1
-[1] 2
-[1] "Fizz"
-[1] 4
-[1] "Buzz"
-[1] "Fizz"
-[1] 7
-[1] 8
-[1] "Fizz"
-[1] "Buzz"
-[1] 11
-[1] "Fizz"
-[1] 13
-[1] 14
-[1] "FizzBuzz"
-[1] 16
-[1] 17
-[1] "Fizz"
-[1] 19
-[1] "Buzz"
-[1] "Fizz"
-[1] 22
-[1] 23
-[1] "Fizz"
-[1] "Buzz"
-[1] 26
-[1] "Fizz"
-[1] 28
-[1] 29
-[1] "FizzBuzz"
-[1] 31
-[1] 32
-[1] "Fizz"
-[1] 34
-[1] "Buzz"
-[1] "Fizz"
-[1] 37
-[1] 38
-[1] "Fizz"
-[1] "Buzz"
-[1] 41
-[1] "Fizz"
-[1] 43
-[1] 44
-[1] "FizzBuzz"
-[1] 46
-[1] 47
-[1] "Fizz"
-[1] 49
-[1] "Buzz"
-[1] "Fizz"
-[1] 52
-[1] 53
-[1] "Fizz"
-[1] "Buzz"
-[1] 56
-[1] "Fizz"
-[1] 58
-[1] 59
-[1] "FizzBuzz"
-[1] 61
-[1] 62
-[1] "Fizz"
-[1] 64
-[1] "Buzz"
-[1] "Fizz"
-[1] 67
-[1] 68
-[1] "Fizz"
-[1] "Buzz"
-[1] 71
-[1] "Fizz"
-[1] 73
-[1] 74
-[1] "FizzBuzz"
-[1] 76
-[1] 77
-[1] "Fizz"
-[1] 79
-[1] "Buzz"
-[1] "Fizz"
-[1] 82
-[1] 83
-[1] "Fizz"
-[1] "Buzz"
-[1] 86
-[1] "Fizz"
-[1] 88
-[1] 89
-[1] "FizzBuzz"
-[1] 91
-[1] 92
-[1] "Fizz"
-[1] 94
-[1] "Buzz"
-[1] "Fizz"
-[1] 97
-[1] 98
-[1] "Fizz"
-[1] "Buzz"</code></pre>
-</div>
-</div>
-</section>
-<section id="solution-2-vectorized-solution-using-modulo-operator" class="level2">
-<h2 class="anchored" data-anchor-id="solution-2-vectorized-solution-using-modulo-operator">Solution 2: Vectorized Solution using Modulo Operator:</h2>
-<p>Leveraging the vectorized capabilities of R, this solution employs the modulo operator to check divisibility for multiple inputs simultaneously, resulting in efficient code.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solution 2: Vectorized Solution using Modulo Operator</span></span>
-<span id="cb3-2">numbers <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span></span>
-<span id="cb3-3">result <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(numbers <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">15</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>,</span>
-<span id="cb3-4">         <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(numbers <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>,</span>
-<span id="cb3-5">           <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(numbers <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>, numbers)))</span>
-<span id="cb3-6"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(result)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  [1] "1"        "2"        "Fizz"     "4"        "Buzz"     "Fizz"    
-  [7] "7"        "8"        "Fizz"     "Buzz"     "11"       "Fizz"    
- [13] "13"       "14"       "FizzBuzz" "16"       "17"       "Fizz"    
- [19] "19"       "Buzz"     "Fizz"     "22"       "23"       "Fizz"    
- [25] "Buzz"     "26"       "Fizz"     "28"       "29"       "FizzBuzz"
- [31] "31"       "32"       "Fizz"     "34"       "Buzz"     "Fizz"    
- [37] "37"       "38"       "Fizz"     "Buzz"     "41"       "Fizz"    
- [43] "43"       "44"       "FizzBuzz" "46"       "47"       "Fizz"    
- [49] "49"       "Buzz"     "Fizz"     "52"       "53"       "Fizz"    
- [55] "Buzz"     "56"       "Fizz"     "58"       "59"       "FizzBuzz"
- [61] "61"       "62"       "Fizz"     "64"       "Buzz"     "Fizz"    
- [67] "67"       "68"       "Fizz"     "Buzz"     "71"       "Fizz"    
- [73] "73"       "74"       "FizzBuzz" "76"       "77"       "Fizz"    
- [79] "79"       "Buzz"     "Fizz"     "82"       "83"       "Fizz"    
- [85] "Buzz"     "86"       "Fizz"     "88"       "89"       "FizzBuzz"
- [91] "91"       "92"       "Fizz"     "94"       "Buzz"     "Fizz"    
- [97] "97"       "98"       "Fizz"     "Buzz"    </code></pre>
-</div>
-</div>
-</section>
-<section id="solution-3-recursive-function-approach" class="level2">
-<h2 class="anchored" data-anchor-id="solution-3-recursive-function-approach">Solution 3: Recursive Function Approach</h2>
-<p>This solution showcases the elegance of recursion by defining a recursive function that outputs the FizzBuzz sequence.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solution 3: Recursive Function Approach</span></span>
-<span id="cb5-2">fizzbuzz <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">function</span>(n) {</span>
-<span id="cb5-3">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb5-4">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">return</span>()</span>
-<span id="cb5-5">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fizzbuzz</span>(n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb5-6">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;</span> n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb5-7">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>)</span>
-<span id="cb5-8">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb5-9">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>)</span>
-<span id="cb5-10">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb5-11">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>)</span>
-<span id="cb5-12">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span></span>
-<span id="cb5-13">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(n)</span>
-<span id="cb5-14">}</span>
-<span id="cb5-15"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fizzbuzz</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1
-[1] 2
-[1] "Fizz"
-[1] 4
-[1] "Buzz"
-[1] "Fizz"
-[1] 7
-[1] 8
-[1] "Fizz"
-[1] "Buzz"
-[1] 11
-[1] "Fizz"
-[1] 13
-[1] 14
-[1] "FizzBuzz"
-[1] 16
-[1] 17
-[1] "Fizz"
-[1] 19
-[1] "Buzz"
-[1] "Fizz"
-[1] 22
-[1] 23
-[1] "Fizz"
-[1] "Buzz"
-[1] 26
-[1] "Fizz"
-[1] 28
-[1] 29
-[1] "FizzBuzz"
-[1] 31
-[1] 32
-[1] "Fizz"
-[1] 34
-[1] "Buzz"
-[1] "Fizz"
-[1] 37
-[1] 38
-[1] "Fizz"
-[1] "Buzz"
-[1] 41
-[1] "Fizz"
-[1] 43
-[1] 44
-[1] "FizzBuzz"
-[1] 46
-[1] 47
-[1] "Fizz"
-[1] 49
-[1] "Buzz"
-[1] "Fizz"
-[1] 52
-[1] 53
-[1] "Fizz"
-[1] "Buzz"
-[1] 56
-[1] "Fizz"
-[1] 58
-[1] 59
-[1] "FizzBuzz"
-[1] 61
-[1] 62
-[1] "Fizz"
-[1] 64
-[1] "Buzz"
-[1] "Fizz"
-[1] 67
-[1] 68
-[1] "Fizz"
-[1] "Buzz"
-[1] 71
-[1] "Fizz"
-[1] 73
-[1] 74
-[1] "FizzBuzz"
-[1] 76
-[1] 77
-[1] "Fizz"
-[1] 79
-[1] "Buzz"
-[1] "Fizz"
-[1] 82
-[1] 83
-[1] "Fizz"
-[1] "Buzz"
-[1] 86
-[1] "Fizz"
-[1] 88
-[1] 89
-[1] "FizzBuzz"
-[1] 91
-[1] 92
-[1] "Fizz"
-[1] 94
-[1] "Buzz"
-[1] "Fizz"
-[1] 97
-[1] 98
-[1] "Fizz"
-[1] "Buzz"</code></pre>
-</div>
-</div>
-</section>
-<section id="solution-4-ternary-operators-for-concise-code" class="level2">
-<h2 class="anchored" data-anchor-id="solution-4-ternary-operators-for-concise-code">Solution 4: Ternary Operators for Concise Code:</h2>
-<p>By employing the ternary operator, this solution achieves concise code by condensing conditional statements into a single line.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solution 4: Ternary Operators for Concise Code</span></span>
-<span id="cb7-2"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>)</span>
-<span id="cb7-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;</span> i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>,</span>
-<span id="cb7-4">         <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>,</span>
-<span id="cb7-5">           <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>, i))))</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1
-[1] 2
-[1] "Fizz"
-[1] 4
-[1] "Buzz"
-[1] "Fizz"
-[1] 7
-[1] 8
-[1] "Fizz"
-[1] "Buzz"
-[1] 11
-[1] "Fizz"
-[1] 13
-[1] 14
-[1] "FizzBuzz"
-[1] 16
-[1] 17
-[1] "Fizz"
-[1] 19
-[1] "Buzz"
-[1] "Fizz"
-[1] 22
-[1] 23
-[1] "Fizz"
-[1] "Buzz"
-[1] 26
-[1] "Fizz"
-[1] 28
-[1] 29
-[1] "FizzBuzz"
-[1] 31
-[1] 32
-[1] "Fizz"
-[1] 34
-[1] "Buzz"
-[1] "Fizz"
-[1] 37
-[1] 38
-[1] "Fizz"
-[1] "Buzz"
-[1] 41
-[1] "Fizz"
-[1] 43
-[1] 44
-[1] "FizzBuzz"
-[1] 46
-[1] 47
-[1] "Fizz"
-[1] 49
-[1] "Buzz"
-[1] "Fizz"
-[1] 52
-[1] 53
-[1] "Fizz"
-[1] "Buzz"
-[1] 56
-[1] "Fizz"
-[1] 58
-[1] 59
-[1] "FizzBuzz"
-[1] 61
-[1] 62
-[1] "Fizz"
-[1] 64
-[1] "Buzz"
-[1] "Fizz"
-[1] 67
-[1] 68
-[1] "Fizz"
-[1] "Buzz"
-[1] 71
-[1] "Fizz"
-[1] 73
-[1] 74
-[1] "FizzBuzz"
-[1] 76
-[1] 77
-[1] "Fizz"
-[1] 79
-[1] "Buzz"
-[1] "Fizz"
-[1] 82
-[1] 83
-[1] "Fizz"
-[1] "Buzz"
-[1] 86
-[1] "Fizz"
-[1] 88
-[1] 89
-[1] "FizzBuzz"
-[1] 91
-[1] 92
-[1] "Fizz"
-[1] 94
-[1] "Buzz"
-[1] "Fizz"
-[1] 97
-[1] 98
-[1] "Fizz"
-[1] "Buzz"</code></pre>
-</div>
-</div>
-</section>
-<section id="solution-5-utilizing-the-ifelse-function" class="level2">
-<h2 class="anchored" data-anchor-id="solution-5-utilizing-the-ifelse-function">Solution 5: Utilizing the ifelse() Function:</h2>
-<p>The ifelse() function in R allows for concise and efficient conditional statements. This solution demonstrates its use to solve the FizzBuzz problem.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solution 5: Utilizing the `ifelse()` Function</span></span>
-<span id="cb9-2"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>) {</span>
-<span id="cb9-3">  result <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">15</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>,</span>
-<span id="cb9-4">              <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>,</span>
-<span id="cb9-5">                <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>, i)))</span>
-<span id="cb9-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(result)</span>
-<span id="cb9-7">}</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1
-[1] 2
-[1] "Fizz"
-[1] 4
-[1] "Buzz"
-[1] "Fizz"
-[1] 7
-[1] 8
-[1] "Fizz"
-[1] "Buzz"
-[1] 11
-[1] "Fizz"
-[1] 13
-[1] 14
-[1] "FizzBuzz"
-[1] 16
-[1] 17
-[1] "Fizz"
-[1] 19
-[1] "Buzz"
-[1] "Fizz"
-[1] 22
-[1] 23
-[1] "Fizz"
-[1] "Buzz"
-[1] 26
-[1] "Fizz"
-[1] 28
-[1] 29
-[1] "FizzBuzz"
-[1] 31
-[1] 32
-[1] "Fizz"
-[1] 34
-[1] "Buzz"
-[1] "Fizz"
-[1] 37
-[1] 38
-[1] "Fizz"
-[1] "Buzz"
-[1] 41
-[1] "Fizz"
-[1] 43
-[1] 44
-[1] "FizzBuzz"
-[1] 46
-[1] 47
-[1] "Fizz"
-[1] 49
-[1] "Buzz"
-[1] "Fizz"
-[1] 52
-[1] 53
-[1] "Fizz"
-[1] "Buzz"
-[1] 56
-[1] "Fizz"
-[1] 58
-[1] 59
-[1] "FizzBuzz"
-[1] 61
-[1] 62
-[1] "Fizz"
-[1] 64
-[1] "Buzz"
-[1] "Fizz"
-[1] 67
-[1] 68
-[1] "Fizz"
-[1] "Buzz"
-[1] 71
-[1] "Fizz"
-[1] 73
-[1] 74
-[1] "FizzBuzz"
-[1] 76
-[1] 77
-[1] "Fizz"
-[1] 79
-[1] "Buzz"
-[1] "Fizz"
-[1] 82
-[1] 83
-[1] "Fizz"
-[1] "Buzz"
-[1] 86
-[1] "Fizz"
-[1] 88
-[1] 89
-[1] "FizzBuzz"
-[1] 91
-[1] 92
-[1] "Fizz"
-[1] 94
-[1] "Buzz"
-[1] "Fizz"
-[1] 97
-[1] 98
-[1] "Fizz"
-[1] "Buzz"</code></pre>
-</div>
-</div>
-</section>
-<section id="solution-6-functional-programming-approach-with-purrr-package" class="level2">
-<h2 class="anchored" data-anchor-id="solution-6-functional-programming-approach-with-purrr-package">Solution 6: Functional Programming Approach with purrr Package</h2>
-<p>Leveraging the power of functional programming, this solution utilizes the map() function from the purrr package to solve the FizzBuzz problem.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solution 6: Functional Programming Approach with `purrr` Package</span></span>
-<span id="cb11-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(purrr)</span>
-<span id="cb11-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">map</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">function</span>(i) {</span>
-<span id="cb11-4">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;</span> i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb11-5">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">return</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>)</span>
-<span id="cb11-6">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb11-7">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">return</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>)</span>
-<span id="cb11-8">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (i <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb11-9">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">return</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>)</span>
-<span id="cb11-10">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span></span>
-<span id="cb11-11">    <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">return</span>(i)</span>
-<span id="cb11-12">})</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[[1]]
-[1] 1
-
-[[2]]
-[1] 2
-
-[[3]]
-[1] "Fizz"
-
-[[4]]
-[1] 4
-
-[[5]]
-[1] "Buzz"
-
-[[6]]
-[1] "Fizz"
-
-[[7]]
-[1] 7
-
-[[8]]
-[1] 8
-
-[[9]]
-[1] "Fizz"
-
-[[10]]
-[1] "Buzz"
-
-[[11]]
-[1] 11
-
-[[12]]
-[1] "Fizz"
-
-[[13]]
-[1] 13
-
-[[14]]
-[1] 14
-
-[[15]]
-[1] "FizzBuzz"
-
-[[16]]
-[1] 16
-
-[[17]]
-[1] 17
-
-[[18]]
-[1] "Fizz"
-
-[[19]]
-[1] 19
-
-[[20]]
-[1] "Buzz"
-
-[[21]]
-[1] "Fizz"
-
-[[22]]
-[1] 22
-
-[[23]]
-[1] 23
-
-[[24]]
-[1] "Fizz"
-
-[[25]]
-[1] "Buzz"
-
-[[26]]
-[1] 26
-
-[[27]]
-[1] "Fizz"
-
-[[28]]
-[1] 28
-
-[[29]]
-[1] 29
-
-[[30]]
-[1] "FizzBuzz"
-
-[[31]]
-[1] 31
-
-[[32]]
-[1] 32
-
-[[33]]
-[1] "Fizz"
-
-[[34]]
-[1] 34
-
-[[35]]
-[1] "Buzz"
-
-[[36]]
-[1] "Fizz"
-
-[[37]]
-[1] 37
-
-[[38]]
-[1] 38
-
-[[39]]
-[1] "Fizz"
-
-[[40]]
-[1] "Buzz"
-
-[[41]]
-[1] 41
-
-[[42]]
-[1] "Fizz"
-
-[[43]]
-[1] 43
-
-[[44]]
-[1] 44
-
-[[45]]
-[1] "FizzBuzz"
-
-[[46]]
-[1] 46
-
-[[47]]
-[1] 47
-
-[[48]]
-[1] "Fizz"
-
-[[49]]
-[1] 49
-
-[[50]]
-[1] "Buzz"
-
-[[51]]
-[1] "Fizz"
-
-[[52]]
-[1] 52
-
-[[53]]
-[1] 53
-
-[[54]]
-[1] "Fizz"
-
-[[55]]
-[1] "Buzz"
-
-[[56]]
-[1] 56
-
-[[57]]
-[1] "Fizz"
-
-[[58]]
-[1] 58
-
-[[59]]
-[1] 59
-
-[[60]]
-[1] "FizzBuzz"
-
-[[61]]
-[1] 61
-
-[[62]]
-[1] 62
-
-[[63]]
-[1] "Fizz"
-
-[[64]]
-[1] 64
-
-[[65]]
-[1] "Buzz"
-
-[[66]]
-[1] "Fizz"
-
-[[67]]
-[1] 67
-
-[[68]]
-[1] 68
-
-[[69]]
-[1] "Fizz"
-
-[[70]]
-[1] "Buzz"
-
-[[71]]
-[1] 71
-
-[[72]]
-[1] "Fizz"
-
-[[73]]
-[1] 73
-
-[[74]]
-[1] 74
-
-[[75]]
-[1] "FizzBuzz"
-
-[[76]]
-[1] 76
-
-[[77]]
-[1] 77
-
-[[78]]
-[1] "Fizz"
-
-[[79]]
-[1] 79
-
-[[80]]
-[1] "Buzz"
-
-[[81]]
-[1] "Fizz"
-
-[[82]]
-[1] 82
-
-[[83]]
-[1] 83
-
-[[84]]
-[1] "Fizz"
-
-[[85]]
-[1] "Buzz"
-
-[[86]]
-[1] 86
-
-[[87]]
-[1] "Fizz"
-
-[[88]]
-[1] 88
-
-[[89]]
-[1] 89
-
-[[90]]
-[1] "FizzBuzz"
-
-[[91]]
-[1] 91
-
-[[92]]
-[1] 92
-
-[[93]]
-[1] "Fizz"
-
-[[94]]
-[1] 94
-
-[[95]]
-[1] "Buzz"
-
-[[96]]
-[1] "Fizz"
-
-[[97]]
-[1] 97
-
-[[98]]
-[1] 98
-
-[[99]]
-[1] "Fizz"
-
-[[100]]
-[1] "Buzz"</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="solution-7-creating-a-lookup-table" class="level1">
-<h1>Solution 7: Creating a Lookup Table</h1>
-<p>By creating a lookup table using a data frame or a named vector, this solution simplifies the FizzBuzz logic and enhances code readability.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solution 7: Creating a Lookup Table</span></span>
-<span id="cb13-2">lookup_table <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">number =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">result =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">as.character</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>))</span>
-<span id="cb13-3">lookup_table<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>result[lookup_table<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>number <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>] <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span></span>
-<span id="cb13-4">lookup_table<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>result[lookup_table<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>number <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>] <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span></span>
-<span id="cb13-5">lookup_table<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>result[lookup_table<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>number <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">15</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>] <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span></span>
-<span id="cb13-6"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(lookup_table<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>result)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  [1] "1"        "2"        "Fizz"     "4"        "Buzz"     "Fizz"    
-  [7] "7"        "8"        "Fizz"     "Buzz"     "11"       "Fizz"    
- [13] "13"       "14"       "FizzBuzz" "16"       "17"       "Fizz"    
- [19] "19"       "Buzz"     "Fizz"     "22"       "23"       "Fizz"    
- [25] "Buzz"     "26"       "Fizz"     "28"       "29"       "FizzBuzz"
- [31] "31"       "32"       "Fizz"     "34"       "Buzz"     "Fizz"    
- [37] "37"       "38"       "Fizz"     "Buzz"     "41"       "Fizz"    
- [43] "43"       "44"       "FizzBuzz" "46"       "47"       "Fizz"    
- [49] "49"       "Buzz"     "Fizz"     "52"       "53"       "Fizz"    
- [55] "Buzz"     "56"       "Fizz"     "58"       "59"       "FizzBuzz"
- [61] "61"       "62"       "Fizz"     "64"       "Buzz"     "Fizz"    
- [67] "67"       "68"       "Fizz"     "Buzz"     "71"       "Fizz"    
- [73] "73"       "74"       "FizzBuzz" "76"       "77"       "Fizz"    
- [79] "79"       "Buzz"     "Fizz"     "82"       "83"       "Fizz"    
- [85] "Buzz"     "86"       "Fizz"     "88"       "89"       "FizzBuzz"
- [91] "91"       "92"       "Fizz"     "94"       "Buzz"     "Fizz"    
- [97] "97"       "98"       "Fizz"     "Buzz"    </code></pre>
-</div>
-</div>
-<section id="solution-8-functional-reactive-programming-with-shiny" class="level2">
-<h2 class="anchored" data-anchor-id="solution-8-functional-reactive-programming-with-shiny">Solution 8: Functional Reactive Programming with Shiny</h2>
-<p>This solution showcases the power of Shiny, an R package for web application development, by building an interactive FizzBuzz generator.</p>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Solution 8: Functional Reactive Programmming with Shiny</span></span>
-<span id="cb15-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(shiny)</span>
-<span id="cb15-3"></span>
-<span id="cb15-4">ui <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fluidPage</span>(</span>
-<span id="cb15-5">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">numericInput</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"n"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Enter a number:"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">min =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">max =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">value =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>),</span>
-<span id="cb15-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">verbatimTextOutput</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"result"</span>)</span>
-<span id="cb15-7">)</span>
-<span id="cb15-8"></span>
-<span id="cb15-9">server <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">function</span>(input, output) {</span>
-<span id="cb15-10">  output<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>result <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">renderPrint</span>({</span>
-<span id="cb15-11">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (input<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&amp;</span> input<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb15-12">      <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">return</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>)</span>
-<span id="cb15-13">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (input<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb15-14">      <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">return</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>)</span>
-<span id="cb15-15">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> (input<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>n <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb15-16">      <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">return</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>)</span>
-<span id="cb15-17">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span></span>
-<span id="cb15-18">      <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">return</span>(input<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>n)</span>
-<span id="cb15-19">  })</span>
-<span id="cb15-20">}</span>
-<span id="cb15-21"></span>
-<span id="cb15-22"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">shinyApp</span>(ui, server)</span></code></pre></div>
-</section>
-</section>
-<section id="conclusion" class="level1">
-<h1>Conclusion:</h1>
-<p>The FizzBuzz problem provides an excellent opportunity to explore various programming techniques in R, ranging from basic conditional statements to advanced functional programming concepts. By presenting eight diverse solutions, this article aimed to demonstrate the flexibility and creativity that R offers when solving coding challenges. Each approach offers a unique perspective and highlights different aspects of the R language, allowing developers to expand their knowledge and problem-solving skills. Whether you are a beginner or an experienced R programmer, these solutions provide valuable insights into the multiple ways to tackle the FizzBuzz problem in R.</p>
-
-
-</section>
-
- ]]></description>
-  <category>r programming</category>
-  <category>fizzbuzz</category>
-  <category>loops</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/fizzbuzz_r/index.html</guid>
-  <pubDate>Mon, 19 Jun 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
