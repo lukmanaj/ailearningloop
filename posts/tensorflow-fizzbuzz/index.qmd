@@ -4,7 +4,6 @@ author: "Lukman Aliyu Jibril"
 date: "2023-11-04"
 categories: [ai,tensorflow,programming,python]
 image: 'ibm.png'
-draft: true
 ---
 
 
@@ -54,11 +53,11 @@ def fizzbuzz(max_num):
 
         print(tf.switch_case(tf.cast(fizzbuzz, tf.int32) + tf.cast(fizz, tf.int32) + 2 * tf.cast(buzz, tf.int32),
                              branch_fns={
-                                 0: lambda: num_tf,
-                                 1: lambda: tf.constant("Fizz"),
-                                 2: lambda: tf.constant("Buzz"),
-                                 3: lambda: tf.constant("FizzBuzz")
-                             }).numpy())
+                                 0: lambda: num_tf.numpy(),
+                                 1: lambda: tf.constant("Fizz").numpy().decode("utf-8"),
+                                 2: lambda: tf.constant("Buzz").numpy().decode("utf-8"),
+                                 3: lambda: tf.constant("FizzBuzz").numpy().decode("utf-8")
+                             }))
 
 fizzbuzz(15)
 

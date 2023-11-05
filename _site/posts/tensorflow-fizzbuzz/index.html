@@ -1124,34 +1124,34 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(tf.switch_case(tf.cast(fizzbuzz, tf.int32) <span class="op">+</span> tf.cast(fizz, tf.int32) <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> tf.cast(buzz, tf.int32),</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                             branch_fns<span class="op">=</span>{</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">0</span>: <span class="kw">lambda</span>: num_tf,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">1</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"Fizz"</span>),</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">2</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"Buzz"</span>),</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">3</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"FizzBuzz"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                             }).numpy())</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">0</span>: <span class="kw">lambda</span>: num_tf.numpy(),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">1</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"Fizz"</span>).numpy().decode(<span class="st">"utf-8"</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">2</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"Buzz"</span>).numpy().decode(<span class="st">"utf-8"</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">3</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"FizzBuzz"</span>).numpy().decode(<span class="st">"utf-8"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                             }))</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>fizzbuzz(<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2023-11-05 20:46:11.191724: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+<pre><code>2023-11-05 21:00:11.748024: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2023-11-05 20:46:15.292317: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
+2023-11-05 21:00:18.500453: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1
 2
-b'Fizz'
+Fizz
 4
-b'Buzz'
-b'Fizz'
+Buzz
+Fizz
 7
 8
-b'Fizz'
-b'Buzz'
+Fizz
+Buzz
 11
-b'Fizz'
+Fizz
 13
 14
-b'FizzBuzz'</code></pre>
+FizzBuzz</code></pre>
 </div>
 </div>
 </section>
