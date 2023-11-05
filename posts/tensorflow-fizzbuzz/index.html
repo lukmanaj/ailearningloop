@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-11-04">
+<meta name="dcterms.date" content="2023-11-05">
 
 <title>ailearningloop - Computation Graphs, Eager Execution and Flow Control in TensorFlow</title>
 <style>
@@ -179,7 +179,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 4, 2023</p>
+        <p class="date">November 5, 2023</p>
       </div>
     </div>
     
@@ -1084,18 +1084,14 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
 <p>TensorFlow is a popular deep learning framework that provides a robust platform for the creation and execution of computational graphs. Understanding how TensorFlow handles computation through graphs, eager execution, and flow control is pivotal for effectively deploying machine learning/deep learning models.</p>
-<ol type="1">
-<li>Computation Graphs in TensorFlow:</li>
-</ol>
+<p><strong><em>1. Computation Graphs in TensorFlow:</em></strong></p>
 <p>A computation graph is a series of TensorFlow operations arranged into a graph of nodes. Each node represents an operation, while the edges represent the data consumed or produced by an operation. This structure allows TensorFlow to optimize the computation, especially in deep learning models.</p>
 <p><strong>Benefits of Computation Graphs:</strong></p>
 <ul>
 <li>Efficiency: Operations can be parallelized across different processors (CPUs, GPUs).</li>
 <li>Portability: The graph can be executed on different devices and platforms.</li>
 </ul>
-<ol start="2" type="1">
-<li>Eager Execution in TensorFlow:</li>
-</ol>
+<p><strong><em>2. Eager Execution in TensorFlow:</em></strong></p>
 <p>Eager execution is an imperative programming environment that evaluates operations immediately. It contrasts with graph execution in that it doesn’t require a computational graph to be defined before running operations.</p>
 <p><strong>Advantages of Eager Execution:</strong></p>
 <ul>
@@ -1108,7 +1104,11 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <p>TensorFlow provides various tools for flow control, enabling the creation of dynamic models. This includes conditionals and loops, which are essential in many machine learning algorithms.</p>
 <section id="tensorflow-functions-for-flow-control" class="level3">
 <h3 class="anchored" data-anchor-id="tensorflow-functions-for-flow-control">TensorFlow Functions for Flow Control:</h3>
-<p>tf.cond: Provides a way to perform conditional execution. tf.while_loop: Allows for the creation of dynamic loops in the graph. tf.switch_case: Used for creating conditional branching.</p>
+<ul>
+<li>tf.cond: Provides a way to perform conditional execution.</li>
+<li>tf.while_loop: Allows for the creation of dynamic loops in the graph.</li>
+<li>tf.switch_case: Used for creating conditional branching.</li>
+</ul>
 <section id="demonstrating-flow-control-using-fizzbuzz-in-tensorflow" class="level4">
 <h4 class="anchored" data-anchor-id="demonstrating-flow-control-using-fizzbuzz-in-tensorflow">Demonstrating Flow Control using FizzBuzz in Tensorflow</h4>
 <p>In a few lines of code, I try to demonstate some tensorflow functionalities using the popular FizzBuzz.</p>
@@ -1132,9 +1132,9 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>fizzbuzz(<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2023-11-05 21:00:11.748024: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+<pre><code>2023-11-05 21:07:15.366672: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2023-11-05 21:00:18.500453: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
+2023-11-05 21:07:22.171045: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1
