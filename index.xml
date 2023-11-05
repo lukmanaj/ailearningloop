@@ -10,7 +10,37 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Sat, 07 Oct 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 04 Nov 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Preparing for the Future of AI: My Journey with IBM’s AI Engineering Professional Certificate</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>As I continue to navigate through the rich and complex landscape of artificial intelligence, I had the pleasure of completing IBM’s esteemed AI Engineering Professional Certificate program, hosted on Coursera. This immersive experience, spanning six comprehensive courses, was a deep dive into the intricacies of machine learning algorithms, TensorFlow, PyTorch, Keras, and the fascinating world of computer vision.</p>
+<p>My journey was particularly steeped in the latter, culminating in a capstone project that put my newfound expertise to the test. I take immense pride in weaving another layer of accomplishment into my burgeoning portfolio of certifications, each course further endorsed by distinct skill badges, with a special one recognizing the entire professional certificate achievement.</p>
+<p>This program marks my second venture with IBM, building upon the foundational knowledge I acquired in their Data Science certificate. The initial course, “Machine Learning for Python,” served as a welcome refresher, reinforcing concepts I had previously encountered.</p>
+<p>As the curriculum progressed, it transitioned into the realm of deep learning, commencing with neural networks and employing the Keras framework. The choice of Keras was deliberate; its simplicity and beginner-friendly nature are perfect for those keen on rapid development and prototyping.</p>
+<p>Subsequent courses whisked me through the mechanics of Computer Vision and image processing. The revelation of how to deftly manipulate images using PIL and OpenCV libraries was nothing short of revelatory.</p>
+<p>My skill set expanded further as I delved into constructing sophisticated deep neural networks, courtesy of PyTorch and TensorFlow. The program’s thoughtful design ensured that by the finale—a challenging capstone project—I had amassed a trove of knowledge, a nuanced understanding of frameworks like Keras, TensorFlow, and PyTorch, as well as a portfolio of mini-projects and skill badges to showcase my competencies.</p>
+<p>The experience was immensely rewarding, with each course’s Jupyter notebooks serving as a solid foundation that will underpin my future endeavors in AI. For enthusiasts and aspiring professionals, I wholeheartedly endorse this professional certification. While the material might hail from an earlier era in this fast-evolving field, a commitment to refreshing the codes and staying abreast of the latest trends will ground you firmly in the essential principles of AI.</p>
+<p>Embark on this journey, and you too can unlock the transformative power of AI, paving the way for a future rich with possibility.</p>
+
+
+
+ ]]></description>
+  <category>ai</category>
+  <category>pytorch</category>
+  <category>keras</category>
+  <category>tensorflow</category>
+  <category>computer vision</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/index.html</guid>
+  <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/ibm.png" medium="image" type="image/png" height="111" width="144"/>
+</item>
 <item>
   <title>Data Visualization with R using ggplot2</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -4667,80 +4697,6 @@ font-style: inherit;">shinyApp</span>(ui, server)</span></code></pre></div>
   <category>loops</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/fizzbuzz_r/index.html</guid>
   <pubDate>Mon, 19 Jun 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Harnessing the Power of Natural Language Processing: A Guide to Python and R Packages and Practical Use-Cases</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/nlp/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In today’s digital age, the sheer volume of text-based data being generated has grown exponentially. Extracting meaningful insights and knowledge from this vast amount of information is a daunting task, however, Natural Language Processing (NLP) offers a solution. NLP combines artificial intelligence, computational linguistics, and computer science to enable computers to understand, interpret, and generate human language. In this article, we will explore popular Python and R packages (as both languages are dear to my heart) for NLP and delve into some practical use-cases that demonstrate the power of this technology.</p>
-</section>
-<section id="python-packages-for-nlp" class="level2">
-<h2 class="anchored" data-anchor-id="python-packages-for-nlp">Python Packages for NLP</h2>
-<ol type="1">
-<li><p>NLTK (Natural Language Toolkit): NLTK is a comprehensive library that provides a wide range of tools and algorithms for NLP tasks. It offers functionalities for tokenization, stemming, lemmatization, part-of-speech tagging, named entity recognition, sentiment analysis, and much more. NLTK is an excellent choice for beginners due to its extensive documentation and user-friendly interfaces.</p></li>
-<li><p>spaCy:</p></li>
-</ol>
-<p>spaCy is a powerful and efficient library for NLP tasks. It is designed to be fast and scalable, making it suitable for processing large volumes of text. spaCy provides pre-trained models for various languages, allowing users to perform tasks such as tokenization, entity recognition, dependency parsing, and text classification with ease.</p>
-<ol start="3" type="1">
-<li>TextBlob :</li>
-</ol>
-<p>TextBlob is a simple and intuitive library built on top of NLTK. It provides an easy-to-use API for common NLP tasks, including sentiment analysis, part-of-speech tagging, noun phrase extraction, translation, and more. TextBlob also includes a sentiment lexicon and can be extended with custom models.</p>
-</section>
-<section id="r-packages-for-nlp" class="level2">
-<h2 class="anchored" data-anchor-id="r-packages-for-nlp">R Packages for NLP</h2>
-<ol type="1">
-<li><p>tm (Text Mining Package): The tm package is a popular choice for text mining and NLP in R. It offers functions for data preprocessing, such as text cleaning, tokenization, and stemming. The package also provides convenient utilities for creating document-term matrices and performing various text mining operations like topic modeling and sentiment analysis.</p></li>
-<li><p>tidytext:</p></li>
-</ol>
-<p>tidytext is an R package that leverages the principles of tidy data and the tidyverse ecosystem for NLP tasks. It provides a consistent and straightforward interface for working with text data, allowing users to perform operations like tokenization, n-gram creation, sentiment analysis, and term frequency-inverse document frequency (TF-IDF) calculations.</p>
-<ol start="3" type="1">
-<li>NLP:</li>
-</ol>
-<p>The NLP package in R provides a broad set of functionalities for natural language processing. It includes tools for part-of-speech tagging, named entity recognition, tokenization, stemming, and sentiment analysis. The package also offers utilities for creating word clouds, visualizing term frequencies, and exploring co-occurrence networks.</p>
-</section>
-<section id="practical-use-cases-of-nlp" class="level2">
-<h2 class="anchored" data-anchor-id="practical-use-cases-of-nlp">Practical Use-Cases of NLP</h2>
-<ol type="1">
-<li><p>Sentiment Analysis: NLP allows us to analyze sentiment from text data, enabling businesses to understand customer opinions, evaluate product reviews, and gauge public sentiment towards brands. By using sentiment analysis, companies can make data-driven decisions to improve their products and services, enhance customer satisfaction, and manage their online reputation effectively.</p></li>
-<li><p>Text Classification:</p></li>
-</ol>
-<p>NLP techniques can be employed for automatic text classification, where documents are categorized into predefined classes. This has various applications, such as spam email detection, sentiment-based classification, topic categorization, and content filtering. Text classification helps in organizing and retrieving information efficiently, saving time and effort.</p>
-<ol start="3" type="1">
-<li>Named Entity Recognition (NER) cont’d:</li>
-</ol>
-<p>NER allows for the extraction of key information from large volumes of text, aiding in tasks like information retrieval, knowledge graph construction, and data integration. For example, in the healthcare industry, NER can be used to identify medical entities from clinical records, enabling better patient care and medical research.</p>
-<ol start="4" type="1">
-<li>Machine Translation:</li>
-</ol>
-<p>NLP plays a pivotal role in machine translation, making it possible to automatically translate text from one language to another. This has immense practical value in global communication, cross-border collaborations, and content localization. Machine translation systems like Google Translate leverage NLP techniques to deliver accurate and fluent translations.</p>
-<ol start="5" type="1">
-<li>Chatbots and Virtual Assistants:</li>
-</ol>
-<p>Natural Language Processing is at the core of chatbot and virtual assistant technology. These AI-powered systems can understand and respond to human queries, provide customer support, and automate routine tasks. NLP enables chatbots to process and interpret natural language inputs, generating relevant and context-aware responses, enhancing user experiences.</p>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Natural Language Processing has revolutionized the way we interact with text-based data. With the availability of powerful Python and R packages, NLP tasks have become more accessible for people with limited programming skills and the tasks have become more efficient too. Packages like NLTK, spaCy, TextBlob, tm, tidytext, and NLP offer a rich set of tools and functionalities for various NLP tasks. From sentiment analysis and text classification to named entity recognition and machine translation, NLP has practical applications across industries, including customer feedback analysis, information extraction, and automated language processing systems.</p>
-<p>As NLP continues to advance, we can expect even more sophisticated algorithms and techniques to emerge, further enhancing our ability to extract valuable insights from text data. Whether it’s analyzing customer sentiments, automating language processing tasks, or building intelligent chatbots, NLP opens up a world of possibilities for businesses and researchers alike. By harnessing the power of NLP and leveraging the diverse range of Python and R packages available, we can unlock the full potential of natural language understanding and pave the way for a more connected and intelligent future.</p>
-
-
-</section>
-
- ]]></description>
-  <category>natural language processing</category>
-  <category>python</category>
-  <category>r</category>
-  <category>packages</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/nlp/index.html</guid>
-  <pubDate>Tue, 13 Jun 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/nlp/nlp.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
