@@ -1,7 +1,7 @@
 ---
 title: "Computation Graphs, Eager Execution and Flow Control in TensorFlow"
 author: "Lukman Aliyu Jibril"
-date: "2023-11-04"
+date: "2023-11-05"
 categories: [ai,tensorflow,programming,python]
 image: 'ibm.png'
 ---
@@ -11,7 +11,7 @@ image: 'ibm.png'
 
 TensorFlow is a popular deep learning framework that  provides a robust platform for the creation and execution of computational graphs. Understanding how TensorFlow handles computation through graphs, eager execution, and flow control is pivotal for effectively deploying machine learning/deep learning models.
 
-1. Computation Graphs in TensorFlow:
+***1. Computation Graphs in TensorFlow:***
 
 A computation graph is a series of TensorFlow operations arranged into a graph of nodes. Each node represents an operation, while the edges represent the data consumed or produced by an operation. This structure allows TensorFlow to optimize the computation, especially in deep learning models.
 
@@ -20,7 +20,7 @@ A computation graph is a series of TensorFlow operations arranged into a graph o
  - Efficiency: Operations can be parallelized across different processors (CPUs, GPUs).
  - Portability: The graph can be executed on different devices and platforms.
 
-2. Eager Execution in TensorFlow:
+***2. Eager Execution in TensorFlow:***
 
 Eager execution is an imperative programming environment that evaluates operations immediately. It contrasts with graph execution in that it doesn't require a computational graph to be defined before running operations.
 
@@ -34,9 +34,9 @@ Eager execution is an imperative programming environment that evaluates operatio
 TensorFlow provides various tools for flow control, enabling the creation of dynamic models. This includes conditionals and loops, which are essential in many machine learning algorithms.
 
 ### TensorFlow Functions for Flow Control:
-tf.cond: Provides a way to perform conditional execution.
-tf.while_loop: Allows for the creation of dynamic loops in the graph.
-tf.switch_case: Used for creating conditional branching. 
+- tf.cond: Provides a way to perform conditional execution.
+- tf.while_loop: Allows for the creation of dynamic loops in the graph.
+- tf.switch_case: Used for creating conditional branching. 
 
 #### Demonstrating Flow Control using FizzBuzz in Tensorflow
 In a few lines of code, I try to demonstate some tensorflow functionalities using the popular FizzBuzz. 
