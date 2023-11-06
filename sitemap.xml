@@ -2,162 +2,166 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/math-for-ml/index.html</loc>
-    <lastmod>2023-11-06T20:19:29.377Z</lastmod>
+    <lastmod>2023-11-06T20:47:10.466Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/30-days-python/index.html</loc>
-    <lastmod>2023-11-06T20:19:28.821Z</lastmod>
+    <lastmod>2023-11-06T20:47:09.766Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/sigmoid/index.html</loc>
-    <lastmod>2023-11-06T20:19:28.209Z</lastmod>
+    <lastmod>2023-11-06T20:47:09.014Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/nlp/index.html</loc>
-    <lastmod>2023-11-06T20:19:27.597Z</lastmod>
+    <lastmod>2023-11-06T20:47:08.270Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/index.html</loc>
-    <lastmod>2023-11-06T20:19:26.889Z</lastmod>
+    <lastmod>2023-11-06T20:47:07.406Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/fizzbuzz_r/index.html</loc>
-    <lastmod>2023-11-06T20:19:25.849Z</lastmod>
+    <lastmod>2023-11-06T20:47:06.138Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/fellowship-conclusion/index.html</loc>
-    <lastmod>2023-11-06T20:19:24.993Z</lastmod>
+    <lastmod>2023-11-06T20:47:05.138Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/r-vectorized-code/index.html</loc>
-    <lastmod>2023-11-06T20:19:24.441Z</lastmod>
+    <lastmod>2023-11-06T20:47:04.438Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/pandas2/index.html</loc>
-    <lastmod>2023-11-06T20:19:23.485Z</lastmod>
+    <lastmod>2023-11-06T20:47:03.294Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/web-scraping/index.html</loc>
-    <lastmod>2023-11-06T20:19:22.953Z</lastmod>
+    <lastmod>2023-11-06T20:47:02.614Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/ggplot/index.html</loc>
-    <lastmod>2023-11-06T20:19:22.273Z</lastmod>
+    <lastmod>2023-11-06T20:47:01.806Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/arewads/index.html</loc>
-    <lastmod>2023-11-06T20:19:21.481Z</lastmod>
+    <lastmod>2023-11-06T20:47:00.914Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/fizzbuzz-javascript/index.html</loc>
-    <lastmod>2023-11-06T20:19:20.821Z</lastmod>
+    <lastmod>2023-11-06T20:47:00.086Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/index.html</loc>
-    <lastmod>2023-11-06T20:19:19.757Z</lastmod>
+    <lastmod>2023-11-06T20:46:58.810Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/cleancodes/index.html</loc>
-    <lastmod>2023-11-06T20:19:19.113Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/posts/effective-writing/index.html</loc>
-    <lastmod>2023-11-06T20:19:18.485Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/posts/project/index.html</loc>
-    <lastmod>2023-11-06T20:19:17.877Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/posts/pytorch-regression/index.html</loc>
-    <lastmod>2023-11-06T20:19:16.949Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/posts/visualization/index.html</loc>
-    <lastmod>2023-11-06T20:19:16.289Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/about.html</loc>
-    <lastmod>2023-11-06T20:19:15.553Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/index.html</loc>
-    <lastmod>2023-11-06T20:19:15.025Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/posts/claudiu-talk/index.html</loc>
-    <lastmod>2023-11-06T20:19:15.857Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/index.html</loc>
-    <lastmod>2023-11-06T20:19:16.573Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/posts/matrix/index.html</loc>
-    <lastmod>2023-11-06T20:19:17.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukmanaj.github.io/ailearningloop/posts/arewads-impact/index.html</loc>
-    <lastmod>2023-11-06T20:19:18.189Z</lastmod>
+    <lastmod>2023-11-06T20:46:58.030Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/index.html</loc>
-    <lastmod>2023-11-06T20:19:18.813Z</lastmod>
+    <lastmod>2023-11-06T20:46:57.194Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/arewads-impact/index.html</loc>
+    <lastmod>2023-11-06T20:46:56.410Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/matrix/index.html</loc>
+    <lastmod>2023-11-06T20:46:55.462Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/index.html</loc>
+    <lastmod>2023-11-06T20:46:54.406Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/claudiu-talk/index.html</loc>
+    <lastmod>2023-11-06T20:46:53.534Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/index.html</loc>
+    <lastmod>2023-11-06T20:46:52.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/about.html</loc>
+    <lastmod>2023-11-06T20:46:53.166Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/visualization/index.html</loc>
+    <lastmod>2023-11-06T20:46:54.058Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/pytorch-regression/index.html</loc>
+    <lastmod>2023-11-06T20:46:54.850Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/project/index.html</loc>
+    <lastmod>2023-11-06T20:46:56.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/effective-writing/index.html</loc>
+    <lastmod>2023-11-06T20:46:56.798Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-pytorch-fizzbuzz/index.html</loc>
+    <lastmod>2023-11-06T20:46:57.670Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/sciences-writing/index.html</loc>
-    <lastmod>2023-11-06T20:19:19.473Z</lastmod>
+    <lastmod>2023-11-06T20:46:58.470Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/viz/index.html</loc>
-    <lastmod>2023-11-06T20:19:20.193Z</lastmod>
+    <lastmod>2023-11-06T20:46:59.346Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/sympy/index.html</loc>
-    <lastmod>2023-11-06T20:19:21.209Z</lastmod>
+    <lastmod>2023-11-06T20:47:00.550Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/gans/index.html</loc>
-    <lastmod>2023-11-06T20:19:21.801Z</lastmod>
+    <lastmod>2023-11-06T20:47:01.254Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/practice-concepts/index.html</loc>
-    <lastmod>2023-11-06T20:19:22.569Z</lastmod>
+    <lastmod>2023-11-06T20:47:02.162Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/welcome/index.html</loc>
-    <lastmod>2023-11-06T20:19:23.181Z</lastmod>
+    <lastmod>2023-11-06T20:47:02.926Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/numpy/index.html</loc>
-    <lastmod>2023-11-06T20:19:23.969Z</lastmod>
+    <lastmod>2023-11-06T20:47:03.890Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/writearticles/index.html</loc>
-    <lastmod>2023-11-06T20:19:24.721Z</lastmod>
+    <lastmod>2023-11-06T20:47:04.814Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/ml-ai/index.html</loc>
-    <lastmod>2023-11-06T20:19:25.293Z</lastmod>
+    <lastmod>2023-11-06T20:47:05.466Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/pandas/index.html</loc>
-    <lastmod>2023-11-06T20:19:26.597Z</lastmod>
+    <lastmod>2023-11-06T20:47:07.042Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/unet/index.html</loc>
-    <lastmod>2023-11-06T20:19:27.245Z</lastmod>
+    <lastmod>2023-11-06T20:47:07.838Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/how-to-learn/index.html</loc>
-    <lastmod>2023-11-06T20:19:27.877Z</lastmod>
+    <lastmod>2023-11-06T20:47:08.602Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/index.html</loc>
-    <lastmod>2023-11-06T20:19:28.561Z</lastmod>
+    <lastmod>2023-11-06T20:47:09.438Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/starting-python/index.html</loc>
-    <lastmod>2023-11-06T20:19:29.081Z</lastmod>
+    <lastmod>2023-11-06T20:47:10.098Z</lastmod>
   </url>
 </urlset>

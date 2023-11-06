@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/tensorflow-pytorch-fizzbuzz/index.html",
       "/posts/tensorflow-fizzbuzz/index.html",
       "/posts/ibm-ai-eng/index.html",
       "/posts/ggplot/index.html",
