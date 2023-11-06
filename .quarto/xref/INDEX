@@ -121,5 +121,8 @@
   },
   "posts/tensorflow-fizzbuzz/index.qmd": {
     "index.html": "8f6b4bd2"
+  },
+  "posts/tensorflow-pytorch-fizzbuzz/index.qmd": {
+    "index.html": "87d0d476"
   }
 }

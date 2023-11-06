@@ -1,0 +1,93 @@
+---
+title: "Exploring Deep Learning Frameworks: FizzBuzz with PyTorch, TensorFlow, and Keras"
+author: "Lukman Aliyu Jibril"
+date: "2023-11-06"
+categories: [ai,pytorch,tensorflow,programming,python]
+---
+
+
+## Introduction:
+
+The world of deep learning is dominated by a few key frameworks, each with its unique strengths and idiosyncrasies. PyTorch and TensorFlow are two of the most popular tools in this space, widely used by researchers and industry professionals alike. In this article, we'll explore the differences between these frameworks by implementing the classic FizzBuzz problem in both PyTorch and TensorFlow. Additionally, we'll touch upon Keras, a high-level API for TensorFlow, towards the end.
+
+## FizzBuzz in PyTorch:
+
+PyTorch, developed by Facebook's AI Research lab, is known for its simplicity, ease of use, and dynamic computational graph.
+
+```{python}
+import torch
+
+def fizzbuzz_pytorch(max_num):
+    for num in range(1, max_num + 1):
+        num_torch = torch.tensor(num)
+        fizz = torch.eq(num_torch % 3, 0)
+        buzz = torch.eq(num_torch % 5, 0)
+        fizzbuzz = torch.logical_and(fizz, buzz)
+
+        if fizzbuzz.item():
+            print("FizzBuzz")
+        elif fizz.item():
+            print("Fizz")
+        elif buzz.item():
+            print("Buzz")
+        else:
+            print(num)
+
+fizzbuzz_pytorch(15)
+    
+
+
+```
+
+### Key Points:
+
+- Dynamic Graphs: PyTorch uses dynamic computational graphs (also known as define-by-run graphs). This means that the graph is built on the fly as operations are executed. This is evident in the way PyTorch handles the FizzBuzz logic, providing a more intuitive Pythonic feel.
+- Ease of Debugging: Thanks to its dynamic nature, debugging in PyTorch can be more straightforward using standard Python debugging tools.
+
+
+## FizzBuzz in TensorFlow:
+
+TensorFlow, developed by the Google Brain team, is renowned for its powerful, scalable, and production-ready features.
+
+```{python}
+import tensorflow as tf
+
+def fizzbuzz_tensorflow(max_num):
+    for num in range(1, max_num + 1):
+        num_tf = tf.constant(num)
+        fizz = tf.equal(tf.math.mod(num_tf, 3), 0)
+        buzz = tf.equal(tf.math.mod(num_tf, 5), 0)
+        fizzbuzz = tf.logical_and(fizz, buzz)
+
+        print(tf.switch_case(tf.cast(fizzbuzz, tf.int32) + tf.cast(fizz, tf.int32) + 2 * tf.cast(buzz, tf.int32),
+                             branch_fns={
+                                 0: lambda: num_tf,
+                                 1: lambda: tf.constant("Fizz"),
+                                 2: lambda: tf.constant("Buzz"),
+                                 3: lambda: tf.constant("FizzBuzz")
+                             }).numpy())
+
+fizzbuzz_tensorflow(15)
+
+```
+
+
+### Key Points:
+
+- Static Graphs: TensorFlow traditionally used static computational graphs, where the graph is defined before it is executed. TensorFlow 2.x, however, introduced eager execution, which allows a more dynamic approach, similar to PyTorch.
+- Scalability and Deployment: TensorFlow shines in scalability and deployment, especially in distributed settings and production environments.
+
+## Understanding the Differences:
+
+While both implementations achieve the same goal, they highlight some fundamental differences between the two frameworks:
+
+- Graph Building: In TensorFlow, you often define placeholders and sessions (though less so with eager execution), whereas PyTorch adopts a more straightforward approach using regular Python variables and loops.
+- Tensors: Both frameworks use tensors as their fundamental data structure, but the way they handle these tensors varies, reflecting their different approaches to graph computation.
+
+## A Note on Keras:
+
+Keras, now fully integrated into TensorFlow as tf.keras, offers a high-level, user-friendly API. It abstracts many details of TensorFlow, making it accessible for beginners. While Keras might not be the first choice for implementing a simple program like FizzBuzz, it's an invaluable tool for more complex deep learning models, offering pre-built layers, models, and a wealth of utilities.
+
+## Conclusion:
+
+In conclusion, both PyTorch and TensorFlow have their distinct advantages, with PyTorch often being praised for its user-friendly approach and TensorFlow for its scalability and robust deployment capabilities. Keras, as part of TensorFlow, further simplifies the deep learning process, allowing developers to build complex models with ease. Understanding these differences and strengths is crucial for any aspiring or practicing data scientist or AI engineer, helping them choose the right tool for their specific needs and projects.

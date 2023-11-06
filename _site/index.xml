@@ -10,7 +10,280 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Sat, 04 Nov 2023 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 05 Nov 2023 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Exploring Deep Learning Frameworks: FizzBuzz with PyTorch, TensorFlow, and Keras</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-pytorch-fizzbuzz/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
+<p>The world of deep learning is dominated by a few key frameworks, each with its unique strengths and idiosyncrasies. PyTorch and TensorFlow are two of the most popular tools in this space, widely used by researchers and industry professionals alike. In this article, we’ll explore the differences between these frameworks by implementing the classic FizzBuzz problem in both PyTorch and TensorFlow. Additionally, we’ll touch upon Keras, a high-level API for TensorFlow, towards the end.</p>
+</section>
+<section id="fizzbuzz-in-pytorch" class="level2">
+<h2 class="anchored" data-anchor-id="fizzbuzz-in-pytorch">FizzBuzz in PyTorch:</h2>
+<p>PyTorch, developed by Facebook’s AI Research lab, is known for its simplicity, ease of use, and dynamic computational graph.</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torch</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> fizzbuzz_pytorch(max_num):</span>
+<span id="cb1-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, max_num <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb1-5">        num_torch <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.tensor(num)</span>
+<span id="cb1-6">        fizz <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.eq(num_torch <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-7">        buzz <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.eq(num_torch <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-8">        fizzbuzz <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.logical_and(fizz, buzz)</span>
+<span id="cb1-9"></span>
+<span id="cb1-10">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> fizzbuzz.item():</span>
+<span id="cb1-11">            <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FizzBuzz"</span>)</span>
+<span id="cb1-12">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">elif</span> fizz.item():</span>
+<span id="cb1-13">            <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Fizz"</span>)</span>
+<span id="cb1-14">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">elif</span> buzz.item():</span>
+<span id="cb1-15">            <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Buzz"</span>)</span>
+<span id="cb1-16">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb1-17">            <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(num)</span>
+<span id="cb1-18"></span>
+<span id="cb1-19">fizzbuzz_pytorch(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz</code></pre>
+</div>
+</div>
+<section id="key-points" class="level3">
+<h3 class="anchored" data-anchor-id="key-points">Key Points:</h3>
+<ul>
+<li>Dynamic Graphs: PyTorch uses dynamic computational graphs (also known as define-by-run graphs). This means that the graph is built on the fly as operations are executed. This is evident in the way PyTorch handles the FizzBuzz logic, providing a more intuitive Pythonic feel.</li>
+<li>Ease of Debugging: Thanks to its dynamic nature, debugging in PyTorch can be more straightforward using standard Python debugging tools.</li>
+</ul>
+</section>
+</section>
+<section id="fizzbuzz-in-tensorflow" class="level2">
+<h2 class="anchored" data-anchor-id="fizzbuzz-in-tensorflow">FizzBuzz in TensorFlow:</h2>
+<p>TensorFlow, developed by the Google Brain team, is renowned for its powerful, scalable, and production-ready features.</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> tensorflow <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> tf</span>
+<span id="cb3-2"></span>
+<span id="cb3-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> fizzbuzz_tensorflow(max_num):</span>
+<span id="cb3-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, max_num <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb3-5">        num_tf <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> tf.constant(num)</span>
+<span id="cb3-6">        fizz <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>), <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb3-7">        buzz <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>), <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb3-8">        fizzbuzz <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> tf.logical_and(fizz, buzz)</span>
+<span id="cb3-9"></span>
+<span id="cb3-10">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(tf.switch_case(tf.cast(fizzbuzz, tf.int32) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> tf.cast(fizz, tf.int32) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> tf.cast(buzz, tf.int32),</span>
+<span id="cb3-11">                             branch_fns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{</span>
+<span id="cb3-12">                                 <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>: <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span>: num_tf,</span>
+<span id="cb3-13">                                 <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>: <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Fizz"</span>),</span>
+<span id="cb3-14">                                 <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>: <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Buzz"</span>),</span>
+<span id="cb3-15">                                 <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>: <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FizzBuzz"</span>)</span>
+<span id="cb3-16">                             }).numpy())</span>
+<span id="cb3-17"></span>
+<span id="cb3-18">fizzbuzz_tensorflow(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>2023-11-06 21:31:11.118028: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-06 21:31:16.440324: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+2
+b'Fizz'
+4
+b'Buzz'
+b'Fizz'
+7
+8
+b'Fizz'
+b'Buzz'
+11
+b'Fizz'
+13
+14
+b'FizzBuzz'</code></pre>
+</div>
+</div>
+<section id="key-points-1" class="level3">
+<h3 class="anchored" data-anchor-id="key-points-1">Key Points:</h3>
+<ul>
+<li>Static Graphs: TensorFlow traditionally used static computational graphs, where the graph is defined before it is executed. TensorFlow 2.x, however, introduced eager execution, which allows a more dynamic approach, similar to PyTorch.</li>
+<li>Scalability and Deployment: TensorFlow shines in scalability and deployment, especially in distributed settings and production environments.</li>
+</ul>
+</section>
+</section>
+<section id="understanding-the-differences" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-the-differences">Understanding the Differences:</h2>
+<p>While both implementations achieve the same goal, they highlight some fundamental differences between the two frameworks:</p>
+<ul>
+<li>Graph Building: In TensorFlow, you often define placeholders and sessions (though less so with eager execution), whereas PyTorch adopts a more straightforward approach using regular Python variables and loops.</li>
+<li>Tensors: Both frameworks use tensors as their fundamental data structure, but the way they handle these tensors varies, reflecting their different approaches to graph computation.</li>
+</ul>
+</section>
+<section id="a-note-on-keras" class="level2">
+<h2 class="anchored" data-anchor-id="a-note-on-keras">A Note on Keras:</h2>
+<p>Keras, now fully integrated into TensorFlow as tf.keras, offers a high-level, user-friendly API. It abstracts many details of TensorFlow, making it accessible for beginners. While Keras might not be the first choice for implementing a simple program like FizzBuzz, it’s an invaluable tool for more complex deep learning models, offering pre-built layers, models, and a wealth of utilities.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
+<p>In conclusion, both PyTorch and TensorFlow have their distinct advantages, with PyTorch often being praised for its user-friendly approach and TensorFlow for its scalability and robust deployment capabilities. Keras, as part of TensorFlow, further simplifies the deep learning process, allowing developers to build complex models with ease. Understanding these differences and strengths is crucial for any aspiring or practicing data scientist or AI engineer, helping them choose the right tool for their specific needs and projects.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ai</category>
+  <category>pytorch</category>
+  <category>tensorflow</category>
+  <category>programming</category>
+  <category>python</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-pytorch-fizzbuzz/index.html</guid>
+  <pubDate>Sun, 05 Nov 2023 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Computation Graphs, Eager Execution and Flow Control in TensorFlow</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -3364,33 +3637,6 @@ font-style: inherit;">abs_sets</span>(long))</span></code></pre></div>
   <category>research</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/writearticles/index.html</guid>
   <pubDate>Mon, 24 Jul 2023 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Completion of Arewa Data Science Academy Fellowship</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/fellowship-conclusion/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>It is with immense pleasure and gratitude that I announce my successful completion of the Arewa Data Science Academy fellowship. After months of unwavering dedication, deliberate practice, and continuous learning, I have achieved this milestone in my data science journey.</p>
-<p>This journey would not have been possible without the help and blessings of Allah, for with His guidance, nothing is insurmountable. I would like to emphasize the significance of consistency and surrounding oneself with good companions throughout this pursuit. Additionally, I extend my heartfelt appreciation to the supportive mentors who made this entire experience more accessible and enjoyable for all of us.</p>
-<p>The fellowship commenced with a comprehensive introduction to the Python programming language, laying a strong foundation for the subsequent stages of learning. We delved into the realm of machine learning, where we mastered the implementation of algorithms for both supervised and unsupervised learning, as well as reinforcement learning.</p>
-<p>In addition to the core data science curriculum, we had the opportunity to enhance our overall skills by taking courses on Coursera, such as “Learning How to Learn” and “Writing in the Sciences,” which undoubtedly contributed to our growth as aspiring data scientists.</p>
-<p>Furthermore, we were equipped with essential tools and technologies used in the industry, including sessions on git and GitHub for version control, LaTeX for document preparation, and blogging using Quarto and similar platforms.</p>
-<p>I must confess that this fellowship has been a truly transformative experience, one that has enriched my understanding and ignited my passion for data science even more. I am thrilled to invite you all to explore my blog and GitHub repository, where I have documented my learning journey and projects.</p>
-<p>I extend my deepest gratitude to the mentors and organizers of this fellowship for their unwavering support and dedication. Their guidance has been instrumental in shaping our learning and instilling the confidence in us to pursue great things in the near future.</p>
-<p>With Allah’s blessings and our collective potential, I am super confident that we will achieve remarkable feats in the field of data science. Alhamdulillah!</p>
-<p>Thank you all for being a part of this incredible journey.</p>
-
-
-
- ]]></description>
-  <category>arewads</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/fellowship-conclusion/index.html</guid>
-  <pubDate>Sun, 23 Jul 2023 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/fellowship-conclusion/cert.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
