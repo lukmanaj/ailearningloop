@@ -10,7 +10,32 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Sun, 05 Nov 2023 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 07 Dec 2023 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Juggling Code and Career: My Arewa Data Science 30-Day Python Learning Journey Amidst a Full Schedule</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/learning-motivation/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>As part of the first cohort of the Arewa Data Science Academy Data Science and Machine Learning fellowship, embarking on the thirty days of Python challenge, I found myself navigating through the demanding waters of 12-hour work shifts. Despite these professional commitments, I remained steadfast in my participation in the weekend sessions, often balancing work and learning simultaneously. My thirst for knowledge wasn’t confined to my job; it extended to personal interests like improving my French and Arabic, a testament to my multifaceted curiosity. This same drive propelled me towards learning Python, a field I ventured into without any formal background in computer science.</p>
+<p>It’s enlightening to realize that, despite our hectic schedules, we often find pockets of time for activities like browsing social media. This observation led me to a pivotal conclusion: if we can dedicate time to scrolling through feeds, we can surely allocate moments for self-improvement and learning. My approach was methodical yet flexible - committing to consistent, daily progress, and embracing a journey of gradual improvement rather than seeking instant perfection. I wasn’t fixated on getting everything right on my first attempt. Rather, I aimed to complete each day’s exercises, occasionally revisiting previous tasks, to solidify my understanding. This consistent effort was a clear signal of my commitment and eagerness to learn, something that I hoped would be apparent to my mentors. I have since completed the python challenge and eventually the data science fellowship, but the lessons and experiences remain.</p>
+<p>In sharing this experience, my aim is to offer a piece of advice to fellow learners, especially those balancing their professional lives with personal development goals. It’s crucial to assess the role of learning in your life and to find ways to integrate it into your daily routine. The journey of learning programming, particularly a versatile language like Python, is not only about acquiring technical skills. It significantly enhances cognitive abilities, problem-solving skills, and overall mental agility. The impact of this commitment is profound, stretching beyond immediate learning outcomes to influence your professional trajectory and personal growth.</p>
+<p>While we are fortunate to have mentors to guide us, the crux of learning lies in our own hands. It’s about taking responsibility for our growth, proactively seeking help when needed, and not shying away from the challenges that come with stepping out of our comfort zones. This journey has been a rewarding one, filled with lessons that transcend the realm of programming, offering insights into persistence, time management, and the power of small, consistent steps towards a larger goal.</p>
+<p>In conclusion, as you embark on your own learning adventures, remember that the path may not always be easy, but the rewards, both tangible and intangible, are truly worth the effort. Embrace the challenge, cherish the progress, and always keep the flame of curiosity burning bright.</p>
+
+
+
+ ]]></description>
+  <category>learning</category>
+  <category>motivation</category>
+  <category>programming</category>
+  <category>python</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/learning-motivation/index.html</guid>
+  <pubDate>Thu, 07 Dec 2023 22:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Exploring Deep Learning Frameworks: FizzBuzz with PyTorch, TensorFlow, and Keras</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -198,54 +223,60 @@ font-style: inherit;">=</span>{</span>
 background-color: null;
 font-style: inherit;">0</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">lambda</span>: num_tf,</span>
+font-style: inherit;">lambda</span>: num_tf.numpy(),</span>
 <span id="cb3-13">                                 <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Fizz"</span>),</span>
+font-style: inherit;">"Fizz"</span>).numpy().decode(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"utf-8"</span>),</span>
 <span id="cb3-14">                                 <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Buzz"</span>),</span>
+font-style: inherit;">"Buzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"utf-8"</span>),</span>
 <span id="cb3-15">                                 <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"FizzBuzz"</span>)</span>
-<span id="cb3-16">                             }).numpy())</span>
+font-style: inherit;">"FizzBuzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"utf-8"</span>)</span>
+<span id="cb3-16">                             }))</span>
 <span id="cb3-17"></span>
 <span id="cb3-18">fizzbuzz_tensorflow(<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">15</span>)</span></code></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2023-11-06 21:31:11.118028: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+<pre><code>2023-11-07 21:59:05.053558: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2023-11-06 21:31:16.440324: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
+2023-11-07 21:59:35.805842: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1
 2
-b'Fizz'
+Fizz
 4
-b'Buzz'
-b'Fizz'
+Buzz
+Fizz
 7
 8
-b'Fizz'
-b'Buzz'
+Fizz
+Buzz
 11
-b'Fizz'
+Fizz
 13
 14
-b'FizzBuzz'</code></pre>
+FizzBuzz</code></pre>
 </div>
 </div>
 <section id="key-points-1" class="level3">
@@ -282,7 +313,7 @@ b'FizzBuzz'</code></pre>
   <category>programming</category>
   <category>python</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-pytorch-fizzbuzz/index.html</guid>
-  <pubDate>Sun, 05 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 05 Nov 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Computation Graphs, Eager Execution and Flow Control in TensorFlow</title>
@@ -459,7 +490,7 @@ FizzBuzz</code></pre>
   <category>programming</category>
   <category>python</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/index.html</guid>
-  <pubDate>Sat, 04 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Sat, 04 Nov 2023 22:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/ibm.png" medium="image" type="image/png"/>
 </item>
 <item>
@@ -489,7 +520,7 @@ FizzBuzz</code></pre>
   <category>tensorflow</category>
   <category>computer vision</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/index.html</guid>
-  <pubDate>Fri, 03 Nov 2023 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 03 Nov 2023 22:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/ibm.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
@@ -676,7 +707,7 @@ font-style: inherit;">NULL</span>))</span>
   <category>r programming</category>
   <category>data visualization</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/ggplot/index.html</guid>
-  <pubDate>Fri, 06 Oct 2023 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 06 Oct 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Data Science: Foundations using R Specialization</title>
@@ -705,7 +736,7 @@ font-style: inherit;">NULL</span>))</span>
   <category>r programming</category>
   <category>coursera</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/index.html</guid>
-  <pubDate>Mon, 02 Oct 2023 23:00:00 GMT</pubDate>
+  <pubDate>Mon, 02 Oct 2023 22:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/rprogramming/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -1126,7 +1157,7 @@ font-style: inherit;">1</span>))</span></code></pre></div>
   <category>project</category>
   <category>rpubs</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/project/index.html</guid>
-  <pubDate>Sun, 01 Oct 2023 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 01 Oct 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>My Adventure with Generative Adversarial Networks (GANs)</title>
@@ -1153,7 +1184,7 @@ font-style: inherit;">1</span>))</span></code></pre></div>
  ]]></description>
   <category>GANs</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/gans/index.html</guid>
-  <pubDate>Thu, 21 Sep 2023 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 21 Sep 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Metrics for Medical Diagnosis Evaluation</title>
@@ -1259,7 +1290,7 @@ font-style: inherit;">1</span>))</span></code></pre></div>
   <category>evaluation metrics</category>
   <category>medical diagnosis</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/index.html</guid>
-  <pubDate>Sat, 09 Sep 2023 23:00:00 GMT</pubDate>
+  <pubDate>Sat, 09 Sep 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>U-Net Architecture: Revolutionizing Computer Vision Through Innovative Image Segmentation</title>
@@ -1817,7 +1848,7 @@ font-style: inherit;">return</span> x</span></code></pre></div>
   <category>computer vision</category>
   <category>image segmentation</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/unet/index.html</guid>
-  <pubDate>Sun, 27 Aug 2023 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 27 Aug 2023 22:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/unet/unet.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
@@ -1858,7 +1889,7 @@ font-style: inherit;">return</span> x</span></code></pre></div>
   <category>research</category>
   <category>paper summary</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/index.html</guid>
-  <pubDate>Fri, 18 Aug 2023 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 18 Aug 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Matrix Multiplication: Deep Learning Insights, Implementation, and Performance in Python and R</title>
@@ -2265,7 +2296,7 @@ font-style: inherit;">-</span> start_time)</span></code></pre></div>
   <category>matrices</category>
   <category>mathematics</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/matrix/index.html</guid>
-  <pubDate>Tue, 15 Aug 2023 23:00:00 GMT</pubDate>
+  <pubDate>Tue, 15 Aug 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Introduction to Symbolic Computation with SymPy</title>
@@ -2665,7 +2696,7 @@ font-style: inherit;">print</span>(derivatives)</span></code></pre></div>
   <category>mathematics</category>
   <category>symbolic computing</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/sympy/index.html</guid>
-  <pubDate>Mon, 14 Aug 2023 23:00:00 GMT</pubDate>
+  <pubDate>Mon, 14 Aug 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Navigating the Mathematical Marvels: Discovering the Power of Mathematics in Machine Learning</title>
@@ -2691,7 +2722,7 @@ font-style: inherit;">print</span>(derivatives)</span></code></pre></div>
   <category>mathematics</category>
   <category>machine learning</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/math-for-ml/index.html</guid>
-  <pubDate>Sun, 13 Aug 2023 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 13 Aug 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Revving Up: MPG Regression Unleashed through Deep Learning in PyTorch</title>
@@ -3305,7 +3336,7 @@ font-style: inherit;">'Actual vs. Predicted MPG Values'</span>)</span>
   <category>regression</category>
   <category>python</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-regression/index.html</guid>
-  <pubDate>Tue, 08 Aug 2023 23:00:00 GMT</pubDate>
+  <pubDate>Tue, 08 Aug 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>The Crucial Role of the Sigmoid Function and its Derivative in Machine Learning</title>
@@ -3372,7 +3403,7 @@ font-style: inherit;">'Actual vs. Predicted MPG Values'</span>)</span>
   <category>activation</category>
   <category>mathematics</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/sigmoid/index.html</guid>
-  <pubDate>Sun, 06 Aug 2023 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 06 Aug 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Enhancing Effective Writing: Insights from Larry McEnerney’s Leadership Lab</title>
@@ -3400,7 +3431,7 @@ font-style: inherit;">'Actual vs. Predicted MPG Values'</span>)</span>
   <category>research</category>
   <category>effective writing</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/effective-writing/index.html</guid>
-  <pubDate>Thu, 03 Aug 2023 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 03 Aug 2023 22:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/effective-writing/effective_writing.png" medium="image" type="image/png" height="102" width="144"/>
 </item>
 <item>
@@ -3430,7 +3461,7 @@ font-style: inherit;">'Actual vs. Predicted MPG Values'</span>)</span>
   <category>quarto</category>
   <category>writing</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/arewads-impact/index.html</guid>
-  <pubDate>Sun, 30 Jul 2023 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 30 Jul 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Endless Paths in Data Science: Insights from Claudiu Musat’s Talk on Handwriting Synthesis and Career Prospects</title>
@@ -3452,7 +3483,7 @@ font-style: inherit;">'Actual vs. Predicted MPG Values'</span>)</span>
   <category>research</category>
   <category>advice</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/claudiu-talk/index.html</guid>
-  <pubDate>Sat, 29 Jul 2023 23:00:00 GMT</pubDate>
+  <pubDate>Sat, 29 Jul 2023 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Mastering Vectorized Code: Boosting Efficiency in R</title>
@@ -3603,40 +3634,7 @@ font-style: inherit;">abs_sets</span>(long))</span></code></pre></div>
   <category>r programming</category>
   <category>vectorization</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/r-vectorized-code/index.html</guid>
-  <pubDate>Fri, 28 Jul 2023 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Writing a Scientific Paper</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/writearticles/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>In this post, I aim to summarize the key points from the journal article “How to Write a Scientific Article” by Barbara J. Hoogenboom and Robert C. Manske, which offers practical advice for successfully writing and submitting scientific manuscripts to peer-reviewed journals. The authors stress the significance of clear communication and effective writing skills in advancing evidence-based practice and scientific thinking. They cover various aspects of manuscript preparation, general writing tips, and important content sections.</p>
-<p>The introduction emphasizes the importance of publishing research findings in peer-reviewed journals to positively impact the scientific community and clinical decision-making. The authors recognize that writing a scientific paper can be challenging, particularly for inexperienced authors due to various barriers. Nevertheless, they assert that effective writing skills can be honed with practice.</p>
-<p>The article provides valuable tips on manuscript preparation and advises authors to identify a specific target journal and adhere to its submission criteria. The recommended IMRaD format (Introduction, Methods, Results, and Discussion) helps structure scientific manuscripts.</p>
-<p>The authors emphasize the need for clear and accurate expression of ideas and research information. They caution against excessive use of jargon and recommend avoiding first-person language, which might contradict certain viewpoints from other sources.</p>
-<p>Seeking a reading mentor and obtaining feedback on the manuscript before submission are encouraged, particularly for novice writers.</p>
-<p>The article highlights the significance of using figures, graphics, and videos to enhance research presentations. Proper citation and avoiding plagiarism are deemed essential in scientific writing.</p>
-<p>The content section discusses key elements like the abstract, introduction, review of literature, methods, results, discussion, and conclusions. The abstract is deemed critical as it often determines whether readers will continue reading the paper. The introduction should clearly state the research question and justify the study’s significance.</p>
-<p>The methods section should provide sufficient detail for replication of the study, including mentioning ethical approval. The results section should present findings without interpretation, while the discussion section should contextualize results by comparing them with existing evidence.</p>
-<p>In conclusion, the article encourages scholarly writing as a rewarding endeavor that contributes to scientific knowledge and evidence-based practice. It provides valuable insights and practical tips for authors, especially those new to scientific writing, to successfully navigate the publication process and produce high-quality manuscripts.</p>
-<p>It’s worth noting that while most of the article aligns with what I learned in a “Writing in the Sciences” MOOC on Coursera, there may be some differences in opinions regarding the use of first-person language, as it can vary depending on the journal’s preferences and the author’s writing style.</p>
-<section id="reference" class="level3">
-<h3 class="anchored" data-anchor-id="reference">Reference</h3>
-<p>Hoogenboom BJ, Manske RC. How to write a scientific article. Int J Sports Phys Ther. 2012 Oct;7(5):512-7. PMID: 23091783; PMCID: PMC3474301.</p>
-
-
-</section>
-
- ]]></description>
-  <category>scientific writing</category>
-  <category>journal article</category>
-  <category>research</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/writearticles/index.html</guid>
-  <pubDate>Mon, 24 Jul 2023 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 28 Jul 2023 22:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

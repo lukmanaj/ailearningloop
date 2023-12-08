@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-11-06">
+<meta name="dcterms.date" content="2023-12-08">
 
-<title>ailearningloop - Exploring Deep Learning Frameworks: FizzBuzz with PyTorch, TensorFlow, and Keras</title>
+<title>ailearningloop - Juggling Code and Career: My Arewa Data Science 30-Day Python Learning Journey Amidst a Full Schedule</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -156,11 +122,10 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Exploring Deep Learning Frameworks: FizzBuzz with PyTorch, TensorFlow, and Keras</h1>
+      <h1 class="title">Juggling Code and Career: My Arewa Data Science 30-Day Python Learning Journey Amidst a Full Schedule</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">ai</div>
-                <div class="quarto-category">pytorch</div>
-                <div class="quarto-category">tensorflow</div>
+                <div class="quarto-category">learning</div>
+                <div class="quarto-category">motivation</div>
                 <div class="quarto-category">programming</div>
                 <div class="quarto-category">python</div>
               </div>
@@ -180,7 +145,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 6, 2023</p>
+        <p class="date">December 8, 2023</p>
       </div>
     </div>
     
@@ -198,130 +163,13 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
-<p>The world of deep learning is dominated by a few key frameworks, each with its unique strengths and idiosyncrasies. PyTorch and TensorFlow are two of the most popular tools in this space, widely used by researchers and industry professionals alike. In this article, we’ll explore the differences between these frameworks by implementing the classic FizzBuzz problem in both PyTorch and TensorFlow. Additionally, we’ll touch upon Keras, a high-level API for TensorFlow, towards the end.</p>
-</section>
-<section id="fizzbuzz-in-pytorch" class="level2">
-<h2 class="anchored" data-anchor-id="fizzbuzz-in-pytorch">FizzBuzz in PyTorch:</h2>
-<p>PyTorch, developed by Facebook’s AI Research lab, is known for its simplicity, ease of use, and dynamic computational graph.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fizzbuzz_pytorch(max_num):</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, max_num <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        num_torch <span class="op">=</span> torch.tensor(num)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        fizz <span class="op">=</span> torch.eq(num_torch <span class="op">%</span> <span class="dv">3</span>, <span class="dv">0</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        buzz <span class="op">=</span> torch.eq(num_torch <span class="op">%</span> <span class="dv">5</span>, <span class="dv">0</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        fizzbuzz <span class="op">=</span> torch.logical_and(fizz, buzz)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> fizzbuzz.item():</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"FizzBuzz"</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> fizz.item():</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Fizz"</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> buzz.item():</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Buzz"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(num)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>fizzbuzz_pytorch(<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz</code></pre>
-</div>
-</div>
-<section id="key-points" class="level3">
-<h3 class="anchored" data-anchor-id="key-points">Key Points:</h3>
-<ul>
-<li>Dynamic Graphs: PyTorch uses dynamic computational graphs (also known as define-by-run graphs). This means that the graph is built on the fly as operations are executed. This is evident in the way PyTorch handles the FizzBuzz logic, providing a more intuitive Pythonic feel.</li>
-<li>Ease of Debugging: Thanks to its dynamic nature, debugging in PyTorch can be more straightforward using standard Python debugging tools.</li>
-</ul>
-</section>
-</section>
-<section id="fizzbuzz-in-tensorflow" class="level2">
-<h2 class="anchored" data-anchor-id="fizzbuzz-in-tensorflow">FizzBuzz in TensorFlow:</h2>
-<p>TensorFlow, developed by the Google Brain team, is renowned for its powerful, scalable, and production-ready features.</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fizzbuzz_tensorflow(max_num):</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> num <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, max_num <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        num_tf <span class="op">=</span> tf.constant(num)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        fizz <span class="op">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv">3</span>), <span class="dv">0</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        buzz <span class="op">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv">5</span>), <span class="dv">0</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        fizzbuzz <span class="op">=</span> tf.logical_and(fizz, buzz)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(tf.switch_case(tf.cast(fizzbuzz, tf.int32) <span class="op">+</span> tf.cast(fizz, tf.int32) <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> tf.cast(buzz, tf.int32),</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                             branch_fns<span class="op">=</span>{</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">0</span>: <span class="kw">lambda</span>: num_tf.numpy(),</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">1</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"Fizz"</span>).numpy().decode(<span class="st">"utf-8"</span>),</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">2</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"Buzz"</span>).numpy().decode(<span class="st">"utf-8"</span>),</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                                 <span class="dv">3</span>: <span class="kw">lambda</span>: tf.constant(<span class="st">"FizzBuzz"</span>).numpy().decode(<span class="st">"utf-8"</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                             }))</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>fizzbuzz_tensorflow(<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>2023-11-07 21:59:05.053558: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2023-11-07 21:59:35.805842: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz</code></pre>
-</div>
-</div>
-<section id="key-points-1" class="level3">
-<h3 class="anchored" data-anchor-id="key-points-1">Key Points:</h3>
-<ul>
-<li>Static Graphs: TensorFlow traditionally used static computational graphs, where the graph is defined before it is executed. TensorFlow 2.x, however, introduced eager execution, which allows a more dynamic approach, similar to PyTorch.</li>
-<li>Scalability and Deployment: TensorFlow shines in scalability and deployment, especially in distributed settings and production environments.</li>
-</ul>
-</section>
-</section>
-<section id="understanding-the-differences" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-the-differences">Understanding the Differences:</h2>
-<p>While both implementations achieve the same goal, they highlight some fundamental differences between the two frameworks:</p>
-<ul>
-<li>Graph Building: In TensorFlow, you often define placeholders and sessions (though less so with eager execution), whereas PyTorch adopts a more straightforward approach using regular Python variables and loops.</li>
-<li>Tensors: Both frameworks use tensors as their fundamental data structure, but the way they handle these tensors varies, reflecting their different approaches to graph computation.</li>
-</ul>
-</section>
-<section id="a-note-on-keras" class="level2">
-<h2 class="anchored" data-anchor-id="a-note-on-keras">A Note on Keras:</h2>
-<p>Keras, now fully integrated into TensorFlow as tf.keras, offers a high-level, user-friendly API. It abstracts many details of TensorFlow, making it accessible for beginners. While Keras might not be the first choice for implementing a simple program like FizzBuzz, it’s an invaluable tool for more complex deep learning models, offering pre-built layers, models, and a wealth of utilities.</p>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
-<p>In conclusion, both PyTorch and TensorFlow have their distinct advantages, with PyTorch often being praised for its user-friendly approach and TensorFlow for its scalability and robust deployment capabilities. Keras, as part of TensorFlow, further simplifies the deep learning process, allowing developers to build complex models with ease. Understanding these differences and strengths is crucial for any aspiring or practicing data scientist or AI engineer, helping them choose the right tool for their specific needs and projects.</p>
+<p>As part of the first cohort of the Arewa Data Science Academy Data Science and Machine Learning fellowship, embarking on the thirty days of Python challenge, I found myself navigating through the demanding waters of 12-hour work shifts. Despite these professional commitments, I remained steadfast in my participation in the weekend sessions, often balancing work and learning simultaneously. My thirst for knowledge wasn’t confined to my job; it extended to personal interests like improving my French and Arabic, a testament to my multifaceted curiosity. This same drive propelled me towards learning Python, a field I ventured into without any formal background in computer science.</p>
+<p>It’s enlightening to realize that, despite our hectic schedules, we often find pockets of time for activities like browsing social media. This observation led me to a pivotal conclusion: if we can dedicate time to scrolling through feeds, we can surely allocate moments for self-improvement and learning. My approach was methodical yet flexible - committing to consistent, daily progress, and embracing a journey of gradual improvement rather than seeking instant perfection. I wasn’t fixated on getting everything right on my first attempt. Rather, I aimed to complete each day’s exercises, occasionally revisiting previous tasks, to solidify my understanding. This consistent effort was a clear signal of my commitment and eagerness to learn, something that I hoped would be apparent to my mentors. I have since completed the python challenge and eventually the data science fellowship, but the lessons and experiences remain.</p>
+<p>In sharing this experience, my aim is to offer a piece of advice to fellow learners, especially those balancing their professional lives with personal development goals. It’s crucial to assess the role of learning in your life and to find ways to integrate it into your daily routine. The journey of learning programming, particularly a versatile language like Python, is not only about acquiring technical skills. It significantly enhances cognitive abilities, problem-solving skills, and overall mental agility. The impact of this commitment is profound, stretching beyond immediate learning outcomes to influence your professional trajectory and personal growth.</p>
+<p>While we are fortunate to have mentors to guide us, the crux of learning lies in our own hands. It’s about taking responsibility for our growth, proactively seeking help when needed, and not shying away from the challenges that come with stepping out of our comfort zones. This journey has been a rewarding one, filled with lessons that transcend the realm of programming, offering insights into persistence, time management, and the power of small, consistent steps towards a larger goal.</p>
+<p>In conclusion, as you embark on your own learning adventures, remember that the path may not always be easy, but the rewards, both tangible and intangible, are truly worth the effort. Embrace the challenge, cherish the progress, and always keep the flame of curiosity burning bright.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

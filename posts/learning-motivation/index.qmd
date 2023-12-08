@@ -1,0 +1,18 @@
+---
+title: "Juggling Code and Career: My Arewa Data Science 30-Day Python Learning Journey Amidst a Full Schedule"
+author: "Lukman Aliyu Jibril"
+date: "2023-12-08"
+categories: [learning,motivation,programming,python]
+---
+
+
+
+As part of the first cohort of the Arewa Data Science Academy Data Science and Machine Learning fellowship, embarking on the thirty days of Python challenge, I found myself navigating through the demanding waters of 12-hour work shifts. Despite these professional commitments, I remained steadfast in my participation in the weekend sessions, often balancing work and learning simultaneously. My thirst for knowledge wasn't confined to my job; it extended to personal interests like improving my French and Arabic, a testament to my multifaceted curiosity. This same drive propelled me towards learning Python, a field I ventured into without any formal background in computer science.
+
+It’s enlightening to realize that, despite our hectic schedules, we often find pockets of time for activities like browsing social media. This observation led me to a pivotal conclusion: if we can dedicate time to scrolling through feeds, we can surely allocate moments for self-improvement and learning. My approach was methodical yet flexible - committing to consistent, daily progress, and embracing a journey of gradual improvement rather than seeking instant perfection. I wasn’t fixated on getting everything right on my first attempt. Rather, I aimed to complete each day’s exercises, occasionally revisiting previous tasks, to solidify my understanding. This consistent effort was a clear signal of my commitment and eagerness to learn, something that I hoped would be apparent to my mentors. I have since completed the python challenge and eventually the data science fellowship, but the lessons and experiences remain.
+
+In sharing this experience, my aim is to offer a piece of advice to fellow learners, especially those balancing their professional lives with personal development goals. It’s crucial to assess the role of learning in your life and to find ways to integrate it into your daily routine. The journey of learning programming, particularly a versatile language like Python, is not only about acquiring technical skills. It significantly enhances cognitive abilities, problem-solving skills, and overall mental agility. The impact of this commitment is profound, stretching beyond immediate learning outcomes to influence your professional trajectory and personal growth.
+
+While we are fortunate to have mentors to guide us, the crux of learning lies in our own hands. It’s about taking responsibility for our growth, proactively seeking help when needed, and not shying away from the challenges that come with stepping out of our comfort zones. This journey has been a rewarding one, filled with lessons that transcend the realm of programming, offering insights into persistence, time management, and the power of small, consistent steps towards a larger goal.
+
+In conclusion, as you embark on your own learning adventures, remember that the path may not always be easy, but the rewards, both tangible and intangible, are truly worth the effort. Embrace the challenge, cherish the progress, and always keep the flame of curiosity burning bright.
