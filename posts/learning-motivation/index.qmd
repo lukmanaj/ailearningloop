@@ -1,5 +1,5 @@
 ---
-title: "Juggling Code and Career: My Arewa Data Science 30-Day Python Learning Journey Amidst a Full Schedule"
+title: "Juggling Code and Career: My Arewa Data Science 30 Days Of Python Learning Journey Amidst a Full Schedule"
 author: "Lukman Aliyu Jibril"
 date: "2023-12-08"
 categories: [learning,motivation,programming,python]
