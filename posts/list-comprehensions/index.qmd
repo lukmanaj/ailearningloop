@@ -38,8 +38,7 @@ The answer gotten is the same in both methods. However, more lines are involved 
 
 ## Performance
 
-This is synonymous to speed in analyzing algorithms Let's check the performance using timeit. 
-
+When evaluating algorithms, performance is often equated with speed—how swiftly can the algorithm accomplish its task? To quantitatively assess this aspect, we turn to the `timeit` module, a robust Python tool that meticulously measures the execution time of small code snippets. This approach allows us to compare the speed of list comprehensions with traditional loops under a precise and controlled benchmark.
 `List comprehension performance`
 ```{python}
 %%timeit
