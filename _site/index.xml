@@ -22,7 +22,7 @@
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>One go my favourite aspects of Python as a programming language is list comprehensions, which are succinct and expressive ways of creating Python lists. Traditional for loops can be used for the same purpose, but list comprehensions are generally more efficient and preferred for several reasons. In this article, I attempt to dissect why list comprehensions are superior to traditional loops.</p>
+<p>Python is celebrated for its elegant syntax and the ability to express complex ideas in a few lines of code, with list comprehensions being a shining example. These powerful expressions streamline the process of creating new lists by transforming and filtering data seamlessly. While the trusty <code>for</code> loop has its merits, list comprehensions bring efficiency and clarity to the forefront of Python programming. Join me as we delve into the reasons that elevate list comprehensions above traditional loops, showcasing why they’re not just a tool but an essential Python idiom for any coder’s toolkit.</p>
 </section>
 <section id="readability-and-conciseness" class="level2">
 <h2 class="anchored" data-anchor-id="readability-and-conciseness">Readability and Conciseness</h2>
@@ -130,7 +130,7 @@ font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>:]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2.28 s ± 72.5 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
+<pre><code>2.26 s ± 71.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
 </div>
 </div>
 <p><code>Traditional loop performance</code></p>
@@ -164,7 +164,7 @@ font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>:]</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2.69 s ± 63.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
+<pre><code>2.72 s ± 132 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
 </div>
 </div>
 <p>List comprehensions are generally faster than traditional for loops because they are optimized by Python’s internal C-based engine. This optimization leads to better performance, particularly noticeable when dealing with large datasets, as seen above</p>
