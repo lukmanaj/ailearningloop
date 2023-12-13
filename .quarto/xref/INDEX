@@ -127,5 +127,8 @@
   },
   "posts/learning-motivation/index.qmd": {
     "index.html": "78af5a3e"
+  },
+  "posts/list-comprehensions/index.qmd": {
+    "index.html": "865ec30c"
   }
 }

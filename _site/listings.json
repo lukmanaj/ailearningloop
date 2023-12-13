@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/list-comprehensions/index.html",
       "/posts/learning-motivation/index.html",
       "/posts/tensorflow-pytorch-fizzbuzz/index.html",
       "/posts/tensorflow-fizzbuzz/index.html",

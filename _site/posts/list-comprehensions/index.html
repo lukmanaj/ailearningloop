@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-12-08">
+<meta name="dcterms.date" content="2023-12-13">
 
-<title>ailearningloop - Juggling Code and Career: My Arewa Data Science 30 Days Of Python Learning Journey Amidst a Full Schedule</title>
+<title>ailearningloop - Speed and Elegance: How Python’s List Comprehensions Outshine Traditional Loops</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -122,10 +156,8 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Juggling Code and Career: My Arewa Data Science 30 Days Of Python Learning Journey Amidst a Full Schedule</h1>
+      <h1 class="title">Speed and Elegance: How Python’s List Comprehensions Outshine Traditional Loops</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">learning</div>
-                <div class="quarto-category">motivation</div>
                 <div class="quarto-category">programming</div>
                 <div class="quarto-category">python</div>
               </div>
@@ -145,7 +177,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 8, 2023</p>
+        <p class="date">December 13, 2023</p>
       </div>
     </div>
     
@@ -163,13 +195,92 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 
 
 
-<p>As part of the first cohort of the Arewa Data Science Academy Data Science and Machine Learning fellowship, embarking on the thirty days of Python challenge, I found myself navigating through the demanding waters of 12-hour work shifts. Despite these professional commitments, I remained steadfast in my participation in the weekend sessions, often balancing work and learning simultaneously. My thirst for knowledge wasn’t confined to my job; it extended to personal interests like improving my French and Arabic, a testament to my multifaceted curiosity. This same drive propelled me towards learning Python, a field I ventured into without any formal background in computer science.</p>
-<p>It’s enlightening to realize that, despite our hectic schedules, we often find pockets of time for activities like browsing social media. This observation led me to a pivotal conclusion: if we can dedicate time to scrolling through feeds, we can surely allocate moments for self-improvement and learning. My approach was methodical yet flexible - committing to consistent, daily progress, and embracing a journey of gradual improvement rather than seeking instant perfection. I wasn’t fixated on getting everything right on my first attempt. Rather, I aimed to complete each day’s exercises, occasionally revisiting previous tasks, to solidify my understanding. This consistent effort was a clear signal of my commitment and eagerness to learn, something that I hoped would be apparent to my mentors. I have since completed the python challenge and eventually the data science fellowship, but the lessons and experiences remain.</p>
-<p>In sharing this experience, my aim is to offer a piece of advice to fellow learners, especially those balancing their professional lives with personal development goals. It’s crucial to assess the role of learning in your life and to find ways to integrate it into your daily routine. The journey of learning programming, particularly a versatile language like Python, is not only about acquiring technical skills. It significantly enhances cognitive abilities, problem-solving skills, and overall mental agility. The impact of this commitment is profound, stretching beyond immediate learning outcomes to influence your professional trajectory and personal growth.</p>
-<p>While we are fortunate to have mentors to guide us, the crux of learning lies in our own hands. It’s about taking responsibility for our growth, proactively seeking help when needed, and not shying away from the challenges that come with stepping out of our comfort zones. This journey has been a rewarding one, filled with lessons that transcend the realm of programming, offering insights into persistence, time management, and the power of small, consistent steps towards a larger goal.</p>
-<p>In conclusion, as you embark on your own learning adventures, remember that the path may not always be easy, but the rewards, both tangible and intangible, are truly worth the effort. Embrace the challenge, cherish the progress, and always keep the flame of curiosity burning bright.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>One go my favourite aspects of Python as a programming language is list comprehensions, which are succinct and expressive ways of creating Python lists. Traditional for loops can be used for the same purpose, but list comprehensions are generally more efficient and preferred for several reasons. In this article, I attempt to dissect why list comprehensions are superior to traditional loops.</p>
+</section>
+<section id="readability-and-conciseness" class="level2">
+<h2 class="anchored" data-anchor-id="readability-and-conciseness">Readability and Conciseness</h2>
+<p>One of the main advantages of list comprehensions is their readability and conciseness. A list comprehension allows you to write a loop in a single line of code. For example, the code example below uses a list comprehension to square each number. To begin, let’s define a list of numbers.</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>main_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">10000000</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>opt_squared <span class="op">=</span> [num<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> num <span class="kw">in</span> main_list <span class="cf">if</span> num]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>opt_squared[<span class="op">-</span><span class="dv">5</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>[99999900000025,
+ 99999920000016,
+ 99999940000009,
+ 99999960000004,
+ 99999980000001]</code></pre>
+</div>
+</div>
+<p>This is not only more readable but also reduces the chance of coding errors because it’s all in one compact line.</p>
+<p>On the other hand, the traditional for loop is more verbose:</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>squared <span class="op">=</span> []</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(main_list)):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    main_list_i <span class="op">=</span> main_list[i] <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    squared.append(main_list_i)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>squared[<span class="op">-</span><span class="dv">5</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>[99999900000025,
+ 99999920000016,
+ 99999940000009,
+ 99999960000004,
+ 99999980000001]</code></pre>
+</div>
+</div>
+<p>The answer gotten is the same in both methods. However, more lines are involved in the traditional loop, which increases the complexity and the potential for bugs.</p>
+</section>
+<section id="performance" class="level2">
+<h2 class="anchored" data-anchor-id="performance">Performance</h2>
+<p>This is synonymous to speed in analyzing algorithms Let’s check the performance using timeit.</p>
+<p><code>List comprehension performance</code></p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>timeit</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>opt_squared <span class="op">=</span> [num<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> num <span class="kw">in</span> main_list <span class="cf">if</span> num]</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>opt_squared[<span class="op">-</span><span class="dv">5</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2.28 s ± 72.5 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
+</div>
+</div>
+<p><code>Traditional loop performance</code></p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>timeit</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>squared <span class="op">=</span> []</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(main_list)):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    main_list_i <span class="op">=</span> main_list[i] <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    squared.append(main_list_i)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>squared[<span class="op">-</span><span class="dv">5</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2.69 s ± 63.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
+</div>
+</div>
+<p>List comprehensions are generally faster than traditional for loops because they are optimized by Python’s internal C-based engine. This optimization leads to better performance, particularly noticeable when dealing with large datasets, as seen above</p>
+<p>The timeit results indicate that the list comprehension approach is faster than the traditional for loop. While the difference in this case might seems small, it becomes significant as the complexity and size of the data grow.</p>
+</section>
+<section id="memory-efficiency" class="level2">
+<h2 class="anchored" data-anchor-id="memory-efficiency">Memory Efficiency</h2>
+<p>List comprehensions can be more memory-efficient than traditional loops. They generate the required list in a single expression, which allows Python’s memory allocator to optimize its strategy. This advantage can lead to better performance in memory usage, which is critical in large-scale applications.</p>
+</section>
+<section id="expressiveness-and-flexibility" class="level2">
+<h2 class="anchored" data-anchor-id="expressiveness-and-flexibility">Expressiveness and Flexibility</h2>
+<p>List comprehensions can incorporate complex expressions and multiple conditions in a single line. The inclusion of an if statement in the list comprehension above is an excellent example of this expressiveness:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>opt_squared <span class="op">=</span> [num<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> num <span class="kw">in</span> main_list <span class="cf">if</span> num]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here, the <code>if num</code> serves as a filter to exclude falsy values (like 0) before the squaring operation. To achieve the same with a traditional loop, additional lines and conditions would be necessary.</p>
+</section>
+<section id="pythonic-idiom" class="level2">
+<h2 class="anchored" data-anchor-id="pythonic-idiom">Pythonic Idiom</h2>
+<p>Using list comprehensions is considered more “Pythonic,” a term that refers to the idiomatic use of Python. Python’s philosophy emphasizes simplicity and the importance of writing clear, readable, and concise code as specified in the <code>Zen of Python</code>. List comprehensions align perfectly with this philosophy, encouraging clean and maintainable code.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>While traditional for loops have their place and are sometimes necessary, list comprehensions offer a more elegant and efficient way to create lists based on existing iterables. They provide better performance, improved readability, and a more Pythonic approach to coding. The code example given is a practical demonstration of how a seemingly small change in syntax and approach can lead to better code performance and maintainability, which is why list comprehensions are generally preferred in Python development.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
