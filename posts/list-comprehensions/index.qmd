@@ -24,7 +24,7 @@ opt_squared[-5:]
 
 This is not only more readable but also reduces the chance of coding errors because it's all in one compact line. 
 
-On the other hand, the traditional for loop is more verbose:
+On the other hand, the traditional `for` loop is more verbose:
 
 ```{python}
 squared = []
@@ -34,7 +34,7 @@ for i in range(len(main_list)):
 squared[-5:]
 ```
 
-The answer gotten is the same in both methods. However, more lines are involved in the traditional loop, which increases the complexity and the potential for bugs.
+The answer gotten is the same in both methods. However, more lines are involved in the traditional `for` loop, which increases the complexity and the potential for bugs.
 
 ## Performance
 
@@ -58,9 +58,9 @@ squared[-5:]
 ```
 
 
-List comprehensions are generally faster than traditional for loops because they are optimized by Python's internal C-based engine. This optimization leads to better performance, particularly noticeable when dealing with large datasets, as seen above
+List comprehensions are generally faster than traditional `for` loops because they are optimized by Python's internal C-based engine. This optimization leads to better performance, particularly noticeable when dealing with large datasets, as seen above.
 
-The timeit results  indicate that the list comprehension approach is faster than the traditional for loop. While the difference in this case might seems small, it becomes significant as the complexity and size of the data grow.
+The timeit results  indicate that the list comprehension approach is faster than the traditional `for` loop. While the difference in this case might seems small, it becomes significant as the complexity and size of the data grow.
 
 ## Memory Efficiency
 
@@ -82,7 +82,7 @@ Using list comprehensions is considered more "Pythonic," a term that refers to t
 
 ## Conclusion
 
-While traditional for loops have their place and are sometimes necessary, list comprehensions offer a more elegant and efficient way to create lists based on existing iterables. They provide better performance, improved readability, and a more Pythonic approach to coding. The code example given is a practical demonstration of how a seemingly small change in syntax and approach can lead to better code performance and maintainability, which is why list comprehensions are generally preferred in Python development.
+While traditional `for` loops have their place and are sometimes necessary, list comprehensions offer a more elegant and efficient way to create lists based on existing iterables. They provide better performance, improved readability, and a more Pythonic approach to coding. The code example given is a practical demonstration of how a seemingly small change in syntax and approach can lead to better code performance and maintainability, which is why list comprehensions are generally preferred in Python development.
 
 
 
