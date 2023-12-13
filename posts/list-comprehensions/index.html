@@ -236,13 +236,14 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 </section>
 <section id="performance" class="level2">
 <h2 class="anchored" data-anchor-id="performance">Performance</h2>
-<p>When evaluating algorithms, performance is often equated with speed—how swiftly can the algorithm accomplish its task? To quantitatively assess this aspect, we turn to the <code>timeit</code> module, a robust Python tool that meticulously measures the execution time of small code snippets. This approach allows us to compare the speed of list comprehensions with traditional loops under a precise and controlled benchmark. <code>List comprehension performance</code></p>
+<p>When evaluating algorithms, performance is often equated with speed—how swiftly can the algorithm accomplish its task? To quantitatively assess this aspect, we turn to the <code>timeit</code> module, a robust Python tool that meticulously measures the execution time of small code snippets. This approach allows us to compare the speed of list comprehensions with traditional loops under a precise and controlled benchmark.</p>
+<p><code>List comprehension performance</code></p>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>timeit</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>opt_squared <span class="op">=</span> [num<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> num <span class="kw">in</span> main_list <span class="cf">if</span> num]</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>opt_squared[<span class="op">-</span><span class="dv">5</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2.33 s ± 89.7 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
+<pre><code>2.7 s ± 236 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
 </div>
 </div>
 <p><code>Traditional loop performance</code></p>
@@ -254,7 +255,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    squared.append(main_list_i)</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>squared[<span class="op">-</span><span class="dv">5</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2.88 s ± 50.8 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
+<pre><code>3.7 s ± 96.3 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
 </div>
 </div>
 <p>List comprehensions are generally faster than traditional for loops because they are optimized by Python’s internal C-based engine. This optimization leads to better performance, particularly noticeable when dealing with large datasets, as seen above</p>
