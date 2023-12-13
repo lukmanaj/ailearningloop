@@ -217,7 +217,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 </div>
 </div>
 <p>This is not only more readable but also reduces the chance of coding errors because it’s all in one compact line.</p>
-<p>On the other hand, the traditional for loop is more verbose:</p>
+<p>On the other hand, the traditional <code>for</code> loop is more verbose:</p>
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>squared <span class="op">=</span> []</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(main_list)):</span>
@@ -232,7 +232,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
  99999980000001]</code></pre>
 </div>
 </div>
-<p>The answer gotten is the same in both methods. However, more lines are involved in the traditional loop, which increases the complexity and the potential for bugs.</p>
+<p>The answer gotten is the same in both methods. However, more lines are involved in the traditional <code>for</code> loop, which increases the complexity and the potential for bugs.</p>
 </section>
 <section id="performance" class="level2">
 <h2 class="anchored" data-anchor-id="performance">Performance</h2>
@@ -243,7 +243,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>opt_squared <span class="op">=</span> [num<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> num <span class="kw">in</span> main_list <span class="cf">if</span> num]</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>opt_squared[<span class="op">-</span><span class="dv">5</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2.7 s ± 236 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
+<pre><code>2.41 s ± 431 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
 </div>
 </div>
 <p><code>Traditional loop performance</code></p>
@@ -255,11 +255,11 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    squared.append(main_list_i)</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>squared[<span class="op">-</span><span class="dv">5</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>3.7 s ± 96.3 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
+<pre><code>2.66 s ± 72.3 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</code></pre>
 </div>
 </div>
-<p>List comprehensions are generally faster than traditional for loops because they are optimized by Python’s internal C-based engine. This optimization leads to better performance, particularly noticeable when dealing with large datasets, as seen above</p>
-<p>The timeit results indicate that the list comprehension approach is faster than the traditional for loop. While the difference in this case might seems small, it becomes significant as the complexity and size of the data grow.</p>
+<p>List comprehensions are generally faster than traditional <code>for</code> loops because they are optimized by Python’s internal C-based engine. This optimization leads to better performance, particularly noticeable when dealing with large datasets, as seen above.</p>
+<p>The timeit results indicate that the list comprehension approach is faster than the traditional <code>for</code> loop. While the difference in this case might seems small, it becomes significant as the complexity and size of the data grow.</p>
 </section>
 <section id="memory-efficiency" class="level2">
 <h2 class="anchored" data-anchor-id="memory-efficiency">Memory Efficiency</h2>
@@ -277,7 +277,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>While traditional for loops have their place and are sometimes necessary, list comprehensions offer a more elegant and efficient way to create lists based on existing iterables. They provide better performance, improved readability, and a more Pythonic approach to coding. The code example given is a practical demonstration of how a seemingly small change in syntax and approach can lead to better code performance and maintainability, which is why list comprehensions are generally preferred in Python development.</p>
+<p>While traditional <code>for</code> loops have their place and are sometimes necessary, list comprehensions offer a more elegant and efficient way to create lists based on existing iterables. They provide better performance, improved readability, and a more Pythonic approach to coding. The code example given is a practical demonstration of how a seemingly small change in syntax and approach can lead to better code performance and maintainability, which is why list comprehensions are generally preferred in Python development.</p>
 
 
 </section>
