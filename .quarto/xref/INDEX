@@ -130,5 +130,8 @@
   },
   "posts/list-comprehensions/index.qmd": {
     "index.html": "865ec30c"
+  },
+  "posts/pytorch-fellowship/index.qmd": {
+    "index.html": "65de60f4"
   }
 }

@@ -1,0 +1,35 @@
+---
+title: "Embarking on a Deep Learning Journey with PyTorch"
+author: "Lukman Aliyu Jibril"
+date: "2024-01-15"
+categories: [deep learning,pytorch,arewads,fellowship]
+---
+
+
+## Introduction
+
+This December marked the exciting kickoff of the "Deep Learning with PyTorch" fellowship, hosted by Arewa Data Science Academy. I'm thrilled to share my journey and insights as we delve into the fascinating world of deep learning.
+
+## The Fellowship Begins
+
+The fellowship's curriculum is centered around the comprehensive PyTorch deep learning book, a resource that's freely available and highly recommended for enthusiasts in the field (find it here: PyTorch Deep Learning by Mr. D. Bourke).
+
+## Inspirational Instruction
+
+A key highlight of this program is our instructor, Mustapha Abdullahi. Fresh from his commendable achievement of completing his master's with honors from Queen Mary University, UK, Mustapha brings a blend of youthful vigor and profound knowledge to our virtual classroom. His ability to break down complex concepts into digestible bits has been nothing short of remarkable.
+
+## Progress and Personalization
+
+Over the past three weeks, we've journeyed through the initial three lectures of the course material, each session bringing new insights and challenges. The structure of the program encourages continuous learning and application, with weekly assignments that are meticulously reviewed by Mustapha. His personalized feedback has been instrumental in enhancing our understanding and skills.
+
+## A Community of Learners
+
+What makes this fellowship stand out is the sense of community and collective learning. Each of us brings a unique perspective to the table, enriching discussions and collaborations. It's been a privilege to be part of such a vibrant and passionate group of learners.
+
+## Looking Ahead
+
+As we progress through the program, I plan to document and share my experiences and learnings in this blog. Whether it's tackling a challenging concept, celebrating a breakthrough, or sharing useful resources, I hope to provide a window into the dynamic and ever-evolving world of deep learning with PyTorch.
+
+## Stay Connected
+For those interested in following this journey, stay tuned to this blog. Your comments, questions, and insights are always welcome as we explore the frontiers of deep learning together.
+
