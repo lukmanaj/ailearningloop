@@ -10,7 +10,55 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Wed, 13 Dec 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 15 Jan 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Embarking on a Deep Learning Journey with PyTorch</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This December marked the exciting kickoff of the “Deep Learning with PyTorch” fellowship, hosted by Arewa Data Science Academy. I’m thrilled to share my journey and insights as we delve into the fascinating world of deep learning.</p>
+</section>
+<section id="the-fellowship-begins" class="level2">
+<h2 class="anchored" data-anchor-id="the-fellowship-begins">The Fellowship Begins</h2>
+<p>The fellowship’s curriculum is centered around the comprehensive PyTorch deep learning book, a resource that’s freely available and highly recommended for enthusiasts in the field (find it here: PyTorch Deep Learning by Mr.&nbsp;D. Bourke).</p>
+</section>
+<section id="inspirational-instruction" class="level2">
+<h2 class="anchored" data-anchor-id="inspirational-instruction">Inspirational Instruction</h2>
+<p>A key highlight of this program is our instructor, Mustapha Abdullahi. Fresh from his commendable achievement of completing his master’s with honors from Queen Mary University, UK, Mustapha brings a blend of youthful vigor and profound knowledge to our virtual classroom. His ability to break down complex concepts into digestible bits has been nothing short of remarkable.</p>
+</section>
+<section id="progress-and-personalization" class="level2">
+<h2 class="anchored" data-anchor-id="progress-and-personalization">Progress and Personalization</h2>
+<p>Over the past three weeks, we’ve journeyed through the initial three lectures of the course material, each session bringing new insights and challenges. The structure of the program encourages continuous learning and application, with weekly assignments that are meticulously reviewed by Mustapha. His personalized feedback has been instrumental in enhancing our understanding and skills.</p>
+</section>
+<section id="a-community-of-learners" class="level2">
+<h2 class="anchored" data-anchor-id="a-community-of-learners">A Community of Learners</h2>
+<p>What makes this fellowship stand out is the sense of community and collective learning. Each of us brings a unique perspective to the table, enriching discussions and collaborations. It’s been a privilege to be part of such a vibrant and passionate group of learners.</p>
+</section>
+<section id="looking-ahead" class="level2">
+<h2 class="anchored" data-anchor-id="looking-ahead">Looking Ahead</h2>
+<p>As we progress through the program, I plan to document and share my experiences and learnings in this blog. Whether it’s tackling a challenging concept, celebrating a breakthrough, or sharing useful resources, I hope to provide a window into the dynamic and ever-evolving world of deep learning with PyTorch.</p>
+</section>
+<section id="stay-connected" class="level2">
+<h2 class="anchored" data-anchor-id="stay-connected">Stay Connected</h2>
+<p>For those interested in following this journey, stay tuned to this blog. Your comments, questions, and insights are always welcome as we explore the frontiers of deep learning together.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>deep learning</category>
+  <category>pytorch</category>
+  <category>arewads</category>
+  <category>fellowship</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/index.html</guid>
+  <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Speed and Elegance: How Python’s List Comprehensions Outshine Traditional Loops</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -3660,28 +3708,6 @@ font-style: inherit;">'Actual vs. Predicted MPG Values'</span>)</span>
   <category>writing</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/arewads-impact/index.html</guid>
   <pubDate>Mon, 31 Jul 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Endless Paths in Data Science: Insights from Claudiu Musat’s Talk on Handwriting Synthesis and Career Prospects</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/claudiu-talk/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>After recently concluding our fellowship at Arewa Data Science Academy, we had the privilege of attending a captivating talk by Claudiu Musat, a distinguished researcher from Google. The session revolved around illuminating career prospects in data science and guiding us on our next steps in this dynamic field. In the beginning, he warmly congratulated us on reaching this significant milestone, emphasizing that embarking on our journey was in itself an achievement worth celebrating, and each step we take marks progress towards something greater.</p>
-<p>The highlight of the talk was his comprehensive presentation on handwriting synthesis, tracing its origins and evolution to the cutting-edge use of transformers in the field today. He also delved into the fascinating realm of generative AI, illustrating its potential to revolutionize the world by already disrupting various aspects of life. As Claudiu skillfully articulated the technical aspects of Deep Learning and its application to problem-solving, I gained a profound understanding of how recurrent neural networks can perform awe-inspiring feats and the critical interplay between research in academia and industry.</p>
-<p>An invaluable piece of advice he shared with us was the importance of not just reading research papers but actively striving to publish our own work. Moreover, he offered practical tips for aspiring data scientists like us, encouraging us to fearlessly explore, experiment, and break barriers. One idea that resonated deeply was his suggestion to “look at that TensorFlow code and try implementing it in PyTorch.” This philosophy, reminiscent of Yann LeCun’s advice to beginners, can significantly enhance one’s chances of getting noticed in the field.</p>
-<p>I must express my profound gratitude for this enlightening session; I meticulously took notes and left with a wealth of actionable insights for my future endeavors. Thank you, Claudiu Musat, for inspiring and equipping us with the tools to carve out a successful path in the captivating realm of data science.</p>
-
-
-
- ]]></description>
-  <category>research</category>
-  <category>advice</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/claudiu-talk/index.html</guid>
-  <pubDate>Sun, 30 Jul 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

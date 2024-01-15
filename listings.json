@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/pytorch-fellowship/index.html",
       "/posts/list-comprehensions/index.html",
       "/posts/learning-motivation/index.html",
       "/posts/tensorflow-pytorch-fizzbuzz/index.html",
@@ -33,8 +34,8 @@
       "/posts/cleancodes/index.html",
       "/posts/pandas2/index.html",
       "/posts/ml-ai/index.html",
-      "/posts/pandas/index.html",
       "/posts/viz/index.html",
+      "/posts/pandas/index.html",
       "/posts/numpy/index.html",
       "/posts/web-scraping/index.html",
       "/posts/practice-concepts/index.html",
