@@ -12,7 +12,7 @@
 <generator>quarto-1.4.542</generator>
 <lastBuildDate>Sun, 14 Jan 2024 23:00:00 GMT</lastBuildDate>
 <item>
-  <title>Embarking on a Deep Learning Journey with PyTorch</title>
+  <title>Embarking on a Deep Learning Journey with Arewa Data Science Academy’s Deep Learning with PyTorch Fellowship</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
   <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/</link>
   <description><![CDATA[ 
@@ -27,7 +27,7 @@
 </section>
 <section id="the-fellowship-begins" class="level2">
 <h2 class="anchored" data-anchor-id="the-fellowship-begins">The Fellowship Begins</h2>
-<p>The fellowship’s curriculum is centered around the comprehensive PyTorch deep learning book, a resource that’s freely available and highly recommended for enthusiasts in the field (find it here: PyTorch Deep Learning by Mr.&nbsp;D. Bourke).</p>
+<p>The fellowship’s curriculum is centered around the comprehensive PyTorch deep learning book, a resource that’s freely available and highly recommended for enthusiasts in the field (find it here: <a href="https://github.com/mrdbourke/pytorch-deep-learning">PyTorch Deep Learning by Mr.&nbsp;D. Bourke</a>).</p>
 </section>
 <section id="inspirational-instruction" class="level2">
 <h2 class="anchored" data-anchor-id="inspirational-instruction">Inspirational Instruction</h2>
