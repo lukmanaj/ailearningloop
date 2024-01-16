@@ -879,7 +879,7 @@
     "href": "posts/pytorch-intro/index.html#getting-started-with-pytorch",
     "title": "A Beginner’s Comprehensive Guide to PyTorch",
     "section": "Getting Started with PyTorch",
-    "text": "Getting Started with PyTorch\nTo dive into PyTorch, start by importing it in your Python code with import torch, along with your other dependencies. This guide will serve as an introduction to PyTorch’s capabilities. Don’t worry about memorizing everything.\n# importing PyTorch\nimport torch\n# how to import the nn module\nimport torch.nn as nn"
+    "text": "Getting Started with PyTorch\nTo dive into PyTorch, start by importing it in your Python code with import torch, along with your other dependencies. This guide will serve as an introduction to PyTorch’s capabilities. Don’t worry about memorizing everything.\n\n# importing PyTorch\nimport torch\n# how to import the nn module\nimport torch.nn as nn"
   },
   {
     "objectID": "posts/pytorch-intro/index.html#why-choose-pytorch",
@@ -893,7 +893,7 @@
     "href": "posts/pytorch-intro/index.html#exploring-tensor-properties",
     "title": "A Beginner’s Comprehensive Guide to PyTorch",
     "section": "Exploring Tensor Properties",
-    "text": "Exploring Tensor Properties\nCreating tensors in PyTorch is straightforward. For instance, you can initiate a tensor using torch.Tensor. A simple example is:\nexample_tensor = torch.Tensor([\n                                [[1, 2], [3, 4]],\n                                [[5, 6], [7, 8]],\n                                [[9, 0], [1, 2]]\n                             ])\nexample_tensor\nUnderstanding a tensor’s properties, such as its device (CPU or GPU) and shape, is crucial. You can explore these properties using methods like example_tensor.device and example_tensor.shape. These properties give insights into where the tensor resides (CPU or GPU) and its dimensional structure. For example, torch.Size([3, 2, 2]) indicates a tensor of rank 3 with specific dimensions.\nprint(f\"tensor_shape: {example_tensor.shape}\")\nprint(f\"tensor device: {example_tensor.device}\")"
+    "text": "Exploring Tensor Properties\nCreating tensors in PyTorch is straightforward. For instance, you can initiate a tensor using torch.Tensor. A simple example is:\n\nexample_tensor = torch.Tensor([\n                                [[1, 2], [3, 4]],\n                                [[5, 6], [7, 8]],\n                                [[9, 0], [1, 2]]\n                             ])\nexample_tensor\n\ntensor([[[1., 2.],\n         [3., 4.]],\n\n        [[5., 6.],\n         [7., 8.]],\n\n        [[9., 0.],\n         [1., 2.]]])\n\n\nUnderstanding a tensor’s properties, such as its device (CPU or GPU) and shape, is crucial. You can explore these properties using methods like example_tensor.device and example_tensor.shape. These properties give insights into where the tensor resides (CPU or GPU) and its dimensional structure. For example, torch.Size([3, 2, 2]) indicates a tensor of rank 3 with specific dimensions.\n\nprint(f\"tensor_shape: {example_tensor.shape}\")\nprint(f\"tensor device: {example_tensor.device}\")\n\ntensor_shape: torch.Size([3, 2, 2])\ntensor device: cpu"
   },
   {
     "objectID": "posts/pytorch-intro/index.html#indexing-and-initializing-tensors",
