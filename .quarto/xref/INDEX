@@ -133,5 +133,8 @@
   },
   "posts/pytorch-fellowship/index.qmd": {
     "index.html": "65de60f4"
+  },
+  "posts/pytorch-intro/index.qmd": {
+    "index.html": "9bc3801b"
   }
 }
