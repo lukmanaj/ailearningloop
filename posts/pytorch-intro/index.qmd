@@ -13,7 +13,7 @@ Welcome to the world of PyTorch, a dynamic and powerful machine learning framewo
 
 To dive into PyTorch, start by importing it in your Python code with import torch, along with your other dependencies. This guide will serve as an introduction to PyTorch's capabilities. Don't worry about memorizing everything.
 
-```{py}
+```{python}
 # importing PyTorch
 import torch
 # how to import the nn module
@@ -30,7 +30,7 @@ A detailed analysis by the Gradient explains it well: PyTorch offers a more Pyth
 Creating tensors in PyTorch is straightforward. For instance, you can initiate a tensor using torch.Tensor. A simple example is:
 
 
-```{py}
+```{python}
 example_tensor = torch.Tensor([
                                 [[1, 2], [3, 4]],
                                 [[5, 6], [7, 8]],
@@ -42,7 +42,7 @@ example_tensor
 
 Understanding a tensor's properties, such as its device (CPU or GPU) and shape, is crucial. You can explore these properties using methods like example_tensor.device and example_tensor.shape. These properties give insights into where the tensor resides (CPU or GPU) and its dimensional structure. For example, torch.Size([3, 2, 2]) indicates a tensor of rank 3 with specific dimensions.
 
-```{py}
+```{python}
 print(f"tensor_shape: {example_tensor.shape}")
 print(f"tensor device: {example_tensor.device}")
 

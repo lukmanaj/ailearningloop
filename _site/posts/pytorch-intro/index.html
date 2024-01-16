@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -178,10 +212,12 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <section id="getting-started-with-pytorch" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started-with-pytorch">Getting Started with PyTorch</h2>
 <p>To dive into PyTorch, start by importing it in your Python code with import torch, along with your other dependencies. This guide will serve as an introduction to PyTorch’s capabilities. Don’t worry about memorizing everything.</p>
-<pre class="{py}"><code># importing PyTorch
-import torch
-# how to import the nn module
-import torch.nn as nn</code></pre>
+<div id="6ddd375b" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># importing PyTorch</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># how to import the nn module</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="why-choose-pytorch" class="level2">
 <h2 class="anchored" data-anchor-id="why-choose-pytorch">Why Choose PyTorch?</h2>
@@ -190,16 +226,33 @@ import torch.nn as nn</code></pre>
 <section id="exploring-tensor-properties" class="level2">
 <h2 class="anchored" data-anchor-id="exploring-tensor-properties">Exploring Tensor Properties</h2>
 <p>Creating tensors in PyTorch is straightforward. For instance, you can initiate a tensor using torch.Tensor. A simple example is:</p>
-<pre class="{py}"><code>example_tensor = torch.Tensor([
-                                [[1, 2], [3, 4]],
-                                [[5, 6], [7, 8]],
-                                [[9, 0], [1, 2]]
-                             ])
-example_tensor</code></pre>
+<div id="4a66caf3" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>example_tensor <span class="op">=</span> torch.Tensor([</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                                [[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]],</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                                [[<span class="dv">5</span>, <span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>]],</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                                [[<span class="dv">9</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">2</span>]]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                             ])</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>example_tensor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>tensor([[[1., 2.],
+         [3., 4.]],
+
+        [[5., 6.],
+         [7., 8.]],
+
+        [[9., 0.],
+         [1., 2.]]])</code></pre>
+</div>
+</div>
 <p>Understanding a tensor’s properties, such as its device (CPU or GPU) and shape, is crucial. You can explore these properties using methods like example_tensor.device and example_tensor.shape. These properties give insights into where the tensor resides (CPU or GPU) and its dimensional structure. For example, torch.Size([3, 2, 2]) indicates a tensor of rank 3 with specific dimensions.</p>
-<pre class="{py}"><code>print(f"tensor_shape: {example_tensor.shape}")
-print(f"tensor device: {example_tensor.device}")
-</code></pre>
+<div id="bf0928bd" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"tensor_shape: </span><span class="sc">{</span>example_tensor<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"tensor device: </span><span class="sc">{</span>example_tensor<span class="sc">.</span>device<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tensor_shape: torch.Size([3, 2, 2])
+tensor device: cpu</code></pre>
+</div>
+</div>
 </section>
 <section id="indexing-and-initializing-tensors" class="level2">
 <h2 class="anchored" data-anchor-id="indexing-and-initializing-tensors">Indexing and Initializing Tensors</h2>
