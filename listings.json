@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/optimization/index.html",
       "/posts/pytorch-intro/index.html",
       "/posts/pytorch-fellowship/index.html",
       "/posts/list-comprehensions/index.html",
