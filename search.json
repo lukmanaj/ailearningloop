@@ -879,7 +879,7 @@
     "href": "posts/optimization/index.html#implementing-optimization-methods-in-pytorch",
     "title": "Advanced Optimization Techniques in Deep Learning: Mastering PyTorch",
     "section": "Implementing Optimization Methods in PyTorch",
-    "text": "Implementing Optimization Methods in PyTorch\nIn PyTorch, these optimization methods are readily available and can be easily implemented. Here’s a brief guide on how to use them:\nGradient Descent: Use torch.optim.SGD with a learning rate parameter. Momentum: Add the momentum parameter to the torch.optim.SGD optimizer. RMSProp: Use torch.optim.RMSprop, providing parameters such as learning rate and decay rate. Adam: Simply use torch.optim.Adam, which requires minimal tuning."
+    "text": "Implementing Optimization Methods in PyTorch\nIn PyTorch, these optimization methods are readily available and can be easily implemented. Here’s a brief guide on how to use them:\nGradient Descent: Use torch.optim.SGD with a learning rate parameter.\nMomentum: Add the momentum parameter to the torch.optim.SGD optimizer.\nRMSProp: Use torch.optim.RMSprop, providing parameters such as learning rate and decay rate.\nAdam: Simply use torch.optim.Adam, which requires minimal tuning."
   },
   {
     "objectID": "posts/optimization/index.html#learning-rate-decay-and-scheduling",
