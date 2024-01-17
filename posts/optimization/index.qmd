@@ -13,19 +13,19 @@ In the journey of training deep learning models, choosing the right optimization
 
 Optimization in deep learning is about finding the best parameters (weights and biases) of a neural network. It involves minimizing a cost function, analogous to finding the lowest point in a hilly landscape. This process is iterative and requires updating the model's parameters in a certain direction at each training step.
 
-1. Stochastic Gradient Descent (SGD):
+1. **Stochastic Gradient Descent (SGD)**:
 SGD is a variation of the gradient descent algorithm. It updates the model's parameters using only a single training example at a time. This makes the updates faster but causes the parameter path to oscillate, taking a bit longer to converge.
 
-2. Mini-Batch Gradient Descent:
+2. **Mini-Batch Gradient Descent**:
 This method strikes a balance by using a subset of the training set to perform each update. It's faster than batch gradient descent and more stable than SGD. The mini-batches are randomly selected, ensuring that the model doesn't see the same examples in each iteration.
 
-3. Momentum:
+3. **Momentum**:
 Momentum optimization is like pushing a ball down a hill; it accumulates velocity as it rolls downhill, becoming faster and more powerful. This method helps accelerate SGD by navigating along relevant directions and dampening oscillations. It achieves this by taking into account the past gradients to update the weights. Essentially, it adds a fraction (denoted as the momentum term) of the update vector of the past step to the current update vector.
 
-4. RMSProp:
+4. **RMSProp**:
 Root Mean Square Propagation (RMSProp) is an adaptive learning rate method. It divides the learning rate for a weight by a running average of the magnitudes of recent gradients for that weight. This means that the learning rate gets adjusted automatically and is different for each parameter. RMSProp performs well in situations where the optimization landscape is very uneven, as it can adapt to the changing landscape accelerating the training process.
 
-5. Adam:
+5. **Adam**:
 Adaptive Moment Estimation (Adam) combines the ideas from RMSProp and Momentum. It keeps track of an exponentially decaying average of past gradients (like Momentum) and an exponentially decaying average of past squared gradients (like RMSProp). Adam calculates the adaptive learning rates for each parameter. This method is often recommended as the default optimizer due to its effectiveness in handling sparse gradients on noisy problems.
 
 ## Implementing Optimization Methods in PyTorch
@@ -33,8 +33,11 @@ Adaptive Moment Estimation (Adam) combines the ideas from RMSProp and Momentum. 
 In PyTorch, these optimization methods are readily available and can be easily implemented. Here's a brief guide on how to use them:
 
 **Gradient Descent**: Use torch.optim.SGD with a learning rate parameter.
+
 **Momentum**: Add the momentum parameter to the torch.optim.SGD optimizer.
+
 **RMSProp**: Use torch.optim.RMSprop, providing parameters such as learning rate and decay rate.
+
 **Adam**: Simply use torch.optim.Adam, which requires minimal tuning.
 
 ## Learning Rate Decay and Scheduling
