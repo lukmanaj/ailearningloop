@@ -1,0 +1,18 @@
+---
+title: "Becoming a Mentor at Arewa Data Science Academy: A Journey of Growth and Contribution"
+author: "Lukman Aliyu Jibril"
+date: "2024-01-28"
+categories: [arewads,mentorship]
+image: "mentor.png"
+
+---
+
+I am thrilled to announce my recent role as a mentor for the second cohort of machine learning fellows at the Arewa Data Science Academy, guiding them through the Python programming phase of their fellowship. Reflecting on this experience brings a mix of emotions; it's hard to believe that just a year ago, I was in their shoes, diligently learning Python myself. This journey has been a testament to how far I've come.
+
+One of the most rewarding aspects of this role is the reciprocal nature of learning and teaching. As I share my knowledge and experience with the fellows, I find my own skills sharpening. The process of mentoring not only benefits the learners but also enhances my understanding and proficiency in data science.
+
+Currently, I'm engaged in mentoring these bright individuals in the data science phase of their fellowship. The academy has graciously recognized my contributions and efforts by awarding me a certificate, which I proudly share with immense gratitude.
+
+This past year has been a remarkable period of personal and professional growth for me. The journey with Arewa Data Science Academy has been incredibly fulfilling, offering me the chance to both impart knowledge and continuously learn. As I navigate this path of ongoing exploration and adaptation, I deeply appreciate the opportunity given to me by the Academy. It's a privilege to contribute to the growth of others while simultaneously enriching my own experience.
+
+I am grateful for this journey and look forward to what the future holds. May Allah guide us all on our path to success.
