@@ -6,16 +6,42 @@
       version="2.0">
 <channel>
 <title>ailearningloop</title>
-<link>https://lukmanaj.github.io/ailearningloop/index.html</link>
+<link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.3.450</generator>
-<lastBuildDate>Wed, 17 Jan 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.549</generator>
+<lastBuildDate>Sun, 28 Jan 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Becoming a Mentor at Arewa Data Science Academy: A Journey of Growth and Contribution</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/arewads-mentorship/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I am thrilled to announce my recent role as a mentor for the second cohort of machine learning fellows at the Arewa Data Science Academy, guiding them through the Python programming phase of their fellowship. Reflecting on this experience brings a mix of emotions; it’s hard to believe that just a year ago, I was in their shoes, diligently learning Python myself. This journey has been a testament to how far I’ve come.</p>
+<p>One of the most rewarding aspects of this role is the reciprocal nature of learning and teaching. As I share my knowledge and experience with the fellows, I find my own skills sharpening. The process of mentoring not only benefits the learners but also enhances my understanding and proficiency in data science.</p>
+<p>Currently, I’m engaged in mentoring these bright individuals in the data science phase of their fellowship. The academy has graciously recognized my contributions and efforts by awarding me a certificate, which I proudly share with immense gratitude.</p>
+<p>This past year has been a remarkable period of personal and professional growth for me. The journey with Arewa Data Science Academy has been incredibly fulfilling, offering me the chance to both impart knowledge and continuously learn. As I navigate this path of ongoing exploration and adaptation, I deeply appreciate the opportunity given to me by the Academy. It’s a privilege to contribute to the growth of others while simultaneously enriching my own experience.</p>
+<p>I am grateful for this journey and look forward to what the future holds. May Allah guide us all on our path to success.</p>
+
+
+
+ ]]></description>
+  <category>arewads</category>
+  <category>mentorship</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/arewads-mentorship/</guid>
+  <pubDate>Sun, 28 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/arewads-mentorship/mentor.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
 <item>
   <title>Advanced Optimization Techniques in Deep Learning: Mastering PyTorch</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/optimization/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/optimization/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -61,14 +87,15 @@
   <category>optimization</category>
   <category>arewads</category>
   <category>fellowship</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/optimization/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/optimization/</guid>
   <pubDate>Wed, 17 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>A Beginner’s Comprehensive Guide to PyTorch</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-intro/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-intro/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -210,14 +237,15 @@ tensor device: cpu</code></pre>
   <category>pytorch</category>
   <category>arewads</category>
   <category>fellowship</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-intro/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-intro/</guid>
   <pubDate>Tue, 16 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Embarking on a Deep Learning Journey with Arewa Data Science Academy’s Deep Learning with PyTorch Fellowship</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -258,14 +286,15 @@ tensor device: cpu</code></pre>
   <category>pytorch</category>
   <category>arewads</category>
   <category>fellowship</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/</guid>
   <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Speed and Elegance: How Python’s List Comprehensions Outshine Traditional Loops</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/list-comprehensions/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/list-comprehensions/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -456,14 +485,15 @@ font-style: inherit;">if</span> num]</span></code></pre></div>
  ]]></description>
   <category>programming</category>
   <category>python</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/list-comprehensions/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/list-comprehensions/</guid>
   <pubDate>Wed, 13 Dec 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Juggling Code and Career: My Arewa Data Science 30 Days Of Python Learning Journey Amidst a Full Schedule</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/learning-motivation/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/learning-motivation/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -481,14 +511,15 @@ font-style: inherit;">if</span> num]</span></code></pre></div>
   <category>motivation</category>
   <category>programming</category>
   <category>python</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/learning-motivation/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/learning-motivation/</guid>
   <pubDate>Fri, 08 Dec 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Exploring Deep Learning Frameworks: FizzBuzz with PyTorch, TensorFlow, and Keras</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-pytorch-fizzbuzz/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-pytorch-fizzbuzz/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -760,14 +791,15 @@ FizzBuzz</code></pre>
   <category>tensorflow</category>
   <category>programming</category>
   <category>python</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-pytorch-fizzbuzz/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-pytorch-fizzbuzz/</guid>
   <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Computation Graphs, Eager Execution and Flow Control in TensorFlow</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -937,15 +969,16 @@ FizzBuzz</code></pre>
   <category>tensorflow</category>
   <category>programming</category>
   <category>python</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/</guid>
   <pubDate>Sun, 05 Nov 2023 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/ibm.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Preparing for the Future of AI: My Journey with IBM’s AI Engineering Professional Certificate</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -967,15 +1000,16 @@ FizzBuzz</code></pre>
   <category>keras</category>
   <category>tensorflow</category>
   <category>computer vision</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/</guid>
   <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/ibm-ai-eng/ibm.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
   <title>Data Visualization with R using ggplot2</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/ggplot/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/ggplot/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1071,7 +1105,11 @@ font-style: inherit;">"lm"</span>)</span></code></pre></div>
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/ggplot/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/ggplot/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Second plot is on the penguins data. I compare the bill length and bill depth and see how species affect the relationship.</p>
@@ -1140,7 +1178,11 @@ font-style: inherit;">NULL</span>))</span>
 <pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/ggplot/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/ggplot/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <section id="conclusion" class="level2">
@@ -1154,14 +1196,15 @@ font-style: inherit;">NULL</span>))</span>
   <category>data science</category>
   <category>r programming</category>
   <category>data visualization</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/ggplot/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/ggplot/</guid>
   <pubDate>Sat, 07 Oct 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Data Science: Foundations using R Specialization</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1183,15 +1226,16 @@ font-style: inherit;">NULL</span>))</span>
   <category>data science</category>
   <category>r programming</category>
   <category>coursera</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/</guid>
   <pubDate>Tue, 03 Oct 2023 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/rprogramming/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Reproducible Research Final Project</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/project/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/project/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1477,7 +1521,11 @@ font-style: inherit;">hjust =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/project/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/project/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -1588,7 +1636,11 @@ font-style: inherit;">hjust =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>))</span></code></pre></div>
 <div class="cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/project/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/project/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -1604,14 +1656,15 @@ font-style: inherit;">1</span>))</span></code></pre></div>
   <category>r programming</category>
   <category>project</category>
   <category>rpubs</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/project/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/project/</guid>
   <pubDate>Mon, 02 Oct 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>My Adventure with Generative Adversarial Networks (GANs)</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/gans/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/gans/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1631,14 +1684,15 @@ font-style: inherit;">1</span>))</span></code></pre></div>
 
  ]]></description>
   <category>GANs</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/gans/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/gans/</guid>
   <pubDate>Fri, 22 Sep 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Metrics for Medical Diagnosis Evaluation</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1715,7 +1769,7 @@ font-style: inherit;">1</span>))</span></code></pre></div>
 <section id="f1-score" class="level2">
 <h2 class="anchored" data-anchor-id="f1-score">F1-Score</h2>
 <p>The F1-score combines precision and recall into a single metric, which is the harmonic mean of both values. This metric is also known as the Dice coefficient score, reflecting the similarity between two sets.</p>
-<p><img src="https://latex.codecogs.com/png.latex?F1%5C,Score%20=%202%20%5Ctimes%20%5Cdfrac%7BPR%7D%7BP+R%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?F1%5C,Score%20%20=%202%20%5Ctimes%20%5Cdfrac%7BPR%7D%7BP+R%7D"></p>
 </section>
 <section id="evaluating-diagnostic-methods-with-roc-curves" class="level2">
 <h2 class="anchored" data-anchor-id="evaluating-diagnostic-methods-with-roc-curves">Evaluating Diagnostic Methods with ROC Curves</h2>
@@ -1723,7 +1777,7 @@ font-style: inherit;">1</span>))</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://lukmanaj.github.io/ailearningloop/posts/medical-eval/roc_curve.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">ROC Curve</figcaption>
+<figcaption>ROC Curve</figcaption>
 </figure>
 </div>
 </section>
@@ -1737,14 +1791,15 @@ font-style: inherit;">1</span>))</span></code></pre></div>
  ]]></description>
   <category>evaluation metrics</category>
   <category>medical diagnosis</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</guid>
   <pubDate>Sun, 10 Sep 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>U-Net Architecture: Revolutionizing Computer Vision Through Innovative Image Segmentation</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/unet/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/unet/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1762,7 +1817,7 @@ font-style: inherit;">1</span>))</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://lukmanaj.github.io/ailearningloop/posts/unet/unet.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">unet architecture</figcaption>
+<figcaption>unet architecture</figcaption>
 </figure>
 </div>
 <p>U-Net’s architecture resembles the letter “U,” a design that would become iconic in the field. It comprises two primary components: the contracting path (left side) and the expansive path (right side).</p>
@@ -2295,15 +2350,16 @@ font-style: inherit;">return</span> x</span></code></pre></div>
   <category>deep learning</category>
   <category>computer vision</category>
   <category>image segmentation</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/unet/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/unet/</guid>
   <pubDate>Mon, 28 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/unet/unet.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>A Study on the Impact of Data Augmentation for Training Convolutional Neural Networks in the Presence of Noisy Labels - Paper Summary</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2336,14 +2392,15 @@ font-style: inherit;">return</span> x</span></code></pre></div>
   <category>cnn</category>
   <category>research</category>
   <category>paper summary</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/</guid>
   <pubDate>Sat, 19 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Matrix Multiplication: Deep Learning Insights, Implementation, and Performance in Python and R</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/matrix/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/matrix/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2743,14 +2800,15 @@ font-style: inherit;">-</span> start_time)</span></code></pre></div>
   <category>r</category>
   <category>matrices</category>
   <category>mathematics</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/matrix/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/matrix/</guid>
   <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Introduction to Symbolic Computation with SymPy</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/sympy/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/sympy/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -3143,14 +3201,15 @@ font-style: inherit;">print</span>(derivatives)</span></code></pre></div>
   <category>sympy</category>
   <category>mathematics</category>
   <category>symbolic computing</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/sympy/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/sympy/</guid>
   <pubDate>Tue, 15 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Navigating the Mathematical Marvels: Discovering the Power of Mathematics in Machine Learning</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/math-for-ml/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/math-for-ml/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -3169,14 +3228,15 @@ font-style: inherit;">print</span>(derivatives)</span></code></pre></div>
  ]]></description>
   <category>mathematics</category>
   <category>machine learning</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/math-for-ml/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/math-for-ml/</guid>
   <pubDate>Mon, 14 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Revving Up: MPG Regression Unleashed through Deep Learning in PyTorch</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-regression/index.html</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-regression/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -3767,7 +3827,11 @@ font-style: inherit;">'Actual vs. Predicted MPG Values'</span>)</span>
 <span id="cb7-8">plt.legend()</span>
 <span id="cb7-9">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/pytorch-regression/index_files/figure-html/cell-6-output-1.png" width="816" height="523"></p>
+<div>
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/pytorch-regression/index_files/figure-html/cell-6-output-1.png" width="816" height="523" class="figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -3783,75 +3847,8 @@ font-style: inherit;">'Actual vs. Predicted MPG Values'</span>)</span>
   <category>pytorch</category>
   <category>regression</category>
   <category>python</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-regression/index.html</guid>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-regression/</guid>
   <pubDate>Wed, 09 Aug 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>The Crucial Role of the Sigmoid Function and its Derivative in Machine Learning</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/sigmoid/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In the realm of machine learning, the sigmoid function stands as a foundational and indispensable element, playing a pivotal role in various applications such as neural networks, logistic regression, and decision-making models. Its characteristic S-shaped curve enables it to map input data to a bounded output range, making it particularly valuable for tasks involving classification, probability estimation, and activation functions. This essay explores the significance of the sigmoid function in machine learning and delves into the techniques for solving its derivative, elucidating its importance in optimizing learning processes.</p>
-</section>
-<section id="the-sigmoid-function-a-cornerstone-of-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="the-sigmoid-function-a-cornerstone-of-machine-learning">The Sigmoid Function: A Cornerstone of Machine Learning</h2>
-<p>The sigmoid function, mathematically represented as <img src="https://latex.codecogs.com/png.latex?%5Csigma%5Cleft(x%5Cright)%20=%20%5Cfrac%7B1%7D%7B1+e%5E%7B-x%7D%7D">, transforms any input value to a range between 0 and 1. This property is particularly useful in binary classification problems, where the output is interpreted as a probability score for a particular class. In the context of neural networks, sigmoid activation functions allow neurons to fire selectively, enabling complex patterns to be captured through the network’s layers. Its continuous and differentiable nature makes it suitable for various optimization algorithms, including gradient descent.</p>
-</section>
-<section id="derivative-of-the-sigmoid-function-unraveling-the-complexity" class="level2">
-<h2 class="anchored" data-anchor-id="derivative-of-the-sigmoid-function-unraveling-the-complexity">Derivative of the Sigmoid Function: Unraveling the Complexity</h2>
-<p>One of the key aspects of utilizing the sigmoid function in machine learning is the ability to compute its derivative. The derivative provides insights into how the output of the function changes concerning variations in the input. The straightforward yet intricate nature of the sigmoid derivative, often expressed as <img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5E%7B,%7D%5Cleft(x%5Cright)%20=%20%5Csigma%5Cleft(x%5Cright)%20%5Ctimes%20(1-%5Csigma%5Cleft(x%5Cright))">, has far-reaching implications for the training of neural networks and other machine learning models.</p>
-</section>
-<section id="solving-the-sigmoid-derivative-chain-rule-in-action" class="level2">
-<h2 class="anchored" data-anchor-id="solving-the-sigmoid-derivative-chain-rule-in-action">Solving the Sigmoid Derivative: Chain Rule in Action</h2>
-<p>To solve the derivative of the sigmoid function, the chain rule comes into play. The chain rule is a fundamental concept in calculus that allows us to calculate the derivative of composite functions. Applying the chain rule to the sigmoid derivative involves breaking down the complex expression into manageable components and systematically calculating their derivatives. The result,<img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5E%7B,%7D%5Cleft(x%5Cright)%20=%20%5Csigma%5Cleft(x%5Cright)%20%5Ctimes(1-%5Csigma%5Cleft(x%5Cright))"> , embodies the sigmoid function’s self-adjusting behavior, where the derivative is maximized at the inflection point (0.5) and approaches zero as the input approaches positive or negative infinity. On this note, I will like to indulge in deriving the derivative of a sigmoid, just for fun.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%5Cleft(x%5Cright)%20=%20%5Cfrac%7B1%7D%7B1+e%5E%7B-x%7D%7D"></p>
-<p>This can also be expressed as:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%5Cleft(x%5Cright)%20=%20(1+e%5E%7B-x%7D)%5E%7B-1%7D"></p>
-<p>which we know differentiates, according to the chain rule, to:</p>
-<p><img src="https://latex.codecogs.com/png.latex?-(1+e%5E%7B-x%7D)%5E%7B-2%7D%20%5Ctimes%20e%5E%7B-x%7D%20%5Ctimes-1"></p>
-<p>which easily becomes:</p>
-<p><img src="https://latex.codecogs.com/png.latex?e%5E%7B-x%7D(1+e%5E%7B-x%7D)%5E%7B-2%7D"></p>
-<p>same as:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Be%5E%7B-x%7D%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D"></p>
-<p>then we can rearrange by adding and subtracting 1 which in essence does nothing but add a zero:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Be%5E%7B-x%7D%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D+%201%20-1"></p>
-<p>this easily becomes:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%20+%20e%5E%7B-x%7D-1%7D%7B%5Cleft(1+e%5E%7B-x%7D%5Cright)%5E%7B-2%7D%7D"></p>
-<p>which is simply:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%20+%20e%5E%7B-x%7D%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D%20-%20%5Cfrac%7B1%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D"></p>
-<p>which simplifies to:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B1%20+%20e%20%5E%7B-x%7D%7D%20-%20%5Cfrac%7B1%7D%7B%5Cleft(1%20+%20e%20%5E%7B-x%7D%5Cright)%5E%7B2%7D%7D"></p>
-<p>factorizing we get:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B1%20+%20e%20%5E%7B-x%7D%7D%5Cleft(1%20-%20%5Cfrac%7B1%7D%7B1%20+%20e%20%5E%7B-x%7D%7D%5Cright)"></p>
-<p>recalling that:</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%5Cleft(x%5Cright)%20=%20%5Cfrac%7B1%7D%7B1+e%5E%7B-x%7D%7D"></p>
-<p>our derivative is now proven to be</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Csigma%20%5E%7B,%7D%5Cleft(x%5Cright)%20=%20%5Csigma%5Cleft(x%5Cright)%20%5Ctimes(1-%5Csigma%5Cleft(x%5Cright))"></p>
-</section>
-<section id="importance-of-the-sigmoid-derivative-in-optimization" class="level2">
-<h2 class="anchored" data-anchor-id="importance-of-the-sigmoid-derivative-in-optimization">Importance of the Sigmoid Derivative in Optimization</h2>
-<p>Understanding and utilizing the sigmoid derivative is of paramount importance in optimizing machine learning models. In neural network training, the backpropagation algorithm relies heavily on derivatives to adjust the model’s weights and biases. The sigmoid derivative guides the network’s learning process, indicating the direction and magnitude of weight adjustments needed for minimizing error, particularly in models where the output layer is sigmoid.</p>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In conclusion, the sigmoid function is a cornerstone of machine learning, serving as a fundamental tool for a wide range of applications. Its ability to map inputs to a bounded output range makes it indispensable in tasks such as binary classification, probability estimation, and activation functions within neural networks. Solving the derivative of the sigmoid function through the chain rule unravels its intricate nature, enabling its effective utilization in optimization processes. As machine learning continues to evolve, the sigmoid function and its derivative will undoubtedly continue to play a pivotal role in shaping the landscape of artificial intelligence and data analysis.</p>
-
-
-</section>
-
- ]]></description>
-  <category>machine learning</category>
-  <category>sigmoid</category>
-  <category>activation</category>
-  <category>mathematics</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/sigmoid/index.html</guid>
-  <pubDate>Mon, 07 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
