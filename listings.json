@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/statistics-in-r/index.html",
       "/posts/arewads-mentorship/index.html",
       "/posts/optimization/index.html",
       "/posts/pytorch-intro/index.html",
@@ -37,14 +38,14 @@
       "/posts/cleancodes/index.html",
       "/posts/pandas2/index.html",
       "/posts/ml-ai/index.html",
-      "/posts/pandas/index.html",
       "/posts/viz/index.html",
+      "/posts/pandas/index.html",
       "/posts/numpy/index.html",
       "/posts/web-scraping/index.html",
       "/posts/practice-concepts/index.html",
       "/posts/how-to-learn/index.html",
-      "/posts/arewads/index.html",
       "/posts/30-days-python/index.html",
+      "/posts/arewads/index.html",
       "/posts/starting-python/index.html",
       "/posts/welcome/index.html"
     ]
