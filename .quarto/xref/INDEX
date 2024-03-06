@@ -136,5 +136,17 @@
   },
   "posts/pytorch-intro/index.qmd": {
     "index.html": "9bc3801b"
+  },
+  "posts/optimization/index.qmd": {
+    "index.html": "e20b5deb"
+  },
+  "posts/arewads-mentorship/index.qmd": {
+    "index.html": "94292be3"
+  },
+  "posts/statistics-in-r/index.qmd": {
+    "index.html": "752cb0aa"
+  },
+  "posts/oop/index.qmd": {
+    "index.html": "a941031b"
   }
 }

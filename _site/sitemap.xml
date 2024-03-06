@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/oop/index.html</loc>
+    <lastmod>2024-03-06T13:17:07.737Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/arewads-mentorship/index.html</loc>
+    <lastmod>2024-01-28T04:43:27.765Z</lastmod>
+  </url>
+  <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/pytorch-intro/index.html</loc>
     <lastmod>2024-01-16T19:53:25.963Z</lastmod>
   </url>
@@ -179,5 +187,13 @@
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/index.html</loc>
     <lastmod>2024-01-15T15:59:02.997Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/optimization/index.html</loc>
+    <lastmod>2024-01-17T02:33:03.044Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/statistics-in-r/index.html</loc>
+    <lastmod>2024-03-03T14:48:40.570Z</lastmod>
   </url>
 </urlset>
