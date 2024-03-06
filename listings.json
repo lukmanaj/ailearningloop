@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/oop/index.html",
       "/posts/statistics-in-r/index.html",
       "/posts/arewads-mentorship/index.html",
       "/posts/optimization/index.html",

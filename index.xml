@@ -9,8 +9,207 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.4.550</generator>
-<lastBuildDate>Sun, 03 Mar 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.551</generator>
+<lastBuildDate>Wed, 06 Mar 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Object Oriented Programming: Python vs R</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/oop/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Object-Oriented Programming (OOP) is a programming paradigm that uses “objects” to design applications and computer programs. It utilizes several techniques from previously established paradigms, including modularity, polymorphism, and encapsulation. Today, we’ll explore how OOP concepts manifest in two popular programming languages: Python and R, particularly focusing on inheritance, using the context of a microwave oven as an example.</p>
+</section>
+<section id="oop-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="oop-in-python">OOP in Python</h2>
+<p>In Python, OOP is central to the language. This can be seen in the way classes are defined and used. Python supports inheritance, allowing new classes to inherit attributes and methods from existing classes. This feature facilitates code reusability and the hierarchical organization of classes. For example, if you were modeling microwave ovens, you could start with a basic microwave class and then create a subclass for a fancier microwave with additional features:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> MicrowaveOven:</span>
+<span id="cb1-2">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, power_rating):</span>
+<span id="cb1-3">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.power_rating <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> power_rating</span>
+<span id="cb1-4"></span>
+<span id="cb1-5">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> cook(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, time_seconds):</span>
+<span id="cb1-6">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Your food is cooked!"</span>)</span>
+<span id="cb1-7"></span>
+<span id="cb1-8"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> FancyMicrowaveOven(MicrowaveOven):</span>
+<span id="cb1-9">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> cook_baked_potato(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-10">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.cook(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
+<span id="cb1-11">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Enjoy your baked potato!"</span>)</span>
+<span id="cb1-12"></span>
+<span id="cb1-13">a_fancy_microwave <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> FancyMicrowaveOven(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
+<span id="cb1-14">a_fancy_microwave.cook_baked_potato()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Your food is cooked!
+Enjoy your baked potato!</code></pre>
+</div>
+</div>
+<p>In this Python example, FancyMicrowaveOven inherits from MicrowaveOven, meaning it can use the cook method defined in the parent class and add its methods like cook_baked_potato.</p>
+</section>
+<section id="oop-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="oop-in-r">OOP in R</h2>
+<p>In contrast, R, traditionally seen as a statistical programming language, has incorporated OOP features more gradually. The R6 package in R allows for a more classical approach to OOP, supporting encapsulation and inheritance but in a somewhat different manner than Python. The R6 framework allows R developers to create classes with reference semantics, which can be somewhat akin to how Python’s classes operate.</p>
+<p>Here’s how you might define a similar set of microwave classes in R using the R6 package:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(R6)</span>
+<span id="cb3-2">microwave_oven_factory <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">R6Class</span>(</span>
+<span id="cb3-3">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"MicrowaveOven"</span>,</span>
+<span id="cb3-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">private =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">power_rating_watts =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">800</span>),</span>
+<span id="cb3-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">public =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb3-6">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cook =</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(time_seconds) {</span>
+<span id="cb3-7">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Sys.sleep</span>(time_seconds)</span>
+<span id="cb3-8">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Your food is cooked!"</span>)</span>
+<span id="cb3-9">        }</span>
+<span id="cb3-10">    )</span>
+<span id="cb3-11">)</span>
+<span id="cb3-12"></span>
+<span id="cb3-13">fancy_microwave_oven_factory <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">R6Class</span>(</span>
+<span id="cb3-14">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FancyMicrowaveOven"</span>,</span>
+<span id="cb3-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">inherit =</span> microwave_oven_factory,</span>
+<span id="cb3-16">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">public =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb3-17">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cook_baked_potato =</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>() {</span>
+<span id="cb3-18">            self<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cook</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
+<span id="cb3-19">            <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Enjoy your baked potato!"</span>)</span>
+<span id="cb3-20">        }</span>
+<span id="cb3-21">    )</span>
+<span id="cb3-22">)</span>
+<span id="cb3-23"></span>
+<span id="cb3-24">a_fancy_microwave <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> fancy_microwave_oven_factory<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">new</span>()</span>
+<span id="cb3-25">a_fancy_microwave<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cook_baked_potato</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Your food is cooked!"
+[1] "Enjoy your baked potato!"</code></pre>
+</div>
+</div>
+<p>In the R example, FancyMicrowaveOven is defined with inherit = microwave_oven_factory, which establishes an inheritance relationship with MicrowaveOven. This setup allows the fancy microwave to use the cook method from its parent class while adding a new method cook_baked_potato.</p>
+</section>
+<section id="differences" class="level2">
+<h2 class="anchored" data-anchor-id="differences">Differences</h2>
+<p>A key difference in the OOP implementation between Python and R is the syntax and the explicit use of self and super. In Python, self refers to the instance itself and is used to access class attributes and methods from within. super(), on the other hand, is used to call methods from a superclass in the context of inheritance.</p>
+<p>In R’s R6, self serves a similar purpose as in Python, referring to the current object. However, R6 does not have a direct counterpart to Python’s super; instead, method overriding involves calling the superclass method directly through super$method_name(). Inheritance in R6 is established through the inherit parameter in the class definition, allowing the new class to access the public methods and properties of the parent class.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In summary, while Python’s OOP features have been integral to the language from its conception, R has adopted OOP paradigms over time, with packages like R6 introducing class-based programming that includes inheritance. Both languages offer robust capabilities for OOP, facilitating complex and modular program design. In practice, choosing between Python and R for OOP depends on the specific requirements of your project and your personal or team’s familiarity with each language.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>oop</category>
+  <category>python</category>
+  <category>rprogramming</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/oop/</guid>
+  <pubDate>Wed, 06 Mar 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Celebrating a Milestone in Statistics: A Journey through DataCamp’s ‘Statistics Fundamentals with R’ Track</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -3248,33 +3447,6 @@ font-style: inherit;">print</span>(derivatives)</span></code></pre></div>
   <category>symbolic computing</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/sympy/</guid>
   <pubDate>Tue, 15 Aug 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Navigating the Mathematical Marvels: Discovering the Power of Mathematics in Machine Learning</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/math-for-ml/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Have you ever faced the intricate challenge of transforming TensorFlow code into PyTorch, wrestling with tensor dimensions, and untangling transpose matrices in the captivating realm of machine learning? If these challenges resonate with you, my journey is bound to strike a chord, for I’ve recently embarked on an illuminating odyssey that reshaped my perception of mathematics within the context of machine learning.</p>
-<p>My journey commenced with a formidable challenge: taming the convolutional neural network, specifically the U-Net architecture, in PyTorch. The mystifying dichotomy between tensor dimensions – PyTorch’s channels-first approach versus TensorFlow’s channels-last convention – spurred me to decipher the intricacies woven into these frameworks. My mission? To decode the intricate geometries of tensors and, more profoundly, master the mysterious dance of transpose matrices that orchestrates the symphony of machine learning implementations.</p>
-<p>With determination in my heart, I plunged headfirst into the world of mathematics for machine learning, enrolling in not one but two comprehensive specializations on Coursera. My inaugural milestone was completing DeepLearning.ai’s Mathematics for Machine Learning. A transformative experience, this journey shifted my perspective dramatically. Guided by the remarkable teaching style of Luis Serrano, complex concepts were distilled into digestible gems, fostering a profound understanding of linear algebra, calculus, and statistics. Empowered with newfound clarity, I embarked on an expedition into the core of machine learning mathematics, armed with a versatile toolkit to confront challenges head-on.</p>
-<p>But the journey was far from over; the horizon expanded further as I embarked on the Mathematics for Machine Learning specialization presented by Imperial College London. Here, the esteemed trio of Professor David Dye, Samuel J Cooper, and Marc Deisenroth ushered me through the labyrinthine corridors of mathematical intricacies, unveiling the nuances of statistics and probability. While certain segments left me grappling, perseverance emerged as my guiding light. Despite the hurdles, this specialization bolstered my mathematical arsenal, enriching my cognitive toolkit with the might of principal component analysis and the profound significance of mean and variance.</p>
-<p>As I reflect upon these intertwined odysseys, I stand humbled by the transformative prowess of mathematics in the world of machine learning. Armed with two comprehensive specializations, my understanding and intuition have deepened immeasurably. I’ve gained the insight and confidence to navigate the convoluted paths of mathematical frameworks that underpin machine learning algorithms. My horizons have expanded, empowering me to embrace intricate challenges with unwavering fervor and newfound comprehension.</p>
-<p>In retrospect, I find myself wondering why I didn’t embark on this enlightening journey sooner. Having already traversed the realms of Machine Learning and Deep Learning Specializations offered by DeepLearning.ai, my aspirations now gravitate toward the beckoning realms of AI for Medicine and Generative Adversarial Networks. These courses entice me with the promise of exhilarating knowledge quests.</p>
-<p>As I contemplate the path that lies ahead, I’m resolute in translating my newfound mathematical insights into practical prowess. Equipped with Python and R, I am poised to elevate my understanding by applying these concepts across diverse programming languages and frameworks. My journey unfolds as a symphony in its infancy, with each note resonating with the thrill of discovery and the pledge of growth.</p>
-<p>In conclusion, this expedition into the realm of mathematical marvels within machine learning has been an exhilarating escapade. It has unveiled the elegance and complexity underpinning the algorithms shaping our digital landscape. With determination propelling my sails, I eagerly anticipate the forthcoming chapter of my journey – one brimming with unparalleled growth, fresh challenges, and an enduring passion for continuous learning.</p>
-
-
-
- ]]></description>
-  <category>mathematics</category>
-  <category>machine learning</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/math-for-ml/</guid>
-  <pubDate>Mon, 14 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
