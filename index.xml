@@ -10,7 +10,161 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.4.551</generator>
-<lastBuildDate>Wed, 06 Mar 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 10 Mar 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Harnessing the Power of R Shiny for Interactive Data Visualization</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/first-shiny/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
+<p>In the realm of data science and statistical computing, R has long been a staple for analysts and researchers. However, the R ecosystem extends far beyond static analyses and plots, entering the dynamic world of web applications with R Shiny. This powerful framework allows users to build interactive web applications directly from R, enabling end-users to interact with their data analyses and visualizations in real-time.</p>
+</section>
+<section id="what-is-r-shiny" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-r-shiny">What is R Shiny?</h2>
+<p>R Shiny is an R package that makes it straightforward to build interactive web apps straight from R. Without needing to know HTML, CSS, or JavaScript, data scientists can create applications that allow users to interact with their data, change parameters, and visualize the results instantly.</p>
+</section>
+<section id="key-features-of-r-shiny" class="level2">
+<h2 class="anchored" data-anchor-id="key-features-of-r-shiny">Key Features of R Shiny:</h2>
+<ol type="1">
+<li><p>Interactivity: Users can interact with the application, altering inputs and immediately seeing the output change.</p></li>
+<li><p>Accessibility: Shiny apps can be hosted on a webpage, making your R analysis accessible to anyone with internet access.</p></li>
+<li><p>Customization: While Shiny makes it easy to get started with default settings, it also allows for extensive customization for more advanced users.</p></li>
+</ol>
+</section>
+<section id="getting-started-with-r-shiny" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started-with-r-shiny">Getting Started with R Shiny:</h2>
+<p>To begin, you need to install the Shiny package from CRAN:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"shiny"</span>)</span></code></pre></div>
+<p>Then, you can create a simple Shiny app with just a few lines of code:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(shiny)</span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define UI for application</span></span>
+<span id="cb2-4">ui <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fluidPage</span>(</span>
+<span id="cb2-5">   <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">titlePanel</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"My First Shiny App"</span>),</span>
+<span id="cb2-6">   <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sidebarLayout</span>(</span>
+<span id="cb2-7">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sidebarPanel</span>(</span>
+<span id="cb2-8">         <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sliderInput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"num"</span>, </span>
+<span id="cb2-9">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Choose a number:"</span>, </span>
+<span id="cb2-10">                     <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">min =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, </span>
+<span id="cb2-11">                     <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">max =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, </span>
+<span id="cb2-12">                     <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>)</span>
+<span id="cb2-13">      ),</span>
+<span id="cb2-14">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mainPanel</span>(</span>
+<span id="cb2-15">         <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">textOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"selectedNum"</span>)</span>
+<span id="cb2-16">      )</span>
+<span id="cb2-17">   )</span>
+<span id="cb2-18">)</span>
+<span id="cb2-19"></span>
+<span id="cb2-20"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define server logic</span></span>
+<span id="cb2-21">server <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(input, output) {</span>
+<span id="cb2-22">   output<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>selectedNum <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">renderText</span>({ </span>
+<span id="cb2-23">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"You selected"</span>, input<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>num)</span>
+<span id="cb2-24">   })</span>
+<span id="cb2-25">}</span>
+<span id="cb2-26"></span>
+<span id="cb2-27"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Run the application </span></span>
+<span id="cb2-28"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">shinyApp</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> ui, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">server =</span> server)</span></code></pre></div>
+<p>This app creates a slider for the user to select a number and immediately displays the selected number on the screen.</p>
+</section>
+<section id="challenges-and-limitations" class="level2">
+<h2 class="anchored" data-anchor-id="challenges-and-limitations">Challenges and Limitations:</h2>
+<p>While R Shiny is an incredibly powerful tool, it does come with its challenges and limitations:</p>
+<ol type="1">
+<li><p>Performance: Heavy computational tasks can slow down your app, affecting user experience.</p></li>
+<li><p>Scalability: Shiny apps can require significant resources for multiple users, which can be a challenge for large-scale applications.</p></li>
+<li><p>Learning Curve: For those unfamiliar with web development concepts, there might be a learning curve.</p></li>
+</ol>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
+<p>R Shiny offers a bridge between data analysis in R and interactive web applications, empowering data scientists to share their insights in a more dynamic and accessible way. Despite its challenges, the benefits of creating interactive and user-friendly applications make R Shiny a valuable tool in the data scientist’s toolkit.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>arewads</category>
+  <category>shiny</category>
+  <category>rprogramming</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/first-shiny/</guid>
+  <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Object Oriented Programming: Python vs R</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -3046,407 +3200,6 @@ font-style: inherit;">-</span> start_time)</span></code></pre></div>
   <category>mathematics</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/matrix/</guid>
   <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Introduction to Symbolic Computation with SymPy</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/sympy/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Symbolic computation is a powerful approach in mathematics and computer science that deals with manipulating expressions and equations in their symbolic form. Unlike numerical computation, where values are approximated and manipulated, symbolic computation focuses on maintaining expressions with variables, allowing for precise mathematical manipulation. In this article, we will delve into symbolic differentiation using the popular SymPy library in Python.</p>
-<section id="basic-numeric-approximation" class="level2">
-<h2 class="anchored" data-anchor-id="basic-numeric-approximation">Basic Numeric Approximation</h2>
-<p>When approximating the square root of 18, you might typically use the math module in Python:</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> math</span>
-<span id="cb1-2"></span>
-<span id="cb1-3">math.sqrt(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">18</span>)</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>4.242640687119285</code></pre>
-</div>
-</div>
-<p>However, this result is an approximation. To work symbolically, we turn to SymPy:</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> sympy</span>
-<span id="cb3-2"></span>
-<span id="cb3-3">sqrt_expr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.sqrt(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">18</span>)</span>
-<span id="cb3-4">sqrt_expr</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%203%20%5Csqrt%7B2%7D"></p>
-</div>
-</div>
-<p>SymPy provides an exact symbolic representation of the square root of 18. You can also evaluate this expression numerically to a specified number of decimal places:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">approx_val <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.N(sqrt_expr, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>)</span>
-<span id="cb4-2">approx_val</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%204.2426407"></p>
-</div>
-</div>
-</section>
-<section id="symbolic-manipulation" class="level2">
-<h2 class="anchored" data-anchor-id="symbolic-manipulation">Symbolic Manipulation</h2>
-<p>In SymPy, expressions are built using symbols. Here’s an example of creating a symbolic expression corresponding to the mathematical expression <img src="https://latex.codecogs.com/png.latex?2x%5E%7B2%7D-xy"> :</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">x, y <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.symbols(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'x y'</span>)</span>
-<span id="cb5-2">expr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> y</span>
-<span id="cb5-3">expr</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%202%20x%5E%7B2%7D%20-%20x%20y"></p>
-</div>
-</div>
-<p>With symbolic expressions, you can perform various manipulations, such as addition, subtraction, and multiplication:</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1">expr_manip <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> (expr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> y <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>)</span>
-<span id="cb6-2">expr_manip</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%20x%20%5Cleft(x%5E%7B3%7D%20+%202%20x%5E%7B2%7D%5Cright)"></p>
-</div>
-</div>
-<p>Expressions can also be expanded and factored using the expand and factor functions, respectively.</p>
-<section id="substitution-and-evaluation" class="level3">
-<h3 class="anchored" data-anchor-id="substitution-and-evaluation">Substitution and Evaluation</h3>
-<p>You can substitute specific values into expressions using the evalf method:</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">val <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> expr.evalf(subs<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{x: <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, y: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>})</span>
-<span id="cb7-2">val</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%204.0"></p>
-</div>
-</div>
-<p>This allows you to evaluate expressions as functions:</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">f_symb <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span></span>
-<span id="cb8-2">f_val <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f_symb.evalf(subs<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{x: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>})</span>
-<span id="cb8-3">f_val </span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%209.0"></p>
-</div>
-</div>
-</section>
-</section>
-<section id="numeric-operations-on-symbolic-functions" class="level2">
-<h2 class="anchored" data-anchor-id="numeric-operations-on-symbolic-functions">Numeric Operations on Symbolic Functions</h2>
-<p>To evaluate a symbolic function for each element of an array, you need to make it NumPy-compatible:</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span>
-<span id="cb9-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">from</span> sympy.utilities.lambdify <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> lambdify</span>
-<span id="cb9-3"></span>
-<span id="cb9-4">x_array <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>])</span>
-<span id="cb9-5">f_symb_numpy <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> lambdify(x, f_symb, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'numpy'</span>)</span>
-<span id="cb9-6"></span>
-<span id="cb9-7">result_array <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f_symb_numpy(x_array)</span>
-<span id="cb9-8">result_array</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>array([1, 4, 9])</code></pre>
-</div>
-</div>
-</section>
-<section id="symbolic-differentiation-with-sympy" class="level2">
-<h2 class="anchored" data-anchor-id="symbolic-differentiation-with-sympy">Symbolic Differentiation with SymPy</h2>
-<p>SymPy excels in symbolic differentiation. Finding derivatives is straightforward:</p>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1">diff_result <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.diff(x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, x)</span>
-<span id="cb11-2">diff_result</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%203%20x%5E%7B2%7D"></p>
-</div>
-</div>
-<p>SymPy handles standard functions and applies necessary rules for differentiation:</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1">dfdx_composed <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.diff(sympy.exp(<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span>x) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span>sympy.sin(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span>x), x)</span>
-<span id="cb12-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(dfdx_composed)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>9*cos(3*x) - 2*exp(-2*x)</code></pre>
-</div>
-</div>
-<p>You can even differentiate the symbolic expression from before and make it NumPy-friendly:</p>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1">dfdx_symb <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.diff(expr, x)</span>
-<span id="cb14-2">dfdx_symb_numpy <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> lambdify(x, dfdx_symb, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'numpy'</span>)</span>
-<span id="cb14-3"></span>
-<span id="cb14-4">diff_result_array <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> dfdx_symb_numpy(x_array)</span>
-<span id="cb14-5">diff_result_array</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
-<pre><code>array([4 - y, 8 - y, 12 - y], dtype=object)</code></pre>
-</div>
-</div>
-</section>
-<section id="limitations-of-symbolic-differentiation" class="level2">
-<h2 class="anchored" data-anchor-id="limitations-of-symbolic-differentiation">Limitations of Symbolic Differentiation</h2>
-<p>Despite its advantages, symbolic differentiation has limitations. Complex expressions might lead to inefficient or unevaluable results. For example, consider differentiating <img src="https://latex.codecogs.com/png.latex?%7Cx%7C"> :</p>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1">dfdx_abs <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.diff(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">abs</span>(x), x)</span>
-<span id="cb16-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(dfdx_abs)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(re(x)*Derivative(re(x), x) + im(x)*Derivative(im(x), x))*sign(x)/x</code></pre>
-</div>
-</div>
-<p>Evaluating we get:</p>
-<div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1">eval_result <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> dfdx_abs.evalf(subs<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{x: <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>})</span>
-<span id="cb18-2">eval_result</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%20-%20%5Cleft.%20%5Cfrac%7Bd%7D%7Bd%20x%7D%20%5Coperatorname%7Bre%7D%7B%5Cleft(x%5Cright)%7D%20%5Cright%7C_%7B%5Csubstack%7B%20x=-2%20%7D%7D"></p>
-</div>
-</div>
-<div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">try</span>:</span>
-<span id="cb19-2">    dfdx_abs_numpy <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> lambdify(x, dfdx_abs, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'numpy'</span>)</span>
-<span id="cb19-3">    dfdx_abs_numpy(np.array([<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>]))</span>
-<span id="cb19-4"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">except</span> <span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">NameError</span> <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> err:</span>
-<span id="cb19-5">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(err)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>name 'Derivative' is not defined</code></pre>
-</div>
-</div>
-</section>
-<section id="numerical-differentiation" class="level2">
-<h2 class="anchored" data-anchor-id="numerical-differentiation">Numerical Differentiation</h2>
-<p>Numerical differentiation approximates derivatives using nearby points and is available through libraries like NumPy. This approach focuses on function evaluation rather than symbolic expressions:</p>
-<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">delta_x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.01</span></span>
-<span id="cb21-2">numerical_derivative <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> (f(x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> delta_x) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> f(x)) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> delta_x</span></code></pre></div>
-<section id="numerical-differentiation-with-numpy" class="level3">
-<h3 class="anchored" data-anchor-id="numerical-differentiation-with-numpy">Numerical Differentiation with NumPy</h3>
-<p>NumPy provides the <code>np.gradient</code> function for numerical differentiation:</p>
-<div class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span>
-<span id="cb22-2"></span>
-<span id="cb22-3">x_vals <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.linspace(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>)</span>
-<span id="cb22-4">y_vals <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.sin(x_vals)</span>
-<span id="cb22-5"></span>
-<span id="cb22-6">derivatives <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.gradient(y_vals, x_vals)</span>
-<span id="cb22-7"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(derivatives)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[ 0.99830036  0.99321184  0.97799815  0.95281439  0.91791729  0.8736626
-  0.82050147  0.75897585  0.68971295  0.61341886  0.53087135  0.44291195
-  0.35043734  0.25439024  0.15574979  0.05552157 -0.04527265 -0.14560535
- -0.2444537  -0.34080999 -0.43369194 -0.52215268 -0.6052904  -0.68225756
- -0.75226954 -0.81461261 -0.86865122 -0.91383447 -0.94970177 -0.97588745
- -0.99212457 -0.99824762 -0.99419416 -0.98000551 -0.95582633 -0.92190311
- -0.87858166 -0.82630363 -0.76560196 -0.69709546 -0.62148251 -0.53953394
- -0.45208516 -0.36002765 -0.2642999  -0.16587777 -0.06576463  0.03501895
-  0.13544553  0.23449132  0.33114663  0.4244261   0.51337882  0.59709797
-  0.67473008  0.74548374  0.80863767  0.86354805  0.9096551   0.94648879
-  0.97367362  0.99093247  0.99808939  0.99507142  0.98190932  0.95873728
-  0.92579151  0.88340789  0.83201848  0.77214717  0.7044043   0.62948048
-  0.54813951  0.46121059  0.36957993  0.27418163  0.17598823  0.07600073
- -0.02476154 -0.12527139 -0.22450417 -0.32144828 -0.41511542 -0.50455072
- -0.58884245 -0.6671313  -0.73861917 -0.80257728 -0.85835363 -0.9053796
- -0.9431758  -0.97135691 -0.98963566 -0.9978257  -0.99584353 -0.98370937
- -0.96154691 -0.92958209 -0.88814077 -0.86509787]</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Symbolic computation with SymPy offers a versatile way to manipulate mathematical expressions and perform differentiation symbolically. While powerful, it has limitations in handling complex expressions and might lead to inefficient computations. Numerical differentiation, on the other hand, provides an alternative for cases where symbolic computation might fall short. By combining these techniques, you can effectively explore and analyze mathematical functions in Python.</p>
-
-
-</section>
-
- ]]></description>
-  <category>python</category>
-  <category>sympy</category>
-  <category>mathematics</category>
-  <category>symbolic computing</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/sympy/</guid>
-  <pubDate>Tue, 15 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
