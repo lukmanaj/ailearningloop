@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/datacamp-cert/index.html",
       "/posts/first-shiny/index.html",
       "/posts/oop/index.html",
       "/posts/statistics-in-r/index.html",
