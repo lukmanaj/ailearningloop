@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/pytorch-nlp/index.html",
       "/posts/datacamp-cert/index.html",
       "/posts/first-shiny/index.html",
       "/posts/oop/index.html",
@@ -41,8 +42,8 @@
       "/posts/cleancodes/index.html",
       "/posts/pandas2/index.html",
       "/posts/ml-ai/index.html",
-      "/posts/viz/index.html",
       "/posts/pandas/index.html",
+      "/posts/viz/index.html",
       "/posts/numpy/index.html",
       "/posts/web-scraping/index.html",
       "/posts/practice-concepts/index.html",
