@@ -1,0 +1,28 @@
+---
+title: "My Journey in Deep Learning: From TensorFlow to PyTorch and Back"
+author: "Lukman Aliyu Jibril"
+date: "2024-05-27"
+categories: [tensorflow,ai,deep learning]
+image: "tensorflow-cert.png"
+---
+
+I recently completed the `DeepLearning.AI` TensorFlow Developer Professional Certificate, a milestone that marked a significant step in my deep learning journey. My exploration of TensorFlow began last year while taking the second course of the DeepLearning.AI Deep Learning Specialization, excellently taught by Andrew Ng.
+
+Following my initial foray into TensorFlow, I delved extensively into PyTorch during the Arewa Data Science Academy's Deep Learning with PyTorch fellowship. The allure of PyTorch, with its state-of-the-art (SOTA) models, pythonic nature and high customizability, made me somewhat hesitant to further pursue TensorFlow. However, an unexpected opportunity arose when, as a moderator in the DeepLearning.AI Forum, I was invited to test a TensorFlow course. This experience reignited my interest and ultimately led me to pursue the Professional Certificate on Coursera.
+
+Contrary to my initial reservations, I found TensorFlow to be quite user-friendly. While it may offer less customization compared to PyTorch, TensorFlow's learning curve is significantly gentler, making it accessible to a wider audience.
+
+The TensorFlow Developer Professional Certificate comprises four courses, each designed to quickly get learners up to speed with TensorFlow:
+
+1. Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning
+2. Convolutional Neural Networks in TensorFlow
+3. Natural Language Processing in TensorFlow
+4. Sequences, Time Series, and Prediction
+
+The certificate is excellently taught by Laurence Moroney, who leads AI Advocacy at Google. His vision is to make AI easy for developers and widen access to machine learning careers for everyone. Laurence is a prolific author, with dozens of programming books to his name, including ‘AI and ML for Coders’ at O’Reilly. He is also an active member of the Science Fiction Writers of America, having authored several sci-fi novels, comic books, and a produced screenplay.
+
+Throughout the series of courses, I built on my existing TensorFlow skills, learning about regular dense layers, convolutional neural networks (CNNs), recurrent neural networks (RNNs), long short-term memory networks (LSTMs), gated recurrent units (GRUs), and more. I even explored lambda layers in TensorFlow. The culmination of the course involved applying deep learning and sequence models to time series data.
+
+Completing this course has been an immensely rewarding experience. I am grateful to Coursera for providing a 90% discount, making it possible for me to embark on and complete this learning journey. The structured learning path and the expertise of the instructors have significantly enhanced my understanding and proficiency in using TensorFlow.
+
+In conclusion, while my journey began with PyTorch, the experience with TensorFlow has been equally enriching. TensorFlow's ease of use and comprehensive learning resources have made it a valuable tool in my deep learning toolkit. I am excited to apply these skills in future projects and continue exploring the evolving landscape of deep learning technologies.

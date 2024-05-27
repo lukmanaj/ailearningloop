@@ -9,8 +9,287 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.4.542</generator>
-<lastBuildDate>Tue, 05 Mar 2024 23:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.554</generator>
+<lastBuildDate>Sun, 26 May 2024 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>My Journey in Deep Learning: From TensorFlow to PyTorch and Back</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I recently completed the <code>DeepLearning.AI</code> TensorFlow Developer Professional Certificate, a milestone that marked a significant step in my deep learning journey. My exploration of TensorFlow began last year while taking the second course of the DeepLearning.AI Deep Learning Specialization, excellently taught by Andrew Ng.</p>
+<p>Following my initial foray into TensorFlow, I delved extensively into PyTorch during the Arewa Data Science Academy’s Deep Learning with PyTorch fellowship. The allure of PyTorch, with its state-of-the-art (SOTA) models, pythonic nature and high customizability, made me somewhat hesitant to further pursue TensorFlow. However, an unexpected opportunity arose when, as a moderator in the DeepLearning.AI Forum, I was invited to test a TensorFlow course. This experience reignited my interest and ultimately led me to pursue the Professional Certificate on Coursera.</p>
+<p>Contrary to my initial reservations, I found TensorFlow to be quite user-friendly. While it may offer less customization compared to PyTorch, TensorFlow’s learning curve is significantly gentler, making it accessible to a wider audience.</p>
+<p>The TensorFlow Developer Professional Certificate comprises four courses, each designed to quickly get learners up to speed with TensorFlow:</p>
+<ol type="1">
+<li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li>
+<li>Convolutional Neural Networks in TensorFlow</li>
+<li>Natural Language Processing in TensorFlow</li>
+<li>Sequences, Time Series, and Prediction</li>
+</ol>
+<p>The certificate is excellently taught by Laurence Moroney, who leads AI Advocacy at Google. His vision is to make AI easy for developers and widen access to machine learning careers for everyone. Laurence is a prolific author, with dozens of programming books to his name, including ‘AI and ML for Coders’ at O’Reilly. He is also an active member of the Science Fiction Writers of America, having authored several sci-fi novels, comic books, and a produced screenplay.</p>
+<p>Throughout the series of courses, I built on my existing TensorFlow skills, learning about regular dense layers, convolutional neural networks (CNNs), recurrent neural networks (RNNs), long short-term memory networks (LSTMs), gated recurrent units (GRUs), and more. I even explored lambda layers in TensorFlow. The culmination of the course involved applying deep learning and sequence models to time series data.</p>
+<p>Completing this course has been an immensely rewarding experience. I am grateful to Coursera for providing a 90% discount, making it possible for me to embark on and complete this learning journey. The structured learning path and the expertise of the instructors have significantly enhanced my understanding and proficiency in using TensorFlow.</p>
+<p>In conclusion, while my journey began with PyTorch, the experience with TensorFlow has been equally enriching. TensorFlow’s ease of use and comprehensive learning resources have made it a valuable tool in my deep learning toolkit. I am excited to apply these skills in future projects and continue exploring the evolving landscape of deep learning technologies.</p>
+
+
+
+ ]]></description>
+  <category>tensorflow</category>
+  <category>ai</category>
+  <category>deep learning</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/</guid>
+  <pubDate>Sun, 26 May 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/tensorflow-cert.png" medium="image" type="image/png" height="118" width="144"/>
+</item>
+<item>
+  <title>PyTorch for Natural Language Processing</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-nlp/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In the dynamic field of Natural Language Processing (NLP), the quest for more robust and scalable models has led researchers and developers towards powerful, flexible tools that can handle the complexity and size of modern datasets. One such tool that has risen to prominence is PyTorch. Developed by Facebook’s AI Research lab, PyTorch offers a compelling blend of flexibility, speed, and ease of use, making it an ideal choice for NLP tasks. Having recently completed a track on DataCamp on NLP with PyTorch, I find it useful to pen down how PyTorch changes the game.</p>
+</section>
+<section id="what-is-pytorch" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-pytorch">What is PyTorch?</h2>
+<p>PyTorch is an open-source machine learning library based on the Torch library, widely recognized for its simplicity and interface clarity. It excels in areas requiring automatic differentiation and dynamic neural networks, particularly in complex, evolving projects where versatility is as critical as performance. This is largely attributed to its use of dynamic computation graphs (called “define-by-run” schema), which allow changes to be made on-the-fly and graphs to be built during runtime.</p>
+</section>
+<section id="pytorchs-advantages-for-nlp" class="level2">
+<h2 class="anchored" data-anchor-id="pytorchs-advantages-for-nlp">PyTorch’s Advantages for NLP</h2>
+<p>The characteristics of PyTorch particularly beneficial for NLP include its intuitive design, ease of debugging, and seamless integration with the Python programming environment. Unlike static graphs, which need to define and optimize the entire model architecture before running, PyTorch’s dynamic graphs enable developers to alter their models as inputs change, which is especially useful for the varying sequence lengths in text data.</p>
+<section id="flexibility-and-ease-of-use" class="level3">
+<h3 class="anchored" data-anchor-id="flexibility-and-ease-of-use">Flexibility and Ease of Use</h3>
+<p>For NLP, models often need to experiment with novel ideas or hybrid architectures, and PyTorch’s flexibility ensures that researchers can implement changes almost as quickly as they can think of them. It integrates seamlessly with the Python data science stack, making it easier to turn research prototypes into production-ready code.</p>
+</section>
+<section id="rich-prebuilt-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="rich-prebuilt-libraries">Rich Prebuilt Libraries</h3>
+<p>PyTorch is supported by a rich ecosystem of libraries and extensions. Libraries such as torchtext simplify text processing and provide utilities for common tasks like tokenization, vocabulary creation, and sequence padding, allowing researchers to handle preprocessing efficiently and focus more on model development.</p>
+</section>
+<section id="torchtext-for-streamlined-text-preprocessing" class="level3">
+<h3 class="anchored" data-anchor-id="torchtext-for-streamlined-text-preprocessing">torchtext for Streamlined Text Preprocessing</h3>
+<p>A key component in PyTorch’s NLP capabilities is torchtext, a library designed to streamline preprocessing pipelines. torchtext offers utilities for batch processing of text, making it easier to load and handle large datasets efficiently. With functionalities such as built-in vocabularies, pre-trained word vectors, and support for common datasets, torchtext significantly reduces the boilerplate code required in text preprocessing. This allows developers to rapidly experiment with different NLP models and techniques, enhancing productivity and innovation.</p>
+</section>
+<section id="community-and-support" class="level3">
+<h3 class="anchored" data-anchor-id="community-and-support">Community and Support</h3>
+<p>The PyTorch community is a vibrant and growing ecosystem. With extensive documentation, tutorials, and forums, developers and researchers can easily find help and resources. The community not only contributes to the core library but also continuously adds to a growing repository of models and tools, which accelerates development and fosters innovation in NLP.</p>
+</section>
+</section>
+<section id="pytorch-in-action-nlp-applications" class="level2">
+<h2 class="anchored" data-anchor-id="pytorch-in-action-nlp-applications">PyTorch in Action: NLP Applications</h2>
+<p>In NLP, PyTorch has been used to achieve state-of-the-art results in several areas:</p>
+<ol type="1">
+<li>Text Classification: PyTorch provides a straightforward approach for developing models for sentiment analysis, topic classification, and more.</li>
+<li>Machine Translation: The flexibility in sequence-to-sequence models, attention mechanisms, and memory networks has made PyTorch a popular choice for researchers working on language translation applications.</li>
+<li>Language Modeling and Generation: PyTorch supports advanced models like Transformers and GPT-n series, which are crucial for tasks that require understanding context and generating text.</li>
+</ol>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>PyTorch’s impact on NLP is undeniable. Its design inherently supports the rapid prototyping and iterative refinement that NLP models often require. Whether you’re a seasoned data scientist or a novice in machine learning, PyTorch provides the tools to innovate and scale NLP applications effectively. As NLP continues to evolve, PyTorch’s role in driving forward the boundaries of what machines understand about human language is likely only to grow, making it an invaluable asset in any NLP developer’s toolkit.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>arewads</category>
+  <category>pytorch</category>
+  <category>nlp</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-nlp/</guid>
+  <pubDate>Sat, 11 May 2024 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>My Journey to Becoming a Professional Data Scientist: A DataCamp Certification Odyssey</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Embarking on the path to deepen my data science expertise, I was presented with an invaluable opportunity—a free premium subscription to DataCamp, courtesy of Arewa Data Science Academy. This opportunity was not just a stepping stone but a gateway to a broader horizon in data science that I eagerly embraced.</p>
+<p>The journey commenced with the Associate Data Scientist with Python track. Given my foundational knowledge and previous encounter with DataCamp’s Introduction to Python course, I was not venturing into uncharted territory. This familiarity served me well, enabling me to swiftly navigate through the coursework and complete the entire track within a week.</p>
+<p>But the quest for knowledge is insatiable. I ventured further into the realm of data manipulation and retrieval by tackling the revamped SQL Fundamentals track. This was followed by successfully achieving the Associate Data Scientist with SQL certification, marking another milestone in my journey.</p>
+<p>Eager to delve deeper, I enrolled in the Data Scientist with Python track. This comprehensive curriculum was not just about Python; it integrated SQL courses and introduced vital skills in package writing and Git fundamentals. This holistic approach equipped me with a robust set of tools and knowledge, preparing me for the pinnacle of my journey—the Professional Data Scientist Certification.</p>
+<p>The certification process was rigorous, encompassing two timed written exams that tested my theoretical understanding through multiple-choice and fill-in-the-blank questions. However, the real challenge lay in the practical data science exam, which required me to code machine learning models and present my findings via webcam. This phase tested not just my technical skills but also my ability to communicate complex results effectively.</p>
+<p>Despite the pressure and the initial setback in the practical exam—stemming from difficulties in data cleaning—I remained undeterred. After a period of diligent study and review, I reattempted the practical exam. With renewed confidence and enhanced skills, I passed on my second attempt.</p>
+<p>This journey was demanding, yet immensely rewarding. It culminated in earning a certificate that not only represents a testament to my skills and dedication but also empowers me with credentials recognized for two years.</p>
+<p>Reflecting on this experience, I am reminded of the importance of resilience, the value of continuous learning, and the doors that can open when one is willing to push through challenges. My journey to becoming a professional data scientist was not just about acquiring a certificate; it was about growth, perseverance, and the relentless pursuit of excellence in the ever-evolving field of data science.</p>
+
+
+
+ ]]></description>
+  <category>arewads</category>
+  <category>datacamp</category>
+  <category>dcdonates</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/</guid>
+  <pubDate>Sat, 16 Mar 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/datacamp.png" medium="image" type="image/png" height="83" width="144"/>
+</item>
+<item>
+  <title>Harnessing the Power of R Shiny for Interactive Data Visualization</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/first-shiny/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
+<p>In the realm of data science and statistical computing, R has long been a staple for analysts and researchers. However, the R ecosystem extends far beyond static analyses and plots, entering the dynamic world of web applications with R Shiny. This powerful framework allows users to build interactive web applications directly from R, enabling end-users to interact with their data analyses and visualizations in real-time.</p>
+</section>
+<section id="what-is-r-shiny" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-r-shiny">What is R Shiny?</h2>
+<p>R Shiny is an R package that makes it straightforward to build interactive web apps straight from R. Without needing to know HTML, CSS, or JavaScript, data scientists can create applications that allow users to interact with their data, change parameters, and visualize the results instantly.</p>
+</section>
+<section id="key-features-of-r-shiny" class="level2">
+<h2 class="anchored" data-anchor-id="key-features-of-r-shiny">Key Features of R Shiny:</h2>
+<ol type="1">
+<li><p>Interactivity: Users can interact with the application, altering inputs and immediately seeing the output change.</p></li>
+<li><p>Accessibility: Shiny apps can be hosted on a webpage, making your R analysis accessible to anyone with internet access.</p></li>
+<li><p>Customization: While Shiny makes it easy to get started with default settings, it also allows for extensive customization for more advanced users.</p></li>
+</ol>
+</section>
+<section id="getting-started-with-r-shiny" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started-with-r-shiny">Getting Started with R Shiny:</h2>
+<p>To begin, you need to install the Shiny package from CRAN:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"shiny"</span>)</span></code></pre></div>
+<p>Then, you can create a simple Shiny app with just a few lines of code:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(shiny)</span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define UI for application</span></span>
+<span id="cb2-4">ui <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fluidPage</span>(</span>
+<span id="cb2-5">   <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">titlePanel</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"My First Shiny App"</span>),</span>
+<span id="cb2-6">   <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sidebarLayout</span>(</span>
+<span id="cb2-7">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sidebarPanel</span>(</span>
+<span id="cb2-8">         <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sliderInput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"num"</span>, </span>
+<span id="cb2-9">                     <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Choose a number:"</span>, </span>
+<span id="cb2-10">                     <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">min =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, </span>
+<span id="cb2-11">                     <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">max =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, </span>
+<span id="cb2-12">                     <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>)</span>
+<span id="cb2-13">      ),</span>
+<span id="cb2-14">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mainPanel</span>(</span>
+<span id="cb2-15">         <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">textOutput</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"selectedNum"</span>)</span>
+<span id="cb2-16">      )</span>
+<span id="cb2-17">   )</span>
+<span id="cb2-18">)</span>
+<span id="cb2-19"></span>
+<span id="cb2-20"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define server logic</span></span>
+<span id="cb2-21">server <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">function</span>(input, output) {</span>
+<span id="cb2-22">   output<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>selectedNum <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">renderText</span>({ </span>
+<span id="cb2-23">       <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"You selected"</span>, input<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>num)</span>
+<span id="cb2-24">   })</span>
+<span id="cb2-25">}</span>
+<span id="cb2-26"></span>
+<span id="cb2-27"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Run the application </span></span>
+<span id="cb2-28"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">shinyApp</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ui =</span> ui, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">server =</span> server)</span></code></pre></div>
+<p>This app creates a slider for the user to select a number and immediately displays the selected number on the screen.</p>
+</section>
+<section id="challenges-and-limitations" class="level2">
+<h2 class="anchored" data-anchor-id="challenges-and-limitations">Challenges and Limitations:</h2>
+<p>While R Shiny is an incredibly powerful tool, it does come with its challenges and limitations:</p>
+<ol type="1">
+<li><p>Performance: Heavy computational tasks can slow down your app, affecting user experience.</p></li>
+<li><p>Scalability: Shiny apps can require significant resources for multiple users, which can be a challenge for large-scale applications.</p></li>
+<li><p>Learning Curve: For those unfamiliar with web development concepts, there might be a learning curve.</p></li>
+</ol>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
+<p>R Shiny offers a bridge between data analysis in R and interactive web applications, empowering data scientists to share their insights in a more dynamic and accessible way. Despite its challenges, the benefits of creating interactive and user-friendly applications make R Shiny a valuable tool in the data scientist’s toolkit.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>arewads</category>
+  <category>shiny</category>
+  <category>rprogramming</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/first-shiny/</guid>
+  <pubDate>Sat, 09 Mar 2024 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Object Oriented Programming: Python vs R</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -2037,1416 +2316,6 @@ font-style: inherit;">1</span>))</span></code></pre></div>
   <category>medical diagnosis</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</guid>
   <pubDate>Sat, 09 Sep 2023 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>U-Net Architecture: Revolutionizing Computer Vision Through Innovative Image Segmentation</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/unet/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In the dynamic world of computer vision, where innovation is key, few architectures have made as profound an impact as U-Net. Published in 2015 by Olaf Ronneberger, Philipp Fischer, and Thomas Brox, the paper titled “U-Net: Convolutional Networks for Biomedical Image Segmentation” introduced a revolutionary approach to image segmentation. Its influence extends far beyond its biomedical origins, as U-Net’s innovative design and remarkable performance have shaped the landscape of computer vision. In this blog post, we’ll explore the motivations, architecture, and the far-reaching impact of the U-Net.</p>
-</section>
-<section id="motivation-and-problem-statement" class="level2">
-<h2 class="anchored" data-anchor-id="motivation-and-problem-statement">Motivation and Problem Statement</h2>
-<p>The crux of U-Net’s inception lay in biomedical image segmentation. The challenge was clear: accurately assign each pixel in an image to a specific class or category. Traditional methods struggled with capturing fine details and object boundaries, relying heavily on handcrafted features. U-Net aimed to change this paradigm.</p>
-</section>
-<section id="architecture-overview" class="level2">
-<h2 class="anchored" data-anchor-id="architecture-overview">Architecture Overview</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/unet/unet.png" class="img-fluid figure-img"></p>
-<figcaption>unet architecture</figcaption>
-</figure>
-</div>
-<p>U-Net’s architecture resembles the letter “U,” a design that would become iconic in the field. It comprises two primary components: the contracting path (left side) and the expansive path (right side).</p>
-<ul>
-<li><p>Contracting Path: This part adopts a typical convolutional neural network (CNN) structure, with convolutional and pooling layers. These layers progressively reduce spatial dimensions while enhancing feature channels, enabling the network to learn hierarchical features.</p></li>
-<li><p>Expansive Path: The expansive path upscales learned features using transpose convolutions (or deconvolutions). What sets U-Net apart is the fusion of these upsampled features with those from the contracting path. This mechanism, called skip connections, merges high-level contextual information with detailed spatial data, mitigating information loss.</p></li>
-<li><p>Skip Connections: Skip connections emerged as a pivotal innovation in U-Net. They combat information loss during downsampling and upsampling, significantly improving accuracy, especially for capturing fine details and object boundaries.</p></li>
-<li><p>Loss Function: U-Net uses a pixel-wise cross-entropy loss function. It quantifies the disparity between predicted segmentation and ground truth on a per-pixel basis, facilitating accurate pixel-level learning.</p></li>
-<li><p>Data Augmentation: Data augmentation plays a vital role in U-Net’s robustness. Techniques like random cropping, elastic deformations, and rotations artificially enhance training data diversity.</p></li>
-<li><p>Revolutionizing Impact: The U-Net architecture has left an indelible mark on computer vision, thanks to several key factors:</p></li>
-<li><p>Efficient Semantic Segmentation: U-Net introduced an efficient architecture for semantic segmentation. Its ability to capture both global context and fine details via skip connections proved invaluable for tasks requiring precise object boundaries and details.</p></li>
-<li><p>Skip Connections and Multi-scale Information: The integration of multi-scale information via skip connections elevated U-Net’s accuracy, surpassing traditional CNNs.</p></li>
-<li><p>State-of-the-Art Performance: U-Net quickly gained acclaim for its outstanding performance in biomedical image segmentation. It consistently outperformed existing methods, setting new accuracy benchmarks.</p></li>
-<li><p>Broad Applicability: While initially conceived for biomedical imaging, U-Net’s principles have transcended boundaries. It has been adapted for diverse computer vision tasks, including natural scene segmentation, satellite image analysis, self-driving cars and beyond.</p></li>
-</ul>
-</section>
-<section id="pytorch-implementation-of-u-net" class="level2">
-<h2 class="anchored" data-anchor-id="pytorch-implementation-of-u-net">PyTorch Implementation of U-Net</h2>
-<p>Now, let’s dive into a PyTorch implementation of the U-Net architecture, complete with explanations and code snippets.These were adapted from <a href="https://nn.labml.ai/unet/index.html">here</a></p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># importing relevant libraries</span></span>
-<span id="cb1-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> torch</span>
-<span id="cb1-3"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> torchvision.transforms.functional</span>
-<span id="cb1-4"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">from</span> torch <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> nn</span></code></pre></div>
-<p>Padding will be used in this implementation to avoid cropping the final image. This is the key difference with the actual unet paper implementation.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Defining the layers</span></span>
-<span id="cb2-2"></span>
-<span id="cb2-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">class</span> DoubleConvolution(nn.Module):</span>
-<span id="cb2-4">  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">'''Each step in the contraction path and expansive path have two 3×3 convolutional layers followed by ReLU activations.</span></span>
-<span id="cb2-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">'''</span></span>
-<span id="cb2-6">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>,in_channels:<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>,out_channels:<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>):</span>
-<span id="cb2-7">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">super</span>.<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>()</span>
-<span id="cb2-8">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.first <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.Conv2d(in_channesls,out_channels,kernel_size<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>,padding<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb2-9">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.act1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.ReLU()</span>
-<span id="cb2-10">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.second <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.Conv2d(in_channels,out_channels,kernel_size<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>,padding<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb2-11">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.act2 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.ReLU()</span>
-<span id="cb2-12"></span>
-<span id="cb2-13">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> forward(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>,x:torch.Tensor):</span>
-<span id="cb2-14">      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Apply the two convolution layers and activations</span></span>
-<span id="cb2-15">      x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.first(x)</span>
-<span id="cb2-16">      x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.act1(x)</span>
-<span id="cb2-17">      x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.second(x)</span>
-<span id="cb2-18">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.act2(x)</span>
-<span id="cb2-19"></span>
-<span id="cb2-20"></span>
-<span id="cb2-21"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">class</span> Downsample(nn.Module):</span>
-<span id="cb2-22">  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Each step in the contracting path down-samples the feature map with a 2×2 max pooling layer.</span></span>
-<span id="cb2-23">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb2-24">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">super</span>.<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>()</span>
-<span id="cb2-25">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># max pooling layer</span></span>
-<span id="cb2-26">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.pool <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.MaxPool2d(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>)</span>
-<span id="cb2-27"></span>
-<span id="cb2-28">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> forward(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>,x:torch.Tensor):</span>
-<span id="cb2-29">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.pool(x)</span>
-<span id="cb2-30"></span>
-<span id="cb2-31"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">class</span> Upsample(nn.Module):</span>
-<span id="cb2-32">  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Each step in the expansive path up-samples the feature map with a 2×2 up-convolution.</span></span>
-<span id="cb2-33">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>,in_channels:<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>,out_channels:<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>):</span>
-<span id="cb2-34">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">super</span>.<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>()</span>
-<span id="cb2-35">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># up convolution</span></span>
-<span id="cb2-36">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.up <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.ConvTranspose2d(in_channels, out_channels, kernel_size<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, stride<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>)</span>
-<span id="cb2-37"></span>
-<span id="cb2-38">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> forward(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>,x:torch.Tensor):</span>
-<span id="cb2-39">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.up(x)</span>
-<span id="cb2-40"></span>
-<span id="cb2-41"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">class</span> CropAndConcat(nn.Module):</span>
-<span id="cb2-42">   <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">'''At every step in the expansive path the corresponding feature map from the contracting path is concatenated with the current feature map.'''</span></span>
-<span id="cb2-43">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> forward(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>, x: torch.Tensor, contracting_x: torch.Tensor):</span>
-<span id="cb2-44">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Crop the feature map from the contracting path to the size of the current feature map</span></span>
-<span id="cb2-45">    contracting_x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> torchvision.transforms.functional.center_crop(contracting_x, [x.shape[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>], x.shape[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>]])</span>
-<span id="cb2-46">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Concatenate the feature maps</span></span>
-<span id="cb2-47">    x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> torch.cat([x, contracting_x], dim<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb2-48">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> x</span>
-<span id="cb2-49"></span>
-<span id="cb2-50"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># The Unet Architecture</span></span>
-<span id="cb2-51"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">class</span> UNet(nn.Module):</span>
-<span id="cb2-52">  <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>,in_channels: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>,out_channels: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>):</span>
-<span id="cb2-53">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">super</span>().__init()</span>
-<span id="cb2-54">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Double convolution layers for the contracting path. The number of features gets doubled at each step starting from 64.</span></span>
-<span id="cb2-55">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.down_conv <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.ModuleList([DoubleConvolution(i, o) <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> i, o <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> [(in_channels, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">64</span>), (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">64</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>), (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>), (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">512</span>)]])</span>
-<span id="cb2-56">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Down sampling layers for the contracting path</span></span>
-<span id="cb2-57">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.down_sample <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.ModuleList([DownSample() <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> _ <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>)])</span>
-<span id="cb2-58">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># The two convolution layers at the lowest resolution (the bottom of the U).</span></span>
-<span id="cb2-59">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.middle_conv <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> DoubleConvolution(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">512</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1024</span>)</span>
-<span id="cb2-60">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Up sampling layers for the expansive path. The number of features is halved with up-sampling.</span></span>
-<span id="cb2-61">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.up_sample <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.ModuleList([UpSample(i, o) <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> i, o <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> [(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1024</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">512</span>), (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">512</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>), (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>), (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">64</span>)]])</span>
-<span id="cb2-62">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Double convolution layers for the expansive path. Their input is the concatenation of the current feature map and the feature map from the contracting path.</span></span>
-<span id="cb2-63">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Therefore, the number of input features is double the number of features from up-sampling.</span></span>
-<span id="cb2-64">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.up_conv <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.ModuleList([DoubleConvolution(i, o) <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> i, o <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> [(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1024</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">512</span>), (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">512</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>), (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>), (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">64</span>)]])</span>
-<span id="cb2-65">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Crop and concatenate layers for the expansive path.</span></span>
-<span id="cb2-66">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.concat <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.ModuleList([CropAndConcat() <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> _ <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>)])</span>
-<span id="cb2-67">     <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">#   Final 1×1 convolution layer to produce the output</span></span>
-<span id="cb2-68">    <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.final_conv <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> nn.Conv2d(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">64</span>, out_channels, kernel_size<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb2-69"></span>
-<span id="cb2-70">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> forward(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>, x: torch.Tensor):</span>
-<span id="cb2-71">      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># To collect the outputs of contracting path for later concatenation with the expansive path.</span></span>
-<span id="cb2-72">      pass_through <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb2-73">      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># contracting path</span></span>
-<span id="cb2-74">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">len</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.down_conv)):</span>
-<span id="cb2-75">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Two 3×3 convolutional layers</span></span>
-<span id="cb2-76">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># afford</span></span>
-<span id="cb2-77">         x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.down_conv[i](x)</span>
-<span id="cb2-78">         <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># collect the output</span></span>
-<span id="cb2-79">         pass_through.append(X)</span>
-<span id="cb2-80">         <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Down-sample</span></span>
-<span id="cb2-81">         x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.down_sample[i](x)</span>
-<span id="cb2-82">         <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Two 3×3 convolutional layers at the bottom of the U-Net</span></span>
-<span id="cb2-83">      x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.middle_conv(x)</span>
-<span id="cb2-84">      <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">len</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.up_conv)):</span>
-<span id="cb2-85">        x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.up_sample[i](x)</span>
-<span id="cb2-86"></span>
-<span id="cb2-87">     <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Concatenate the output of the contracting path</span></span>
-<span id="cb2-88"></span>
-<span id="cb2-89">        x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.concat[i](x, pass_through.pop())</span>
-<span id="cb2-90"></span>
-<span id="cb2-91">       <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Two 3×3 convolutional layers</span></span>
-<span id="cb2-92">        x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.up_conv[i](x)</span>
-<span id="cb2-93">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Final 1×1 convolution layer</span></span>
-<span id="cb2-94"></span>
-<span id="cb2-95">        x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.final_conv(x)</span>
-<span id="cb2-96">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> x</span></code></pre></div>
-<p>In conclusion, U-Net’s innovative architecture and exceptional performance have revolutionized computer vision, making it a cornerstone in the field. Its adaptability and versatility have expanded its influence far beyond its original domain, leaving an enduring legacy in the world of computer vision.</p>
-
-
-</section>
-
- ]]></description>
-  <category>cnn</category>
-  <category>deep learning</category>
-  <category>computer vision</category>
-  <category>image segmentation</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/unet/</guid>
-  <pubDate>Sun, 27 Aug 2023 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/unet/unet.png" medium="image" type="image/png" height="81" width="144"/>
-</item>
-<item>
-  <title>A Study on the Impact of Data Augmentation for Training Convolutional Neural Networks in the Presence of Noisy Labels - Paper Summary</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="a-study-on-the-impact-of-data-augmentation-for-training-convolutional-neural-networks-in-the-presence-of-noisy-labels---paper-summary" class="level2">
-<h2 class="anchored" data-anchor-id="a-study-on-the-impact-of-data-augmentation-for-training-convolutional-neural-networks-in-the-presence-of-noisy-labels---paper-summary">“A Study on the Impact of Data Augmentation for Training Convolutional Neural Networks in the Presence of Noisy Labels” - Paper Summary</h2>
-<p>Emeson Santana, Gustavo Carneiro, and Filipe R. Cordeiro. A Study on the Impact of Data Augmentation for Training Convolutional Neural Networks in the Presence of Noisy Labels.SIBGRAPI - Conference on Graphics, Patterns and Images (2022)</p>
-<p>The paper can be accessed <a href="https://arxiv.org/pdf/2208.11176">here</a>.</p>
-<p>This paper focuses on the impact of data augmentation on the training of deep convolutional neural networks in the presence of label noise, which is common in real-world datasets. The authors analyze the robustness of different data augmentation methods and evaluate their effectiveness in improving model performance with noisy labels. They conduct experiments on various datasets - MNIST, CIFAR-10, CIFAR-100, and Clothing1M, using both classical and state-of-the-art data augmentation strategies.</p>
-<p>The main contributions and findings of the paper are as follows:</p>
-<ol type="1">
-<li><p>Problem Definition: The paper defines the label noise problem in the context of image classification, where noisy labels are common due to factors like human error or data quality issues. They consider symmetric, asymmetric, and semantic noise scenarios.</p></li>
-<li><p>Data Augmentations: The authors evaluate 13 classical and 6 state-of-the-art data augmentation methods. The basic augmentations include random crop, horizontal flip, rotation, translation, and others, while the SOTA methods include Mixup, CutMix, AutoAug, RandAug, and more.</p></li>
-<li><p>Experimental Results: The experiments show that the appropriate selection of data augmentation significantly improves model robustness to label noise. The combination of classical and SOTA augmentations outperforms individual augmentations. For example, the use of random crop along with certain SOTA methods showed the best results in some scenarios.</p></li>
-<li><p>Dataset Impact: The authors highlight that the choice of data augmentation is dataset-dependent, meaning that the best augmentation strategy may vary depending on the specific dataset.</p></li>
-</ol>
-<section id="observation" class="level3">
-<h3 class="anchored" data-anchor-id="observation">Observation</h3>
-<p>Upon careful reflection upon the content of the paper and its associated implications, one is prompted to engage in contemplation concerning the metric utilized for the quantification of impact. While accuracy remains a commonly adopted metric, its capacity to comprehensively encapsulate the genuine effects, particularly in the presence of extraneous variables, may be somewhat limited. As a suggestive alternative, it is worth considering metrics such as precision and recall, which offer a more encompassing representation. By doing so, one can gain valuable insights into both positive and negative instances, thereby affording a more nuanced and comprehensive assessment of impact.</p>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In conclusion, the paper emphasizes the importance of data augmentation as a design choice for training deep convolutional neural networks with noisy labels. The experiments demonstrate that selecting appropriate data augmentation methods can lead to significant improvements in model performance when dealing with label noise. The authors suggest that further research could explore the benefits of using weak and strong augmentations at different stages of training and investigate new data augmentation strategies.</p>
-
-
-</section>
-
- ]]></description>
-  <category>cnn</category>
-  <category>research</category>
-  <category>paper summary</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/paper-summary/</guid>
-  <pubDate>Fri, 18 Aug 2023 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Matrix Multiplication: Deep Learning Insights, Implementation, and Performance in Python and R</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/matrix/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
-<p>Matrix multiplication is a fundamental mathematical operation with wide-ranging applications in various fields, including linear algebra, computer graphics, and machine learning. In the realm of deep learning, matrix multiplication takes on a central role, serving as the backbone for critical computations within neural networks. This article explores the significance of matrix multiplication in deep learning, its intrinsic connection to neural networks, and provides comprehensive implementations using both the R and Python programming languages.</p>
-</section>
-<section id="matrix-multiplication-and-its-deep-learning-role" class="level2">
-<h2 class="anchored" data-anchor-id="matrix-multiplication-and-its-deep-learning-role">Matrix Multiplication and Its Deep Learning Role:</h2>
-<p>Matrix multiplication forms the core of many deep learning operations by efficiently transforming data. In neural networks, each layer involves a matrix of weights that is multiplied with input data, followed by activation functions. The resulting weight updates facilitate the network’s ability to discern patterns and features, underscoring the essential role of matrix multiplication in the efficiency and effectiveness of deep learning algorithms.</p>
-</section>
-<section id="r-implementation" class="level2">
-<h2 class="anchored" data-anchor-id="r-implementation">R Implementation:</h2>
-<p>The presented R implementation of matrix multiplication offers an intuitive insight into the concept. However, its nested loop structure can be computationally inefficient for larger matrices. This implementation serves as an educational example illustrating the mechanics of matrix multiplication:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">rmatmul <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">function</span>(a,b){</span>
-<span id="cb1-2">    rows_mat1 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">nrow</span>(a)</span>
-<span id="cb1-3">    cols_mat1 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ncol</span>(a)</span>
-<span id="cb1-4">    cols_mat2 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ncol</span>(b)</span>
-<span id="cb1-5">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># initialize result matrix</span></span>
-<span id="cb1-6">    c <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">matrix</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>,<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">nrow=</span>rows_mat1,<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ncol =</span> cols_mat2)</span>
-<span id="cb1-7">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># perform the matrix multiplication using nested loops</span></span>
-<span id="cb1-8">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span>rows_mat1){</span>
-<span id="cb1-9">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (j <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span>cols_mat2){</span>
-<span id="cb1-10">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> (k <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span>cols_mat1){</span>
-<span id="cb1-11">                c[i,j] <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> c[i,j] <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> a[i,k] <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> b[k,j]</span>
-<span id="cb1-12">            }</span>
-<span id="cb1-13">        }</span>
-<span id="cb1-14">    }</span>
-<span id="cb1-15"> c</span>
-<span id="cb1-16">}</span></code></pre></div>
-</div>
-<p>We can now test out our new matmul function by multiplying a simple matrix with itself.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">a <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">matrix</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">seq</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>),<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">nrow=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>)</span>
-<span id="cb2-2">b <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">rmatmul</span>(a,a)</span>
-<span id="cb2-3">b</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2]
-[1,]    7   15
-[2,]   10   22</code></pre>
-</div>
-</div>
-<p>Now we perform R regular matrix multiplication to test out the accuracy of the function</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">a <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%*%</span> a</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     [,1] [,2]
-[1,]    7   15
-[2,]   10   22</code></pre>
-</div>
-</div>
-<p>And the results are the same</p>
-</section>
-<section id="python-implementation-using-numpy" class="level2">
-<h2 class="anchored" data-anchor-id="python-implementation-using-numpy">Python Implementation using NumPy:</h2>
-<p>In the Python ecosystem, the NumPy library provides a powerful toolset for optimized matrix operations. The Python implementation showcases the usage of NumPy for efficient matrix multiplication:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span>
-<span id="cb6-2"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> npmatmul(a,b):</span>
-<span id="cb6-3">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Get the dimensions of the matrices</span></span>
-<span id="cb6-4">    rows1, cols1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> a.shape</span>
-<span id="cb6-5">    rows2,cols2 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> b.shape</span>
-<span id="cb6-6">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Check if matrix multiplication is possible</span></span>
-<span id="cb6-7">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> cols1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">!=</span> rows2:</span>
-<span id="cb6-8">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Matrix multiplication is not possible"</span>)</span>
-<span id="cb6-9">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>: </span>
-<span id="cb6-10"></span>
-<span id="cb6-11">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># define a matrix for the multiplication product</span></span>
-<span id="cb6-12">        c <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.zeros((rows1,cols2))</span>
-<span id="cb6-13"></span>
-<span id="cb6-14">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(rows1):</span>
-<span id="cb6-15">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> j <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(cols2):</span>
-<span id="cb6-16">                <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(cols1):</span>
-<span id="cb6-17">                    c[i,j] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> a[i,k] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> b[k,j]</span>
-<span id="cb6-18">        </span>
-<span id="cb6-19">    </span>
-<span id="cb6-20">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> c</span></code></pre></div>
-</div>
-<p>Now it’s time to test out the numpy matmul function alongside the regular numpy matrix multiplication function, <code>np.matmul()</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">#  New matrix</span></span>
-<span id="cb7-2">a <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>],[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>]])</span>
-<span id="cb7-3">c <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> npmatmul(a,a)</span>
-<span id="cb7-4"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>, c)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
- [[ 7. 10.]
- [15. 22.]]</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1">np.matmul(a,a)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>array([[ 7, 10],
-       [15, 22]])</code></pre>
-</div>
-</div>
-</section>
-<section id="comparing-implementations" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-implementations">Comparing Implementations:</h2>
-<section id="ease-of-use" class="level3">
-<h3 class="anchored" data-anchor-id="ease-of-use">Ease of Use:</h3>
-<p>Both R and Python implementations are clear and readable. However, Python’s concise syntax and libraries like NumPy make it more user-friendly.</p>
-</section>
-<section id="optimization-and-performance" class="level3">
-<h3 class="anchored" data-anchor-id="optimization-and-performance">Optimization and Performance:</h3>
-<p>NumPy’s implementation in Python is highly optimized, leveraging efficient low-level operations for faster computation compared to the nested loops in R.</p>
-</section>
-<section id="conciseness" class="level3">
-<h3 class="anchored" data-anchor-id="conciseness">Conciseness:</h3>
-<p>Python’s NumPy implementation is more concise due to its vectorized operations, enabling shorter and more expressive code.</p>
-</section>
-<section id="error-handling" class="level3">
-<h3 class="anchored" data-anchor-id="error-handling">Error Handling:</h3>
-<p>Python’s implementation includes error handling to check if matrix multiplication is feasible, offering better user feedback.</p>
-</section>
-</section>
-<section id="performance-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="performance-comparison">Performance Comparison:</h2>
-<p>For a performance comparison, let’s consider matrix multiplication of larger matrices (e.g., 1000x1000) using both native operations and the respective libraries.</p>
-<section id="r-performance" class="level3">
-<h3 class="anchored" data-anchor-id="r-performance">R Performance:</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Creating large matrices</span></span>
-<span id="cb11-2">large_a <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">matrix</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000000</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">nrow =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>)</span>
-<span id="cb11-3">large_b <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">matrix</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000000</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">nrow =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>)</span>
-<span id="cb11-4"></span>
-<span id="cb11-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Timing the R native matrix multiplication</span></span>
-<span id="cb11-6"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">system.time</span>(large_result_r <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> large_a <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%*%</span> large_b)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   user  system elapsed 
-  0.766   0.010   0.775 </code></pre>
-</div>
-</div>
-</section>
-<section id="python-performance" class="level3">
-<h3 class="anchored" data-anchor-id="python-performance">Python Performance:</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Creating large matrices</span></span>
-<span id="cb13-2">large_a <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.arange(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000001</span>).reshape(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>)</span>
-<span id="cb13-3">large_b <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.arange(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000000</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>).reshape(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>)</span>
-<span id="cb13-4"></span>
-<span id="cb13-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Timing the NumPy matrix multiplication</span></span>
-<span id="cb13-6"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> time</span>
-<span id="cb13-7">start_time <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> time.time()</span>
-<span id="cb13-8">large_result_np <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.matmul(large_a, large_b)</span>
-<span id="cb13-9"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Time taken for NumPy matrix multiplication:"</span>, time.time() <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> start_time)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Time taken for NumPy matrix multiplication: 3.2793290615081787</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
-<p>Matrix multiplication is pivotal across diverse fields, with deep learning embracing it as a fundamental building block. While both R and Python offer matrix multiplication implementations, Python’s NumPy library stands out due to its performance optimization and user-friendly interface. The nested loop approach in R is instructive but less efficient for real-world applications. Embracing optimized libraries such as NumPy in Python is crucial for achieving efficient and scalable matrix multiplication, particularly in contexts like deep learning. This article underscores the intersection of matrix multiplication, deep learning, and programming, shedding light on their interconnectedness and significance.</p>
-
-
-</section>
-
- ]]></description>
-  <category>python</category>
-  <category>r</category>
-  <category>matrices</category>
-  <category>mathematics</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/matrix/</guid>
-  <pubDate>Tue, 15 Aug 2023 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Introduction to Symbolic Computation with SymPy</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/sympy/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Symbolic computation is a powerful approach in mathematics and computer science that deals with manipulating expressions and equations in their symbolic form. Unlike numerical computation, where values are approximated and manipulated, symbolic computation focuses on maintaining expressions with variables, allowing for precise mathematical manipulation. In this article, we will delve into symbolic differentiation using the popular SymPy library in Python.</p>
-<section id="basic-numeric-approximation" class="level2">
-<h2 class="anchored" data-anchor-id="basic-numeric-approximation">Basic Numeric Approximation</h2>
-<p>When approximating the square root of 18, you might typically use the math module in Python:</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> math</span>
-<span id="cb1-2"></span>
-<span id="cb1-3">math.sqrt(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">18</span>)</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>4.242640687119285</code></pre>
-</div>
-</div>
-<p>However, this result is an approximation. To work symbolically, we turn to SymPy:</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> sympy</span>
-<span id="cb3-2"></span>
-<span id="cb3-3">sqrt_expr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.sqrt(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">18</span>)</span>
-<span id="cb3-4">sqrt_expr</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%203%20%5Csqrt%7B2%7D"></p>
-</div>
-</div>
-<p>SymPy provides an exact symbolic representation of the square root of 18. You can also evaluate this expression numerically to a specified number of decimal places:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">approx_val <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.N(sqrt_expr, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>)</span>
-<span id="cb4-2">approx_val</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%204.2426407"></p>
-</div>
-</div>
-</section>
-<section id="symbolic-manipulation" class="level2">
-<h2 class="anchored" data-anchor-id="symbolic-manipulation">Symbolic Manipulation</h2>
-<p>In SymPy, expressions are built using symbols. Here’s an example of creating a symbolic expression corresponding to the mathematical expression <img src="https://latex.codecogs.com/png.latex?2x%5E%7B2%7D-xy"> :</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">x, y <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.symbols(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'x y'</span>)</span>
-<span id="cb5-2">expr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> y</span>
-<span id="cb5-3">expr</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%202%20x%5E%7B2%7D%20-%20x%20y"></p>
-</div>
-</div>
-<p>With symbolic expressions, you can perform various manipulations, such as addition, subtraction, and multiplication:</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1">expr_manip <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> (expr <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> y <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>)</span>
-<span id="cb6-2">expr_manip</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%20x%20%5Cleft(x%5E%7B3%7D%20+%202%20x%5E%7B2%7D%5Cright)"></p>
-</div>
-</div>
-<p>Expressions can also be expanded and factored using the expand and factor functions, respectively.</p>
-<section id="substitution-and-evaluation" class="level3">
-<h3 class="anchored" data-anchor-id="substitution-and-evaluation">Substitution and Evaluation</h3>
-<p>You can substitute specific values into expressions using the evalf method:</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">val <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> expr.evalf(subs<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{x: <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, y: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>})</span>
-<span id="cb7-2">val</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%204.0"></p>
-</div>
-</div>
-<p>This allows you to evaluate expressions as functions:</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">f_symb <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span></span>
-<span id="cb8-2">f_val <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f_symb.evalf(subs<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{x: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>})</span>
-<span id="cb8-3">f_val </span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%209.0"></p>
-</div>
-</div>
-</section>
-</section>
-<section id="numeric-operations-on-symbolic-functions" class="level2">
-<h2 class="anchored" data-anchor-id="numeric-operations-on-symbolic-functions">Numeric Operations on Symbolic Functions</h2>
-<p>To evaluate a symbolic function for each element of an array, you need to make it NumPy-compatible:</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span>
-<span id="cb9-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">from</span> sympy.utilities.lambdify <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> lambdify</span>
-<span id="cb9-3"></span>
-<span id="cb9-4">x_array <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>])</span>
-<span id="cb9-5">f_symb_numpy <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> lambdify(x, f_symb, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'numpy'</span>)</span>
-<span id="cb9-6"></span>
-<span id="cb9-7">result_array <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f_symb_numpy(x_array)</span>
-<span id="cb9-8">result_array</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>array([1, 4, 9])</code></pre>
-</div>
-</div>
-</section>
-<section id="symbolic-differentiation-with-sympy" class="level2">
-<h2 class="anchored" data-anchor-id="symbolic-differentiation-with-sympy">Symbolic Differentiation with SymPy</h2>
-<p>SymPy excels in symbolic differentiation. Finding derivatives is straightforward:</p>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1">diff_result <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.diff(x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, x)</span>
-<span id="cb11-2">diff_result</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%203%20x%5E%7B2%7D"></p>
-</div>
-</div>
-<p>SymPy handles standard functions and applies necessary rules for differentiation:</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1">dfdx_composed <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.diff(sympy.exp(<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span>x) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span>sympy.sin(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span>x), x)</span>
-<span id="cb12-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(dfdx_composed)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>9*cos(3*x) - 2*exp(-2*x)</code></pre>
-</div>
-</div>
-<p>You can even differentiate the symbolic expression from before and make it NumPy-friendly:</p>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1">dfdx_symb <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.diff(expr, x)</span>
-<span id="cb14-2">dfdx_symb_numpy <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> lambdify(x, dfdx_symb, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'numpy'</span>)</span>
-<span id="cb14-3"></span>
-<span id="cb14-4">diff_result_array <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> dfdx_symb_numpy(x_array)</span>
-<span id="cb14-5">diff_result_array</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="11">
-<pre><code>array([4 - y, 8 - y, 12 - y], dtype=object)</code></pre>
-</div>
-</div>
-</section>
-<section id="limitations-of-symbolic-differentiation" class="level2">
-<h2 class="anchored" data-anchor-id="limitations-of-symbolic-differentiation">Limitations of Symbolic Differentiation</h2>
-<p>Despite its advantages, symbolic differentiation has limitations. Complex expressions might lead to inefficient or unevaluable results. For example, consider differentiating <img src="https://latex.codecogs.com/png.latex?%7Cx%7C"> :</p>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1">dfdx_abs <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sympy.diff(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">abs</span>(x), x)</span>
-<span id="cb16-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(dfdx_abs)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(re(x)*Derivative(re(x), x) + im(x)*Derivative(im(x), x))*sign(x)/x</code></pre>
-</div>
-</div>
-<p>Evaluating we get:</p>
-<div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1">eval_result <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> dfdx_abs.evalf(subs<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{x: <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>})</span>
-<span id="cb18-2">eval_result</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cdisplaystyle%20-%20%5Cleft.%20%5Cfrac%7Bd%7D%7Bd%20x%7D%20%5Coperatorname%7Bre%7D%7B%5Cleft(x%5Cright)%7D%20%5Cright%7C_%7B%5Csubstack%7B%20x=-2%20%7D%7D"></p>
-</div>
-</div>
-<div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">try</span>:</span>
-<span id="cb19-2">    dfdx_abs_numpy <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> lambdify(x, dfdx_abs, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'numpy'</span>)</span>
-<span id="cb19-3">    dfdx_abs_numpy(np.array([<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>]))</span>
-<span id="cb19-4"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">except</span> <span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">NameError</span> <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> err:</span>
-<span id="cb19-5">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(err)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>name 'Derivative' is not defined</code></pre>
-</div>
-</div>
-</section>
-<section id="numerical-differentiation" class="level2">
-<h2 class="anchored" data-anchor-id="numerical-differentiation">Numerical Differentiation</h2>
-<p>Numerical differentiation approximates derivatives using nearby points and is available through libraries like NumPy. This approach focuses on function evaluation rather than symbolic expressions:</p>
-<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">delta_x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.01</span></span>
-<span id="cb21-2">numerical_derivative <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> (f(x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> delta_x) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> f(x)) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> delta_x</span></code></pre></div>
-<section id="numerical-differentiation-with-numpy" class="level3">
-<h3 class="anchored" data-anchor-id="numerical-differentiation-with-numpy">Numerical Differentiation with NumPy</h3>
-<p>NumPy provides the <code>np.gradient</code> function for numerical differentiation:</p>
-<div class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span>
-<span id="cb22-2"></span>
-<span id="cb22-3">x_vals <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.linspace(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>)</span>
-<span id="cb22-4">y_vals <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.sin(x_vals)</span>
-<span id="cb22-5"></span>
-<span id="cb22-6">derivatives <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.gradient(y_vals, x_vals)</span>
-<span id="cb22-7"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(derivatives)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[ 0.99830036  0.99321184  0.97799815  0.95281439  0.91791729  0.8736626
-  0.82050147  0.75897585  0.68971295  0.61341886  0.53087135  0.44291195
-  0.35043734  0.25439024  0.15574979  0.05552157 -0.04527265 -0.14560535
- -0.2444537  -0.34080999 -0.43369194 -0.52215268 -0.6052904  -0.68225756
- -0.75226954 -0.81461261 -0.86865122 -0.91383447 -0.94970177 -0.97588745
- -0.99212457 -0.99824762 -0.99419416 -0.98000551 -0.95582633 -0.92190311
- -0.87858166 -0.82630363 -0.76560196 -0.69709546 -0.62148251 -0.53953394
- -0.45208516 -0.36002765 -0.2642999  -0.16587777 -0.06576463  0.03501895
-  0.13544553  0.23449132  0.33114663  0.4244261   0.51337882  0.59709797
-  0.67473008  0.74548374  0.80863767  0.86354805  0.9096551   0.94648879
-  0.97367362  0.99093247  0.99808939  0.99507142  0.98190932  0.95873728
-  0.92579151  0.88340789  0.83201848  0.77214717  0.7044043   0.62948048
-  0.54813951  0.46121059  0.36957993  0.27418163  0.17598823  0.07600073
- -0.02476154 -0.12527139 -0.22450417 -0.32144828 -0.41511542 -0.50455072
- -0.58884245 -0.6671313  -0.73861917 -0.80257728 -0.85835363 -0.9053796
- -0.9431758  -0.97135691 -0.98963566 -0.9978257  -0.99584353 -0.98370937
- -0.96154691 -0.92958209 -0.88814077 -0.86509787]</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Symbolic computation with SymPy offers a versatile way to manipulate mathematical expressions and perform differentiation symbolically. While powerful, it has limitations in handling complex expressions and might lead to inefficient computations. Numerical differentiation, on the other hand, provides an alternative for cases where symbolic computation might fall short. By combining these techniques, you can effectively explore and analyze mathematical functions in Python.</p>
-
-
-</section>
-
- ]]></description>
-  <category>python</category>
-  <category>sympy</category>
-  <category>mathematics</category>
-  <category>symbolic computing</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/sympy/</guid>
-  <pubDate>Mon, 14 Aug 2023 23:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

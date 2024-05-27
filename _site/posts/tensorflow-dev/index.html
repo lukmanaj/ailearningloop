@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-08-07">
+<meta name="dcterms.date" content="2024-05-27">
 
-<title>ailearningloop - The Crucial Role of the Sigmoid Function and its Derivative in Machine Learning</title>
+<title>ailearningloop - My Journey in Deep Learning: From TensorFlow to PyTorch and Back</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,35 +78,6 @@ gtag('js', new Date());
 gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -158,12 +129,11 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">The Crucial Role of the Sigmoid Function and its Derivative in Machine Learning</h1>
+      <h1 class="title">My Journey in Deep Learning: From TensorFlow to PyTorch and Back</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">machine learning</div>
-                <div class="quarto-category">sigmoid</div>
-                <div class="quarto-category">activation</div>
-                <div class="quarto-category">mathematics</div>
+                <div class="quarto-category">tensorflow</div>
+                <div class="quarto-category">ai</div>
+                <div class="quarto-category">deep learning</div>
               </div>
                   </div>
   </div>
@@ -181,7 +151,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 7, 2023</p>
+        <p class="date">May 27, 2024</p>
       </div>
     </div>
     
@@ -200,55 +170,22 @@ window.Quarto = {
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In the realm of machine learning, the sigmoid function stands as a foundational and indispensable element, playing a pivotal role in various applications such as neural networks, logistic regression, and decision-making models. Its characteristic S-shaped curve enables it to map input data to a bounded output range, making it particularly valuable for tasks involving classification, probability estimation, and activation functions. This essay explores the significance of the sigmoid function in machine learning and delves into the techniques for solving its derivative, elucidating its importance in optimizing learning processes.</p>
-</section>
-<section id="the-sigmoid-function-a-cornerstone-of-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="the-sigmoid-function-a-cornerstone-of-machine-learning">The Sigmoid Function: A Cornerstone of Machine Learning</h2>
-<p>The sigmoid function, mathematically represented as <span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}}\)</span>, transforms any input value to a range between 0 and 1. This property is particularly useful in binary classification problems, where the output is interpreted as a probability score for a particular class. In the context of neural networks, sigmoid activation functions allow neurons to fire selectively, enabling complex patterns to be captured through the network’s layers. Its continuous and differentiable nature makes it suitable for various optimization algorithms, including gradient descent.</p>
-</section>
-<section id="derivative-of-the-sigmoid-function-unraveling-the-complexity" class="level2">
-<h2 class="anchored" data-anchor-id="derivative-of-the-sigmoid-function-unraveling-the-complexity">Derivative of the Sigmoid Function: Unraveling the Complexity</h2>
-<p>One of the key aspects of utilizing the sigmoid function in machine learning is the ability to compute its derivative. The derivative provides insights into how the output of the function changes concerning variations in the input. The straightforward yet intricate nature of the sigmoid derivative, often expressed as <span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times (1-\sigma\left(x\right))\)</span>, has far-reaching implications for the training of neural networks and other machine learning models.</p>
-</section>
-<section id="solving-the-sigmoid-derivative-chain-rule-in-action" class="level2">
-<h2 class="anchored" data-anchor-id="solving-the-sigmoid-derivative-chain-rule-in-action">Solving the Sigmoid Derivative: Chain Rule in Action</h2>
-<p>To solve the derivative of the sigmoid function, the chain rule comes into play. The chain rule is a fundamental concept in calculus that allows us to calculate the derivative of composite functions. Applying the chain rule to the sigmoid derivative involves breaking down the complex expression into manageable components and systematically calculating their derivatives. The result,<span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right))\)</span> , embodies the sigmoid function’s self-adjusting behavior, where the derivative is maximized at the inflection point (0.5) and approaches zero as the input approaches positive or negative infinity. On this note, I will like to indulge in deriving the derivative of a sigmoid, just for fun.</p>
-<p><span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}}\)</span></p>
-<p>This can also be expressed as:</p>
-<p><span class="math inline">\(\sigma\left(x\right) = (1+e^{-x})^{-1}\)</span></p>
-<p>which we know differentiates, according to the chain rule, to:</p>
-<p><span class="math inline">\(-(1+e^{-x})^{-2} \times e^{-x} \times-1\)</span></p>
-<p>which easily becomes:</p>
-<p><span class="math inline">\(e^{-x}(1+e^{-x})^{-2}\)</span></p>
-<p>same as:</p>
-<p><span class="math inline">\(\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}\)</span></p>
-<p>then we can rearrange by adding and subtracting 1 which in essence does nothing but add a zero:</p>
-<p><span class="math inline">\(\frac{e^{-x}}{\left(1 + e ^{-x}\right)^{2}}+ 1 -1\)</span></p>
-<p>this easily becomes:</p>
-<p><span class="math inline">\(\frac{1 + e^{-x}-1}{\left(1+e^{-x}\right)^{-2}}\)</span></p>
-<p>which is simply:</p>
-<p><span class="math inline">\(\frac{1 + e^{-x}}{\left(1 + e ^{-x}\right)^{2}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}}\)</span></p>
-<p>which simplifies to:</p>
-<p><span class="math inline">\(\frac{1}{1 + e ^{-x}} - \frac{1}{\left(1 + e ^{-x}\right)^{2}}\)</span></p>
-<p>factorizing we get:</p>
-<p><span class="math inline">\(\frac{1}{1 + e ^{-x}}\left(1 - \frac{1}{1 + e ^{-x}}\right)\)</span></p>
-<p>recalling that:</p>
-<p><span class="math inline">\(\sigma\left(x\right) = \frac{1}{1+e^{-x}}\)</span></p>
-<p>our derivative is now proven to be</p>
-<p><span class="math inline">\(\sigma ^{,}\left(x\right) = \sigma\left(x\right) \times(1-\sigma\left(x\right))\)</span></p>
-</section>
-<section id="importance-of-the-sigmoid-derivative-in-optimization" class="level2">
-<h2 class="anchored" data-anchor-id="importance-of-the-sigmoid-derivative-in-optimization">Importance of the Sigmoid Derivative in Optimization</h2>
-<p>Understanding and utilizing the sigmoid derivative is of paramount importance in optimizing machine learning models. In neural network training, the backpropagation algorithm relies heavily on derivatives to adjust the model’s weights and biases. The sigmoid derivative guides the network’s learning process, indicating the direction and magnitude of weight adjustments needed for minimizing error, particularly in models where the output layer is sigmoid.</p>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In conclusion, the sigmoid function is a cornerstone of machine learning, serving as a fundamental tool for a wide range of applications. Its ability to map inputs to a bounded output range makes it indispensable in tasks such as binary classification, probability estimation, and activation functions within neural networks. Solving the derivative of the sigmoid function through the chain rule unravels its intricate nature, enabling its effective utilization in optimization processes. As machine learning continues to evolve, the sigmoid function and its derivative will undoubtedly continue to play a pivotal role in shaping the landscape of artificial intelligence and data analysis.</p>
+<p>I recently completed the <code>DeepLearning.AI</code> TensorFlow Developer Professional Certificate, a milestone that marked a significant step in my deep learning journey. My exploration of TensorFlow began last year while taking the second course of the DeepLearning.AI Deep Learning Specialization, excellently taught by Andrew Ng.</p>
+<p>Following my initial foray into TensorFlow, I delved extensively into PyTorch during the Arewa Data Science Academy’s Deep Learning with PyTorch fellowship. The allure of PyTorch, with its state-of-the-art (SOTA) models, pythonic nature and high customizability, made me somewhat hesitant to further pursue TensorFlow. However, an unexpected opportunity arose when, as a moderator in the DeepLearning.AI Forum, I was invited to test a TensorFlow course. This experience reignited my interest and ultimately led me to pursue the Professional Certificate on Coursera.</p>
+<p>Contrary to my initial reservations, I found TensorFlow to be quite user-friendly. While it may offer less customization compared to PyTorch, TensorFlow’s learning curve is significantly gentler, making it accessible to a wider audience.</p>
+<p>The TensorFlow Developer Professional Certificate comprises four courses, each designed to quickly get learners up to speed with TensorFlow:</p>
+<ol type="1">
+<li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li>
+<li>Convolutional Neural Networks in TensorFlow</li>
+<li>Natural Language Processing in TensorFlow</li>
+<li>Sequences, Time Series, and Prediction</li>
+</ol>
+<p>The certificate is excellently taught by Laurence Moroney, who leads AI Advocacy at Google. His vision is to make AI easy for developers and widen access to machine learning careers for everyone. Laurence is a prolific author, with dozens of programming books to his name, including ‘AI and ML for Coders’ at O’Reilly. He is also an active member of the Science Fiction Writers of America, having authored several sci-fi novels, comic books, and a produced screenplay.</p>
+<p>Throughout the series of courses, I built on my existing TensorFlow skills, learning about regular dense layers, convolutional neural networks (CNNs), recurrent neural networks (RNNs), long short-term memory networks (LSTMs), gated recurrent units (GRUs), and more. I even explored lambda layers in TensorFlow. The culmination of the course involved applying deep learning and sequence models to time series data.</p>
+<p>Completing this course has been an immensely rewarding experience. I am grateful to Coursera for providing a 90% discount, making it possible for me to embark on and complete this learning journey. The structured learning path and the expertise of the instructors have significantly enhanced my understanding and proficiency in using TensorFlow.</p>
+<p>In conclusion, while my journey began with PyTorch, the experience with TensorFlow has been equally enriching. TensorFlow’s ease of use and comprehensive learning resources have made it a valuable tool in my deep learning toolkit. I am excited to apply these skills in future projects and continue exploring the evolving landscape of deep learning technologies.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
