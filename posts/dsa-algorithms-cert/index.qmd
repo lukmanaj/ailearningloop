@@ -3,6 +3,7 @@ title: "Mastering Data Structures and Algorithms: A Journey through Coursera’s
 author: "Lukman Aliyu Jibril"
 date: "2024-06-10"
 categories: [data structures,algorithms,data science,programming]
+image: dls-cert.png
 ---
 
 I am thrilled to announce that I have successfully completed the **Foundations of Algorithms and Data Structures Specialization** offered by the University of Colorado Boulder on Coursera. The specialization was excellently taught by Professor Sriram Sankaranarayanan and spanned five comprehensive courses. I embarked on this journey last year, and it has been an enriching experience.
@@ -12,43 +13,43 @@ I am thrilled to announce that I have successfully completed the **Foundations o
 ### 1. Algorithms for Searching, Sorting, and Indexing
 
 This course laid the foundation for algorithm design and analysis. It covered:
-- Basics of algorithm design and analysis
-- Sorting arrays
-- Data structures such as priority queues and hash functions
-- Applications like Bloom filters
+* Basics of algorithm design and analysis
+* Sorting arrays
+* Data structures such as priority queues and hash functions
+* Applications like Bloom filters
 
 ### 2. Trees and Graphs: Basics
 
 This course delved into tree and graph data structures. Key topics included:
-- Basic algorithms on tree data structures
-- Binary search trees and self-balancing trees
-- Graph data structures and traversal algorithms
-- Advanced topics like kd-trees for spatial data and algorithms for spatial data
+* Basic algorithms on tree data structures
+* Binary search trees and self-balancing trees
+* Graph data structures and traversal algorithms
+* Advanced topics like kd-trees for spatial data and algorithms for spatial data
 
 ### 3. Dynamic Programming and Greedy Algorithms
 
 In this course, I learned essential algorithm design techniques, including:
-- Divide and conquer
-- Dynamic programming
-- Greedy algorithms
-- Introduction to intractability (NP-completeness)
-- Using linear/integer programming solvers for optimization problems
-- Advanced topics in data structures
+* Divide and conquer
+* Dynamic programming
+* Greedy algorithms
+* Introduction to intractability (NP-completeness)
+* Using linear/integer programming solvers for optimization problems
+* Advanced topics in data structures
 
 ### 4. Approximate Algorithms and Linear Programming
 
 This course focused on:
-- Linear and integer programming formulations for solving algorithmic problems
-- Applications in resource allocation, scheduling, task assignment, and the traveling salesperson problem
-- Algorithms for NP-hard problems with guaranteed approximation factors
-- Efficient algorithms providing useful bounds on optimal solutions
+* Linear and integer programming formulations for solving algorithmic problems
+* Applications in resource allocation, scheduling, task assignment, and the traveling salesperson problem
+* Algorithms for NP-hard problems with guaranteed approximation factors
+* Efficient algorithms providing useful bounds on optimal solutions
 
 ### 5. Advanced Data Structures, RSA, and Quantum Algorithms
 
 The final course introduced:
-- Number-theory based cryptography
-- Basics of quantum algorithms
-- Advanced data structures like B-Trees and Suffix Tries
+* Number-theory based cryptography
+* Basics of quantum algorithms
+* Advanced data structures like B-Trees and Suffix Tries
 
 ## Conclusion
 
