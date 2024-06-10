@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/dsa-algorithms-cert/index.html",
       "/posts/tensorflow-dev/index.html",
       "/posts/pytorch-nlp/index.html",
       "/posts/datacamp-cert/index.html",
