@@ -1,5 +1,5 @@
 ---
-title: "Mastering Data Structures and Algorithms: A Journey through Coursera’s Specialization by the University of Colorado Boulder"
+title: "Mastering Data Structures and Algorithms: My Journey through the `Foundations of Data Structure and Algorithms Specializations` offered by University of Colorado Boulder on Coursera"
 author: "Lukman Aliyu Jibril"
 date: "2024-06-10"
 categories: [data structures,algorithms,data science,programming]
