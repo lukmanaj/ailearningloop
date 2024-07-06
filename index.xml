@@ -9,8 +9,115 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.4.555</generator>
-<lastBuildDate>Mon, 10 Jun 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.5.53</generator>
+<lastBuildDate>Sat, 06 Jul 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Metrics for Medical Diagnosis Evaluation</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Medical diagnosis is a multifaceted endeavour that relies on a comprehensive assessment of various factors, including symptoms, tests, and medical history. Conditional probability, which calculates the likelihood of an event occurring given another event, plays a pivotal role in evaluating the effectiveness of medical diagnoses. In the context of healthcare, this involves estimating the probability of a patient having a disease, given that they have tested positive for it.</p>
+</section>
+<section id="understanding-accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-accuracy">Understanding Accuracy</h2>
+<p>One of the most commonly used metrics in medical diagnosis is accuracy. It gauges the overall proportion of accurate diagnoses, derived from correctly identifying patients with or without a specific ailment. Accuracy can be mathematically expressed as a combination of sensitivity and specificity, both of which are vital metrics.</p>
+<p><img src="https://latex.codecogs.com/png.latex?Accuracy%20=%20Sensitivity%20%5Ctimes%20Prevalence%20+%20Specificity%20%5Ctimes%20(1%20-%20Prevalence)"></p>
+</section>
+<section id="sensitivity-and-specificity" class="level2">
+<h2 class="anchored" data-anchor-id="sensitivity-and-specificity">Sensitivity and Specificity</h2>
+<p>Sensitivity measures the ability of a diagnostic method or model to correctly identify patients who have the disease, while specificity measures its ability to accurately identify those without the disease. These metrics can also be understood in terms of conditional probabilities, simplifying them to the probability of a positive or negative test result given a patient’s disease status.</p>
+<p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,disease%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Specificity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,normal%7D"></p>
+<p>In terms of conditional probabilities:</p>
+<p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20P(positive%7Cdisease)"> <img src="https://latex.codecogs.com/png.latex?Specificity%20=%20P(negative%7Cnormal)"></p>
+</section>
+<section id="positive-predictive-value-and-negative-predictive-value" class="level2">
+<h2 class="anchored" data-anchor-id="positive-predictive-value-and-negative-predictive-value">Positive Predictive Value and Negative Predictive Value</h2>
+<p>To assess the likelihood of a patient having or not having the disease based on their test results, we employ positive predictive value (PPV) and negative predictive value (NPV). These metrics provide insight into the probabilities of disease presence or absence given a positive or negative test result, respectively. This is more useful and practical than just sensitivity and specificity</p>
+<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,positive%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,negative%7D"></p>
+<section id="leveraging-bayes-rule" class="level3">
+<h3 class="anchored" data-anchor-id="leveraging-bayes-rule">Leveraging Bayes’ Rule:</h3>
+<p>To calculate PPV and NPV, Bayes’ rule, a formula relating conditional probabilities, is employed. This rule offers a nuanced perspective by taking into account sensitivity, specificity, and prevalence—the proportion of patients with the disease in the population.</p>
+<p>Using conditional probabilities, we write:</p>
+<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20P(disease%7Cpositive)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20P(normal%7Cnegative)"></p>
+</section>
+</section>
+<section id="confusion-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h2>
+<p>A confusion matrix serves as a valuable tool to visualize the performance of a diagnostic method or model. It displays true positives, true negatives, false positives, and false negatives for different thresholds or cut-off points, which can be adjusted to modify the diagnostic performance metrics.</p>
+<p>A confusion matrix can be represented as:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Disease</td>
+<td>TP</td>
+<td>FN</td>
+</tr>
+<tr class="even">
+<td>Normal</td>
+<td>FP</td>
+<td>TN</td>
+</tr>
+</tbody>
+</table>
+<p>where: TP = True Positives (number of)</p>
+<p>FP = False Positives</p>
+<p>FN = False Negatives</p>
+<p>TN = True Negatives</p>
+</section>
+<section id="precision-and-recall" class="level2">
+<h2 class="anchored" data-anchor-id="precision-and-recall">Precision and Recall</h2>
+<p>Precision measures the proportion of correctly identified positive test results, while recall assesses the proportion of patients with the disease that are accurately identified. These metrics are also synonymous with positive predictive value (PPV) and sensitivity, respectively.</p>
+<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20%5Cdfrac%7BTP%7D%7BTP+FP%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20%5Cdfrac%7BTP%7D%7BTP+FN%7D"></p>
+<p>Precision and recall are also known as positive predictive value (PPV) and sensitivity, respectively. Therefore, they are equivalent to:</p>
+<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20PPR"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20Sensitivity"></p>
+</section>
+<section id="f1-score" class="level2">
+<h2 class="anchored" data-anchor-id="f1-score">F1-Score</h2>
+<p>The F1-score combines precision and recall into a single metric, which is the harmonic mean of both values. This metric is also known as the Dice coefficient score, reflecting the similarity between two sets.</p>
+<p><img src="https://latex.codecogs.com/png.latex?F1%5C,Score%20%20=%202%20%5Ctimes%20%5Cdfrac%7BPR%7D%7BP+R%7D"></p>
+</section>
+<section id="evaluating-diagnostic-methods-with-roc-curves" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-diagnostic-methods-with-roc-curves">Evaluating Diagnostic Methods with ROC Curves</h2>
+<p>To compare different diagnostic methods or models, the receiver operating characteristic (ROC) curve is a valuable tool. It illustrates the trade-off between sensitivity and specificity at varying thresholds. A high-performing diagnostic method or model should yield a ROC curve closely resembling the top-left corner of the plot, with the area under the ROC curve (AUC) indicating its overall performance.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/medical-eval/roc_curve.png" class="img-fluid figure-img"></p>
+<figcaption>ROC Curve</figcaption>
+</figure>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The multifaceted landscape of medical diagnosis evaluation encompasses a spectrum of metrics and tools. Understanding these metrics and their mathematical underpinnings is crucial for accurately assessing the performance of diagnostic methods and models in healthcare.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>evaluation metrics</category>
+  <category>medical diagnosis</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</guid>
+  <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Mastering Data Structures and Algorithms on Coursera</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -320,6 +427,7 @@ font-style: inherit;"># Define server logic</span></span>
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(input, output) {</span>
 <span id="cb2-22">   output<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -393,9 +501,11 @@ font-style: inherit;">server =</span> server)</span></code></pre></div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> MicrowaveOven:</span>
 <span id="cb1-2">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -409,6 +519,7 @@ font-style: inherit;">=</span> power_rating</span>
 <span id="cb1-4"></span>
 <span id="cb1-5">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> cook(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>, time_seconds):</span>
@@ -420,9 +531,11 @@ font-style: inherit;">"Your food is cooked!"</span>)</span>
 <span id="cb1-7"></span>
 <span id="cb1-8"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> FancyMicrowaveOven(MicrowaveOven):</span>
 <span id="cb1-9">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> cook_baked_potato(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -484,6 +597,7 @@ font-style: inherit;">list</span>(</span>
 background-color: null;
 font-style: inherit;">cook =</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(time_seconds) {</span>
 <span id="cb3-7">            <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -517,6 +631,7 @@ font-style: inherit;">list</span>(</span>
 background-color: null;
 font-style: inherit;">cook_baked_potato =</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>() {</span>
 <span id="cb3-18">            self<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -932,10 +1047,13 @@ font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> main_list <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> num]</span>
 <span id="cb2-2">opt_squared[<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -958,8 +1076,10 @@ background-color: null;
 font-style: inherit;">=</span> []</span>
 <span id="cb4-2"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="bu" style="color: null;
@@ -1004,10 +1124,13 @@ font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> main_list <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> num]</span>
 <span id="cb6-3">opt_squared[<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -1028,8 +1151,10 @@ background-color: null;
 font-style: inherit;">=</span> []</span>
 <span id="cb8-3"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="bu" style="color: null;
@@ -1070,10 +1195,13 @@ font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> main_list <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> num]</span></code></pre></div>
 <p>Here, the <code>if num</code> serves as a filter to exclude falsy values (like 0) before the squaring operation. To achieve the same with a traditional loop, additional lines and conditions would be necessary.</p>
 </section>
@@ -1144,11 +1272,14 @@ font-style: inherit;">import</span> torch</span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> fizzbuzz_pytorch(max_num):</span>
 <span id="cb1-4">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
@@ -1185,6 +1316,7 @@ font-style: inherit;">=</span> torch.logical_and(fizz, buzz)</span>
 <span id="cb1-9"></span>
 <span id="cb1-10">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> fizzbuzz.item():</span>
 <span id="cb1-11">            <span class="bu" style="color: null;
 background-color: null;
@@ -1193,6 +1325,7 @@ background-color: null;
 font-style: inherit;">"FizzBuzz"</span>)</span>
 <span id="cb1-12">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">elif</span> fizz.item():</span>
 <span id="cb1-13">            <span class="bu" style="color: null;
 background-color: null;
@@ -1201,6 +1334,7 @@ background-color: null;
 font-style: inherit;">"Fizz"</span>)</span>
 <span id="cb1-14">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">elif</span> buzz.item():</span>
 <span id="cb1-15">            <span class="bu" style="color: null;
 background-color: null;
@@ -1209,6 +1343,7 @@ background-color: null;
 font-style: inherit;">"Buzz"</span>)</span>
 <span id="cb1-16">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span>:</span>
 <span id="cb1-17">            <span class="bu" style="color: null;
 background-color: null;
@@ -1255,11 +1390,14 @@ font-style: inherit;">as</span> tf</span>
 <span id="cb3-2"></span>
 <span id="cb3-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> fizzbuzz_tensorflow(max_num):</span>
 <span id="cb3-4">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
@@ -1308,11 +1446,13 @@ font-style: inherit;">=</span>{</span>
 background-color: null;
 font-style: inherit;">0</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: num_tf.numpy(),</span>
 <span id="cb3-13">                                 <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Fizz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1322,6 +1462,7 @@ font-style: inherit;">"utf-8"</span>),</span>
 background-color: null;
 font-style: inherit;">2</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Buzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1331,6 +1472,7 @@ font-style: inherit;">"utf-8"</span>),</span>
 background-color: null;
 font-style: inherit;">3</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"FizzBuzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1450,11 +1592,14 @@ font-style: inherit;">as</span> tf</span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> fizzbuzz(max_num):</span>
 <span id="cb1-4">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
@@ -1503,11 +1648,13 @@ font-style: inherit;">=</span>{</span>
 background-color: null;
 font-style: inherit;">0</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: num_tf.numpy(),</span>
 <span id="cb1-13">                                 <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Fizz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1517,6 +1664,7 @@ font-style: inherit;">"utf-8"</span>),</span>
 background-color: null;
 font-style: inherit;">2</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Buzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1526,6 +1674,7 @@ font-style: inherit;">"utf-8"</span>),</span>
 background-color: null;
 font-style: inherit;">3</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"FizzBuzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -2264,34 +2413,6 @@ font-style: inherit;">1</span>))</span></code></pre></div>
   <category>rpubs</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/project/</guid>
   <pubDate>Mon, 02 Oct 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>My Adventure with Generative Adversarial Networks (GANs)</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/gans/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Have you ever watched two kids play a game of “make-believe”? One creates a story, and the other tries to catch any flaws in it. If this game was a computer program, it would be called a Generative Adversarial Network or GAN for short. I’ve recently taken a deep dive into GANs with DeepLearning.ai, and here’s my take on it.</p>
-<p>In a GAN, there are two parts: the Generator and the Discriminator. Imagine the Generator as a kid trying to make up stories, and the Discriminator as the friend who points out when something doesn’t make sense. The Generator then takes this feedback and tries to come up with better stories.</p>
-<p>This back-and-forth game helps in creating very real-looking images, music, and more. It’s like teaching a computer to dream and imagine.</p>
-<p>Now, for those who’ve gone a bit deeper into GANs, you’d know that making these two parts play nicely isn’t always simple. This is where things like dice loss and Wasserstein loss (W-loss) come in.</p>
-<ul>
-<li><p>Dice Loss: Without diving too deep, dice loss is a way to measure how similar two samples are. In the world of GANs, it helps in understanding how close the Generator’s “made-up” data is to real data. It’s like comparing two drawings to see how alike they are.</p></li>
-<li><p>Wasserstein Loss (W-loss): This is another tool to make our GAN game more effective. Think of W-loss as a fancy ruler that measures the difference between the real deal and the computer’s creations. It’s super useful because it provides clearer feedback to the Generator, helping it improve faster.</p></li>
-</ul>
-<p>What’s cool about GANs is how they can be used in so many ways. They can make pictures clearer, create fun video game scenes, or even invent new music. But, like all powerful tools, there are challenges. GANs can be used to create “fake” videos that look real, which can be misleading.</p>
-<p>After finishing my course, I feel like I’ve unlocked a new level in the world of technology. GANs are powerful and exciting, and as they keep getting better, I can’t wait to see where we’ll go next. Remember, it’s not just about tech; it’s about how we use it to make our world more interesting and fun!</p>
-
-
-
- ]]></description>
-  <category>GANs</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/gans/</guid>
-  <pubDate>Fri, 22 Sep 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
