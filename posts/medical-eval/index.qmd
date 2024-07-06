@@ -1,7 +1,7 @@
 ---
 title: "Metrics for Medical Diagnosis Evaluation"
 author: "Lukman Aliyu Jibril"
-date: "2023-09-10"
+date: "2024-07-06"
 categories: [evaluation metrics, medical diagnosis]
 ---
 
@@ -31,7 +31,7 @@ $Specificity = P(negative|normal)$
 
 ## Positive Predictive Value and Negative Predictive Value
 
-To assess the likelihood of a patient having or not having the disease based on their test results, we employ positive predictive value (PPV) and negative predictive value (NPV). These metrics provide insight into the probabilities of disease presence or absence given a positive or negative test result, respectively.
+To assess the likelihood of a patient having or not having the disease based on their test results, we employ positive predictive value (PPV) and negative predictive value (NPV). These metrics provide insight into the probabilities of disease presence or absence given a positive or negative test result, respectively. This is more useful and practical than just sensitivity and specificity
 
 $PPV = \dfrac{\,number\,of\,positive\,and\,disease}{\,number\,of\,positive}$
 
