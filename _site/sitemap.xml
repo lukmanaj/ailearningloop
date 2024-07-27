@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/index.html</loc>
+    <lastmod>2024-07-27T21:07:49.377Z</lastmod>
+  </url>
+  <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/index.html</loc>
     <lastmod>2024-05-27T14:27:26.402Z</lastmod>
   </url>
@@ -62,7 +66,7 @@
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/index.html</loc>
-    <lastmod>2024-05-22T10:28:42.211Z</lastmod>
+    <lastmod>2024-07-06T14:14:25.303Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/math-for-ml/index.html</loc>
@@ -106,7 +110,7 @@
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/about.html</loc>
-    <lastmod>2024-05-22T10:28:42.201Z</lastmod>
+    <lastmod>2024-07-15T17:50:12.556Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/index.html</loc>
@@ -211,5 +215,9 @@
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/writearticles/index.html</loc>
     <lastmod>2024-05-22T10:28:42.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/index.html</loc>
+    <lastmod>2024-06-11T09:53:06.485Z</lastmod>
   </url>
 </urlset>

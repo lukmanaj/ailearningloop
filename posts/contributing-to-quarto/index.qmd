@@ -1,0 +1,52 @@
+---
+title: "My Contribution to Quarto-web: A Small Edit with a Big Impact"
+author: "Lukman Aliyu Jibril"
+date: "2024-07-27"
+categories: [quarto,quarto-web]
+image: contribution.png
+---
+
+
+## Introduction
+
+I'm thrilled to share my recent experience contributing to the Quarto-web open-source project. Although it might seem like a small change, my contribution aimed to improve the clarity and readability of the documentation, ensuring users have a smoother experience when learning about Quarto. I've always appreciated Quarto since I first learned about it from [Dr. Shamsuddeen Muhammad](https://shmuhammadd.github.io/) during the first cohort of the Arewa Data Science Fellowship. I continued practicing, and now I am proudly a contributor. I look forward to making more impactful contributions in the future.
+
+## Spotting the Issue: A Simple Typo and Punctuation Fix
+
+While exploring the Quarto Dashboards documentation, specifically the `R Graphics` section tip on this [page](https://quarto.org/docs/dashboards/data-display.html), I noticed a minor typo—'than' was mistakenly written as 'that'. Additionally, there were a few missing commas, which could potentially confuse readers.
+
+These might seem like minor issues, but clear and accurate documentation is crucial in helping users understand and utilize software tools effectively. I decided to take action and correct these mistakes to enhance the user experience.
+
+## The Pull Request: A Quick Fix
+
+I submitted a pull request (#1214) to update the _plots-interactive.md file, which contained the typo and punctuation errors. The changes were straightforward:
+
+- Corrected the typo from 'that' to 'than'.
+- Added a few missing commas for better clarity and readability.
+
+These edits were minor but important, as they helped ensure the documentation was accurate and easy to follow.
+
+## Merged and Celebrated: The Joy of Contributing
+
+To my delight, my pull request was reviewed and merged by the maintainers. You can view the merged changes in the pull request [here](https://github.com/quarto-dev/quarto-web/pull/1214). It was a small contribution, but seeing my changes go live was incredibly rewarding. It was a reminder that even small contributions can make a big difference in the open-source community.
+
+## Reflections on My Contribution
+
+This experience has taught me a few valuable lessons:
+
+- Attention to Detail Matters: Even small errors in documentation can lead to misunderstandings. Taking the time to correct them helps improve the overall quality of the project.
+- Every Contribution Counts: No matter the size, every contribution to an open-source project helps make it better. It's about being part of a community effort.
+- Learning and Growing: This was my first contribution to Quarto-web, and it has encouraged me to continue participating in open-source projects. There's always something new to learn and areas to improve.
+
+
+## Looking Forward
+
+I'm excited to continue exploring opportunities in the open-source world. Whether it's fixing typos, adding features, or writing documentation, every bit helps the community grow and thrive. If you're interested in getting involved, I encourage you to look for ways to contribute, no matter how small they may seem.
+
+Thank you for reading, and feel free to follow me on the social media links in my about page. Happy coding!
+
+
+
+
+
+

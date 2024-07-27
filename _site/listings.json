@@ -2,6 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/contributing-to-quarto/index.html",
+      "/posts/medical-eval/index.html",
+      "/posts/dsa-algorithms-cert/index.html",
       "/posts/tensorflow-dev/index.html",
       "/posts/pytorch-nlp/index.html",
       "/posts/datacamp-cert/index.html",
@@ -21,7 +24,6 @@
       "/posts/rprogramming/index.html",
       "/posts/project/index.html",
       "/posts/gans/index.html",
-      "/posts/medical-eval/index.html",
       "/posts/unet/index.html",
       "/posts/paper-summary/index.html",
       "/posts/matrix/index.html",

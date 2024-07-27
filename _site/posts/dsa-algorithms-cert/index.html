@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2024-07-06">
+<meta name="dcterms.date" content="2024-06-10">
 
-<title>ailearningloop - Metrics for Medical Diagnosis Evaluation</title>
+<title>ailearningloop - Mastering Data Structures and Algorithms on Coursera</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,35 +78,6 @@ gtag('js', new Date());
 gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -158,10 +129,12 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Metrics for Medical Diagnosis Evaluation</h1>
+      <h1 class="title">Mastering Data Structures and Algorithms on Coursera</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">evaluation metrics</div>
-                <div class="quarto-category">medical diagnosis</div>
+                <div class="quarto-category">data structures</div>
+                <div class="quarto-category">algorithms</div>
+                <div class="quarto-category">data science</div>
+                <div class="quarto-category">programming</div>
               </div>
                   </div>
   </div>
@@ -179,7 +152,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 6, 2024</p>
+        <p class="date">June 10, 2024</p>
       </div>
     </div>
     
@@ -198,93 +171,66 @@ window.Quarto = {
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Medical diagnosis is a multifaceted endeavour that relies on a comprehensive assessment of various factors, including symptoms, tests, and medical history. Conditional probability, which calculates the likelihood of an event occurring given another event, plays a pivotal role in evaluating the effectiveness of medical diagnoses. In the context of healthcare, this involves estimating the probability of a patient having a disease, given that they have tested positive for it.</p>
+<p>I am thrilled to announce that I have successfully completed the <strong>Foundations of Algorithms and Data Structures Specialization</strong> offered by the University of Colorado Boulder on Coursera. The specialization was excellently taught by Professor Sriram Sankaranarayanan and spanned five comprehensive courses. I embarked on this journey last year, and it has been an enriching experience.</p>
+<section id="course-overview-and-learnings" class="level2">
+<h2 class="anchored" data-anchor-id="course-overview-and-learnings">Course Overview and Learnings</h2>
+<section id="algorithms-for-searching-sorting-and-indexing" class="level3">
+<h3 class="anchored" data-anchor-id="algorithms-for-searching-sorting-and-indexing">1. Algorithms for Searching, Sorting, and Indexing</h3>
+<p>This course laid the foundation for algorithm design and analysis. It covered:</p>
+<ul>
+<li>Basics of algorithm design and analysis</li>
+<li>Sorting arrays</li>
+<li>Data structures such as priority queues and hash functions</li>
+<li>Applications like Bloom filters</li>
+</ul>
 </section>
-<section id="understanding-accuracy" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-accuracy">Understanding Accuracy</h2>
-<p>One of the most commonly used metrics in medical diagnosis is accuracy. It gauges the overall proportion of accurate diagnoses, derived from correctly identifying patients with or without a specific ailment. Accuracy can be mathematically expressed as a combination of sensitivity and specificity, both of which are vital metrics.</p>
-<p><span class="math inline">\(Accuracy = Sensitivity \times Prevalence + Specificity \times (1 - Prevalence)\)</span></p>
+<section id="trees-and-graphs-basics" class="level3">
+<h3 class="anchored" data-anchor-id="trees-and-graphs-basics">2. Trees and Graphs: Basics</h3>
+<p>This course delved into tree and graph data structures. Key topics included:</p>
+<ul>
+<li>Basic algorithms on tree data structures</li>
+<li>Binary search trees and self-balancing trees</li>
+<li>Graph data structures and traversal algorithms</li>
+<li>Advanced topics like kd-trees for spatial data and algorithms for spatial data</li>
+</ul>
 </section>
-<section id="sensitivity-and-specificity" class="level2">
-<h2 class="anchored" data-anchor-id="sensitivity-and-specificity">Sensitivity and Specificity</h2>
-<p>Sensitivity measures the ability of a diagnostic method or model to correctly identify patients who have the disease, while specificity measures its ability to accurately identify those without the disease. These metrics can also be understood in terms of conditional probabilities, simplifying them to the probability of a positive or negative test result given a patient’s disease status.</p>
-<p><span class="math inline">\(Sensitivity = \dfrac{\,number\,of\,positive\,and\,disease}{\,number\,of\,disease}\)</span></p>
-<p><span class="math inline">\(Specificity = \dfrac{\,number\,of\,negative\,and\,normal}{\,number\,of\,normal}\)</span></p>
-<p>In terms of conditional probabilities:</p>
-<p><span class="math inline">\(Sensitivity = P(positive|disease)\)</span> <span class="math inline">\(Specificity = P(negative|normal)\)</span></p>
+<section id="dynamic-programming-and-greedy-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-programming-and-greedy-algorithms">3. Dynamic Programming and Greedy Algorithms</h3>
+<p>In this course, I learned essential algorithm design techniques, including:</p>
+<ul>
+<li>Divide and conquer</li>
+<li>Dynamic programming</li>
+<li>Greedy algorithms</li>
+<li>Introduction to intractability (NP-completeness)</li>
+<li>Using linear/integer programming solvers for optimization problems</li>
+<li>Advanced topics in data structures</li>
+</ul>
 </section>
-<section id="positive-predictive-value-and-negative-predictive-value" class="level2">
-<h2 class="anchored" data-anchor-id="positive-predictive-value-and-negative-predictive-value">Positive Predictive Value and Negative Predictive Value</h2>
-<p>To assess the likelihood of a patient having or not having the disease based on their test results, we employ positive predictive value (PPV) and negative predictive value (NPV). These metrics provide insight into the probabilities of disease presence or absence given a positive or negative test result, respectively. This is more useful and practical than just sensitivity and specificity</p>
-<p><span class="math inline">\(PPV = \dfrac{\,number\,of\,positive\,and\,disease}{\,number\,of\,positive}\)</span></p>
-<p><span class="math inline">\(NPV = \dfrac{\,number\,of\,negative\,and\,normal}{\,number\,of\,negative}\)</span></p>
-<section id="leveraging-bayes-rule" class="level3">
-<h3 class="anchored" data-anchor-id="leveraging-bayes-rule">Leveraging Bayes’ Rule:</h3>
-<p>To calculate PPV and NPV, Bayes’ rule, a formula relating conditional probabilities, is employed. This rule offers a nuanced perspective by taking into account sensitivity, specificity, and prevalence—the proportion of patients with the disease in the population.</p>
-<p>Using conditional probabilities, we write:</p>
-<p><span class="math inline">\(PPV = P(disease|positive)\)</span></p>
-<p><span class="math inline">\(NPV = P(normal|negative)\)</span></p>
+<section id="approximate-algorithms-and-linear-programming" class="level3">
+<h3 class="anchored" data-anchor-id="approximate-algorithms-and-linear-programming">4. Approximate Algorithms and Linear Programming</h3>
+<p>This course focused on:</p>
+<ul>
+<li>Linear and integer programming formulations for solving algorithmic problems</li>
+<li>Applications in resource allocation, scheduling, task assignment, and the traveling salesperson problem</li>
+<li>Algorithms for NP-hard problems with guaranteed approximation factors</li>
+<li>Efficient algorithms providing useful bounds on optimal solutions</li>
+</ul>
 </section>
+<section id="advanced-data-structures-rsa-and-quantum-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-data-structures-rsa-and-quantum-algorithms">5. Advanced Data Structures, RSA, and Quantum Algorithms</h3>
+<p>The final course introduced:</p>
+<ul>
+<li>Number-theory based cryptography</li>
+<li>Basics of quantum algorithms</li>
+<li>Advanced data structures like B-Trees and Suffix Tries</li>
+</ul>
 </section>
-<section id="confusion-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h2>
-<p>A confusion matrix serves as a valuable tool to visualize the performance of a diagnostic method or model. It displays true positives, true negatives, false positives, and false negatives for different thresholds or cut-off points, which can be adjusted to modify the diagnostic performance metrics.</p>
-<p>A confusion matrix can be represented as:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Positive</th>
-<th>Negative</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Disease</td>
-<td>TP</td>
-<td>FN</td>
-</tr>
-<tr class="even">
-<td>Normal</td>
-<td>FP</td>
-<td>TN</td>
-</tr>
-</tbody>
-</table>
-<p>where: TP = True Positives (number of)</p>
-<p>FP = False Positives</p>
-<p>FN = False Negatives</p>
-<p>TN = True Negatives</p>
-</section>
-<section id="precision-and-recall" class="level2">
-<h2 class="anchored" data-anchor-id="precision-and-recall">Precision and Recall</h2>
-<p>Precision measures the proportion of correctly identified positive test results, while recall assesses the proportion of patients with the disease that are accurately identified. These metrics are also synonymous with positive predictive value (PPV) and sensitivity, respectively.</p>
-<p><span class="math inline">\(Precision = \dfrac{TP}{TP+FP}\)</span></p>
-<p><span class="math inline">\(Recall = \dfrac{TP}{TP+FN}\)</span></p>
-<p>Precision and recall are also known as positive predictive value (PPV) and sensitivity, respectively. Therefore, they are equivalent to:</p>
-<p><span class="math inline">\(Precision = PPR\)</span></p>
-<p><span class="math inline">\(Recall = Sensitivity\)</span></p>
-</section>
-<section id="f1-score" class="level2">
-<h2 class="anchored" data-anchor-id="f1-score">F1-Score</h2>
-<p>The F1-score combines precision and recall into a single metric, which is the harmonic mean of both values. This metric is also known as the Dice coefficient score, reflecting the similarity between two sets.</p>
-<p><span class="math inline">\(F1\,Score  = 2 \times \dfrac{PR}{P+R}\)</span></p>
-</section>
-<section id="evaluating-diagnostic-methods-with-roc-curves" class="level2">
-<h2 class="anchored" data-anchor-id="evaluating-diagnostic-methods-with-roc-curves">Evaluating Diagnostic Methods with ROC Curves</h2>
-<p>To compare different diagnostic methods or models, the receiver operating characteristic (ROC) curve is a valuable tool. It illustrates the trade-off between sensitivity and specificity at varying thresholds. A high-performing diagnostic method or model should yield a ROC curve closely resembling the top-left corner of the plot, with the area under the ROC curve (AUC) indicating its overall performance.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="roc_curve.png" class="img-fluid figure-img"></p>
-<figcaption>ROC Curve</figcaption>
-</figure>
-</div>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>The multifaceted landscape of medical diagnosis evaluation encompasses a spectrum of metrics and tools. Understanding these metrics and their mathematical underpinnings is crucial for accurately assessing the performance of diagnostic methods and models in healthcare.</p>
+<p>Completing this specialization has been a significant milestone in my Data Science and Machine Learning/AI journey. I am excited to apply the knowledge and skills I have gained to future projects and challenges.</p>
+<p>I highly recommend this specialization to anyone looking to deepen their understanding of algorithms and data structures. The courses are well-structured, and Professor Sriram Sankaranarayanan’s teaching is both clear and engaging.</p>
+<p>I look forward to what the future holds and I am eager to continue my learning journey in the ever-evolving field of Data Science and AI.</p>
 
 
 </section>

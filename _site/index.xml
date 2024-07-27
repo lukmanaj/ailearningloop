@@ -10,7 +10,253 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Sun, 26 May 2024 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 26 Jul 2024 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>My Contribution to Quarto-web: A Small Edit with a Big Impact</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>I’m thrilled to share my recent experience contributing to the Quarto-web open-source project. Although it might seem like a small change, my contribution aimed to improve the clarity and readability of the documentation, ensuring users have a smoother experience when learning about Quarto. I’ve always appreciated Quarto since I first learned about it from <a href="https://shmuhammadd.github.io/">Dr.&nbsp;Shamsuddeen Muhammad</a> during the first cohort of the Arewa Data Science Fellowship. I continued practicing, and now I am proudly a contributor. I look forward to making more impactful contributions in the future.</p>
+</section>
+<section id="spotting-the-issue-a-simple-typo-and-punctuation-fix" class="level2">
+<h2 class="anchored" data-anchor-id="spotting-the-issue-a-simple-typo-and-punctuation-fix">Spotting the Issue: A Simple Typo and Punctuation Fix</h2>
+<p>While exploring the Quarto Dashboards documentation, specifically the <code>R Graphics</code> section tip on this <a href="https://quarto.org/docs/dashboards/data-display.html">page</a>, I noticed a minor typo—‘than’ was mistakenly written as ‘that’. Additionally, there were a few missing commas, which could potentially confuse readers.</p>
+<p>These might seem like minor issues, but clear and accurate documentation is crucial in helping users understand and utilize software tools effectively. I decided to take action and correct these mistakes to enhance the user experience.</p>
+</section>
+<section id="the-pull-request-a-quick-fix" class="level2">
+<h2 class="anchored" data-anchor-id="the-pull-request-a-quick-fix">The Pull Request: A Quick Fix</h2>
+<p>I submitted a pull request (#1214) to update the _plots-interactive.md file, which contained the typo and punctuation errors. The changes were straightforward:</p>
+<ul>
+<li>Corrected the typo from ‘that’ to ‘than’.</li>
+<li>Added a few missing commas for better clarity and readability.</li>
+</ul>
+<p>These edits were minor but important, as they helped ensure the documentation was accurate and easy to follow.</p>
+</section>
+<section id="merged-and-celebrated-the-joy-of-contributing" class="level2">
+<h2 class="anchored" data-anchor-id="merged-and-celebrated-the-joy-of-contributing">Merged and Celebrated: The Joy of Contributing</h2>
+<p>To my delight, my pull request was reviewed and merged by the maintainers. You can view the merged changes in the pull request <a href="https://github.com/quarto-dev/quarto-web/pull/1214">here</a>. It was a small contribution, but seeing my changes go live was incredibly rewarding. It was a reminder that even small contributions can make a big difference in the open-source community.</p>
+</section>
+<section id="reflections-on-my-contribution" class="level2">
+<h2 class="anchored" data-anchor-id="reflections-on-my-contribution">Reflections on My Contribution</h2>
+<p>This experience has taught me a few valuable lessons:</p>
+<ul>
+<li>Attention to Detail Matters: Even small errors in documentation can lead to misunderstandings. Taking the time to correct them helps improve the overall quality of the project.</li>
+<li>Every Contribution Counts: No matter the size, every contribution to an open-source project helps make it better. It’s about being part of a community effort.</li>
+<li>Learning and Growing: This was my first contribution to Quarto-web, and it has encouraged me to continue participating in open-source projects. There’s always something new to learn and areas to improve.</li>
+</ul>
+</section>
+<section id="looking-forward" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward">Looking Forward</h2>
+<p>I’m excited to continue exploring opportunities in the open-source world. Whether it’s fixing typos, adding features, or writing documentation, every bit helps the community grow and thrive. If you’re interested in getting involved, I encourage you to look for ways to contribute, no matter how small they may seem.</p>
+<p>Thank you for reading, and feel free to follow me on the social media links in my about page. Happy coding!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>quarto</category>
+  <category>quarto-web</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</guid>
+  <pubDate>Fri, 26 Jul 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/contribution.png" medium="image" type="image/png" height="30" width="144"/>
+</item>
+<item>
+  <title>Metrics for Medical Diagnosis Evaluation</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Medical diagnosis is a multifaceted endeavour that relies on a comprehensive assessment of various factors, including symptoms, tests, and medical history. Conditional probability, which calculates the likelihood of an event occurring given another event, plays a pivotal role in evaluating the effectiveness of medical diagnoses. In the context of healthcare, this involves estimating the probability of a patient having a disease, given that they have tested positive for it.</p>
+</section>
+<section id="understanding-accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-accuracy">Understanding Accuracy</h2>
+<p>One of the most commonly used metrics in medical diagnosis is accuracy. It gauges the overall proportion of accurate diagnoses, derived from correctly identifying patients with or without a specific ailment. Accuracy can be mathematically expressed as a combination of sensitivity and specificity, both of which are vital metrics.</p>
+<p><img src="https://latex.codecogs.com/png.latex?Accuracy%20=%20Sensitivity%20%5Ctimes%20Prevalence%20+%20Specificity%20%5Ctimes%20(1%20-%20Prevalence)"></p>
+</section>
+<section id="sensitivity-and-specificity" class="level2">
+<h2 class="anchored" data-anchor-id="sensitivity-and-specificity">Sensitivity and Specificity</h2>
+<p>Sensitivity measures the ability of a diagnostic method or model to correctly identify patients who have the disease, while specificity measures its ability to accurately identify those without the disease. These metrics can also be understood in terms of conditional probabilities, simplifying them to the probability of a positive or negative test result given a patient’s disease status.</p>
+<p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,disease%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Specificity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,normal%7D"></p>
+<p>In terms of conditional probabilities:</p>
+<p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20P(positive%7Cdisease)"> <img src="https://latex.codecogs.com/png.latex?Specificity%20=%20P(negative%7Cnormal)"></p>
+</section>
+<section id="positive-predictive-value-and-negative-predictive-value" class="level2">
+<h2 class="anchored" data-anchor-id="positive-predictive-value-and-negative-predictive-value">Positive Predictive Value and Negative Predictive Value</h2>
+<p>To assess the likelihood of a patient having or not having the disease based on their test results, we employ positive predictive value (PPV) and negative predictive value (NPV). These metrics provide insight into the probabilities of disease presence or absence given a positive or negative test result, respectively. This is more useful and practical than just sensitivity and specificity</p>
+<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,positive%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,negative%7D"></p>
+<section id="leveraging-bayes-rule" class="level3">
+<h3 class="anchored" data-anchor-id="leveraging-bayes-rule">Leveraging Bayes’ Rule:</h3>
+<p>To calculate PPV and NPV, Bayes’ rule, a formula relating conditional probabilities, is employed. This rule offers a nuanced perspective by taking into account sensitivity, specificity, and prevalence—the proportion of patients with the disease in the population.</p>
+<p>Using conditional probabilities, we write:</p>
+<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20P(disease%7Cpositive)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20P(normal%7Cnegative)"></p>
+</section>
+</section>
+<section id="confusion-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h2>
+<p>A confusion matrix serves as a valuable tool to visualize the performance of a diagnostic method or model. It displays true positives, true negatives, false positives, and false negatives for different thresholds or cut-off points, which can be adjusted to modify the diagnostic performance metrics.</p>
+<p>A confusion matrix can be represented as:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Disease</td>
+<td>TP</td>
+<td>FN</td>
+</tr>
+<tr class="even">
+<td>Normal</td>
+<td>FP</td>
+<td>TN</td>
+</tr>
+</tbody>
+</table>
+<p>where: TP = True Positives (number of)</p>
+<p>FP = False Positives</p>
+<p>FN = False Negatives</p>
+<p>TN = True Negatives</p>
+</section>
+<section id="precision-and-recall" class="level2">
+<h2 class="anchored" data-anchor-id="precision-and-recall">Precision and Recall</h2>
+<p>Precision measures the proportion of correctly identified positive test results, while recall assesses the proportion of patients with the disease that are accurately identified. These metrics are also synonymous with positive predictive value (PPV) and sensitivity, respectively.</p>
+<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20%5Cdfrac%7BTP%7D%7BTP+FP%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20%5Cdfrac%7BTP%7D%7BTP+FN%7D"></p>
+<p>Precision and recall are also known as positive predictive value (PPV) and sensitivity, respectively. Therefore, they are equivalent to:</p>
+<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20PPR"></p>
+<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20Sensitivity"></p>
+</section>
+<section id="f1-score" class="level2">
+<h2 class="anchored" data-anchor-id="f1-score">F1-Score</h2>
+<p>The F1-score combines precision and recall into a single metric, which is the harmonic mean of both values. This metric is also known as the Dice coefficient score, reflecting the similarity between two sets.</p>
+<p><img src="https://latex.codecogs.com/png.latex?F1%5C,Score%20%20=%202%20%5Ctimes%20%5Cdfrac%7BPR%7D%7BP+R%7D"></p>
+</section>
+<section id="evaluating-diagnostic-methods-with-roc-curves" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-diagnostic-methods-with-roc-curves">Evaluating Diagnostic Methods with ROC Curves</h2>
+<p>To compare different diagnostic methods or models, the receiver operating characteristic (ROC) curve is a valuable tool. It illustrates the trade-off between sensitivity and specificity at varying thresholds. A high-performing diagnostic method or model should yield a ROC curve closely resembling the top-left corner of the plot, with the area under the ROC curve (AUC) indicating its overall performance.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/medical-eval/roc_curve.png" class="img-fluid figure-img"></p>
+<figcaption>ROC Curve</figcaption>
+</figure>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The multifaceted landscape of medical diagnosis evaluation encompasses a spectrum of metrics and tools. Understanding these metrics and their mathematical underpinnings is crucial for accurately assessing the performance of diagnostic methods and models in healthcare.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>evaluation metrics</category>
+  <category>medical diagnosis</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</guid>
+  <pubDate>Fri, 05 Jul 2024 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Mastering Data Structures and Algorithms on Coursera</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I am thrilled to announce that I have successfully completed the <strong>Foundations of Algorithms and Data Structures Specialization</strong> offered by the University of Colorado Boulder on Coursera. The specialization was excellently taught by Professor Sriram Sankaranarayanan and spanned five comprehensive courses. I embarked on this journey last year, and it has been an enriching experience.</p>
+<section id="course-overview-and-learnings" class="level2">
+<h2 class="anchored" data-anchor-id="course-overview-and-learnings">Course Overview and Learnings</h2>
+<section id="algorithms-for-searching-sorting-and-indexing" class="level3">
+<h3 class="anchored" data-anchor-id="algorithms-for-searching-sorting-and-indexing">1. Algorithms for Searching, Sorting, and Indexing</h3>
+<p>This course laid the foundation for algorithm design and analysis. It covered:</p>
+<ul>
+<li>Basics of algorithm design and analysis</li>
+<li>Sorting arrays</li>
+<li>Data structures such as priority queues and hash functions</li>
+<li>Applications like Bloom filters</li>
+</ul>
+</section>
+<section id="trees-and-graphs-basics" class="level3">
+<h3 class="anchored" data-anchor-id="trees-and-graphs-basics">2. Trees and Graphs: Basics</h3>
+<p>This course delved into tree and graph data structures. Key topics included:</p>
+<ul>
+<li>Basic algorithms on tree data structures</li>
+<li>Binary search trees and self-balancing trees</li>
+<li>Graph data structures and traversal algorithms</li>
+<li>Advanced topics like kd-trees for spatial data and algorithms for spatial data</li>
+</ul>
+</section>
+<section id="dynamic-programming-and-greedy-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-programming-and-greedy-algorithms">3. Dynamic Programming and Greedy Algorithms</h3>
+<p>In this course, I learned essential algorithm design techniques, including:</p>
+<ul>
+<li>Divide and conquer</li>
+<li>Dynamic programming</li>
+<li>Greedy algorithms</li>
+<li>Introduction to intractability (NP-completeness)</li>
+<li>Using linear/integer programming solvers for optimization problems</li>
+<li>Advanced topics in data structures</li>
+</ul>
+</section>
+<section id="approximate-algorithms-and-linear-programming" class="level3">
+<h3 class="anchored" data-anchor-id="approximate-algorithms-and-linear-programming">4. Approximate Algorithms and Linear Programming</h3>
+<p>This course focused on:</p>
+<ul>
+<li>Linear and integer programming formulations for solving algorithmic problems</li>
+<li>Applications in resource allocation, scheduling, task assignment, and the traveling salesperson problem</li>
+<li>Algorithms for NP-hard problems with guaranteed approximation factors</li>
+<li>Efficient algorithms providing useful bounds on optimal solutions</li>
+</ul>
+</section>
+<section id="advanced-data-structures-rsa-and-quantum-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-data-structures-rsa-and-quantum-algorithms">5. Advanced Data Structures, RSA, and Quantum Algorithms</h3>
+<p>The final course introduced:</p>
+<ul>
+<li>Number-theory based cryptography</li>
+<li>Basics of quantum algorithms</li>
+<li>Advanced data structures like B-Trees and Suffix Tries</li>
+</ul>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Completing this specialization has been a significant milestone in my Data Science and Machine Learning/AI journey. I am excited to apply the knowledge and skills I have gained to future projects and challenges.</p>
+<p>I highly recommend this specialization to anyone looking to deepen their understanding of algorithms and data structures. The courses are well-structured, and Professor Sriram Sankaranarayanan’s teaching is both clear and engaging.</p>
+<p>I look forward to what the future holds and I am eager to continue my learning journey in the ever-evolving field of Data Science and AI.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>data structures</category>
+  <category>algorithms</category>
+  <category>data science</category>
+  <category>programming</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/</guid>
+  <pubDate>Sun, 09 Jun 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/dls-cert.png" medium="image" type="image/png" height="113" width="144"/>
+</item>
 <item>
   <title>My Journey in Deep Learning: From TensorFlow to PyTorch and Back</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1752,570 +1998,6 @@ font-style: inherit;">NULL</span>))</span>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/</guid>
   <pubDate>Mon, 02 Oct 2023 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/rprogramming/image.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Reproducible Research Final Project</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/project/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>This article is the final project of the Reproducible Research course on Coursera offered by John Hopkins University. I make an attempt to look at the U.S. National Oceanic and Atmospheric Administration’s (NOAA) storm database and make deductions about the impact of these events on health and economy.</p>
-<section id="data-loading" class="level2">
-<h2 class="anchored" data-anchor-id="data-loading">Data Loading</h2>
-<p>First step is load the data. I used the read_csv from readr (tidyverse) and it was able to read the file even in the compressed state.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tidyverse)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.2     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.1     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">storm_data <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">read_csv</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"repdata_data_StormData.csv.bz2"</span>)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 902297 Columns: 37
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (18): BGN_DATE, BGN_TIME, TIME_ZONE, COUNTYNAME, STATE, EVTYPE, BGN_AZI,...
-dbl (18): STATE__, COUNTY, BGN_RANGE, COUNTY_END, END_RANGE, LENGTH, WIDTH, ...
-lgl  (1): COUNTYENDN
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-</div>
-</section>
-<section id="data-cleaning-and-transformation" class="level2">
-<h2 class="anchored" data-anchor-id="data-cleaning-and-transformation">Data Cleaning and Transformation</h2>
-<p>To understand how the data look and the variables contained, use was made of the glimpse function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Explore the data</span></span>
-<span id="cb5-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">glimpse</span>(storm_data)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 902,297
-Columns: 37
-$ STATE__    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
-$ BGN_DATE   &lt;chr&gt; "4/18/1950 0:00:00", "4/18/1950 0:00:00", "2/20/1951 0:00:0…
-$ BGN_TIME   &lt;chr&gt; "0130", "0145", "1600", "0900", "1500", "2000", "0100", "09…
-$ TIME_ZONE  &lt;chr&gt; "CST", "CST", "CST", "CST", "CST", "CST", "CST", "CST", "CS…
-$ COUNTY     &lt;dbl&gt; 97, 3, 57, 89, 43, 77, 9, 123, 125, 57, 43, 9, 73, 49, 107,…
-$ COUNTYNAME &lt;chr&gt; "MOBILE", "BALDWIN", "FAYETTE", "MADISON", "CULLMAN", "LAUD…
-$ STATE      &lt;chr&gt; "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL",…
-$ EVTYPE     &lt;chr&gt; "TORNADO", "TORNADO", "TORNADO", "TORNADO", "TORNADO", "TOR…
-$ BGN_RANGE  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ BGN_AZI    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ BGN_LOCATI &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ END_DATE   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ END_TIME   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ COUNTY_END &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ COUNTYENDN &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ END_RANGE  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ END_AZI    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ END_LOCATI &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ LENGTH     &lt;dbl&gt; 14.0, 2.0, 0.1, 0.0, 0.0, 1.5, 1.5, 0.0, 3.3, 2.3, 1.3, 4.7…
-$ WIDTH      &lt;dbl&gt; 100, 150, 123, 100, 150, 177, 33, 33, 100, 100, 400, 400, 2…
-$ F          &lt;dbl&gt; 3, 2, 2, 2, 2, 2, 2, 1, 3, 3, 1, 1, 3, 3, 3, 4, 1, 1, 1, 1,…
-$ MAG        &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ FATALITIES &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4, 0, 0, 0, 0,…
-$ INJURIES   &lt;dbl&gt; 15, 0, 2, 2, 2, 6, 1, 0, 14, 0, 3, 3, 26, 12, 6, 50, 2, 0, …
-$ PROPDMG    &lt;dbl&gt; 25.0, 2.5, 25.0, 2.5, 2.5, 2.5, 2.5, 2.5, 25.0, 25.0, 2.5, …
-$ PROPDMGEXP &lt;chr&gt; "K", "K", "K", "K", "K", "K", "K", "K", "K", "K", "M", "M",…
-$ CROPDMG    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ CROPDMGEXP &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ WFO        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ STATEOFFIC &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ ZONENAMES  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ LATITUDE   &lt;dbl&gt; 3040, 3042, 3340, 3458, 3412, 3450, 3405, 3255, 3334, 3336,…
-$ LONGITUDE  &lt;dbl&gt; 8812, 8755, 8742, 8626, 8642, 8748, 8631, 8558, 8740, 8738,…
-$ LATITUDE_E &lt;dbl&gt; 3051, 0, 0, 0, 0, 0, 0, 0, 3336, 3337, 3402, 3404, 0, 3432,…
-$ LONGITUDE_ &lt;dbl&gt; 8806, 0, 0, 0, 0, 0, 0, 0, 8738, 8737, 8644, 8640, 0, 8540,…
-$ REMARKS    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ REFNUM     &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, …</code></pre>
-</div>
-</div>
-<p>Next, since the most important variable in this analysis is the <code>EVTYPE</code> variable, there’s a need to ensure that there are no missing values. I may plot or do summary statistics and missing values could cause problems in either of these activities.</p>
-<p>I also got the sum of fatalities, injuries and property damage as these are important in determining health and economic impact of the events.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Data Cleaning</span></span>
-<span id="cb7-2">cleaned_storm_data <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> storm_data <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb7-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">filter</span>(<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">is.na</span>(EVTYPE)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb7-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">PROPDMG =</span> PROPDMG <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(PROPDMGEXP <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%in%</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"K"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"M"</span>), <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>))</span>
-<span id="cb7-5"></span>
-<span id="cb7-6"></span>
-<span id="cb7-7"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Summary Statistics</span></span>
-<span id="cb7-8">summary_stats <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> cleaned_storm_data <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb7-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summarise</span>(</span>
-<span id="cb7-10">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_fatalities =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(FATALITIES),</span>
-<span id="cb7-11">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_injuries =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(INJURIES),</span>
-<span id="cb7-12">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_damage =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(PROPDMG)</span>
-<span id="cb7-13">  )</span>
-<span id="cb7-14">summary_stats</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 3
-  total_fatalities total_injuries total_damage
-             &lt;dbl&gt;          &lt;dbl&gt;        &lt;dbl&gt;
-1            15145         140528 10875995063.</code></pre>
-</div>
-</div>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<section id="population-health-impact" class="level3">
-<h3 class="anchored" data-anchor-id="population-health-impact">Population Health Impact</h3>
-<p>Next, to properly look at the population health impact, the dataset is grouped by event type and sum of the fatalities and injuries are compared in a variable called event_harm. This variable is then plotted, taking a look at the top 10.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">event_harm <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> cleaned_storm_data <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb9-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">group_by</span>(EVTYPE) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb9-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summarise</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_harm =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(FATALITIES <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> INJURIES)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">desc</span>(total_harm))</span>
-<span id="cb9-4"></span>
-<span id="cb9-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Visualization</span></span>
-<span id="cb9-6">event_harm <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb9-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">top_n</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, total_harm) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb9-8">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">reorder</span>(EVTYPE, <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>total_harm), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> total_harm)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb9-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_bar</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"identity"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb9-10">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">labs</span>(</span>
-<span id="cb9-11">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Top 10 Events with Highest Population Health Impact"</span>,</span>
-<span id="cb9-12">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Event Type"</span>,</span>
-<span id="cb9-13">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Total Harm"</span></span>
-<span id="cb9-14">  ) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb9-15">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">axis.text.x =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">angle =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">45</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">hjust =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>))</span></code></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/project/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="economic-consequences" class="level3">
-<h3 class="anchored" data-anchor-id="economic-consequences">Economic Consequences</h3>
-<p>The final aspect is to analyse and check the economic consequences. Naturally, property damage is one of the metrics for measuring economic consequences of events like these. The data is grouped by event type and the property damage associated with each event is calculated. This is stored in a variable called event_damage that is then visualized.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">event_damage <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> cleaned_storm_data <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">group_by</span>(EVTYPE) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summarise</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_damage =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(PROPDMG)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">desc</span>(total_damage))</span>
-<span id="cb10-5"></span>
-<span id="cb10-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Visualization</span></span>
-<span id="cb10-7">event_damage <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-8">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">top_n</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, total_damage) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">reorder</span>(EVTYPE, <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>total_damage), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> total_damage)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb10-10">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_bar</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"identity"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb10-11">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">labs</span>(</span>
-<span id="cb10-12">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Top 10 Events with Greatest Economic Consequences"</span>,</span>
-<span id="cb10-13">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Event Type"</span>,</span>
-<span id="cb10-14">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Total Damage"</span></span>
-<span id="cb10-15">  ) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb10-16">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">axis.text.x =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">angle =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">45</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">hjust =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>))</span></code></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/project/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Looking at population health impact, tornadoes are the most harmful. Also, on economic impact, tornadoes are still the most damaging event followed in order by flash floods, TSTM wind, flood, thunderstorm wind, hail,lightning, thunderstorm winds, high wind and winterstorm as the top ten events that cause the most economic damage.</p>
-
-
-</section>
-
- ]]></description>
-  <category>r programming</category>
-  <category>project</category>
-  <category>rpubs</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/project/</guid>
-  <pubDate>Sun, 01 Oct 2023 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>My Adventure with Generative Adversarial Networks (GANs)</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/gans/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Have you ever watched two kids play a game of “make-believe”? One creates a story, and the other tries to catch any flaws in it. If this game was a computer program, it would be called a Generative Adversarial Network or GAN for short. I’ve recently taken a deep dive into GANs with DeepLearning.ai, and here’s my take on it.</p>
-<p>In a GAN, there are two parts: the Generator and the Discriminator. Imagine the Generator as a kid trying to make up stories, and the Discriminator as the friend who points out when something doesn’t make sense. The Generator then takes this feedback and tries to come up with better stories.</p>
-<p>This back-and-forth game helps in creating very real-looking images, music, and more. It’s like teaching a computer to dream and imagine.</p>
-<p>Now, for those who’ve gone a bit deeper into GANs, you’d know that making these two parts play nicely isn’t always simple. This is where things like dice loss and Wasserstein loss (W-loss) come in.</p>
-<ul>
-<li><p>Dice Loss: Without diving too deep, dice loss is a way to measure how similar two samples are. In the world of GANs, it helps in understanding how close the Generator’s “made-up” data is to real data. It’s like comparing two drawings to see how alike they are.</p></li>
-<li><p>Wasserstein Loss (W-loss): This is another tool to make our GAN game more effective. Think of W-loss as a fancy ruler that measures the difference between the real deal and the computer’s creations. It’s super useful because it provides clearer feedback to the Generator, helping it improve faster.</p></li>
-</ul>
-<p>What’s cool about GANs is how they can be used in so many ways. They can make pictures clearer, create fun video game scenes, or even invent new music. But, like all powerful tools, there are challenges. GANs can be used to create “fake” videos that look real, which can be misleading.</p>
-<p>After finishing my course, I feel like I’ve unlocked a new level in the world of technology. GANs are powerful and exciting, and as they keep getting better, I can’t wait to see where we’ll go next. Remember, it’s not just about tech; it’s about how we use it to make our world more interesting and fun!</p>
-
-
-
- ]]></description>
-  <category>GANs</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/gans/</guid>
-  <pubDate>Thu, 21 Sep 2023 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Metrics for Medical Diagnosis Evaluation</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Medical diagnosis is a multifaceted endeavour that relies on a comprehensive assessment of various factors, including symptoms, tests, and medical history. Conditional probability, which calculates the likelihood of an event occurring given another event, plays a pivotal role in evaluating the effectiveness of medical diagnoses. In the context of healthcare, this involves estimating the probability of a patient having a disease, given that they have tested positive for it.</p>
-</section>
-<section id="understanding-accuracy" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-accuracy">Understanding Accuracy</h2>
-<p>One of the most commonly used metrics in medical diagnosis is accuracy. It gauges the overall proportion of accurate diagnoses, derived from correctly identifying patients with or without a specific ailment. Accuracy can be mathematically expressed as a combination of sensitivity and specificity, both of which are vital metrics.</p>
-<p><img src="https://latex.codecogs.com/png.latex?Accuracy%20=%20Sensitivity%20%5Ctimes%20Prevalence%20+%20Specificity%20%5Ctimes%20(1%20-%20Prevalence)"></p>
-</section>
-<section id="sensitivity-and-specificity" class="level2">
-<h2 class="anchored" data-anchor-id="sensitivity-and-specificity">Sensitivity and Specificity</h2>
-<p>Sensitivity measures the ability of a diagnostic method or model to correctly identify patients who have the disease, while specificity measures its ability to accurately identify those without the disease. These metrics can also be understood in terms of conditional probabilities, simplifying them to the probability of a positive or negative test result given a patient’s disease status.</p>
-<p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,disease%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?Specificity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,normal%7D"></p>
-<p>In terms of conditional probabilities:</p>
-<p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20P(positive%7Cdisease)"> <img src="https://latex.codecogs.com/png.latex?Specificity%20=%20P(negative%7Cnormal)"></p>
-</section>
-<section id="positive-predictive-value-and-negative-predictive-value" class="level2">
-<h2 class="anchored" data-anchor-id="positive-predictive-value-and-negative-predictive-value">Positive Predictive Value and Negative Predictive Value</h2>
-<p>To assess the likelihood of a patient having or not having the disease based on their test results, we employ positive predictive value (PPV) and negative predictive value (NPV). These metrics provide insight into the probabilities of disease presence or absence given a positive or negative test result, respectively.</p>
-<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,positive%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,negative%7D"></p>
-<section id="leveraging-bayes-rule" class="level3">
-<h3 class="anchored" data-anchor-id="leveraging-bayes-rule">Leveraging Bayes’ Rule:</h3>
-<p>To calculate PPV and NPV, Bayes’ rule, a formula relating conditional probabilities, is employed. This rule offers a nuanced perspective by taking into account sensitivity, specificity, and prevalence—the proportion of patients with the disease in the population.</p>
-<p>Using conditional probabilities, we write:</p>
-<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20P(disease%7Cpositive)"></p>
-<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20P(normal%7Cnegative)"></p>
-</section>
-</section>
-<section id="confusion-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h2>
-<p>A confusion matrix serves as a valuable tool to visualize the performance of a diagnostic method or model. It displays true positives, true negatives, false positives, and false negatives for different thresholds or cut-off points, which can be adjusted to modify the diagnostic performance metrics.</p>
-<p>A confusion matrix can be represented as:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Positive</th>
-<th>Negative</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Disease</td>
-<td>TP</td>
-<td>FN</td>
-</tr>
-<tr class="even">
-<td>Normal</td>
-<td>FP</td>
-<td>TN</td>
-</tr>
-</tbody>
-</table>
-<p>where: TP = True Positives (number of)</p>
-<p>FP = False Positives</p>
-<p>FN = False Negatives</p>
-<p>TN = True Negatives</p>
-</section>
-<section id="precision-and-recall" class="level2">
-<h2 class="anchored" data-anchor-id="precision-and-recall">Precision and Recall</h2>
-<p>Precision measures the proportion of correctly identified positive test results, while recall assesses the proportion of patients with the disease that are accurately identified. These metrics are also synonymous with positive predictive value (PPV) and sensitivity, respectively.</p>
-<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20%5Cdfrac%7BTP%7D%7BTP+FP%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20%5Cdfrac%7BTP%7D%7BTP+FN%7D"></p>
-<p>Precision and recall are also known as positive predictive value (PPV) and sensitivity, respectively. Therefore, they are equivalent to:</p>
-<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20PPR"></p>
-<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20Sensitivity"></p>
-</section>
-<section id="f1-score" class="level2">
-<h2 class="anchored" data-anchor-id="f1-score">F1-Score</h2>
-<p>The F1-score combines precision and recall into a single metric, which is the harmonic mean of both values. This metric is also known as the Dice coefficient score, reflecting the similarity between two sets.</p>
-<p><img src="https://latex.codecogs.com/png.latex?F1%5C,Score%20%20=%202%20%5Ctimes%20%5Cdfrac%7BPR%7D%7BP+R%7D"></p>
-</section>
-<section id="evaluating-diagnostic-methods-with-roc-curves" class="level2">
-<h2 class="anchored" data-anchor-id="evaluating-diagnostic-methods-with-roc-curves">Evaluating Diagnostic Methods with ROC Curves</h2>
-<p>To compare different diagnostic methods or models, the receiver operating characteristic (ROC) curve is a valuable tool. It illustrates the trade-off between sensitivity and specificity at varying thresholds. A high-performing diagnostic method or model should yield a ROC curve closely resembling the top-left corner of the plot, with the area under the ROC curve (AUC) indicating its overall performance.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/medical-eval/roc_curve.png" class="img-fluid figure-img"></p>
-<figcaption>ROC Curve</figcaption>
-</figure>
-</div>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>The multifaceted landscape of medical diagnosis evaluation encompasses a spectrum of metrics and tools. Understanding these metrics and their mathematical underpinnings is crucial for accurately assessing the performance of diagnostic methods and models in healthcare.</p>
-
-
-</section>
-
- ]]></description>
-  <category>evaluation metrics</category>
-  <category>medical diagnosis</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</guid>
-  <pubDate>Sat, 09 Sep 2023 23:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
