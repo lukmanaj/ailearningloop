@@ -9,8 +9,64 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.5.54</generator>
-<lastBuildDate>Sat, 06 Jul 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.5.55</generator>
+<lastBuildDate>Sat, 27 Jul 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>My Contribution to Quarto-web: A Small Edit with a Big Impact</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>I’m thrilled to share my recent experience contributing to the Quarto-web open-source project. Although it might seem like a small change, my contribution aimed to improve the clarity and readability of the documentation, ensuring users have a smoother experience when learning about Quarto. I’ve always appreciated Quarto since I first learned about it from <a href="https://shmuhammadd.github.io/">Dr.&nbsp;Shamsuddeen Muhammad</a> during the first cohort of the Arewa Data Science Fellowship. I continued practicing, and now I am proudly a contributor. I look forward to making more impactful contributions in the future.</p>
+</section>
+<section id="spotting-the-issue-a-simple-typo-and-punctuation-fix" class="level2">
+<h2 class="anchored" data-anchor-id="spotting-the-issue-a-simple-typo-and-punctuation-fix">Spotting the Issue: A Simple Typo and Punctuation Fix</h2>
+<p>While exploring the Quarto Dashboards documentation, specifically the <code>R Graphics</code> section tip on this <a href="https://quarto.org/docs/dashboards/data-display.html">page</a>, I noticed a minor typo—‘than’ was mistakenly written as ‘that’. Additionally, there were a few missing commas, which could potentially confuse readers.</p>
+<p>These might seem like minor issues, but clear and accurate documentation is crucial in helping users understand and utilize software tools effectively. I decided to take action and correct these mistakes to enhance the user experience.</p>
+</section>
+<section id="the-pull-request-a-quick-fix" class="level2">
+<h2 class="anchored" data-anchor-id="the-pull-request-a-quick-fix">The Pull Request: A Quick Fix</h2>
+<p>I submitted a pull request (#1214) to update the _plots-interactive.md file, which contained the typo and punctuation errors. The changes were straightforward:</p>
+<ul>
+<li>Corrected the typo from ‘that’ to ‘than’.</li>
+<li>Added a few missing commas for better clarity and readability.</li>
+</ul>
+<p>These edits were minor but important, as they helped ensure the documentation was accurate and easy to follow.</p>
+</section>
+<section id="merged-and-celebrated-the-joy-of-contributing" class="level2">
+<h2 class="anchored" data-anchor-id="merged-and-celebrated-the-joy-of-contributing">Merged and Celebrated: The Joy of Contributing</h2>
+<p>To my delight, my pull request was reviewed and merged by the maintainers. You can view the merged changes in the pull request <a href="https://github.com/quarto-dev/quarto-web/pull/1214">here</a>. It was a small contribution, but seeing my changes go live was incredibly rewarding. It was a reminder that even small contributions can make a big difference in the open-source community.</p>
+</section>
+<section id="reflections-on-my-contribution" class="level2">
+<h2 class="anchored" data-anchor-id="reflections-on-my-contribution">Reflections on My Contribution</h2>
+<p>This experience has taught me a few valuable lessons:</p>
+<ul>
+<li>Attention to Detail Matters: Even small errors in documentation can lead to misunderstandings. Taking the time to correct them helps improve the overall quality of the project.</li>
+<li>Every Contribution Counts: No matter the size, every contribution to an open-source project helps make it better. It’s about being part of a community effort.</li>
+<li>Learning and Growing: This was my first contribution to Quarto-web, and it has encouraged me to continue participating in open-source projects. There’s always something new to learn and areas to improve.</li>
+</ul>
+</section>
+<section id="looking-forward" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward">Looking Forward</h2>
+<p>I’m excited to continue exploring opportunities in the open-source world. Whether it’s fixing typos, adding features, or writing documentation, every bit helps the community grow and thrive. If you’re interested in getting involved, I encourage you to look for ways to contribute, no matter how small they may seem.</p>
+<p>Thank you for reading, and feel free to follow me on the social media links in my about page. Happy coding!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>quarto</category>
+  <category>quarto-web</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</guid>
+  <pubDate>Sat, 27 Jul 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/contribution.png" medium="image" type="image/png" height="30" width="144"/>
+</item>
 <item>
   <title>Metrics for Medical Diagnosis Evaluation</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1984,435 +2040,6 @@ font-style: inherit;">NULL</span>))</span>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/</guid>
   <pubDate>Tue, 03 Oct 2023 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/rprogramming/image.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Reproducible Research Final Project</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/project/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>This article is the final project of the Reproducible Research course on Coursera offered by John Hopkins University. I make an attempt to look at the U.S. National Oceanic and Atmospheric Administration’s (NOAA) storm database and make deductions about the impact of these events on health and economy.</p>
-<section id="data-loading" class="level2">
-<h2 class="anchored" data-anchor-id="data-loading">Data Loading</h2>
-<p>First step is load the data. I used the read_csv from readr (tidyverse) and it was able to read the file even in the compressed state.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(tidyverse)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.2     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.1     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">storm_data <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">read_csv</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"repdata_data_StormData.csv.bz2"</span>)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 902297 Columns: 37
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (18): BGN_DATE, BGN_TIME, TIME_ZONE, COUNTYNAME, STATE, EVTYPE, BGN_AZI,...
-dbl (18): STATE__, COUNTY, BGN_RANGE, COUNTY_END, END_RANGE, LENGTH, WIDTH, ...
-lgl  (1): COUNTYENDN
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-</div>
-</section>
-<section id="data-cleaning-and-transformation" class="level2">
-<h2 class="anchored" data-anchor-id="data-cleaning-and-transformation">Data Cleaning and Transformation</h2>
-<p>To understand how the data look and the variables contained, use was made of the glimpse function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Explore the data</span></span>
-<span id="cb5-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">glimpse</span>(storm_data)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 902,297
-Columns: 37
-$ STATE__    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
-$ BGN_DATE   &lt;chr&gt; "4/18/1950 0:00:00", "4/18/1950 0:00:00", "2/20/1951 0:00:0…
-$ BGN_TIME   &lt;chr&gt; "0130", "0145", "1600", "0900", "1500", "2000", "0100", "09…
-$ TIME_ZONE  &lt;chr&gt; "CST", "CST", "CST", "CST", "CST", "CST", "CST", "CST", "CS…
-$ COUNTY     &lt;dbl&gt; 97, 3, 57, 89, 43, 77, 9, 123, 125, 57, 43, 9, 73, 49, 107,…
-$ COUNTYNAME &lt;chr&gt; "MOBILE", "BALDWIN", "FAYETTE", "MADISON", "CULLMAN", "LAUD…
-$ STATE      &lt;chr&gt; "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL",…
-$ EVTYPE     &lt;chr&gt; "TORNADO", "TORNADO", "TORNADO", "TORNADO", "TORNADO", "TOR…
-$ BGN_RANGE  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ BGN_AZI    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ BGN_LOCATI &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ END_DATE   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ END_TIME   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ COUNTY_END &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ COUNTYENDN &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ END_RANGE  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ END_AZI    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ END_LOCATI &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ LENGTH     &lt;dbl&gt; 14.0, 2.0, 0.1, 0.0, 0.0, 1.5, 1.5, 0.0, 3.3, 2.3, 1.3, 4.7…
-$ WIDTH      &lt;dbl&gt; 100, 150, 123, 100, 150, 177, 33, 33, 100, 100, 400, 400, 2…
-$ F          &lt;dbl&gt; 3, 2, 2, 2, 2, 2, 2, 1, 3, 3, 1, 1, 3, 3, 3, 4, 1, 1, 1, 1,…
-$ MAG        &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ FATALITIES &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4, 0, 0, 0, 0,…
-$ INJURIES   &lt;dbl&gt; 15, 0, 2, 2, 2, 6, 1, 0, 14, 0, 3, 3, 26, 12, 6, 50, 2, 0, …
-$ PROPDMG    &lt;dbl&gt; 25.0, 2.5, 25.0, 2.5, 2.5, 2.5, 2.5, 2.5, 25.0, 25.0, 2.5, …
-$ PROPDMGEXP &lt;chr&gt; "K", "K", "K", "K", "K", "K", "K", "K", "K", "K", "M", "M",…
-$ CROPDMG    &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ CROPDMGEXP &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ WFO        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ STATEOFFIC &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ ZONENAMES  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ LATITUDE   &lt;dbl&gt; 3040, 3042, 3340, 3458, 3412, 3450, 3405, 3255, 3334, 3336,…
-$ LONGITUDE  &lt;dbl&gt; 8812, 8755, 8742, 8626, 8642, 8748, 8631, 8558, 8740, 8738,…
-$ LATITUDE_E &lt;dbl&gt; 3051, 0, 0, 0, 0, 0, 0, 0, 3336, 3337, 3402, 3404, 0, 3432,…
-$ LONGITUDE_ &lt;dbl&gt; 8806, 0, 0, 0, 0, 0, 0, 0, 8738, 8737, 8644, 8640, 0, 8540,…
-$ REMARKS    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ REFNUM     &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, …</code></pre>
-</div>
-</div>
-<p>Next, since the most important variable in this analysis is the <code>EVTYPE</code> variable, there’s a need to ensure that there are no missing values. I may plot or do summary statistics and missing values could cause problems in either of these activities.</p>
-<p>I also got the sum of fatalities, injuries and property damage as these are important in determining health and economic impact of the events.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Data Cleaning</span></span>
-<span id="cb7-2">cleaned_storm_data <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> storm_data <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb7-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">filter</span>(<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">is.na</span>(EVTYPE)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb7-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">PROPDMG =</span> PROPDMG <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ifelse</span>(PROPDMGEXP <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%in%</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"K"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"M"</span>), <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>))</span>
-<span id="cb7-5"></span>
-<span id="cb7-6"></span>
-<span id="cb7-7"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Summary Statistics</span></span>
-<span id="cb7-8">summary_stats <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> cleaned_storm_data <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb7-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summarise</span>(</span>
-<span id="cb7-10">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_fatalities =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(FATALITIES),</span>
-<span id="cb7-11">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_injuries =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(INJURIES),</span>
-<span id="cb7-12">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_damage =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(PROPDMG)</span>
-<span id="cb7-13">  )</span>
-<span id="cb7-14">summary_stats</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 3
-  total_fatalities total_injuries total_damage
-             &lt;dbl&gt;          &lt;dbl&gt;        &lt;dbl&gt;
-1            15145         140528 10875995063.</code></pre>
-</div>
-</div>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<section id="population-health-impact" class="level3">
-<h3 class="anchored" data-anchor-id="population-health-impact">Population Health Impact</h3>
-<p>Next, to properly look at the population health impact, the dataset is grouped by event type and sum of the fatalities and injuries are compared in a variable called event_harm. This variable is then plotted, taking a look at the top 10.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">event_harm <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> cleaned_storm_data <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb9-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">group_by</span>(EVTYPE) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb9-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summarise</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_harm =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(FATALITIES <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> INJURIES)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">desc</span>(total_harm))</span>
-<span id="cb9-4"></span>
-<span id="cb9-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Visualization</span></span>
-<span id="cb9-6">event_harm <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb9-7">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">top_n</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, total_harm) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb9-8">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">reorder</span>(EVTYPE, <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>total_harm), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> total_harm)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb9-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_bar</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"identity"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"blue"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb9-10">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">labs</span>(</span>
-<span id="cb9-11">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Top 10 Events with Highest Population Health Impact"</span>,</span>
-<span id="cb9-12">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Event Type"</span>,</span>
-<span id="cb9-13">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Total Harm"</span></span>
-<span id="cb9-14">  ) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb9-15">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">axis.text.x =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">angle =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">45</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">hjust =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>))</span></code></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/project/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="economic-consequences" class="level3">
-<h3 class="anchored" data-anchor-id="economic-consequences">Economic Consequences</h3>
-<p>The final aspect is to analyse and check the economic consequences. Naturally, property damage is one of the metrics for measuring economic consequences of events like these. The data is grouped by event type and the property damage associated with each event is calculated. This is stored in a variable called event_damage that is then visualized.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">event_damage <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> cleaned_storm_data <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">group_by</span>(EVTYPE) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summarise</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">total_damage =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sum</span>(PROPDMG)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">desc</span>(total_damage))</span>
-<span id="cb10-5"></span>
-<span id="cb10-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Visualization</span></span>
-<span id="cb10-7">event_damage <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-8">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">top_n</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, total_damage) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb10-9">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">reorder</span>(EVTYPE, <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>total_damage), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> total_damage)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb10-10">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_bar</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"identity"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"red"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb10-11">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">labs</span>(</span>
-<span id="cb10-12">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Top 10 Events with Greatest Economic Consequences"</span>,</span>
-<span id="cb10-13">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Event Type"</span>,</span>
-<span id="cb10-14">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Total Damage"</span></span>
-<span id="cb10-15">  ) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb10-16">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">axis.text.x =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">angle =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">45</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">hjust =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>))</span></code></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/project/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Looking at population health impact, tornadoes are the most harmful. Also, on economic impact, tornadoes are still the most damaging event followed in order by flash floods, TSTM wind, flood, thunderstorm wind, hail,lightning, thunderstorm winds, high wind and winterstorm as the top ten events that cause the most economic damage.</p>
-
-
-</section>
-
- ]]></description>
-  <category>r programming</category>
-  <category>project</category>
-  <category>rpubs</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/project/</guid>
-  <pubDate>Mon, 02 Oct 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

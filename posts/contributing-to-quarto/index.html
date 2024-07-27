@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-05-13">
+<meta name="dcterms.date" content="2024-07-27">
 
-<title>From Data to Insight: Visualizing Quantities, Proportions, Relationships, and Distributions with Python’s Matplotlib and Seaborn – ailearningloop</title>
+<title>My Contribution to Quarto-web: A Small Edit with a Big Impact – ailearningloop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -163,12 +129,10 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">From Data to Insight: Visualizing Quantities, Proportions, Relationships, and Distributions with Python’s Matplotlib and Seaborn</h1>
+      <h1 class="title">My Contribution to Quarto-web: A Small Edit with a Big Impact</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">python</div>
-                <div class="quarto-category">data visualization</div>
-                <div class="quarto-category">matplotlib</div>
-                <div class="quarto-category">seaborn</div>
+                <div class="quarto-category">quarto</div>
+                <div class="quarto-category">quarto-web</div>
               </div>
                   </div>
   </div>
@@ -186,7 +150,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 13, 2023</p>
+        <p class="date">July 27, 2024</p>
       </div>
     </div>
     
@@ -205,168 +169,41 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 
 
 
-<p>Data visualization is a crucial part of data analysis as it aids in our ability to comprehend and convey to a larger audience complicated data correlations, patterns, and insights. Thanks to its potent modules, such as Matplotlib and Seaborn, Python has gained popularity as a language for data visualization. In this post, we’ll look at how to visualize quantities, proportions, relationships, and distributions using these libraries and how to get useful insights out of them.</p>
-<section id="visualizing-quantities" class="level2">
-<h2 class="anchored" data-anchor-id="visualizing-quantities">Visualizing Quantities</h2>
-<p>Any information that is measurable and able to be expressed numerically is considered quantitative. Understanding the distribution and dispersion of values, the existence of outliers, and the link between various variables is made easier by visualizing quantitative data.</p>
-<p>Histograms are one of the most used tools for visualizing quantitative data. A graph that displays the frequency distribution of a collection of continuous data is called a histogram. Histograms can be easily made with only a few lines of code thanks to Matplotlib and Seaborn. Let’s look at an illustration:</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a histogram using Matplotlib</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.hist(data, bins<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Histogram of Random Data'</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Values'</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-2-output-1.png" width="585" height="449" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a histogram using Seaborn</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(data, bins<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Histogram of Random Data'</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Values'</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-3-output-1.png" width="585" height="449" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Using NumPy’s random.normal function, we produce some random data in this example. Then, we use Matplotlib and Seaborn to produce two histograms, one using each program. While the histograms generated by the two libraries are comparable, Seaborn’s histplot function includes a few more capabilities, such as the ability to plot a KDE (Kernel Density Estimate) in addition to the histogram.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>I’m thrilled to share my recent experience contributing to the Quarto-web open-source project. Although it might seem like a small change, my contribution aimed to improve the clarity and readability of the documentation, ensuring users have a smoother experience when learning about Quarto. I’ve always appreciated Quarto since I first learned about it from <a href="https://shmuhammadd.github.io/">Dr.&nbsp;Shamsuddeen Muhammad</a> during the first cohort of the Arewa Data Science Fellowship. I continued practicing, and now I am proudly a contributor. I look forward to making more impactful contributions in the future.</p>
 </section>
-<section id="visualizing-proportions" class="level2">
-<h2 class="anchored" data-anchor-id="visualizing-proportions">Visualizing Proportions</h2>
-<p>Any information that may be stated as a percentage or a fraction of a whole is considered proportional data. Understanding the relative sizes of several categories or groups and how they affect the overall picture is made easier with the aid of proportional data visualization. Using a pie chart, donut chart, or waffle chart, you can see proportions.</p>
-<p>Pie charts are one of the most commonly used tools for representing proportional data. A circular graph called a pie chart demonstrates the proportional breakdown of a group of categorical data. Both Matplotlib and Seaborn provide pie chart creation routines. Let’s look at an illustration:</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">25</span>, <span class="dv">40</span>, <span class="dv">10</span>, <span class="dv">25</span>]</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>]</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a pie chart using Matplotlib</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.pie(data, labels<span class="op">=</span>labels)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Proportional Data'</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-4-output-1.png" width="389" height="409" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a pie chart using Seaborn</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span class="st">'whitegrid'</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Proportional Data'</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sns.color_palette(<span class="st">'pastel'</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.pie(data, labels<span class="op">=</span>labels, colors<span class="op">=</span>sns.color_palette())</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-5-output-1.png" width="389" height="409" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>In this illustration, we generate a set of labels and random data. After that, we use Seaborn and Matplotlib, respectively, to construct two pie charts. We can color-code each category using a specified palette thanks to Seaborn’s color_palette function.</p>
+<section id="spotting-the-issue-a-simple-typo-and-punctuation-fix" class="level2">
+<h2 class="anchored" data-anchor-id="spotting-the-issue-a-simple-typo-and-punctuation-fix">Spotting the Issue: A Simple Typo and Punctuation Fix</h2>
+<p>While exploring the Quarto Dashboards documentation, specifically the <code>R Graphics</code> section tip on this <a href="https://quarto.org/docs/dashboards/data-display.html">page</a>, I noticed a minor typo—‘than’ was mistakenly written as ‘that’. Additionally, there were a few missing commas, which could potentially confuse readers.</p>
+<p>These might seem like minor issues, but clear and accurate documentation is crucial in helping users understand and utilize software tools effectively. I decided to take action and correct these mistakes to enhance the user experience.</p>
 </section>
-<section id="visualizing-relationships" class="level2">
-<h2 class="anchored" data-anchor-id="visualizing-relationships">Visualizing Relationships</h2>
-<p>Any data that demonstrates the connection between two or more variables is referred to as relationship data. Visualizing connection data enables us to comprehend the correlation, directionality, and linear or nonlinear nature of the relationship.</p>
-<p>Scatter plots are among the most commonly used tools for displaying relationship data. An illustration of the relationship between two sets of data is a scatter plot. Both Matplotlib and Seaborn include tools for making scatter plots. Let’s look at an illustration:</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create some random data</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> x <span class="op">+</span> np.random.normal(size<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatter plot using Matplotlib</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Random Data'</span>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X'</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Y'</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-6-output-1.png" width="587" height="449" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatter plot using Seaborn</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>x, y<span class="op">=</span>y)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Random Data'</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X'</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Y'</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-7-output-1.png" width="587" height="449" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>In this illustration, we generate the random data sets x and y. Then, we use Matplotlib and Seaborn to construct two scatter plots, one using each program. The scatterplot function in Seaborn contains a few extra capabilities, like the ability to color-code points according to a third variable.</p>
+<section id="the-pull-request-a-quick-fix" class="level2">
+<h2 class="anchored" data-anchor-id="the-pull-request-a-quick-fix">The Pull Request: A Quick Fix</h2>
+<p>I submitted a pull request (#1214) to update the _plots-interactive.md file, which contained the typo and punctuation errors. The changes were straightforward:</p>
+<ul>
+<li>Corrected the typo from ‘that’ to ‘than’.</li>
+<li>Added a few missing commas for better clarity and readability.</li>
+</ul>
+<p>These edits were minor but important, as they helped ensure the documentation was accurate and easy to follow.</p>
 </section>
-<section id="visualizing-distributions" class="level2">
-<h2 class="anchored" data-anchor-id="visualizing-distributions">Visualizing Distributions</h2>
-<p>Any data that demonstrates the frequency of occurrence of various values or ranges of values is referred to as distribution data. Understanding the distribution’s shape, the existence of outliers, and the likelihood of specific values or ranges of values are all made easier by visualizing distribution data.</p>
-<p>Density plots are one of the most popular tools for displaying distribution data. A graph that displays the probability density function of a collection of data is called a density plot. Both Matplotlib and Seaborn include tools for making density graphs. Let’s look at an illustration:</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">1000</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a density plot using Matplotlib</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.hist(data, density<span class="op">=</span><span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, bins<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>sns.kdeplot(data, color<span class="op">=</span><span class="st">'red'</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Density Plot of Random Data'</span>)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Values'</span>)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Probability Density'</span>)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-8-output-1.png" width="597" height="449" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a density plot using Seaborn</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(data, kde<span class="op">=</span><span class="va">True</span>, stat<span class="op">=</span><span class="st">'density'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, bins<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Density Plot of Random Data'</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Values'</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Probability Density'</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-9-output-1.png" width="597" height="449" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Using NumPy’s random.normal function, we generate a set of random data in this example. Then, we use Matplotlib and Seaborn to produce two density charts, one using each program. We may combine a histogram and a density plot into one visualization using Seaborn’s histplot function.</p>
+<section id="merged-and-celebrated-the-joy-of-contributing" class="level2">
+<h2 class="anchored" data-anchor-id="merged-and-celebrated-the-joy-of-contributing">Merged and Celebrated: The Joy of Contributing</h2>
+<p>To my delight, my pull request was reviewed and merged by the maintainers. You can view the merged changes in the pull request <a href="https://github.com/quarto-dev/quarto-web/pull/1214">here</a>. It was a small contribution, but seeing my changes go live was incredibly rewarding. It was a reminder that even small contributions can make a big difference in the open-source community.</p>
 </section>
-<section id="conclusion" class="level1">
-<h1>Conclusion</h1>
-<p>In this article, we looked at how to depict quantities, proportions, relationships, and distributions using Matplotlib and Seaborn. Data visualization is a potent tool for comprehending and expressing complicated data relationships, trends, and insights. We can get valuable insights from our data using these libraries, and we can use those insights to make decisions that are well-informed.</p>
+<section id="reflections-on-my-contribution" class="level2">
+<h2 class="anchored" data-anchor-id="reflections-on-my-contribution">Reflections on My Contribution</h2>
+<p>This experience has taught me a few valuable lessons:</p>
+<ul>
+<li>Attention to Detail Matters: Even small errors in documentation can lead to misunderstandings. Taking the time to correct them helps improve the overall quality of the project.</li>
+<li>Every Contribution Counts: No matter the size, every contribution to an open-source project helps make it better. It’s about being part of a community effort.</li>
+<li>Learning and Growing: This was my first contribution to Quarto-web, and it has encouraged me to continue participating in open-source projects. There’s always something new to learn and areas to improve.</li>
+</ul>
+</section>
+<section id="looking-forward" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward">Looking Forward</h2>
+<p>I’m excited to continue exploring opportunities in the open-source world. Whether it’s fixing typos, adding features, or writing documentation, every bit helps the community grow and thrive. If you’re interested in getting involved, I encourage you to look for ways to contribute, no matter how small they may seem.</p>
+<p>Thank you for reading, and feel free to follow me on the social media links in my about page. Happy coding!</p>
 
 
 </section>

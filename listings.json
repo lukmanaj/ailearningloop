@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/contributing-to-quarto/index.html",
       "/posts/medical-eval/index.html",
       "/posts/dsa-algorithms-cert/index.html",
       "/posts/tensorflow-dev/index.html",
@@ -44,8 +45,8 @@
       "/posts/cleancodes/index.html",
       "/posts/pandas2/index.html",
       "/posts/ml-ai/index.html",
-      "/posts/viz/index.html",
       "/posts/pandas/index.html",
+      "/posts/viz/index.html",
       "/posts/numpy/index.html",
       "/posts/web-scraping/index.html",
       "/posts/practice-concepts/index.html",
