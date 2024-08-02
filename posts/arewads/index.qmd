@@ -6,7 +6,7 @@ categories: [arewads]
 ---
 The application link for the fellowship was sent to me by my friend, Abbas. Reluctantly, I opened it, only to be surprised by the requirement to complete an introduction to Python course on Udacity. Uploading the course certificate was mandatory. After completing the course, I discovered that obtaining the certificate required payment. To overcome this, I took a screenshot of my course dashboard showing my completion and uploaded that instead. A few days later, I received an email confirming my acceptance. This marked the beginning of my Python journey. Before joining Arewa, my experience with Python was purely theoretical, and I didn’t have an IDE installed on my laptop. I used Colab occasionally for practice.
 
-After joining Arewa, I was encouraged to install VSCode and practice daily. Our mentor, Shamsuddeen, often emphasizes the importance of atomic habits, inspired by James Clear’s famous book. Having an IDE on my laptop and a structured course with daily exercises has significantly improved my understanding and appreciation of Python.
+After joining Arewa, I was encouraged to install VSCode and practice daily. Our mentor, Dr. Shamsuddeen Muhammad, often emphasizes the importance of atomic habits, inspired by James Clear’s famous book. Having an IDE on my laptop and a structured course with daily exercises has significantly improved my understanding and appreciation of Python.
 
 Our Arewa Data Science Fellowship officially began on January 23, 2023, with Phase One of four phases, which includes:
 
