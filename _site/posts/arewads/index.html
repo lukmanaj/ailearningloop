@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
 <meta name="dcterms.date" content="2023-02-14">
 
-<title>ailearningloop - Joining The First Cohort of the Arewa Data Science Academy Fellowship</title>
+<title>Joining The First Cohort of the Arewa Data Science Academy Fellowship – ailearningloop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -120,7 +120,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -168,10 +168,17 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 
 
 
-<p>The link for the application to the fellowship was sent to me by my friend Abbas. I reluctantly opened the link and I was surprised to see that I had to complete an introduction to Python course in Udacity to complete the application. They made uploading the certificate a required field. Trust me, I always do my due diligence. Upon completing the course, I found that I could not get a certificate without payment. I took a screenshot if my course dashboard showing that I have completed the course and uploaded that instead. A few days later, I received an email telling me that I had gotten in. This to me, is the beginning of my Python journey. Prior to Arewa, I had only learnt theoretically and had no IDE installed on my laptop. I also only used colab to practice on rare ocassions. After joining Arewa, I was forced to install VSCode and practice daily. Our mentor, Shamsuddeen always says that he wants us to imbibe atomic habits, based on the famous book by James Clear. Having an IDE on my laptop and a structured course with exercises to practice daily has improved my understanding and overall appreciation of the Python programming language.</p>
-<p>Our arewa data science fellowship officially started on the 23rd of January, 2023 with Phase one of four which is broken down into: - 30 Days of Python challenge, designed to improve our Python skills in preparation for Machine Learning and Deep Learning with Pytorch. - The coursera course ‘Learning How to Learn’ which is to improve our learning efficiency as there are numerous concepts to learn in data science. - Git and Github, and - Blogging, to document our learning curve, the reason I’m here.</p>
-<p>The data science fellowship course is structured for self-paced learning with twice weekly office-hours with the mentors on the weekends to understand concepts and discuss challenges encountered in the exercises given.</p>
-<p>I will discuss more on the fellowship as I touch on the different subjects I encounter in my programming journey with arewa.</p>
+<p>The application link for the fellowship was sent to me by my friend, Abbas. Reluctantly, I opened it, only to be surprised by the requirement to complete an introduction to Python course on Udacity. Uploading the course certificate was mandatory. After completing the course, I discovered that obtaining the certificate required payment. To overcome this, I took a screenshot of my course dashboard showing my completion and uploaded that instead. A few days later, I received an email confirming my acceptance. This marked the beginning of my Python journey. Before joining Arewa, my experience with Python was purely theoretical, and I didn’t have an IDE installed on my laptop. I used Colab occasionally for practice.</p>
+<p>After joining Arewa, I was encouraged to install VSCode and practice daily. Our mentor, Dr.&nbsp;Shamsuddeen Muhammad, often emphasizes the importance of atomic habits, inspired by James Clear’s famous book. Having an IDE on my laptop and a structured course with daily exercises has significantly improved my understanding and appreciation of Python.</p>
+<p>Our Arewa Data Science Fellowship officially began on January 23, 2023, with Phase One of four phases, which includes:</p>
+<ul>
+<li>30 Days of Python Challenge: Designed to enhance our Python skills in preparation for Machine Learning and Deep Learning with PyTorch.</li>
+<li>Coursera Course ‘Learning How to Learn’: Aimed at improving our learning efficiency due to the numerous concepts in data science.</li>
+<li>Git and GitHub: For version control and collaboration.</li>
+<li>Blogging: To document our learning journey, which is why I am here.</li>
+</ul>
+<p>The fellowship is structured for self-paced learning, complemented by twice-weekly office hours with mentors on weekends to clarify concepts and discuss challenges encountered during exercises.</p>
+<p>I will share more about the fellowship as I delve into various subjects in my programming journey with Arewa Data Science Academy.</p>
 <blockquote class="blockquote">
 <p>Practice makes improvement and possible mastery. This is my take home from my first few weeks in this fellowship. Practice is what I have been missing in my learning journey. As such, it is a great pleasure to be part of the first cohort of this fellowship. In sha Allah, greatness awaits.</p>
 </blockquote>
@@ -214,18 +221,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -257,7 +253,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/lukmanaj\.github\.io\/ailearningloop\/");
@@ -265,7 +283,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

@@ -24,7 +24,7 @@ Zipline, ensuring the delivery of medical supplies using innovative solutions. I
 programming, and interprofessional collaboration to improve patient outcomes and advance healthcare
 delivery.
 
-In addition to my professional role, I am an active participant in the Arewa Data Science Academy. As a fellow and now a mentor, I have built high-performing machine learning models, taught data science, and achieved recognition by securing second place in the Cohere AI Hack. I am also an active moderator and course tester at the `DeepLearning.AI Forum`.
+In addition to my professional role, I am an active participant at the Arewa Data Science Academy, where as a fellow and now a mentor, I have built high-performing machine learning models, taught data science, and achieved recognition by securing second place in the Cohere AI Hack. I am also an active moderator,mentor (for the DeepLearning.AI TensorFlow Developer Professional Certificate) and course tester at the `DeepLearning.AI Forum`.
 
 My journey into the world of machine learning began with the Arewa Data Science Academy fellowship in January 2023. Since then, I have been exploring the intersection of healthcare and artificial intelligence, focusing on biostatistics in public health. I am particularly interested in using machine learning to improve health outcomes and address challenges in low-resource settings.
 

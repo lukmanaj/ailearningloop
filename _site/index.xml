@@ -9,7 +9,7 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.4.554</generator>
+<generator>quarto-1.5.56</generator>
 <lastBuildDate>Fri, 26 Jul 2024 23:00:00 GMT</lastBuildDate>
 <item>
   <title>My Contribution to Quarto-web: A Small Edit with a Big Impact</title>
@@ -65,7 +65,7 @@
   <category>quarto-web</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</guid>
   <pubDate>Fri, 26 Jul 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/contribution.png" medium="image" type="image/png" height="30" width="144"/>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/contribution.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 <item>
   <title>Metrics for Medical Diagnosis Evaluation</title>
@@ -111,7 +111,7 @@
 <h2 class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h2>
 <p>A confusion matrix serves as a valuable tool to visualize the performance of a diagnostic method or model. It displays true positives, true negatives, false positives, and false negatives for different thresholds or cut-off points, which can be adjusted to modify the diagnostic performance metrics.</p>
 <p>A confusion matrix can be represented as:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th></th>
@@ -483,6 +483,7 @@ font-style: inherit;"># Define server logic</span></span>
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(input, output) {</span>
 <span id="cb2-22">   output<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -556,9 +557,11 @@ font-style: inherit;">server =</span> server)</span></code></pre></div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> MicrowaveOven:</span>
 <span id="cb1-2">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -572,6 +575,7 @@ font-style: inherit;">=</span> power_rating</span>
 <span id="cb1-4"></span>
 <span id="cb1-5">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> cook(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>, time_seconds):</span>
@@ -583,9 +587,11 @@ font-style: inherit;">"Your food is cooked!"</span>)</span>
 <span id="cb1-7"></span>
 <span id="cb1-8"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> FancyMicrowaveOven(MicrowaveOven):</span>
 <span id="cb1-9">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> cook_baked_potato(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -647,6 +653,7 @@ font-style: inherit;">list</span>(</span>
 background-color: null;
 font-style: inherit;">cook =</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(time_seconds) {</span>
 <span id="cb3-7">            <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -680,6 +687,7 @@ font-style: inherit;">list</span>(</span>
 background-color: null;
 font-style: inherit;">cook_baked_potato =</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>() {</span>
 <span id="cb3-18">            self<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1095,10 +1103,13 @@ font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> main_list <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> num]</span>
 <span id="cb2-2">opt_squared[<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -1121,8 +1132,10 @@ background-color: null;
 font-style: inherit;">=</span> []</span>
 <span id="cb4-2"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="bu" style="color: null;
@@ -1167,10 +1180,13 @@ font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> main_list <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> num]</span>
 <span id="cb6-3">opt_squared[<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -1191,8 +1207,10 @@ background-color: null;
 font-style: inherit;">=</span> []</span>
 <span id="cb8-3"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="bu" style="color: null;
@@ -1233,10 +1251,13 @@ font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> main_list <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> num]</span></code></pre></div>
 <p>Here, the <code>if num</code> serves as a filter to exclude falsy values (like 0) before the squaring operation. To achieve the same with a traditional loop, additional lines and conditions would be necessary.</p>
 </section>
@@ -1307,11 +1328,14 @@ font-style: inherit;">import</span> torch</span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> fizzbuzz_pytorch(max_num):</span>
 <span id="cb1-4">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
@@ -1348,6 +1372,7 @@ font-style: inherit;">=</span> torch.logical_and(fizz, buzz)</span>
 <span id="cb1-9"></span>
 <span id="cb1-10">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> fizzbuzz.item():</span>
 <span id="cb1-11">            <span class="bu" style="color: null;
 background-color: null;
@@ -1356,6 +1381,7 @@ background-color: null;
 font-style: inherit;">"FizzBuzz"</span>)</span>
 <span id="cb1-12">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">elif</span> fizz.item():</span>
 <span id="cb1-13">            <span class="bu" style="color: null;
 background-color: null;
@@ -1364,6 +1390,7 @@ background-color: null;
 font-style: inherit;">"Fizz"</span>)</span>
 <span id="cb1-14">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">elif</span> buzz.item():</span>
 <span id="cb1-15">            <span class="bu" style="color: null;
 background-color: null;
@@ -1372,6 +1399,7 @@ background-color: null;
 font-style: inherit;">"Buzz"</span>)</span>
 <span id="cb1-16">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span>:</span>
 <span id="cb1-17">            <span class="bu" style="color: null;
 background-color: null;
@@ -1418,11 +1446,14 @@ font-style: inherit;">as</span> tf</span>
 <span id="cb3-2"></span>
 <span id="cb3-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> fizzbuzz_tensorflow(max_num):</span>
 <span id="cb3-4">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
@@ -1471,11 +1502,13 @@ font-style: inherit;">=</span>{</span>
 background-color: null;
 font-style: inherit;">0</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: num_tf.numpy(),</span>
 <span id="cb3-13">                                 <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Fizz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1485,6 +1518,7 @@ font-style: inherit;">"utf-8"</span>),</span>
 background-color: null;
 font-style: inherit;">2</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Buzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1494,6 +1528,7 @@ font-style: inherit;">"utf-8"</span>),</span>
 background-color: null;
 font-style: inherit;">3</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"FizzBuzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1613,11 +1648,14 @@ font-style: inherit;">as</span> tf</span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> fizzbuzz(max_num):</span>
 <span id="cb1-4">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
@@ -1666,11 +1704,13 @@ font-style: inherit;">=</span>{</span>
 background-color: null;
 font-style: inherit;">0</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: num_tf.numpy(),</span>
 <span id="cb1-13">                                 <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Fizz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1680,6 +1720,7 @@ font-style: inherit;">"utf-8"</span>),</span>
 background-color: null;
 font-style: inherit;">2</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Buzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
@@ -1689,6 +1730,7 @@ font-style: inherit;">"utf-8"</span>),</span>
 background-color: null;
 font-style: inherit;">3</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"FizzBuzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
