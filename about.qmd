@@ -2,7 +2,7 @@
 title: "About"
 image: Lukman.jpg
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: twitter
       text: Twitter
@@ -28,6 +28,6 @@ In addition to my professional role, I am an active participant at the Arewa Dat
 
 My journey into the world of machine learning began with the Arewa Data Science Academy fellowship in January 2023. Since then, I have been exploring the intersection of healthcare and artificial intelligence, focusing on biostatistics in public health. I am particularly interested in using machine learning to improve health outcomes and address challenges in low-resource settings.
 
-I blog about my learning journey, sharing insights and experiences as I navigate the realms of healthcare and machine learning. My goal is to contribute to the growing body of knowledge in these fields and inspire others to explore the potential of AI in healthcare. For a view of my earned certifications, kindly check [here](https://www.linkedin.com/in/lukman-a-j/details/certifications/)
+I blog about my learning journey, sharing insights and experiences as I navigate the realms of healthcare and machine learning. My goal is to contribute to the growing body of knowledge in these fields and inspire others to explore the potential of AI in healthcare. For a view of my earned certifications, kindly check [here](https://lukmanaj.github.io/certifications.html)
 
 Feel free to connect with me on [LinkedIn](https://linkedin.com/in/lukman-a-j) or [GitHub](https://github.com/lukmanaj). 
