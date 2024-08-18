@@ -32,7 +32,7 @@ My involvement with Deep Learning.AI and Coursera deepened quickly:
 
 - Course Tester: I was invited to be part of the testing group for a major course upgrade, partly due to my active contribution as a moderator, where we transitioned from an older version of TensorFlow to the cutting-edge TensorFlow 2.16. My insightful feedback contributed to refining the course content and user experience across all four courses.
 
-![my tester certificate]('tester.png')
+![my tester certificate](tester.png)
 
 -  Mentor: The crowning achievement came in August 2024, when I was offered the opportunity to become a mentor for the TensorFlow Developer Certificate courses, in addition to my moderator role. This position allows me to guide learners through the intricacies of TensorFlow, from basic concepts to advanced applications in CNN, NLP, and time series prediction.
 
