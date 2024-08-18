@@ -10,7 +10,73 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Sat, 27 Jul 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 18 Aug 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>A Journey from Learner to Leader: My Deep Learning.AI and Coursera Adventure</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>On August 14, 2024, I reached a significant milestone in my AI career: I was officially designated as a mentor for the TensorFlow Developer Certificate program on Deep Learning.AI and Coursera. This comprehensive certification, consisting of four courses, introduces learners to the powerful TensorFlow framework. As I reflect on this achievement, I’m filled with pride and gratitude for how far I’ve come in such a short time.</p>
+<section id="the-tensorflow-developer-certificate-program" class="level2">
+<h2 class="anchored" data-anchor-id="the-tensorflow-developer-certificate-program">The TensorFlow Developer Certificate Program</h2>
+<p>The certification program I now mentor comprises four essential courses:</p>
+<ol type="1">
+<li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li>
+<li>Convolutional Neural Networks in TensorFlow</li>
+<li>Natural Language Processing in TensorFlow</li>
+<li>Sequences, Time Series and Prediction</li>
+</ol>
+<p>These courses cover a broad spectrum of AI applications, from basic neural networks to advanced techniques in computer vision, natural language processing, and time series analysis.</p>
+</section>
+<section id="a-serendipitous-beginning" class="level2">
+<h2 class="anchored" data-anchor-id="a-serendipitous-beginning">A Serendipitous Beginning</h2>
+<p>My AI learning journey began with the Arewa Data Science Academy fellowship, a program that holds a special place in my heart. Simultaneously, I embarked on Andrew Ng’s Machine Learning Specialization on Coursera. This coincidence set the stage for my rapid progression in the AI community.</p>
+</section>
+<section id="rising-through-the-ranks" class="level2">
+<h2 class="anchored" data-anchor-id="rising-through-the-ranks">Rising Through the Ranks</h2>
+<p>My involvement with Deep Learning.AI and Coursera deepened quickly:</p>
+<ul>
+<li><p>Forum Moderator: In November 2023, just a few months into my journey, I became a moderator at the DeepLearning.AI forum, helping to guide discussions and support learners tackling challenges in various courses offered in the community.</p></li>
+<li><p>Course Tester: I was invited to be part of the testing group for a major course upgrade, partly due to my active contribution as a moderator, where we transitioned from an older version of TensorFlow to the cutting-edge TensorFlow 2.16. My insightful feedback contributed to refining the course content and user experience across all four courses.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/'tester.png'" class="img-fluid figure-img"></p>
+<figcaption>my tester certificate</figcaption>
+</figure>
+</div>
+<ul>
+<li>Mentor: The crowning achievement came in August 2024, when I was offered the opportunity to become a mentor for the TensorFlow Developer Certificate courses, in addition to my moderator role. This position allows me to guide learners through the intricacies of TensorFlow, from basic concepts to advanced applications in CNN, NLP, and time series prediction.</li>
+</ul>
+<p>This rapid transition from learner to contributor to mentor and moderator has been both humbling and exhilarating.</p>
+</section>
+<section id="celebrating-milestones-and-looking-ahead" class="level2">
+<h2 class="anchored" data-anchor-id="celebrating-milestones-and-looking-ahead">Celebrating Milestones and Looking Ahead</h2>
+<p>As I continue to contribute to the AI community, I’m committed to making a lasting impact in all the places I volunteer, especially at Arewa Data Science Academy, where my journey began. Each step forward reminds me of the importance of celebrating small victories while keeping an eye on future goals.</p>
+<p>My new role as a TensorFlow Developer Certificate mentor, alongside my moderator responsibilities, is not just a personal achievement; it’s an opportunity to give back to the community that has nurtured my growth. It’s a chance to inspire and guide the next generation of AI enthusiasts and developers across various domains of machine learning and deep learning.</p>
+</section>
+<section id="a-message-to-aspiring-ai-developers" class="level2">
+<h2 class="anchored" data-anchor-id="a-message-to-aspiring-ai-developers">A Message to Aspiring AI Developers</h2>
+<p>As I forge ahead in pursuing my dreams in the AI field, I’m reminded of the power of persistence, continuous learning, and community support. To all aspiring AI developers out there: keep pushing, keep learning, and remember that today’s learner can be tomorrow’s leader.</p>
+<p>The path from novice to mentor can be shorter than you think. With dedication and the right opportunities, you can quickly find yourself in a position to guide others. Embrace every chance to learn, contribute, and grow within the AI community.</p>
+<p>Here’s to the journey ahead, filled with neural networks, convolutional layers, natural language models, time series predictions, and the endless possibilities of artificial intelligence!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>tensorflow</category>
+  <category>arewads</category>
+  <category>deeplearning-ai</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/</guid>
+  <pubDate>Sun, 18 Aug 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/mentor-mail.png" medium="image" type="image/png" height="91" width="144"/>
+</item>
 <item>
   <title>My Contribution to Quarto-web: A Small Edit with a Big Impact</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -2009,37 +2075,6 @@ font-style: inherit;">NULL</span>))</span>
   <category>data visualization</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/ggplot/</guid>
   <pubDate>Sat, 07 Oct 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Data Science: Foundations using R Specialization</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I recently wrapped up the Data Science: Foundations using R specialization on Coursera, a comprehensive program offered by John Hopkins University and led by Professors Roger Peng and Jeff Leek. Comprising five enriching courses, this specialization serves as the initial segment of the highly popular Data Science Specialization. Let’s delve into the key components of this journey:</p>
-<ol type="1">
-<li><p>The Data Scientist’s Toolbox: Inaugurating the specialization, the first course, “The Data Scientist’s Toolbox,” provides a solid foundation. Here, we explore the essential tools and resources essential for data scientists. We delve into the world of data science, defining its scope and importance. Additionally, we get hands-on experience with version control, particularly Git. The course also introduces us to R and RStudio, offering guidance on seamlessly integrating version control within RStudio. Moreover, it acquaints us with RMarkdown, a powerful tool for effective communication in data science.</p></li>
-<li><p>R Programming: The second course, “R Programming,” is a deep dive into the R programming language. We learn the fundamentals of R as a programming language, with practical insights gained through the use of swirl courses.</p></li>
-<li><p>Getting and Cleaning Data: Courses three and four further solidify the concepts introduced in the second course. These courses intensify our learning through interactive swirl lessons and real-world examples. “Getting and Cleaning Data” equips us with the skills necessary for data cleaning, a crucial step in any data science project.</p></li>
-<li><p>Exploratory Data Analysis: In the fourth course, “Exploratory Data Analysis,” we build on our knowledge to perform insightful exploratory data analysis. The course guides us through specific examples, providing a hands-on approach to this critical aspect of data science.</p></li>
-<li><p>Reproducible Research: The final course, “Reproducible Research,” emphasizes the importance of clear research communication. It equips us with the tools and techniques needed to ensure our research is not only transparent but also reproducible. RMarkdown plays a central role in this course, enabling us to effectively communicate our findings.</p></li>
-</ol>
-<p>One noteworthy aspect of this specialization is the peer review assignments, with at least one per course. These assignments not only reinforce the concepts we’ve learned but also offer a platform for applying them in real-world scenarios. They are an invaluable part of the learning experience.</p>
-<p>In conclusion, the Data Science: Foundations using R specialization is a rewarding journey that equips students with essential data science skills. I am immensely grateful to Professors Roger Peng and Jeff Leek for their guidance throughout this program. As someone in the field of medical sciences, I firmly believe that learning R programming is a crucial step for anyone serious about research, and this specialization has been an enlightening and enriching experience.</p>
-
-
-
- ]]></description>
-  <category>data science</category>
-  <category>r programming</category>
-  <category>coursera</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/rprogramming/</guid>
-  <pubDate>Tue, 03 Oct 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/rprogramming/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
