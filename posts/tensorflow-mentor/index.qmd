@@ -9,9 +9,9 @@ image: "mentor-mail.png"
 
 On August 14, 2024, I reached a significant milestone in my AI career: I was officially designated as a mentor for the TensorFlow Developer Certificate program on Deep Learning.AI and Coursera. This comprehensive certification, consisting of four courses, introduces learners to the powerful TensorFlow framework. As I reflect on this achievement, I'm filled with pride and gratitude for how far I've come in such a short time.
 
-## The TensorFlow Developer Certificate Program
+## The TensorFlow Developer Professional Certificate
 
-The certification program I now mentor comprises four essential courses:
+The certificate program I now mentor comprises four essential courses:
 
 1. Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning
 2. Convolutional Neural Networks in TensorFlow
@@ -28,13 +28,13 @@ My AI learning journey began with the Arewa Data Science Academy fellowship, a p
 
 My involvement with Deep Learning.AI and Coursera deepened quickly:
 
-- Forum Moderator: In November 2023, just a few months into my journey, I became a moderator at the DeepLearning.AI forum, helping to guide discussions and support learners tackling challenges in various courses offered in the community.
+- **Forum Moderator:** In November 2023, just a few months into my journey, I became a moderator at the DeepLearning.AI forum, helping to guide discussions and support learners tackling challenges in various courses offered in the community.
 
-- Course Tester: I was invited to be part of the testing group for a major course upgrade, partly due to my active contribution as a moderator, where we transitioned from an older version of TensorFlow to the cutting-edge TensorFlow 2.16. My insightful feedback contributed to refining the course content and user experience across all four courses.
+- **Course Tester:** I was invited to be part of the testing group for a major course upgrade, partly due to my active contribution as a moderator, where we transitioned from an older version of TensorFlow to the cutting-edge TensorFlow 2.16. My insightful feedback contributed to refining the course content and user experience across all four courses.
 
-![my tester certificate](tester.png)
+![](tester.png)
 
--  Mentor: The crowning achievement came in August 2024, when I was offered the opportunity to become a mentor for the TensorFlow Developer Certificate courses, in addition to my moderator role. This position allows me to guide learners through the intricacies of TensorFlow, from basic concepts to advanced applications in CNN, NLP, and time series prediction.
+-  **Mentor:** The crowning achievement came in August 2024, when I was offered the opportunity to become a mentor for the TensorFlow Developer Certificate courses, in addition to my moderator role. This position allows me to guide learners through the intricacies of TensorFlow, from basic concepts to advanced applications in CNN, NLP, and time series prediction.
 
 
 This rapid transition from learner to contributor to mentor and moderator has been both humbling and exhilarating.
