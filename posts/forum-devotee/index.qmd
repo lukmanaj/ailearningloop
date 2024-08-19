@@ -9,6 +9,8 @@ image: "devotee.png"
 
 After 365 consecutive days of active participation, I'm thrilled to announce that I've achieved Devotee status on the DeepLearning.AI forum. This milestone is more than just a badge—it shows the power of unwavering commitment and the compound effect of daily habits.
 
+![](devotee.png)
+
 The journey to Devotee status is as unforgiving as it is rewarding. Missing even a single day means starting over from scratch. Imagine the dedication required to maintain this streak for an entire year, knowing that a momentary lapse on day 364 would reset your progress to zero. It's this level of consistency that separates casual participants from true devotees.
 
 My path to this achievement began with smaller milestones: the 10-day Enthusiast badge, followed by the 100-day Aficionado badge. Each step reinforced my commitment and built momentum towards the ultimate goal. Now, as only the fifth person in over four years to reach Devotee status, I find myself in the company of the forum's most dedicated members.
