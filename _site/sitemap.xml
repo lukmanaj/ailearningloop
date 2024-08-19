@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/index.html</loc>
+    <lastmod>2024-08-19T09:41:19.348Z</lastmod>
+  </url>
+  <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/index.html</loc>
     <lastmod>2024-07-27T21:07:49.377Z</lastmod>
   </url>
@@ -110,7 +114,7 @@
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/about.html</loc>
-    <lastmod>2024-08-13T05:16:34.960Z</lastmod>
+    <lastmod>2024-08-18T09:45:39.398Z</lastmod>
   </url>
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/index.html</loc>
@@ -219,5 +223,9 @@
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/index.html</loc>
     <lastmod>2024-06-11T09:53:06.485Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/index.html</loc>
+    <lastmod>2024-08-18T09:38:46.822Z</lastmod>
   </url>
 </urlset>

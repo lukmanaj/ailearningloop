@@ -166,5 +166,11 @@
   },
   "posts/contributing-to-quarto/index.qmd": {
     "index.html": "b0d9552c"
+  },
+  "posts/tensorflow-mentor/index.qmd": {
+    "index.html": "11365f8e"
+  },
+  "posts/forum-devotee/index.qmd": {
+    "index.html": "2e206f22"
   }
 }

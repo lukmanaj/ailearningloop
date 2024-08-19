@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/forum-devotee/index.html",
+      "/posts/tensorflow-mentor/index.html",
       "/posts/contributing-to-quarto/index.html",
       "/posts/medical-eval/index.html",
       "/posts/dsa-algorithms-cert/index.html",
