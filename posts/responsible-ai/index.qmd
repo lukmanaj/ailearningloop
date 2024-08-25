@@ -3,7 +3,7 @@ title: "Understanding Responsible AI: A Deep Dive into Ethical AI Development"
 author: "Lukman Aliyu Jibril"
 date: "2024-08-25"
 categories: [deeplearning indaba,responsible ai,datacamp]
-
+image: "responsible-ai.png"
 ---
 
 
