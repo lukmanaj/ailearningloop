@@ -1,0 +1,34 @@
+---
+title: "Deep Learning Indaba 2024: Day 1 Highlights and Reflections"
+author: "Lukman Aliyu Jibril"
+date: "2024-09-01"
+categories: [deeplearning indaba]
+image: "indaba.png"
+---
+
+
+I'm thrilled to share my experience from the Deep Learning Indaba 2024, currently happening in Dakar, Senegal, from September 1st to 7th. This event brings together some of the most talented AI minds from across Africa, creating a vibrant and inspiring environment for knowledge exchange, collaboration, and innovation.
+
+## Day 1: A Journey into Probabilistic Programming
+
+Day 1 kicked off with an exciting mix of registration, introductions, and a variety of sessions that set the tone for the rest of the week. I was honored to lead the practical session on Probabilistic Programming, where I had the chance to tutor participants on essential concepts such as probability, distributions, and their applications in machine learning.
+
+The session was incredibly rewarding. The participants' engagement and enthusiasm were evident as we dove deep into understanding how probabilistic thinking forms the backbone of many AI models. It was inspiring to see so many bright minds eager to learn and apply these concepts. If you'd like to explore the notebook we used for this session, it's available on GitHub: Probabilistic Thinking and Programming Notebook.
+
+## Connecting with the Community
+
+One of the highlights for me was meeting the dynamic duo behind our practical lab—James and Kira. Their hard work and dedication to organizing these sessions were evident, and it was great to share insights and ideas with James from DeepMind and Kira from UCL. We even managed to capture a memorable moment together, which I'll cherish as a reminder of this wonderful experience.
+
+## Engaging Talks on Fairness and Speech Recognition
+
+With so many sessions happening concurrently, choosing which ones to attend was a challenge! I was fortunate enough to participate in two deeply insightful presentations. The first was on fairness in machine learning algorithms, a critical topic that delved into how we can ensure AI systems are fair, ethical, and inclusive. The second presentation focused on automatic speech recognition for low-resource languages, showcasing groundbreaking work that aims to bridge the digital divide and make AI accessible to all communities, regardless of linguistic diversity.
+
+## Celebrating the Start of an Inspiring Week
+
+We capped off the day with a vibrant celebration, marking the official start of the Deep Learning Indaba 2024. The energy was infectious, and it was a fantastic way to unwind and connect with fellow AI enthusiasts from different parts of the continent.
+
+## Final Thoughts
+
+Reflecting on Day 1, I'm filled with gratitude and excitement. It's truly an honor to be part of such a passionate and forward-thinking community. The discussions, learning, and networking have already been incredible, and I can’t wait to see what the rest of the week has in store.
+
+Stay tuned for more updates, reflections, and possibly pictures from this inspiring event! 📸
