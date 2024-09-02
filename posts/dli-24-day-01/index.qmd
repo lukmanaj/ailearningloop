@@ -11,9 +11,9 @@ I'm thrilled to share my experience from the Deep Learning Indaba 2024, currentl
 
 ## Day 1: A Journey into Probabilistic Programming
 
-Day 1 kicked off with an exciting mix of registration, introductions, and a variety of sessions that set the tone for the rest of the week. I was honored to lead the practical session on Probabilistic Programming, where I had the chance to tutor participants on essential concepts such as probability, distributions, and their applications in machine learning.
+Day 1 kicked off with an exciting mix of registration, introductions, and a variety of sessions that set the tone for the rest of the week. I was honored to lead the practical session on Probabilistic Programming, where I had the chance to tutor participants on essential concepts such as probability, probability distributions, bayes theoerem, and their applications in machine learning.
 
-The session was incredibly rewarding. The participants' engagement and enthusiasm were evident as we dove deep into understanding how probabilistic thinking forms the backbone of many AI models. It was inspiring to see so many bright minds eager to learn and apply these concepts. If you'd like to explore the notebook we used for this session, it's available on GitHub: Probabilistic Thinking and Programming Notebook.
+The session was incredibly rewarding. The participants' engagement and enthusiasm were evident as we dove deep into understanding how probabilistic thinking forms the backbone of many AI models. It was inspiring to see so many bright minds eager to learn and apply these concepts. If you'd like to explore the notebooks (two parts, both parts in english and french) we used for this session, it's available on GitHub: [Probabilistic Thinking and Programming Notebook](https://github.com/deep-learning-indaba/indaba-pracs-2024/tree/main/practicals/Probabilistic_Thinking_and_Programming).
 
 ## Connecting with the Community
 
