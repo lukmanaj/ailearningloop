@@ -9,8 +9,50 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.5.56</generator>
-<lastBuildDate>Sun, 25 Aug 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.5.57</generator>
+<lastBuildDate>Sun, 01 Sep 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Deep Learning Indaba 2024: Day 1 Highlights and Reflections</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-01/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I’m thrilled to share my experience from the Deep Learning Indaba 2024, currently happening in Dakar, Senegal, from September 1st to 7th. This event brings together some of the most talented AI minds from across Africa, creating a vibrant and inspiring environment for knowledge exchange, collaboration, and innovation.</p>
+<section id="day-1-a-journey-into-probabilistic-programming" class="level2">
+<h2 class="anchored" data-anchor-id="day-1-a-journey-into-probabilistic-programming">Day 1: A Journey into Probabilistic Programming</h2>
+<p>Day 1 kicked off with an exciting mix of registration, introductions, and a variety of sessions that set the tone for the rest of the week. I was honored to lead the practical session on Probabilistic Programming, where I had the chance to tutor participants on essential concepts such as probability, distributions, and their applications in machine learning.</p>
+<p>The session was incredibly rewarding. The participants’ engagement and enthusiasm were evident as we dove deep into understanding how probabilistic thinking forms the backbone of many AI models. It was inspiring to see so many bright minds eager to learn and apply these concepts. If you’d like to explore the notebook we used for this session, it’s available on GitHub: Probabilistic Thinking and Programming Notebook.</p>
+</section>
+<section id="connecting-with-the-community" class="level2">
+<h2 class="anchored" data-anchor-id="connecting-with-the-community">Connecting with the Community</h2>
+<p>One of the highlights for me was meeting the dynamic duo behind our practical lab—James and Kira. Their hard work and dedication to organizing these sessions were evident, and it was great to share insights and ideas with James from DeepMind and Kira from UCL. We even managed to capture a memorable moment together, which I’ll cherish as a reminder of this wonderful experience.</p>
+</section>
+<section id="engaging-talks-on-fairness-and-speech-recognition" class="level2">
+<h2 class="anchored" data-anchor-id="engaging-talks-on-fairness-and-speech-recognition">Engaging Talks on Fairness and Speech Recognition</h2>
+<p>With so many sessions happening concurrently, choosing which ones to attend was a challenge! I was fortunate enough to participate in two deeply insightful presentations. The first was on fairness in machine learning algorithms, a critical topic that delved into how we can ensure AI systems are fair, ethical, and inclusive. The second presentation focused on automatic speech recognition for low-resource languages, showcasing groundbreaking work that aims to bridge the digital divide and make AI accessible to all communities, regardless of linguistic diversity.</p>
+</section>
+<section id="celebrating-the-start-of-an-inspiring-week" class="level2">
+<h2 class="anchored" data-anchor-id="celebrating-the-start-of-an-inspiring-week">Celebrating the Start of an Inspiring Week</h2>
+<p>We capped off the day with a vibrant celebration, marking the official start of the Deep Learning Indaba 2024. The energy was infectious, and it was a fantastic way to unwind and connect with fellow AI enthusiasts from different parts of the continent.</p>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<p>Reflecting on Day 1, I’m filled with gratitude and excitement. It’s truly an honor to be part of such a passionate and forward-thinking community. The discussions, learning, and networking have already been incredible, and I can’t wait to see what the rest of the week has in store.</p>
+<p>Stay tuned for more updates, reflections, and possibly pictures from this inspiring event! 📸</p>
+
+
+</section>
+
+ ]]></description>
+  <category>deeplearning indaba</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-01/</guid>
+  <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-01/indaba.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Understanding Responsible AI: A Deep Dive into Ethical AI Development</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1771,192 +1813,6 @@ FizzBuzz</code></pre>
   <category>python</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-pytorch-fizzbuzz/</guid>
   <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Computation Graphs, Eager Execution and Flow Control in TensorFlow</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
-<p>TensorFlow is a popular deep learning framework that provides a robust platform for the creation and execution of computational graphs. Understanding how TensorFlow handles computation through graphs, eager execution, and flow control is pivotal for effectively deploying machine learning/deep learning models.</p>
-<p><strong><em>1. Computation Graphs in TensorFlow:</em></strong></p>
-<p>A computation graph is a series of TensorFlow operations arranged into a graph of nodes. Each node represents an operation, while the edges represent the data consumed or produced by an operation. This structure allows TensorFlow to optimize the computation, especially in deep learning models.</p>
-<p><strong>Benefits of Computation Graphs:</strong></p>
-<ul>
-<li>Efficiency: Operations can be parallelized across different processors (CPUs, GPUs).</li>
-<li>Portability: The graph can be executed on different devices and platforms.</li>
-</ul>
-<p><strong><em>2. Eager Execution in TensorFlow:</em></strong></p>
-<p>Eager execution is an imperative programming environment that evaluates operations immediately. It contrasts with graph execution in that it doesn’t require a computational graph to be defined before running operations.</p>
-<p><strong>Advantages of Eager Execution:</strong></p>
-<ul>
-<li>Interactive Debugging: Operations are executed as they are defined, facilitating easy debugging.</li>
-<li>Intuitive Interface: It aligns with the way programmers are used to thinking about their programs.</li>
-</ul>
-<ol start="3" type="1">
-<li>Flow Control in TensorFlow:</li>
-</ol>
-<p>TensorFlow provides various tools for flow control, enabling the creation of dynamic models. This includes conditionals and loops, which are essential in many machine learning algorithms.</p>
-<section id="tensorflow-functions-for-flow-control" class="level3">
-<h3 class="anchored" data-anchor-id="tensorflow-functions-for-flow-control">TensorFlow Functions for Flow Control:</h3>
-<ul>
-<li>tf.cond: Provides a way to perform conditional execution.</li>
-<li>tf.while_loop: Allows for the creation of dynamic loops in the graph.</li>
-<li>tf.switch_case: Used for creating conditional branching.</li>
-</ul>
-<section id="demonstrating-flow-control-using-fizzbuzz-in-tensorflow" class="level4">
-<h4 class="anchored" data-anchor-id="demonstrating-flow-control-using-fizzbuzz-in-tensorflow">Demonstrating Flow Control using FizzBuzz in Tensorflow</h4>
-<p>In a few lines of code, I try to demonstate some tensorflow functionalities using the popular FizzBuzz.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> tensorflow <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> tf</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> fizzbuzz(max_num):</span>
-<span id="cb1-4">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> num <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, max_num <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>):</span>
-<span id="cb1-5">        num_tf <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> tf.constant(num)</span>
-<span id="cb1-6">        fizz <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>), <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb1-7">        buzz <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> tf.equal(tf.math.mod(num_tf, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>), <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb1-8">        fizzbuzz <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> tf.logical_and(fizz, buzz)</span>
-<span id="cb1-9"></span>
-<span id="cb1-10">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(tf.switch_case(tf.cast(fizzbuzz, tf.int32) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> tf.cast(fizz, tf.int32) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> tf.cast(buzz, tf.int32),</span>
-<span id="cb1-11">                             branch_fns<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>{</span>
-<span id="cb1-12">                                 <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>: <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">lambda</span>: num_tf.numpy(),</span>
-<span id="cb1-13">                                 <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>: <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Fizz"</span>).numpy().decode(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"utf-8"</span>),</span>
-<span id="cb1-14">                                 <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>: <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Buzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"utf-8"</span>),</span>
-<span id="cb1-15">                                 <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>: <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">lambda</span>: tf.constant(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FizzBuzz"</span>).numpy().decode(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"utf-8"</span>)</span>
-<span id="cb1-16">                             }))</span>
-<span id="cb1-17"></span>
-<span id="cb1-18">fizzbuzz(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">15</span>)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>2023-11-05 21:07:15.366672: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2023-11-05 21:07:22.171045: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz</code></pre>
-</div>
-</div>
-</section>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
-<p>The versatility of TensorFlow lies in its ability to seamlessly switch between a static computation graph and eager execution, providing both efficiency and flexibility. Understanding these concepts is essential for any machine learning practitioner working with TensorFlow. Whether you’re implementing simple programs like FizzBuzz or developing complex neural networks, mastering these aspects of TensorFlow will greatly enhance your ability to develop and optimize machine learning models.</p>
-<p>On a final note, readers should remember that TensorFlow is an evolving platform and therefore try to refer to the latest documentation for up-to-date practices and API usage.</p>
-
-
-</section>
-
- ]]></description>
-  <category>ai</category>
-  <category>tensorflow</category>
-  <category>programming</category>
-  <category>python</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/</guid>
-  <pubDate>Sun, 05 Nov 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-fizzbuzz/ibm.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>
