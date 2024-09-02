@@ -3,7 +3,7 @@ title: "Deep Learning Indaba 2024: Day 1 Highlights and Reflections"
 author: "Lukman Aliyu Jibril"
 date: "2024-09-01"
 categories: [deeplearning indaba]
-image: "indaba.png"
+image: "indaba.jpeg"
 ---
 
 
