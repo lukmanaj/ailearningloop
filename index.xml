@@ -10,7 +10,44 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 02 Sep 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 03 Sep 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Deep Learning Indaba 2024:Day 3, A Day of Insights, Innovation, and Inspiration</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-03/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Attending the Deep Learning Indaba 2024 in Dakar has been a whirlwind of learning, networking, and inspiration. Day 3 was particularly packed with enriching activities and thought-provoking sessions that left me energized and inspired.</p>
+<p>The day began with a compelling keynote by Samy Bengio on “Learning to Reason.” Samy delved deep into the challenges that transformer models still face when it comes to reasoning. While transformers have revolutionized natural language processing, their ability to reason like humans remains limited. Samy presented some innovative methods to enhance this reasoning ability, sparking a lively discussion among attendees. It was fascinating to see how research continues to push the boundaries of what AI can achieve.</p>
+<p>After the keynote, I attended a hands-on practical session on Federated Learning. Having spent the last two days tutoring, it was refreshing to be on the learning side again. We explored how federated learning can play a crucial role in fostering responsible AI, particularly by ensuring data privacy and security. We also got hands-on with Flower, an open-source framework for building federated learning systems, and discussed the added complexities that arise when working with heterogeneous datasets. Thanks to my prior experience with the DeepLearning.AI Federated Learning short course, I could dive deeper into the challenges and opportunities in this space.</p>
+<p>Next, I joined a career mentorship session with Sekou Remy from IBM. This was one of the highlights of my day, as Sekou shared invaluable advice on navigating one’s career in AI. Some key takeaways included:</p>
+<ul>
+<li>Make decisions based on the evidence you can gather while planning your future.</li>
+<li>Take advantage of internships during undergrad and grad school; they are invaluable for gaining experience.</li>
+<li>Find a balance between acquiring new knowledge (exploration) and applying what you know (exploitation).</li>
+<li>Time is your most valuable asset—use it wisely.</li>
+<li>AI offers significant potential in data capture and analysis.</li>
+<li>Always keep an open mind and be willing to learn.</li>
+<li>Networking is not just a buzzword; it is key to professional growth.</li>
+</ul>
+<p>This session was a reminder of the importance of being strategic, adaptable, and proactive in our career journeys.</p>
+<p>After that, I attended a fascinating session on “Multimodal Perception for Human and Animal Behavior Understanding,” led by Marwa Mahmoud from the University of Glasgow’s Behavioural AI Laboratory. Marwa discussed her work on the early detection of neurodevelopmental conditions in children using multimodal features, highlighting the critical need for explainable and interpretable models. Given that these models are designed to assist healthcare providers, transparency in AI decisions is paramount. She also touched on the use of probabilistic models as a first line of support in decision-making.</p>
+<p>What struck me was the complexity and subjectivity involved in applying AI to psychology and behavior analysis, where getting well-labeled datasets can be incredibly challenging. Marwa also provided a glimpse into her work on modeling animal behavior, which can be even more daunting than human behavior. She referenced her paper, “Going Deeper than Tracking: A Survey of Computer Vision-Based Recognition of Animal Pain and Affective States,” which further explores these complexities.</p>
+<p>To wrap up the day, I joined discussions on community programs, featuring inspiring talks from various AI communities like GhanaAI, Masakhane, and others. They shared their initiatives and the tangible impacts they’ve made in their regions. It was a powerful reminder of the importance of community in driving AI forward, especially in underrepresented regions. The discussions were filled with passion and a shared vision of using AI for good.</p>
+<p>Throughout the day, I also had the opportunity to network with fellow attendees, exchange ideas, and work on our hackathon submission. The energy and camaraderie in the room were palpable, and it was exciting to be part of a community so dedicated to pushing the boundaries of AI.</p>
+<p>Day 3 at Deep Learning Indaba 2024 was truly a day of insights, innovation, and inspiration—a perfect blend of learning, sharing, and growing together. I am looking forward to what the rest of the week will bring!</p>
+
+
+
+ ]]></description>
+  <category>deeplearning indaba</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-03/</guid>
+  <pubDate>Tue, 03 Sep 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Day 2 at Deep Learning Indaba 2024: Bridging AI Innovation and Ethics in Africa</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1574,32 +1611,6 @@ font-style: inherit;">if</span> num]</span></code></pre></div>
   <category>python</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/list-comprehensions/</guid>
   <pubDate>Wed, 13 Dec 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Juggling Code and Career: My Arewa Data Science 30 Days Of Python Learning Journey Amidst a Full Schedule</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/learning-motivation/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>As part of the first cohort of the Arewa Data Science Academy Data Science and Machine Learning fellowship, embarking on the thirty days of Python challenge, I found myself navigating through the demanding waters of 12-hour work shifts. Despite these professional commitments, I remained steadfast in my participation in the weekend sessions, often balancing work and learning simultaneously. My thirst for knowledge wasn’t confined to my job; it extended to personal interests like improving my French and Arabic, a testament to my multifaceted curiosity. This same drive propelled me towards learning Python, a field I ventured into without any formal background in computer science.</p>
-<p>It’s enlightening to realize that, despite our hectic schedules, we often find pockets of time for activities like browsing social media. This observation led me to a pivotal conclusion: if we can dedicate time to scrolling through feeds, we can surely allocate moments for self-improvement and learning. My approach was methodical yet flexible - committing to consistent, daily progress, and embracing a journey of gradual improvement rather than seeking instant perfection. I wasn’t fixated on getting everything right on my first attempt. Rather, I aimed to complete each day’s exercises, occasionally revisiting previous tasks, to solidify my understanding. This consistent effort was a clear signal of my commitment and eagerness to learn, something that I hoped would be apparent to my mentors. I have since completed the python challenge and eventually the data science fellowship, but the lessons and experiences remain.</p>
-<p>In sharing this experience, my aim is to offer a piece of advice to fellow learners, especially those balancing their professional lives with personal development goals. It’s crucial to assess the role of learning in your life and to find ways to integrate it into your daily routine. The journey of learning programming, particularly a versatile language like Python, is not only about acquiring technical skills. It significantly enhances cognitive abilities, problem-solving skills, and overall mental agility. The impact of this commitment is profound, stretching beyond immediate learning outcomes to influence your professional trajectory and personal growth.</p>
-<p>While we are fortunate to have mentors to guide us, the crux of learning lies in our own hands. It’s about taking responsibility for our growth, proactively seeking help when needed, and not shying away from the challenges that come with stepping out of our comfort zones. This journey has been a rewarding one, filled with lessons that transcend the realm of programming, offering insights into persistence, time management, and the power of small, consistent steps towards a larger goal.</p>
-<p>In conclusion, as you embark on your own learning adventures, remember that the path may not always be easy, but the rewards, both tangible and intangible, are truly worth the effort. Embrace the challenge, cherish the progress, and always keep the flame of curiosity burning bright.</p>
-
-
-
- ]]></description>
-  <category>learning</category>
-  <category>motivation</category>
-  <category>programming</category>
-  <category>python</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/learning-motivation/</guid>
-  <pubDate>Fri, 08 Dec 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
