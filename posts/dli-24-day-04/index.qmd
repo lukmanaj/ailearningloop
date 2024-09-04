@@ -1,0 +1,32 @@
+---
+title: "Deep Learning Indaba 2024:Day 4, Celebrating African Research, Learning, and Community Building"
+author: "Lukman Aliyu Jibril"
+date: "2024-09-04"
+categories: [deeplearning indaba]
+image: arewadsdli.jpg
+---
+
+
+Today at Deep Learning Indaba 2024 was nothing short of inspiring! As the event unfolds, I'm continually amazed by the depth and diversity of research being conducted across Africa. Here’s a recap of my fourth day:
+
+**Celebrating African Research Excellence**: The day began with the Indaba Kambule Doctoral Thesis Award ceremony, which recognizes outstanding doctoral research by African scholars. This award is a testament to the originality and impact of research emerging from the continent, highlighting the innovative spirit driving Africa forward in AI and data science.
+
+**Diving into Oral Presentations and Poster Sessions**: The day continued with IndabaX Oral Presentations and two sessions of Poster Presentations. The posters showcased a range of exciting research:
+
+- Deep Learning-Based Lesion Segmentation for Early Liver Tumor Detection in Rwanda: Using a hybrid ResNet-UNet model, researchers presented significant results in early tumor detection from liver CT scans—a major step forward for healthcare in Rwanda.
+- siSwatiSent: Sentiment Analysis Dataset for siSwati: A unique sentiment analysis dataset for the siSwati language, extracted from YouTube comments. This study emphasizes the need for more African language resources in NLP.
+- CHOWNET-V1: An Image Dataset of Nigerian Food: A fascinating dataset that addresses the underrepresentation of African cuisine in machine learning research, enhancing diversity in food classification tasks.
+
+**Mentorship and Knowledge Sharing**: I was fortunate to join a mentorship session with Georgina Curto Rex. Our discussion revolved around the importance of selecting meaningful problems to work on and the role of having a guiding purpose as we explore various research avenues. This session was a reminder that our work should always aim to make a real-world impact.
+
+**Understanding the Limitations of LLMs**: The keynote lecture by Caglar Gulcehre focused on the limitations of large language models (LLMs). It was an eye-opening discussion that explored both the capabilities and the constraints of these models, sparking ideas on how we might improve and innovate further in the field.
+
+**Learning to Publish**: The day wrapped up with a Research Writing event, where we were taught the nuances of writing and publishing impactful research papers. This session was invaluable for anyone looking to contribute meaningfully to the academic community.
+
+**A Memorable Arewa Data Science Connect**: The day ended on a high note with our Arewa Data Science connect session. It was heartwarming to take a picture with my fellow Arewa Data Science folks at Indaba—strengthening our sense of community and shared purpose in advancing data science across Africa.
+
+**A New Discovery**: On a lighter note, I discovered a new country today—Eswatini! It was a humbling moment, reminding me of the endless learning opportunities that events like this bring.
+
+**Reflecting on the Day**: Today was a blend of knowledge, mentorship, and community. I feel incredibly fortunate to be part of this transformative event that is shaping the future of AI and data science in Africa. Here’s to more learning, connecting, and growing together!
+
+Stay tuned for more updates from Deep Learning Indaba 2024!
