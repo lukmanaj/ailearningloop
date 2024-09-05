@@ -1,0 +1,25 @@
+---
+title: "Deep Learning Indaba 2024:Day 5, A Day of Insights, Innovation, and Inspiration"
+author: "Lukman Aliyu Jibril"
+date: "2024-09-05"
+categories: [deeplearning indaba]
+---
+ 
+
+Day 5 of the Deep Learning Indaba 2024 was filled with moments that highlighted the vibrancy and depth of AI research and innovation happening across Africa. The day began with a celebration of academic excellence as Fiskani Banda received the Grace Alele-Williams Masters Award for her outstanding master’s thesis. Her dedication to pushing the boundaries of knowledge is a true inspiration for all of us in the AI community.
+
+Following this uplifting moment, we moved into a thought-provoking keynote by Dr. Judy Gichoya, Associate Professor of Radiology and Informatics at Emory University. Dr. Gichoya's presentation, “Shortcuts Causing Bias in Medical Imaging,” was a deep dive into the often-overlooked issue of shortcut learning in AI. She skillfully unpacked how biases can stem from both dataset limitations and the nature of discriminative learning itself. This session resonated with me profoundly, particularly given my interest in the intersection of AI and health. It served as a powerful reminder of the need for transparency and understanding in AI models, especially when they are applied to critical fields like healthcare where biases can have real-world consequences.
+
+The day’s agenda then shifted to a series of research showcases, demonstrating the diverse and impactful AI work being done across the continent. From using pre-trained models for essay scoring to flood prediction models and innovative approaches to predicting and preventing farmer-herder conflicts, the research presentations covered a wide array of domains. Each project underscored the potential of AI to address both local and global challenges, reaffirming the importance of inclusive and context-aware AI development.
+
+I also had the opportunity to attend the Data Science for Health Ideathon. This was a dynamic and engaging session that brought together bright minds to brainstorm and propose innovative AI solutions for health challenges in Africa. The creativity and passion in the room were palpable, making it one of the most energizing parts of the day.
+
+The afternoon featured a panel discussion and presentations from African startups, many of which are harnessing AI to tackle pressing issues on the continent. It’s always inspiring to see how these emerging companies are pushing the envelope and driving impact through AI.
+
+Another significant session was the Faculty Engagement discussion, a first at Indaba. Faculty members from universities across Africa and beyond came together to share insights, challenges, and solutions for advancing AI education and research on the continent. It was a meaningful conversation, and I'm excited to hear that this will be a recurring feature at future Indabas.
+
+Between sessions, I made sure to network with other attendees, exchanging ideas and learning about their work. I also visited the booths of various Indaba partners, gaining a deeper understanding of the incredible projects and initiatives they are supporting.
+
+As the day concluded, I found myself reflecting on how each day at the Indaba seems to surpass the last. The experiences, the learning, and the connections all continue to make this journey incredibly rewarding. I can’t wait to see what the next days have in store!
+
+Stay tuned for more updates from Deep Learning Indaba 2024!
