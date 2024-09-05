@@ -10,7 +10,34 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 04 Sep 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 05 Sep 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Deep Learning Indaba 2024:Day 5, A Day of Insights, Innovation, and Inspiration</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-05/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Day 5 of the Deep Learning Indaba 2024 was filled with moments that highlighted the vibrancy and depth of AI research and innovation happening across Africa. The day began with a celebration of academic excellence as Fiskani Banda received the Grace Alele-Williams Masters Award for her outstanding master’s thesis. Her dedication to pushing the boundaries of knowledge is a true inspiration for all of us in the AI community.</p>
+<p>Following this uplifting moment, we moved into a thought-provoking keynote by Dr.&nbsp;Judy Gichoya, Associate Professor of Radiology and Informatics at Emory University. Dr.&nbsp;Gichoya’s presentation, “Shortcuts Causing Bias in Medical Imaging,” was a deep dive into the often-overlooked issue of shortcut learning in AI. She skillfully unpacked how biases can stem from both dataset limitations and the nature of discriminative learning itself. This session resonated with me profoundly, particularly given my interest in the intersection of AI and health. It served as a powerful reminder of the need for transparency and understanding in AI models, especially when they are applied to critical fields like healthcare where biases can have real-world consequences.</p>
+<p>The day’s agenda then shifted to a series of research showcases, demonstrating the diverse and impactful AI work being done across the continent. From using pre-trained models for essay scoring to flood prediction models and innovative approaches to predicting and preventing farmer-herder conflicts, the research presentations covered a wide array of domains. Each project underscored the potential of AI to address both local and global challenges, reaffirming the importance of inclusive and context-aware AI development.</p>
+<p>I also had the opportunity to attend the Data Science for Health Ideathon. This was a dynamic and engaging session that brought together bright minds to brainstorm and propose innovative AI solutions for health challenges in Africa. The creativity and passion in the room were palpable, making it one of the most energizing parts of the day.</p>
+<p>The afternoon featured a panel discussion and presentations from African startups, many of which are harnessing AI to tackle pressing issues on the continent. It’s always inspiring to see how these emerging companies are pushing the envelope and driving impact through AI.</p>
+<p>Another significant session was the Faculty Engagement discussion, a first at Indaba. Faculty members from universities across Africa and beyond came together to share insights, challenges, and solutions for advancing AI education and research on the continent. It was a meaningful conversation, and I’m excited to hear that this will be a recurring feature at future Indabas.</p>
+<p>Between sessions, I made sure to network with other attendees, exchanging ideas and learning about their work. I also visited the booths of various Indaba partners, gaining a deeper understanding of the incredible projects and initiatives they are supporting.</p>
+<p>As the day concluded, I found myself reflecting on how each day at the Indaba seems to surpass the last. The experiences, the learning, and the connections all continue to make this journey incredibly rewarding. I can’t wait to see what the next days have in store!</p>
+<p>Stay tuned for more updates from Deep Learning Indaba 2024!</p>
+
+
+
+ ]]></description>
+  <category>deeplearning indaba</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-05/</guid>
+  <pubDate>Thu, 05 Sep 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Deep Learning Indaba 2024:Day 4, Celebrating African Research, Learning, and Community Building</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1384,55 +1411,6 @@ tensor device: cpu</code></pre>
   <category>fellowship</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-intro/</guid>
   <pubDate>Tue, 16 Jan 2024 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Embarking on a Deep Learning Journey with Arewa Data Science Academy’s Deep Learning with PyTorch Fellowship</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This December marked the exciting kickoff of the “Deep Learning with PyTorch” fellowship, hosted by Arewa Data Science Academy. I’m thrilled to share my journey and insights as we delve into the fascinating world of deep learning.</p>
-</section>
-<section id="the-fellowship-begins" class="level2">
-<h2 class="anchored" data-anchor-id="the-fellowship-begins">The Fellowship Begins</h2>
-<p>The fellowship’s curriculum is centered around the comprehensive PyTorch deep learning book, a resource that’s freely available and highly recommended for enthusiasts in the field (find it here: <a href="https://github.com/mrdbourke/pytorch-deep-learning">PyTorch Deep Learning by Daniel Bourke</a>).</p>
-</section>
-<section id="inspirational-instruction" class="level2">
-<h2 class="anchored" data-anchor-id="inspirational-instruction">Inspirational Instruction</h2>
-<p>A key highlight of this program is our instructor, Mustapha Abdullahi. Fresh from his commendable achievement of completing his master’s with honors from Queen Mary University, UK, Mustapha brings a blend of youthful vigor and profound knowledge to our virtual classroom. His ability to break down complex concepts into digestible bits has been nothing short of remarkable.</p>
-</section>
-<section id="progress-and-personalization" class="level2">
-<h2 class="anchored" data-anchor-id="progress-and-personalization">Progress and Personalization</h2>
-<p>Over the past three weeks, we’ve journeyed through the initial three lectures of the course material, each session bringing new insights and challenges. The structure of the program encourages continuous learning and application, with weekly assignments that are meticulously reviewed by Mustapha. His personalized feedback has been instrumental in enhancing our understanding and skills.</p>
-</section>
-<section id="a-community-of-learners" class="level2">
-<h2 class="anchored" data-anchor-id="a-community-of-learners">A Community of Learners</h2>
-<p>What makes this fellowship stand out is the sense of community and collective learning. Each of us brings a unique perspective to the table, enriching discussions and collaborations. It’s been a privilege to be part of such a vibrant and passionate group of learners.</p>
-</section>
-<section id="looking-ahead" class="level2">
-<h2 class="anchored" data-anchor-id="looking-ahead">Looking Ahead</h2>
-<p>As we progress through the program, I plan to document and share my experiences and learnings in this blog. Whether it’s tackling a challenging concept, celebrating a breakthrough, or sharing useful resources, I hope to provide a window into the dynamic and ever-evolving world of deep learning with PyTorch.</p>
-</section>
-<section id="stay-connected" class="level2">
-<h2 class="anchored" data-anchor-id="stay-connected">Stay Connected</h2>
-<p>For those interested in following this journey, stay tuned to this blog. Your comments, questions, and insights are always welcome as we explore the frontiers of deep learning together.</p>
-
-
-</section>
-
- ]]></description>
-  <category>deep learning</category>
-  <category>pytorch</category>
-  <category>arewads</category>
-  <category>fellowship</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-fellowship/</guid>
-  <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
