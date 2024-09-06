@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/index.html</loc>
+    <lastmod>2024-09-06T20:20:53.218Z</lastmod>
+  </url>
+  <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-04/index.html</loc>
     <lastmod>2024-09-04T21:25:19.770Z</lastmod>
   </url>
@@ -247,5 +251,9 @@
   <url>
     <loc>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-03/index.html</loc>
     <lastmod>2024-09-03T19:06:18.460Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-05/index.html</loc>
+    <lastmod>2024-09-06T20:11:42.353Z</lastmod>
   </url>
 </urlset>
