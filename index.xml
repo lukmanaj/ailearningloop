@@ -10,7 +10,66 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Thu, 05 Sep 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 06 Sep 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Deep Learning Indaba 2024 Day 6: A Journey Through Inspiring Workshops and Innovation in Health AI</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>It’s hard to believe that we’re already at Day 6 of the Deep Learning Indaba 2024! Time seems to have flown by, and it’s incredible to think that there’s only one more day left. The Indaba has been a whirlwind of knowledge, networking, and inspiration. Today was a day dedicated to workshops, and the challenge was real: so many fascinating topics were on the table, but they all ran simultaneously!</p>
+<p>The workshops available today were diverse and compelling, each catering to different facets of AI and machine learning in Africa. Here’s a glimpse of the workshops I had to choose from:</p>
+<ol type="1">
+<li><p>Weakly Supervised Computer Vision Workshop: Exploring techniques that allow models to learn from limited labeled data, a crucial need in regions where data labeling is resource-intensive.</p></li>
+<li><p>The NeuroAI Workshop: Bridging neuroscience and AI, focusing on how principles from the brain can be applied to AI systems, and vice versa.</p></li>
+<li><p>Empowering African Voices in AI: A discussion on inclusivity and the importance of representation in AI, promoting diversity of thought and experience.</p></li>
+<li><p>Voices of Africa: Building the Infrastructure for African NLP: This workshop focused on developing natural language processing (NLP) tools and datasets that reflect the diversity of African languages, essential for creating inclusive AI applications.</p></li>
+<li><p>AfriClimateAI - Uniting for Climate-Resilient Africa: Bringing together experts and practitioners to discuss the role of AI in tackling climate change in Africa, fostering data and knowledge exchange to build a more climate-resilient future.</p></li>
+<li><p>Robot Learning for Africa Workshop: Delving into how robotics and machine learning can be leveraged for various applications in the African context, from agriculture to healthcare.</p></li>
+<li><p>Data Science for Health in Africa Workshop: Organized by Sisonke Biotik and Ro’ya, two grassroots communities focused on Machine Learning and Global Health in Africa, this workshop looked at innovative approaches to using data science in healthcare.</p></li>
+<li><p>AI for Good Symposium in Africa: Highlighting projects and research that use AI to address pressing social issues and contribute to sustainable development across the continent.</p></li>
+</ol>
+<p>With so many great choices, it was difficult to decide, but ultimately, my interest in the intersection of AI and health led me to attend the Data Science for Health in Africa workshop.</p>
+<section id="diving-deep-into-ai-for-health-in-africa" class="level2">
+<h2 class="anchored" data-anchor-id="diving-deep-into-ai-for-health-in-africa">Diving Deep into AI for Health in Africa</h2>
+<p>The workshop, jointly organized by Sisonke Biotik and Ro’ya, was a hub of activity and collaboration. Both organizations are grassroots, participatory communities focused on advancing Machine Learning and Global Health in Africa. The sessions were highly interactive, and the atmosphere was one of shared learning and innovation.</p>
+<p>We started with a practical workshop on using R for health data algorithms, which was particularly valuable for practitioners and researchers interested in leveraging open-source tools for health analytics. It was a hands-on session that allowed participants to get acquainted with different techniques and tools for analyzing complex health datasets.</p>
+</section>
+<section id="insights-from-ai-pioneers-in-health" class="level2">
+<h2 class="anchored" data-anchor-id="insights-from-ai-pioneers-in-health">Insights from AI Pioneers in Health</h2>
+<p>The workshop featured a range of insightful presentations. Among the highlights were:</p>
+<ul>
+<li><p>Muhammad Al-Fatih’s Presentation on SKAI: SKAI (Satellite Knowledge Augmented Intelligence) is an innovative platform that utilizes AI and satellite imagery to provide real-time insights and actionable intelligence. This is particularly crucial for effective decision-making during disaster response, where timely information can save lives. Muhammad walked us through how SKAI integrates different data sources and uses AI to analyze satellite imagery, making it a game-changer for disaster management and emergency response in Africa.</p></li>
+<li><p>Mercy Asiedu’s Talk on Multifaceted Approaches to AI for Health in Africa: Mercy’s presentation was a deep dive into the multiple ways AI can be leveraged for health in Africa. She touched on the importance of benchmark datasets for health on the continent, noting that these datasets must reflect the diverse population to be truly impactful. The talk also covered innovative AI solutions that address specific health challenges in Africa, emphasizing the need for culturally and contextually relevant technologies.</p></li>
+</ul>
+</section>
+<section id="collaborative-innovation-pitching-ideas-to-revolutionize-healthcare" class="level2">
+<h2 class="anchored" data-anchor-id="collaborative-innovation-pitching-ideas-to-revolutionize-healthcare">Collaborative Innovation: Pitching Ideas to Revolutionize Healthcare</h2>
+<p>One of the most exciting parts of the day was a collaborative session where participants were grouped together to pitch an idea that could potentially revolutionize healthcare in Africa. This was a fantastic opportunity to brainstorm and exchange ideas with people from diverse backgrounds, ranging from data scientists to healthcare professionals. The energy in the room was palpable, and the ideas that came out of these discussions were both creative and practical.</p>
+</section>
+<section id="speed-presentations-and-ideathon-results" class="level2">
+<h2 class="anchored" data-anchor-id="speed-presentations-and-ideathon-results">Speed Presentations and Ideathon Results</h2>
+<p>To add to the excitement, there was a speed presentation competition where participants had a few minutes to present their innovative ideas or research findings. This fast-paced format was engaging and showcased the breadth of talent and creativity present at the Indaba.</p>
+<p>Additionally, the results of the Ideathon, which was held a day earlier, were announced today. My team, NextGen Health Innovators, was thrilled to be awarded third place! We were recognized for our innovative solution aimed at improving vaccine delivery through AI and data science. Receiving our certificate and prize was a moment of pride and joy, capping off what has been an incredible day of learning and collaboration.</p>
+</section>
+<section id="reflections-and-looking-ahead" class="level2">
+<h2 class="anchored" data-anchor-id="reflections-and-looking-ahead">Reflections and Looking Ahead</h2>
+<p>Reflecting on today, I can confidently say it has been my best day at the Indaba so far. The workshops were about learning and connecting with like-minded individuals, exchanging ideas, and envisioning a future where AI can truly make a difference in healthcare across Africa. It was a day filled with inspiration, and it reinforced my belief in the power of collaboration and innovation.</p>
+<p>It’s a bit bittersweet to realize that the Indaba is almost over. Tomorrow marks the final day, and while I’m looking forward to what it has in store, I can’t help but feel a little nostalgic already. The Deep Learning Indaba has been more than just a conference; it’s been a journey of growth, learning, and connection.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>deeplearning indaba</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/</guid>
+  <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/lukman-dakar.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Deep Learning Indaba 2024:Day 5, A Day of Insights, Innovation, and Inspiration</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1261,156 +1320,6 @@ font-style: inherit;">cook_baked_potato</span>()</span></code></pre></div>
   <category>fellowship</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/optimization/</guid>
   <pubDate>Wed, 17 Jan 2024 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>A Beginner’s Comprehensive Guide to PyTorch</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/pytorch-intro/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Welcome to the world of PyTorch, a dynamic and powerful machine learning framework that’s revolutionizing the way we approach deep learning. At the core of PyTorch are tensors, versatile structures that extend beyond simple matrices, allowing for more complex and efficient data representations. For instance, a color image with dimensions 64x64 pixels, represented in three color channels (red, green, and blue), is effectively a tensor in PyTorch.</p>
-</section>
-<section id="getting-started-with-pytorch" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-with-pytorch">Getting Started with PyTorch</h2>
-<p>To dive into PyTorch, start by importing it in your Python code with import torch, along with your other dependencies. This guide will serve as an introduction to PyTorch’s capabilities. Don’t worry about memorizing everything.</p>
-<div id="6ddd375b" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># importing PyTorch</span></span>
-<span id="cb1-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> torch</span>
-<span id="cb1-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># how to import the nn module</span></span>
-<span id="cb1-4"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> torch.nn <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> nn</span></code></pre></div>
-</div>
-</section>
-<section id="why-choose-pytorch" class="level2">
-<h2 class="anchored" data-anchor-id="why-choose-pytorch">Why Choose PyTorch?</h2>
-<p>A detailed analysis by the Gradient explains it well: PyTorch offers a more Pythonic experience, is easier to debug, and remains the leading choice in machine learning research. Despite TensorFlow’s efforts to integrate similar features, PyTorch’s intuitive design and growing dominance in both research and industry make it an optimal choice for education and forward-thinking development.</p>
-</section>
-<section id="exploring-tensor-properties" class="level2">
-<h2 class="anchored" data-anchor-id="exploring-tensor-properties">Exploring Tensor Properties</h2>
-<p>Creating tensors in PyTorch is straightforward. For instance, you can initiate a tensor using torch.Tensor. A simple example is:</p>
-<div id="4a66caf3" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">example_tensor <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> torch.Tensor([</span>
-<span id="cb2-2">                                [[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>], [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>]],</span>
-<span id="cb2-3">                                [[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">6</span>], [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">7</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>]],</span>
-<span id="cb2-4">                                [[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">9</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>], [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>]]</span>
-<span id="cb2-5">                             ])</span>
-<span id="cb2-6">example_tensor</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>tensor([[[1., 2.],
-         [3., 4.]],
-
-        [[5., 6.],
-         [7., 8.]],
-
-        [[9., 0.],
-         [1., 2.]]])</code></pre>
-</div>
-</div>
-<p>Understanding a tensor’s properties, such as its device (CPU or GPU) and shape, is crucial. You can explore these properties using methods like example_tensor.device and example_tensor.shape. These properties give insights into where the tensor resides (CPU or GPU) and its dimensional structure. For example, torch.Size([3, 2, 2]) indicates a tensor of rank 3 with specific dimensions.</p>
-<div id="bf0928bd" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"tensor_shape: </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>example_tensor<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span>shape<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span>
-<span id="cb4-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"tensor device: </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>example_tensor<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span>device<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>tensor_shape: torch.Size([3, 2, 2])
-tensor device: cpu</code></pre>
-</div>
-</div>
-</section>
-<section id="indexing-and-initializing-tensors" class="level2">
-<h2 class="anchored" data-anchor-id="indexing-and-initializing-tensors">Indexing and Initializing Tensors</h2>
-<p>Manipulating tensors in PyTorch is akin to handling NumPy arrays. You can access elements or slices of tensors using standard Python indexing. Moreover, initializing tensors is versatile in PyTorch. Functions like torch.ones_like and torch.zeros_like help create tensors filled with ones or zeros, mimicking the shape and device of a reference tensor.</p>
-</section>
-<section id="pytorchs-neural-network-module-torch.nn" class="level2">
-<h2 class="anchored" data-anchor-id="pytorchs-neural-network-module-torch.nn">PyTorch’s Neural Network Module (torch.nn)</h2>
-<p>PyTorch’s torch.nn module is a treasure trove for neural network enthusiasts. It offers a plethora of classes to build and transform tensors efficiently. For example, nn.Linear for linear transformations, nn.ReLU for applying the ReLU activation function, and nn.BatchNorm1d for batch normalization in one-dimensional data.</p>
-</section>
-<section id="optimization-techniques" class="level2">
-<h2 class="anchored" data-anchor-id="optimization-techniques">Optimization Techniques</h2>
-<p>One of PyTorch’s strengths is its optimization capabilities, crucial in machine learning. The torch.optim module provides various optimizers like Adam, essential for updating model parameters during training. A typical training loop in PyTorch involves setting gradients to zero, computing loss, backpropagating to calculate gradients, and then updating the parameters.</p>
-</section>
-<section id="extending-with-custom-nn-modules" class="level2">
-<h2 class="anchored" data-anchor-id="extending-with-custom-nn-modules">Extending with Custom nn Modules</h2>
-<p>PyTorch allows for the creation of custom classes extending the nn module. This feature lets you define unique model architectures suited to your specific problems. You can define the structure in the <strong>init</strong> method and specify the computation in the forward method.</p>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>PyTorch is not just a tool but a playground for machine learning enthusiasts and researchers. Its intuitive design, Pythonic nature, and robust features make it a top choice for learning and developing cutting-edge machine learning models. As you embark on this journey, PyTorch will undoubtedly be a valuable ally in turning your machine learning aspirations into reality. Subsequent articles will put all these concepts into practice as we delve deeper into the world of PyTorch.</p>
-
-
-</section>
-
- ]]></description>
-  <category>deep learning</category>
-  <category>pytorch</category>
-  <category>arewads</category>
-  <category>fellowship</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-intro/</guid>
-  <pubDate>Tue, 16 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
