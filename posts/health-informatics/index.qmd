@@ -1,5 +1,5 @@
 ---
-title: "Completing the Johns Hopkins University Specialization on Coursera"
+title: "Completing the Health Informatics Specialization on Coursera"
 author: "Lukman Aliyu Jibril"
 date: "2024-09-16"
 categories: [informatics]
