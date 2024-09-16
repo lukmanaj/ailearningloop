@@ -10,7 +10,37 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Fri, 06 Sep 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 16 Sep 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Completing the Johns Hopkins University Specialization on Coursera</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/health-informatics/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I am excited to announce that I have completed the Health Informatics Specialization offered by Johns Hopkins University on Coursera. This learning journey, which began in November while I was in Rwanda, has taken me across different geographies—from Kaduna to Ogoja in Cross River State, and even to Senegal—and has finally concluded in Nigeria.</p>
+<p>The specialization was a deep dive into the world of Health Informatics, offering a comprehensive understanding of both the social and technical dimensions of the field. It comprised five meticulously curated courses, each providing unique insights and knowledge essential for anyone interested in the intersection of healthcare and information technology.</p>
+<p>The Social and Technical Context of Health Informatics: This course laid the foundation, exploring the broader contexts in which health informatics operates. It helped me appreciate the complexities involved in integrating technology into healthcare systems, especially in low-resource settings.</p>
+<p>Leading Change in Health Informatics: This was my favorite course, expertly taught by Dr.&nbsp;Ashwini Davison. It resonated deeply with me as it discussed the challenges and strategies for implementing change in healthcare systems—a critical issue for countries like Nigeria, where the adoption of electronic health records (EHRs) is still in its infancy. The course provided practical frameworks and tools for driving change, which I found incredibly valuable.</p>
+<p>The Outcomes and Interventions of Health Informatics: This course offered a deep understanding of the types of interventions that can be made using health informatics and how to measure their outcomes. It provided insights into how data can be leveraged to drive decision-making and improve patient care.</p>
+<p>The Data Science of Health Informatics: As someone who has been delving into data science for a while, this course was a perfect blend of my interests. It covered critical data science concepts and techniques relevant to health informatics, enhancing my ability to analyze and interpret complex health data.</p>
+<p>Culminating Project in Health Informatics: The final course brought everything together with a project-based approach. We were tasked with analyzing a real-world scenario involving ImprovingHealth, a non-profit healthcare organization facing challenges in implementing systematic Health-Related Social Needs (HRSN) screenings across its clinics. The project highlighted the inefficiencies in paper-based data collection methods and the lack of adequate staff training and buy-in, which were significant barriers to identifying and addressing social determinants of health for Medicare beneficiaries.</p>
+<p>Reflecting on this journey, I realize how far-reaching the impact of health informatics can be, particularly in enhancing healthcare delivery and improving patient outcomes. The specialization has equipped me with the knowledge and skills to better understand and tackle the challenges in this field, especially in regions where healthcare systems face significant technological and infrastructural barriers.</p>
+<p>I look forward to applying these insights and continuing to contribute to the evolution of digital health and health informatics in meaningful ways. I am especially excited about the potential for collaboration and innovation that lies ahead.</p>
+<p>Thank you to all the instructors and fellow learners who made this journey enriching and rewarding!</p>
+<p>Stay tuned for more updates on my journey into health informatics and how we can leverage data for better health outcomes. 🚀</p>
+
+
+
+ ]]></description>
+  <category>informatics</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/health-informatics/</guid>
+  <pubDate>Mon, 16 Sep 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/health-informatics/health-informatics.png" medium="image" type="image/png" height="92" width="144"/>
+</item>
 <item>
   <title>Reflecting on the Final Day of the Deep Learning Indaba 2024: A Journey of Insights and Inspiration</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1279,31 +1309,6 @@ font-style: inherit;">cook_baked_potato</span>()</span></code></pre></div>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/statistics-in-r/</guid>
   <pubDate>Sun, 03 Mar 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/statistics-in-r/stats.png" medium="image" type="image/png" height="83" width="144"/>
-</item>
-<item>
-  <title>Becoming a Mentor at Arewa Data Science Academy: A Journey of Growth and Contribution</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/arewads-mentorship/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I am thrilled to announce my recent role as a mentor for the second cohort of machine learning fellows at the Arewa Data Science Academy, guiding them through the Python programming phase of their fellowship. Reflecting on this experience brings a mix of emotions; it’s hard to believe that just a year ago, I was in their shoes, diligently learning Python myself. This journey has been a testament to how far I’ve come.</p>
-<p>One of the most rewarding aspects of this role is the reciprocal nature of learning and teaching. As I share my knowledge and experience with the fellows, I find my own skills sharpening. The process of mentoring not only benefits the learners but also enhances my understanding and proficiency in data science.</p>
-<p>Currently, I’m engaged in mentoring these bright individuals in the data science phase of their fellowship. The academy has graciously recognized my contributions and efforts by awarding me a certificate, which I proudly share with immense gratitude.</p>
-<p>This past year has been a remarkable period of personal and professional growth for me. The journey with Arewa Data Science Academy has been incredibly fulfilling, offering me the chance to both impart knowledge and continuously learn. As I navigate this path of ongoing exploration and adaptation, I deeply appreciate the opportunity given to me by the Academy. It’s a privilege to contribute to the growth of others while simultaneously enriching my own experience.</p>
-<p>I am grateful for this journey and look forward to what the future holds. May Allah guide us all on our path to success.</p>
-
-
-
- ]]></description>
-  <category>arewads</category>
-  <category>mentorship</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/arewads-mentorship/</guid>
-  <pubDate>Sun, 28 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/arewads-mentorship/mentor.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 </channel>
 </rss>
