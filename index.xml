@@ -10,7 +10,59 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 16 Sep 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 12 Oct 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Completing the Analyzing Genomic Data in R track on DataCamp</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/genomic-data-analysis/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I just completed DataCamp’s “Analyzing Genomic Data in R” track, which was an incredible dive into using R and Bioconductor for genomic analysis. This track had four in-depth courses that helped me build skills for analyzing genomic datasets:</p>
+<ul>
+<li>Introduction to Bioconductor in R</li>
+<li>RNA-Seq with Bioconductor in R</li>
+<li>Differential Expression Analysis with limma in R</li>
+<li>ChIP-seq with Bioconductor in R</li>
+</ul>
+<p>In this post, I’ll briefly walk you through each course and share what I learned and why it was so exciting.</p>
+<section id="introduction-to-bioconductor-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-bioconductor-in-r">Introduction to Bioconductor in R</h2>
+<p>This course was my gateway to Bioconductor—an essential resource for genomic analysis in R. I learned how to install packages with the BiocInstaller, work with different types of genomic data, and explore real-life datasets like those for fungi, viruses, and even plants. Tools like BioStrings, GenomicRanges, and ShortRead made manipulating and filtering raw data surprisingly accessible.</p>
+<p>One highlight was learning to use built-in datasets (BSgenome and TxDb) and apply functions to search for patterns in genomic sequences. Quality control was another important aspect, using ShortRead and Rqc to ensure that my data was clean and usable—a crucial step in genomic research.</p>
+</section>
+<section id="rna-seq-with-bioconductor-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="rna-seq-with-bioconductor-in-r">RNA-Seq with Bioconductor in R</h2>
+<p>In this course, I got hands-on with RNA sequencing (RNA-Seq) data, focusing on differential expression analysis—identifying genes that express differently between experimental conditions. I used DESeq2 to analyze gene expression between fibrosis and normal samples, which was a powerful introduction to understanding biological significance in genomics.</p>
+<p>An interesting takeaway was the reminder that data interpretation doesn’t stop at identifying significant genes. I learned that experimental validation is key—around 5% of “significant” results are false positives, and ensuring that our findings are accurate requires lab-based verification. Additionally, I explored how functional analysis can help us see the biological meaning behind the data by identifying enriched processes or pathways.</p>
+</section>
+<section id="differential-expression-analysis-with-limma-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="differential-expression-analysis-with-limma-in-r">Differential Expression Analysis with limma in R</h2>
+<p>This course added another layer to my understanding of differential expression—specifically using limma, a versatile and widely-used Bioconductor package. I visualized gene expression levels with plotDensities and normalized raw data to ensure reliable analysis. One key aspect was principal component analysis (plotMDS), which helped me see whether data variation matched my experimental variables or if there were other technical factors at play.</p>
+<p>I also learned to identify important genes using volcano plots and assess results using p-value distributions. The course highlighted how essential quality control is, emphasizing the need for careful examination to avoid misleading conclusions. Wrapping up, I conducted gene set enrichment analysis to explore biological pathways using KEGG and Gene Ontology databases—this really helped broaden my perspective from individual genes to broader biological systems.</p>
+</section>
+<section id="chip-seq-with-bioconductor-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="chip-seq-with-bioconductor-in-r">ChIP-seq with Bioconductor in R</h2>
+<p>ChIP-seq (Chromatin Immunoprecipitation Sequencing) was the final frontier in this track, and it was challenging but incredibly rewarding. I learned to import ChIP-seq data using rtracklayer and GenomicAlignments, visualize it with Gviz, and ensure its quality by dealing with repetitive regions through blacklisting and QC reports with ChIPQC.</p>
+<p>The analysis culminated in using DiffBind to identify differentially bound peaks and create heatmaps and PCA plots to understand sample clustering. Finally, I used the chipenrich package to link peaks to nearby genes and performed enrichment analysis to see which biological processes were associated with these binding events. This part of the course really helped tie everything together and made me confident about analyzing real-world ChIP-seq data.</p>
+</section>
+<section id="reflections-on-the-journey" class="level2">
+<h2 class="anchored" data-anchor-id="reflections-on-the-journey">Reflections on the Journey</h2>
+<p>Completing this track gave me practical skills to handle various genomic datasets and analyze them meaningfully. Each course built on the previous one, reinforcing core concepts while adding new techniques, ultimately providing a well-rounded introduction to genomic analysis in R.</p>
+<p>My next step is to apply what I’ve learned to real datasets—perhaps even contribute to open research initiatives. Bioconductor’s community and support forums will be great allies as I dive deeper into genomics.Also, I am seriously considering grad school. It’s a skill that will help me immensely in the pursuit of my goals.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>genomics</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/genomic-data-analysis/</guid>
+  <pubDate>Sat, 12 Oct 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/genomic-data-analysis/genomic-analysis.png" medium="image" type="image/png" height="83" width="144"/>
+</item>
 <item>
   <title>Completing the Health Informatics Specialization on Coursera</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -40,44 +92,6 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/health-informatics/</guid>
   <pubDate>Mon, 16 Sep 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/health-informatics/health-informatics.png" medium="image" type="image/png" height="92" width="144"/>
-</item>
-<item>
-  <title>Reflecting on the Final Day of the Deep Learning Indaba 2024: A Journey of Insights and Inspiration</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>As the saying goes, every beginning has an end, and the final day of the Deep Learning Indaba 2024 marked the conclusion of a week filled with knowledge-sharing, networking, and inspiration. This year’s Indaba was a true testament to the diversity and depth of AI conversations shaping Africa’s future. The final day was no exception, featuring several concurrent half-day workshops that challenged us to choose just one path to follow!</p>
-<p>The workshop options were diverse, each promising to delve into a unique aspect of AI and its potential impact:</p>
-<ul>
-<li>Envisioning Humans in a Safe, AI Future</li>
-<li>GeoAI for a Sustainable Future in Africa</li>
-<li>Empowering Africa’s AI Future through High Performance and Cloud Computing</li>
-<li>AI Regulation in Africa: Rationale, Considerations, and Way Forward</li>
-</ul>
-<p>I opted for the “Envisioning Humans in a Safe, AI Future” workshop, a choice that proved to be the right one for me. However, I must admit it was a tough call—each workshop offered something valuable, and it was unfortunate that I couldn’t attend them all. Alas, one can only be in one place at a time!</p>
-<p>The workshop began with an introduction to ML Commons, an open initiative that aims to accelerate machine learning research, and ways to get involved. This set the stage for the discussions that followed, starting with a panel discussion on “Seeking Safer Spaces with AI Tools.” The panelists brought forward intriguing perspectives on how we can create AI tools that foster safer and more inclusive environments. The discussions were not only thought-provoking but also a call to action for all of us in the AI community.</p>
-<p>Following the panel, we moved on to a segment titled “Behind the Research: Author Insights.” This session provided a deeper look into the journeys and motivations of researchers working at the intersection of AI and social good. It was inspiring to hear firsthand about the challenges they faced, the breakthroughs they achieved, and the lessons they learned along the way.</p>
-<p>The workshop wrapped up with some final announcements and reflections on the discussions held throughout the day. As a token of appreciation for our engagement in this packed and event-studded session, all participants received certificates of attendance—a wonderful keepsake to remember this enriching experience.</p>
-<p>After the workshops, the Wangari Maathai Impact Award was presented to Grace Muthoni for her groundbreaking research. Her work stood out among many, and it was heartening to see such talent being recognized and celebrated. Congratulations to Grace!</p>
-<p>The day then transitioned into the final Indaba panel discussion, which served as a comprehensive summary of the entire event. The panel, composed of notable experts and thought leaders, tackled critical themes such as the need for skilling, foundational research, and the concept of human-in-the-loop AI—all while emphasizing the importance of not losing our unique identities as we navigate the evolving AI landscape.</p>
-<p>One of the most compelling parts of the discussion was the exploration of future research directions, including the relationship between language and machine learning education, and AI’s potential role in tackling climate change. It was an important reminder that while it’s easy to get caught up in trending topics, our research should be driven by genuine curiosity and the unique challenges we wish to solve.</p>
-<p>A major takeaway from the panel was the affirmation that our experiences are uniquely ours and that they are a valuable asset in shaping our paths in AI. No one else can walk our path for us, and leveraging our unique backgrounds and perspectives can lead to innovative and impactful contributions to the field.</p>
-<p>Throughout the week, I’ve been sharing my experiences from Indaba, as encouraged, and it has been truly inspiring to see the passion and commitment of AI practitioners across the continent.</p>
-<p>The final day concluded with a vibrant closing ceremony, where prizes were awarded to deserving winners, followed by a celebratory closing party that was filled with joy, music, and a sense of accomplishment. With that, Deep Learning Indaba 2024 came to a close.</p>
-<p>But this isn’t goodbye—it’s simply “see you next year.” The next Indaba will be held in Kigali, Rwanda, and I’m already looking forward to the incredible conversations and experiences that await us there.</p>
-<p>Stay tuned, and see you in Kigali next year!</p>
-
-
-
- ]]></description>
-  <category>deeplearning indaba</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</guid>
-  <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Deep Learning Indaba 2024 Day 6: A Journey Through Inspiring Workshops and Innovation in Health AI</title>
@@ -137,6 +151,44 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/</guid>
   <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/lukman-dakar.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Reflecting on the Final Day of the Deep Learning Indaba 2024: A Journey of Insights and Inspiration</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>As the saying goes, every beginning has an end, and the final day of the Deep Learning Indaba 2024 marked the conclusion of a week filled with knowledge-sharing, networking, and inspiration. This year’s Indaba was a true testament to the diversity and depth of AI conversations shaping Africa’s future. The final day was no exception, featuring several concurrent half-day workshops that challenged us to choose just one path to follow!</p>
+<p>The workshop options were diverse, each promising to delve into a unique aspect of AI and its potential impact:</p>
+<ul>
+<li>Envisioning Humans in a Safe, AI Future</li>
+<li>GeoAI for a Sustainable Future in Africa</li>
+<li>Empowering Africa’s AI Future through High Performance and Cloud Computing</li>
+<li>AI Regulation in Africa: Rationale, Considerations, and Way Forward</li>
+</ul>
+<p>I opted for the “Envisioning Humans in a Safe, AI Future” workshop, a choice that proved to be the right one for me. However, I must admit it was a tough call—each workshop offered something valuable, and it was unfortunate that I couldn’t attend them all. Alas, one can only be in one place at a time!</p>
+<p>The workshop began with an introduction to ML Commons, an open initiative that aims to accelerate machine learning research, and ways to get involved. This set the stage for the discussions that followed, starting with a panel discussion on “Seeking Safer Spaces with AI Tools.” The panelists brought forward intriguing perspectives on how we can create AI tools that foster safer and more inclusive environments. The discussions were not only thought-provoking but also a call to action for all of us in the AI community.</p>
+<p>Following the panel, we moved on to a segment titled “Behind the Research: Author Insights.” This session provided a deeper look into the journeys and motivations of researchers working at the intersection of AI and social good. It was inspiring to hear firsthand about the challenges they faced, the breakthroughs they achieved, and the lessons they learned along the way.</p>
+<p>The workshop wrapped up with some final announcements and reflections on the discussions held throughout the day. As a token of appreciation for our engagement in this packed and event-studded session, all participants received certificates of attendance—a wonderful keepsake to remember this enriching experience.</p>
+<p>After the workshops, the Wangari Maathai Impact Award was presented to Grace Muthoni for her groundbreaking research. Her work stood out among many, and it was heartening to see such talent being recognized and celebrated. Congratulations to Grace!</p>
+<p>The day then transitioned into the final Indaba panel discussion, which served as a comprehensive summary of the entire event. The panel, composed of notable experts and thought leaders, tackled critical themes such as the need for skilling, foundational research, and the concept of human-in-the-loop AI—all while emphasizing the importance of not losing our unique identities as we navigate the evolving AI landscape.</p>
+<p>One of the most compelling parts of the discussion was the exploration of future research directions, including the relationship between language and machine learning education, and AI’s potential role in tackling climate change. It was an important reminder that while it’s easy to get caught up in trending topics, our research should be driven by genuine curiosity and the unique challenges we wish to solve.</p>
+<p>A major takeaway from the panel was the affirmation that our experiences are uniquely ours and that they are a valuable asset in shaping our paths in AI. No one else can walk our path for us, and leveraging our unique backgrounds and perspectives can lead to innovative and impactful contributions to the field.</p>
+<p>Throughout the week, I’ve been sharing my experiences from Indaba, as encouraged, and it has been truly inspiring to see the passion and commitment of AI practitioners across the continent.</p>
+<p>The final day concluded with a vibrant closing ceremony, where prizes were awarded to deserving winners, followed by a celebratory closing party that was filled with joy, music, and a sense of accomplishment. With that, Deep Learning Indaba 2024 came to a close.</p>
+<p>But this isn’t goodbye—it’s simply “see you next year.” The next Indaba will be held in Kigali, Rwanda, and I’m already looking forward to the incredible conversations and experiences that await us there.</p>
+<p>Stay tuned, and see you in Kigali next year!</p>
+
+
+
+ ]]></description>
+  <category>deeplearning indaba</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</guid>
+  <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Deep Learning Indaba 2024:Day 5, A Day of Insights, Innovation, and Inspiration</title>
@@ -1264,51 +1316,6 @@ font-style: inherit;">cook_baked_potato</span>()</span></code></pre></div>
   <category>rprogramming</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/oop/</guid>
   <pubDate>Wed, 06 Mar 2024 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Celebrating a Milestone in Statistics: A Journey through DataCamp’s ‘Statistics Fundamentals with R’ Track</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/statistics-in-r/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>It’s a moment of pride and immense satisfaction as I share the completion of the “Statistics Fundamentals with R” track offered by DataCamp, an educational journey made possible through the generous donations of DataCamp to Arewa Data Science Academy. This accomplishment is not just a testament to my dedication but also highlights the empowering vision of Arewa Data Science Academy and DataCamp in fostering data literacy and analytical skills among learners.</p>
-</section>
-<section id="the-pathway-to-mastery-delving-deep-into-statistical-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="the-pathway-to-mastery-delving-deep-into-statistical-analysis">The Pathway to Mastery: Delving Deep into Statistical Analysis</h2>
-<p>The track was meticulously designed to guide learners through the foundational to advanced concepts of statistics applied in the versatile R programming environment. It commenced with the “Introduction to Statistics in R”, a course that laid the groundwork by introducing statistical concepts and how they are implemented in R. This initial phase was crucial as it set the tone for the rigorous analytical skills I was about to develop.</p>
-<p>Transitioning from basics to more complex analyses, the “Introduction to Regression in R” and “Intermediate Regression in R” courses elevated my understanding of relationships between variables and how these relationships can be quantified and tested. Through these courses, I gained proficiency in building, diagnosing, and interpreting linear regression models, an indispensable skill in any data scientist’s toolkit.</p>
-<p>The learning curve then ascended to “Sampling in R” and “Hypothesis Testing in R”, courses that are fundamental in statistical inference. These courses taught me the importance of sample design, the intricacies of drawing conclusions from data, and the procedures for testing hypotheses with confidence. The practical applications and real-world examples reinforced my understanding and applicability of these statistical methods.</p>
-</section>
-<section id="solidifying-knowledge-and-practical-application" class="level2">
-<h2 class="anchored" data-anchor-id="solidifying-knowledge-and-practical-application">Solidifying Knowledge and Practical Application</h2>
-<p>The culmination of the coursework was not merely theoretical; it demanded practical application of all the learned concepts. The project “Hypothesis Testing with Men’s and Women’s Soccer Matches” was a challenging yet thrilling part of the track. It tasked me with performing a hypothesis test to determine if there were differences in goals scored between women’s and men’s soccer matches. This project was not just an academic exercise but a real-world application that honed my analytical and critical thinking skills.</p>
-</section>
-<section id="benchmarking-skills-and-achieving-excellence" class="level2">
-<h2 class="anchored" data-anchor-id="benchmarking-skills-and-achieving-excellence">Benchmarking Skills and Achieving Excellence</h2>
-<p>The journey concluded with a skill assessment that tested the breadth and depth of my statistical knowledge and R programming skills. Achieving a rank in the 98th percentile was a moment of great pride and a testament to the quality of learning and understanding I had gained throughout the track.</p>
-</section>
-<section id="a-journey-of-empowerment-and-future-aspirations" class="level2">
-<h2 class="anchored" data-anchor-id="a-journey-of-empowerment-and-future-aspirations">A Journey of Empowerment and Future Aspirations</h2>
-<p>Completing the “Statistics Fundamentals with R” track is more than just an academic achievement; it’s an empowering journey that has equipped me with the skills to make data-driven decisions and insights. It has instilled in me a profound respect for data and its potential to influence real-world outcomes.</p>
-<p>I am immensely grateful to Arewa Data Science Academy and DataCamp for providing this incredible learning opportunity. This experience has not only enhanced my statistical analysis and R programming skills but has also inspired me to pursue further studies in data science and contribute to the field.</p>
-<p>As I reflect on this journey, I am filled with gratitude and motivation to apply these skills in real-world scenarios, continue learning, and contribute to the growing field of data science. Here’s to a future where data and analytics lead the way to innovation and informed decision-making.</p>
-
-
-</section>
-
- ]]></description>
-  <category>arewads</category>
-  <category>datacamp</category>
-  <category>rstats</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/statistics-in-r/</guid>
-  <pubDate>Sun, 03 Mar 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/statistics-in-r/stats.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 </channel>
 </rss>
