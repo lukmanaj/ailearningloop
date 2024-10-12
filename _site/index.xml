@@ -10,7 +10,59 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Sun, 15 Sep 2024 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 11 Oct 2024 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>Completing the Analyzing Genomic Data in R track on DataCamp</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/genomic-data-analysis/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I just completed DataCamp’s “Analyzing Genomic Data in R” track, which was an incredible dive into using R and Bioconductor for genomic analysis. This track had four in-depth courses that helped me build skills for analyzing genomic datasets:</p>
+<ul>
+<li>Introduction to Bioconductor in R</li>
+<li>RNA-Seq with Bioconductor in R</li>
+<li>Differential Expression Analysis with limma in R</li>
+<li>ChIP-seq with Bioconductor in R</li>
+</ul>
+<p>In this post, I’ll briefly walk you through each course and share what I learned and why it was so exciting.</p>
+<section id="introduction-to-bioconductor-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-bioconductor-in-r">Introduction to Bioconductor in R</h2>
+<p>This course was my gateway to Bioconductor—an essential resource for genomic analysis in R. I learned how to install packages with the BiocInstaller, work with different types of genomic data, and explore real-life datasets like those for fungi, viruses, and even plants. Tools like BioStrings, GenomicRanges, and ShortRead made manipulating and filtering raw data surprisingly accessible.</p>
+<p>One highlight was learning to use built-in datasets (BSgenome and TxDb) and apply functions to search for patterns in genomic sequences. Quality control was another important aspect, using ShortRead and Rqc to ensure that my data was clean and usable—a crucial step in genomic research.</p>
+</section>
+<section id="rna-seq-with-bioconductor-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="rna-seq-with-bioconductor-in-r">RNA-Seq with Bioconductor in R</h2>
+<p>In this course, I got hands-on with RNA sequencing (RNA-Seq) data, focusing on differential expression analysis—identifying genes that express differently between experimental conditions. I used DESeq2 to analyze gene expression between fibrosis and normal samples, which was a powerful introduction to understanding biological significance in genomics.</p>
+<p>An interesting takeaway was the reminder that data interpretation doesn’t stop at identifying significant genes. I learned that experimental validation is key—around 5% of “significant” results are false positives, and ensuring that our findings are accurate requires lab-based verification. Additionally, I explored how functional analysis can help us see the biological meaning behind the data by identifying enriched processes or pathways.</p>
+</section>
+<section id="differential-expression-analysis-with-limma-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="differential-expression-analysis-with-limma-in-r">Differential Expression Analysis with limma in R</h2>
+<p>This course added another layer to my understanding of differential expression—specifically using limma, a versatile and widely-used Bioconductor package. I visualized gene expression levels with plotDensities and normalized raw data to ensure reliable analysis. One key aspect was principal component analysis (plotMDS), which helped me see whether data variation matched my experimental variables or if there were other technical factors at play.</p>
+<p>I also learned to identify important genes using volcano plots and assess results using p-value distributions. The course highlighted how essential quality control is, emphasizing the need for careful examination to avoid misleading conclusions. Wrapping up, I conducted gene set enrichment analysis to explore biological pathways using KEGG and Gene Ontology databases—this really helped broaden my perspective from individual genes to broader biological systems.</p>
+</section>
+<section id="chip-seq-with-bioconductor-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="chip-seq-with-bioconductor-in-r">ChIP-seq with Bioconductor in R</h2>
+<p>ChIP-seq (Chromatin Immunoprecipitation Sequencing) was the final frontier in this track, and it was challenging but incredibly rewarding. I learned to import ChIP-seq data using rtracklayer and GenomicAlignments, visualize it with Gviz, and ensure its quality by dealing with repetitive regions through blacklisting and QC reports with ChIPQC.</p>
+<p>The analysis culminated in using DiffBind to identify differentially bound peaks and create heatmaps and PCA plots to understand sample clustering. Finally, I used the chipenrich package to link peaks to nearby genes and performed enrichment analysis to see which biological processes were associated with these binding events. This part of the course really helped tie everything together and made me confident about analyzing real-world ChIP-seq data.</p>
+</section>
+<section id="reflections-on-the-journey" class="level2">
+<h2 class="anchored" data-anchor-id="reflections-on-the-journey">Reflections on the Journey</h2>
+<p>Completing this track gave me practical skills to handle various genomic datasets and analyze them meaningfully. Each course built on the previous one, reinforcing core concepts while adding new techniques, ultimately providing a well-rounded introduction to genomic analysis in R.</p>
+<p>My next step is to apply what I’ve learned to real datasets—perhaps even contribute to open research initiatives. Bioconductor’s community and support forums will be great allies as I dive deeper into genomics.Also, I am seriously considering grad school. It’s a skill that will help me immensely in the pursuit of my goals.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>genomics</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/genomic-data-analysis/</guid>
+  <pubDate>Fri, 11 Oct 2024 21:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/genomic-data-analysis/genomic-analysis.png" medium="image" type="image/png" height="83" width="144"/>
+</item>
 <item>
   <title>Completing the Health Informatics Specialization on Coursera</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -38,7 +90,7 @@
  ]]></description>
   <category>informatics</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/health-informatics/</guid>
-  <pubDate>Sun, 15 Sep 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 15 Sep 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/health-informatics/health-informatics.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 <item>
@@ -97,7 +149,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/</guid>
-  <pubDate>Thu, 05 Sep 2024 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 05 Sep 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/lukman-dakar.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -136,7 +188,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</guid>
-  <pubDate>Thu, 05 Sep 2024 23:00:00 GMT</pubDate>
+  <pubDate>Thu, 05 Sep 2024 21:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Deep Learning Indaba 2024:Day 5, A Day of Insights, Innovation, and Inspiration</title>
@@ -163,7 +215,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-05/</guid>
-  <pubDate>Wed, 04 Sep 2024 23:00:00 GMT</pubDate>
+  <pubDate>Wed, 04 Sep 2024 21:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Deep Learning Indaba 2024:Day 4, Celebrating African Research, Learning, and Community Building</title>
@@ -196,7 +248,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-04/</guid>
-  <pubDate>Tue, 03 Sep 2024 23:00:00 GMT</pubDate>
+  <pubDate>Tue, 03 Sep 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-04/arewadsdli.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -234,7 +286,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-03/</guid>
-  <pubDate>Mon, 02 Sep 2024 23:00:00 GMT</pubDate>
+  <pubDate>Mon, 02 Sep 2024 21:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Day 2 at Deep Learning Indaba 2024: Bridging AI Innovation and Ethics in Africa</title>
@@ -314,7 +366,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-02/</guid>
-  <pubDate>Sun, 01 Sep 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 01 Sep 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-02/indaba-logo.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -356,7 +408,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-01/</guid>
-  <pubDate>Sat, 31 Aug 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sat, 31 Aug 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-01/indaba.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -433,7 +485,7 @@
   <category>responsible ai</category>
   <category>datacamp</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/responsible-ai/</guid>
-  <pubDate>Sat, 24 Aug 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sat, 24 Aug 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/responsible-ai/responsible-ai.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
@@ -469,7 +521,7 @@
  ]]></description>
   <category>deeplearning-ai</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/</guid>
-  <pubDate>Sun, 18 Aug 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 18 Aug 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/devotee.png" medium="image" type="image/png" height="99" width="144"/>
 </item>
 <item>
@@ -530,7 +582,7 @@
   <category>arewads</category>
   <category>deeplearning-ai</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/</guid>
-  <pubDate>Sat, 17 Aug 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sat, 17 Aug 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/mentor-mail.png" medium="image" type="image/png" height="91" width="144"/>
 </item>
 <item>
@@ -586,7 +638,7 @@
   <category>quarto</category>
   <category>quarto-web</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</guid>
-  <pubDate>Fri, 26 Jul 2024 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 26 Jul 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/contribution.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 <item>
@@ -694,7 +746,7 @@
   <category>evaluation metrics</category>
   <category>medical diagnosis</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</guid>
-  <pubDate>Fri, 05 Jul 2024 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 05 Jul 2024 21:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Mastering Data Structures and Algorithms on Coursera</title>
@@ -776,7 +828,7 @@
   <category>data science</category>
   <category>programming</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/</guid>
-  <pubDate>Sun, 09 Jun 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 09 Jun 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/dls-cert.png" medium="image" type="image/png" height="113" width="144"/>
 </item>
 <item>
@@ -811,7 +863,7 @@
   <category>ai</category>
   <category>deep learning</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/</guid>
-  <pubDate>Sun, 26 May 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 26 May 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/tensorflow-cert.png" medium="image" type="image/png" height="118" width="144"/>
 </item>
 <item>
@@ -873,7 +925,7 @@
   <category>pytorch</category>
   <category>nlp</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-nlp/</guid>
-  <pubDate>Sat, 11 May 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sat, 11 May 2024 21:00:00 GMT</pubDate>
 </item>
 <item>
   <title>My Journey to Becoming a Professional Data Scientist: A DataCamp Certification Odyssey</title>
@@ -901,7 +953,7 @@
   <category>datacamp</category>
   <category>dcdonates</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/</guid>
-  <pubDate>Sat, 16 Mar 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sat, 16 Mar 2024 21:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/datacamp.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
@@ -1057,7 +1109,7 @@ font-style: inherit;">server =</span> server)</span></code></pre></div>
   <category>shiny</category>
   <category>rprogramming</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/first-shiny/</guid>
-  <pubDate>Sat, 09 Mar 2024 23:00:00 GMT</pubDate>
+  <pubDate>Sat, 09 Mar 2024 21:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Object Oriented Programming: Python vs R</title>
@@ -1263,52 +1315,7 @@ font-style: inherit;">cook_baked_potato</span>()</span></code></pre></div>
   <category>python</category>
   <category>rprogramming</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/oop/</guid>
-  <pubDate>Tue, 05 Mar 2024 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Celebrating a Milestone in Statistics: A Journey through DataCamp’s ‘Statistics Fundamentals with R’ Track</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/statistics-in-r/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>It’s a moment of pride and immense satisfaction as I share the completion of the “Statistics Fundamentals with R” track offered by DataCamp, an educational journey made possible through the generous donations of DataCamp to Arewa Data Science Academy. This accomplishment is not just a testament to my dedication but also highlights the empowering vision of Arewa Data Science Academy and DataCamp in fostering data literacy and analytical skills among learners.</p>
-</section>
-<section id="the-pathway-to-mastery-delving-deep-into-statistical-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="the-pathway-to-mastery-delving-deep-into-statistical-analysis">The Pathway to Mastery: Delving Deep into Statistical Analysis</h2>
-<p>The track was meticulously designed to guide learners through the foundational to advanced concepts of statistics applied in the versatile R programming environment. It commenced with the “Introduction to Statistics in R”, a course that laid the groundwork by introducing statistical concepts and how they are implemented in R. This initial phase was crucial as it set the tone for the rigorous analytical skills I was about to develop.</p>
-<p>Transitioning from basics to more complex analyses, the “Introduction to Regression in R” and “Intermediate Regression in R” courses elevated my understanding of relationships between variables and how these relationships can be quantified and tested. Through these courses, I gained proficiency in building, diagnosing, and interpreting linear regression models, an indispensable skill in any data scientist’s toolkit.</p>
-<p>The learning curve then ascended to “Sampling in R” and “Hypothesis Testing in R”, courses that are fundamental in statistical inference. These courses taught me the importance of sample design, the intricacies of drawing conclusions from data, and the procedures for testing hypotheses with confidence. The practical applications and real-world examples reinforced my understanding and applicability of these statistical methods.</p>
-</section>
-<section id="solidifying-knowledge-and-practical-application" class="level2">
-<h2 class="anchored" data-anchor-id="solidifying-knowledge-and-practical-application">Solidifying Knowledge and Practical Application</h2>
-<p>The culmination of the coursework was not merely theoretical; it demanded practical application of all the learned concepts. The project “Hypothesis Testing with Men’s and Women’s Soccer Matches” was a challenging yet thrilling part of the track. It tasked me with performing a hypothesis test to determine if there were differences in goals scored between women’s and men’s soccer matches. This project was not just an academic exercise but a real-world application that honed my analytical and critical thinking skills.</p>
-</section>
-<section id="benchmarking-skills-and-achieving-excellence" class="level2">
-<h2 class="anchored" data-anchor-id="benchmarking-skills-and-achieving-excellence">Benchmarking Skills and Achieving Excellence</h2>
-<p>The journey concluded with a skill assessment that tested the breadth and depth of my statistical knowledge and R programming skills. Achieving a rank in the 98th percentile was a moment of great pride and a testament to the quality of learning and understanding I had gained throughout the track.</p>
-</section>
-<section id="a-journey-of-empowerment-and-future-aspirations" class="level2">
-<h2 class="anchored" data-anchor-id="a-journey-of-empowerment-and-future-aspirations">A Journey of Empowerment and Future Aspirations</h2>
-<p>Completing the “Statistics Fundamentals with R” track is more than just an academic achievement; it’s an empowering journey that has equipped me with the skills to make data-driven decisions and insights. It has instilled in me a profound respect for data and its potential to influence real-world outcomes.</p>
-<p>I am immensely grateful to Arewa Data Science Academy and DataCamp for providing this incredible learning opportunity. This experience has not only enhanced my statistical analysis and R programming skills but has also inspired me to pursue further studies in data science and contribute to the field.</p>
-<p>As I reflect on this journey, I am filled with gratitude and motivation to apply these skills in real-world scenarios, continue learning, and contribute to the growing field of data science. Here’s to a future where data and analytics lead the way to innovation and informed decision-making.</p>
-
-
-</section>
-
- ]]></description>
-  <category>arewads</category>
-  <category>datacamp</category>
-  <category>rstats</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/statistics-in-r/</guid>
-  <pubDate>Sat, 02 Mar 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/statistics-in-r/stats.png" medium="image" type="image/png" height="83" width="144"/>
+  <pubDate>Tue, 05 Mar 2024 21:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

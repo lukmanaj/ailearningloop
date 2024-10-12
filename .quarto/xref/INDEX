@@ -199,5 +199,8 @@
   },
   "posts/health-informatics/index.qmd": {
     "index.html": "edcb1e44"
+  },
+  "posts/genomic-data-analysis/index.qmd": {
+    "index.html": "58efed2d"
   }
 }

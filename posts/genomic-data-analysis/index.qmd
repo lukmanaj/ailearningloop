@@ -1,0 +1,49 @@
+---
+title: "Completing the Analyzing Genomic Data in R track on DataCamp"
+author: "Lukman Aliyu Jibril"
+date: "2024-10-12"
+categories: [genomics]
+image: genomic-analysis.png
+---
+
+
+I just completed DataCamp's "Analyzing Genomic Data in R" track, which was an incredible dive into using R and Bioconductor for genomic analysis. This track had four in-depth courses that helped me build skills for analyzing genomic datasets:
+
+- Introduction to Bioconductor in R
+- RNA-Seq with Bioconductor in R
+- Differential Expression Analysis with limma in R
+- ChIP-seq with Bioconductor in R
+
+In this post, I'll briefly walk you through each course and share what I learned and why it was so exciting.
+
+
+## Introduction to Bioconductor in R
+
+This course was my gateway to Bioconductor—an essential resource for genomic analysis in R. I learned how to install packages with the BiocInstaller, work with different types of genomic data, and explore real-life datasets like those for fungi, viruses, and even plants. Tools like BioStrings, GenomicRanges, and ShortRead made manipulating and filtering raw data surprisingly accessible.
+
+One highlight was learning to use built-in datasets (BSgenome and TxDb) and apply functions to search for patterns in genomic sequences. Quality control was another important aspect, using ShortRead and Rqc to ensure that my data was clean and usable—a crucial step in genomic research.
+
+
+## RNA-Seq with Bioconductor in R
+
+In this course, I got hands-on with RNA sequencing (RNA-Seq) data, focusing on differential expression analysis—identifying genes that express differently between experimental conditions. I used DESeq2 to analyze gene expression between fibrosis and normal samples, which was a powerful introduction to understanding biological significance in genomics.
+
+An interesting takeaway was the reminder that data interpretation doesn't stop at identifying significant genes. I learned that experimental validation is key—around 5% of "significant" results are false positives, and ensuring that our findings are accurate requires lab-based verification. Additionally, I explored how functional analysis can help us see the biological meaning behind the data by identifying enriched processes or pathways.
+
+## Differential Expression Analysis with limma in R
+
+This course added another layer to my understanding of differential expression—specifically using limma, a versatile and widely-used Bioconductor package. I visualized gene expression levels with plotDensities and normalized raw data to ensure reliable analysis. One key aspect was principal component analysis (plotMDS), which helped me see whether data variation matched my experimental variables or if there were other technical factors at play.
+
+I also learned to identify important genes using volcano plots and assess results using p-value distributions. The course highlighted how essential quality control is, emphasizing the need for careful examination to avoid misleading conclusions. Wrapping up, I conducted gene set enrichment analysis to explore biological pathways using KEGG and Gene Ontology databases—this really helped broaden my perspective from individual genes to broader biological systems.
+
+## ChIP-seq with Bioconductor in R
+
+ChIP-seq (Chromatin Immunoprecipitation Sequencing) was the final frontier in this track, and it was challenging but incredibly rewarding. I learned to import ChIP-seq data using rtracklayer and GenomicAlignments, visualize it with Gviz, and ensure its quality by dealing with repetitive regions through blacklisting and QC reports with ChIPQC.
+
+The analysis culminated in using DiffBind to identify differentially bound peaks and create heatmaps and PCA plots to understand sample clustering. Finally, I used the chipenrich package to link peaks to nearby genes and performed enrichment analysis to see which biological processes were associated with these binding events. This part of the course really helped tie everything together and made me confident about analyzing real-world ChIP-seq data.
+
+## Reflections on the Journey
+
+Completing this track gave me practical skills to handle various genomic datasets and analyze them meaningfully. Each course built on the previous one, reinforcing core concepts while adding new techniques, ultimately providing a well-rounded introduction to genomic analysis in R.
+
+My next step is to apply what I've learned to real datasets—perhaps even contribute to open research initiatives. Bioconductor's community and support forums will be great allies as I dive deeper into genomics.Also, I am seriously considering grad school. It's a skill that will help me immensely in the pursuit of my goals. 
