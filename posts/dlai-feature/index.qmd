@@ -1,0 +1,9 @@
+---
+title: "On Being Featured by DeepLearning.AI"
+author: "Lukman Aliyu Jibril"
+date: "2024-11-06"
+categories: [deeplearning-ai]
+draft: true
+---
+
+I was featured by deeplearning and I am so happy
