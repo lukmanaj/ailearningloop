@@ -3,7 +3,16 @@ title: "On Being Featured by DeepLearning.AI"
 author: "Lukman Aliyu Jibril"
 date: "2024-11-06"
 categories: [deeplearning-ai]
-draft: true
 ---
 
-I was featured by deeplearning and I am so happy
+
+I’m thrilled to share an exciting milestone in my journey—I was recently featured by DeepLearning.AI! They highlighted a post I shared on their forum, where I reflected on my journey as a course tester and mentor. This journey officially began in January last year, when I enrolled in the Machine Learning Specialization by Andrew Ng. Being recognized by such a renowned organization is truly an honor.
+
+What made this even more special was seeing my story shared across all their social media platforms. While I’m currently active on Facebook, X (formerly Twitter), and LinkedIn, a friend, Abbas, kindly sent me a screenshot of their Instagram post—so I didn’t miss out on that either!
+
+This recognition is a testament to the hard work and dedication I’ve poured into learning, mentoring, and contributing to the AI community. It also comes at an exciting time as I prepare for the next phase of my career. Having worked at Zipline for over three years, I’m looking forward to new challenges and opportunities to grow.
+
+This feature has bolstered my confidence and motivation as I continue striving to achieve my goals. With determination and faith, I believe that success is within reach. In sha Allah, the best is yet to come!
+
+Thank you for reading and being part of my journey. To everyone who has supported me so far, your encouragement means the world. Let’s keep pushing boundaries together!
+
