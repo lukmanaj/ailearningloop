@@ -1,0 +1,58 @@
+---
+title: "An Exploration of Geom-Stat Pairs in R Programming's Tidyverse"
+author: "Lukman Aliyu Jibril"
+date: "2024-11-11"
+categories: [ggplot2,tidyverse,r-programming]
+---
+
+
+## Introduction
+R's tidyverse has a rich visualization ecosystem that is exemplified by the popular ggplot2. In this article, I attempt to look at the different geoms and the stats linked to them. 
+
+Below is a list of common geom-stat pairs in ggplot2. Each pair consists of a geometric object (geom) and a statistical transformation (stat). They are closely associated because the geom specifies how the data is visually represented, while the stat determines how the data is processed before being passed to the geom.
+
+## List of Common Geom-Stat Pairs
+|Geom Function|	Default Stat|	Description|
+|---------|--------|-----------|
+|geom_bar()	|stat_count	|Creates bar charts by counting occurrences in raw data.|
+|geom_col()|	stat_identity	| Creates bar charts directly from precomputed data.|
+|geom_histogram()	|stat_bin|	Creates histograms by binning data into ranges.|
+|geom_boxplot()	|stat_boxplot|	Creates box plots summarizing data with median and quartiles.|
+|geom_density()|	stat_density|	Creates density plots by estimating the distribution curve.|
+|geom_smooth()|	stat_smooth|	Adds a smoothed line (e.g., LOESS, linear) to the data.|
+|geom_point()	|stat_identity	|Plots points directly as provided in the data.|
+|geom_line()	|stat_identity	|Creates line plots directly from the data.|
+|geom_violin()	|stat_ydensity	|Creates violin plots showing the density distribution.|
+|geom_pointrange()|	stat_identity	|Displays points with ranges using precomputed data.|
+|geom_ribbon()	|stat_identity	|Displays shaded areas between ranges (e.g., confidence bands).|
+|geom_path()|	stat_identity|	Connects data points in order provided.|
+|geom_tile()|	stat_identity	|Creates tiles (e.g., heatmaps) based on precomputed values.|
+|geom_text()|	stat_identity	|Adds text annotations to the plot.|
+|geom_sf()	|stat_sf	|Handles spatial data in simple features (SF) format.|
+|geom_contour()|	stat_contour	|Plots contour lines based on 2D data.|
+|geom_map()|	stat_identity	|Displays map polygons or paths from preprocessed spatial data.|
+|geom_polygon()	|stat_identity	|Displays polygons (e.g., regions).|
+|geom_freqpoly()	|stat_bin	|Similar to a histogram, but displays frequencies as lines.|
+|geom_bin2d()	|stat_bin_2d|	Bins 2D data into squares for heatmaps.|
+|geom_hex()|	stat_binhex|	Bins 2D data into hexagons for hexbin plots.|
+|geom_quantile()	|stat_quantile	|Adds quantile regression lines to the plot.|
+|geom_errorbar()	|stat_identity|	Displays error bars from precomputed summary data.|
+|geom_segment()|	stat_identity	| Draws line segments using precomputed start and end points.|
+
+## What Do These Pairs Have in Common?
+- Division of Responsibility: The stat processes or summarizes the raw data (e.g., counting, binning, calculating densities, or smoothing).
+The geom visualizes the processed data (e.g., as bars, lines, points, or polygons).
+- Interchangeability: Most geoms can work with different stats and vice versa, though the defaults are designed for common use cases. For example, geom_bar() uses stat_count by default, but you can explicitly specify stat_identity for precomputed data.
+- Defaults:Each geom has a default stat, and vice versa. These defaults are chosen to match typical use cases (e.g., geom_histogram() defaults to stat_bin).
+- Input Data: Both geoms and stats rely on mappings defined in aes() to determine how variables in the dataset relate to the plot's structure.
+- Customization:You can override the default behavior of either the geom or the stat to fit specific needs (e.g., applying a custom statistical transformation or using a different visualization).
+
+## Conclusion
+Geom-stat pairs in ggplot2 represent a powerful abstraction where the stat transforms data, and the geom visualizes it. While defaults streamline common tasks, their flexibility allows users to mix and match geoms and stats for a wide variety of visualizations.
+
+
+
+
+
+
+
