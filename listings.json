@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/geom-stats/index.html",
       "/posts/dlai-feature/index.html",
       "/posts/genomic-data-analysis/index.html",
       "/posts/health-informatics/index.html",

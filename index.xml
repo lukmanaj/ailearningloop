@@ -10,7 +10,185 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 06 Nov 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 11 Nov 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>An Exploration of Geom-Stat Pairs in R Programming’s Tidyverse</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/geom-stats/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>R’s tidyverse has a rich visualization ecosystem that is exemplified by the popular ggplot2. In this article, I attempt to look at the different geoms and the stats linked to them.</p>
+<p>Below is a list of common geom-stat pairs in ggplot2. Each pair consists of a geometric object (geom) and a statistical transformation (stat). They are closely associated because the geom specifies how the data is visually represented, while the stat determines how the data is processed before being passed to the geom.</p>
+</section>
+<section id="list-of-common-geom-stat-pairs" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-common-geom-stat-pairs">List of Common Geom-Stat Pairs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 28%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Geom Function</th>
+<th>Default Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>geom_bar()</td>
+<td>stat_count</td>
+<td>Creates bar charts by counting occurrences in raw data.</td>
+</tr>
+<tr class="even">
+<td>geom_col()</td>
+<td>stat_identity</td>
+<td>Creates bar charts directly from precomputed data.</td>
+</tr>
+<tr class="odd">
+<td>geom_histogram()</td>
+<td>stat_bin</td>
+<td>Creates histograms by binning data into ranges.</td>
+</tr>
+<tr class="even">
+<td>geom_boxplot()</td>
+<td>stat_boxplot</td>
+<td>Creates box plots summarizing data with median and quartiles.</td>
+</tr>
+<tr class="odd">
+<td>geom_density()</td>
+<td>stat_density</td>
+<td>Creates density plots by estimating the distribution curve.</td>
+</tr>
+<tr class="even">
+<td>geom_smooth()</td>
+<td>stat_smooth</td>
+<td>Adds a smoothed line (e.g., LOESS, linear) to the data.</td>
+</tr>
+<tr class="odd">
+<td>geom_point()</td>
+<td>stat_identity</td>
+<td>Plots points directly as provided in the data.</td>
+</tr>
+<tr class="even">
+<td>geom_line()</td>
+<td>stat_identity</td>
+<td>Creates line plots directly from the data.</td>
+</tr>
+<tr class="odd">
+<td>geom_violin()</td>
+<td>stat_ydensity</td>
+<td>Creates violin plots showing the density distribution.</td>
+</tr>
+<tr class="even">
+<td>geom_pointrange()</td>
+<td>stat_identity</td>
+<td>Displays points with ranges using precomputed data.</td>
+</tr>
+<tr class="odd">
+<td>geom_ribbon()</td>
+<td>stat_identity</td>
+<td>Displays shaded areas between ranges (e.g., confidence bands).</td>
+</tr>
+<tr class="even">
+<td>geom_path()</td>
+<td>stat_identity</td>
+<td>Connects data points in order provided.</td>
+</tr>
+<tr class="odd">
+<td>geom_tile()</td>
+<td>stat_identity</td>
+<td>Creates tiles (e.g., heatmaps) based on precomputed values.</td>
+</tr>
+<tr class="even">
+<td>geom_text()</td>
+<td>stat_identity</td>
+<td>Adds text annotations to the plot.</td>
+</tr>
+<tr class="odd">
+<td>geom_sf()</td>
+<td>stat_sf</td>
+<td>Handles spatial data in simple features (SF) format.</td>
+</tr>
+<tr class="even">
+<td>geom_contour()</td>
+<td>stat_contour</td>
+<td>Plots contour lines based on 2D data.</td>
+</tr>
+<tr class="odd">
+<td>geom_map()</td>
+<td>stat_identity</td>
+<td>Displays map polygons or paths from preprocessed spatial data.</td>
+</tr>
+<tr class="even">
+<td>geom_polygon()</td>
+<td>stat_identity</td>
+<td>Displays polygons (e.g., regions).</td>
+</tr>
+<tr class="odd">
+<td>geom_freqpoly()</td>
+<td>stat_bin</td>
+<td>Similar to a histogram, but displays frequencies as lines.</td>
+</tr>
+<tr class="even">
+<td>geom_bin2d()</td>
+<td>stat_bin_2d</td>
+<td>Bins 2D data into squares for heatmaps.</td>
+</tr>
+<tr class="odd">
+<td>geom_hex()</td>
+<td>stat_binhex</td>
+<td>Bins 2D data into hexagons for hexbin plots.</td>
+</tr>
+<tr class="even">
+<td>geom_quantile()</td>
+<td>stat_quantile</td>
+<td>Adds quantile regression lines to the plot.</td>
+</tr>
+<tr class="odd">
+<td>geom_errorbar()</td>
+<td>stat_identity</td>
+<td>Displays error bars from precomputed summary data.</td>
+</tr>
+<tr class="even">
+<td>geom_segment()</td>
+<td>stat_identity</td>
+<td>Draws line segments using precomputed start and end points.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-do-these-pairs-have-in-common" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-these-pairs-have-in-common">What Do These Pairs Have in Common?</h2>
+<ul>
+<li>Division of Responsibility: The stat processes or summarizes the raw data (e.g., counting, binning, calculating densities, or smoothing). The geom visualizes the processed data (e.g., as bars, lines, points, or polygons).</li>
+<li>Interchangeability: Most geoms can work with different stats and vice versa, though the defaults are designed for common use cases. For example, geom_bar() uses stat_count by default, but you can explicitly specify stat_identity for precomputed data.</li>
+<li>Defaults:Each geom has a default stat, and vice versa. These defaults are chosen to match typical use cases (e.g., geom_histogram() defaults to stat_bin).</li>
+<li>Input Data: Both geoms and stats rely on mappings defined in aes() to determine how variables in the dataset relate to the plot’s structure.</li>
+<li>Customization:You can override the default behavior of either the geom or the stat to fit specific needs (e.g., applying a custom statistical transformation or using a different visualization).</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Geom-stat pairs in ggplot2 represent a powerful abstraction where the stat transforms data, and the geom visualizes it. While defaults streamline common tasks, their flexibility allows users to mix and match geoms and stats for a wide variety of visualizations.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ggplot2</category>
+  <category>tidyverse</category>
+  <category>r-programming</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/geom-stats/</guid>
+  <pubDate>Mon, 11 Nov 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>On Being Featured by DeepLearning.AI: A Milestone in My AI Journey</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1013,161 +1191,6 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/</guid>
   <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/datacamp.png" medium="image" type="image/png" height="83" width="144"/>
-</item>
-<item>
-  <title>Harnessing the Power of R Shiny for Interactive Data Visualization</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/first-shiny/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
-<p>In the realm of data science and statistical computing, R has long been a staple for analysts and researchers. However, the R ecosystem extends far beyond static analyses and plots, entering the dynamic world of web applications with R Shiny. This powerful framework allows users to build interactive web applications directly from R, enabling end-users to interact with their data analyses and visualizations in real-time.</p>
-</section>
-<section id="what-is-r-shiny" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-r-shiny">What is R Shiny?</h2>
-<p>R Shiny is an R package that makes it straightforward to build interactive web apps straight from R. Without needing to know HTML, CSS, or JavaScript, data scientists can create applications that allow users to interact with their data, change parameters, and visualize the results instantly.</p>
-</section>
-<section id="key-features-of-r-shiny" class="level2">
-<h2 class="anchored" data-anchor-id="key-features-of-r-shiny">Key Features of R Shiny:</h2>
-<ol type="1">
-<li><p>Interactivity: Users can interact with the application, altering inputs and immediately seeing the output change.</p></li>
-<li><p>Accessibility: Shiny apps can be hosted on a webpage, making your R analysis accessible to anyone with internet access.</p></li>
-<li><p>Customization: While Shiny makes it easy to get started with default settings, it also allows for extensive customization for more advanced users.</p></li>
-</ol>
-</section>
-<section id="getting-started-with-r-shiny" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-with-r-shiny">Getting Started with R Shiny:</h2>
-<p>To begin, you need to install the Shiny package from CRAN:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"shiny"</span>)</span></code></pre></div>
-<p>Then, you can create a simple Shiny app with just a few lines of code:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(shiny)</span>
-<span id="cb2-2"></span>
-<span id="cb2-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Define UI for application</span></span>
-<span id="cb2-4">ui <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fluidPage</span>(</span>
-<span id="cb2-5">   <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">titlePanel</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"My First Shiny App"</span>),</span>
-<span id="cb2-6">   <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sidebarLayout</span>(</span>
-<span id="cb2-7">      <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sidebarPanel</span>(</span>
-<span id="cb2-8">         <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sliderInput</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"num"</span>, </span>
-<span id="cb2-9">                     <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Choose a number:"</span>, </span>
-<span id="cb2-10">                     <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">min =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, </span>
-<span id="cb2-11">                     <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">max =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, </span>
-<span id="cb2-12">                     <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">value =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">50</span>)</span>
-<span id="cb2-13">      ),</span>
-<span id="cb2-14">      <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">mainPanel</span>(</span>
-<span id="cb2-15">         <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">textOutput</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"selectedNum"</span>)</span>
-<span id="cb2-16">      )</span>
-<span id="cb2-17">   )</span>
-<span id="cb2-18">)</span>
-<span id="cb2-19"></span>
-<span id="cb2-20"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Define server logic</span></span>
-<span id="cb2-21">server <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">function</span>(input, output) {</span>
-<span id="cb2-22">   output<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>selectedNum <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">renderText</span>({ </span>
-<span id="cb2-23">       <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"You selected"</span>, input<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>num)</span>
-<span id="cb2-24">   })</span>
-<span id="cb2-25">}</span>
-<span id="cb2-26"></span>
-<span id="cb2-27"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Run the application </span></span>
-<span id="cb2-28"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">shinyApp</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ui =</span> ui, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">server =</span> server)</span></code></pre></div>
-<p>This app creates a slider for the user to select a number and immediately displays the selected number on the screen.</p>
-</section>
-<section id="challenges-and-limitations" class="level2">
-<h2 class="anchored" data-anchor-id="challenges-and-limitations">Challenges and Limitations:</h2>
-<p>While R Shiny is an incredibly powerful tool, it does come with its challenges and limitations:</p>
-<ol type="1">
-<li><p>Performance: Heavy computational tasks can slow down your app, affecting user experience.</p></li>
-<li><p>Scalability: Shiny apps can require significant resources for multiple users, which can be a challenge for large-scale applications.</p></li>
-<li><p>Learning Curve: For those unfamiliar with web development concepts, there might be a learning curve.</p></li>
-</ol>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
-<p>R Shiny offers a bridge between data analysis in R and interactive web applications, empowering data scientists to share their insights in a more dynamic and accessible way. Despite its challenges, the benefits of creating interactive and user-friendly applications make R Shiny a valuable tool in the data scientist’s toolkit.</p>
-
-
-</section>
-
- ]]></description>
-  <category>arewads</category>
-  <category>shiny</category>
-  <category>rprogramming</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/first-shiny/</guid>
-  <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
