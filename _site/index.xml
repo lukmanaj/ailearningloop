@@ -10,7 +10,266 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Fri, 11 Oct 2024 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 07 Jan 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Celebrating Recognition from DeepLearning.AI</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/mentorship-recognition/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I am thrilled to share that I have been recognized by DeepLearning.AI for my contributions and guidance as a mentor in for the TensorFlow Developer Professional Certificate Specialization in the DeepLearning.AI forum. This honor reflects my passion for empowering learners in the field of artificial intelligence and supporting their journeys toward mastering deep learning.</p>
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/mentorship-recognition/'Lukman.png'" class="img-fluid" alt="Certificate"> As a mentor, I’ve had the privilege of engaging with an incredible community of learners, offering insights, answering questions, and fostering collaboration. This recognition strengthens my commitment to knowledge sharing and the collective growth of AI enthusiasts worldwide.</p>
+<p>I am grateful to DeepLearning.AI for the recognition and acknowledgment. Here’s to continuing to learn, teach, and contribute to the ever-evolving field of AI!</p>
+
+
+
+ ]]></description>
+  <category>deeplearning-ai</category>
+  <category>mentorship</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/mentorship-recognition/</guid>
+  <pubDate>Tue, 07 Jan 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/mentorship-recognition/Lukman.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>An Exploration of Geom-Stat Pairs in R Programming’s Tidyverse</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/geom-stats/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>R’s tidyverse has a rich visualization ecosystem that is exemplified by the popular ggplot2. In this article, I attempt to look at the different geoms and the stats linked to them.</p>
+<p>Below is a list of common geom-stat pairs in ggplot2. Each pair consists of a geometric object (geom) and a statistical transformation (stat). They are closely associated because the geom specifies how the data is visually represented, while the stat determines how the data is processed before being passed to the geom.</p>
+</section>
+<section id="list-of-common-geom-stat-pairs" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-common-geom-stat-pairs">List of Common Geom-Stat Pairs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 28%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Geom Function</th>
+<th>Default Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>geom_bar()</td>
+<td>stat_count</td>
+<td>Creates bar charts by counting occurrences in raw data.</td>
+</tr>
+<tr class="even">
+<td>geom_col()</td>
+<td>stat_identity</td>
+<td>Creates bar charts directly from precomputed data.</td>
+</tr>
+<tr class="odd">
+<td>geom_histogram()</td>
+<td>stat_bin</td>
+<td>Creates histograms by binning data into ranges.</td>
+</tr>
+<tr class="even">
+<td>geom_boxplot()</td>
+<td>stat_boxplot</td>
+<td>Creates box plots summarizing data with median and quartiles.</td>
+</tr>
+<tr class="odd">
+<td>geom_density()</td>
+<td>stat_density</td>
+<td>Creates density plots by estimating the distribution curve.</td>
+</tr>
+<tr class="even">
+<td>geom_smooth()</td>
+<td>stat_smooth</td>
+<td>Adds a smoothed line (e.g., LOESS, linear) to the data.</td>
+</tr>
+<tr class="odd">
+<td>geom_point()</td>
+<td>stat_identity</td>
+<td>Plots points directly as provided in the data.</td>
+</tr>
+<tr class="even">
+<td>geom_line()</td>
+<td>stat_identity</td>
+<td>Creates line plots directly from the data.</td>
+</tr>
+<tr class="odd">
+<td>geom_violin()</td>
+<td>stat_ydensity</td>
+<td>Creates violin plots showing the density distribution.</td>
+</tr>
+<tr class="even">
+<td>geom_pointrange()</td>
+<td>stat_identity</td>
+<td>Displays points with ranges using precomputed data.</td>
+</tr>
+<tr class="odd">
+<td>geom_ribbon()</td>
+<td>stat_identity</td>
+<td>Displays shaded areas between ranges (e.g., confidence bands).</td>
+</tr>
+<tr class="even">
+<td>geom_path()</td>
+<td>stat_identity</td>
+<td>Connects data points in order provided.</td>
+</tr>
+<tr class="odd">
+<td>geom_tile()</td>
+<td>stat_identity</td>
+<td>Creates tiles (e.g., heatmaps) based on precomputed values.</td>
+</tr>
+<tr class="even">
+<td>geom_text()</td>
+<td>stat_identity</td>
+<td>Adds text annotations to the plot.</td>
+</tr>
+<tr class="odd">
+<td>geom_sf()</td>
+<td>stat_sf</td>
+<td>Handles spatial data in simple features (SF) format.</td>
+</tr>
+<tr class="even">
+<td>geom_contour()</td>
+<td>stat_contour</td>
+<td>Plots contour lines based on 2D data.</td>
+</tr>
+<tr class="odd">
+<td>geom_map()</td>
+<td>stat_identity</td>
+<td>Displays map polygons or paths from preprocessed spatial data.</td>
+</tr>
+<tr class="even">
+<td>geom_polygon()</td>
+<td>stat_identity</td>
+<td>Displays polygons (e.g., regions).</td>
+</tr>
+<tr class="odd">
+<td>geom_freqpoly()</td>
+<td>stat_bin</td>
+<td>Similar to a histogram, but displays frequencies as lines.</td>
+</tr>
+<tr class="even">
+<td>geom_bin2d()</td>
+<td>stat_bin_2d</td>
+<td>Bins 2D data into squares for heatmaps.</td>
+</tr>
+<tr class="odd">
+<td>geom_hex()</td>
+<td>stat_binhex</td>
+<td>Bins 2D data into hexagons for hexbin plots.</td>
+</tr>
+<tr class="even">
+<td>geom_quantile()</td>
+<td>stat_quantile</td>
+<td>Adds quantile regression lines to the plot.</td>
+</tr>
+<tr class="odd">
+<td>geom_errorbar()</td>
+<td>stat_identity</td>
+<td>Displays error bars from precomputed summary data.</td>
+</tr>
+<tr class="even">
+<td>geom_segment()</td>
+<td>stat_identity</td>
+<td>Draws line segments using precomputed start and end points.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-do-these-pairs-have-in-common" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-these-pairs-have-in-common">What Do These Pairs Have in Common?</h2>
+<ul>
+<li>Division of Responsibility: The stat processes or summarizes the raw data (e.g., counting, binning, calculating densities, or smoothing). The geom visualizes the processed data (e.g., as bars, lines, points, or polygons).</li>
+<li>Interchangeability: Most geoms can work with different stats and vice versa, though the defaults are designed for common use cases. For example, geom_bar() uses stat_count by default, but you can explicitly specify stat_identity for precomputed data.</li>
+<li>Defaults:Each geom has a default stat, and vice versa. These defaults are chosen to match typical use cases (e.g., geom_histogram() defaults to stat_bin).</li>
+<li>Input Data: Both geoms and stats rely on mappings defined in aes() to determine how variables in the dataset relate to the plot’s structure.</li>
+<li>Customization:You can override the default behavior of either the geom or the stat to fit specific needs (e.g., applying a custom statistical transformation or using a different visualization).</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Geom-stat pairs in ggplot2 represent a powerful abstraction where the stat transforms data, and the geom visualizes it. While defaults streamline common tasks, their flexibility allows users to mix and match geoms and stats for a wide variety of visualizations.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>ggplot2</category>
+  <category>tidyverse</category>
+  <category>r-programming</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/geom-stats/</guid>
+  <pubDate>Sun, 10 Nov 2024 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>On Being Featured by DeepLearning.AI: A Milestone in My AI Journey</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/dlai-feature/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A significant milestone in my artificial intelligence journey recently materialized when DeepLearning.AI featured my story across their global platforms. The recognition came from a forum post where I shared my experiences as a course tester and mentor, reflecting on a journey that began in January 2023 with Andrew Ng’s Machine Learning Specialization.</p>
+<section id="the-journey-to-recognition" class="level2">
+<h2 class="anchored" data-anchor-id="the-journey-to-recognition">The Journey to Recognition</h2>
+<p>My involvement with DeepLearning.AI has been transformative. What started as enrolling in a single course evolved into a deep engagement with the AI community. As a course tester, I’ve had the privilege of providing feedback that helps shape the learning experience for future students. In my role as a mentor, I’ve guided numerous learners through the complexities of machine learning, witnessing their growth from novices to confident practitioners.</p>
+</section>
+<section id="global-reach-and-impact" class="level2">
+<h2 class="anchored" data-anchor-id="global-reach-and-impact">Global Reach and Impact</h2>
+<p>The feature was shared across DeepLearning.AI’s extensive social media network:</p>
+<ul>
+<li>LinkedIn showcased my journey to their professional network of AI enthusiasts</li>
+<li>X (formerly Twitter) broadcast my story to the global tech community</li>
+<li>Facebook reached aspiring AI practitioners worldwide</li>
+<li>Instagram captured the visual narrative of my path in AI</li>
+</ul>
+<p>A particularly touching moment came when my friend Abbas shared the Instagram feature with me—a reminder of how supportive the tech community can be.</p>
+</section>
+<section id="professional-growth-and-future-aspirations" class="level2">
+<h2 class="anchored" data-anchor-id="professional-growth-and-future-aspirations">Professional Growth and Future Aspirations</h2>
+<p>This recognition arrives at a pivotal moment in my career. After three enriching years at Zipline, where I applied AI to revolutionize medical delivery systems in Africa, I’m preparing for new challenges. My experience has reinforced my belief in AI’s potential to transform healthcare delivery in developing regions. The intersection of my pharmaceutical background with artificial intelligence has positioned me uniquely in the healthcare-tech space. At Zipline, I’ve witnessed firsthand how AI can optimize medical supply chains and improve access to healthcare in remote areas.</p>
+</section>
+<section id="community-impact-and-mentorship" class="level2">
+<h2 class="anchored" data-anchor-id="community-impact-and-mentorship">Community Impact and Mentorship</h2>
+<p>One of my proudest achievements has been mentoring in the AI community. Through DeepLearning.AI’s platform, I’ve had the opportunity to: - Guide aspiring data scientists through complex concepts - Share practical insights from real-world AI applications - Build a supportive network of learners and practitioners - Contribute to making AI education more accessible</p>
+</section>
+<section id="looking-forward" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward">Looking Forward</h2>
+<p>This recognition from DeepLearning.AI has reinforced my commitment to advancing AI education and application in healthcare. As I prepare for the next chapter in my career, I remain dedicated to: - Continuing to mentor and support aspiring AI practitioners - Contributing to the development of AI solutions in healthcare - Building bridges between technology and healthcare delivery - Advancing AI education in Africa</p>
+</section>
+<section id="social-media-links" class="level2">
+<h2 class="anchored" data-anchor-id="social-media-links">Social Media Links</h2>
+<ul>
+<li><a href="https://x.com/DeepLearningAI/status/1853618233384878573">View on X (Twitter)</a></li>
+<li><a href="https://www.linkedin.com/posts/deeplearningai_an-inspiring-journey-from-nigeria-see-how-activity-7259383961997475840-BGqC">Read on LinkedIn</a></li>
+<li><a href="https://www.facebook.com/share/1CsDcrJucT/">Facebook Post</a></li>
+<li><a href="https://www.instagram.com/deeplearningai/p/DB-N2SPM9fO/">Instagram Feature</a></li>
+</ul>
+<p>In sha Allah, this milestone marks just the beginning of greater achievements to come. I’m deeply grateful for the support of my community, mentors, and colleagues who have been part of this journey. As we continue to push the boundaries of what’s possible with AI, I look forward to contributing to more innovations that make a real difference in people’s lives.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>deeplearning-ai</category>
+  <category>career-milestone</category>
+  <category>ai-education</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/dlai-feature/</guid>
+  <pubDate>Tue, 05 Nov 2024 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Completing the Analyzing Genomic Data in R track on DataCamp</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -60,7 +319,7 @@
  ]]></description>
   <category>genomics</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/genomic-data-analysis/</guid>
-  <pubDate>Fri, 11 Oct 2024 21:00:00 GMT</pubDate>
+  <pubDate>Fri, 11 Oct 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/genomic-data-analysis/genomic-analysis.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
@@ -90,7 +349,7 @@
  ]]></description>
   <category>informatics</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/health-informatics/</guid>
-  <pubDate>Sun, 15 Sep 2024 21:00:00 GMT</pubDate>
+  <pubDate>Sun, 15 Sep 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/health-informatics/health-informatics.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 <item>
@@ -149,7 +408,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/</guid>
-  <pubDate>Thu, 05 Sep 2024 21:00:00 GMT</pubDate>
+  <pubDate>Thu, 05 Sep 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/lukman-dakar.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -188,7 +447,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</guid>
-  <pubDate>Thu, 05 Sep 2024 21:00:00 GMT</pubDate>
+  <pubDate>Thu, 05 Sep 2024 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Deep Learning Indaba 2024:Day 5, A Day of Insights, Innovation, and Inspiration</title>
@@ -215,7 +474,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-05/</guid>
-  <pubDate>Wed, 04 Sep 2024 21:00:00 GMT</pubDate>
+  <pubDate>Wed, 04 Sep 2024 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Deep Learning Indaba 2024:Day 4, Celebrating African Research, Learning, and Community Building</title>
@@ -248,7 +507,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-04/</guid>
-  <pubDate>Tue, 03 Sep 2024 21:00:00 GMT</pubDate>
+  <pubDate>Tue, 03 Sep 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-04/arewadsdli.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -286,7 +545,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-03/</guid>
-  <pubDate>Mon, 02 Sep 2024 21:00:00 GMT</pubDate>
+  <pubDate>Mon, 02 Sep 2024 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Day 2 at Deep Learning Indaba 2024: Bridging AI Innovation and Ethics in Africa</title>
@@ -366,7 +625,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-02/</guid>
-  <pubDate>Sun, 01 Sep 2024 21:00:00 GMT</pubDate>
+  <pubDate>Sun, 01 Sep 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-02/indaba-logo.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -408,7 +667,7 @@
  ]]></description>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-01/</guid>
-  <pubDate>Sat, 31 Aug 2024 21:00:00 GMT</pubDate>
+  <pubDate>Sat, 31 Aug 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-01/indaba.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -485,7 +744,7 @@
   <category>responsible ai</category>
   <category>datacamp</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/responsible-ai/</guid>
-  <pubDate>Sat, 24 Aug 2024 21:00:00 GMT</pubDate>
+  <pubDate>Sat, 24 Aug 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/responsible-ai/responsible-ai.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
@@ -521,7 +780,7 @@
  ]]></description>
   <category>deeplearning-ai</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/</guid>
-  <pubDate>Sun, 18 Aug 2024 21:00:00 GMT</pubDate>
+  <pubDate>Sun, 18 Aug 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/devotee.png" medium="image" type="image/png" height="99" width="144"/>
 </item>
 <item>
@@ -582,7 +841,7 @@
   <category>arewads</category>
   <category>deeplearning-ai</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/</guid>
-  <pubDate>Sat, 17 Aug 2024 21:00:00 GMT</pubDate>
+  <pubDate>Sat, 17 Aug 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/mentor-mail.png" medium="image" type="image/png" height="91" width="144"/>
 </item>
 <item>
@@ -638,7 +897,7 @@
   <category>quarto</category>
   <category>quarto-web</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</guid>
-  <pubDate>Fri, 26 Jul 2024 21:00:00 GMT</pubDate>
+  <pubDate>Fri, 26 Jul 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/contribution.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 <item>
@@ -746,7 +1005,7 @@
   <category>evaluation metrics</category>
   <category>medical diagnosis</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</guid>
-  <pubDate>Fri, 05 Jul 2024 21:00:00 GMT</pubDate>
+  <pubDate>Fri, 05 Jul 2024 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Mastering Data Structures and Algorithms on Coursera</title>
@@ -828,7 +1087,7 @@
   <category>data science</category>
   <category>programming</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/</guid>
-  <pubDate>Sun, 09 Jun 2024 21:00:00 GMT</pubDate>
+  <pubDate>Sun, 09 Jun 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/dls-cert.png" medium="image" type="image/png" height="113" width="144"/>
 </item>
 <item>
@@ -863,7 +1122,7 @@
   <category>ai</category>
   <category>deep learning</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/</guid>
-  <pubDate>Sun, 26 May 2024 21:00:00 GMT</pubDate>
+  <pubDate>Sun, 26 May 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/tensorflow-cert.png" medium="image" type="image/png" height="118" width="144"/>
 </item>
 <item>
@@ -925,397 +1184,7 @@
   <category>pytorch</category>
   <category>nlp</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/pytorch-nlp/</guid>
-  <pubDate>Sat, 11 May 2024 21:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>My Journey to Becoming a Professional Data Scientist: A DataCamp Certification Odyssey</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Embarking on the path to deepen my data science expertise, I was presented with an invaluable opportunity—a free premium subscription to DataCamp, courtesy of Arewa Data Science Academy. This opportunity was not just a stepping stone but a gateway to a broader horizon in data science that I eagerly embraced.</p>
-<p>The journey commenced with the Associate Data Scientist with Python track. Given my foundational knowledge and previous encounter with DataCamp’s Introduction to Python course, I was not venturing into uncharted territory. This familiarity served me well, enabling me to swiftly navigate through the coursework and complete the entire track within a week.</p>
-<p>But the quest for knowledge is insatiable. I ventured further into the realm of data manipulation and retrieval by tackling the revamped SQL Fundamentals track. This was followed by successfully achieving the Associate Data Scientist with SQL certification, marking another milestone in my journey.</p>
-<p>Eager to delve deeper, I enrolled in the Data Scientist with Python track. This comprehensive curriculum was not just about Python; it integrated SQL courses and introduced vital skills in package writing and Git fundamentals. This holistic approach equipped me with a robust set of tools and knowledge, preparing me for the pinnacle of my journey—the Professional Data Scientist Certification.</p>
-<p>The certification process was rigorous, encompassing two timed written exams that tested my theoretical understanding through multiple-choice and fill-in-the-blank questions. However, the real challenge lay in the practical data science exam, which required me to code machine learning models and present my findings via webcam. This phase tested not just my technical skills but also my ability to communicate complex results effectively.</p>
-<p>Despite the pressure and the initial setback in the practical exam—stemming from difficulties in data cleaning—I remained undeterred. After a period of diligent study and review, I reattempted the practical exam. With renewed confidence and enhanced skills, I passed on my second attempt.</p>
-<p>This journey was demanding, yet immensely rewarding. It culminated in earning a certificate that not only represents a testament to my skills and dedication but also empowers me with credentials recognized for two years.</p>
-<p>Reflecting on this experience, I am reminded of the importance of resilience, the value of continuous learning, and the doors that can open when one is willing to push through challenges. My journey to becoming a professional data scientist was not just about acquiring a certificate; it was about growth, perseverance, and the relentless pursuit of excellence in the ever-evolving field of data science.</p>
-
-
-
- ]]></description>
-  <category>arewads</category>
-  <category>datacamp</category>
-  <category>dcdonates</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/</guid>
-  <pubDate>Sat, 16 Mar 2024 21:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/datacamp-cert/datacamp.png" medium="image" type="image/png" height="83" width="144"/>
-</item>
-<item>
-  <title>Harnessing the Power of R Shiny for Interactive Data Visualization</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/first-shiny/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
-<p>In the realm of data science and statistical computing, R has long been a staple for analysts and researchers. However, the R ecosystem extends far beyond static analyses and plots, entering the dynamic world of web applications with R Shiny. This powerful framework allows users to build interactive web applications directly from R, enabling end-users to interact with their data analyses and visualizations in real-time.</p>
-</section>
-<section id="what-is-r-shiny" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-r-shiny">What is R Shiny?</h2>
-<p>R Shiny is an R package that makes it straightforward to build interactive web apps straight from R. Without needing to know HTML, CSS, or JavaScript, data scientists can create applications that allow users to interact with their data, change parameters, and visualize the results instantly.</p>
-</section>
-<section id="key-features-of-r-shiny" class="level2">
-<h2 class="anchored" data-anchor-id="key-features-of-r-shiny">Key Features of R Shiny:</h2>
-<ol type="1">
-<li><p>Interactivity: Users can interact with the application, altering inputs and immediately seeing the output change.</p></li>
-<li><p>Accessibility: Shiny apps can be hosted on a webpage, making your R analysis accessible to anyone with internet access.</p></li>
-<li><p>Customization: While Shiny makes it easy to get started with default settings, it also allows for extensive customization for more advanced users.</p></li>
-</ol>
-</section>
-<section id="getting-started-with-r-shiny" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-with-r-shiny">Getting Started with R Shiny:</h2>
-<p>To begin, you need to install the Shiny package from CRAN:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"shiny"</span>)</span></code></pre></div>
-<p>Then, you can create a simple Shiny app with just a few lines of code:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(shiny)</span>
-<span id="cb2-2"></span>
-<span id="cb2-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Define UI for application</span></span>
-<span id="cb2-4">ui <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fluidPage</span>(</span>
-<span id="cb2-5">   <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">titlePanel</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"My First Shiny App"</span>),</span>
-<span id="cb2-6">   <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sidebarLayout</span>(</span>
-<span id="cb2-7">      <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sidebarPanel</span>(</span>
-<span id="cb2-8">         <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sliderInput</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"num"</span>, </span>
-<span id="cb2-9">                     <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Choose a number:"</span>, </span>
-<span id="cb2-10">                     <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">min =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, </span>
-<span id="cb2-11">                     <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">max =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, </span>
-<span id="cb2-12">                     <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">value =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">50</span>)</span>
-<span id="cb2-13">      ),</span>
-<span id="cb2-14">      <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">mainPanel</span>(</span>
-<span id="cb2-15">         <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">textOutput</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"selectedNum"</span>)</span>
-<span id="cb2-16">      )</span>
-<span id="cb2-17">   )</span>
-<span id="cb2-18">)</span>
-<span id="cb2-19"></span>
-<span id="cb2-20"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Define server logic</span></span>
-<span id="cb2-21">server <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">function</span>(input, output) {</span>
-<span id="cb2-22">   output<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>selectedNum <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">renderText</span>({ </span>
-<span id="cb2-23">       <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">paste</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"You selected"</span>, input<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>num)</span>
-<span id="cb2-24">   })</span>
-<span id="cb2-25">}</span>
-<span id="cb2-26"></span>
-<span id="cb2-27"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Run the application </span></span>
-<span id="cb2-28"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">shinyApp</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ui =</span> ui, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">server =</span> server)</span></code></pre></div>
-<p>This app creates a slider for the user to select a number and immediately displays the selected number on the screen.</p>
-</section>
-<section id="challenges-and-limitations" class="level2">
-<h2 class="anchored" data-anchor-id="challenges-and-limitations">Challenges and Limitations:</h2>
-<p>While R Shiny is an incredibly powerful tool, it does come with its challenges and limitations:</p>
-<ol type="1">
-<li><p>Performance: Heavy computational tasks can slow down your app, affecting user experience.</p></li>
-<li><p>Scalability: Shiny apps can require significant resources for multiple users, which can be a challenge for large-scale applications.</p></li>
-<li><p>Learning Curve: For those unfamiliar with web development concepts, there might be a learning curve.</p></li>
-</ol>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
-<p>R Shiny offers a bridge between data analysis in R and interactive web applications, empowering data scientists to share their insights in a more dynamic and accessible way. Despite its challenges, the benefits of creating interactive and user-friendly applications make R Shiny a valuable tool in the data scientist’s toolkit.</p>
-
-
-</section>
-
- ]]></description>
-  <category>arewads</category>
-  <category>shiny</category>
-  <category>rprogramming</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/first-shiny/</guid>
-  <pubDate>Sat, 09 Mar 2024 21:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Object Oriented Programming: Python vs R</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/oop/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Object-Oriented Programming (OOP) is a programming paradigm that uses “objects” to design applications and computer programs. It utilizes several techniques from previously established paradigms, including modularity, polymorphism, and encapsulation. Today, we’ll explore how OOP concepts manifest in two popular programming languages: Python and R, particularly focusing on inheritance, using the context of a microwave oven as an example.</p>
-</section>
-<section id="oop-in-python" class="level2">
-<h2 class="anchored" data-anchor-id="oop-in-python">OOP in Python</h2>
-<p>In Python, OOP is central to the language. This can be seen in the way classes are defined and used. Python supports inheritance, allowing new classes to inherit attributes and methods from existing classes. This feature facilitates code reusability and the hierarchical organization of classes. For example, if you were modeling microwave ovens, you could start with a basic microwave class and then create a subclass for a fancier microwave with additional features:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">class</span> MicrowaveOven:</span>
-<span id="cb1-2">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>, power_rating):</span>
-<span id="cb1-3">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.power_rating <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> power_rating</span>
-<span id="cb1-4"></span>
-<span id="cb1-5">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> cook(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>, time_seconds):</span>
-<span id="cb1-6">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Your food is cooked!"</span>)</span>
-<span id="cb1-7"></span>
-<span id="cb1-8"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">class</span> FancyMicrowaveOven(MicrowaveOven):</span>
-<span id="cb1-9">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> cook_baked_potato(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-10">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.cook(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>)</span>
-<span id="cb1-11">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Enjoy your baked potato!"</span>)</span>
-<span id="cb1-12"></span>
-<span id="cb1-13">a_fancy_microwave <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> FancyMicrowaveOven(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>)</span>
-<span id="cb1-14">a_fancy_microwave.cook_baked_potato()</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Your food is cooked!
-Enjoy your baked potato!</code></pre>
-</div>
-</div>
-<p>In this Python example, FancyMicrowaveOven inherits from MicrowaveOven, meaning it can use the cook method defined in the parent class and add its methods like cook_baked_potato.</p>
-</section>
-<section id="oop-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="oop-in-r">OOP in R</h2>
-<p>In contrast, R, traditionally seen as a statistical programming language, has incorporated OOP features more gradually. The R6 package in R allows for a more classical approach to OOP, supporting encapsulation and inheritance but in a somewhat different manner than Python. The R6 framework allows R developers to create classes with reference semantics, which can be somewhat akin to how Python’s classes operate.</p>
-<p>Here’s how you might define a similar set of microwave classes in R using the R6 package:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(R6)</span>
-<span id="cb3-2">microwave_oven_factory <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">R6Class</span>(</span>
-<span id="cb3-3">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"MicrowaveOven"</span>,</span>
-<span id="cb3-4">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">private =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">list</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">power_rating_watts =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">800</span>),</span>
-<span id="cb3-5">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">public =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">list</span>(</span>
-<span id="cb3-6">        <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">cook =</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">function</span>(time_seconds) {</span>
-<span id="cb3-7">            <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">Sys.sleep</span>(time_seconds)</span>
-<span id="cb3-8">            <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Your food is cooked!"</span>)</span>
-<span id="cb3-9">        }</span>
-<span id="cb3-10">    )</span>
-<span id="cb3-11">)</span>
-<span id="cb3-12"></span>
-<span id="cb3-13">fancy_microwave_oven_factory <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">R6Class</span>(</span>
-<span id="cb3-14">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"FancyMicrowaveOven"</span>,</span>
-<span id="cb3-15">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">inherit =</span> microwave_oven_factory,</span>
-<span id="cb3-16">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">public =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">list</span>(</span>
-<span id="cb3-17">        <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">cook_baked_potato =</span> <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">function</span>() {</span>
-<span id="cb3-18">            self<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cook</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>)</span>
-<span id="cb3-19">            <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Enjoy your baked potato!"</span>)</span>
-<span id="cb3-20">        }</span>
-<span id="cb3-21">    )</span>
-<span id="cb3-22">)</span>
-<span id="cb3-23"></span>
-<span id="cb3-24">a_fancy_microwave <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> fancy_microwave_oven_factory<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">new</span>()</span>
-<span id="cb3-25">a_fancy_microwave<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cook_baked_potato</span>()</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Your food is cooked!"
-[1] "Enjoy your baked potato!"</code></pre>
-</div>
-</div>
-<p>In the R example, FancyMicrowaveOven is defined with inherit = microwave_oven_factory, which establishes an inheritance relationship with MicrowaveOven. This setup allows the fancy microwave to use the cook method from its parent class while adding a new method cook_baked_potato.</p>
-</section>
-<section id="differences" class="level2">
-<h2 class="anchored" data-anchor-id="differences">Differences</h2>
-<p>A key difference in the OOP implementation between Python and R is the syntax and the explicit use of self and super. In Python, self refers to the instance itself and is used to access class attributes and methods from within. super(), on the other hand, is used to call methods from a superclass in the context of inheritance.</p>
-<p>In R’s R6, self serves a similar purpose as in Python, referring to the current object. However, R6 does not have a direct counterpart to Python’s super; instead, method overriding involves calling the superclass method directly through super$method_name(). Inheritance in R6 is established through the inherit parameter in the class definition, allowing the new class to access the public methods and properties of the parent class.</p>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In summary, while Python’s OOP features have been integral to the language from its conception, R has adopted OOP paradigms over time, with packages like R6 introducing class-based programming that includes inheritance. Both languages offer robust capabilities for OOP, facilitating complex and modular program design. In practice, choosing between Python and R for OOP depends on the specific requirements of your project and your personal or team’s familiarity with each language.</p>
-
-
-</section>
-
- ]]></description>
-  <category>oop</category>
-  <category>python</category>
-  <category>rprogramming</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/oop/</guid>
-  <pubDate>Tue, 05 Mar 2024 21:00:00 GMT</pubDate>
+  <pubDate>Sat, 11 May 2024 23:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

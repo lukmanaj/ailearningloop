@@ -2,6 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/mentorship-recognition/index.html",
+      "/posts/geom-stats/index.html",
+      "/posts/dlai-feature/index.html",
       "/posts/genomic-data-analysis/index.html",
       "/posts/health-informatics/index.html",
       "/posts/dli-24-day-06/index.html",

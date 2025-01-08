@@ -202,5 +202,14 @@
   },
   "posts/genomic-data-analysis/index.qmd": {
     "index.html": "58efed2d"
+  },
+  "posts/dlai-feature/index.qmd": {
+    "index.html": "8a774fc7"
+  },
+  "posts/geom-stats/index.qmd": {
+    "index.html": "a29eacce"
+  },
+  "posts/mentorship-recognition/index.qmd": {
+    "index.html": "2bfc0707"
   }
 }

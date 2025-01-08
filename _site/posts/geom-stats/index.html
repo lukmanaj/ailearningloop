@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lukman Aliyu Jibril">
-<meta name="dcterms.date" content="2023-02-14">
+<meta name="dcterms.date" content="2024-11-11">
 
-<title>How I Started Learning Python – ailearningloop</title>
+<title>An Exploration of Geom-Stat Pairs in R Programming’s Tidyverse – ailearningloop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,9 +134,11 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">How I Started Learning Python</h1>
+      <h1 class="title">An Exploration of Geom-Stat Pairs in R Programming’s Tidyverse</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">python</div>
+                <div class="quarto-category">ggplot2</div>
+                <div class="quarto-category">tidyverse</div>
+                <div class="quarto-category">r-programming</div>
               </div>
                   </div>
   </div>
@@ -154,7 +156,7 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 14, 2023</p>
+        <p class="date">November 11, 2024</p>
       </div>
     </div>
     
@@ -173,11 +175,166 @@ gtag('config', 'G-J7BWRJYLX5', { 'anonymize_ip': true});
 
 
 
-<p>As part of the first phase of the Arewa Data science fellowship, the mentors organised a 30 days of Python challenge that consists of exercises tailored to a particular topic per day. Each day offers a challenge on a particular topic in Python. For example, day 5 covers list and exercises of an appropriate hardness level are provided for practice. This is to support understanding of the concept of lists in Python. In addition, the challenge employs a 5 days a week format, since the weekends serve as virtual office hours and can be used to refactor our code and get ready for the next week.</p>
-<p>Participating in this 30 Days of Python challenge has given me an avenue to practice the Python concepts I have learnt in the past. Before we began the challenge proper, we were taught how to set up VSCode as an IDE for our Python practice. VSCode is an awesome code editor/IDE I must confess. Afterwards, we were instructed to push our daily exercises to the github repository we all made specifically for the challenge. This challenge has significantly improved my Python experience and I am grateful to Arewa Data Science for the opportunity.</p>
-<p>In subsequent outings, I will try to explain my experience going through some of the exercises and also discuss what I learnt in some of the virtual office hours and of course, the MOOC, ‘Learning How to Learn’ on coursera. Arewa Data Science Fellowship is an interesting addition to my routine with a potential to be life changing.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>R’s tidyverse has a rich visualization ecosystem that is exemplified by the popular ggplot2. In this article, I attempt to look at the different geoms and the stats linked to them.</p>
+<p>Below is a list of common geom-stat pairs in ggplot2. Each pair consists of a geometric object (geom) and a statistical transformation (stat). They are closely associated because the geom specifies how the data is visually represented, while the stat determines how the data is processed before being passed to the geom.</p>
+</section>
+<section id="list-of-common-geom-stat-pairs" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-common-geom-stat-pairs">List of Common Geom-Stat Pairs</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 28%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Geom Function</th>
+<th>Default Stat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>geom_bar()</td>
+<td>stat_count</td>
+<td>Creates bar charts by counting occurrences in raw data.</td>
+</tr>
+<tr class="even">
+<td>geom_col()</td>
+<td>stat_identity</td>
+<td>Creates bar charts directly from precomputed data.</td>
+</tr>
+<tr class="odd">
+<td>geom_histogram()</td>
+<td>stat_bin</td>
+<td>Creates histograms by binning data into ranges.</td>
+</tr>
+<tr class="even">
+<td>geom_boxplot()</td>
+<td>stat_boxplot</td>
+<td>Creates box plots summarizing data with median and quartiles.</td>
+</tr>
+<tr class="odd">
+<td>geom_density()</td>
+<td>stat_density</td>
+<td>Creates density plots by estimating the distribution curve.</td>
+</tr>
+<tr class="even">
+<td>geom_smooth()</td>
+<td>stat_smooth</td>
+<td>Adds a smoothed line (e.g., LOESS, linear) to the data.</td>
+</tr>
+<tr class="odd">
+<td>geom_point()</td>
+<td>stat_identity</td>
+<td>Plots points directly as provided in the data.</td>
+</tr>
+<tr class="even">
+<td>geom_line()</td>
+<td>stat_identity</td>
+<td>Creates line plots directly from the data.</td>
+</tr>
+<tr class="odd">
+<td>geom_violin()</td>
+<td>stat_ydensity</td>
+<td>Creates violin plots showing the density distribution.</td>
+</tr>
+<tr class="even">
+<td>geom_pointrange()</td>
+<td>stat_identity</td>
+<td>Displays points with ranges using precomputed data.</td>
+</tr>
+<tr class="odd">
+<td>geom_ribbon()</td>
+<td>stat_identity</td>
+<td>Displays shaded areas between ranges (e.g., confidence bands).</td>
+</tr>
+<tr class="even">
+<td>geom_path()</td>
+<td>stat_identity</td>
+<td>Connects data points in order provided.</td>
+</tr>
+<tr class="odd">
+<td>geom_tile()</td>
+<td>stat_identity</td>
+<td>Creates tiles (e.g., heatmaps) based on precomputed values.</td>
+</tr>
+<tr class="even">
+<td>geom_text()</td>
+<td>stat_identity</td>
+<td>Adds text annotations to the plot.</td>
+</tr>
+<tr class="odd">
+<td>geom_sf()</td>
+<td>stat_sf</td>
+<td>Handles spatial data in simple features (SF) format.</td>
+</tr>
+<tr class="even">
+<td>geom_contour()</td>
+<td>stat_contour</td>
+<td>Plots contour lines based on 2D data.</td>
+</tr>
+<tr class="odd">
+<td>geom_map()</td>
+<td>stat_identity</td>
+<td>Displays map polygons or paths from preprocessed spatial data.</td>
+</tr>
+<tr class="even">
+<td>geom_polygon()</td>
+<td>stat_identity</td>
+<td>Displays polygons (e.g., regions).</td>
+</tr>
+<tr class="odd">
+<td>geom_freqpoly()</td>
+<td>stat_bin</td>
+<td>Similar to a histogram, but displays frequencies as lines.</td>
+</tr>
+<tr class="even">
+<td>geom_bin2d()</td>
+<td>stat_bin_2d</td>
+<td>Bins 2D data into squares for heatmaps.</td>
+</tr>
+<tr class="odd">
+<td>geom_hex()</td>
+<td>stat_binhex</td>
+<td>Bins 2D data into hexagons for hexbin plots.</td>
+</tr>
+<tr class="even">
+<td>geom_quantile()</td>
+<td>stat_quantile</td>
+<td>Adds quantile regression lines to the plot.</td>
+</tr>
+<tr class="odd">
+<td>geom_errorbar()</td>
+<td>stat_identity</td>
+<td>Displays error bars from precomputed summary data.</td>
+</tr>
+<tr class="even">
+<td>geom_segment()</td>
+<td>stat_identity</td>
+<td>Draws line segments using precomputed start and end points.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-do-these-pairs-have-in-common" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-these-pairs-have-in-common">What Do These Pairs Have in Common?</h2>
+<ul>
+<li>Division of Responsibility: The stat processes or summarizes the raw data (e.g., counting, binning, calculating densities, or smoothing). The geom visualizes the processed data (e.g., as bars, lines, points, or polygons).</li>
+<li>Interchangeability: Most geoms can work with different stats and vice versa, though the defaults are designed for common use cases. For example, geom_bar() uses stat_count by default, but you can explicitly specify stat_identity for precomputed data.</li>
+<li>Defaults:Each geom has a default stat, and vice versa. These defaults are chosen to match typical use cases (e.g., geom_histogram() defaults to stat_bin).</li>
+<li>Input Data: Both geoms and stats rely on mappings defined in aes() to determine how variables in the dataset relate to the plot’s structure.</li>
+<li>Customization:You can override the default behavior of either the geom or the stat to fit specific needs (e.g., applying a custom statistical transformation or using a different visualization).</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Geom-stat pairs in ggplot2 represent a powerful abstraction where the stat transforms data, and the geom visualizes it. While defaults streamline common tasks, their flexibility allows users to mix and match geoms and stats for a wide variety of visualizations.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
