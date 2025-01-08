@@ -8,7 +8,7 @@ image: "Lukman.jpg"
 
 I am thrilled to share that I have been recognized by DeepLearning.AI for my contributions and guidance as a mentor in for the TensorFlow Developer Professional Certificate Specialization in the DeepLearning.AI forum. This honor reflects my passion for empowering learners in the field of artificial intelligence and supporting their journeys toward mastering deep learning.
 
-![Certificate]('Lukman.png')
+![Certificate](Lukman.png)
 As a mentor, I’ve had the privilege of engaging with an incredible community of learners, offering insights, answering questions, and fostering collaboration. This recognition strengthens my commitment to knowledge sharing and the collective growth of AI enthusiasts worldwide.
 
 I am grateful to DeepLearning.AI for the recognition and acknowledgment. Here’s to continuing to learn, teach, and contribute to the ever-evolving field of AI!
