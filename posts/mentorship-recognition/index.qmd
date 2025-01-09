@@ -3,7 +3,7 @@ title: "Celebrating Recognition from DeepLearning.AI"
 author: "Lukman Aliyu Jibril"
 date: "2025-01-08"
 categories: [deeplearning-ai,mentorship]
-image: "Lukman.jpg"
+image: "Lukman.png"
 ---
 
 I am thrilled to share that I have been recognized by DeepLearning.AI for my contributions and guidance as a mentor in for the TensorFlow Developer Professional Certificate Specialization in the DeepLearning.AI forum. This honor reflects my passion for empowering learners in the field of artificial intelligence and supporting their journeys toward mastering deep learning.
