@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/data-analytics/index.html",
       "/posts/mentorship-recognition/index.html",
       "/posts/geom-stats/index.html",
       "/posts/dlai-feature/index.html",

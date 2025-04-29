@@ -1,0 +1,25 @@
+---
+title: "Behind the Scenes: Testing the DeepLearning.AI Data Analytics Professional Certificate"
+author: "Lukman Aliyu Jibril"
+date: "2025-04-29"
+categories: [deeplearning-ai,mentorship]
+image: "top-tester.png"
+---
+
+I'm excited to share that I've been recognized as a Top Tester for the third course, Python for Data Analytics, in the new DeepLearning.AI Data Analytics Professional Certificate!
+
+This marks my third Top Tester award in the specialization — having previously contributed to the development of the first two courses as well. With two more courses still ahead, the journey so far has been incredibly rewarding, both in contributing to the learner experience and strengthening my own skills along the way.
+
+One aspect I deeply appreciate about this specialization is how thoughtfully it’s structured:
+
+- Courses 1 and 2 build a strong foundation in analytics fundamentals, starting with spreadsheets and data thinking.
+
+- Course 3 makes a natural transition into Python, giving learners practical, hands-on experience with real-world analytics projects — covering topics like retail sales trends, environmental data, and more.
+
+What makes the third course particularly special is its emphasis on realistic coding challenges. It doesn’t just walk you through polished examples; it encourages troubleshooting and critical thinking — skills that are essential for real-world analytics work.
+
+Looking ahead, Courses 4 and 5 are set to dive even deeper into advanced analytics topics and tools, making this specialization an excellent pathway for anyone serious about becoming a data professional.
+
+I'm also honored to have been recognized as a mentor for the course, thanks to the deep understanding I've developed through testing and feedback.
+
+A huge thank you to the entire DeepLearning.AI team for the opportunity to contribute! If you're looking to start or strengthen your career in data analytics, I highly recommend checking out this specialization. It's been a fantastic learning experience, and I can't wait to see what's next!
