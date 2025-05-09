@@ -9,8 +9,41 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.7.29</generator>
-<lastBuildDate>Tue, 29 Apr 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.7.30</generator>
+<lastBuildDate>Thu, 08 May 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Yet Another Quarter of Dedicated Mentorship</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/deeplearning-mentorship/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I am happy to announce to all that I have been recognized once again as one of the top contributing mentors for the two specializations I mentor at the DeepLearning.AI forum, the Data Analytics Professional Certification and the Tensorflow Developer Professional Certification. Here are the certifications</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/deeplearning-mentorship/&quot;/data-analytics.png&quot;" class="img-fluid figure-img"></p>
+<figcaption>data analytics</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/deeplearning-mentorship/&quot;/tensorflow-dev.png&quot;" class="img-fluid figure-img"></p>
+<figcaption>tensorflow developer</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>deeplearning-ai</category>
+  <category>mentorship</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/deeplearning-mentorship/</guid>
+  <pubDate>Thu, 08 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/deeplearning-mentorship/data-analytics.png" medium="image" type="image/png" height="111" width="144"/>
+</item>
 <item>
   <title>Behind the Scenes: Testing the DeepLearning.AI Data Analytics Professional Certificate</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -384,44 +417,6 @@
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/health-informatics/health-informatics.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 <item>
-  <title>Reflecting on the Final Day of the Deep Learning Indaba 2024: A Journey of Insights and Inspiration</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>As the saying goes, every beginning has an end, and the final day of the Deep Learning Indaba 2024 marked the conclusion of a week filled with knowledge-sharing, networking, and inspiration. This year’s Indaba was a true testament to the diversity and depth of AI conversations shaping Africa’s future. The final day was no exception, featuring several concurrent half-day workshops that challenged us to choose just one path to follow!</p>
-<p>The workshop options were diverse, each promising to delve into a unique aspect of AI and its potential impact:</p>
-<ul>
-<li>Envisioning Humans in a Safe, AI Future</li>
-<li>GeoAI for a Sustainable Future in Africa</li>
-<li>Empowering Africa’s AI Future through High Performance and Cloud Computing</li>
-<li>AI Regulation in Africa: Rationale, Considerations, and Way Forward</li>
-</ul>
-<p>I opted for the “Envisioning Humans in a Safe, AI Future” workshop, a choice that proved to be the right one for me. However, I must admit it was a tough call—each workshop offered something valuable, and it was unfortunate that I couldn’t attend them all. Alas, one can only be in one place at a time!</p>
-<p>The workshop began with an introduction to ML Commons, an open initiative that aims to accelerate machine learning research, and ways to get involved. This set the stage for the discussions that followed, starting with a panel discussion on “Seeking Safer Spaces with AI Tools.” The panelists brought forward intriguing perspectives on how we can create AI tools that foster safer and more inclusive environments. The discussions were not only thought-provoking but also a call to action for all of us in the AI community.</p>
-<p>Following the panel, we moved on to a segment titled “Behind the Research: Author Insights.” This session provided a deeper look into the journeys and motivations of researchers working at the intersection of AI and social good. It was inspiring to hear firsthand about the challenges they faced, the breakthroughs they achieved, and the lessons they learned along the way.</p>
-<p>The workshop wrapped up with some final announcements and reflections on the discussions held throughout the day. As a token of appreciation for our engagement in this packed and event-studded session, all participants received certificates of attendance—a wonderful keepsake to remember this enriching experience.</p>
-<p>After the workshops, the Wangari Maathai Impact Award was presented to Grace Muthoni for her groundbreaking research. Her work stood out among many, and it was heartening to see such talent being recognized and celebrated. Congratulations to Grace!</p>
-<p>The day then transitioned into the final Indaba panel discussion, which served as a comprehensive summary of the entire event. The panel, composed of notable experts and thought leaders, tackled critical themes such as the need for skilling, foundational research, and the concept of human-in-the-loop AI—all while emphasizing the importance of not losing our unique identities as we navigate the evolving AI landscape.</p>
-<p>One of the most compelling parts of the discussion was the exploration of future research directions, including the relationship between language and machine learning education, and AI’s potential role in tackling climate change. It was an important reminder that while it’s easy to get caught up in trending topics, our research should be driven by genuine curiosity and the unique challenges we wish to solve.</p>
-<p>A major takeaway from the panel was the affirmation that our experiences are uniquely ours and that they are a valuable asset in shaping our paths in AI. No one else can walk our path for us, and leveraging our unique backgrounds and perspectives can lead to innovative and impactful contributions to the field.</p>
-<p>Throughout the week, I’ve been sharing my experiences from Indaba, as encouraged, and it has been truly inspiring to see the passion and commitment of AI practitioners across the continent.</p>
-<p>The final day concluded with a vibrant closing ceremony, where prizes were awarded to deserving winners, followed by a celebratory closing party that was filled with joy, music, and a sense of accomplishment. With that, Deep Learning Indaba 2024 came to a close.</p>
-<p>But this isn’t goodbye—it’s simply “see you next year.” The next Indaba will be held in Kigali, Rwanda, and I’m already looking forward to the incredible conversations and experiences that await us there.</p>
-<p>Stay tuned, and see you in Kigali next year!</p>
-
-
-
- ]]></description>
-  <category>deeplearning indaba</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</guid>
-  <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Deep Learning Indaba 2024 Day 6: A Journey Through Inspiring Workshops and Innovation in Health AI</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
   <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/</link>
@@ -479,6 +474,44 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/</guid>
   <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-06/lukman-dakar.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Reflecting on the Final Day of the Deep Learning Indaba 2024: A Journey of Insights and Inspiration</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>As the saying goes, every beginning has an end, and the final day of the Deep Learning Indaba 2024 marked the conclusion of a week filled with knowledge-sharing, networking, and inspiration. This year’s Indaba was a true testament to the diversity and depth of AI conversations shaping Africa’s future. The final day was no exception, featuring several concurrent half-day workshops that challenged us to choose just one path to follow!</p>
+<p>The workshop options were diverse, each promising to delve into a unique aspect of AI and its potential impact:</p>
+<ul>
+<li>Envisioning Humans in a Safe, AI Future</li>
+<li>GeoAI for a Sustainable Future in Africa</li>
+<li>Empowering Africa’s AI Future through High Performance and Cloud Computing</li>
+<li>AI Regulation in Africa: Rationale, Considerations, and Way Forward</li>
+</ul>
+<p>I opted for the “Envisioning Humans in a Safe, AI Future” workshop, a choice that proved to be the right one for me. However, I must admit it was a tough call—each workshop offered something valuable, and it was unfortunate that I couldn’t attend them all. Alas, one can only be in one place at a time!</p>
+<p>The workshop began with an introduction to ML Commons, an open initiative that aims to accelerate machine learning research, and ways to get involved. This set the stage for the discussions that followed, starting with a panel discussion on “Seeking Safer Spaces with AI Tools.” The panelists brought forward intriguing perspectives on how we can create AI tools that foster safer and more inclusive environments. The discussions were not only thought-provoking but also a call to action for all of us in the AI community.</p>
+<p>Following the panel, we moved on to a segment titled “Behind the Research: Author Insights.” This session provided a deeper look into the journeys and motivations of researchers working at the intersection of AI and social good. It was inspiring to hear firsthand about the challenges they faced, the breakthroughs they achieved, and the lessons they learned along the way.</p>
+<p>The workshop wrapped up with some final announcements and reflections on the discussions held throughout the day. As a token of appreciation for our engagement in this packed and event-studded session, all participants received certificates of attendance—a wonderful keepsake to remember this enriching experience.</p>
+<p>After the workshops, the Wangari Maathai Impact Award was presented to Grace Muthoni for her groundbreaking research. Her work stood out among many, and it was heartening to see such talent being recognized and celebrated. Congratulations to Grace!</p>
+<p>The day then transitioned into the final Indaba panel discussion, which served as a comprehensive summary of the entire event. The panel, composed of notable experts and thought leaders, tackled critical themes such as the need for skilling, foundational research, and the concept of human-in-the-loop AI—all while emphasizing the importance of not losing our unique identities as we navigate the evolving AI landscape.</p>
+<p>One of the most compelling parts of the discussion was the exploration of future research directions, including the relationship between language and machine learning education, and AI’s potential role in tackling climate change. It was an important reminder that while it’s easy to get caught up in trending topics, our research should be driven by genuine curiosity and the unique challenges we wish to solve.</p>
+<p>A major takeaway from the panel was the affirmation that our experiences are uniquely ours and that they are a valuable asset in shaping our paths in AI. No one else can walk our path for us, and leveraging our unique backgrounds and perspectives can lead to innovative and impactful contributions to the field.</p>
+<p>Throughout the week, I’ve been sharing my experiences from Indaba, as encouraged, and it has been truly inspiring to see the passion and commitment of AI practitioners across the continent.</p>
+<p>The final day concluded with a vibrant closing ceremony, where prizes were awarded to deserving winners, followed by a celebratory closing party that was filled with joy, music, and a sense of accomplishment. With that, Deep Learning Indaba 2024 came to a close.</p>
+<p>But this isn’t goodbye—it’s simply “see you next year.” The next Indaba will be held in Kigali, Rwanda, and I’m already looking forward to the incredible conversations and experiences that await us there.</p>
+<p>Stay tuned, and see you in Kigali next year!</p>
+
+
+
+ ]]></description>
+  <category>deeplearning indaba</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-07/</guid>
+  <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Deep Learning Indaba 2024:Day 5, A Day of Insights, Innovation, and Inspiration</title>
@@ -1120,41 +1153,6 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/</guid>
   <pubDate>Mon, 10 Jun 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/dls-cert.png" medium="image" type="image/png" height="113" width="144"/>
-</item>
-<item>
-  <title>My Journey in Deep Learning: From TensorFlow to PyTorch and Back</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I recently completed the <code>DeepLearning.AI</code> TensorFlow Developer Professional Certificate, a milestone that marked a significant step in my deep learning journey. My exploration of TensorFlow began last year while taking the second course of the DeepLearning.AI Deep Learning Specialization, excellently taught by Andrew Ng.</p>
-<p>Following my initial foray into TensorFlow, I delved extensively into PyTorch during the Arewa Data Science Academy’s Deep Learning with PyTorch fellowship. The allure of PyTorch, with its state-of-the-art (SOTA) models, pythonic nature and high customizability, made me somewhat hesitant to further pursue TensorFlow. However, an unexpected opportunity arose when, as a moderator in the DeepLearning.AI Forum, I was invited to test a TensorFlow course. This experience reignited my interest and ultimately led me to pursue the Professional Certificate on Coursera.</p>
-<p>Contrary to my initial reservations, I found TensorFlow to be quite user-friendly. While it may offer less customization compared to PyTorch, TensorFlow’s learning curve is significantly gentler, making it accessible to a wider audience.</p>
-<p>The TensorFlow Developer Professional Certificate comprises four courses, each designed to quickly get learners up to speed with TensorFlow:</p>
-<ol type="1">
-<li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li>
-<li>Convolutional Neural Networks in TensorFlow</li>
-<li>Natural Language Processing in TensorFlow</li>
-<li>Sequences, Time Series, and Prediction</li>
-</ol>
-<p>The certificate is excellently taught by Laurence Moroney, who leads AI Advocacy at Google. His vision is to make AI easy for developers and widen access to machine learning careers for everyone. Laurence is a prolific author, with dozens of programming books to his name, including ‘AI and ML for Coders’ at O’Reilly. He is also an active member of the Science Fiction Writers of America, having authored several sci-fi novels, comic books, and a produced screenplay.</p>
-<p>Throughout the series of courses, I built on my existing TensorFlow skills, learning about regular dense layers, convolutional neural networks (CNNs), recurrent neural networks (RNNs), long short-term memory networks (LSTMs), gated recurrent units (GRUs), and more. I even explored lambda layers in TensorFlow. The culmination of the course involved applying deep learning and sequence models to time series data.</p>
-<p>Completing this course has been an immensely rewarding experience. I am grateful to Coursera for providing a 90% discount, making it possible for me to embark on and complete this learning journey. The structured learning path and the expertise of the instructors have significantly enhanced my understanding and proficiency in using TensorFlow.</p>
-<p>In conclusion, while my journey began with PyTorch, the experience with TensorFlow has been equally enriching. TensorFlow’s ease of use and comprehensive learning resources have made it a valuable tool in my deep learning toolkit. I am excited to apply these skills in future projects and continue exploring the evolving landscape of deep learning technologies.</p>
-
-
-
- ]]></description>
-  <category>tensorflow</category>
-  <category>ai</category>
-  <category>deep learning</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/</guid>
-  <pubDate>Mon, 27 May 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-dev/tensorflow-cert.png" medium="image" type="image/png" height="118" width="144"/>
 </item>
 </channel>
 </rss>
