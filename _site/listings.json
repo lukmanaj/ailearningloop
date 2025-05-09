@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/deeplearning-mentorship/index.html",
       "/posts/data-analytics/index.html",
       "/posts/mentorship-recognition/index.html",
       "/posts/geom-stats/index.html",
