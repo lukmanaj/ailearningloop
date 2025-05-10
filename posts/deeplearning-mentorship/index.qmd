@@ -9,6 +9,8 @@ image: "data-analytics.png"
 I am happy to announce to all that I have been recognized once again as one of the top contributing mentors for the two specializations I mentor at the DeepLearning.AI forum, the Data Analytics Professional Certification and the Tensorflow Developer Professional Certification. 
 Here are the certifications
 
-![data analytics]("/data-analytics.png")
+![data analytics](data-analytics.png)
 
-![tensorflow developer]("/tensorflow-dev.png")
+![tensorflow developer](tensorflow-dev.png)
+
+Super grateful to `DeepLearning.AI` for granting me this wonderful opportunity. 
