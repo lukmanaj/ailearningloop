@@ -1,0 +1,18 @@
+---
+title: "Exploring Power BI"
+author: "Lukman Aliyu Jibril"
+date: "2025-07-06"
+categories: [datacamp, data analytics]
+---
+
+Fifteen days ago, I hit a major personal milestone: a **500-day streak** on DataCamp. After immersing myself in AI-related courses for months, I decided to take a short detour to revisit a different domain—**data analytics**. So this week, I focused on completing the [Power BI Fundamentals](https://www.datacamp.com/completed/statement-of-accomplishment/track/12b5958754200636ba45352dc12c8007e8c5a30b) track on DataCamp.
+
+I sprinted through the track.After all, I’m no longer a novice in the data world. Having recently completed and even helped shape the **DeepLearning.AI Data Analytics Professional Certificate**, many of the foundational ideas were already familiar. This prior experience made the learning curve gentler and the journey much more exciting.
+
+Admittedly, I had some initial concerns. Power BI is closed source, and using it outside the DataCamp environment required a Windows laptop, something I don’t use by default. But I reminded myself that the value of practical, hands-on knowledge far outweighs the constraints. And *alhamdulillah*, it paid off. The skills I gained are very likely to be transferable.
+
+Now that I’ve completed the track, I’m setting my sights on the longer **Data Analysis with Power BI** track, and perhaps even the **Microsoft certification** eventually. Just like I hoped, diving deeper into Power BI gave me a firmer grasp of key data concepts. It was truly exhilarating.
+
+I explored tools like **Power Query**, **DAX (Data Analysis Expressions)**, and became more comfortable navigating the Power BI interface. A standout experience was a full course centered around a **customer churn** case study. It gave me a solid, practical scenario to apply what I had learned and boosted my confidence in building analytics solutions.
+
+Taking this short break from AI-focused learning reminded me how enriching it can be to return to the foundations. It gave me fresh data intuition and a renewed appreciation for the analytics process. I’m energized and looking forward to building on this momentum, and, in sha Allah, realizing even bigger dreams this year.
