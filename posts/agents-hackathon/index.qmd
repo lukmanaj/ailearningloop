@@ -1,0 +1,19 @@
+---
+title: "On Earning a Hackathon Certificate"
+author: "Lukman Aliyu Jibril"
+date: "2025-07-23"
+categories: [agents, gradio, mcp, hackathon, hugging face]
+image: "agents-cert.png"
+---
+
+Participating in the Gradio Agents MCP Hackathon last month was an incredible experience. Thanks to generous API credits from providers like Mistral, OpenAI, Anthropic, and others, I found myself with nearly \$400 worth of credits to explore. Drowning in so many APIs pushed me to experiment, learn, and grow as an AI developer.
+
+I submitted two distinct projects to the competition. Although I didn’t win a prize, the process taught me invaluable lessons—from designing multi-agent workflows to integrating conversational tools with custom prompts. And best of all, I received a certificate recognizing my active participation and project submissions.
+
+Receiving that certificate felt like a badge of honor. It reminds me that each hackathon is an opportunity not only to compete, but to sharpen my skills and connect with the community. I’m especially grateful to Hugging Face for organizing this event and supporting developers like me.
+
+Next stop: Deep Learning Indaba! I’m confident that the insights and hands‑on experience I’ve gained will make me a stronger contender this year. In shāʾ Allāh, my winning time will come—I’ll keep building, learning, and participating.
+
+Here’s a snapshot of my certificate:
+
+![My Hackathon Certificate](agents-cert.png)

@@ -9,8 +9,67 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.5.56</generator>
-<lastBuildDate>Wed, 07 May 2025 23:00:00 GMT</lastBuildDate>
+<generator>quarto-1.7.31</generator>
+<lastBuildDate>Tue, 22 Jul 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>On Earning a Hackathon Certificate</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/agents-hackathon/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Participating in the Gradio Agents MCP Hackathon last month was an incredible experience. Thanks to generous API credits from providers like Mistral, OpenAI, Anthropic, and others, I found myself with nearly $400 worth of credits to explore. Drowning in so many APIs pushed me to experiment, learn, and grow as an AI developer.</p>
+<p>I submitted two distinct projects to the competition. Although I didn’t win a prize, the process taught me invaluable lessons—from designing multi-agent workflows to integrating conversational tools with custom prompts. And best of all, I received a certificate recognizing my active participation and project submissions.</p>
+<p>Receiving that certificate felt like a badge of honor. It reminds me that each hackathon is an opportunity not only to compete, but to sharpen my skills and connect with the community. I’m especially grateful to Hugging Face for organizing this event and supporting developers like me.</p>
+<p>Next stop: Deep Learning Indaba! I’m confident that the insights and hands‑on experience I’ve gained will make me a stronger contender this year. In shāʾ Allāh, my winning time will come—I’ll keep building, learning, and participating.</p>
+<p>Here’s a snapshot of my certificate:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/agents-hackathon/agents-cert.png" class="img-fluid figure-img"></p>
+<figcaption>My Hackathon Certificate</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>agents</category>
+  <category>gradio</category>
+  <category>mcp</category>
+  <category>hackathon</category>
+  <category>hugging face</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/agents-hackathon/</guid>
+  <pubDate>Tue, 22 Jul 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/agents-hackathon/agents-cert.png" medium="image" type="image/png" height="102" width="144"/>
+</item>
+<item>
+  <title>Exploring Power BI</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/power-bi/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Fifteen days ago, I hit a major personal milestone: a <strong>500-day streak</strong> on DataCamp. After immersing myself in AI-related courses for months, I decided to take a short detour to revisit a different domain—<strong>data analytics</strong>. So this week, I focused on completing the <a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/12b5958754200636ba45352dc12c8007e8c5a30b">Power BI Fundamentals</a> track on DataCamp.</p>
+<p>I sprinted through the track.After all, I’m no longer a novice in the data world. Having recently completed and even helped shape the <strong>DeepLearning.AI Data Analytics Professional Certificate</strong>, many of the foundational ideas were already familiar. This prior experience made the learning curve gentler and the journey much more exciting.</p>
+<p>Admittedly, I had some initial concerns. Power BI is closed source, and using it outside the DataCamp environment required a Windows laptop, something I don’t use by default. But I reminded myself that the value of practical, hands-on knowledge far outweighs the constraints. And <em>alhamdulillah</em>, it paid off. The skills I gained are very likely to be transferable.</p>
+<p>Now that I’ve completed the track, I’m setting my sights on the longer <strong>Data Analysis with Power BI</strong> track, and perhaps even the <strong>Microsoft certification</strong> eventually. Just like I hoped, diving deeper into Power BI gave me a firmer grasp of key data concepts. It was truly exhilarating.</p>
+<p>I explored tools like <strong>Power Query</strong>, <strong>DAX (Data Analysis Expressions)</strong>, and became more comfortable navigating the Power BI interface. A standout experience was a full course centered around a <strong>customer churn</strong> case study. It gave me a solid, practical scenario to apply what I had learned and boosted my confidence in building analytics solutions.</p>
+<p>Taking this short break from AI-focused learning reminded me how enriching it can be to return to the foundations. It gave me fresh data intuition and a renewed appreciation for the analytics process. I’m energized and looking forward to building on this momentum, and, in sha Allah, realizing even bigger dreams this year.</p>
+
+
+
+ ]]></description>
+  <category>datacamp</category>
+  <category>data analytics</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/power-bi/</guid>
+  <pubDate>Sat, 05 Jul 2025 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Yet Another Quarter of Dedicated Mentorship</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -964,196 +1023,6 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</guid>
   <pubDate>Fri, 26 Jul 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/contribution.png" medium="image" type="image/png" height="92" width="144"/>
-</item>
-<item>
-  <title>Metrics for Medical Diagnosis Evaluation</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Medical diagnosis is a multifaceted endeavour that relies on a comprehensive assessment of various factors, including symptoms, tests, and medical history. Conditional probability, which calculates the likelihood of an event occurring given another event, plays a pivotal role in evaluating the effectiveness of medical diagnoses. In the context of healthcare, this involves estimating the probability of a patient having a disease, given that they have tested positive for it.</p>
-</section>
-<section id="understanding-accuracy" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-accuracy">Understanding Accuracy</h2>
-<p>One of the most commonly used metrics in medical diagnosis is accuracy. It gauges the overall proportion of accurate diagnoses, derived from correctly identifying patients with or without a specific ailment. Accuracy can be mathematically expressed as a combination of sensitivity and specificity, both of which are vital metrics.</p>
-<p><img src="https://latex.codecogs.com/png.latex?Accuracy%20=%20Sensitivity%20%5Ctimes%20Prevalence%20+%20Specificity%20%5Ctimes%20(1%20-%20Prevalence)"></p>
-</section>
-<section id="sensitivity-and-specificity" class="level2">
-<h2 class="anchored" data-anchor-id="sensitivity-and-specificity">Sensitivity and Specificity</h2>
-<p>Sensitivity measures the ability of a diagnostic method or model to correctly identify patients who have the disease, while specificity measures its ability to accurately identify those without the disease. These metrics can also be understood in terms of conditional probabilities, simplifying them to the probability of a positive or negative test result given a patient’s disease status.</p>
-<p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,disease%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?Specificity%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,normal%7D"></p>
-<p>In terms of conditional probabilities:</p>
-<p><img src="https://latex.codecogs.com/png.latex?Sensitivity%20=%20P(positive%7Cdisease)"> <img src="https://latex.codecogs.com/png.latex?Specificity%20=%20P(negative%7Cnormal)"></p>
-</section>
-<section id="positive-predictive-value-and-negative-predictive-value" class="level2">
-<h2 class="anchored" data-anchor-id="positive-predictive-value-and-negative-predictive-value">Positive Predictive Value and Negative Predictive Value</h2>
-<p>To assess the likelihood of a patient having or not having the disease based on their test results, we employ positive predictive value (PPV) and negative predictive value (NPV). These metrics provide insight into the probabilities of disease presence or absence given a positive or negative test result, respectively. This is more useful and practical than just sensitivity and specificity</p>
-<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,positive%5C,and%5C,disease%7D%7B%5C,number%5C,of%5C,positive%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20%5Cdfrac%7B%5C,number%5C,of%5C,negative%5C,and%5C,normal%7D%7B%5C,number%5C,of%5C,negative%7D"></p>
-<section id="leveraging-bayes-rule" class="level3">
-<h3 class="anchored" data-anchor-id="leveraging-bayes-rule">Leveraging Bayes’ Rule:</h3>
-<p>To calculate PPV and NPV, Bayes’ rule, a formula relating conditional probabilities, is employed. This rule offers a nuanced perspective by taking into account sensitivity, specificity, and prevalence—the proportion of patients with the disease in the population.</p>
-<p>Using conditional probabilities, we write:</p>
-<p><img src="https://latex.codecogs.com/png.latex?PPV%20=%20P(disease%7Cpositive)"></p>
-<p><img src="https://latex.codecogs.com/png.latex?NPV%20=%20P(normal%7Cnegative)"></p>
-</section>
-</section>
-<section id="confusion-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="confusion-matrix">Confusion Matrix</h2>
-<p>A confusion matrix serves as a valuable tool to visualize the performance of a diagnostic method or model. It displays true positives, true negatives, false positives, and false negatives for different thresholds or cut-off points, which can be adjusted to modify the diagnostic performance metrics.</p>
-<p>A confusion matrix can be represented as:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Positive</th>
-<th>Negative</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Disease</td>
-<td>TP</td>
-<td>FN</td>
-</tr>
-<tr class="even">
-<td>Normal</td>
-<td>FP</td>
-<td>TN</td>
-</tr>
-</tbody>
-</table>
-<p>where: TP = True Positives (number of)</p>
-<p>FP = False Positives</p>
-<p>FN = False Negatives</p>
-<p>TN = True Negatives</p>
-</section>
-<section id="precision-and-recall" class="level2">
-<h2 class="anchored" data-anchor-id="precision-and-recall">Precision and Recall</h2>
-<p>Precision measures the proportion of correctly identified positive test results, while recall assesses the proportion of patients with the disease that are accurately identified. These metrics are also synonymous with positive predictive value (PPV) and sensitivity, respectively.</p>
-<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20%5Cdfrac%7BTP%7D%7BTP+FP%7D"></p>
-<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20%5Cdfrac%7BTP%7D%7BTP+FN%7D"></p>
-<p>Precision and recall are also known as positive predictive value (PPV) and sensitivity, respectively. Therefore, they are equivalent to:</p>
-<p><img src="https://latex.codecogs.com/png.latex?Precision%20=%20PPR"></p>
-<p><img src="https://latex.codecogs.com/png.latex?Recall%20=%20Sensitivity"></p>
-</section>
-<section id="f1-score" class="level2">
-<h2 class="anchored" data-anchor-id="f1-score">F1-Score</h2>
-<p>The F1-score combines precision and recall into a single metric, which is the harmonic mean of both values. This metric is also known as the Dice coefficient score, reflecting the similarity between two sets.</p>
-<p><img src="https://latex.codecogs.com/png.latex?F1%5C,Score%20%20=%202%20%5Ctimes%20%5Cdfrac%7BPR%7D%7BP+R%7D"></p>
-</section>
-<section id="evaluating-diagnostic-methods-with-roc-curves" class="level2">
-<h2 class="anchored" data-anchor-id="evaluating-diagnostic-methods-with-roc-curves">Evaluating Diagnostic Methods with ROC Curves</h2>
-<p>To compare different diagnostic methods or models, the receiver operating characteristic (ROC) curve is a valuable tool. It illustrates the trade-off between sensitivity and specificity at varying thresholds. A high-performing diagnostic method or model should yield a ROC curve closely resembling the top-left corner of the plot, with the area under the ROC curve (AUC) indicating its overall performance.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/medical-eval/roc_curve.png" class="img-fluid figure-img"></p>
-<figcaption>ROC Curve</figcaption>
-</figure>
-</div>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>The multifaceted landscape of medical diagnosis evaluation encompasses a spectrum of metrics and tools. Understanding these metrics and their mathematical underpinnings is crucial for accurately assessing the performance of diagnostic methods and models in healthcare.</p>
-
-
-</section>
-
- ]]></description>
-  <category>evaluation metrics</category>
-  <category>medical diagnosis</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/medical-eval/</guid>
-  <pubDate>Fri, 05 Jul 2024 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Mastering Data Structures and Algorithms on Coursera</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I am thrilled to announce that I have successfully completed the <strong>Foundations of Algorithms and Data Structures Specialization</strong> offered by the University of Colorado Boulder on Coursera. The specialization was excellently taught by Professor Sriram Sankaranarayanan and spanned five comprehensive courses. I embarked on this journey last year, and it has been an enriching experience.</p>
-<section id="course-overview-and-learnings" class="level2">
-<h2 class="anchored" data-anchor-id="course-overview-and-learnings">Course Overview and Learnings</h2>
-<section id="algorithms-for-searching-sorting-and-indexing" class="level3">
-<h3 class="anchored" data-anchor-id="algorithms-for-searching-sorting-and-indexing">1. Algorithms for Searching, Sorting, and Indexing</h3>
-<p>This course laid the foundation for algorithm design and analysis. It covered:</p>
-<ul>
-<li>Basics of algorithm design and analysis</li>
-<li>Sorting arrays</li>
-<li>Data structures such as priority queues and hash functions</li>
-<li>Applications like Bloom filters</li>
-</ul>
-</section>
-<section id="trees-and-graphs-basics" class="level3">
-<h3 class="anchored" data-anchor-id="trees-and-graphs-basics">2. Trees and Graphs: Basics</h3>
-<p>This course delved into tree and graph data structures. Key topics included:</p>
-<ul>
-<li>Basic algorithms on tree data structures</li>
-<li>Binary search trees and self-balancing trees</li>
-<li>Graph data structures and traversal algorithms</li>
-<li>Advanced topics like kd-trees for spatial data and algorithms for spatial data</li>
-</ul>
-</section>
-<section id="dynamic-programming-and-greedy-algorithms" class="level3">
-<h3 class="anchored" data-anchor-id="dynamic-programming-and-greedy-algorithms">3. Dynamic Programming and Greedy Algorithms</h3>
-<p>In this course, I learned essential algorithm design techniques, including:</p>
-<ul>
-<li>Divide and conquer</li>
-<li>Dynamic programming</li>
-<li>Greedy algorithms</li>
-<li>Introduction to intractability (NP-completeness)</li>
-<li>Using linear/integer programming solvers for optimization problems</li>
-<li>Advanced topics in data structures</li>
-</ul>
-</section>
-<section id="approximate-algorithms-and-linear-programming" class="level3">
-<h3 class="anchored" data-anchor-id="approximate-algorithms-and-linear-programming">4. Approximate Algorithms and Linear Programming</h3>
-<p>This course focused on:</p>
-<ul>
-<li>Linear and integer programming formulations for solving algorithmic problems</li>
-<li>Applications in resource allocation, scheduling, task assignment, and the traveling salesperson problem</li>
-<li>Algorithms for NP-hard problems with guaranteed approximation factors</li>
-<li>Efficient algorithms providing useful bounds on optimal solutions</li>
-</ul>
-</section>
-<section id="advanced-data-structures-rsa-and-quantum-algorithms" class="level3">
-<h3 class="anchored" data-anchor-id="advanced-data-structures-rsa-and-quantum-algorithms">5. Advanced Data Structures, RSA, and Quantum Algorithms</h3>
-<p>The final course introduced:</p>
-<ul>
-<li>Number-theory based cryptography</li>
-<li>Basics of quantum algorithms</li>
-<li>Advanced data structures like B-Trees and Suffix Tries</li>
-</ul>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Completing this specialization has been a significant milestone in my Data Science and Machine Learning/AI journey. I am excited to apply the knowledge and skills I have gained to future projects and challenges.</p>
-<p>I highly recommend this specialization to anyone looking to deepen their understanding of algorithms and data structures. The courses are well-structured, and Professor Sriram Sankaranarayanan’s teaching is both clear and engaging.</p>
-<p>I look forward to what the future holds and I am eager to continue my learning journey in the ever-evolving field of Data Science and AI.</p>
-
-
-</section>
-
- ]]></description>
-  <category>data structures</category>
-  <category>algorithms</category>
-  <category>data science</category>
-  <category>programming</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/</guid>
-  <pubDate>Sun, 09 Jun 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dsa-algorithms-cert/dls-cert.png" medium="image" type="image/png" height="113" width="144"/>
 </item>
 </channel>
 </rss>

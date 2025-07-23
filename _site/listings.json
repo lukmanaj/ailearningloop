@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/agents-hackathon/index.html",
+      "/posts/power-bi/index.html",
       "/posts/deeplearning-mentorship/index.html",
       "/posts/data-analytics/index.html",
       "/posts/mentorship-recognition/index.html",

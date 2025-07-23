@@ -217,5 +217,11 @@
   },
   "posts/deeplearning-mentorship/index.qmd": {
     "index.html": "39fef214"
+  },
+  "posts/power-bi/index.qmd": {
+    "index.html": "5bc8a4b3"
+  },
+  "posts/agents-hackathon/index.qmd": {
+    "index.html": "d3f8543e"
   }
 }
