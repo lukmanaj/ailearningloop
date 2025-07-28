@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/crewai-cert/index.html",
       "/posts/agents-hackathon/index.html",
       "/posts/power-bi/index.html",
       "/posts/deeplearning-mentorship/index.html",
