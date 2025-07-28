@@ -223,5 +223,8 @@
   },
   "posts/agents-hackathon/index.qmd": {
     "index.html": "d3f8543e"
+  },
+  "posts/crewai-cert/index.qmd": {
+    "index.html": "f2b7b9d8"
   }
 }

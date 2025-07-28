@@ -10,7 +10,128 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.7.31</generator>
-<lastBuildDate>Tue, 22 Jul 2025 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 27 Jul 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</title>
+  <dc:creator>Lukman Aliyu</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/crewai-cert/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="leveling-up-with-crewai-my-multi-agent-systems-journey-with-deeplearning.ai" class="level1">
+<h1>🎖️ Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</h1>
+<section id="a-new-milestone" class="level2">
+<h2 class="anchored" data-anchor-id="a-new-milestone">🚀 A New Milestone</h2>
+<p>I’m excited to share that I’ve just earned my <strong>CrewAI badge</strong> after completing two hands-on courses from <strong>DeepLearning.AI</strong> on designing, deploying, and optimizing multi-agent AI systems.</p>
+<p>This badge is a symbol of a new way of thinking: about how a <strong>team of AI agents</strong> can work together to solve complex problems.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/crewai-cert/crewai-badge.jpg" class="img-fluid figure-img"></p>
+<figcaption>CrewAI Badge</figcaption>
+</figure>
+</div>
+<p><em>Badge awarded by João Moura, Founder &amp; CEO of CrewAI</em></p>
+<hr>
+</section>
+<section id="what-i-learned-from-single-prompts-to-agentic-intelligence" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-learned-from-single-prompts-to-agentic-intelligence">🧠 What I Learned: From Single Prompts to Agentic Intelligence</h2>
+<p>These courses taught me that while prompting a single LLM is powerful, orchestrating a <strong>crew of AI agents</strong> is revolutionary. Here’s a breakdown of what I learned:</p>
+<hr>
+</section>
+<section id="course-1-multi-agent-systems-with-crewai" class="level2">
+<h2 class="anchored" data-anchor-id="course-1-multi-agent-systems-with-crewai">🎓 Course 1: <em>Multi-Agent Systems with CrewAI</em></h2>
+<p>This foundational course helped me understand the <strong>core principles of multi-agent design</strong>:</p>
+<ul>
+<li><strong>Natural Language Agent Design</strong>: Define each agent’s role, goal, and backstory with simple prompts.</li>
+<li><strong>Specialization &amp; Decomposition</strong>: Break complex workflows into manageable sub-tasks across a crew.</li>
+<li><strong>Memory</strong>: Equip agents with short-term, long-term, and shared memory for context-aware performance.</li>
+<li><strong>Guardrails</strong>: Handle hallucinations, infinite loops, and error recovery in a structured way.</li>
+<li><strong>Cooperation Models</strong>: Sequence agents in parallel, series, or hierarchy for maximum effectiveness.</li>
+</ul>
+<section id="real-world-projects" class="level3">
+<h3 class="anchored" data-anchor-id="real-world-projects">💡 Real-World Projects:</h3>
+<ul>
+<li>Tailoring resumes and prepping for interviews<br>
+</li>
+<li>Researching and editing technical articles<br>
+</li>
+<li>Automating customer support<br>
+</li>
+<li>Running outreach campaigns<br>
+</li>
+<li>Planning events<br>
+</li>
+<li>Conducting financial analysis</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="course-2-practical-multi-ai-agents-advanced-use-cases" class="level2">
+<h2 class="anchored" data-anchor-id="course-2-practical-multi-ai-agents-advanced-use-cases">🔬 Course 2: <em>Practical Multi AI Agents &amp; Advanced Use Cases</em></h2>
+<p>This advanced course took things to the next level with <strong>real-world agentic applications</strong>:</p>
+<ul>
+<li><strong>Complex Workflows</strong>: Use nested crews and multi-agent orchestration for sophisticated systems.</li>
+<li><strong>Tool Integration</strong>: Connect agents to web search, CRMs, data pipelines, and RAG systems.</li>
+<li><strong>Performance Testing</strong>: Measure metrics, incorporate human feedback, and optimize results.</li>
+<li><strong>Deployment Readiness</strong>: Build and test agent apps ready for real-world deployment.</li>
+<li><strong>LLM Strategy</strong>: Use the right model (size, provider) for each agent’s task — cost-effectively.</li>
+</ul>
+<section id="use-cases-i-built" class="level3">
+<h3 class="anchored" data-anchor-id="use-cases-i-built">🛠️ Use Cases I Built:</h3>
+<ul>
+<li>A crew for automated project planning<br>
+</li>
+<li>Lead scoring with personalized email writing<br>
+</li>
+<li>Support ticket analysis with data visualization<br>
+</li>
+<li>A content crew using RAG + editors + social copy generators</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="relevance" class="level2">
+<h2 class="anchored" data-anchor-id="relevance">🧩 Relevance</h2>
+<p>We’re moving from single-model chatbots to <strong>modular AI ecosystems</strong>. These agentic systems mirror real-world teams — specialized, autonomous, and collaborative.</p>
+<p>With these skills, I can now build: - Business automation pipelines<br>
+- Data-rich analysis tools<br>
+- Content generation workflows<br>
+- Scalable, intelligent assistants</p>
+<hr>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">🌟 What’s Next?</h2>
+<p>These two courses have ignited a fire to build. I’m currently working on:</p>
+<ul>
+<li>🚧 Custom workflows using CrewAI and LangGraph<br>
+</li>
+<li>⚙️ Experimenting with memory tools and parallel agents<br>
+</li>
+<li>📢 Sharing demos and insights from my own agentic projects</li>
+</ul>
+<hr>
+<p>Special thanks to <strong>João Moura</strong> and <strong>DeepLearning.AI</strong> for creating such an empowering learning experience. If you’re curious about how agentic systems are shaping the future of AI, I’d love to connect, share, and collaborate.</p>
+<blockquote class="blockquote">
+<p><strong>The future isn’t just AI-powered. It’s AI-teamed.</strong><br>
+Let’s build it.</p>
+</blockquote>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>AI</category>
+  <category>CrewAI</category>
+  <category>DeepLearningAI</category>
+  <category>Multi-Agent Systems</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/crewai-cert/</guid>
+  <pubDate>Sun, 27 Jul 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/crewai-cert/crewai-badge.png" medium="image" type="image/png" height="102" width="144"/>
+</item>
 <item>
   <title>On Earning a Hackathon Certificate</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -967,62 +1088,6 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/</guid>
   <pubDate>Sat, 17 Aug 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/mentor-mail.png" medium="image" type="image/png" height="91" width="144"/>
-</item>
-<item>
-  <title>My Contribution to Quarto-web: A Small Edit with a Big Impact</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>I’m thrilled to share my recent experience contributing to the Quarto-web open-source project. Although it might seem like a small change, my contribution aimed to improve the clarity and readability of the documentation, ensuring users have a smoother experience when learning about Quarto. I’ve always appreciated Quarto since I first learned about it from <a href="https://shmuhammadd.github.io/">Dr.&nbsp;Shamsuddeen Muhammad</a> during the first cohort of the Arewa Data Science Fellowship. I continued practicing, and now I am proudly a contributor. I look forward to making more impactful contributions in the future.</p>
-</section>
-<section id="spotting-the-issue-a-simple-typo-and-punctuation-fix" class="level2">
-<h2 class="anchored" data-anchor-id="spotting-the-issue-a-simple-typo-and-punctuation-fix">Spotting the Issue: A Simple Typo and Punctuation Fix</h2>
-<p>While exploring the Quarto Dashboards documentation, specifically the <code>R Graphics</code> section tip on this <a href="https://quarto.org/docs/dashboards/data-display.html">page</a>, I noticed a minor typo—‘than’ was mistakenly written as ‘that’. Additionally, there were a few missing commas, which could potentially confuse readers.</p>
-<p>These might seem like minor issues, but clear and accurate documentation is crucial in helping users understand and utilize software tools effectively. I decided to take action and correct these mistakes to enhance the user experience.</p>
-</section>
-<section id="the-pull-request-a-quick-fix" class="level2">
-<h2 class="anchored" data-anchor-id="the-pull-request-a-quick-fix">The Pull Request: A Quick Fix</h2>
-<p>I submitted a pull request (#1214) to update the _plots-interactive.md file, which contained the typo and punctuation errors. The changes were straightforward:</p>
-<ul>
-<li>Corrected the typo from ‘that’ to ‘than’.</li>
-<li>Added a few missing commas for better clarity and readability.</li>
-</ul>
-<p>These edits were minor but important, as they helped ensure the documentation was accurate and easy to follow.</p>
-</section>
-<section id="merged-and-celebrated-the-joy-of-contributing" class="level2">
-<h2 class="anchored" data-anchor-id="merged-and-celebrated-the-joy-of-contributing">Merged and Celebrated: The Joy of Contributing</h2>
-<p>To my delight, my pull request was reviewed and merged by the maintainers. You can view the merged changes in the pull request <a href="https://github.com/quarto-dev/quarto-web/pull/1214">here</a>. It was a small contribution, but seeing my changes go live was incredibly rewarding. It was a reminder that even small contributions can make a big difference in the open-source community.</p>
-</section>
-<section id="reflections-on-my-contribution" class="level2">
-<h2 class="anchored" data-anchor-id="reflections-on-my-contribution">Reflections on My Contribution</h2>
-<p>This experience has taught me a few valuable lessons:</p>
-<ul>
-<li>Attention to Detail Matters: Even small errors in documentation can lead to misunderstandings. Taking the time to correct them helps improve the overall quality of the project.</li>
-<li>Every Contribution Counts: No matter the size, every contribution to an open-source project helps make it better. It’s about being part of a community effort.</li>
-<li>Learning and Growing: This was my first contribution to Quarto-web, and it has encouraged me to continue participating in open-source projects. There’s always something new to learn and areas to improve.</li>
-</ul>
-</section>
-<section id="looking-forward" class="level2">
-<h2 class="anchored" data-anchor-id="looking-forward">Looking Forward</h2>
-<p>I’m excited to continue exploring opportunities in the open-source world. Whether it’s fixing typos, adding features, or writing documentation, every bit helps the community grow and thrive. If you’re interested in getting involved, I encourage you to look for ways to contribute, no matter how small they may seem.</p>
-<p>Thank you for reading, and feel free to follow me on the social media links in my about page. Happy coding!</p>
-
-
-</section>
-
- ]]></description>
-  <category>quarto</category>
-  <category>quarto-web</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/</guid>
-  <pubDate>Fri, 26 Jul 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/contributing-to-quarto/contribution.png" medium="image" type="image/png" height="92" width="144"/>
 </item>
 </channel>
 </rss>
