@@ -22,9 +22,9 @@
 
 
 <section id="leveling-up-with-crewai-my-multi-agent-systems-journey-with-deeplearning.ai" class="level1">
-<h1>🎖️ Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</h1>
+<h1>Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</h1>
 <section id="a-new-milestone" class="level2">
-<h2 class="anchored" data-anchor-id="a-new-milestone">🚀 A New Milestone</h2>
+<h2 class="anchored" data-anchor-id="a-new-milestone">A New Milestone</h2>
 <p>I’m excited to share that I’ve just earned my <strong>CrewAI badge</strong> after completing two hands-on courses from <strong>DeepLearning.AI</strong> on designing, deploying, and optimizing multi-agent AI systems.</p>
 <p>This badge is a symbol of a new way of thinking: about how a <strong>team of AI agents</strong> can work together to solve complex problems.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -37,12 +37,12 @@
 <hr>
 </section>
 <section id="what-i-learned-from-single-prompts-to-agentic-intelligence" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-learned-from-single-prompts-to-agentic-intelligence">🧠 What I Learned: From Single Prompts to Agentic Intelligence</h2>
+<h2 class="anchored" data-anchor-id="what-i-learned-from-single-prompts-to-agentic-intelligence">What I Learned: From Single Prompts to Agentic Intelligence</h2>
 <p>These courses taught me that while prompting a single LLM is powerful, orchestrating a <strong>crew of AI agents</strong> is revolutionary. Here’s a breakdown of what I learned:</p>
 <hr>
 </section>
 <section id="course-1-multi-agent-systems-with-crewai" class="level2">
-<h2 class="anchored" data-anchor-id="course-1-multi-agent-systems-with-crewai">🎓 Course 1: <em>Multi-Agent Systems with CrewAI</em></h2>
+<h2 class="anchored" data-anchor-id="course-1-multi-agent-systems-with-crewai">Course 1: <em>Multi-Agent Systems with CrewAI</em></h2>
 <p>This foundational course helped me understand the <strong>core principles of multi-agent design</strong>:</p>
 <ul>
 <li><strong>Natural Language Agent Design</strong>: Define each agent’s role, goal, and backstory with simple prompts.</li>
@@ -70,17 +70,17 @@
 </section>
 </section>
 <section id="course-2-practical-multi-ai-agents-advanced-use-cases" class="level2">
-<h2 class="anchored" data-anchor-id="course-2-practical-multi-ai-agents-advanced-use-cases">🔬 Course 2: <em>Practical Multi AI Agents &amp; Advanced Use Cases</em></h2>
+<h2 class="anchored" data-anchor-id="course-2-practical-multi-ai-agents-advanced-use-cases">Course 2: <em>Practical Multi AI Agents &amp; Advanced Use Cases</em></h2>
 <p>This advanced course took things to the next level with <strong>real-world agentic applications</strong>:</p>
 <ul>
 <li><strong>Complex Workflows</strong>: Use nested crews and multi-agent orchestration for sophisticated systems.</li>
 <li><strong>Tool Integration</strong>: Connect agents to web search, CRMs, data pipelines, and RAG systems.</li>
 <li><strong>Performance Testing</strong>: Measure metrics, incorporate human feedback, and optimize results.</li>
 <li><strong>Deployment Readiness</strong>: Build and test agent apps ready for real-world deployment.</li>
-<li><strong>LLM Strategy</strong>: Use the right model (size, provider) for each agent’s task — cost-effectively.</li>
+<li><strong>LLM Strategy</strong>: Use the right model (size, provider) for each agent’s task, leading to cost-effective AI applications.</li>
 </ul>
 <section id="use-cases-i-built" class="level3">
-<h3 class="anchored" data-anchor-id="use-cases-i-built">🛠️ Use Cases I Built:</h3>
+<h3 class="anchored" data-anchor-id="use-cases-i-built">Use Cases I Built:</h3>
 <ul>
 <li>A crew for automated project planning<br>
 </li>
@@ -94,8 +94,8 @@
 </section>
 </section>
 <section id="relevance" class="level2">
-<h2 class="anchored" data-anchor-id="relevance">🧩 Relevance</h2>
-<p>We’re moving from single-model chatbots to <strong>modular AI ecosystems</strong>. These agentic systems mirror real-world teams — specialized, autonomous, and collaborative.</p>
+<h2 class="anchored" data-anchor-id="relevance">Relevance</h2>
+<p>We’re moving from single-model chatbots to <strong>modular AI ecosystems</strong>. These agentic systems mirror real-world teams that are specialized, autonomous, and collaborative.</p>
 <p>With these skills, I can now build: - Business automation pipelines<br>
 - Data-rich analysis tools<br>
 - Content generation workflows<br>
@@ -103,14 +103,14 @@
 <hr>
 </section>
 <section id="whats-next" class="level2">
-<h2 class="anchored" data-anchor-id="whats-next">🌟 What’s Next?</h2>
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next?</h2>
 <p>These two courses have ignited a fire to build. I’m currently working on:</p>
 <ul>
-<li>🚧 Custom workflows using CrewAI and LangGraph<br>
+<li>Custom workflows using CrewAI and LangGraph<br>
 </li>
-<li>⚙️ Experimenting with memory tools and parallel agents<br>
+<li>Experimenting with memory tools and parallel agents<br>
 </li>
-<li>📢 Sharing demos and insights from my own agentic projects</li>
+<li>Sharing demos and insights from my own agentic projects</li>
 </ul>
 <hr>
 <p>Special thanks to <strong>João Moura</strong> and <strong>DeepLearning.AI</strong> for creating such an empowering learning experience. If you’re curious about how agentic systems are shaping the future of AI, I’d love to connect, share, and collaborate.</p>
