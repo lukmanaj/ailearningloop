@@ -36,7 +36,7 @@ This foundational course helped me understand the **core principles of multi-age
 - **Guardrails**: Handle hallucinations, infinite loops, and error recovery in a structured way.
 - **Cooperation Models**: Sequence agents in parallel, series, or hierarchy for maximum effectiveness.
 
-### 💡 Real-World Projects:
+###  Real-World Projects:
 - Tailoring resumes and prepping for interviews  
 - Researching and editing technical articles  
 - Automating customer support  
