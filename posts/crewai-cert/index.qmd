@@ -14,7 +14,7 @@ I'm excited to share that I’ve just earned my **CrewAI badge** after completin
 
 This badge is a symbol of a new way of thinking: about how a **team of AI agents** can work together to solve complex problems.
 
-![CrewAI Badge](crewai-badge.jpg)
+![CrewAI Badge](crewai-badge.png)
 
 *Badge awarded by João Moura, Founder & CEO of CrewAI*
 
