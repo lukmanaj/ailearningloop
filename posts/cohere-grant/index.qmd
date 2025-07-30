@@ -10,7 +10,7 @@ image: "bio-aid-qa.png"
 
 It is with great pleasure that I announce to all that I’ve been selected as a **Cohere Labs Catalyst Grant** recipient!
 
-This grant supports bold ideas that use large language models to tackle real-world problems. With Cohere’s support and $2,000 in API credits, I’m launching a project I deeply care about: **BioAid QA** — an open-source, multilingual biomedical question-answering assistant for underserved communities.
+This grant supports bold ideas that use large language models to tackle real-world problems. With Cohere’s support and $2,000 in API credits, I’m launching a project I deeply care about: **BioAid QA**, an open-source, multilingual biomedical question-answering assistant for underserved communities.
 
 ---
 
@@ -66,9 +66,9 @@ This project doubles as software  and a **research contribution**. The planned d
 
 ---
 
-## Thank You, Cohere Labs!
+## Thank You, Cohere Labs
 
-Big thanks to **Cohere Labs** and the Catalyst team — especially Brittanyna Prince — for supporting this project. I’m also grateful to the community at [Arewa Data Science Academy](https://arewadatascience.github.io) for their continued encouragement.
+Big thanks to **Cohere Labs** and the Catalyst team for supporting this project. I’m also grateful to the community at [Arewa Data Science Academy](https://arewadatascience.github.io) for their continued encouragement.
 
 ---
 
