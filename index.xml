@@ -10,7 +10,40 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.7.32</generator>
-<lastBuildDate>Mon, 28 Jul 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 30 Jul 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Mentorship Milestone: Q2 Certificates from DeepLearning.AI</title>
+  <dc:creator>Lukman Aliyu</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I’m excited to share a milestone that reflects my commitment to giving back to the AI learning community.</p>
+<p>Over the past quarter, I’ve had the privilege of serving as a <strong>Mentor</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, supporting learners in their journey through two impactful specializations:</p>
+<ul>
+<li>🧠 <strong>Data Analytics Professional Certificate Specialization</strong></li>
+<li>⚙️ <strong>TensorFlow Developer Professional Certificate Specialization</strong></li>
+</ul>
+<p>As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to: - Clarify concepts for others (and often for myself!), - Share real-world insights on projects and tools, - And most importantly, connect with passionate, curious learners from all over the globe.</p>
+<p>I’m honored to have received these <strong>Q2 2025 Mentor Participation Certificates</strong> in recognition of that work: <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" class="img-fluid"> <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/TF1-Q2-mentor.png" class="img-fluid"></p>
+<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.</p>
+<p>Stay curious, stay generous.</p>
+<hr>
+<p><em>If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
+
+
+
+ ]]></description>
+  <category>mentorship</category>
+  <category>deepLearning.ai</category>
+  <category>ai community</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</guid>
+  <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
+</item>
 <item>
   <title>Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</title>
   <dc:creator>Lukman Aliyu</dc:creator>
@@ -1027,67 +1060,6 @@ Let’s build it.</p>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/</guid>
   <pubDate>Mon, 19 Aug 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/devotee.png" medium="image" type="image/png" height="99" width="144"/>
-</item>
-<item>
-  <title>A Journey from Learner to Leader: My Deep Learning.AI and Coursera Adventure</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>On August 14, 2024, I reached a significant milestone in my AI career: I was officially designated as a mentor for the TensorFlow Developer Certificate program on Deep Learning.AI and Coursera. This comprehensive certification, consisting of four courses, introduces learners to the powerful TensorFlow framework. As I reflect on this achievement, I’m filled with pride and gratitude for how far I’ve come in such a short time.</p>
-<section id="the-tensorflow-developer-professional-certificate" class="level2">
-<h2 class="anchored" data-anchor-id="the-tensorflow-developer-professional-certificate">The TensorFlow Developer Professional Certificate</h2>
-<p>The certificate program I now mentor comprises four essential courses:</p>
-<ol type="1">
-<li>Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning</li>
-<li>Convolutional Neural Networks in TensorFlow</li>
-<li>Natural Language Processing in TensorFlow</li>
-<li>Sequences, Time Series and Prediction</li>
-</ol>
-<p>These courses cover a broad spectrum of AI applications, from basic neural networks to advanced techniques in computer vision, natural language processing, and time series analysis.</p>
-</section>
-<section id="a-serendipitous-beginning" class="level2">
-<h2 class="anchored" data-anchor-id="a-serendipitous-beginning">A Serendipitous Beginning</h2>
-<p>My AI learning journey began with the Arewa Data Science Academy fellowship, a program that holds a special place in my heart. Simultaneously, I embarked on Andrew Ng’s Machine Learning Specialization on Coursera. This coincidence set the stage for my rapid progression in the AI community.</p>
-</section>
-<section id="rising-through-the-ranks" class="level2">
-<h2 class="anchored" data-anchor-id="rising-through-the-ranks">Rising Through the Ranks</h2>
-<p>My involvement with Deep Learning.AI and Coursera deepened quickly:</p>
-<ul>
-<li><p><strong>Forum Moderator:</strong> In November 2023, just a few months into my journey, I became a moderator at the DeepLearning.AI forum, helping to guide discussions and support learners tackling challenges in various courses offered in the community.</p></li>
-<li><p><strong>Course Tester:</strong> I was invited to be part of the testing group for a major course upgrade, partly due to my active contribution as a moderator, where we transitioned from an older version of TensorFlow to the cutting-edge TensorFlow 2.16. My insightful feedback contributed to refining the course content and user experience across all four courses.</p></li>
-</ul>
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/tester.png" class="img-fluid"></p>
-<ul>
-<li><strong>Mentor:</strong> The crowning achievement came in August 2024, when I was offered the opportunity to become a mentor for the TensorFlow Developer Certificate courses, in addition to my moderator role. This position allows me to guide learners through the intricacies of TensorFlow, from basic concepts to advanced applications in CNN, NLP, and time series prediction.</li>
-</ul>
-<p>This rapid transition from learner to contributor to mentor and moderator has been both humbling and exhilarating.</p>
-</section>
-<section id="celebrating-milestones-and-looking-ahead" class="level2">
-<h2 class="anchored" data-anchor-id="celebrating-milestones-and-looking-ahead">Celebrating Milestones and Looking Ahead</h2>
-<p>As I continue to contribute to the AI community, I’m committed to making a lasting impact in all the places I volunteer, especially at Arewa Data Science Academy, where my journey began. Each step forward reminds me of the importance of celebrating small victories while keeping an eye on future goals.</p>
-<p>My new role as a TensorFlow Developer Certificate mentor, alongside my moderator responsibilities, is not just a personal achievement; it’s an opportunity to give back to the community that has nurtured my growth. It’s a chance to inspire and guide the next generation of AI enthusiasts and developers across various domains of machine learning and deep learning.</p>
-</section>
-<section id="a-message-to-aspiring-ai-developers" class="level2">
-<h2 class="anchored" data-anchor-id="a-message-to-aspiring-ai-developers">A Message to Aspiring AI Developers</h2>
-<p>As I forge ahead in pursuing my dreams in the AI field, I’m reminded of the power of persistence, continuous learning, and community support. To all aspiring AI developers out there: keep pushing, keep learning, and remember that today’s learner can be tomorrow’s leader.</p>
-<p>The path from novice to mentor can be shorter than you think. With dedication and the right opportunities, you can quickly find yourself in a position to guide others. Embrace every chance to learn, contribute, and grow within the AI community.</p>
-<p>Here’s to the journey ahead, filled with neural networks, convolutional layers, natural language models, time series predictions, and the endless possibilities of artificial intelligence!</p>
-
-
-</section>
-
- ]]></description>
-  <category>tensorflow</category>
-  <category>arewads</category>
-  <category>deeplearning-ai</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/</guid>
-  <pubDate>Sun, 18 Aug 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/tensorflow-mentor/mentor-mail.png" medium="image" type="image/png" height="91" width="144"/>
 </item>
 </channel>
 </rss>
