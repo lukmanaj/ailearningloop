@@ -1,0 +1,82 @@
+---
+title: "Announcing BioAid QA: A Multilingual Biomedical Assistant Backed by the Cohere Catalyst Grant"
+author: "Lukman Aliyu"
+date: 2025-07-30
+categories: [cohere, biomedical nlp, biomedical-qa, cohere labs, catalyst]
+image: "bio-aid-qa.png"
+---
+
+> _“AI is only powerful if it reaches the people who need it most.”_
+
+It is with great pleasure that I announce to all that I’ve been selected as a **Cohere Labs Catalyst Grant** recipient!
+
+This grant supports bold ideas that use large language models to tackle real-world problems. With Cohere’s support and $2,000 in API credits, I’m launching a project I deeply care about: **BioAid QA** — an open-source, multilingual biomedical question-answering assistant for underserved communities.
+
+---
+
+## What is BioAid QA?
+
+**BioAid QA** is a retrieval-augmented generation (RAG) assistant designed to help healthcare workers and patients access trustworthy medical information in **English, Hausa, Swahili, and French**.
+
+It integrates **Cohere’s Command, Embed, and Rerank** models with a curated corpus of WHO and NIH resources. The system will be deployed via a lightweight **Gradio** interface and hosted on **Hugging Face Spaces**, making it accessible even in low-bandwidth settings.
+
+---
+
+## Technical Overview
+
+**BioAid QA** will be built as follows:
+
+### 1. Document Ingestion & Indexing
+- Curate biomedical texts (e.g., WHO guidelines, NIH fact sheets).
+- Split into passages and embed using **Cohere Embed**.
+- Store embeddings in a **Chroma** index.
+
+### 2. Multilingual Retrieval & Reranking
+- User questions (in multiple languages) are embedded and matched via nearest-neighbor search.
+- Passages are reranked using **Cohere Rerank** for relevance.
+
+### 3. Answer Generation
+- Top passages + query → **Cohere Command** → concise, fact-based answers.
+
+### 4. Deployment
+- Gradio frontend with language toggles.
+- Client-side caching and optimized UX for slow networks.
+
+---
+
+## Research & Deliverables
+
+This project doubles as software  and a **research contribution**. The planned deliverables include:
+
+- A **peer-reviewed paper** describing architecture, evaluation, and findings.
+- An MIT licensed **open-source GitHub repo**
+- A **deployed app** on Hugging Face Spaces.
+---
+
+## Timeline (July 2025 – January 2026)
+
+| Month       | Milestone                                                                 |
+|-------------|---------------------------------------------------------------------------|
+| July–August | Corpus curation, preprocessing, embedding & indexing                     |
+| September   | Retrieval + rerank integration, validation with QA pairs                 |
+| October     | Command-based generation + accuracy evaluation                           |
+| November    |  Refinement, paper drafts                            |
+| December    | Gradio app deployment + UX testing                                       |
+| January     | Final paper submission + open-source release                             |
+
+---
+
+## Thank You, Cohere Labs!
+
+Big thanks to **Cohere Labs** and the Catalyst team — especially Brittanyna Prince — for supporting this project. I’m also grateful to the community at [Arewa Data Science Academy](https://arewadatascience.github.io) for their continued encouragement.
+
+---
+
+## Follow Along
+
+I'll be documenting the full journey — wins, failures, and findings — right here on my Quarto blog.
+
+Stay tuned, and let’s build tools that **make health knowledge accessible for everyone.**
+
+_— Lukman Aliyu_  
+[lukman.j.aliyu@gmail.com](mailto:lukman.j.aliyu@gmail.com)

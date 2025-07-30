@@ -45,6 +45,137 @@
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
+  <title>Announcing BioAid QA: A Multilingual Biomedical Assistant Backed by the Cohere Catalyst Grant</title>
+  <dc:creator>Lukman Aliyu</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<blockquote class="blockquote">
+<p><em>“AI is only powerful if it reaches the people who need it most.”</em></p>
+</blockquote>
+<p>It is with great pleasure that I announce to all that I’ve been selected as a <strong>Cohere Labs Catalyst Grant</strong> recipient!</p>
+<p>This grant supports bold ideas that use large language models to tackle real-world problems. With Cohere’s support and $2,000 in API credits, I’m launching a project I deeply care about: <strong>BioAid QA</strong> — an open-source, multilingual biomedical question-answering assistant for underserved communities.</p>
+<hr>
+<section id="what-is-bioaid-qa" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-bioaid-qa">What is BioAid QA?</h2>
+<p><strong>BioAid QA</strong> is a retrieval-augmented generation (RAG) assistant designed to help healthcare workers and patients access trustworthy medical information in <strong>English, Hausa, Swahili, and French</strong>.</p>
+<p>It integrates <strong>Cohere’s Command, Embed, and Rerank</strong> models with a curated corpus of WHO and NIH resources. The system will be deployed via a lightweight <strong>Gradio</strong> interface and hosted on <strong>Hugging Face Spaces</strong>, making it accessible even in low-bandwidth settings.</p>
+<hr>
+</section>
+<section id="technical-overview" class="level2">
+<h2 class="anchored" data-anchor-id="technical-overview">Technical Overview</h2>
+<p><strong>BioAid QA</strong> will be built as follows:</p>
+<section id="document-ingestion-indexing" class="level3">
+<h3 class="anchored" data-anchor-id="document-ingestion-indexing">1. Document Ingestion &amp; Indexing</h3>
+<ul>
+<li>Curate biomedical texts (e.g., WHO guidelines, NIH fact sheets).</li>
+<li>Split into passages and embed using <strong>Cohere Embed</strong>.</li>
+<li>Store embeddings in a <strong>Chroma</strong> index.</li>
+</ul>
+</section>
+<section id="multilingual-retrieval-reranking" class="level3">
+<h3 class="anchored" data-anchor-id="multilingual-retrieval-reranking">2. Multilingual Retrieval &amp; Reranking</h3>
+<ul>
+<li>User questions (in multiple languages) are embedded and matched via nearest-neighbor search.</li>
+<li>Passages are reranked using <strong>Cohere Rerank</strong> for relevance.</li>
+</ul>
+</section>
+<section id="answer-generation" class="level3">
+<h3 class="anchored" data-anchor-id="answer-generation">3. Answer Generation</h3>
+<ul>
+<li>Top passages + query → <strong>Cohere Command</strong> → concise, fact-based answers.</li>
+</ul>
+</section>
+<section id="deployment" class="level3">
+<h3 class="anchored" data-anchor-id="deployment">4. Deployment</h3>
+<ul>
+<li>Gradio frontend with language toggles.</li>
+<li>Client-side caching and optimized UX for slow networks.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="research-deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="research-deliverables">Research &amp; Deliverables</h2>
+<p>This project doubles as software and a <strong>research contribution</strong>. The planned deliverables include:</p>
+<ul>
+<li>A <strong>peer-reviewed paper</strong> describing architecture, evaluation, and findings.</li>
+<li>An MIT licensed <strong>open-source GitHub repo</strong></li>
+<li><h2 id="a-deployed-app-on-hugging-face-spaces." class="anchored">A <strong>deployed app</strong> on Hugging Face Spaces.</h2></li>
+</ul>
+</section>
+<section id="timeline-july-2025-january-2026" class="level2">
+<h2 class="anchored" data-anchor-id="timeline-july-2025-january-2026">Timeline (July 2025 – January 2026)</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>July–August</td>
+<td>Corpus curation, preprocessing, embedding &amp; indexing</td>
+</tr>
+<tr class="even">
+<td>September</td>
+<td>Retrieval + rerank integration, validation with QA pairs</td>
+</tr>
+<tr class="odd">
+<td>October</td>
+<td>Command-based generation + accuracy evaluation</td>
+</tr>
+<tr class="even">
+<td>November</td>
+<td>Refinement, paper drafts</td>
+</tr>
+<tr class="odd">
+<td>December</td>
+<td>Gradio app deployment + UX testing</td>
+</tr>
+<tr class="even">
+<td>January</td>
+<td>Final paper submission + open-source release</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="thank-you-cohere-labs" class="level2">
+<h2 class="anchored" data-anchor-id="thank-you-cohere-labs">Thank You, Cohere Labs!</h2>
+<p>Big thanks to <strong>Cohere Labs</strong> and the Catalyst team — especially Brittanyna Prince — for supporting this project. I’m also grateful to the community at <a href="https://arewadatascience.github.io">Arewa Data Science Academy</a> for their continued encouragement.</p>
+<hr>
+</section>
+<section id="follow-along" class="level2">
+<h2 class="anchored" data-anchor-id="follow-along">Follow Along</h2>
+<p>I’ll be documenting the full journey — wins, failures, and findings — right here on my Quarto blog.</p>
+<p>Stay tuned, and let’s build tools that <strong>make health knowledge accessible for everyone.</strong></p>
+<p><em>— Lukman Aliyu</em><br>
+<a href="mailto:lukman.j.aliyu@gmail.com">lukman.j.aliyu@gmail.com</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>cohere</category>
+  <category>biomedical nlp</category>
+  <category>biomedical-qa</category>
+  <category>cohere labs</category>
+  <category>catalyst</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/</guid>
+  <pubDate>Tue, 29 Jul 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/bio-aid-qa.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
   <title>Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</title>
   <dc:creator>Lukman Aliyu</dc:creator>
   <link>https://lukmanaj.github.io/ailearningloop/posts/crewai-cert/</link>
@@ -157,10 +288,9 @@ Let’s build it.</p>
 </section>
 
  ]]></description>
-  <category>AI</category>
-  <category>CrewAI</category>
-  <category>DeepLearningAI</category>
-  <category>Multi-Agent Systems</category>
+  <category>crewai</category>
+  <category>deepLearningai</category>
+  <category>multi-agent systems</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/crewai-cert/</guid>
   <pubDate>Sun, 27 Jul 2025 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/crewai-cert/crewai-badge.png" medium="image" type="image/png" height="102" width="144"/>
@@ -1024,42 +1154,6 @@ Let’s build it.</p>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/responsible-ai/</guid>
   <pubDate>Sat, 24 Aug 2024 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/responsible-ai/responsible-ai.png" medium="image" type="image/png" height="83" width="144"/>
-</item>
-<item>
-  <title>The Power of Persistence: How 365 Days of Consistency Transformed My Learning Journey</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>After 365 consecutive days of active participation, I’m thrilled to announce that I’ve achieved Devotee status on the DeepLearning.AI forum. This milestone is more than just a badge—it shows the power of unwavering commitment and the compound effect of daily habits.</p>
-<p><img src="https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/devotee.png" class="img-fluid"></p>
-<p>The journey to Devotee status is as unforgiving as it is rewarding. Missing even a single day means starting over from scratch. Imagine the dedication required to maintain this streak for an entire year, knowing that a momentary lapse on day 364 would reset your progress to zero. It’s this level of consistency that separates casual participants from true devotees.</p>
-<p>My path to this achievement began with smaller milestones: the 10-day Enthusiast badge, followed by the 100-day Aficionado badge. Each step reinforced my commitment and built momentum towards the ultimate goal. Now, as only the fifth person in over four years to reach Devotee status, I find myself in the company of the forum’s most dedicated members.</p>
-<p>But this streak is just one facet of a larger commitment to personal growth through consistent effort. Parallel to my DeepLearning.AI journey, I’m maintaining a 196-day streak on DataCamp and a 261 day streak on GitHub. These aren’t just numbers; they represent a fundamental shift in how I approach learning and self-improvement.</p>
-<p>The concept of “atomic habits,” popularized by James Clear, has been instrumental in my approach. The idea is simple yet powerful: tiny, consistent changes accumulate over time, leading to significant personal transformation. By showing up every day, even when motivation wanes, I’m not just learning new skills—I’m reshaping my identity into someone who pursues growth relentlessly.</p>
-<p>This journey has taught me several valuable lessons:</p>
-<ol type="1">
-<li><p>Consistency trumps intensity: Small, daily efforts are more impactful than sporadic bursts of activity.</p></li>
-<li><p>Progress compounds: What seems like slow progress early on accelerates as habits become ingrained.</p></li>
-<li><p>Identity-based habits stick: By viewing myself as a “lifelong learner,” maintaining these streaks becomes natural.</p></li>
-<li><p>Community matters: The DeepLearning.AI forum and other platforms provide accountability and support.</p></li>
-</ol>
-<p>Moving forward, I’m committed to channeling my energy into endeavors that contribute to my professional and personal growth. This means setting ambitious targets, minimizing distractions like excessive social media use, and continuously reassessing my habits to ensure they align with my long-term goals.</p>
-<p>As I reflect on this achievement, I’m filled with gratitude for the guidance and opportunities that have brought me here. I’m also excited about the future, knowing that the habits I’ve built will serve as a foundation for even greater accomplishments.</p>
-<p>To those embarking on their own journey of consistent self-improvement, remember: every day is an opportunity to take a step forward. The path may be challenging, but the rewards—in knowledge gained, skills developed, and personal growth achieved—are immeasurable.</p>
-<p>Alhamdulillah for this milestone, and may Allah continue to guide and bless our efforts towards meaningful growth and contribution.</p>
-
-
-
- ]]></description>
-  <category>deeplearning-ai</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/</guid>
-  <pubDate>Sun, 18 Aug 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/forum-devotee/devotee.png" medium="image" type="image/png" height="99" width="144"/>
 </item>
 </channel>
 </rss>

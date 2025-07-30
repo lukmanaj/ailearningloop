@@ -2,7 +2,7 @@
 title: "Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI"
 author: "Lukman Aliyu"
 date: 2025-07-28
-categories: [AI, CrewAI, DeepLearningAI, Multi-Agent Systems]
+categories: [crewai, deepLearningai, multi-agent systems]
 image: "crewai-badge.png"
 ---
 
