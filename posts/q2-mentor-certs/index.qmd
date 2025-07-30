@@ -1,0 +1,33 @@
+---
+title: "Mentorship Milestone: Q2 Certificates from DeepLearning.AI"
+author: "Lukman Aliyu"
+date: 2025-07-30
+categories: [mentorship, deepLearning.ai, ai community]
+image: "DAG-Q2-mentor.png"
+---
+
+I'm excited to share a milestone that reflects my commitment to giving back to the AI learning community. 
+
+Over the past quarter, I've had the privilege of serving as a **Mentor** in the [DeepLearning.AI](https://www.deeplearning.ai) Discourse forums, supporting learners in their journey through two impactful specializations:
+
+- 🧠 **Data Analytics Professional Certificate Specialization**
+- ⚙️ **TensorFlow Developer Professional Certificate Specialization**
+
+As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to:
+- Clarify concepts for others (and often for myself!),
+- Share real-world insights on projects and tools,
+- And most importantly, connect with passionate, curious learners from all over the globe.
+
+I'm honored to have received these **Q2 2025 Mentor Participation Certificates** in recognition of that work:
+![](DAG-Q2-mentor.png)
+![](TF1-Q2-mentor.png)
+
+
+I'm deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.
+
+Stay curious, stay generous. 
+
+---
+
+_If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!_
+
