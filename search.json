@@ -193,7 +193,7 @@
     "href": "posts/cohere-grant/index.html#timeline-july-2025-january-2026",
     "title": "Announcing BioAid QA: A Multilingual Biomedical Assistant Backed by the Cohere Catalyst Grant",
     "section": "Timeline (July 2025 – January 2026)",
-    "text": "Timeline (July 2025 – January 2026)\n\n\n\n\n\n\n\nMonth\nMilestone\n\n\n\n\nJuly–August\nCorpus curation, preprocessing, embedding & indexing\n\n\nSeptember\nRetrieval + rerank integration, validation with QA pairs\n\n\nOctober\nCommand-based generation + accuracy evaluation\n\n\nNovember\nRefinement, paper drafts\n\n\nDecember\nGradio app deployment + UX testing\n\n\nJanuary\nFinal paper submission + open-source release"
+    "text": "Timeline (July 2025 – January 2026)\n\n\n\n\n\n\n\nMonth\nMilestone\n\n\n\n\nAugust\nCorpus curation, preprocessing, embedding & indexing\n\n\nSeptember\nRetrieval + rerank integration, validation with QA pairs\n\n\nOctober\nCommand-based generation + accuracy evaluation\n\n\nNovember\nRefinement, paper drafts\n\n\nDecember\nGradio app deployment + UX testing\n\n\nJanuary\nFinal paper submission + open-source release"
   },
   {
     "objectID": "posts/cohere-grant/index.html#thank-you-cohere-labs",
