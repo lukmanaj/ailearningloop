@@ -49,7 +49,7 @@ It integrates **Cohere’s Command, Embed, and Rerank** models with a curated co
 This project doubles as software  and a **research contribution**. The planned deliverables include:
 
 - A **peer-reviewed paper** describing architecture, evaluation, and findings.
-- An MIT licensed **open-source GitHub repo**
+- An MIT licensed **open-source GitHub repo**  
 - A deployed app on Hugging Face Spaces.
 ---
 
