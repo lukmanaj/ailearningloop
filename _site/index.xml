@@ -102,11 +102,12 @@
 <section id="research-deliverables" class="level2">
 <h2 class="anchored" data-anchor-id="research-deliverables">Research &amp; Deliverables</h2>
 <p>This project doubles as software and a <strong>research contribution</strong>. The planned deliverables include:</p>
-<ul>
+<ol type="1">
 <li>A <strong>peer-reviewed paper</strong> describing architecture, evaluation, and findings.</li>
-<li>An MIT licensed <strong>open-source GitHub repo</strong></li>
-<li><h2 id="a-deployed-app-on-hugging-face-spaces." class="anchored">A deployed app on Hugging Face Spaces.</h2></li>
-</ul>
+<li>An MIT licensed <strong>open-source GitHub repo</strong><br>
+</li>
+<li>A deployed app on Hugging Face Spaces</li>
+</ol>
 </section>
 <section id="timeline-july-2025-january-2026" class="level2">
 <h2 class="anchored" data-anchor-id="timeline-july-2025-january-2026">Timeline (July 2025 – January 2026)</h2>
@@ -439,7 +440,7 @@ Let’s build it.</p>
   <category>deeplearning-ai</category>
   <category>mentorship</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/mentorship-recognition/</guid>
-  <pubDate>Wed, 08 Jan 2025 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 07 Jan 2025 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/mentorship-recognition/Lukman.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
@@ -618,7 +619,7 @@ Let’s build it.</p>
   <category>tidyverse</category>
   <category>r-programming</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/geom-stats/</guid>
-  <pubDate>Mon, 11 Nov 2024 00:00:00 GMT</pubDate>
+  <pubDate>Sun, 10 Nov 2024 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>On Being Featured by DeepLearning.AI: A Milestone in My AI Journey</title>
@@ -676,7 +677,7 @@ Let’s build it.</p>
   <category>career-milestone</category>
   <category>ai-education</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dlai-feature/</guid>
-  <pubDate>Wed, 06 Nov 2024 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 05 Nov 2024 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Completing the Analyzing Genomic Data in R track on DataCamp</title>

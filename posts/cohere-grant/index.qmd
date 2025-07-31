@@ -48,9 +48,9 @@ It integrates **Cohere’s Command, Embed, and Rerank** models with a curated co
 
 This project doubles as software  and a **research contribution**. The planned deliverables include:
 
-- A **peer-reviewed paper** describing architecture, evaluation, and findings.
-- An MIT licensed **open-source GitHub repo**  
-- A deployed app on Hugging Face Spaces.
+1. A **peer-reviewed paper** describing architecture, evaluation, and findings.
+2. An MIT licensed **open-source GitHub repo**  
+3. A deployed app on Hugging Face Spaces
 
 
 ## Timeline (July 2025 – January 2026)
