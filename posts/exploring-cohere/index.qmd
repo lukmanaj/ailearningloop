@@ -1,0 +1,10 @@
+---
+title: "Exploring the Cohere Platform"
+author: "Lukman Aliyu"
+date: 2025-08-01
+categories: [cohere, nlp , cohere labs, catalyst]
+image: "cohere-dashboard.png"
+draft: true
+---
+
+After becoming a cohere catalyst grant recipient, the first step is for me to quickly get acquainted with the cohere platform. That is the only way I can have the 
