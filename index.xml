@@ -9,40 +9,44 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.7.32</generator>
-<lastBuildDate>Wed, 30 Jul 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Sun, 12 Oct 2025 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Mentorship Milestone: Q2 Certificates from DeepLearning.AI</title>
+  <title>Testing Andrew Ng’s Latest Course</title>
   <dc:creator>Lukman Aliyu</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</link>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/agentic-ai-test/</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p>I’m excited to share a milestone that reflects my commitment to giving back to the AI learning community.</p>
-<p>Over the past quarter, I’ve had the privilege of serving as a <strong>Mentor</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, supporting learners in their journey through two impactful specializations:</p>
+<p>I am super excited to share another milestone that reflects my commitment to giving back to the AI learning community.</p>
+<p>In late September 2025, I had the unique privilege of serving as one of course <strong>testers</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, that supported the rigorous testing of the Andrew Ng’s latest course titled <code>Agentic AI Course</code>.</p>
+<p>We had to look at the course holistically and check if it covers the four design patterns that power agentic AI systems (according to the <code>DeepLearning.AI</code> course page):</p>
 <ul>
-<li>🧠 <strong>Data Analytics Professional Certificate Specialization</strong></li>
-<li>⚙️ <strong>TensorFlow Developer Professional Certificate Specialization</strong></li>
+<li>Reflection: AI critiques its own work and iterates to improve quality—like code review, but automated.</li>
+<li>Tool Use: Connect AI to databases, APIs, and external services so it can actually perform actions, not just generate text.</li>
+<li>Planning: Break complex tasks into executable steps that AI can follow and adapt when things don’t go as expected.</li>
+<li>Multi-Agent: Coordinate multiple specialized AI systems to handle different parts of a complex workflow.</li>
 </ul>
-<p>As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to: - Clarify concepts for others (and often for myself!), - Share real-world insights on projects and tools, - And most importantly, connect with passionate, curious learners from all over the globe.</p>
-<p>I’m honored to have received these <strong>Q2 2025 Mentor Participation Certificates</strong> in recognition of that work: <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" class="img-fluid"> <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/TF1-Q2-mentor.png" class="img-fluid"></p>
-<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.</p>
+<p>I critically examined the video lessons, the graded and ungraded lab jupyter notebooks as well as the graded quizzes. I had a good time learning so many new agentic AI concepts.</p>
+<p>I am someone who has benefited greatly from learning communities, and I am super happy to give back in any little way I can. Agentic AI is the current trend and it was exciting to learn that Andrew came up with the name Agentic as used today in so many AI related workflow.</p>
+<p>Below is the certificate: <img src="https://lukmanaj.github.io/ailearningloop/posts/agentic-ai-test/agentic-ai-tester.png" class="img-fluid"></p>
+<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners, testers,mentors and other vibrant members of the AI community.</p>
 <p>Stay curious, stay generous.</p>
 <hr>
-<p><em>If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
+<p><em>If you’re learning or participate in testing AI courses, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
 
 
 
  ]]></description>
-  <category>mentorship</category>
+  <category>testing</category>
   <category>deepLearning.ai</category>
   <category>ai community</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</guid>
-  <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/agentic-ai-test/</guid>
+  <pubDate>Sun, 12 Oct 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/agentic-ai-test/agentic-ai-tester.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
   <title>Announcing BioAid QA: A Multilingual Biomedical Assistant Backed by the Cohere Catalyst Grant</title>
@@ -175,6 +179,39 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/</guid>
   <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/bio-aid-qa.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Mentorship Milestone: Q2 Certificates from DeepLearning.AI</title>
+  <dc:creator>Lukman Aliyu</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I’m excited to share a milestone that reflects my commitment to giving back to the AI learning community.</p>
+<p>Over the past quarter, I’ve had the privilege of serving as a <strong>Mentor</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, supporting learners in their journey through two impactful specializations:</p>
+<ul>
+<li>🧠 <strong>Data Analytics Professional Certificate Specialization</strong></li>
+<li>⚙️ <strong>TensorFlow Developer Professional Certificate Specialization</strong></li>
+</ul>
+<p>As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to: - Clarify concepts for others (and often for myself!), - Share real-world insights on projects and tools, - And most importantly, connect with passionate, curious learners from all over the globe.</p>
+<p>I’m honored to have received these <strong>Q2 2025 Mentor Participation Certificates</strong> in recognition of that work: <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" class="img-fluid"> <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/TF1-Q2-mentor.png" class="img-fluid"></p>
+<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.</p>
+<p>Stay curious, stay generous.</p>
+<hr>
+<p><em>If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
+
+
+
+ ]]></description>
+  <category>mentorship</category>
+  <category>deepLearning.ai</category>
+  <category>ai community</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</guid>
+  <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
   <title>Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</title>
@@ -1078,83 +1115,6 @@ Let’s build it.</p>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-01/</guid>
   <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-01/indaba.jpeg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Understanding Responsible AI: A Deep Dive into Ethical AI Development</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/responsible-ai/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Artificial intelligence (AI) is rapidly advancing, transforming industries from healthcare to transportation. With its growing influence, there is an increasing need to ensure that AI is developed and deployed responsibly. This is where Responsible AI (RAI) comes in—a framework designed to guide the ethical use of AI, ensuring fairness, transparency, accountability, and respect for human rights. In this article, I explore the key concepts of Responsible AI, its importance, and how organizations can implement strategies that align AI development with ethical principles.</p>
-<p>This article is primarily a summary of the content I learnt in the course <a href="https://app.datacamp.com/learn/courses/responsible-ai-practices">Responsible AI Practices</a> on DataCamp. I enrolled in this course after I had the privilege of reviewing the notebooks for the Responsible AI practicals for the upcoming Deep Learning Indaba 2024 in Dakar, Senegal. This combination of learning and practical experience has given me a well-rounded perspective on the principles of Responsible AI, which I am excited to share. I must also thank Arewa Data Science Academy for giving me the opportunity to enjoy a Data Camp scholarship, which allowed me to learn several concepts and earn relevant certifications for free.</p>
-<section id="defining-responsible-ai" class="level2">
-<h2 class="anchored" data-anchor-id="defining-responsible-ai">Defining Responsible AI</h2>
-<p>Responsible AI refers to the practice of designing, developing, and deploying AI systems with an understanding of their ethical implications and societal impacts. It is about ensuring that AI systems are fair, transparent, accountable, and respectful of privacy and human rights. The goal is to create AI that benefits society without causing harm, focusing not only on the technology itself but also on the values guiding its use.</p>
-</section>
-<section id="why-responsible-ai-is-crucial" class="level2">
-<h2 class="anchored" data-anchor-id="why-responsible-ai-is-crucial">Why Responsible AI is Crucial</h2>
-<p>AI’s ability to process vast amounts of data and learn from it is revolutionizing fields like healthcare, education, and finance. However, these advancements come with risks. AI can perpetuate biases, invade privacy, or be used unethically if not developed responsibly. For example, facial recognition systems have been found to have higher error rates for people of color, leading to discriminatory outcomes. Similarly, automated hiring systems can reflect and amplify existing biases in the data they are trained on.</p>
-<p>These risks highlight the need for Responsible AI practices that mitigate negative impacts and promote fairness and inclusivity. The stakes are high, making Responsible AI a critical aspect of any AI development strategy.</p>
-</section>
-<section id="key-principles-of-responsible-ai" class="level2">
-<h2 class="anchored" data-anchor-id="key-principles-of-responsible-ai">Key Principles of Responsible AI</h2>
-<p>The principles of Responsible AI are based on globally recognized guidelines, such as those from the Organisation for Economic Co-operation and Development (OECD). Key principles include:</p>
-<ol type="1">
-<li>Transparency and Explainability: AI systems should be designed so that their decisions can be understood and explained.</li>
-<li>Fairness and Non-Discrimination: AI should be free from biases and discrimination, promoting inclusivity and equity.</li>
-<li>Robustness and Safety: AI systems must be reliable, secure, and capable of operating safely in various conditions.</li>
-<li>Privacy and Data Governance: AI should respect privacy and ensure secure data handling.</li>
-<li>Accountability: Organizations should be accountable for the outcomes of their AI systems.</li>
-<li>Inclusive Growth and Sustainability: AI should bridge digital divides and contribute to sustainable development.</li>
-</ol>
-</section>
-<section id="responsible-ai-vs.-ai-ethics" class="level2">
-<h2 class="anchored" data-anchor-id="responsible-ai-vs.-ai-ethics">Responsible AI vs.&nbsp;AI Ethics</h2>
-<p>While Responsible AI and AI Ethics are closely related, they are not identical. AI Ethics focuses broadly on the philosophical and moral questions surrounding AI, while Responsible AI is more practical, emphasizing the implementation of ethical considerations in measurable ways. It involves using clear metrics and frameworks to ensure that AI systems align with ethical principles.</p>
-</section>
-<section id="the-global-regulatory-landscape" class="level2">
-<h2 class="anchored" data-anchor-id="the-global-regulatory-landscape">The Global Regulatory Landscape</h2>
-<p>Regulation of AI is still evolving, but several regions are leading the way. The European Union’s AI Act classifies AI systems based on risk levels and imposes stringent requirements on high-risk applications. In the United States, initiatives like the AI Bill of Rights and various state-level regulations are shaping AI governance. Countries like Canada, the UK, and China are also developing frameworks tailored to their societal and economic needs.</p>
-<p>These regulatory efforts share a common goal: to protect human rights while fostering innovation in AI. As AI technology continues to advance, these regulations will play a critical role in ensuring that AI systems are used responsibly.</p>
-</section>
-<section id="implementing-responsible-ai-an-8-step-approach" class="level2">
-<h2 class="anchored" data-anchor-id="implementing-responsible-ai-an-8-step-approach">Implementing Responsible AI: An 8-Step Approach</h2>
-<p>For organizations looking to implement Responsible AI, the following eight-step approach is recommended:</p>
-<ol type="1">
-<li>Embrace AI Governance: Secure organizational commitment to align AI development with ethical standards and business goals.</li>
-<li>Build an AI Playbook: Develop a strategic plan that documents AI governance practices, keeping it flexible and up to date.</li>
-<li>Identify Key Stakeholders: Engage both internal and external stakeholders to ensure inclusivity and address diverse perspectives.</li>
-<li>Leverage Internal Support Mechanisms: Use ethics boards, training programs, and AI squads to guide ethical AI development.</li>
-<li>Embrace a Multi-Stakeholder Approach: Include community members, industry experts, and policymakers in AI governance.</li>
-<li>Explore Additional Responsible Behavior Indicators: Demonstrate a commitment to Responsible AI through certifications, CSR standards, and transparent ESG reporting.</li>
-<li>Implement Governance Tools: Develop guidelines and procedures that uphold Responsible AI principles.</li>
-<li>Monitor, Audit, and Evaluate AI Systems: Continuously monitor and audit AI systems to ensure they remain aligned with ethical standards.</li>
-</ol>
-</section>
-<section id="the-importance-of-diversity-in-ai-development" class="level2">
-<h2 class="anchored" data-anchor-id="the-importance-of-diversity-in-ai-development">The Importance of Diversity in AI Development</h2>
-<p>Diversity, equity, and inclusion (DE&amp;I) are essential for creating fair and unbiased AI systems. A lack of diversity in AI development teams can lead to systems that reflect and reinforce societal biases. For instance, facial recognition systems and hiring algorithms have been shown to produce biased results when developed without diverse perspectives.</p>
-<p>Research shows that diverse teams are more innovative and perform better. Prioritizing DE&amp;I in AI development is not just ethically sound but also beneficial for business, leading to more robust and inclusive AI solutions.</p>
-</section>
-<section id="conclusion-the-path-forward-for-responsible-ai" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion-the-path-forward-for-responsible-ai">Conclusion: The Path Forward for Responsible AI</h2>
-<p>Responsible AI is a continuous journey that requires ongoing evaluation, monitoring, and adaptation. My recent experience reviewing content for the upcoming Deep Learning Indaba 2024 reinforced the importance of this topic. The principles I learned in the DataCamp course on Responsible AI practices, coupled with my practical experience, have deepened my understanding of the need for ethical AI governance.</p>
-<p>As AI continues to evolve, it is our collective responsibility to guide its development in ways that reflect our highest ethical standards. By embracing Responsible AI principles, we can ensure that AI serves humanity in a way that is fair, transparent, and accountable, ultimately contributing to a more equitable and sustainable future.</p>
-
-
-</section>
-
- ]]></description>
-  <category>deeplearning indaba</category>
-  <category>responsible ai</category>
-  <category>datacamp</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/responsible-ai/</guid>
-  <pubDate>Sun, 25 Aug 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/responsible-ai/responsible-ai.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 </channel>
 </rss>
