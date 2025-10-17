@@ -2,9 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/posit-tables-contest/index.html",
       "/posts/agentic-ai-test/index.html",
-      "/posts/cohere-grant/index.html",
       "/posts/q2-mentor-certs/index.html",
+      "/posts/cohere-grant/index.html",
       "/posts/crewai-cert/index.html",
       "/posts/agents-hackathon/index.html",
       "/posts/power-bi/index.html",
@@ -15,8 +16,8 @@
       "/posts/dlai-feature/index.html",
       "/posts/genomic-data-analysis/index.html",
       "/posts/health-informatics/index.html",
-      "/posts/dli-24-day-06/index.html",
       "/posts/dli-24-day-07/index.html",
+      "/posts/dli-24-day-06/index.html",
       "/posts/dli-24-day-05/index.html",
       "/posts/dli-24-day-04/index.html",
       "/posts/dli-24-day-03/index.html",
@@ -74,8 +75,8 @@
       "/posts/web-scraping/index.html",
       "/posts/practice-concepts/index.html",
       "/posts/how-to-learn/index.html",
-      "/posts/30-days-python/index.html",
       "/posts/arewads/index.html",
+      "/posts/30-days-python/index.html",
       "/posts/starting-python/index.html",
       "/posts/welcome/index.html"
     ]
