@@ -1,0 +1,125 @@
+---
+title: "Mapping the Latin American Pharmaceutical Landscape: Advanced Table Design with gt"
+subtitle: "My submission to the 2025 Table Contest"
+author: "Lukman Jibril Aliyu"
+date: 2025-10-17
+categories: [2025-table-contest, tables, R, gt, Quarto]
+image: visual-table.png
+theme: cosmo
+toc: true
+toc-depth: 3
+---
+
+## 📊 Full Description
+
+### Overview
+
+This submission explores how advanced table design can make complex pharmaceutical data both accessible and visually compelling. Using open-source data from the [`sydmizar/drugs-datasets`](https://github.com/sydmizar/drugs-datasets) repository, I analyzed over **28,000 unique drug preparations across Latin America**, classified under the **World Health Organization’s Anatomical Therapeutic Chemical (ATC)** system. The project demonstrates the creative and analytical potential of the `gt` package for building beautiful, information-rich tables in R.
+
+🔗 **Repository:** [lukmanaj/latam-pharma-atc-analysis](https://github.com/lukmanaj/latam-pharma-atc-analysis)
+
+---
+
+### What This Submission Demonstrates
+
+This project bridges **data analysis** and **data presentation**, showing how thoughtful table design can tell a clear story about the pharmaceutical landscape in Latin America.
+
+Key contributions include:
+
+#### 1. Data Storytelling
+
+* Progressive structure from overview → detail → comparison.
+* Inline insights summarizing concentration and diversity of drug formulations.
+* Designed for multiple audiences: policymakers, researchers, and data enthusiasts.
+
+#### 2. Technical Craftsmanship
+
+* Built entirely in **R + Quarto** using the `gt` package.
+* Enhanced readability through column spanners, semantic color scales, and footnotes.
+* Balanced typography, spacing, and annotations for professional polish.
+
+#### 3. Table Design Innovation
+
+* **Main Summary Table:** Heat-mapped metrics with contextual spanners and top-category highlights.
+* **Detailed Breakdown Table:** Row-grouped structure revealing leading ATC classes within each major category.
+* **Visual Ranking Table:** Embedded HTML progress bars for intuitive comparison and podium-style highlighting.
+
+---
+
+### Analytical Insights
+
+The analysis uncovered striking therapeutic trends:
+
+* **Market Concentration:** Over half of all preparations fall under the top three therapeutic categories—**nervous system**, **cardiovascular**, and **metabolic** drugs.
+* **Diversity vs. Specialization:** Categories like **dermatologicals** and **antiinfectives** exhibit higher formulation diversity, while others are highly specialized.
+* **Public Health Context:** The observed concentration suggests both opportunities and challenges in access, regulation, and health system resilience.
+
+---
+
+### Design Principles
+
+The submission embodies five core principles of effective table design:
+
+1. **Progressive Disclosure:** Reveal complexity gradually—from macro to micro views.
+2. **Visual Hierarchy:** Guide the reader’s attention using thoughtful alignment, color, and emphasis.
+3. **Contextual Enrichment:** Add footnotes and explanatory notes to clarify metrics.
+4. **Reproducibility:** Ensure the entire analysis can be rerun end-to-end using open data.
+5. **Accessibility:** Prioritize legibility through logical structure and descriptive labeling.
+
+---
+
+### Novel Elements
+
+* **Formulation Diversity Metric:** Introduces a new ratio—preparations per ATC class—as a measure of market variety.
+* **Podium Highlighting:** Subtle gold/silver/bronze styling for top three categories.
+* **Gradient Color Encoding:** Multi-scale palette differentiation between volume and diversity.
+* **Embedded Progress Bars:** Dynamic inline HTML elements for visual clarity.
+
+---
+
+### Why It Matters
+
+This project isn’t just about making a pretty table, it’s about **making data meaningful**. By connecting open pharmaceutical data with modern presentation tools, it highlights the potential of reproducible, visually literate analytics in public health and data science.
+
+The approach encourages:
+
+* **Transparency** in analysis pipelines.
+* **Accessibility** of insights to non-technical readers.
+* **Inspiration** for others to push the creative boundaries of `gt` and Quarto.
+
+---
+
+### Audience and Use Cases
+
+* **Regulators:** To understand therapeutic concentration and market diversity.
+* **Healthcare Organizations:** For planning formularies and supply chain priorities.
+* **Researchers:** To study pharmaceutical access, equity, and therapeutic trends.
+* **Data Scientists:** To learn advanced `gt` table design techniques.
+
+---
+
+### Reproducibility and Open Science
+
+All data sources, code, and outputs are **open and version-controlled**. The GitHub repository includes:
+
+* Full Quarto document (`.qmd`) with code folding and commentary.
+* Raw CSV data pulled from public GitHub repositories.
+* Rendered HTML output showcasing all tables.
+
+
+---
+
+### Acknowledgments
+
+This project builds on the incredible work of the R and Posit communities, particularly the authors and contributors behind the **`gt`** package and the **Great Tables** initiative. Their focus on clarity, design, and reproducibility continues to inspire creative, data-driven storytelling.
+
+---
+
+### Contest Metadata
+
+**Contest:** 2025 Table Contest
+**Created with:** Quarto · `gt` · R
+**Author:** Lukman Jibril Aliyu
+**Repository:** [github.com/lukmanaj/latam-pharma-atc-analysis](https://github.com/lukmanaj/latam-pharma-atc-analysis)
+
+---
