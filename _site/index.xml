@@ -9,7 +9,7 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.7.31</generator>
+<generator>quarto-1.9.37</generator>
 <lastBuildDate>Thu, 16 Oct 2025 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Mapping the Latin American Pharmaceutical Landscape: Advanced Table Design with gt</title>
@@ -184,39 +184,6 @@
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/agentic-ai-test/agentic-ai-tester.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
-  <title>Mentorship Milestone: Q2 Certificates from DeepLearning.AI</title>
-  <dc:creator>Lukman Aliyu</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I’m excited to share a milestone that reflects my commitment to giving back to the AI learning community.</p>
-<p>Over the past quarter, I’ve had the privilege of serving as a <strong>Mentor</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, supporting learners in their journey through two impactful specializations:</p>
-<ul>
-<li>🧠 <strong>Data Analytics Professional Certificate Specialization</strong></li>
-<li>⚙️ <strong>TensorFlow Developer Professional Certificate Specialization</strong></li>
-</ul>
-<p>As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to: - Clarify concepts for others (and often for myself!), - Share real-world insights on projects and tools, - And most importantly, connect with passionate, curious learners from all over the globe.</p>
-<p>I’m honored to have received these <strong>Q2 2025 Mentor Participation Certificates</strong> in recognition of that work: <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" class="img-fluid"> <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/TF1-Q2-mentor.png" class="img-fluid"></p>
-<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.</p>
-<p>Stay curious, stay generous.</p>
-<hr>
-<p><em>If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
-
-
-
- ]]></description>
-  <category>mentorship</category>
-  <category>deepLearning.ai</category>
-  <category>ai community</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</guid>
-  <pubDate>Tue, 29 Jul 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
-</item>
-<item>
   <title>Announcing BioAid QA: A Multilingual Biomedical Assistant Backed by the Cohere Catalyst Grant</title>
   <dc:creator>Lukman Aliyu</dc:creator>
   <link>https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/</link>
@@ -347,6 +314,39 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/</guid>
   <pubDate>Tue, 29 Jul 2025 23:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/bio-aid-qa.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Mentorship Milestone: Q2 Certificates from DeepLearning.AI</title>
+  <dc:creator>Lukman Aliyu</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I’m excited to share a milestone that reflects my commitment to giving back to the AI learning community.</p>
+<p>Over the past quarter, I’ve had the privilege of serving as a <strong>Mentor</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, supporting learners in their journey through two impactful specializations:</p>
+<ul>
+<li>🧠 <strong>Data Analytics Professional Certificate Specialization</strong></li>
+<li>⚙️ <strong>TensorFlow Developer Professional Certificate Specialization</strong></li>
+</ul>
+<p>As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to: - Clarify concepts for others (and often for myself!), - Share real-world insights on projects and tools, - And most importantly, connect with passionate, curious learners from all over the globe.</p>
+<p>I’m honored to have received these <strong>Q2 2025 Mentor Participation Certificates</strong> in recognition of that work: <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" class="img-fluid"> <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/TF1-Q2-mentor.png" class="img-fluid"></p>
+<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.</p>
+<p>Stay curious, stay generous.</p>
+<hr>
+<p><em>If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
+
+
+
+ ]]></description>
+  <category>mentorship</category>
+  <category>deepLearning.ai</category>
+  <category>ai community</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</guid>
+  <pubDate>Tue, 29 Jul 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
   <title>Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</title>

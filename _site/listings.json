@@ -2,10 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/ai4med/index.html",
       "/posts/posit-tables-contest/index.html",
       "/posts/agentic-ai-test/index.html",
-      "/posts/q2-mentor-certs/index.html",
       "/posts/cohere-grant/index.html",
+      "/posts/q2-mentor-certs/index.html",
       "/posts/crewai-cert/index.html",
       "/posts/agents-hackathon/index.html",
       "/posts/power-bi/index.html",
