@@ -9,8 +9,44 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.8.25</generator>
-<lastBuildDate>Fri, 17 Oct 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Completing the AI for Medicine Specialization A Second Time</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/ai4med/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I just completed the <a href="https://learn.deeplearning.ai/specializations/ai-for-medicine/">AI for Medicine Specialization</a> for the second time, having first finished it about two years ago. DeepLearning.AI recently launched their own learning platform, and a majority of courses were migrated there from Coursera, though learners can still take them on Coursera as well. As a mentor and course tester, I was granted a Pro subscription for as long as I remain active in the community, which gave me the opportunity to retake courses I had completed before and explore new ones.</p>
+<p>Today, I completed the third and final course of the specialization. Revisiting the material was genuinely rewarding. I found myself both reinforcing concepts I had previously learned and gaining new perspectives I had missed the first time around.</p>
+<p>The specialization covers three courses:</p>
+<ul>
+<li><strong>AI for Medical Diagnosis</strong> — applying deep learning to medical imaging tasks such as chest X-ray interpretation and brain MRI segmentation.</li>
+<li><strong>AI for Medical Prognosis</strong> — building prognostic models using survival analysis and handling real-world clinical data.</li>
+<li><strong>AI for Medical Treatment</strong> — exploring treatment effect estimation, natural language processing for clinical notes, and the evaluation of medical AI systems.</li>
+</ul>
+<p>Over the past few weeks, I deepened my understanding of how AI is being applied across the full clinical pipeline, from diagnosis and prognosis to treatment decisions. Key topics that stood out this time included model evaluation in medical contexts (where the cost of false negatives and false positives is rarely symmetric), explainable AI, and SHAP (SHapley Additive exPlanations) values as a framework for understanding what drives model predictions. These are especially important in medicine, where clinicians need to trust and interrogate a model’s reasoning, not just its outputs. Given my background in NLP and biomedical text, it was also interesting to see how many of these interpretability and evaluation principles translate across modalities.</p>
+<p>Below is the certificate:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/ai4med/lukman-ai4m.png" class="img-fluid figure-img"></p>
+<figcaption>AI for Medicine Professional Certificate</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>deeplearning.ai</category>
+  <category>AI in Medicine</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/ai4med/</guid>
+  <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/ai4med/lukman-ai4m.png" medium="image" type="image/png" height="108" width="144"/>
+</item>
 <item>
   <title>Mapping the Latin American Pharmaceutical Landscape: Advanced Table Design with gt</title>
   <dc:creator>Lukman Jibril Aliyu</dc:creator>
@@ -184,39 +220,6 @@
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/agentic-ai-test/agentic-ai-tester.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
-  <title>Mentorship Milestone: Q2 Certificates from DeepLearning.AI</title>
-  <dc:creator>Lukman Aliyu</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I’m excited to share a milestone that reflects my commitment to giving back to the AI learning community.</p>
-<p>Over the past quarter, I’ve had the privilege of serving as a <strong>Mentor</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, supporting learners in their journey through two impactful specializations:</p>
-<ul>
-<li>🧠 <strong>Data Analytics Professional Certificate Specialization</strong></li>
-<li>⚙️ <strong>TensorFlow Developer Professional Certificate Specialization</strong></li>
-</ul>
-<p>As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to: - Clarify concepts for others (and often for myself!), - Share real-world insights on projects and tools, - And most importantly, connect with passionate, curious learners from all over the globe.</p>
-<p>I’m honored to have received these <strong>Q2 2025 Mentor Participation Certificates</strong> in recognition of that work: <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" class="img-fluid"> <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/TF1-Q2-mentor.png" class="img-fluid"></p>
-<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.</p>
-<p>Stay curious, stay generous.</p>
-<hr>
-<p><em>If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
-
-
-
- ]]></description>
-  <category>mentorship</category>
-  <category>deepLearning.ai</category>
-  <category>ai community</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</guid>
-  <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
-</item>
-<item>
   <title>Announcing BioAid QA: A Multilingual Biomedical Assistant Backed by the Cohere Catalyst Grant</title>
   <dc:creator>Lukman Aliyu</dc:creator>
   <link>https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/</link>
@@ -347,6 +350,39 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/</guid>
   <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/bio-aid-qa.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Mentorship Milestone: Q2 Certificates from DeepLearning.AI</title>
+  <dc:creator>Lukman Aliyu</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I’m excited to share a milestone that reflects my commitment to giving back to the AI learning community.</p>
+<p>Over the past quarter, I’ve had the privilege of serving as a <strong>Mentor</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, supporting learners in their journey through two impactful specializations:</p>
+<ul>
+<li>🧠 <strong>Data Analytics Professional Certificate Specialization</strong></li>
+<li>⚙️ <strong>TensorFlow Developer Professional Certificate Specialization</strong></li>
+</ul>
+<p>As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to: - Clarify concepts for others (and often for myself!), - Share real-world insights on projects and tools, - And most importantly, connect with passionate, curious learners from all over the globe.</p>
+<p>I’m honored to have received these <strong>Q2 2025 Mentor Participation Certificates</strong> in recognition of that work: <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" class="img-fluid"> <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/TF1-Q2-mentor.png" class="img-fluid"></p>
+<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.</p>
+<p>Stay curious, stay generous.</p>
+<hr>
+<p><em>If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
+
+
+
+ ]]></description>
+  <category>mentorship</category>
+  <category>deepLearning.ai</category>
+  <category>ai community</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</guid>
+  <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
   <title>Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</title>
@@ -1127,87 +1163,6 @@ Let’s build it.</p>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-03/</guid>
   <pubDate>Tue, 03 Sep 2024 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Day 2 at Deep Learning Indaba 2024: Bridging AI Innovation and Ethics in Africa</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-02/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>As the sun rose over Dakar, Senegal, it marked the beginning of another exhilarating day at the Deep Learning Indaba 2024. Hosted by the prestigious Université Amadou Mahtar Mbow, this gathering of brilliant minds from across Africa continues to push the boundaries of AI innovation on the continent. Today’s experiences were nothing short of transformative, blending cutting-edge technology with ethical considerations and a spirit of collaboration that defines the African AI community.</p>
-<section id="morning-keynote-causethical-ml---from-theory-to-practice" class="level2">
-<h2 class="anchored" data-anchor-id="morning-keynote-causethical-ml---from-theory-to-practice">Morning Keynote: Causethical ML - From Theory to Practice</h2>
-<p>The day kicked off with an enlightening keynote on Causethical Machine Learning. This session delved into the critical intersection of causal inference and ethical AI, emphasizing a fundamental principle: algorithms should not only be efficient but also fair and grounded in ethically acceptable reasoning.</p>
-<p>The speaker articulated a compelling vision where fairness in AI isn’t just a moral imperative but a practical one. By ensuring that our algorithms make decisions based on ethically sound principles, we create a win-win scenario. Not only do we uphold justice and equality, but we also create systems that benefit all stakeholders in the long run. This approach to AI development resonates deeply with the African context, where technology must be developed with a keen awareness of diverse societal needs and historical inequities.</p>
-</section>
-<section id="ai-for-good-microsofts-vision-for-positive-impact" class="level2">
-<h2 class="anchored" data-anchor-id="ai-for-good-microsofts-vision-for-positive-impact">AI for Good: Microsoft’s Vision for Positive Impact</h2>
-<p>Following the keynote, we had the privilege of hearing from representatives of the Microsoft AI for Good Research Lab. Their presentation was a testament to the transformative power of AI when applied to pressing global challenges.</p>
-</section>
-<section id="pushing-boundaries-snake-venom-analysis-using-large-language-models" class="level2">
-<h2 class="anchored" data-anchor-id="pushing-boundaries-snake-venom-analysis-using-large-language-models">Pushing Boundaries: Snake Venom Analysis Using Large Language Models</h2>
-<p>One of the most fascinating sessions of the day focused on an unexpected application of AI: analyzing and sequencing snake venom using Large Language Models (LLMs). This presentation was a perfect example of how AI can revolutionize even the most specialized scientific fields. The researchers demonstrated how they’ve adapted LLMs, typically used for processing human languages, to “read” the complex molecular structures of various snake venoms. This application has enormous potential for:</p>
-<ul>
-<li>Accelerating the development of antivenoms</li>
-<li>Identifying new compounds for pharmaceutical research</li>
-<li>Enhancing our understanding of snake biology and evolution</li>
-</ul>
-<p>As someone deeply interested in both AI and biodiversity, I found this session to be a brilliant demonstration of interdisciplinary research. It showcased how AI tools developed for one domain can find groundbreaking applications in entirely different fields.</p>
-</section>
-<section id="hands-on-learning-tutoring-responsible-ai-practicals" class="level2">
-<h2 class="anchored" data-anchor-id="hands-on-learning-tutoring-responsible-ai-practicals">Hands-on Learning: Tutoring Responsible AI Practicals</h2>
-<p>A personal highlight of my day was the opportunity to serve as a tutor for the Responsible AI practicals. Having reviewed the notebooks ahead of the Indaba, I was excited to guide participants through the intricacies of developing AI systems with ethical considerations at their core. The notebooks (English and French) are available on <a href="https://github.com/deep-learning-indaba/indaba-pracs-2024/tree/main/practicals/Responsible_AI">github</a></p>
-<p>What struck me most was the eagerness of the participants to engage with these critical issues. Their questions and insights reflected a deep understanding of the potential impacts of AI on African societies and a commitment to developing technologies that uplift rather than marginalize.</p>
-<p>These sessions embodied the Indaba’s theme of “Xam Xamlé” – to gain knowledge and share it. The collaborative spirit in the room was palpable, with participants from various countries sharing their unique perspectives on responsible AI development.</p>
-</section>
-<section id="inspiring-vision-building-up-the-future-of-ai-in-africa" class="level2">
-<h2 class="anchored" data-anchor-id="inspiring-vision-building-up-the-future-of-ai-in-africa">Inspiring Vision: Building Up the Future of AI in Africa</h2>
-<p>The day concluded with an electrifying presentation by Karim Beguir titled “Building Up the Future of AI in Africa.” Beguir’s talk was a rallying cry for African AI researchers and developers, emphasizing that we are living in an unprecedented era of opportunity.</p>
-<p>Key points from his presentation included:</p>
-<ul>
-<li>The democratization of AI tools, with resources like Llama 3.1 now accessible to researchers across the continent</li>
-<li>The groundbreaking work being done at InstaDeep, showcasing African-led innovation in AI</li>
-<li>An overview of Project Tatooine, a collaboration with GoMyCode aimed at nurturing the next generation of AI talent in Africa, particularly in less developed locations.</li>
-</ul>
-<p><strong>Beguir’s central message</strong> – that “agents are the future” – sparked intense discussions among attendees. The vision of AI agents autonomously solving complex problems, tailored to African contexts, opened up exciting possibilities for innovation across various sectors.</p>
-</section>
-<section id="networking-and-collaboration-the-heart-of-indaba" class="level2">
-<h2 class="anchored" data-anchor-id="networking-and-collaboration-the-heart-of-indaba">Networking and Collaboration: The Heart of Indaba</h2>
-<p>While the formal sessions were incredibly informative, some of the most valuable moments came from the connections made between sessions. The Indaba’s atmosphere encourages spontaneous discussions and collaborations, leading to some exciting developments:</p>
-<p>I joined two hackathons – one hosted by Meta and another by InstaDeep. These events are not just competitions but incubators for ideas that could evolve into impactful projects.</p>
-<p>The coffee breaks buzzed with energy as participants exchanged ideas, formed impromptu working groups, and planned future collaborations.</p>
-</section>
-<section id="a-moment-of-personal-connection" class="level2">
-<h2 class="anchored" data-anchor-id="a-moment-of-personal-connection">A Moment of Personal Connection</h2>
-<p>Amidst the whirlwind of activities, I experienced a deeply meaningful personal moment. After nearly two years of virtual collaboration, I finally met Dr.&nbsp;Shamsuddeen Hassan Muhammad in person. Our work together has been a source of immense learning and growth for me, and meeting face-to-face was an emotional and inspiring experience.</p>
-<p>I also had the pleasure of meeting Dr.&nbsp;Idris Abdulmumin, another mentor who has played a crucial role in my journey. Having collaborated on a paper and benefited from his guidance during our first hackathon win, meeting him in person was a moment of profound gratitude.</p>
-<p>These interactions underscored the importance of mentorship and personal connections in the world of AI research. They reminded me that behind every algorithm and research paper are human relationships that drive innovation and personal growth.</p>
-</section>
-<section id="reflections-and-looking-ahead" class="level2">
-<h2 class="anchored" data-anchor-id="reflections-and-looking-ahead">Reflections and Looking Ahead</h2>
-<p>As I reflect on this second day of the Deep Learning Indaba, I’m filled with a sense of optimism and purpose. The convergence of brilliant minds, cutting-edge research, and a shared commitment to ethical AI development creates an environment where true innovation can flourish.</p>
-<p>The discussions and presentations today highlighted several key themes that I believe will shape the future of AI in Africa:</p>
-<ul>
-<li>The importance of developing AI solutions that address uniquely African challenges and opportunities</li>
-<li>The critical need for responsible AI practices that consider the diverse ethical and societal implications of these technologies</li>
-<li>The power of collaboration and knowledge sharing in accelerating AI innovation across the continent</li>
-</ul>
-<p>As we move into the latter half of the Indaba, I’m eager to see how these themes will evolve and what new insights will emerge. The energy and intellect gathered here in Dakar are a testament to the bright future of AI in Africa.</p>
-<p>Alhamdulillah for another day filled with learning, connection, and inspiration. The Deep Learning Indaba continues to be a catalyst for AI innovation in Africa, and I’m honored to be part of this transformative experience.</p>
-<p>Stay tuned for more updates as we continue this exciting journey at the forefront of AI in Africa!</p>
-
-
-</section>
-
- ]]></description>
-  <category>deeplearning indaba</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-02/</guid>
-  <pubDate>Mon, 02 Sep 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-02/indaba-logo.jpeg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
