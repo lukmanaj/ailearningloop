@@ -1,0 +1,16 @@
+---
+title: "Returning to Writing: Community, Milestones, and Next Steps"
+author: "Lukman Aliyu Jibril"
+date: "2026-09-04"
+categories: [community, updates, career]
+---
+
+It has been just over four months since my last post. Balancing full-time work with technical mentoring and research preparation left little room for regular writing, but I am setting an intentional pace to change that. Moving forward, my goal is to share shorter, consistent technical notes and reflections at least twice a week.
+
+The past few months have been productive across several fronts:
+
+* **Community & Mentorship:** I have stayed actively engaged as a mentor and forum moderator with DeepLearning.AI, supporting learners through the Data Analytics Specialization and TensorFlow Developer Professional Certificate tracks, alongside beta testing upcoming curriculum modules. At the same time, I continue to mentor peers within the Arewa Data Science Academy.
+* **Deep Learning Indaba 2026:** Attending Indaba in Lagos last month was a highlight. Having experienced past editions abroad, gathering with the continental ML community right here at home brought a fresh perspective and renewed energy.
+* **Graduate Admissions:** I am actively applying for doctoral positions and competitive fully funded master's programs at the intersection of health data science and computational modeling.
+
+I am deeply grateful for the continuous growth, and I look forward to using this space to document what I am building, reading, and learning in the coming weeks.
