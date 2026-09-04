@@ -9,8 +9,36 @@
 <link>https://lukmanaj.github.io/ailearningloop/</link>
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
-<generator>quarto-1.9.37</generator>
-<lastBuildDate>Wed, 13 May 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Fri, 04 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Returning to Writing: Community, Milestones, and Next Steps</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/back-after-hiatus/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>It has been just over four months since my last post. Balancing full-time work with technical mentoring and research preparation left little room for regular writing, but I am setting an intentional pace to change that. Moving forward, my goal is to share shorter, consistent technical notes and reflections at least twice a week.</p>
+<p>The past few months have been productive across several fronts:</p>
+<ul>
+<li><strong>Community &amp; Mentorship:</strong> I have stayed actively engaged as a mentor and forum moderator with DeepLearning.AI, supporting learners through the Data Analytics Specialization and TensorFlow Developer Professional Certificate tracks, alongside beta testing upcoming curriculum modules. At the same time, I continue to mentor peers within the Arewa Data Science Academy.</li>
+<li><strong>Deep Learning Indaba 2026:</strong> Attending Indaba in Lagos last month was a highlight. Having experienced past editions abroad, gathering with the continental ML community right here at home brought a fresh perspective and renewed energy.</li>
+<li><strong>Graduate Admissions:</strong> I am actively applying for doctoral positions and competitive fully funded master’s programs at the intersection of health data science and computational modeling.</li>
+</ul>
+<p>I am deeply grateful for the continuous growth, and I look forward to using this space to document what I am building, reading, and learning in the coming weeks.</p>
+
+
+
+ ]]></description>
+  <category>community</category>
+  <category>updates</category>
+  <category>career</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/back-after-hiatus/</guid>
+  <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Completing the AI for Medicine Specialization A Second Time</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -220,6 +248,39 @@
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/agentic-ai-test/agentic-ai-tester.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
+  <title>Mentorship Milestone: Q2 Certificates from DeepLearning.AI</title>
+  <dc:creator>Lukman Aliyu</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I’m excited to share a milestone that reflects my commitment to giving back to the AI learning community.</p>
+<p>Over the past quarter, I’ve had the privilege of serving as a <strong>Mentor</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, supporting learners in their journey through two impactful specializations:</p>
+<ul>
+<li>🧠 <strong>Data Analytics Professional Certificate Specialization</strong></li>
+<li>⚙️ <strong>TensorFlow Developer Professional Certificate Specialization</strong></li>
+</ul>
+<p>As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to: - Clarify concepts for others (and often for myself!), - Share real-world insights on projects and tools, - And most importantly, connect with passionate, curious learners from all over the globe.</p>
+<p>I’m honored to have received these <strong>Q2 2025 Mentor Participation Certificates</strong> in recognition of that work: <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" class="img-fluid"> <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/TF1-Q2-mentor.png" class="img-fluid"></p>
+<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.</p>
+<p>Stay curious, stay generous.</p>
+<hr>
+<p><em>If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
+
+
+
+ ]]></description>
+  <category>mentorship</category>
+  <category>deepLearning.ai</category>
+  <category>ai community</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</guid>
+  <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
+</item>
+<item>
   <title>Announcing BioAid QA: A Multilingual Biomedical Assistant Backed by the Cohere Catalyst Grant</title>
   <dc:creator>Lukman Aliyu</dc:creator>
   <link>https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/</link>
@@ -350,39 +411,6 @@
   <guid>https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/</guid>
   <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/cohere-grant/bio-aid-qa.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Mentorship Milestone: Q2 Certificates from DeepLearning.AI</title>
-  <dc:creator>Lukman Aliyu</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I’m excited to share a milestone that reflects my commitment to giving back to the AI learning community.</p>
-<p>Over the past quarter, I’ve had the privilege of serving as a <strong>Mentor</strong> in the <a href="https://www.deeplearning.ai">DeepLearning.AI</a> Discourse forums, supporting learners in their journey through two impactful specializations:</p>
-<ul>
-<li>🧠 <strong>Data Analytics Professional Certificate Specialization</strong></li>
-<li>⚙️ <strong>TensorFlow Developer Professional Certificate Specialization</strong></li>
-</ul>
-<p>As someone who has benefited greatly from open learning communities, I know how transformative peer guidance can be. Mentoring gave me the chance to: - Clarify concepts for others (and often for myself!), - Share real-world insights on projects and tools, - And most importantly, connect with passionate, curious learners from all over the globe.</p>
-<p>I’m honored to have received these <strong>Q2 2025 Mentor Participation Certificates</strong> in recognition of that work: <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" class="img-fluid"> <img src="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/TF1-Q2-mentor.png" class="img-fluid"></p>
-<p>I’m deeply thankful to the DeepLearning.AI team for creating such a thriving and inclusive space for learners and mentors alike.</p>
-<p>Stay curious, stay generous.</p>
-<hr>
-<p><em>If you’re learning or mentoring in AI, feel free to reach out or share your experience—I’d love to hear your story!</em></p>
-
-
-
- ]]></description>
-  <category>mentorship</category>
-  <category>deepLearning.ai</category>
-  <category>ai community</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/</guid>
-  <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/q2-mentor-certs/DAG-Q2-mentor.png" medium="image" type="image/png" height="111" width="144"/>
 </item>
 <item>
   <title>Leveling Up with CrewAI: My Multi-Agent Systems Journey with DeepLearning.AI</title>
@@ -1126,43 +1154,6 @@ Let’s build it.</p>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-04/</guid>
   <pubDate>Wed, 04 Sep 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-04/arewadsdli.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Deep Learning Indaba 2024:Day 3, A Day of Insights, Innovation, and Inspiration</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-03/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Attending the Deep Learning Indaba 2024 in Dakar has been a whirlwind of learning, networking, and inspiration. Day 3 was particularly packed with enriching activities and thought-provoking sessions that left me energized and inspired.</p>
-<p>The day began with a compelling keynote by Samy Bengio on “Learning to Reason.” Samy delved deep into the challenges that transformer models still face when it comes to reasoning. While transformers have revolutionized natural language processing, their ability to reason like humans remains limited. Samy presented some innovative methods to enhance this reasoning ability, sparking a lively discussion among attendees. It was fascinating to see how research continues to push the boundaries of what AI can achieve.</p>
-<p>After the keynote, I attended a hands-on practical session on Federated Learning. Having spent the last two days tutoring, it was refreshing to be on the learning side again. We explored how federated learning can play a crucial role in fostering responsible AI, particularly by ensuring data privacy and security. We also got hands-on with Flower, an open-source framework for building federated learning systems, and discussed the added complexities that arise when working with heterogeneous datasets. Thanks to my prior experience with the DeepLearning.AI Federated Learning short course, I could dive deeper into the challenges and opportunities in this space.</p>
-<p>Next, I joined a career mentorship session with Sekou Remy from IBM. This was one of the highlights of my day, as Sekou shared invaluable advice on navigating one’s career in AI. Some key takeaways included:</p>
-<ul>
-<li>Make decisions based on the evidence you can gather while planning your future.</li>
-<li>Take advantage of internships during undergrad and grad school; they are invaluable for gaining experience.</li>
-<li>Find a balance between acquiring new knowledge (exploration) and applying what you know (exploitation).</li>
-<li>Time is your most valuable asset—use it wisely.</li>
-<li>AI offers significant potential in data capture and analysis.</li>
-<li>Always keep an open mind and be willing to learn.</li>
-<li>Networking is not just a buzzword; it is key to professional growth.</li>
-</ul>
-<p>This session was a reminder of the importance of being strategic, adaptable, and proactive in our career journeys.</p>
-<p>After that, I attended a fascinating session on “Multimodal Perception for Human and Animal Behavior Understanding,” led by Marwa Mahmoud from the University of Glasgow’s Behavioural AI Laboratory. Marwa discussed her work on the early detection of neurodevelopmental conditions in children using multimodal features, highlighting the critical need for explainable and interpretable models. Given that these models are designed to assist healthcare providers, transparency in AI decisions is paramount. She also touched on the use of probabilistic models as a first line of support in decision-making.</p>
-<p>What struck me was the complexity and subjectivity involved in applying AI to psychology and behavior analysis, where getting well-labeled datasets can be incredibly challenging. Marwa also provided a glimpse into her work on modeling animal behavior, which can be even more daunting than human behavior. She referenced her paper, “Going Deeper than Tracking: A Survey of Computer Vision-Based Recognition of Animal Pain and Affective States,” which further explores these complexities.</p>
-<p>To wrap up the day, I joined discussions on community programs, featuring inspiring talks from various AI communities like GhanaAI, Masakhane, and others. They shared their initiatives and the tangible impacts they’ve made in their regions. It was a powerful reminder of the importance of community in driving AI forward, especially in underrepresented regions. The discussions were filled with passion and a shared vision of using AI for good.</p>
-<p>Throughout the day, I also had the opportunity to network with fellow attendees, exchange ideas, and work on our hackathon submission. The energy and camaraderie in the room were palpable, and it was exciting to be part of a community so dedicated to pushing the boundaries of AI.</p>
-<p>Day 3 at Deep Learning Indaba 2024 was truly a day of insights, innovation, and inspiration—a perfect blend of learning, sharing, and growing together. I am looking forward to what the rest of the week will bring!</p>
-
-
-
- ]]></description>
-  <category>deeplearning indaba</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/dli-24-day-03/</guid>
-  <pubDate>Tue, 03 Sep 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
