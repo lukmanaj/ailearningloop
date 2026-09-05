@@ -10,7 +10,37 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Fri, 04 Sep 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 05 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Learning Linux with LFS101</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/2026-09-05-learning-bash/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I have completed the Linux Foundation’s <a href="https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101">Introduction to Linux (LFS101)</a> course and earned the certificate. This was a useful opportunity to strengthen my understanding of Linux through both graphical tools and the command line, while becoming more comfortable with the environment that supports so much of modern software and data work.</p>
+<p>The course gave me a practical foundation for working across major Linux distributions. I especially valued the hands-on focus: learning the command line is much more meaningful when each command becomes part of a workflow rather than something to memorize in isolation. It also reminded me that confidence with Linux grows through regular practice and exploration.</p>
+<p>I completed the exam with a score of <strong>27/30 (90%)</strong>. I am pleased with the result, but the certificate is also a starting point. I plan to keep using the shell in my projects and continue building the habits needed to work effectively in Linux-based environments.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukmanaj.github.io/ailearningloop/posts/2026-09-05-learning-bash/intro-linux-cert.png" class="img-fluid figure-img"></p>
+<figcaption>Linux Foundation Introduction to Linux certificate</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>linux</category>
+  <category>learning</category>
+  <category>certification</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/2026-09-05-learning-bash/</guid>
+  <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/2026-09-05-learning-bash/intro-linux-cert.png" medium="image" type="image/png" height="112" width="144"/>
+</item>
 <item>
   <title>Returning to Writing: Community, Milestones, and Next Steps</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1120,40 +1150,6 @@ Let’s build it.</p>
   <category>deeplearning indaba</category>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/2024-09-05-dli-24-day-05/</guid>
   <pubDate>Thu, 05 Sep 2024 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Deep Learning Indaba 2024:Day 4, Celebrating African Research, Learning, and Community Building</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/2024-09-04-dli-24-day-04/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Today at Deep Learning Indaba 2024 was nothing short of inspiring! As the event unfolds, I’m continually amazed by the depth and diversity of research being conducted across Africa. Here’s a recap of my fourth day:</p>
-<p><strong>Celebrating African Research Excellence</strong>: The day began with the Indaba Kambule Doctoral Thesis Award ceremony, which recognizes outstanding doctoral research by African scholars. This award is a testament to the originality and impact of research emerging from the continent, highlighting the innovative spirit driving Africa forward in AI and data science.</p>
-<p><strong>Diving into Oral Presentations and Poster Sessions</strong>: The day continued with IndabaX Oral Presentations and two sessions of Poster Presentations. The posters showcased a range of exciting research:</p>
-<ul>
-<li>Deep Learning-Based Lesion Segmentation for Early Liver Tumor Detection in Rwanda: Using a hybrid ResNet-UNet model, researchers presented significant results in early tumor detection from liver CT scans—a major step forward for healthcare in Rwanda.</li>
-<li>siSwatiSent: Sentiment Analysis Dataset for siSwati: A unique sentiment analysis dataset for the siSwati language, extracted from YouTube comments. This study emphasizes the need for more African language resources in NLP.</li>
-<li>CHOWNET-V1: An Image Dataset of Nigerian Food: A fascinating dataset that addresses the underrepresentation of African cuisine in machine learning research, enhancing diversity in food classification tasks.</li>
-</ul>
-<p><strong>Mentorship and Knowledge Sharing</strong>: I was fortunate to join a mentorship session with Georgina Curto Rex. Our discussion revolved around the importance of selecting meaningful problems to work on and the role of having a guiding purpose as we explore various research avenues. This session was a reminder that our work should always aim to make a real-world impact.</p>
-<p><strong>Understanding the Limitations of LLMs</strong>: The keynote lecture by Caglar Gulcehre focused on the limitations of large language models (LLMs). It was an eye-opening discussion that explored both the capabilities and the constraints of these models, sparking ideas on how we might improve and innovate further in the field.</p>
-<p><strong>Learning to Publish</strong>: The day wrapped up with a Research Writing event, where we were taught the nuances of writing and publishing impactful research papers. This session was invaluable for anyone looking to contribute meaningfully to the academic community.</p>
-<p><strong>A Memorable Arewa Data Science Connect</strong>: The day ended on a high note with our Arewa Data Science connect session. It was heartwarming to take a picture with my fellow Arewa Data Science folks at Indaba—strengthening our sense of community and shared purpose in advancing data science across Africa.</p>
-<p><strong>A New Discovery</strong>: On a lighter note, I discovered a new country today—Eswatini! It was a humbling moment, reminding me of the endless learning opportunities that events like this bring.</p>
-<p><strong>Reflecting on the Day</strong>: Today was a blend of knowledge, mentorship, and community. I feel incredibly fortunate to be part of this transformative event that is shaping the future of AI and data science in Africa. Here’s to more learning, connecting, and growing together!</p>
-<p>Stay tuned for more updates from Deep Learning Indaba 2024!</p>
-
-
-
- ]]></description>
-  <category>deeplearning indaba</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/2024-09-04-dli-24-day-04/</guid>
-  <pubDate>Wed, 04 Sep 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/2024-09-04-dli-24-day-04/arewadsdli.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
