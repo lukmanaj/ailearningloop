@@ -1,0 +1,12 @@
+---
+title: "Continuing My Command Line Education"
+author: "Lukman Aliyu Jibril"
+date: "2026-09-06"
+categories: [linux, command line]
+---
+
+I am currently exploring the book "The Linux Command Line" by William Shotts, the seventh internet edition. I am going through the book and practising along as I read. This is my immediate follow up to the Linux certification I recently earned. By now, most people know that I am a lifelong learner and I always want to learn more. The advent of AI is only making me more knowledge-hungry. 
+
+I am at Chapter 7 and I intend to go over it slowly while trying to understand at a deeper level, what makes the Linux command line tick. Here's to more knowledge and progress. 
+
+I will continue giving updates periodically as I continue pursuing the secrets of the command line.
