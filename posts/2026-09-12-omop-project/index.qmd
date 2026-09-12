@@ -1,0 +1,55 @@
+---
+title: "What survives a healthcare data transformation"
+author: "Lukman Aliyu Jibril"
+date: "2026-09-12"
+categories: [ohdsi, rwd, analytics, research]
+---
+
+## A small synthetic audit inspired by OMOP and Oxford Botnar-2026-05
+
+Real-world evidence depends on a chain of transformations. Data may begin in a pharmacy system, an electronic health record, a hospital registry, or a logistics platform. Before researchers can run a reproducible analysis across institutions, those different representations often need to be standardised into a Common Data Model such as OMOP CDM.
+
+Standardisation is useful, but it is not magic. A transformation can produce valid-looking tables while dropping events, duplicating records, breaking foreign-key relationships, or mapping local codes to the wrong standard concepts.
+
+That is the problem I explored in this small portfolio project: **can a transformation audit reveal fidelity problems before they affect downstream research?**
+
+## The synthetic experiment
+
+I created a fictional source dataset containing patients, encounters, clinical conditions, and medicines. I then transformed it into OMOP-like `person`, `visit_occurrence`, `condition_occurrence`, and `drug_exposure` tables.
+
+The audit checks five signals:
+
+1. **Event coverage:** does each source event appear in the target tables?
+2. **Duplicate source IDs:** did one source event become multiple target rows unexpectedly?
+3. **Concept mapping coverage:** can every local code be traced to a target concept?
+4. **Referential integrity:** do target records point to real people and visits?
+5. **Relationship fidelity:** are the important patient–encounter–event relationships still valid?
+
+I also generated a second dataset with deliberately injected defects: a missing condition, a duplicated drug exposure, an orphan patient foreign key, and an unmapped local code. The aim was not to achieve a perfect score; it was to test whether the audit could make known defects visible.
+
+## Why this matters for OMOP research
+
+The Oxford Botnar-2026-05 project asks how to measure the structural similarity or distance between source real-world data and its OMOP-transformed representation. That is a deeper version of the same problem.
+
+My current implementation uses transparent rule-based checks. A natural research progression would be to represent both source and target data as typed graphs, define domain-aware structural signatures, and evaluate how well different similarity measures detect transformation errors. The next stage could compare the audit’s findings with established OMOP data-quality tools and investigate whether errors can be prioritised or corrected automatically.
+
+## What I learned
+
+The most important lesson is that row counts are not enough. A pipeline may preserve the number of records while changing the relationships that give those records meaning. Conversely, a small loss of records may be obvious in coverage metrics but difficult to interpret without provenance and mapping metadata.
+
+This is why I am approaching OMOP as a data-quality and scientific-reproducibility problem, not just as a database schema to memorise.
+
+## Limitations and next steps
+
+This is a synthetic proof of concept. It does not use real patient data, vocabulary services, OHDSI tooling, or clinical validation. It does not estimate causal effects and should not be used for patient care.
+
+The next steps are:
+
+- add explicit provenance from every target row to its source record;
+- add vocabulary-level checks using standard concept relationships;
+- implement graph-based structural distance measures;
+- compare results with OMOP quality checks;
+- add a small benchmark with multiple transformations and controlled error types;
+- document the project as an open-source contribution that others can reproduce.
+
+The complete code and tests are available in the accompanying repository: **[repo](https://github.com/lukmanaj/omop-transformation-fidelity)**.
