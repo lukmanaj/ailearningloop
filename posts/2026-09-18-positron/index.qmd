@@ -1,0 +1,12 @@
+---
+title: "Moving to Positron for Python and R"
+author: "Lukman Aliyu Jibril"
+date: "2026-09-18"
+categories: [ide,positron]
+---
+
+I have used VS Code right from when I began learning programming during my Arewa Data Science Academy fellowship days. The academy introduced me to VS Code. At the same, Dr Shamsuddeen later on introduced me to Positron and explained that it was from Posit, those behind R Studio. 
+
+In the last few weeks, I have found myself drawn to Positron and I think I will use it for all my Python and R workflows going forward. 
+
+I may occasionally give feedback on my experience and how it is better (or worse) than VS Code. 
