@@ -10,7 +10,29 @@
 <atom:link href="https://lukmanaj.github.io/ailearningloop/index.xml" rel="self" type="application/rss+xml"/>
 <description>Venturing Beyond My Roots: An AI Odyssey Unfolds for This Non-Tech Trailblazer!</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Sat, 12 Sep 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 18 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Moving to Positron for Python and R</title>
+  <dc:creator>Lukman Aliyu Jibril</dc:creator>
+  <link>https://lukmanaj.github.io/ailearningloop/posts/2026-09-18-positron/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I have used VS Code right from when I began learning programming during my Arewa Data Science Academy fellowship days. The academy introduced me to VS Code. At the same, Dr Shamsuddeen later on introduced me to Positron and explained that it was from Posit, those behind R Studio.</p>
+<p>In the last few weeks, I have found myself drawn to Positron and I think I will use it for all my Python and R workflows going forward.</p>
+<p>I may occasionally give feedback on my experience and how it is better (or worse) than VS Code.</p>
+
+
+
+ ]]></description>
+  <category>ide</category>
+  <category>positron</category>
+  <guid>https://lukmanaj.github.io/ailearningloop/posts/2026-09-18-positron/</guid>
+  <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>What survives a healthcare data transformation</title>
   <dc:creator>Lukman Aliyu Jibril</dc:creator>
@@ -1112,65 +1134,6 @@ Let’s build it.</p>
   <guid>https://lukmanaj.github.io/ailearningloop/posts/2024-09-16-health-informatics/</guid>
   <pubDate>Mon, 16 Sep 2024 00:00:00 GMT</pubDate>
   <media:content url="https://lukmanaj.github.io/ailearningloop/posts/2024-09-16-health-informatics/health-informatics.png" medium="image" type="image/png" height="92" width="144"/>
-</item>
-<item>
-  <title>Deep Learning Indaba 2024 Day 6: A Journey Through Inspiring Workshops and Innovation in Health AI</title>
-  <dc:creator>Lukman Aliyu Jibril</dc:creator>
-  <link>https://lukmanaj.github.io/ailearningloop/posts/2024-09-06-dli-24-day-06/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>It’s hard to believe that we’re already at Day 6 of the Deep Learning Indaba 2024! Time seems to have flown by, and it’s incredible to think that there’s only one more day left. The Indaba has been a whirlwind of knowledge, networking, and inspiration. Today was a day dedicated to workshops, and the challenge was real: so many fascinating topics were on the table, but they all ran simultaneously!</p>
-<p>The workshops available today were diverse and compelling, each catering to different facets of AI and machine learning in Africa. Here’s a glimpse of the workshops I had to choose from:</p>
-<ol type="1">
-<li><p>Weakly Supervised Computer Vision Workshop: Exploring techniques that allow models to learn from limited labeled data, a crucial need in regions where data labeling is resource-intensive.</p></li>
-<li><p>The NeuroAI Workshop: Bridging neuroscience and AI, focusing on how principles from the brain can be applied to AI systems, and vice versa.</p></li>
-<li><p>Empowering African Voices in AI: A discussion on inclusivity and the importance of representation in AI, promoting diversity of thought and experience.</p></li>
-<li><p>Voices of Africa: Building the Infrastructure for African NLP: This workshop focused on developing natural language processing (NLP) tools and datasets that reflect the diversity of African languages, essential for creating inclusive AI applications.</p></li>
-<li><p>AfriClimateAI - Uniting for Climate-Resilient Africa: Bringing together experts and practitioners to discuss the role of AI in tackling climate change in Africa, fostering data and knowledge exchange to build a more climate-resilient future.</p></li>
-<li><p>Robot Learning for Africa Workshop: Delving into how robotics and machine learning can be leveraged for various applications in the African context, from agriculture to healthcare.</p></li>
-<li><p>Data Science for Health in Africa Workshop: Organized by Sisonke Biotik and Ro’ya, two grassroots communities focused on Machine Learning and Global Health in Africa, this workshop looked at innovative approaches to using data science in healthcare.</p></li>
-<li><p>AI for Good Symposium in Africa: Highlighting projects and research that use AI to address pressing social issues and contribute to sustainable development across the continent.</p></li>
-</ol>
-<p>With so many great choices, it was difficult to decide, but ultimately, my interest in the intersection of AI and health led me to attend the Data Science for Health in Africa workshop.</p>
-<section id="diving-deep-into-ai-for-health-in-africa" class="level2">
-<h2 class="anchored" data-anchor-id="diving-deep-into-ai-for-health-in-africa">Diving Deep into AI for Health in Africa</h2>
-<p>The workshop, jointly organized by Sisonke Biotik and Ro’ya, was a hub of activity and collaboration. Both organizations are grassroots, participatory communities focused on advancing Machine Learning and Global Health in Africa. The sessions were highly interactive, and the atmosphere was one of shared learning and innovation.</p>
-<p>We started with a practical workshop on using R for health data algorithms, which was particularly valuable for practitioners and researchers interested in leveraging open-source tools for health analytics. It was a hands-on session that allowed participants to get acquainted with different techniques and tools for analyzing complex health datasets.</p>
-</section>
-<section id="insights-from-ai-pioneers-in-health" class="level2">
-<h2 class="anchored" data-anchor-id="insights-from-ai-pioneers-in-health">Insights from AI Pioneers in Health</h2>
-<p>The workshop featured a range of insightful presentations. Among the highlights were:</p>
-<ul>
-<li><p>Muhammad Al-Fatih’s Presentation on SKAI: SKAI (Satellite Knowledge Augmented Intelligence) is an innovative platform that utilizes AI and satellite imagery to provide real-time insights and actionable intelligence. This is particularly crucial for effective decision-making during disaster response, where timely information can save lives. Muhammad walked us through how SKAI integrates different data sources and uses AI to analyze satellite imagery, making it a game-changer for disaster management and emergency response in Africa.</p></li>
-<li><p>Mercy Asiedu’s Talk on Multifaceted Approaches to AI for Health in Africa: Mercy’s presentation was a deep dive into the multiple ways AI can be leveraged for health in Africa. She touched on the importance of benchmark datasets for health on the continent, noting that these datasets must reflect the diverse population to be truly impactful. The talk also covered innovative AI solutions that address specific health challenges in Africa, emphasizing the need for culturally and contextually relevant technologies.</p></li>
-</ul>
-</section>
-<section id="collaborative-innovation-pitching-ideas-to-revolutionize-healthcare" class="level2">
-<h2 class="anchored" data-anchor-id="collaborative-innovation-pitching-ideas-to-revolutionize-healthcare">Collaborative Innovation: Pitching Ideas to Revolutionize Healthcare</h2>
-<p>One of the most exciting parts of the day was a collaborative session where participants were grouped together to pitch an idea that could potentially revolutionize healthcare in Africa. This was a fantastic opportunity to brainstorm and exchange ideas with people from diverse backgrounds, ranging from data scientists to healthcare professionals. The energy in the room was palpable, and the ideas that came out of these discussions were both creative and practical.</p>
-</section>
-<section id="speed-presentations-and-ideathon-results" class="level2">
-<h2 class="anchored" data-anchor-id="speed-presentations-and-ideathon-results">Speed Presentations and Ideathon Results</h2>
-<p>To add to the excitement, there was a speed presentation competition where participants had a few minutes to present their innovative ideas or research findings. This fast-paced format was engaging and showcased the breadth of talent and creativity present at the Indaba.</p>
-<p>Additionally, the results of the Ideathon, which was held a day earlier, were announced today. My team, NextGen Health Innovators, was thrilled to be awarded third place! We were recognized for our innovative solution aimed at improving vaccine delivery through AI and data science. Receiving our certificate and prize was a moment of pride and joy, capping off what has been an incredible day of learning and collaboration.</p>
-</section>
-<section id="reflections-and-looking-ahead" class="level2">
-<h2 class="anchored" data-anchor-id="reflections-and-looking-ahead">Reflections and Looking Ahead</h2>
-<p>Reflecting on today, I can confidently say it has been my best day at the Indaba so far. The workshops were about learning and connecting with like-minded individuals, exchanging ideas, and envisioning a future where AI can truly make a difference in healthcare across Africa. It was a day filled with inspiration, and it reinforced my belief in the power of collaboration and innovation.</p>
-<p>It’s a bit bittersweet to realize that the Indaba is almost over. Tomorrow marks the final day, and while I’m looking forward to what it has in store, I can’t help but feel a little nostalgic already. The Deep Learning Indaba has been more than just a conference; it’s been a journey of growth, learning, and connection.</p>
-
-
-</section>
-
- ]]></description>
-  <category>deeplearning indaba</category>
-  <guid>https://lukmanaj.github.io/ailearningloop/posts/2024-09-06-dli-24-day-06/</guid>
-  <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://lukmanaj.github.io/ailearningloop/posts/2024-09-06-dli-24-day-06/lukman-dakar.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
